@@ -1,0 +1,107 @@
+{
+  "$schema_version": "1.0",
+  "description": "Pre-seeded validator catalogs for tools/verify_baseline.py and tools/baseline_orchestrator.py. Each list is the initial seed; user is expected to tune (add/remove ids) as the orchestrator output reveals false-positives or misses.",
+  "generated_at": "2026-05-10",
+
+  "H5_anthropomorphism_required": [
+    "doc-divine-omnipotence",
+    "doc-divine-omniscience",
+    "doc-divine-immutability",
+    "doc-divine-sovereignty",
+    "doc-divine-aseity",
+    "doc-divine-omnipresence",
+    "doc-divine-simplicity",
+    "doc-divine-decrees",
+    "doc-divine-holiness",
+    "doc-divine-love"
+  ],
+  "H5_rationale": "Question ids that must carry at least one scripture[] entry with figures including 'anthropomorphism' or 'anthropopathism'. Divine-attribute questions where the canon contains well-known anthropomorphic / anthropopathic passages (e.g. Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10, Jer 18:8, anthropomorphic 'hand of the LORD' / 'eyes of the LORD' passages, anthropopathic wrath/grief language). A subagent that produces a verdict on these without surfacing the figurative complicating texts is hiding the hermeneutical commitment. Validator failure mode: 'anthropomorphism-required-not-cited' if neither figure appears in any scripture[] entry AND the flag 'anthropomorphic-passages-omitted' is not set.",
+
+  "H6_dispensational_lens_required": [
+    "doc-future-for-israel",
+    "doc-dispensationalism",
+    "doc-pretrib-rapture",
+    "doc-posttrib-rapture",
+    "doc-premillennialism",
+    "doc-amillennialism",
+    "doc-postmillennialism"
+  ],
+  "H6_rationale": "Question ids where any verdict that affirms (in the dispensational direction) MUST carry the flag 'dispensational-lens-required' AND have 'dispensationalism' in evidence.hermeneutics.frameworks_in_play. These are eschatology questions where the verdict shifts based on dispensational vs covenantal vs historic-premillennial lens. The flag forces the dispensational commitment (a Brethren distinctive originating with Darby) to be visible, not smuggled. Validator failure mode: 'dispensational-lens-flag-missing' if affirms=true on these ids without the flag.",
+
+  "K2_cult_marker_eligible": [
+    "doc-trinity",
+    "doc-modalism-denial",
+    "doc-tritheism-denial",
+    "doc-christ-full-deity",
+    "doc-christ-full-humanity",
+    "doc-hypostatic-union",
+    "doc-eternal-sonship",
+    "doc-virgin-birth",
+    "doc-bodily-ascension",
+    "doc-christ-sinlessness",
+    "doc-christ-sole-mediator",
+    "doc-bodily-resurrection-of-christ",
+    "doc-bodily-resurrection-all",
+    "doc-second-coming-bodily",
+    "doc-vicarious-atonement",
+    "doc-god-existence",
+    "doc-scripture-inspiration-verbal-plenary",
+    "doc-pelagianism-denial",
+    "doc-pluralism-denial",
+    "doc-ongoing-revelation-binding",
+    "cult-mormon-polytheism",
+    "cult-christian-science-physical-reality"
+  ],
+  "K2_rationale": "Question ids where cult_marker_if_denied=true is plausibly defensible from apparatus + interlinear + concordance + pan-tradition consensus. These are Nicene-Chalcedonian-Apostolic foundations: Trinity boundaries, full deity+humanity of Christ (Chalcedon), bodily resurrection (Christ's and general), bodily second coming, virgin birth, eternal sonship, hypostatic union, anti-Pelagianism (canonical since Council of Carthage 418), Christ as exclusive way (pluralism denial), apostolic-canon-closure (post-apostolic new revelation rejected pan-tradition), basic monotheism (anti-polytheism, anti-Christian-Science docetism). The orchestrator MUST still verify each on its own per-question evidence — being on this list grants eligibility to set cult_marker_if_denied=true, NOT a free pass. Each question still needs (i) would_die_for=true, (ii) canonical demonstration via apparatus + interlinear + concordance, (iii) ≥6 distinct counter_witness traditions all with stance='affirms'. Validator failure mode: 'cult-marker-on-non-eligible-question' if cult_marker_if_denied=true on an id NOT in this list.",
+
+  "K2_explicitly_excluded": [
+    "doc-scripture-final-authority",
+    "doc-scripture-inerrancy",
+    "doc-scripture-infallibility",
+    "doc-scripture-sufficiency",
+    "doc-canon-66-books",
+    "doc-justification-forensic",
+    "doc-imputed-righteousness",
+    "doc-sola-fide",
+    "doc-sola-gratia",
+    "doc-solus-christus",
+    "doc-penal-substitution",
+    "doc-substitutionary-atonement",
+    "cult-icc-baptismal-regeneration",
+    "het-rc-marian-dogmas",
+    "het-icon-veneration"
+  ],
+  "K2_excluded_rationale": "Question ids that are tier=essential under the formation's calibration but FAIL the pan-tradition consensus test, and so cannot legitimately carry cult_marker_if_denied=true under the corrected bar. Reformed Solas (sola_fide, sola_gratia, solus_christus, imputed_righteousness, forensic justification) are Reformed-Lutheran-Anglican-Methodist consensus but Catholic + Orthodox + Anabaptist + Pentecostal frame justification differently — they fall under 'gospel-essential' (would_die_for=true) but not 'cult-grade' (cult_marker=false). Specific theories of atonement (penal substitution; broader substitutionary atonement) face similar Catholic/Orthodox divergence on the theory-of mechanism while affirming the fact-of. The Scripture-quality cluster (final_authority, inerrancy, infallibility, sufficiency, canon-66-books) faces real divergence: Catholic 73-book canon, Orthodox 76+, plus distinct Catholic / Orthodox positions on Scripture-tradition relationship (Dei Verbum). cult-icc-baptismal-regeneration is the cleanest example of bias-correction: Catholic and Orthodox AFFIRM baptismal regeneration; the denial-of-baptismal-regeneration position is Reformed-Baptist distinctive, so it cannot be cult-grade by pan-tradition consensus. het-rc-marian-dogmas and het-icon-veneration likewise: rejected by Reformed-Baptist substrate but AFFIRMED by Catholic and Orthodox — they're intramural disputes, not cult-markers. These ids may carry would_die_for=true (Ebenezer might be willing to die for them), but the cult-marker bar is canonical-pan-tradition, not formation-relative.",
+
+  "verifier_url_set_primary_repositories": [
+    "https://www.biblehub.com",
+    "https://biblehub.com",
+    "https://www.stepbible.org",
+    "https://hb.openscriptures.org",
+    "https://github.com/openscriptures/morphhb",
+    "https://github.com/STEPBible/STEPBible-Data",
+    "https://www.openbible.info",
+    "https://openbible.info",
+    "https://github.com/scrollmapper/bible_databases"
+  ],
+  "verifier_url_set_counter_witness": [
+    "https://ccel.org",
+    "https://www.vatican.va",
+    "https://bookofconcord.org",
+    "https://www.churchofengland.org",
+    "https://www.umc.org",
+    "https://ag.org",
+    "https://www.oca.org",
+    "https://courses.washington.edu/hist112"
+  ],
+  "verifier_url_set_forbidden": [
+    "carm.org",
+    "equip.org",
+    "gotquestions.org",
+    "monergism.com",
+    "ligonier.org",
+    "thegospelcoalition.org",
+    "brethrenarchive.org"
+  ],
+  "verifier_url_rationale": "Two allow-lists (primary repositories + counter-witness primaries) and one deny-list. The verify_baseline.py URL check (--check urls) HEAD-requests every URL in evidence.web[] and reports failures. The deny-list is checked separately: any URL in evidence.web[] containing one of the forbidden domains is a hard validation failure (Reformed-aligned commentary sites that share the formation's substrate, plus brethrenarchive.org which would be defendant material in the baseline)."
+}

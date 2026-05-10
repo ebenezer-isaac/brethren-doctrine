@@ -45,3 +45,14 @@ eval/results/
 # OS
 .DS_Store
 Thumbs.db
+
+# Per-agent run summaries (orchestration log)
+agent-logs/
+.tmp-prompts/
+
+# Verifier / question-hygiene reports (regenerated, not source)
+verify-report.md
+questions-hygiene-report.md
+
+# Question-reframe backup (pre-apply)
+questions.json.*.bak

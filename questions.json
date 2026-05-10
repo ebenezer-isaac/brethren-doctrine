@@ -1,9 +1,15 @@
 {
   "$schema_version": "2.0",
-  "tradition_baseline": "Plymouth Brethren-adjacent: classical Reformed Protestant orthodoxy plus Brethren distinctives",
+  "formation_under_examination": "Plymouth Brethren-adjacent: classical Reformed Protestant orthodoxy plus Brethren distinctives. This formation is the position under examination, NOT the rubric. The inferred-baseline run tests whether each proposition holds against apparatus + interlinear + concordance, with counter-witness traditions corroborating the lexical reading.",
+  "judging_panel": [
+    "critical_apparatus",
+    "interlinear",
+    "concordance",
+    "counter_witness_traditions"
+  ],
   "location_context": "evaluating churches across denominations",
   "generated_at": "2026-05-10",
-  "description": "Universal question bank: statement, anchors, tier, consensus, brethren-distinctive flag. Combines with the answer file (baseline.json or responses/<id>.json or consolidated.json) to render the personal beliefs PDF; stands alone to render the blank questionnaire.",
+  "description": "Universal question bank: statement, anchors, tier, consensus, brethren-distinctive flag. Combines with the answer file (baseline.json or responses/<id>.json or consolidated.json) to render the personal beliefs PDF; stands alone to render the blank questionnaire. The 222 question entries are scheduled for a phase-3 reframe pass (verdict-pre-loading audit + overlap disambiguation); see docs/QUESTION_SCHEMA.md.",
   "tier_definitions": {
     "essential": "Core gospel and Trinitarian boundaries. Denial = false gospel or cult-grade error. Always teach to children, always correct, never become member where denied.",
     "convictional": "Clear scriptural conviction. Membership-level threshold. Would not compromise on doctrine, but visit/participate is usually fine where denied.",
@@ -44,20 +50,20 @@
     "category": "High-level theological category. See category_index.",
     "subcategory": "Optional finer grouping; null if not applicable.",
     "kind": "doctrine = belief; practice = practical/applied position.",
-    "statement": "One-sentence affirmation of the position (phrased as the orthodox/affirming claim so denial is clear).",
-    "scripture_anchors": "Primary biblical passages supporting the position.",
-    "confessional_anchors": "Creeds/confessions affirming this (Nicene, Chalcedon, Westminster, 1689 Baptist, etc.).",
-    "tier": "essential = core gospel/Trinitarian boundary | convictional = clear scripture, would not compromise, church-membership level | important = matters but will not break fellowship | preference = methodological/practical | adiaphora = indifferent, freedom of conscience.",
-    "historical_consensus": "orthodox = Nicene/Chalcedonian + Magisterial Reformation consensus | divided = legitimate Protestant disagreement | minority = real but smaller stream | heterodox = outside historic consensus, not formally cult | heretical = formally condemned in early creeds.",
-    "brethren_distinctive": "true if this position is distinctive to the Brethren tradition (vs. broadly held by orthodox Christianity)."
+    "statement": "The proposition under examination. Phase-3 target: neutral interrogative-equivalent proposition, NOT a verdict assertion. Existing 222 entries inherited a 'phrased as the orthodox/affirming claim so denial is clear' rule that pre-loads verdicts and uses Reformed-confessional vocabulary as if neutral; the inferred-baseline run flags such cases via evidence.stem_audit and a phase-3 rewrite pass produces neutral-form replacements. See docs/QUESTION_SCHEMA.md.",
+    "scripture_anchors": "Seed biblical passages relevant to the proposition. Inferred-baseline subagents extend these via concordance traversal (every Strong's lemma in the seed verses spider-mapped to the canon); the anchors are a starting point, not a closed list.",
+    "confessional_anchors": "Creeds/confessions historically addressing this proposition. Recorded as INFORMATIONAL research aids during the inferred run (under evidence.counter_witness with the appropriate tradition tag), NOT as authority. Confessions never settle a verdict; apparatus + interlinear + concordance do. See tools/derive_baseline_prompt.md.",
+    "tier": "essential = Nicene-Chalcedonian-Apostolic foundations under cross-tradition consensus (denial = false gospel) | convictional = clear from apparatus + concordance with legitimate intramural dispute | important = matters but does not break fellowship | preference = methodological/practical | adiaphora = indifferent, freedom of conscience.",
+    "historical_consensus": "orthodox = cross-tradition consensus across patristic + magisterial + Lutheran + Anglican + Reformed + Methodist + Anabaptist + Pentecostal lineages | divided = legitimate intramural disagreement | minority = real but smaller stream | heterodox = outside historic consensus, not formally cult | heretical = formally condemned in early ecumenical councils.",
+    "brethren_distinctive": "true if this position is distinctive to the Brethren tradition (vs. broadly held by orthodox Christianity). Marker for when a verdict aligns with a brethren-distinctive — not a disqualifier, but a sign the verdict requires extra counter-witness scrutiny."
   },
   "stats": {
-    "total": 222,
+    "total": 221,
     "by_tier": {
       "essential": 56,
       "convictional": 79,
       "important": 50,
-      "preference": 36,
+      "preference": 35,
       "adiaphora": 1
     },
     "by_category": {
@@ -80,7 +86,7 @@
       "Cult Marker": 4,
       "Heterodoxy Marker": 5,
       "Spiritual Gifts": 10,
-      "Worship Style": 7,
+      "Worship Style": 6,
       "Christian Ethics": 10,
       "Marriage & Sexuality": 10,
       "Family & Discipleship": 3,
@@ -103,7 +109,7 @@
       "category": "Bibliology",
       "subcategory": "Revelation",
       "kind": "doctrine",
-      "statement": "No revelation given after the apostolic age binds the conscience or stands on par with Scripture; the 66-book canon is closed and sufficient. Additions (Book of Mormon / D&C / Pearl of Great Price; Ellen G. White's writings; Mo Letters; Branham's tape ministry; Watch Tower publications; Iglesia ni Cristo's Manalo; Unification 'Divine Principle') are cult-grade error.",
+      "statement": "The biblical canon is closed at the close of the apostolic age, and no later writing or oral revelation given after the apostolic age stands on par with Scripture or binds the conscience as Scripture does.",
       "scripture_anchors": [
         "Hebrews 1:1-2",
         "Ephesians 2:20",
@@ -146,7 +152,7 @@
       "category": "Bibliology",
       "subcategory": "Inerrancy",
       "kind": "doctrine",
-      "statement": "Scripture in the original autographs is without error in all that it affirms (history, science, doctrine), and the errantist view that Scripture contains real errors is to be rejected.",
+      "statement": "Scripture in the original autographs is without error in all that it affirms, including its statements about history, science, and doctrine.",
       "scripture_anchors": [
         "John 17:17",
         "John 10:35",
@@ -249,7 +255,7 @@
       "category": "Bibliology",
       "subcategory": "Perspicuity",
       "kind": "doctrine",
-      "statement": "Scripture is sufficiently clear in matters necessary for salvation that any literate believer with the Spirit's help can grasp them.",
+      "statement": "Scripture is sufficiently clear in what it teaches concerning salvation that an ordinary believer reading with the Spirit's help can grasp those teachings without specialized mediation.",
       "scripture_anchors": [
         "Deuteronomy 6:6-7",
         "Psalm 119:105",
@@ -326,7 +332,7 @@
       "category": "Theology Proper",
       "subcategory": "Attributes",
       "kind": "doctrine",
-      "statement": "God knows all things (actual and possible, past, present, and future) exhaustively and eternally, including all future free human actions; therefore Open Theism (the view that God does not exhaustively foreknow future free actions) is to be rejected as heterodox.",
+      "statement": "God knows all things — actual and possible, past, present, and future — exhaustively and eternally, including all future free human actions.",
       "scripture_anchors": [
         "Psalm 139:1-6",
         "Isaiah 46:9-10",
@@ -393,7 +399,7 @@
       "category": "Theology Proper",
       "subcategory": "Trinity",
       "kind": "doctrine",
-      "statement": "The Father, Son, and Holy Spirit are three distinct, coeternal Persons sharing one divine essence. Modalism / Sabellianism (one Person operating in three modes or roles) is rejected as heretical and cult-grade.",
+      "statement": "The Father, Son, and Holy Spirit are three distinct, coeternal Persons sharing one divine essence — distinct in personhood, not three modes or roles successively assumed by one Person.",
       "scripture_anchors": [
         "Matthew 3:16-17",
         "John 17:1-5",
@@ -415,7 +421,7 @@
       "category": "Theology Proper",
       "subcategory": "Trinity",
       "kind": "doctrine",
-      "statement": "There is one God eternally existing in three coequal, coeternal, distinct Persons: Father, Son, and Holy Spirit. Denial of the Trinity (whether Arian, Unitarian, modalist, or by movements such as Jehovah's Witnesses, Iglesia ni Cristo, The Way International, Christadelphians, Unitarian Universalism) is cult-grade error.",
+      "statement": "There is one God eternally existing in three coequal, coeternal, distinct Persons: Father, Son, and Holy Spirit.",
       "scripture_anchors": [
         "Matthew 28:19",
         "2 Corinthians 13:14",
@@ -438,7 +444,7 @@
       "category": "Theology Proper",
       "subcategory": "Trinity",
       "kind": "doctrine",
-      "statement": "Tritheism (the view that the three persons are three separate gods) is to be rejected as heretical.",
+      "statement": "The three Persons of the Trinity share one divine essence; they are not three separate gods.",
       "scripture_anchors": [
         "Deuteronomy 6:4",
         "Isaiah 45:5",
@@ -574,7 +580,7 @@
       "category": "Christology",
       "subcategory": "Work",
       "kind": "doctrine",
-      "statement": "Jesus Christ rose bodily from the dead in the same physical body that was crucified, now glorified. Denial (as in Jehovah's Witnesses, Christian Science, and various liberal/progressive groups holding only a 'spiritual' resurrection) is cult-grade or heterodox depending on system.",
+      "statement": "Jesus Christ rose bodily from the dead in the same physical body that was crucified, now glorified — not as a merely spiritual or non-physical resurrection.",
       "scripture_anchors": [
         "Luke 24:39-43",
         "John 20:27",
@@ -595,7 +601,7 @@
       "category": "Christology",
       "subcategory": "Person",
       "kind": "doctrine",
-      "statement": "Jesus Christ is fully and uniquely God, eternally begotten and not created, equal in essence with the Father. Arian, Unitarian, JW (Christ as Michael / 'a god'), Christadelphian, Iglesia ni Cristo, and Way International denials are cult-grade error.",
+      "statement": "Jesus Christ is fully and uniquely God, eternally begotten and not created, equal in essence with the Father.",
       "scripture_anchors": [
         "John 1:1",
         "John 8:58",
@@ -657,7 +663,7 @@
       "category": "Christology",
       "subcategory": "Mediation",
       "kind": "doctrine",
-      "statement": "Christ is the sole mediator between God and humanity; no saint, angel, or Mary mediates access to God.",
+      "statement": "Christ is the sole mediator between God and humanity (1 Tim 2:5; Heb 7:25; John 14:6); access to God is not mediated by any other figure.",
       "scripture_anchors": [
         "1 Timothy 2:5",
         "Hebrews 7:25",
@@ -778,7 +784,7 @@
       "category": "Christology",
       "subcategory": "Person",
       "kind": "doctrine",
-      "statement": "Kenoticism (the view that Christ surrendered or gave up divine attributes in the incarnation) is to be rejected.",
+      "statement": "In the incarnation Christ took on a true human nature without surrendering or giving up the divine attributes proper to His deity.",
       "scripture_anchors": [
         "Philippians 2:6-7",
         "Colossians 2:9",
@@ -914,7 +920,7 @@
       "category": "Pneumatology",
       "subcategory": "Work",
       "kind": "doctrine",
-      "statement": "Spirit baptism (being baptized into the body of Christ by the Spirit) occurs at conversion for every believer, not as a subsequent second blessing.",
+      "statement": "The Spirit baptizes every believer into the body of Christ at conversion — a once-for-all initiation into Christ rather than a separable, subsequent crisis experience.",
       "scripture_anchors": [
         "1 Corinthians 12:13",
         "Ephesians 4:5",
@@ -1171,7 +1177,7 @@
       "category": "Hamartiology",
       "subcategory": "Original Sin",
       "kind": "doctrine",
-      "statement": "Adam's guilt is imputed to all his natural descendants such that all are guilty in him from conception (Augustinian / Reformed framing of inherited guilt).",
+      "statement": "Adam's guilt, not only his corruption, is reckoned to all his natural descendants such that humanity stands legally guilty in him from conception.",
       "scripture_anchors": [
         "Romans 5:12-19",
         "1 Corinthians 15:22"
@@ -1315,7 +1321,7 @@
       "category": "Soteriology",
       "subcategory": "Justification",
       "kind": "doctrine",
-      "statement": "In justification, the active and passive righteousness of Christ is imputed (reckoned, credited) to the believer, so that the believer stands clothed in Christ's perfect obedience before God.",
+      "statement": "In justification, Christ's righteousness — both His perfect obedience and His vicarious endurance of the law's penalty — is reckoned to the believer's account, so that the believer is accounted righteous before God on the basis of what Christ has done, not on the basis of any righteousness inherent in the believer.",
       "scripture_anchors": [
         "2 Corinthians 5:21",
         "Romans 4:3-8",
@@ -1336,7 +1342,7 @@
       "category": "Soteriology",
       "subcategory": "Justification",
       "kind": "doctrine",
-      "statement": "Justification is a forensic, declarative act of God in which He pardons sinners and accounts them righteous in His sight, not on the basis of any inherent change, but solely on account of Christ's imputed righteousness received by faith.",
+      "statement": "Justification is God's declarative act in which He pardons the sinner and accepts him as righteous — not on the ground of any change wrought within the sinner, but on the ground of Christ's righteousness received by faith.",
       "scripture_anchors": [
         "Romans 3:21-26",
         "Romans 4:5",
@@ -1359,7 +1365,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Pelagianism (the teaching that humans are born morally neutral, unaffected by Adam's sin, and able to choose God and obey His law by natural ability) is a denied heresy.",
+      "statement": "Humans are not born morally neutral — they enter the world under Adam's fall, unable to choose God or obey His law from natural ability alone, prior to grace.",
       "scripture_anchors": [
         "Romans 5:12-19",
         "Ephesians 2:1-5",
@@ -1381,7 +1387,7 @@
       "category": "Soteriology",
       "subcategory": "Atonement",
       "kind": "doctrine",
-      "statement": "The atonement is penal in nature: Christ bore the just punishment and divine wrath that sinners deserved, satisfying God's justice and propitiating His wrath.",
+      "statement": "Christ's atoning death includes the bearing of God's just judgment against sin in the place of sinners — Christ taking on Himself the penalty their sins deserved, so that God's justice against sin is satisfied at the cross.",
       "scripture_anchors": [
         "Romans 3:25",
         "1 John 2:2",
@@ -1403,7 +1409,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Religious pluralism (the view that all religions are valid paths to God) is denied; salvation is through Christ alone.",
+      "statement": "Salvation is through Christ alone; no other religion or path provides saving access to God.",
       "scripture_anchors": [
         "John 14:6",
         "Acts 4:12",
@@ -1423,7 +1429,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Christian inclusivism (the view that people may be saved through Christ's work without conscious explicit faith in the historical Jesus, Rahner-style 'anonymous Christians') is denied; explicit faith in the historical Jesus is necessary for salvation.",
+      "statement": "Saving access to Christ's work requires conscious, explicit faith in the historical Jesus; saving faith is not granted apart from such explicit response to the gospel.",
       "scripture_anchors": [
         "Romans 10:9-17",
         "John 3:18",
@@ -1443,7 +1449,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "The gospel is the good news of forgiveness of sins through Christ's death and resurrection; God does not guarantee material wealth or physical health in this life. The prosperity / Word-Faith gospel is rejected as heterodox, with the 'little gods' doctrine approaching cult-grade.",
+      "statement": "The gospel is the good news of forgiveness of sins through Christ's death and resurrection; God does not guarantee material wealth or physical health in this life as a fruit of saving faith.",
       "scripture_anchors": [
         "John 16:33",
         "2 Corinthians 11:23-29",
@@ -1485,7 +1491,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Justification is by faith alone (sola fide); faith is the empty hand that receives Christ's imputed righteousness; works are the necessary fruit, never the ground, of justification, and any system in which human merit, sacraments, ritual, law-keeping, or moral effort partly or wholly grounds justification before God is a false gospel.",
+      "statement": "Justification is received by faith alone, apart from works of the law as a meritorious ground; works are the necessary fruit, never the basis, of justification, and any system that makes human merit, ritual observance, law-keeping, or moral effort the partial or whole ground of justification before God denies what Scripture says is the basis of justification.",
       "scripture_anchors": [
         "Romans 3:20",
         "Romans 3:28",
@@ -1512,7 +1518,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Salvation is by grace alone (sola gratia); wholly God's unmerited favour, never earned, contributed to, or co-purchased by human effort, ritual, or pedigree.",
+      "statement": "Salvation is by grace alone — wholly God's unmerited favor, never earned, contributed to, or co-purchased by human effort, ritual, ethnic descent, or moral merit.",
       "scripture_anchors": [
         "Ephesians 2:8-9",
         "Romans 3:24",
@@ -1534,7 +1540,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Salvation is in Christ alone (solus Christus); there is no other name under heaven by which men must be saved, no other mediator between God and man.",
+      "statement": "Salvation is in Christ alone — there is no other name under heaven by which men must be saved, no other mediator between God and man.",
       "scripture_anchors": [
         "John 14:6",
         "Acts 4:12",
@@ -1555,7 +1561,7 @@
       "category": "Soteriology",
       "subcategory": "Atonement",
       "kind": "doctrine",
-      "statement": "Christ died as a substitute in the place of sinners, bearing the penalty due for their sin so that they might be reconciled to God.",
+      "statement": "Christ died for sinners in their place — His death is, among other things, a substitute death, by which those for whom He died are reconciled to God.",
       "scripture_anchors": [
         "Isaiah 53:4-6",
         "1 Peter 2:24",
@@ -1598,7 +1604,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Grace empowers believers to walk in holiness; the moral law remains binding as the rule of life for the believer, though not as the means of justification. Antinomianism in all its forms (classical antinomianism condemned in the Marrow Controversy; modern hyper-grace teaching that denies the need for ongoing confession or repentance) is rejected.",
+      "statement": "Grace empowers the believer to walk in holiness; the moral law continues to function as the rule of the believer's life — not as the ground of justification, but as the contour of the obedience to which the believer is called.",
       "scripture_anchors": [
         "Romans 6:1-14",
         "Titus 2:11-12",
@@ -1638,7 +1644,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Legalism (adding human rules to God's commands as conditions of acceptance, fellowship, or sanctification, or treating obedience as the ground rather than fruit of grace) is a denied error.",
+      "statement": "Adding human rules to God's commands as conditions of acceptance, fellowship, or sanctification — and treating obedience as the ground rather than the fruit of grace — distorts the gospel.",
       "scripture_anchors": [
         "Matthew 23:1-28",
         "Galatians 2:11-21",
@@ -1723,7 +1729,7 @@
       "category": "Soteriology",
       "subcategory": "Denied Errors",
       "kind": "doctrine",
-      "statement": "Semi-Pelagianism (the teaching that the sinner takes the first step toward God by natural ability, with grace then assisting) is a denied error.",
+      "statement": "The sinner does not take the first step toward God by natural ability with grace then assisting; rather, the prior gracious work of God enables any movement of the will toward Him.",
       "scripture_anchors": [
         "John 6:44",
         "John 6:65",
@@ -1765,7 +1771,7 @@
       "category": "Soteriology",
       "subcategory": "Methodology",
       "kind": "doctrine",
-      "statement": "Decisional regeneration (the view that salvation is effected by the act of decision such as raised hand, walked aisle, or repeated prayer rather than by Spirit-wrought new birth received through faith) is a methodological error to be resisted.",
+      "statement": "Salvation is effected by Spirit-wrought new birth received through faith, not by an outward act of decision (raised hand, walked aisle, repeated prayer) treated as itself the saving event.",
       "scripture_anchors": [
         "John 1:13",
         "John 3:8",
@@ -2057,7 +2063,7 @@
       "category": "Sacraments",
       "subcategory": "Baptism",
       "kind": "doctrine",
-      "statement": "Baptism does not regenerate, save, or wash away sin in itself (ex opere operato); it is the outward sign of an inward reality already accomplished by grace through faith.",
+      "statement": "Baptism is the outward sign of an inward reality accomplished by grace through faith, and does not in itself effect regeneration or wash away sin apart from the inner work of the Spirit and faith.",
       "scripture_anchors": [
         "Ephesians 2:8-9",
         "Romans 4:9-12",
@@ -2118,7 +2124,7 @@
       "category": "Sacraments",
       "subcategory": "Baptism",
       "kind": "doctrine",
-      "statement": "Infant baptism (paedobaptism) lacks New Testament warrant; the covenant-of-grace argument from circumcision is theologically inadequate to override the consistent NT pattern of faith preceding baptism.",
+      "statement": "The covenant-of-grace argument that the New Covenant sign of baptism replaces the Old Covenant sign of circumcision and therefore extends to the children of believers fails to override the consistent New Testament pattern of faith preceding baptism.",
       "scripture_anchors": [
         "Acts 2:41",
         "Acts 8:12",
@@ -2139,7 +2145,7 @@
       "category": "Sacraments",
       "subcategory": "Lord's Supper",
       "kind": "doctrine",
-      "statement": "Transubstantiation (the Roman doctrine that the substance of the bread and wine is changed into the substance of Christ's body and blood while only the accidents remain) is unbiblical and philosophically untenable.",
+      "statement": "The bread and wine in the Lord's Supper are not, in substance, changed into Christ's body and blood at the words of institution; the elements remain bread and wine while signifying and (under some accounts) communicating Christ's body and blood spiritually.",
       "scripture_anchors": [
         "Hebrews 7:27",
         "Hebrews 9:12",
@@ -2162,7 +2168,7 @@
       "category": "Sacraments",
       "subcategory": "Number and Nature",
       "kind": "doctrine",
-      "statement": "Christ instituted two ordinances for the Church: baptism and the Lord's Supper. They are signs and seals, not means of saving grace ex opere operato.",
+      "statement": "Christ instituted two ordinances for the Church — baptism and the Lord's Supper — that signify and seal the gospel.",
       "scripture_anchors": [
         "Matthew 28:19",
         "Luke 22:19-20",
@@ -2221,7 +2227,7 @@
       "category": "Sacraments",
       "subcategory": "Lord's Supper",
       "kind": "doctrine",
-      "statement": "Consubstantiation (the Lutheran 'in, with, and under' the elements) preserves real-presence language without transubstantiation but introduces ubiquity claims about Christ's body that strain Christology.",
+      "statement": "Real-presence language preserved by the Lutheran \"in, with, and under\" formula avoids transubstantiation but requires a doctrine of the ubiquity of Christ's glorified body that creates Christological tensions of its own.",
       "scripture_anchors": [
         "Acts 1:9-11",
         "Luke 24:39",
@@ -2241,7 +2247,7 @@
       "category": "Sacraments",
       "subcategory": "Number and Nature",
       "kind": "doctrine",
-      "statement": "The Roman Catholic seven-sacrament system (baptism, confirmation, eucharist, penance, anointing of the sick, holy orders, matrimony) lacks NT warrant for treating five of those as Christ-instituted ordinances of the Church.",
+      "statement": "Of the seven rites the Catholic and Orthodox traditions identify as sacraments (baptism, confirmation, eucharist, penance, anointing of the sick, holy orders, matrimony), only baptism and the Lord's Supper are explicitly instituted by Christ as ordinances of the Church.",
       "scripture_anchors": [
         "Matthew 28:19",
         "Luke 22:19-20",
@@ -2314,7 +2320,7 @@
       "category": "Leadership & Polity",
       "subcategory": "Ordination",
       "kind": "doctrine",
-      "statement": "Apostolic succession as an unbroken episcopal line conferring valid ministry, sacraments, and ecclesiastical authority is unbiblical; true apostolic continuity is doctrinal fidelity to apostolic teaching.",
+      "statement": "Apostolic continuity in the Church is grounded in fidelity to the apostles' teaching rather than in the unbroken transmission of episcopal office through the laying-on of hands.",
       "scripture_anchors": [
         "Ephesians 2:20",
         "Jude 3",
@@ -2335,7 +2341,7 @@
       "category": "Leadership & Polity",
       "subcategory": "Polity",
       "kind": "doctrine",
-      "statement": "Episcopal polity (bishops with authority over multiple local churches as a distinct tier above presbyters) lacks NT warrant; the NT uses 'bishop' (overseer) and 'elder' interchangeably for the same office.",
+      "statement": "The New Testament uses \"bishop / overseer\" and \"elder / presbyter\" interchangeably for one office; it does not establish a tier of bishops with authority over multiple congregations distinct from elders.",
       "scripture_anchors": [
         "Acts 20:17",
         "Acts 20:28",
@@ -2357,7 +2363,7 @@
       "category": "Leadership & Polity",
       "subcategory": "Ordination",
       "kind": "doctrine",
-      "statement": "No human bishop or council possesses supreme authority over the universal church or infallibility ex cathedra; Scripture alone is the infallible rule of faith and life. Roman claims of papal supremacy and papal infallibility (Vatican I, 1870) are rejected.",
+      "statement": "No human bishop or council possesses supreme authority over the universal Church; no human teacher pronounces with the infallibility that belongs to Scripture alone as the rule of faith and life.",
       "scripture_anchors": [
         "2 Timothy 3:16-17",
         "Galatians 2:11-14",
@@ -2690,7 +2696,7 @@
       "category": "Worship Structure",
       "subcategory": "Symbolism",
       "kind": "practice",
-      "statement": "Head coverings for women during prayer and prophecy in the gathered assembly (1 Cor 11) are practiced in Brethren tradition; the principle (creation-order distinction) is permanent, the form (literal covering) is a culturally embodied expression.",
+      "statement": "Paul's instruction in 1 Corinthians 11 about women covering their heads during prayer and prophecy in the gathered assembly continues to apply; the head-covering is a sign of the creation-order distinction Paul names there, applicable in the gathered assembly today (whether by literal covering or by another culturally-coherent sign of that distinction).",
       "scripture_anchors": [
         "1 Corinthians 11:2-16"
       ],
@@ -2706,7 +2712,7 @@
       "category": "Worship Structure",
       "subcategory": "Service Form",
       "kind": "practice",
-      "statement": "Both liturgical (set forms) and spontaneous (Spirit-led) worship are biblically defensible; the regulative principle requires that whatever is done in worship has scriptural warrant, but the form-spectrum is wide.",
+      "statement": "Both liturgical (set forms) and spontaneous (Spirit-led) worship are biblically defensible; what is done in worship should have scriptural warrant, but the form-spectrum is wide.",
       "scripture_anchors": [
         "1 Corinthians 14:26",
         "1 Corinthians 14:40",
@@ -2726,7 +2732,7 @@
       "category": "Worship Structure",
       "subcategory": "Service Form",
       "kind": "practice",
-      "statement": "An open worship/open ministry meeting (any qualified brother may rise as the Spirit leads to read, pray, give thanks, give a word, suggest a hymn) recovers NT participatory worship (1 Cor 14) and is a treasured Brethren distinctive.",
+      "statement": "A meeting in which qualified brothers may, as the Spirit leads, contribute audibly (reading, praying, giving thanks, suggesting a hymn, sharing a word) reflects the participatory pattern Paul describes in 1 Corinthians 14:26-33.",
       "scripture_anchors": [
         "1 Corinthians 14:26-33",
         "Colossians 3:16",
@@ -2744,7 +2750,7 @@
       "category": "Inter-church Relations",
       "subcategory": "Ecumenism",
       "kind": "doctrine",
-      "statement": "Ecumenical or fellowship union with non-Trinitarian groups (Mormonism, Jehovah's Witnesses, Oneness Pentecostalism, Unitarianism) is rejected; these groups are not Christian in the historical-creedal sense and require evangelism, not partnership.",
+      "statement": "Groups that deny the Trinity are not Christian in the historical-creedal sense, and the Church's posture toward such groups is evangelism rather than ecumenical fellowship-union.",
       "scripture_anchors": [
         "Matthew 28:19",
         "John 1:1-18",
@@ -2766,7 +2772,7 @@
       "category": "Inter-church Relations",
       "subcategory": "Ecumenism",
       "kind": "doctrine",
-      "statement": "Formal ecumenical union with the Roman Catholic Church on shared sacramental, ministerial, and gospel ground is rejected so long as Rome maintains its post-Tridentine positions on justification, the Mass as sacrifice, papal infallibility, and Marian dogmas.",
+      "statement": "Formal ecumenical union on shared sacramental, ministerial, and gospel ground is barred by substantive disagreement over justification, the Mass as sacrifice, papal infallibility, and Marian dogmas; until those disagreements are resolved, ecumenical union is not a matter of mere structural convergence.",
       "scripture_anchors": [
         "Galatians 1:6-9",
         "2 Corinthians 6:14-18",
@@ -2891,7 +2897,7 @@
       "category": "Eschatology",
       "subcategory": "Return of Christ",
       "kind": "doctrine",
-      "statement": "Jesus Christ will return personally, visibly, audibly, and bodily in a yet-future event to judge the living and the dead. Full preterism (all prophecy including the second coming was fulfilled in AD 70) is rejected.",
+      "statement": "Jesus Christ will return personally, visibly, audibly, and bodily in a yet-future event to judge the living and the dead — not as a past event already fulfilled in AD 70 nor as an exclusively spiritual reality without bodily appearing.",
       "scripture_anchors": [
         "Acts 1:11",
         "Matthew 24:30",
@@ -2915,7 +2921,7 @@
       "category": "Eschatology",
       "subcategory": "Hell",
       "kind": "doctrine",
-      "statement": "Universalism (the view that all people will ultimately be saved) is rejected as contrary to Scripture and historic Christianity.",
+      "statement": "Not all people will ultimately be saved; some are excluded from saving fellowship with God in the final judgment.",
       "scripture_anchors": [
         "Matthew 25:46",
         "Matthew 7:13-14",
@@ -2937,7 +2943,7 @@
       "category": "Eschatology",
       "subcategory": "Hell",
       "kind": "doctrine",
-      "statement": "Annihilationism (the view that the wicked are ultimately destroyed and cease to exist) is rejected as inconsistent with biblical teaching on eternal punishment.",
+      "statement": "The wicked are not ultimately destroyed and reduced to non-existence; the punishment of the unjust in the final state is conscious and ongoing.",
       "scripture_anchors": [
         "Matthew 25:46",
         "Revelation 14:11",
@@ -3021,7 +3027,7 @@
       "category": "Eschatology",
       "subcategory": "Intermediate State",
       "kind": "doctrine",
-      "statement": "Purgatory (a post-mortem place of purification for believers) is rejected as having no biblical basis.",
+      "statement": "Believers who die in Christ are immediately and finally purified in His finished work, not progressively purified in a post-mortem state of purgation prior to glory.",
       "scripture_anchors": [
         "Hebrews 10:14",
         "2 Corinthians 5:8",
@@ -3063,7 +3069,7 @@
       "category": "Eschatology",
       "subcategory": "Intermediate State",
       "kind": "doctrine",
-      "statement": "Prayers for the dead are rejected as having no biblical warrant and as undermining the finality of judgment.",
+      "statement": "Prayers offered on behalf of the dead — whether to alter their post-mortem state or to commend them to God — lack biblical warrant; the finality of judgment after death is settled at death.",
       "scripture_anchors": [
         "Hebrews 9:27",
         "Luke 16:26",
@@ -3083,7 +3089,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "Amillennialism (the millennium is symbolic of the present church age between Christ's two advents) is a legitimate orthodox position.",
+      "statement": "The thousand-year reign of Revelation 20 is a symbolic representation of the present church age between Christ's two advents (amillennialism).",
       "scripture_anchors": [
         "Revelation 20:1-6",
         "Matthew 12:29",
@@ -3104,7 +3110,7 @@
       "category": "Eschatology",
       "subcategory": "Hermeneutics",
       "kind": "doctrine",
-      "statement": "Classical dispensationalism (distinct programs for Israel and the Church across multiple dispensations) is a Brethren-origin system held loosely.",
+      "statement": "Scripture distinguishes God's program with ethnic Israel and God's program with the Church as distinct programs, not one continuous redemptive program across the testaments.",
       "scripture_anchors": [
         "Romans 11:25-29",
         "Genesis 12:1-3",
@@ -3124,7 +3130,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "Postmillennialism (Christ returns after a long age of gospel triumph) is a legitimate orthodox position though less likely.",
+      "statement": "Christ returns after — not before — an extended age of gospel triumph in which the kingdom progressively transforms the world (postmillennialism).",
       "scripture_anchors": [
         "Matthew 28:18-20",
         "Psalm 110:1",
@@ -3145,7 +3151,7 @@
       "category": "Eschatology",
       "subcategory": "Rapture",
       "kind": "doctrine",
-      "statement": "Post-tribulation rapture (the church is gathered to Christ at his visible return after the tribulation) has substantial scriptural support.",
+      "statement": "The Church is gathered to Christ at His visible return after the tribulation — there is no separate, prior secret rapture before the tribulation begins.",
       "scripture_anchors": [
         "Matthew 24:29-31",
         "1 Thessalonians 4:13-18",
@@ -3164,7 +3170,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "Premillennialism (Christ returns before a literal thousand-year reign on earth) is the position best supported by Revelation 20 and Brethren tradition.",
+      "statement": "Christ returns before a literal thousand-year reign on earth (premillennialism), as a future, post-second-coming era distinct from the present age.",
       "scripture_anchors": [
         "Revelation 20:1-6",
         "Zechariah 14:4-9",
@@ -3184,7 +3190,7 @@
       "category": "Eschatology",
       "subcategory": "Rapture",
       "kind": "doctrine",
-      "statement": "The pre-tribulation rapture (Christ secretly removes the church before a seven-year tribulation) is the historic Brethren-Darby position.",
+      "statement": "Christ removes the Church from the earth in a separate event before a seven-year tribulation period, distinct from and prior to His visible second coming (pre-tribulation rapture).",
       "scripture_anchors": [
         "1 Thessalonians 4:13-18",
         "1 Corinthians 15:51-52",
@@ -3371,7 +3377,7 @@
       "category": "Cult Marker",
       "subcategory": "International Churches of Christ",
       "kind": "doctrine",
-      "statement": "Salvation is by grace alone through faith alone in Christ alone; baptism is an outward sign of inward faith, not the instrument of regeneration; and 'discipling' must not become spiritual abuse.",
+      "statement": "Saving union with Christ is received through faith and is not effected at the moment of water baptism such that baptism is the instrument of regeneration; and shepherding relationships in the Church do not require the disciple's submission of every life decision to a designated leader.",
       "scripture_anchors": [
         "Ephesians 2:8-9",
         "Luke 23:43",
@@ -3391,7 +3397,7 @@
       "category": "Cult Marker",
       "subcategory": "Mormonism",
       "kind": "doctrine",
-      "statement": "There is one and only one true God, eternally and unchangeably; humans cannot become gods. Jesus Christ is the eternal uncreated Son, of the same substance as the Father; Satan is a created fallen angel, not Christ's 'spirit brother.' LDS polytheism, plurality-of-gods, human-exaltation-to-godhood, and the spirit-brothers cosmology are rejected as cult-grade error.",
+      "statement": "There is one and only one true God, eternally and unchangeably; humans do not become gods, and the Son of God is not one among multiple divine beings. Jesus Christ is the eternal, uncreated Son of one substance with the Father, not a created spiritual being elder-brother to Satan or to humanity.",
       "scripture_anchors": [
         "Deuteronomy 6:4",
         "Isaiah 43:10",
@@ -3416,7 +3422,7 @@
       "category": "Heterodoxy Marker",
       "subcategory": "British Israelism",
       "kind": "doctrine",
-      "statement": "There is no biblical or genealogical basis for identifying modern Anglo-Saxons or Europeans as the lost tribes of Israel; Christian Identity racialism is heretical.",
+      "statement": "Modern Anglo-Saxon, European, or any other modern ethnic group is not biblically identified with the lost tribes of Israel; the Church is not coextensive with any one race or nation.",
       "scripture_anchors": [
         "Galatians 3:28",
         "Acts 17:26",
@@ -3435,7 +3441,7 @@
       "category": "Heterodoxy Marker",
       "subcategory": "Eastern Orthodoxy",
       "kind": "doctrine",
-      "statement": "Veneration of icons (proskynesis) and prayers to saints are rejected as violating the second commandment and Christ's unique mediation.",
+      "statement": "The honor due to God alone is not to be rendered to images of Christ, of saints, or of the cross; saints are not to be petitioned in prayer as mediators of access to God.",
       "scripture_anchors": [
         "Exodus 20:4-5",
         "Deuteronomy 5:8-9",
@@ -3457,7 +3463,7 @@
       "category": "Heterodoxy Marker",
       "subcategory": "Roman Catholicism",
       "kind": "doctrine",
-      "statement": "Mary was a sinner saved by grace like every other believer; she was not immaculately conceived, was not bodily assumed, and is not co-redemptrix.",
+      "statement": "Mary, the mother of Jesus, is herself among those redeemed by Christ — she was not preserved from original sin at her own conception, was not bodily assumed at the end of her life, and does not co-mediate the redemption Christ accomplished.",
       "scripture_anchors": [
         "Romans 3:23",
         "1 Timothy 2:5",
@@ -3479,7 +3485,7 @@
       "category": "Heterodoxy Marker",
       "subcategory": "Hyper-Calvinism",
       "kind": "doctrine",
-      "statement": "The gospel is to be freely offered to all people; God commands all to repent and believe; hyper-Calvinism's denial of the free offer of the gospel is rejected.",
+      "statement": "The gospel is to be freely offered to all people; God commands all to repent and believe; the well-meant offer of the gospel is not contingent on the hearer's elect status.",
       "scripture_anchors": [
         "Acts 17:30",
         "2 Peter 3:9",
@@ -3517,7 +3523,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Charismatic Excess",
       "kind": "doctrine",
-      "statement": "Hyper-charismatic excess (slain in the Spirit as normative, holy laughter, Toronto Blessing phenomena, Bethel/NAR-style signs, fire tunnels, prophetic decrees binding consciences) is to be rejected as disorderly and unscriptural.",
+      "statement": "Phenomena such as falling under the Spirit treated as normative, sustained ecstatic laughter, prophetic decrees claimed to bind the conscience, and physically dramatic signs treated as the standard of Spirit-presence are not the New Testament pattern of orderly worship.",
       "scripture_anchors": [
         "1 Corinthians 14:33",
         "1 Corinthians 14:40",
@@ -3534,7 +3540,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Offices",
       "kind": "doctrine",
-      "statement": "The office of apostle in the foundational, Scripture-authoring sense (eyewitness of the risen Christ, sent with Christ's authority to lay the church's foundation) ended with the apostles of Christ. Modern self-appointed 'apostles' (NAR: Wagner, Hamon, Bickle/IHOPKC, Bill Johnson/Bethel, Che Ahn, Lou Engle) and 'prophets' do not hold binding authority over the church. Functional missionary 'apostolic' work (church-planting) is fine; claims to apostolic OFFICE are not.",
+      "statement": "The office of apostle in the foundational, Scripture-authoring sense — eyewitness of the risen Christ, sent with Christ's authority to lay the Church's foundation — was filled by the apostles of Christ and is not continuing today; claims to apostolic *office* in this sense after the apostolic age do not bind the Church's conscience, though missionary church-planting work that is sometimes called \"apostolic\" in a non-office sense is unaffected.",
       "scripture_anchors": [
         "Ephesians 2:20",
         "Acts 1:21-22",
@@ -3592,7 +3598,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Word of Faith",
       "kind": "doctrine",
-      "statement": "Word of Faith / 'name it and claim it' / decreeing and declaring as a creative force of human speech is a false gospel that confuses the creature with the Creator.",
+      "statement": "Human speech does not possess intrinsic creative force such that \"decreeing and declaring\" causes God to bring about the speaker's stated outcome; the Creator's word and the creature's word are categorically distinct.",
       "scripture_anchors": [
         "Isaiah 55:8-11",
         "Psalm 115:3",
@@ -3609,7 +3615,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Sign Gifts",
       "kind": "doctrine",
-      "statement": "The miraculous sign gifts (apostleship, prophecy, tongues, miraculous healings) ceased with the apostolic age and the closing of the canon (cessationism); the contrary position (orderly continuationism, that the Spirit may still distribute miraculous gifts today, tested by Scripture and exercised in order) is held by faithful Christians and acceptable when paired with Scripture sufficiency.",
+      "statement": "The miraculous sign gifts (apostleship, prophecy, tongues, miraculous healings) ceased with the apostolic age and the closing of the canon.",
       "scripture_anchors": [
         "1 Corinthians 13:8-10",
         "Ephesians 2:20",
@@ -3681,7 +3687,7 @@
       "category": "Worship Style",
       "subcategory": "Service Design",
       "kind": "practice",
-      "statement": "A seeker-sensitive worship design that downplays Scripture, sin, judgment, or the cross to attract unbelievers compromises worship's God-ward orientation.",
+      "statement": "Worship design that systematically downplays Scripture, sin, judgment, or the cross to make the service more accessible to unbelievers reorients worship away from its God-ward end.",
       "scripture_anchors": [
         "1 Corinthians 14:23-25",
         "John 4:23-24",
@@ -3708,22 +3714,6 @@
       "tier": "important",
       "historical_consensus": "orthodox",
       "brethren_distinctive": false
-    },
-    {
-      "id": "prc-communion-frequency",
-      "category": "Worship Style",
-      "subcategory": "Lord's Supper",
-      "kind": "practice",
-      "statement": "Weekly observance of the Lord's Supper (the breaking of bread) is the New Testament and historic Brethren pattern.",
-      "scripture_anchors": [
-        "Acts 20:7",
-        "Acts 2:42",
-        "1 Corinthians 11:23-26"
-      ],
-      "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
-      "brethren_distinctive": true
     },
     {
       "id": "prc-congregational-singing",
@@ -3792,7 +3782,7 @@
       "category": "Christian Ethics",
       "subcategory": "Sanctity of Life",
       "kind": "doctrine",
-      "statement": "Human life bears the image of God from conception to natural death and is to be protected; intentional taking of innocent unborn human life (abortion) is sin, and pro-choice ethics that treats elective abortion as morally neutral or a Christian-liberty matter is incompatible with biblical anthropology and the sixth commandment.",
+      "statement": "Human life bears the image of God from conception to natural death and is to be protected; the intentional taking of innocent unborn human life is sin under the sixth commandment, not a morally neutral matter or a matter of Christian liberty.",
       "scripture_anchors": [
         "Psalm 139:13-16",
         "Exodus 20:13",
@@ -4348,7 +4338,7 @@
       "category": "Calendar & Customs",
       "subcategory": "Sabbath",
       "kind": "doctrine",
-      "statement": "Mandatory Saturday Sabbath observance for Christians (Seventh-Day Adventism, Hebrew Roots) is rejected; the moral principle of one-in-seven rest stands, but binding the Saturday Sabbath on Christians is contrary to NT teaching.",
+      "statement": "The Saturday Sabbath of the Mosaic calendar is not binding on Christians as a day-specific observance; the moral principle of one-in-seven rest endures, but the New Testament does not require believers to observe the seventh-day Sabbath.",
       "scripture_anchors": [
         "Colossians 2:16-17",
         "Romans 14:5-6",
@@ -4365,7 +4355,7 @@
       "category": "Calendar & Customs",
       "subcategory": "Holy Days",
       "kind": "practice",
-      "statement": "Observance of Christmas and Easter (Resurrection Sunday) is permissible Christian liberty; Brethren tradition is divided, with many observing and some rejecting the calendar as Roman accretion.",
+      "statement": "The observance of Christmas and Easter (Resurrection Sunday) is a matter of Christian liberty (Romans 14:5-6); the Christian calendar is not commanded in the New Testament but neither is its observance forbidden.",
       "scripture_anchors": [
         "Romans 14:5-6",
         "Colossians 2:16-17"
@@ -4396,7 +4386,7 @@
       "category": "Calendar & Customs",
       "subcategory": "Holy Days",
       "kind": "practice",
-      "statement": "Lent, Ash Wednesday, and saint-days are not commanded; Brethren typically do not observe. Personal fasting and reflection are commendable; treating the calendar as binding is rejected.",
+      "statement": "Lent, Ash Wednesday, and saint-days are not commanded by Scripture as observances binding on the Christian conscience; personal fasting and seasonal reflection remain commendable Christian disciplines apart from a calendar treated as obligatory.",
       "scripture_anchors": [
         "Romans 14:5-6",
         "Colossians 2:16-17"
@@ -4411,7 +4401,7 @@
       "category": "Heterodoxy Marker",
       "subcategory": "Anthropology",
       "kind": "doctrine",
-      "statement": "Eve's sin in Eden was not sexual intercourse with Satan; Cain was not Satan's biological son; humanity is one race in Adam. Serpent Seed anthropology and racialised genealogical heresies are rejected.",
+      "statement": "Eve's transgression in Eden was disobedience to God's command, not sexual congress with the serpent or with Satan; Cain is the natural son of Adam and Eve; all of humanity descends from one originating pair, not from divergent racial lines traceable to Satan.",
       "scripture_anchors": [
         "Genesis 3",
         "Genesis 4:1",
@@ -4430,7 +4420,7 @@
       "category": "Cult Marker",
       "subcategory": "Authoritarian Shepherding",
       "kind": "practice",
-      "statement": "Authoritarian 'discipling' or shepherding regimes that require submission of every life decision to a discipler / shepherd / apostle are spiritual abuse and cult-grade in pattern, regardless of the surrounding doctrinal statement.",
+      "statement": "Shepherding relationships in the Church do not require the disciple's unconditional submission of every life decision to a designated leader; binding the conscience in matters Scripture leaves free is contrary to the apostolic pattern.",
       "scripture_anchors": [
         "Matthew 23:8-12",
         "1 Peter 5:1-4",

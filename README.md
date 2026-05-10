@@ -2,9 +2,9 @@
 
 A theological GraphRAG engine for personal reflection and doctrinal evaluation.
 
-It indexes the Hebrew/Greek interlinear, multiple English translations, archaeological data, church history, and a curated set of doctrinal teaching notes into a single queryable system. Then it lets me triangulate any church's stated doctrine against primary sources (the original languages, the manuscript tradition, ecumenical history) instead of trusting secondary chains.
+It indexes the Hebrew/Greek interlinear with full Strong's-tagged concordance, multiple English translations, archaeological data, church history, and a curated set of doctrinal teaching notes into a single queryable system. Then it lets me triangulate any church's stated doctrine against primary sources (the original languages, the manuscript tradition, ecumenical history) instead of trusting secondary chains.
 
-The aim is *calibrated discernment*, not church-scoring. There's a difference.
+The aim is *calibrated discernment*, not church-scoring. A church which checks green on all markers can still fall flat in practical execution. There's a difference between beliveing the doctrine and practicing the doctrine. 
 
 ---
 
@@ -28,7 +28,7 @@ The answer I've landed on, at least as a working frame: our access to truth was 
 
 **This endeavour aims to identify, for myself, the truths I'm willing to lay my life down for, and the truths I'm willing to live and let live.**
 
-That sentence is not rhetorical. It maps directly onto the `tier` field of every question in the doctrinal taxonomy: tier=`essential` is "die for"; tier=`preference` is "live and let live"; everything in between is graduated. The whole point of the engine is to calibrate that line *against primary sources* rather than inherit it from any single teacher.
+That sentence is not rhetorical. It maps directly onto the `tier` field of every question in the doctrinal taxonomy: tier=`essential` is "die for"; tier=`preference` is "live and let live"; everything in between is graduated. The whole point of the engine is to calibrate that line *against primary sources* rather than inherit it from any single teacher — including the Brethren tradition I was formed in.
 
 ---
 
@@ -46,14 +46,17 @@ Each stage closes one trust gap so the next can be examined cleanly. I'm not del
 
 ## What the engine actually does
 
-The engine runs in two directions, with the doctrinal baseline as the hinge between them:
+The engine runs in two pipelines, sharing a Neo4j + Qdrant graph backbone:
 
-**Upstream (building the baseline).** I'm collaborating with a small set of churches and elders I personally know and trust. They fill out the same 222-question doctrinal questionnaire I do. The seed answers are autofilled by an inferred-baseline run (sources only: critical apparatus, interlinear, my teaching notes). The trusted-elder responses correct and refine that seed.
+**Pipeline A — Inferred-baseline derivation (tradition-neutral lexical-philological floor).** For each of 221 doctrinal propositions, the engine derives an answer that any of the eight major Christian lineages (Eastern Orthodox, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal) could audit. The verdict is settled by **apparatus + interlinear + concordance**. Counter-witness traditions are consulted as research aids to verify the lexical reading isn't idiosyncratic — they corroborate, they don't vote. **My Brethren-adjacent teaching notes are NOT in this pipeline.** Confessions (1689 LBC, WCF, Westminster Standards, Brethren Archive — all of them) are NOT in this pipeline. The whole point is that the formation I came from has to be tested against the lexical floor, not granted authority over it. See [tools/derive_baseline_prompt.md](tools/derive_baseline_prompt.md).
 
-**Downstream (using the baseline).** Given a potential church I'm considering visiting or joining, the engine triangulates that church's statement of faith or sermon claim against:
+**Pipeline B — Per-respondent overlays.** A small set of churches and elders I personally know and trust fill out the same 221-question form, with their own confessional lens. So do I, when I fill out my own. This is where the 1689 LBC, the WCF, my Brethren teaching notes, and the sermon corpus in `parsed/` actually live — they are inputs to specific respondents' viewpoints, not to the canonical baseline. After all responses come in, `consolidated.json` is the final post-research baseline used downstream.
 
-- the **original Hebrew/Greek**, with Strong's tagging and morphology (via [OSHB](https://en.wikipedia.org/wiki/Open_Scriptures_Hebrew_Bible) for OT and the eclectic Greek text for NT),
-- **multiple English translations** in parallel (formal equivalence: ESV/NASB/NKJV; dynamic: NIV/NLT, the latter only for narrative grasp),
+**Downstream.** Given a potential church I'm considering visiting or joining, the engine triangulates that church's statement of faith or sermon claim against:
+
+- the **original Hebrew/Greek**, with Strong's tagging and morphology (via [STEPBible TAHOT/TAGNT](https://github.com/STEPBible/STEPBible-Data) and [OSHB](https://github.com/openscriptures/morphhb)),
+- the **canon-wide concordance** (every Strong's lemma → every occurrence; OpenBible + TSK cross-references),
+- **multiple English translations** in parallel (formal: ESV/NASB/NKJV; dynamic: NIV/NLT, only for narrative grasp),
 - **archaeological context** (Open Context, DAAHL, Dead Sea Scrolls anchoring),
 - **church history nodes** (ecumenical councils, the [Reformation](https://en.wikipedia.org/wiki/Reformation), modern denominational lineages),
 - and the **consolidated baseline** built upstream.
@@ -64,63 +67,78 @@ Output of any query: where claims agree, where they diverge, and where one tier 
 
 ## Authority (whose word counts when)
 
-Every record in the corpus carries an `authority_level` from 0 to 4. The **critical apparatus is the source of truth**; everything else is downstream. Web sources and orthodox commentary are tertiary at best, never primary doctrinal authority.
+Every record in the corpus carries an `authority_level` from 0 to 4. The **critical apparatus is the source of truth**; everything else is downstream.
 
 | Level | Layer | Source |
 |---|---|---|
-| **0** | **Critical Apparatus** ← **source of truth** | [BHS](https://en.wikipedia.org/wiki/Biblia_Hebraica_Stuttgartensia) and [Nestle-Aland (NA28/UBS5)](https://en.wikipedia.org/wiki/Novum_Testamentum_Graece) footnotes: manuscript variants, editorial decisions, the bedrock that explains *why* the critical text reads what it does. |
-| 1 | Interlinear (Critical Text) | OSHB, WLC, [SBLGNT](https://en.wikipedia.org/wiki/SBL_Greek_New_Testament), [STEPBible](https://www.stepbible.org/) alignment. The closest accessible representation when the apparatus itself is paywalled. |
-| 2 | Formal Equivalence | NKJV, ESV. Word-for-word priority. Secondary reference when interpreting interlinear results. |
-| 3 | Dynamic Equivalence | NIV, NLT. Thought-for-thought. Useful for narrative grasp; never for doctrinal mapping into the graph. |
+| **0** | **Critical Apparatus** ← **source of truth** | [BHS](https://en.wikipedia.org/wiki/Biblia_Hebraica_Stuttgartensia) and [Nestle-Aland (NA28/UBS5)](https://en.wikipedia.org/wiki/Novum_Testamentum_Graece) footnotes: manuscript variants, editorial decisions. |
+| 1 | Interlinear (Critical Text) + Concordance | OSHB, WLC, [SBLGNT](https://en.wikipedia.org/wiki/SBL_Greek_New_Testament), [STEPBible](https://www.stepbible.org/) alignment. Strong's-tagged lemma index for canon-wide spider-mapping. |
+| 2 | Formal Equivalence | NKJV, ESV. Word-for-word priority. |
+| 3 | Dynamic Equivalence | NIV, NLT. Thought-for-thought. Useful for narrative grasp; never for doctrinal mapping. |
 | 4 | Exegetical Application | Personal teaching notes, archaeology, church history, commentaries. |
 
-A Level 4 sermon claim cannot override a Level 1 interlinear reading; a Level 1 interlinear reading cannot override a Level 0 apparatus footnote. When tiers disagree, the engine surfaces the conflict; it does not silently pick a side. See [docs/AUTHORITY_HIERARCHY.md](docs/AUTHORITY_HIERARCHY.md) for the full policy.
+A Level 4 sermon claim cannot override a Level 1 interlinear reading; a Level 1 interlinear reading cannot override a Level 0 apparatus footnote. **Confessions (Reformed or otherwise) do not appear in this tier scale** — they are an information layer recorded as `counter_witness[]` in evidence files, not authority. When tiers disagree, the engine surfaces the conflict; it does not silently pick a side. See [docs/AUTHORITY_HIERARCHY.md](docs/AUTHORITY_HIERARCHY.md).
 
 ---
 
 ## The doctrinal baseline (multi-stage, collaborative)
 
-I'm not building the baseline alone in a room. The collaborators are churches and elders I already know and trust personally, the people whose discernment I'd want behind this work. The output is then the tool I use to evaluate potential churches I'm considering visiting or joining. The data model is staged accordingly.
+I'm not building the baseline alone in a room. The collaborators are churches and elders I already know and trust personally. The output is then the tool I use to evaluate potential churches I'm considering visiting or joining.
 
 ```
-questions.json (universal, locked, 222 entries)
+questions.json (universal, locked envelope, 221 entries)
         │
-        │  tools/derive_baseline_prompt.md  (one Sonnet subagent per question)
+        │  tools/derive_baseline_prompt.md  (one subagent per question)
+        │  Pillars: concordance + hermeneutics + counter-witness
         ▼
-baseline.json (source-inferred seed)  ───┬─►  evidence/<id>.json (per-question audit trail)
-        │                                │
-        │  distributed to trusted elders │
-        ▼                                │
-responses/<respondent_id>.json (filled)  │
-        │                                │
-        │  collation + research          │
-        ▼                                │
-consolidated.json (final, canonical)  ───┘
+baseline.json (lexical-philological seed)  ───┬─►  evidence/<id>.json (per-question audit trail)
+        │                                     │
+        │  distributed to trusted elders      │
+        ▼                                     │
+responses/<respondent_id>.json (filled, with respondent's confessional lens)
+        │                                     │
+        │  collation + research                │
+        ▼                                     │
+consolidated.json (final, canonical)  ───────┘
 ```
 
 | File | What it is | Status |
 |---|---|---|
-| [questions.json](questions.json) | Universal question bank with 222 entries, each carrying 10 fields (statement, scripture anchors, confessional anchors, tier, etc.). | Locked schema |
-| `baseline.json` | **Source-inferred seed answers** (222 × 13 fields + viewpoint envelope). Generated autonomously from critical apparatus → interlinear → my teaching notes via the retrieval pipeline. **Provisional**: autofill drudgework so trusted-elder collaborators engage with substantive disagreements, not blank forms. | To be generated |
-| `responses/<id>.json` | Filled questionnaires from churches and elders I personally know and trust (and from me). Same 13-field shape. **Private** (gitignored). | Pending input |
-| `consolidated.json` | Final canonical baseline after collating all responses with the inferred seed and final research. The reference set my downstream church-evaluation queries are checked against. | Future |
-| `evidence/<id>.json` | Per-question audit trail produced during baseline generation: scripture citations with interlinear notes, source-doc hits, web sources, confidence flag. Survives every later phase. | To be generated |
+| [questions.json](questions.json) | Universal question bank with 221 entries, each carrying 10 fields. Envelope updated to `formation_under_examination` + `judging_panel`. | Locked schema; question text scheduled for phase-3 reframe. |
+| `baseline.json` | **Tradition-neutral lexical-philological seed answers** (221 × 13 fields + viewpoint envelope). Generated autonomously from apparatus + interlinear + concordance, with counter-witness corroboration. **Provisional**: autofill drudgework so trusted-elder collaborators engage with substantive disagreements, not blank forms. | To be generated |
+| `responses/<id>.json` | Filled questionnaires from churches and elders I personally know and trust (and from me, with my own Brethren-adjacent confessional lens recorded). Same 13-field shape. **Private** (gitignored). | Pending input |
+| `consolidated.json` | Final canonical baseline after collating all responses with the inferred seed and final research. | Future |
+| `evidence/<id>.json` | Per-question audit trail: scripture citations with genre + figures, concordance lemma traversal, hermeneutic block, counter-witness citations, web sources, confidence flag. Survives every later phase. | To be generated |
 
-All three answer files (`baseline.json` / `responses/*.json` / `consolidated.json`) share the same 13-field boolean-pattern shape; the envelope's `viewpoint` field disambiguates whose stance is recorded (`inferred-from-sources` | `individual:<id>` | `consolidated`). Schemas are locked in [docs/QUESTION_SCHEMA.md](docs/QUESTION_SCHEMA.md) (the 10-field question bank) and [docs/ANSWER_SCHEMA.md](docs/ANSWER_SCHEMA.md) (the 13-field answer record + evidence shape).
+All three answer files share the same 13-field boolean-pattern shape; the envelope's `viewpoint` field disambiguates whose stance is recorded (`inferred-from-sources` | `individual:<id>` | `consolidated`). Schemas are locked in [docs/QUESTION_SCHEMA.md](docs/QUESTION_SCHEMA.md) and [docs/ANSWER_SCHEMA.md](docs/ANSWER_SCHEMA.md).
 
 The `tier` field is where the testimony lands in code: `essential` is "I'd lay my life down for this," `preference` is "live and let live."
 
 ---
 
-## Confessions I cross-check against
+## How each question gets tested
 
-When `questions.json` carries a `confessional_anchors` field, the inferred-baseline subagents verify it against this set:
+Every question runs through three pillars, in order, before any verdict is recorded:
 
-- The [Westminster Confession of Faith (1646)](https://en.wikipedia.org/wiki/Westminster_Confession_of_Faith), the gold standard for Reformed confessional content.
-- The [1689 London Baptist Confession of Faith](https://en.wikipedia.org/wiki/1689_Baptist_Confession_of_Faith), the Reformed credobaptist standard. It matches Brethren convictions on baptism, communion, and membership where WCF would create artificial paedobaptist friction.
-- The three ecumenical creeds ([Apostles'](https://en.wikipedia.org/wiki/Apostles%27_Creed), [Nicene](https://en.wikipedia.org/wiki/Nicene_Creed), [Athanasian](https://en.wikipedia.org/wiki/Athanasian_Creed)). Pre-denominational and accepted across Roman Catholic, Eastern Orthodox, Reformed, Lutheran, and most evangelical lines. Athanasian especially nails Trinitarian/Christological precision for cult-marker questions (Watchtower, Mormon, Oneness Pentecostal).
+| Pillar | Source | Purpose |
+|---|---|---|
+| **1. Concordance** (mechanical) | STEPBible TAHOT + TAGNT (Strong's-tagged Hebrew/Greek tokens), OSHB cross-validation, OpenBible + TSK cross-references via Neo4j Cypher | Makes `analogia scripturae` (Scripture interprets Scripture) deterministic. Every Strong's lemma in the anchor verses is spider-mapped to every occurrence in the canon. Selection bias dies at the data layer — a subagent cannot quietly skip Gen 6:6 / Ex 32:14 / Jonah 3:10 when the lemma index lists them mechanically. See [docs/CONCORDANCE.md](docs/CONCORDANCE.md). |
+| **2. Hermeneutics** (visible) | Recorded per verdict in `evidence.hermeneutics` | Primary method (grammatico-historical / redemptive-historical / quadriga / patristic-typological / accommodation), frameworks in play (covenant / dispensational / NCT / progressive covenantalism / historic premillennial), figures of speech per scripture citation, genre rules, competing-lens verdicts. Forces the subagent to surface *how* the verdict was reached. See [docs/HERMENEUTICS.md](docs/HERMENEUTICS.md). |
+| **3. Counter-witness** (research aid) | Patristic ([ccel.org](https://ccel.org/fathers)), Catholic magisterial ([CCC at vatican.va](https://www.vatican.va/archive/ENG0015/_INDEX.HTM)), Lutheran ([Book of Concord](https://bookofconcord.org)), Anglican ([39 Articles](https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion)), Reformed (Westminster, Heidelberg, Belgic), Methodist ([UMC Articles](https://www.umc.org/en/content/articles-of-religion)), Anabaptist (Schleitheim 1527), Pentecostal ([AG Fundamental Truths](https://ag.org/Beliefs/Statement-of-Fundamental-Truths)), Eastern Orthodox ([OCA](https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture)) primary sources | Tests whether the apparatus reading survives reading by a non-Reformed-Baptist tradition. **Mandatory ≥1** for any tier=essential or tier=convictional verdict. **Does NOT settle the verdict** — apparatus + interlinear + concordance settle. Counter-witness corroborates that the lexical reading isn't idiosyncratic. |
 
-**Caveat for fellow Brethren readers**: Plymouth Brethren historically reject formal confessions ("[no creed but Christ](https://en.wikipedia.org/wiki/Sola_scriptura)", sola scriptura strictly applied). Including WCF and 1689 LBC in this engine is a *verification tool*, not a subscription. The engine treats them as cross-checks, not authority. When confessions conflict (e.g., WCF and 1689 LBC on baptism), the engine references my private teaching notes via the retrieval pipeline, surfaces the conflict in `evidence/<id>.json`, and writes it into a manual-review report. I resolve those by hand. This is why the [Brethren Archive](https://www.brethrenarchive.org/) ([Darby](https://en.wikipedia.org/wiki/John_Nelson_Darby), [Mackintosh](https://en.wikipedia.org/wiki/Charles_Henry_Mackintosh), Kelly, Bellett) is also in the trusted-source set.
+A clear interlinear reading contradicted by every counter-witness source is still a clear interlinear reading. Confessions never override Scripture. Reformed-Baptist confessions specifically (1689 LBC, the substrate the Brethren tradition shares with) cannot serve as independent corroboration for a Brethren reading because they share the same substrate.
+
+For the same substrate-pluralism reason, the inferred-baseline subagents are **forbidden** from citing Reformed-aligned commentary sites (carm.org, equip.org, gotquestions.org, monergism, ligonier, gospelcoalition) as authority. Only primary repositories: BibleHub, STEPBible, OSHB, ccel.org (Schaff), vatican.va (CCC), bookofconcord.org, oca.org, ag.org, umc.org, openbible.info.
+
+**Cult-marker bar — three conditions, all canonical.** A position counts as cult-grade only when:
+
+1. `would_die_for=true` (moral entailment).
+2. Apparatus + interlinear + concordance demonstrate the doctrine across the canon (not from a single passage).
+3. Counter-witness from ≥6 distinct lineages corroborates with `stance="affirms"`.
+
+**Even Trinity is not exempt.** Each question — including the Nicene-Chalcedonian foundations — clears or fails the bar on its own per-question evidence. Cross-tradition consensus is corroborating evidence the lexical reading isn't idiosyncratic; it does not, by itself, grant cult-marker status. A position rejected only by Reformed-Baptist confessions (the formation's substrate) carries `flags: ["cult-marker-substrate-only"]` and is downgraded to `would_die_for=true, cult_marker=false`. A position rejected by some major lineages but not others (e.g. Reformed-distinctive forensic justification, Catholic/Orthodox baptismal regeneration) is gospel-essential at most, not cult-grade.
+
+**Caveat for fellow Brethren readers**: Plymouth Brethren historically reject formal confessions ("[no creed but Christ](https://en.wikipedia.org/wiki/Sola_scriptura)", sola scriptura strictly applied — though that phrase is itself a Reformed distinctive, which is part of what this engine is designed to surface). Including WCF, 1689 LBC, the Catechism, Book of Concord, and the rest in this engine is *informational research only*, not subscription. They are how each tradition reads the lexical text — useful to record, never authoritative for the verdict.
 
 ---
 
@@ -135,8 +153,11 @@ The `source-docs/` and `converted/` directories are gitignored. They contain raw
 ## What's built and what's not
 
 - **Tier 1 (static structured corpus)**: *built*. Per-document JSON in [parsed/](parsed/), queryable from any Claude session via Read + Grep + jq.
-- **Tier 2 (semantic + graph layer)**: *built for sermon and Statement-of-Faith corpora; Bible/critical-apparatus loading, graph traversal, and the MCP server are pending.* Hybrid retrieval CLI is live: `uv run python -m retrieval.cli "<query>"`. See [docs/TIER_2_SPEC.md](docs/TIER_2_SPEC.md).
-- **Tier 3 (interactive surface)**: *planned.* MCP server + Flutter client.
+- **Tier 2 retrieval (semantic + graph layer for sermon/SOF)**: *built*. Hybrid retrieval CLI is live: `uv run python -m retrieval.cli "<query>"`. Used by Pipeline B (per-respondent overlays).
+- **Tier 2 concordance + Bible-text ingestion**: *loaders written, not yet run*. See [docs/CONCORDANCE.md](docs/CONCORDANCE.md) and [ingest/adapters/concordance_loader.py](ingest/adapters/concordance_loader.py).
+- **Inferred-baseline pipeline**: *architecture complete*; orchestrator gated on concordance ingestion + KPI verifier green-light. See [tools/derive_baseline_prompt.md](tools/derive_baseline_prompt.md), [tools/baseline_orchestrator.py](tools/baseline_orchestrator.py), [tools/verify_baseline.py](tools/verify_baseline.py).
+- **MCP server (Tier 3)**: *planned.* Schema designed; server not yet built.
+- **Flutter client (Tier 3)**: *planned.*
 
 ---
 
@@ -145,17 +166,17 @@ The `source-docs/` and `converted/` directories are gitignored. They contain raw
 ```
 brethren-doctrine/
 ├── parsed/                 Sanitized structured JSON corpus (per-document + aggregate index + cross-doc perspectives).
-├── docs/                   PROJECT.md, AUTHORITY_HIERARCHY.md, ANONYMIZATION.md, TIER_2_SPEC.md, QUESTION_SCHEMA.md, ANSWER_SCHEMA.md.
-├── ingest/                 Pydantic models and Neo4j upsert adapters (sermon + SOF).
+├── docs/                   PROJECT.md, ANSWER_SCHEMA.md, QUESTION_SCHEMA.md, AUTHORITY_HIERARCHY.md, HERMENEUTICS.md, CONCORDANCE.md, ANONYMIZATION.md.
+├── ingest/                 Pydantic models + Neo4j MERGE upsert adapters (sermon, SOF, concordance).
 ├── embeddings/             Voyage contextualized_embed + FastEmbed BM25 → Qdrant; Neo4j MERGE upsert.
 ├── retrieval/              Stage 0–4 hybrid retriever (router, hybrid RRF, BGE rerank, authority boost, envelope, Typer CLI).
 ├── graph/                  Neo4j schema (constraints + vector / fulltext / btree indexes).
-├── docker/                 Neo4j + Qdrant compose (Qdrant on 6433/6434 to avoid host-port collisions).
+├── docker/                 Neo4j + Qdrant compose.
 ├── research/               Tier 2 design research (embeddings, GraphRAG, hybrid+rerank, Bible data sources, MCP).
-├── tools/                  derive_baseline_prompt.md handover for the inferred-seed run. (PDF renderers deleted under greenfield; will be rewritten against the new 13-field shape when needed.)
+├── tools/                  derive_baseline_prompt.md (methodology), baseline_orchestrator.py (runtime + validator), verify_baseline.py (KPI verifier), verify_catalogs.json (catalogs), evidence_to_pdf.py (A4 PDF renderer).
 ├── evidence/               Per-question audit trail (populated by the baseline derivation run).
 ├── responses/              Filled questionnaires from trusted-elder collaborators + me. Private (gitignored).
-├── questions.json          Universal question bank (222 entries, locked 10-field schema; see docs/QUESTION_SCHEMA.md).
+├── questions.json          Universal question bank (221 entries; phase-3 reframe pending).
 ├── USAGE.md                Cross-session guide for querying the corpus from any Claude session.
 └── .claude/skills/         `ingest-sermons` skill (Opus subagent orchestration for source → JSON parsing).
 ```
@@ -181,23 +202,42 @@ cypher-shell -f graph/schema.cypher
 # Bootstrap Qdrant collection
 uv run python -m embeddings.bootstrap_qdrant
 
-# Embed and load (requires source-docs/ + parsed/ locally)
+# Ingest sermon + SOF corpus into Neo4j + Qdrant (Pipeline B)
 uv run python -m embeddings.embed_and_load
 
-# Query (pretty)
-uv run python -m retrieval.cli "what does the corpus say about substitutionary atonement?"
+# Ingest the concordance layer (one-time, idempotent; see docs/CONCORDANCE.md)
+git clone https://github.com/STEPBible/STEPBible-Data data/private/stepbible
+git clone https://github.com/openscriptures/morphhb data/private/oshb
+uv run python -m ingest.adapters.concordance_loader load-all --src data/private
 
-# Query (machine-parseable)
+# Run regression tests (parsers + golden evidence schema)
+uv run python -m pytest tests/ -v
+
+# Run KPI verifier (gates the baseline orchestrator run)
+uv run python -m tools.verify_baseline --check all --report
+
+# Audit questions.json for verdict pre-loading / confessional-vocab smuggling
+# (must pass before phase 2; the orchestrator's stem_audit step is a safety net,
+#  not a substitute for clean question stems)
+uv run python -m tools.verify_questions --report
+
+# Run the inferred-baseline orchestrator (only after pytest + KPI verifier + question hygiene are green)
+# (orchestrator is invoked by handing tools/derive_baseline_prompt.md to a fresh
+# Claude Code session at the project root)
+
+# Render an evidence/<id>.json as an A4 PDF
+uv run python -m tools.evidence_to_pdf evidence/doc-trinity.json
+
+# Query the live retrieval CLI (Pipeline B / downstream church-evaluation)
+uv run python -m retrieval.cli "what does the corpus say about substitutionary atonement?"
 uv run python -m retrieval.cli "Romans 6:1-4 baptism" --k 8 --json-only
 ```
-
-PDF rendering is currently deferred. The legacy renderers were deleted under the greenfield policy; they targeted a deprecated answer-file shape. Fresh renderers will be written against the locked 13-field shape (see [docs/ANSWER_SCHEMA.md](docs/ANSWER_SCHEMA.md)) once the inferred-baseline run completes and the questionnaire round is ready.
 
 ---
 
 ## Status
 
-Personal-use, single-user. No auth, no multi-tenant, no public API. The collaborative-questionnaire workflow runs in two directions: the baseline is built **with** churches and elders I personally know and trust; the baseline is then used to **evaluate** potential churches I'm considering visiting or joining. Personal due-diligence tooling. See [docs/PROJECT.md](docs/PROJECT.md) for the full picture.
+Personal-use, single-user. No auth, no multi-tenant, no public API. The collaborative-questionnaire workflow runs in two directions: the baseline is built **with** churches and elders I personally know and trust; the baseline is then used to **evaluate** potential churches I'm considering visiting or joining. Personal due-diligence tooling. See [docs/PROJECT.md](docs/PROJECT.md) for the full picture and phase plan.
 
 If you're another believer running the same diagnostic for yourself, the rubric (`questions.json`, the eventual `consolidated.json`, the engine itself) is potentially useful. The personal questionnaire responses (`responses/*.json`) are private. The structure is reusable; the answers are mine.
 

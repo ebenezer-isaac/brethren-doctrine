@@ -1,0 +1,116 @@
+{
+  "id": "doc-divine-omnipotence",
+  "answer": {
+    "id": "doc-divine-omnipotence",
+    "affirms": true,
+    "rationale": "Apparatus + interlinear converge on God's unrestricted power: the Niphal of pala (H6381) negated in Jer 32:17 and adynateo (G101) negated in Luke 1:37 both lexically express 'nothing impossible'. The concordance for these lemmas across the canon shows pan-canonical demonstration; anthropopathism passages (Gen 6:6, Jonah 3:10) require accommodation reading and do not refute.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Divine omnipotence is gospel-essential under cross-tradition consensus, but cult-marker fails the corrected bar: Open Theism and Process Theology dissent are not pan-tradition rejected (some traditions tolerate the dissent, e.g. Methodist openness debate). would_die_for=true reflects gospel weight; cult_marker=false reflects that denial is heterodox-but-not-cult."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": null
+    },
+    "lay_summary": "The verdict is YES. Scripture teaches that God can do anything that is genuinely possible. The strongest evidence is the consistent canon wide pattern. Genesis names God as El Shaddai (Almighty), Job says nothing can be withheld from God, and Jeremiah 32:17 and Luke 1:37 both negate the word for impossibility (nothing is too hard for the LORD, and nothing will be impossible with God). Critics like Open Theists and Process Theologians point to passages where God seems to change his mind, such as Genesis 6:6, Jonah 3:10, and 1 Samuel 15:11. They claim this shows limited divine power or knowledge. The standard answer is that these are accommodation language. The Bible describes God in human emotional terms so that humans can grasp his real moral response, not literally that God did not know what would happen. Major Christian traditions agree God is omnipotent, but they handle the open theism debate differently. Most Christian lineages reject it as outside historic orthodoxy, while some Wesleyans tolerate it as an intramural debate. That is why this question is gospel essential (would die for is true) but not classified here as a cult marker. The dissent is not pan tradition rejected.",
+    "scripture": [
+      {
+        "ref": "Jer.32.17",
+        "key_term": "לֹא יִפָּלֵא (lo yippale) — Niphal of pala, H6381",
+        "force": "pala (Niphal) = 'to be surpassing, extraordinary, beyond power'; negated: 'nothing is too extraordinary for You'",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Luke.1.37",
+        "key_term": "ἀδυνατήσει (adynateo) — G101 future indicative",
+        "force": "adynateo = 'to be impossible'; future negated: 'nothing will be impossible with God' (para Theou)",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Gen.6.6",
+        "key_term": "וַיִּנָּחֶם (vayyinnachem) — Niphal of nacham, H5162",
+        "force": "Niphal of nacham = 'to be sorry / regret'; literal reading would imply mutability, but the form is anthropopathic accommodation language for divine response to human moral state",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Jonah.3.10",
+        "key_term": "וַיִּנָּחֶם הָאֱלֹהִים — same Niphal of nacham, H5162",
+        "force": "God 'relents' from declared judgment; same anthropopathic figure as Gen 6:6, conditional-prophecy framework softens the apparent mutability",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      }
+    ],
+    "concordance_lemmas_traversed": ["H6381", "H5162", "G101"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [],
+      "notes": "Anthropopathic passages handled by accommodation principle (Calvin's 'lisps'); pan-canonical concordance of pala (H6381) and adynateo (G101) supports the unrestricted-power reading; nacham (H5162) occurrences across the canon show the lemma is regularly used in conditional-prophecy contexts where literal mutability is not in view."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Enchiridion 96",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He is called Almighty because He does whatever He wills. Although what some men will to do, He, with even greater might, prevents."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church §268-273",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Of all the divine attributes, only God's omnipotence is named in the Creed: to confess this power has great bearing on our lives. We believe that it is universal."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article I",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "There is one divine essence... eternal, without body, indivisible, of infinite power, wisdom, and goodness, the Maker and Preserver of all things."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 2.1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "almighty, most wise, most holy, most free, most absolute, working all things according to the counsel of His own immutable and most righteous will"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/jeremiah/32-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "לֹא־יִפָּלֵא — pala Niphal yiqtol 3ms 'will not be too difficult'"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P19.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "Catechism §268: God's omnipotence is universal, loving, and mysterious"
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}
