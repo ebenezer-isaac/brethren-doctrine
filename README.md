@@ -20,7 +20,7 @@ What I found was that only Christianity had bulletproof theology, philosophy, sc
 
 That should have been the end of it. But I'm now in the next phase, and it's harder than the first two.
 
-Back home in India, the answer to *which church?* was obvious: Brethren. It was what I was born into, what I knew, and the doctrine matched what I was taught. But the same skeptic question that pushed me through stages 1 and 2 keeps coming back: am I leaning toward Brethren only because I was raised in a Brethren family? Is my conviction inheritance, or is it verified? That question got significantly louder when I landed in London. There are very few distinct Brethren denominational churches here. The Brethren movement that initially originated in the UK has either been almost killed off or has reshaped so drastically from how it's practiced in India that I can hardly recognize it. So I'm forced to go in search of the truth again.
+Back home in India, the answer to *which church?* was obvious: Brethren. It was what I was born into, what I knew, and the doctrine matched what I was taught. But the same skeptic question that pushed me through stages 1 and 2 keeps coming back: am I leaning toward Brethren only because I was raised in a Brethren family? Is my conviction inheritance, or is it verified? That question got significantly louder when I landed in London. There are very few distinct Brethren denominational churches here and the others have substantially changed over time. So I'm forced to go in search of the truth again.
 
 I came to Christianity *because of* its infallible truth and singular logic, grounded in Scripture. So why are there so many denominations within Christianity itself? If truth is singular, shouldn't there be a singular church?
 
