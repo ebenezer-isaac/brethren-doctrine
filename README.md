@@ -1,4 +1,4 @@
-# brethren-doctrine
+# The Case for Brethren Doctrine
 
 A theological GraphRAG engine for personal reflection and doctrinal evaluation.
 
