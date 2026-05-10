@@ -14,7 +14,7 @@ The four discriminators against everything below:
 
 1. Critical Apparatus (Level 0) → Interlinear (Level 1) is **source of truth**; confessions are explicitly **not a tier**.
 2. **Two-pipeline split**: tradition-neutral `baseline.json` is a separate artefact from per-respondent `responses/<id>.json`.
-3. **Cult-marker bar** — canonical demonstration + ≥6-lineage corroboration; even Trinity is not exempt from the bar.
+3. **Cult-marker bar**, canonical demonstration alone (pan-canonical lexical reading from apparatus + interlinear + concordance, not single-passage); lineage agreement is diagnostic, not a vote. Even Trinity is not exempt from the bar.
 4. **Diagnostic / discernment** is the downstream use case, not study or chatbot.
 
 No project surveyed combines all four. Most overlap on one or two layers of the stack; this file records *which* layer.
@@ -63,7 +63,7 @@ These are upstream feedstock candidates for the concordance loader ([../ingest/a
 | [llm-mar/study-bible](https://github.com/llm-mar/study-bible) | Multi-agent reasoning for multi-perspective Bible study | Closest spirit to the `counter_witness[]` field, but no apparatus floor and no derivation gate |
 | [ortegaalfredo/ChristGPT](https://github.com/ortegaalfredo/ChristGPT) | LLM trained on the Bible and Jesus's teachings | Generative chatbot, not a derivation system |
 | [fennsaji/bible-king-llm](https://github.com/fennsaji/bible-king-llm) | LangChain Bible expert | Same shape as ChristGPT |
-| [khornberg/lbcf-1689](https://github.com/khornberg/lbcf-1689) | 1689 LBCF text in machine-readable form | **Useful input** — feedstock for a Brethren / Reformed Baptist respondent overlay |
+| [khornberg/lbcf-1689](https://github.com/khornberg/lbcf-1689) | 1689 LBCF text in machine-readable form | **Useful input**, feedstock for a Brethren / Reformed Baptist respondent overlay |
 
 Confession-text repos (1689 LBCF, WCF, Savoy Declaration, Belgic) and tabular comparisons (`proginosko.com/docs/wcf_lbcf.html`) are inputs to pipeline B (respondent overlays); they are explicitly not part of pipeline A.
 
@@ -71,7 +71,7 @@ Confession-text repos (1689 LBCF, WCF, Savoy Declaration, Belgic) and tabular co
 
 ## What no surveyed project does
 
-The combination listed at the top — apparatus-as-Level-0 + tradition-neutral baseline derivation + per-respondent overlay split + cult-marker bar with ≥6-lineage corroboration + diagnostic-use downstream — was not found in any public project at the time of this survey.
+The combination listed at the top, apparatus-as-Level-0 plus tradition-neutral baseline derivation plus per-respondent overlay split plus cult-marker bar driven by canonical demonstration alone plus diagnostic-use downstream, was not found in any public project at the time of this survey.
 
 Projects that touch any *one* of those layers exist; projects that compose all four are absent. The novelty claim is therefore **architectural composition**, not any single technique.
 

@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -52,8 +53,15 @@ EVIDENCE_REQUIRED_FIELDS = (
     "flags",
 )
 
-LAY_SUMMARY_MIN_CHARS = 200
-LAY_SUMMARY_MAX_CHARS = 2000
+# lay_summary is now an OBJECT with two reader-facing paragraphs:
+#   - reasoning: Scripture-based verdict justification (lexical evidence, complicating
+#     texts, how the verdict handles the tension)
+#   - denominational_landscape: where major Christian lineages agree or disagree on the
+#     proposition, with named lineages and named carriers of denial where applicable
+# Each section: <=500 words, >=100 chars, plain English, no jargon, no em/en dashes.
+LAY_SUMMARY_SUBFIELDS = ("reasoning", "denominational_landscape")
+LAY_SUMMARY_MIN_CHARS = 100
+LAY_SUMMARY_MAX_WORDS = 500
 # Specialist vocabulary that should NOT appear in the reader-facing summary.
 LAY_SUMMARY_JARGON_TOKENS = (
     "Strong's", "Niphal", "Piel", "Hiphil", "Granville-Sharp", "Granville Sharp",
@@ -81,7 +89,7 @@ VALID_FIGURES = {
     "anthropomorphism", "anthropopathism", "metaphor", "simile",
     "hyperbole", "metonymy", "synecdoche", "irony", "personification",
     "chiasm", "merism", "idiom", "typology", "apocalyptic-symbolism",
-    "parallelism", "parable",
+    "parallelism", "parable", "phenomenological-language",
 }
 
 VALID_PRIMARY_METHODS = {
@@ -104,7 +112,12 @@ VALID_WEB_CATEGORIES = {
 VALID_WEB_STANCES = {"supports", "opposes", "complicates", "nuance"}
 VALID_CONFIDENCE = {"high", "medium", "low"}
 
-CULT_MARKER_MIN_TRADITIONS = 6
+# Cult-marker bar requires canonical demonstration (pan-canonical lexical reading,
+# not single-passage). Validator enforces minimum structural breadth as a proxy
+# for "not single-passage": at least 2 distinct concordance lemmas traversed and
+# at least 3 scripture[] anchors. Lineage agreement does NOT factor in.
+CULT_MARKER_MIN_LEMMAS = 2
+CULT_MARKER_MIN_ANCHORS = 3
 
 
 def load_questions() -> list[dict]:
@@ -134,9 +147,10 @@ PROMPT_TEMPLATE = """\
 You are deriving a tradition-neutral lexical-philological baseline answer for ONE
 question. The owner is formed in Plymouth Brethren-adjacent tradition; THAT
 FORMATION IS ON TRIAL, NOT THE RUBRIC. Calibrate to apparatus + interlinear +
-concordance, with counter-witness traditions corroborating that the lexical
-reading is cross-tradition. Do NOT calibrate to Brethren or Reformed-Protestant
-orthodoxy.
+concordance. Counter-witness traditions are recorded as diagnostic information
+for the reader showing how each lineage reads the same lexical text; they do
+NOT vote on `affirms`, `cult_marker_if_denied`, `would_die_for`, or `confidence`.
+Do NOT calibrate to Brethren or Reformed-Protestant orthodoxy.
 
 This answer is a SEED for community-questionnaire input. Be honest about
 uncertainty so trusted-elder reviewers know what to scrutinize.
@@ -147,9 +161,10 @@ uncertainty so trusted-elder reviewers know what to scrutinize.
    BibleHub interlinear (https://biblehub.com/interlinear/), OSHB (https://hb.openscriptures.org).
 3. Concordance (mandatory traversal, all tiers): Strong's lemma → all-occurrences spider-map.
 4. Hermeneutic classification (mandatory): primary method, frameworks, figures, genre.
-5. Counter-witness traditions (mandatory for tier=essential / convictional): patristic,
-   Catholic, Lutheran, Anglican, Anabaptist, Methodist, Pentecostal, Reformed, Eastern
-   Orthodox primary sources via web fetch.
+5. Counter-witness traditions (encouraged for diagnostic completeness on every
+   question): patristic, Catholic, Lutheran, Anglican, Anabaptist, Methodist,
+   Pentecostal, Reformed, Eastern Orthodox primary sources via web fetch.
+   Recorded for the reader's information; they do NOT vote on any verdict field.
 
 Confessions never override apparatus + interlinear. Defendant teaching notes
 (source-docs/, parsed/) are NOT in this run.
@@ -167,7 +182,7 @@ this pipeline does NOT consult. Use real names freely:
 - Public denominations and movements (Unitarian Universalists, Christadelphians,
   Mormons, JWs, Iglesia ni Cristo, Oneness Pentecostals, etc.): RETAIN.
 - Private-corpus contributors (Ebenezer's personal teachers from `parsed/`):
-  REDACT if they appear (they shouldn't — baseline doesn't consult parsed/).
+  REDACT if they appear (they shouldn't, baseline doesn't consult parsed/).
 
 Do NOT over-redact. "Wesley's abridgement of the 39 Articles" stays; do not
 write "[REDACTED]'s abridgement". "Unitarian Universalists" stays; do not
@@ -176,7 +191,7 @@ write "[REDACTED]-Universalists".
 ## Question (your only question)
 {question_json}
 
-## Method (in order — DO NOT SKIP STEPS)
+## Method (in order, DO NOT SKIP STEPS)
 
 ### Step 1: Stem audit (FIRST)
 Read `question.statement`. Flag if it names heretics, asserts the verdict, or uses
@@ -212,12 +227,12 @@ EMPTY ARRAY IS A HARD VALIDATION FAILURE.
 Populate `evidence.hermeneutics`:
 - primary_method (grammatico-historical default)
 - frameworks_in_play (covenant_theology, dispensationalism, new_covenant_theology,
-  progressive_covenantalism, historic_premillennialism — list those producing
+  progressive_covenantalism, historic_premillennialism, list those producing
   different verdicts on this question)
 - analogia_scripturae_invoked (bool)
 - progressive_revelation_factor (bool)
-- competing_lens_verdicts[] (mandatory if frameworks_in_play.length > 1 AND
-  tier in {{essential, convictional}})
+- competing_lens_verdicts[] (mandatory if frameworks_in_play.length > 1;
+  tier abolished from questions.json so no tier-gating)
 - notes (short narrative)
 
 If verdict requires dispensational hermeneutics, add flag `dispensational-lens-required`.
@@ -239,9 +254,11 @@ at least one anthropomorphic / anthropopathic citation MUST appear in scripture[
 with figures including 'anthropomorphism' or 'anthropopathism'. Otherwise add flag
 `anthropomorphic-passages-omitted`.
 
-### Step 6: Counter-witness pass (MANDATORY for tier=essential / convictional)
+### Step 6: Counter-witness pass (encouraged for diagnostic completeness)
 Pull at least ONE primary-source statement from each of as many tracked lineages
-as possible. Allowed entry points (use these URLs only):
+as possible. Counter-witness is research aid for the reader; it does NOT vote
+on `affirms`, `cult_marker_if_denied`, `would_die_for`, or `confidence`.
+Allowed entry points (use these URLs only):
 - Patristic: https://ccel.org/fathers (Schaff NPNF Series 1 & 2)
 - Catholic magisterial: https://www.vatican.va/archive/ENG0015/_INDEX.HTM (CCC);
   Dei Verbum at https://www.vatican.va/archive/hist_councils/ii_vatican_council/
@@ -258,10 +275,11 @@ as possible. Allowed entry points (use these URLs only):
 
 Record `tradition`, `anchor`, `verified` (bool), `stance`, `key_phrase` (≤200 chars).
 
-If tier=essential / tier=convictional and zero counter-witness, flag
-`counter-witness-missing` and lower confidence to medium.
+If zero counter-witness can be surfaced in good faith on any question, flag
+`counter-witness-missing` for research-quality tracking. Confidence is NOT
+lowered; it reflects lexical clarity, not lineage coverage.
 
-### Step 7: Web pass — primary repositories only
+### Step 7: Web pass, primary repositories only
 ALLOWED: biblehub.com, stepbible.org, hb.openscriptures.org, ccel.org, vatican.va,
 bookofconcord.org, churchofengland.org, ag.org, umc.org, oca.org, openbible.info.
 
@@ -270,11 +288,11 @@ ligonier.org, thegospelcoalition.org, brethrenarchive.org.
 
 Record url, category, stance, quote (≤200 chars).
 
-### Step 8: Lay summary (MANDATORY — reader-facing reasoning)
+### Step 8: Lay summary (MANDATORY, reader-facing reasoning)
 
 After the technical work, write a 4-8 sentence plain-English explanation in
 `evidence.lay_summary`. The reader is a layperson trying to understand what
-the verdict is and WHY — including counterarguments. Required structure:
+the verdict is and WHY, including counterarguments. Required structure:
 1. State the verdict in everyday language (no Greek, no Strong's, no jargon).
 2. The strongest reason FOR it from Scripture, in plain words.
 3. The strongest counterargument or complicating texts that critics cite,
@@ -296,27 +314,32 @@ natural conjunctions like "and", "but", "however". Natural language only.
 
 Length: 200-2000 characters. Validator enforces.
 
-## Cult-marker bar (THREE conditions, all canonical)
+## Cult-marker bar (TWO conditions, both canonical)
 cult_marker_if_denied=true requires:
-1. would_die_for=true (entailment)
+1. would_die_for=true (entailment). Denial constitutes denial of the gospel
+   itself or a core Trinitarian or Christological boundary clearly mandated
+   by Scripture's own lexical pattern.
 2. Apparatus + interlinear + concordance demonstrate the doctrine canonically
-   (not from a single passage)
-3. counter_witness[] contains ≥6 distinct lineages, ALL with stance="affirms"
+   (pan-canonical lexical reading, not from a single passage).
 
-Even Trinity must clear all three on its own evidence. Pan-tradition consensus
-alone does not grant cult-marker; it corroborates.
+Lineage agreement does NOT grant or withhold cult-marker status. Counter-witness
+is recorded for diagnostic completeness; it does not vote. Even Trinity clears
+or fails on its own canonical evidence.
 
-If only Reformed-substrate confessions reject the position, flag
-`cult-marker-substrate-only` and downgrade to would_die_for=true,
-cult_marker=false.
+The Brethren-on-trial discipline is preserved through canonical demonstration:
+most Brethren distinctives lack unambiguous pan-canonical lexical support and
+will fail condition 2 honestly.
 
-## Confidence
+## Confidence (lexical clarity, not lineage agreement)
 - high: apparatus + interlinear unambiguous AND concordance pan-canonical AND
-  hermeneutic uncontested AND ≥3 counter-witness traditions corroborate.
-- medium: lexical clear but counter-witness divided OR apparatus paywalled OR
-  complicating texts require harmonization OR non-default hermeneutic.
-- low: Scripture silent/ambiguous OR counter-witness sharply divided OR concordance
-  shows no pan-canonical demonstration OR heavy inference required.
+  hermeneutic uncontested.
+- medium: apparatus paywalled and interlinear alone carries the verdict OR
+  complicating texts require harmonization OR verdict requires non-default
+  hermeneutic OR lemma-network is contested at the lexical level.
+- low: Scripture silent or ambiguous OR concordance shows no pan-canonical
+  demonstration OR heavy inference required.
+
+Counter-witness divergence or convergence does NOT shift confidence.
 
 ## Output (single JSON file → evidence/{qid}.json)
 
@@ -344,6 +367,10 @@ The shape is locked in docs/ANSWER_SCHEMA.md. Do not invent extra fields.
       "verdict_preloaded": <bool>,
       "neutralized_form": "<string or null>",
       "notes": "<string or null>"
+    }},
+    "lay_summary": {{
+      "reasoning": "<plain-English Scripture-based verdict justification. Required structure: (1) verdict in everyday language; (2) strongest reason FOR from Scripture, named-verse plain words; (3) strongest counterargument from Scripture's own complicating texts, named-verse plain words; (4) how the verdict handles the tension or honest acknowledgment it remains. NO denominational or lineage names in this section; that goes in denominational_landscape. >=100 chars, <=500 words. NO jargon (Strong's, Niphal, Piel, Hiphil, Granville-Sharp, Colwell, anarthrous, articular, hapax legomenon, lemma, morpheme, BHS, NA28, UBS5, aorist, septuagint, preterite). NO em or en dashes.>",
+      "denominational_landscape": "<plain-English description of where major Christian lineages agree or disagree on this proposition. Name the lineages (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox) with brief positions. Where applicable, name public-record cult or heterodox carriers of denial (Mormonism, Jehovah's Witnesses, Iglesia ni Cristo, William Branham, Christian Science, Mary Baker Eddy, Christadelphians, etc.) and what their denial places them in relation to historic Christianity. This section is DESCRIPTIVE of church history; it does NOT vote on the verdict. >=100 chars, <=500 words. NO jargon. NO em or en dashes.>"
     }},
     "scripture": [
       {{"ref": "Rom.6.3", "key_term": "βάπτισμα (baptisma) G908",
@@ -383,18 +410,20 @@ Write to: evidence/{qid}.json (relative to repo root).
 
 ## Stop conditions / flags
 - stem_audit.verdict_preloaded=true → flag `stem-pre-loaded-verdict`, work neutralized.
-- Apparatus + interlinear contradict counter-witness consensus → confidence=medium,
-  flag `apparatus-vs-counter-witness-conflict`. Apparatus wins.
+- Apparatus + interlinear contradict counter-witness consensus → flag
+  `apparatus-vs-counter-witness-conflict`. Apparatus wins. Confidence is NOT
+  lowered; lineage divergence is diagnostic, not confidence-shifting.
 - Counter-witness sources from kin confessions disagree → flag
-  `confession-tradition-divergence`.
+  `confession-tradition-divergence` for diagnostic information.
 - Concordance reveals doctrine NOT pan-canonically supported → confidence=low,
   flag `single-passage-doctrine`.
-- Tier=essential / tier=convictional with zero counter-witness → flag
-  `counter-witness-missing`, confidence=medium.
-- Cannot reach confident verdict → confidence=low, affirms=null, flag
-  `needs-elder-input`.
-- cult_marker_if_denied=true without ≥6 affirming counter-witness lineages →
-  flag `cult-marker-substrate-only`, downgrade.
+- Zero counter-witness on any tier → flag `counter-witness-missing` for
+  research-quality tracking. Confidence is NOT lowered.
+- Cannot reach confident verdict from apparatus + interlinear + concordance →
+  confidence=low, affirms=null, flag `needs-elder-input`.
+- cult_marker_if_denied=true without canonical demonstration (single-passage
+  or lexically ambiguous) → incoherent; re-derive with `affirms` and
+  `cult_marker` re-evaluated honestly.
 - Concordance unavailable (Neo4j down, no fallback) → hard fail; report up.
 - Never bluff. Never invent scripture. Note guesses in flags.
 
@@ -474,6 +503,8 @@ def validate(qid: str) -> tuple[bool, list[str]]:
             errs.append(f"missing-answer.{k}")
     if a.get("cult_marker_if_denied") is True and a.get("would_die_for") is not True:
         errs.append("entailment-violation:cult_marker_without_die_for")
+    if a.get("cult_marker_if_denied") is True and a.get("affirms") is not True:
+        errs.append("entailment-violation:cult_marker_without_affirms_true")
 
     # Evidence shape
     if "evidence" not in d:
@@ -498,21 +529,32 @@ def validate(qid: str) -> tuple[bool, list[str]]:
     if sa.get("verdict_preloaded") is True and not sa.get("neutralized_form"):
         errs.append("evidence.stem_audit.neutralized_form-missing")
 
-    # lay_summary: required, length-bounded; reject jargon + em/en dashes
+    # lay_summary: required nested object with two paragraphs.
+    # Each paragraph: >=100 chars, <=500 words, no jargon, no em/en dashes.
     lay = ev.get("lay_summary")
-    if not isinstance(lay, str):
-        errs.append("evidence.lay_summary-missing-or-not-string")
+    if not isinstance(lay, dict):
+        errs.append("evidence.lay_summary-not-object")
     else:
-        if len(lay) < LAY_SUMMARY_MIN_CHARS:
-            errs.append(f"evidence.lay_summary-too-short:{len(lay)}<{LAY_SUMMARY_MIN_CHARS}")
-        if len(lay) > LAY_SUMMARY_MAX_CHARS:
-            errs.append(f"evidence.lay_summary-too-long:{len(lay)}>{LAY_SUMMARY_MAX_CHARS}")
-        leaks = [t for t in LAY_SUMMARY_JARGON_TOKENS if t.lower() in lay.lower()]
-        if leaks:
-            errs.append(f"evidence.lay_summary-jargon-leak:{','.join(leaks)}")
-        dashes = [d for d in LAY_SUMMARY_BANNED_DASHES if d in lay]
-        if dashes:
-            errs.append(f"evidence.lay_summary-em-dash-banned:use-periods-or-commas")
+        for sub in LAY_SUMMARY_SUBFIELDS:
+            text = lay.get(sub)
+            if not isinstance(text, str):
+                errs.append(f"evidence.lay_summary.{sub}-missing-or-not-string")
+                continue
+            n_chars = len(text)
+            n_words = len(text.split())
+            if n_chars < LAY_SUMMARY_MIN_CHARS:
+                errs.append(f"evidence.lay_summary.{sub}-too-short:{n_chars}<{LAY_SUMMARY_MIN_CHARS}-chars")
+            if n_words > LAY_SUMMARY_MAX_WORDS:
+                errs.append(f"evidence.lay_summary.{sub}-too-long:{n_words}>{LAY_SUMMARY_MAX_WORDS}-words")
+            text_lower = text.lower()
+            leaks = [
+                t for t in LAY_SUMMARY_JARGON_TOKENS
+                if re.search(rf"\b{re.escape(t.lower())}\b", text_lower)
+            ]
+            if leaks:
+                errs.append(f"evidence.lay_summary.{sub}-jargon-leak:{','.join(leaks)}")
+            if any(d in text for d in LAY_SUMMARY_BANNED_DASHES):
+                errs.append(f"evidence.lay_summary.{sub}-em-dash-banned:use-periods-or-commas")
 
     # scripture[] entries
     scripture = ev.get("scripture") or []
@@ -562,13 +604,10 @@ def validate(qid: str) -> tuple[bool, list[str]]:
     if not isinstance(h.get("progressive_revelation_factor"), bool):
         errs.append("evidence.hermeneutics.progressive_revelation_factor-not-bool")
 
-    # counter_witness mandatory for essential/convictional
-    q = question_by_id(qid)
-    tier = (q or {}).get("tier")
+    # counter_witness presence-or-flag check, universal (tier abolished).
     cw = ev.get("counter_witness") or []
-    if tier in {"essential", "convictional"}:
-        if (not cw) and "counter-witness-missing" not in (ev.get("flags") or []):
-            errs.append("counter-witness-missing-without-flag")
+    if (not cw) and "counter-witness-missing" not in (ev.get("flags") or []):
+        errs.append("counter-witness-missing-without-flag")
     for i, c in enumerate(cw):
         if not isinstance(c, dict):
             errs.append(f"evidence.counter_witness[{i}]-not-object")
@@ -594,12 +633,19 @@ def validate(qid: str) -> tuple[bool, list[str]]:
     if not isinstance(ev.get("flags"), list):
         errs.append("evidence.flags-not-list")
 
-    # Cult-marker pan-tradition consensus check
+    # Cult-marker canonical-demonstration check (lexical breadth proxy for
+    # "pan-canonical, not single-passage"). Lineage agreement is NOT checked;
+    # under the revised rule, Scripture's lexical clarity drives the bar.
     if a.get("cult_marker_if_denied") is True:
-        affirming = {c.get("tradition") for c in cw if c.get("stance") == "affirms"}
-        if len(affirming) < CULT_MARKER_MIN_TRADITIONS:
+        n_lemmas = len(ev.get("concordance_lemmas_traversed", []) or [])
+        n_anchors = len(ev.get("scripture", []) or [])
+        if n_lemmas < CULT_MARKER_MIN_LEMMAS:
             errs.append(
-                f"cult-marker-without-pan-tradition-consensus:got-{len(affirming)}-need-{CULT_MARKER_MIN_TRADITIONS}"
+                f"cult-marker-without-canonical-demonstration:lemmas-{n_lemmas}-need-{CULT_MARKER_MIN_LEMMAS}"
+            )
+        if n_anchors < CULT_MARKER_MIN_ANCHORS:
+            errs.append(
+                f"cult-marker-without-canonical-demonstration:anchors-{n_anchors}-need-{CULT_MARKER_MIN_ANCHORS}"
             )
 
     # Cult-marker eligibility (catalog allow-list)

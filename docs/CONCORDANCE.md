@@ -1,4 +1,4 @@
-# Concordance — the spider-map layer
+# Concordance, the spider-map layer
 
 > Methodology pillar #1. Makes `analogia scripturae` (Scripture interprets Scripture) mechanical instead of editorial: every Hebrew/Greek lemma maps deterministically to every occurrence in the canon, and every verse carries hand-curated cross-references to thematically linked verses.
 
@@ -10,9 +10,9 @@ The other two pillars are [HERMENEUTICS.md](HERMENEUTICS.md) (interpretive lens 
 
 Two failure modes the lemma index catches that nothing else does:
 
-**Selection bias at the citation level.** A subagent answering a question on omnipotence/immutability can produce a `scripture[]` array with all `supports: "for"` by quietly omitting Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10. With the concordance, the lemma `nacham` (H5162, "to be sorry / repent / be moved to pity") returns every occurrence in the canon — those passages are listed mechanically. Skipping them now requires an explicit choice the validator can flag.
+**Selection bias at the citation level.** A subagent answering a question on omnipotence/immutability can produce a `scripture[]` array with all `supports: "for"` by quietly omitting Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10. With the concordance, the lemma `nacham` (H5162, "to be sorry / repent / be moved to pity") returns every occurrence in the canon, those passages are listed mechanically. Skipping them now requires an explicit choice the validator can flag.
 
-**Single-passage doctrines.** A doctrine that rests on one passage is structurally fragile. The cult-marker bar in [ANSWER_SCHEMA.md](ANSWER_SCHEMA.md) requires *canonical demonstration*: the doctrine must be visible across the canon, not from a single passage. The concordance is what makes "across the canon" measurable — every lemma's occurrence list either supports a pan-canonical reading or doesn't.
+**Single-passage doctrines.** A doctrine that rests on one passage is structurally fragile. The cult-marker bar in [ANSWER_SCHEMA.md](ANSWER_SCHEMA.md) requires *canonical demonstration*: the doctrine must be visible across the canon, not from a single passage. The concordance is what makes "across the canon" measurable, every lemma's occurrence list either supports a pan-canonical reading or doesn't.
 
 ---
 
@@ -22,13 +22,13 @@ All sources verified active and well-maintained as of 2026.
 
 | Source | What it gives | License | Format | Repo / URL |
 |---|---|---|---|---|
-| **STEPBible TAHOT** | Translators' Amalgamated Hebrew OT — every Hebrew word in the Tanakh with disambiguated Strong's lemma, ETCBC/OpenScriptures morphology, gloss. ~423k tokens. Variant-aware (Leningrad/WLC, Ketiv/Qere). | CC BY 4.0 | TSV (UTF-8, `$`-delimited records) | https://github.com/STEPBible/STEPBible-Data |
-| **STEPBible TAGNT** | Translators' Amalgamated Greek NT — same shape; NA27/28, TR, SBLGNT, TH-GNT, Byz, WH. Disambiguated Strong's → LSJ + Robinson morphology. ~138k tokens. | CC BY 4.0 | TSV | Same repo |
-| **OSHB / MorphHB** | Open Scriptures Hebrew Bible — full Hebrew Bible, Westminster Leningrad Codex with augmented Strong's + morphology, OSIS XML. Cross-validates TAHOT (shares the OpenScriptures morph dialect). | CC BY 4.0 | OSIS XML | https://github.com/openscriptures/morphhb |
+| **STEPBible TAHOT** | Translators' Amalgamated Hebrew OT, every Hebrew word in the Tanakh with disambiguated Strong's lemma, ETCBC/OpenScriptures morphology, gloss. ~423k tokens. Variant-aware (Leningrad/WLC, Ketiv/Qere). | CC BY 4.0 | TSV (UTF-8, `$`-delimited records) | https://github.com/STEPBible/STEPBible-Data |
+| **STEPBible TAGNT** | Translators' Amalgamated Greek NT, same shape; NA27/28, TR, SBLGNT, TH-GNT, Byz, WH. Disambiguated Strong's → LSJ + Robinson morphology. ~138k tokens. | CC BY 4.0 | TSV | Same repo |
+| **OSHB / MorphHB** | Open Scriptures Hebrew Bible, full Hebrew Bible, Westminster Leningrad Codex with augmented Strong's + morphology, OSIS XML. Cross-validates TAHOT (shares the OpenScriptures morph dialect). | CC BY 4.0 | OSIS XML | https://github.com/openscriptures/morphhb |
 | **OpenBible.info cross-references** | ~340k vote-weighted cross-references. Vote weights map cleanly to Neo4j edge `confidence` property. Primary thematic layer. | CC BY | TSV/zip | https://www.openbible.info/labs/cross-references/ |
 | **Treasury of Scripture Knowledge (TSK)** | ~500k hand-curated cross-references (1834, public domain). Long-tail thematic backstop. | Public domain | CSV/SQLite/JSON | https://github.com/scrollmapper/bible_databases |
 
-**Skip MorphGNT/SBLGNT** — TAGNT supersedes it for our purpose (TAGNT carries Strong's; MorphGNT does not, and its last release is 2017).
+**Skip MorphGNT/SBLGNT**, TAGNT supersedes it for our purpose (TAGNT carries Strong's; MorphGNT does not, and its last release is 2017).
 
 ---
 
@@ -37,9 +37,9 @@ All sources verified active and well-maintained as of 2026.
 Concordance edges live alongside the existing Tier 2 graph schema. Verse and Token nodes are already defined in the inherited Tier 2 model; concordance adds the lemma index and cross-reference edges.
 
 ```cypher
-// Lemma node — one per disambiguated Strong's number
+// Lemma node, one per disambiguated Strong's number
 (:Lemma {
-  strongs,             // 'G3056', 'H7706' — UNIQUE
+  strongs,             // 'G3056', 'H7706', UNIQUE
   language,            // 'gr' | 'he'
   lemma_form,          // λόγος / שַׁדַּי
   transliteration,     // 'logos' / 'shaddai'
@@ -48,9 +48,9 @@ Concordance edges live alongside the existing Tier 2 graph schema. Verse and Tok
   semantic_domain      // optional Louw-Nida or SDBH tag
 })
 
-// Token node — one per word occurrence in the source text
+// Token node, one per word occurrence in the source text
 (:Token {
-  token_id,            // composite: '<verse_osis>:<word_position>' — UNIQUE
+  token_id,            // composite: '<verse_osis>:<word_position>', UNIQUE
   verse_osis,          // 'Rom.6.3'
   position,            // 1-indexed within verse
   surface_form,        // the inflected form as it appears
@@ -58,9 +58,9 @@ Concordance edges live alongside the existing Tier 2 graph schema. Verse and Tok
   authority_level      // 1 (interlinear)
 })
 
-// Verse node — already exists in Tier 2; add cross-ref incoming/outgoing
+// Verse node, already exists in Tier 2; add cross-ref incoming/outgoing
 (:Verse {
-  verse_osis,          // 'Rom.6.3' — UNIQUE
+  verse_osis,          // 'Rom.6.3', UNIQUE
   book_osis, chapter, verse, testament,
   translations,
   authority_level      // 1
@@ -106,7 +106,7 @@ CREATE INDEX token_verse IF NOT EXISTS
 
 Three traversal patterns subagents run during the analogia-scripturae step.
 
-### Pattern A — lemma occurrences
+### Pattern A, lemma occurrences
 
 Given a Strong's lemma, return every verse it appears in, with surface forms and morphology. This is the core spider-map query.
 
@@ -131,7 +131,7 @@ Sample expected counts (validation spot-check via `tools/verify_baseline.py --ch
 
 ±2% tolerance accounts for canonical edition variations.
 
-### Pattern B — verse cross-references
+### Pattern B, verse cross-references
 
 Given a verse, return all OpenBible-weighted and TSK cross-references.
 
@@ -146,7 +146,7 @@ RETURN src.verse_osis AS osis,
        tsk_refs[0..30] AS tsk
 ```
 
-### Pattern C — full spider-map (lemma overlap + cross-references)
+### Pattern C, full spider-map (lemma overlap + cross-references)
 
 Given a verse, return every other verse that either shares ≥1 lemma or is cross-referenced from it. This is the operational `analogia scripturae` query: "what other passages bear on this one?"
 
@@ -195,7 +195,7 @@ Loaders live in `ingest/adapters/`. Each is idempotent (re-runnable; uses Neo4j 
 
 Run order: `tahot` → `tagnt` → `oshb` (validation) → `openbible` → `tsk`. Each prints expected vs actual counts; a >5% deviation from expected halts the run with explanation.
 
-The loaders are **written as part of phase 1** (architecture rewrite) but **not run** until the user gives explicit go-ahead. Ingestion is phase 1.5; orchestrator run is phase 2.
+The loaders are idempotent and have been run. As of 2026-05-10, Neo4j carries 17,003 lemmas, 447,700 tokens, 34,128 verses, 600,364 OpenBible cross-references, 591,039 TSK cross-references. Re-running is safe (MERGE-based upsert).
 
 ---
 

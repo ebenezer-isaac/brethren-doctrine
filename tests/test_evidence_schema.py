@@ -130,15 +130,22 @@ def test_empty_concordance_rejected(tmp_path):
             target.write_bytes(backup)
 
 
-def test_cult_marker_without_pan_tradition_rejected(tmp_path):
-    """cult_marker_if_denied=true with <6 affirming counter_witness traditions must fail."""
+def test_cult_marker_without_canonical_demonstration_rejected(tmp_path):
+    """cult_marker_if_denied=true with single-passage / single-lemma evidence must fail.
+
+    Lineage agreement is no longer checked (revised 2026-05-10); the bar is now
+    canonical demonstration via apparatus + interlinear + concordance breadth.
+    Validator requires concordance_lemmas_traversed >= 2 AND scripture[] >= 3
+    when cult_marker_if_denied=true.
+    """
     import baseline_orchestrator as bo  # type: ignore
 
     src = json.loads((FIX / "golden_evidence.json").read_text(encoding="utf-8"))
     src["answer"]["cult_marker_if_denied"] = True
     # would_die_for is already True in golden, so entailment passes
-    # counter_witness has only 4 traditions, all with stance='affirms'
-    # -> should fail K1 (need ≥6)
+    # Shrink scripture[] to 1 anchor and lemmas to 1 to fail canonical-demonstration
+    src["evidence"]["scripture"] = src["evidence"]["scripture"][:1]
+    src["evidence"]["concordance_lemmas_traversed"] = src["evidence"]["concordance_lemmas_traversed"][:1]
 
     qid = src["id"]
     target = EVIDENCE / f"{qid}.json"
@@ -147,7 +154,7 @@ def test_cult_marker_without_pan_tradition_rejected(tmp_path):
     try:
         ok, errs = bo.validate(qid)
         assert not ok
-        assert any("cult-marker-without-pan-tradition-consensus" in e for e in errs), errs
+        assert any("cult-marker-without-canonical-demonstration" in e for e in errs), errs
     finally:
         if backup is None:
             target.unlink(missing_ok=True)

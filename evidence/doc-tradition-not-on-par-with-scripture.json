@@ -1,0 +1,312 @@
+{
+  "id": "doc-tradition-not-on-par-with-scripture",
+  "answer": {
+    "id": "doc-tradition-not-on-par-with-scripture",
+    "affirms": null,
+    "rationale": "The Greek paradosis (G3862, 13 NT occurrences) carries both positive valence (Paul's commands in 1 Cor 11:2, 2 Thess 2:15, 2 Thess 3:6 to hold the traditions whether by word or letter) and negative valence (Mark 7:8-13, Col 2:8, Matt 15:2-6, where human traditions nullify God's command). Acts 17:11 names graphē (G1124) as the examining criterion for apostolic preaching, and 2 Tim 3:16-17 calls Scripture theopneustos and equipping for every good work, supporting Scripture as supreme test. But the strong-form negation, that no apostolic-age non-canonical tradition binds the conscience, is not lexically forced by the anchor verses; 2 Thess 2:15 explicitly commands holding oral apostolic tradition alongside written. The verdict is null on the strong form, with the soft form (Scripture is supreme criterion, no novel content beyond the canon) well-grounded.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "Soft form (Scripture is supreme criterion; no new doctrinal content binds beyond the canon) is broadly supported by Acts 17:11 Berean criterion, Mark 7 condemnation of tradition-over-commandment, Jude 3 hapax-paradotheisē (the faith once for all delivered), and 2 Tim 3:16-17 sufficiency-for-equipping. Strong form (no apostolic-age oral or written tradition outside the canon binds at all) is honestly contested by Paul's own commands. Roman Catholic Dei Verbum (1965) and Eastern Orthodox holy-tradition reading hold Scripture and apostolic Tradition as co-equal streams from one divine source; Reformed, Lutheran, Anglican, Methodist, Anabaptist, Pentecostal lineages broadly affirm the strong form. Convictional rather than gospel-stake. Not a cult marker. Public correction is reserved for clear gospel-essence errors; this is a methodological-authority question where charitable disagreement is appropriate."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": null
+    },
+    "lay_summary": {
+      "reasoning": "The verdict is honestly undecided on the strong form of this claim. The proposition says apostolic-age teaching not preserved in our Bible has no binding force on the conscience. The strongest reason in favor comes from Acts 17:11, where the Berean believers are praised for testing even Paul's preaching against the written Scriptures, and from Mark 7:8-13, where Jesus condemns human traditions that nullify God's command. Second Timothy 3:16-17 says Scripture is breathed out by God and equips the believer for every good work, which suggests sufficiency. Jude 3 calls the faith once for all delivered to the saints, using a word that implies a finished deposit rather than a continually expanding stream. The strongest counterargument comes from Paul himself. In 2 Thessalonians 2:15 he tells the church to stand firm and hold to the traditions taught, whether by his spoken word or by his letter. In 1 Corinthians 11:2 he commends the Corinthians for keeping the traditions just as he delivered them. In 2 Thessalonians 3:6 he commands withdrawing from any brother who does not walk according to the tradition received from him. Acts 15 records a binding council ruling from the apostles and elders that goes out to the churches as authoritative. First Timothy 3:15 calls the church the pillar and bulwark of truth. The same Greek word for tradition cuts both ways across the New Testament. The verdict handles this tension by splitting the proposition. The soft form, that Scripture is the supreme criterion against which any claimed tradition must be tested and that no new doctrine binds beyond the canon, is well grounded by the texts above. The strong form, that no apostolic-age oral or written instruction outside the canon binds the conscience at all, is not unambiguously settled by Scripture itself, since Paul commanded holding such traditions in his own lifetime. The verdict is therefore null with medium confidence rather than a confident yes or a confident no.",
+      "denominational_landscape": "Roman Catholic teaching, especially in the Second Vatican Council document Dei Verbum sections 9 and 10, holds that sacred Scripture and sacred Tradition flow from the same divine wellspring, that they form one sacred deposit of the word of God, and that both must be accepted and venerated with the same sense of devotion. Eastern Orthodox theology treats Scripture as living within Holy Tradition, which is the life of the Holy Spirit in the Church, expressed in the consensus of the Fathers, the seven Ecumenical Councils, the liturgy, and the canons. The Reformed lineage, in the Westminster Confession 1.6, holds that the whole counsel of God necessary for salvation is either expressly set down in Scripture or by good and necessary consequence deduced from it, and that nothing is to be added by new revelations of the Spirit or traditions of men. The Lutheran Formula of Concord names Scripture the sole rule and norm by which all teachings are to be judged. The Anglican Thirty Nine Articles, article six, says Holy Scripture contains all things necessary to salvation, so that whatever is not read in it nor may be proved by it is not required of any man as an article of faith. The Methodist Articles of Religion, article five, repeats the same wording. The Anabaptist Schleitheim Confession of 1527 grounds church order in Scripture alone. Pentecostal and Assemblies of God statements of fundamental truths confess Scripture as the inspired and infallible authoritative rule. So the Reformation lineages broadly affirm the strong form of the proposition while Rome and the East deny it. Within patristics the picture is mixed. Vincent of Lerins in his Commonitorium of 434 gave the rule that the Catholic faith is what has been believed everywhere, always, and by all, a formula consistent with either reading. Basil the Great defended unwritten apostolic traditions concerning the sign of the cross, baptismal practice, and the Trinitarian doxology in On the Holy Spirit. Irenaeus in Against Heresies appealed to apostolic succession as a guard of the rule of faith but also insisted Scripture is the ground."
+    },
+    "scripture": [
+      {
+        "ref": "2Thess.2.15",
+        "key_term": "παραδόσεις (paradoseis, accusative plural of paradosis) G3862",
+        "force": "the traditions, things handed over; Paul commands holding fast to apostolic paradoseis taught both by oral word (logos) and by epistle (epistolē); positive apostolic-tradition valence",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.2",
+        "key_term": "παραδόσεις (paradoseis) G3862",
+        "force": "Paul commends the Corinthians for holding the traditions just as he delivered (paredōka, G3860) them; positive valence; the verb paradidōmi covers transmission of authoritative apostolic content",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Thess.3.6",
+        "key_term": "παράδοσιν (paradosin) G3862",
+        "force": "Paul commands withdrawal from any brother walking ataktōs (disorderly) and not according to the tradition received from us; the apostolic paradosis carries binding ethical force in Paul's lifetime",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.11",
+        "key_term": "γραφάς (graphas, accusative plural of graphē) G1124; ἀνακρίνοντες (anakrinontes, G350)",
+        "force": "the Berean Jews are called more noble because they examined the Scriptures daily to verify whether Paul's preaching was so; the criterion of evaluation is the written graphē, not preexisting tradition",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Mark.7.8-13",
+        "key_term": "παράδοσιν τῶν ἀνθρώπων (paradosin tōn anthrōpōn) G3862; ἐντολὴν τοῦ θεοῦ (entolēn tou theou) G1785",
+        "force": "Jesus contrasts human tradition with God's commandment; the Corban example shows tradition can nullify Scripture's clear command (honor father and mother); paradigm case of negative paradosis valence",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.3.16-17",
+        "key_term": "θεόπνευστος (theopneustos, G2315); ἄρτιος (artios, G739)",
+        "force": "all graphē is God-breathed and profitable for teaching, reproof, correction, training in righteousness, that the man of God may be artios (complete, fully fitted) and equipped for every good work; functional-sufficiency claim for the written word",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jude.1.3",
+        "key_term": "ἅπαξ παραδοθείσῃ (hapax paradotheisē) G530+G3860",
+        "force": "the faith was once for all delivered to the saints; hapax (one time only) plus aorist passive participle of paradidōmi implies a closed deposit rather than a continuing apostolic-tradition stream",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Col.2.8",
+        "key_term": "παράδοσιν τῶν ἀνθρώπων (paradosin tōn anthrōpōn) G3862",
+        "force": "Paul warns against being taken captive through philosophy and empty deceit according to the tradition of men and the elemental principles of the world, not according to Christ; negative paradosis valence",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.3.15",
+        "key_term": "στῦλος καὶ ἑδραίωμα τῆς ἀληθείας (stylos kai hedraiōma tēs alētheias)",
+        "force": "the church of the living God is named pillar and bulwark of the truth; complicates strict Scripture-only authority by ascribing truth-supporting role to the ecclesia, though the verse describes function, not source",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.15.28-29",
+        "key_term": "ἔδοξεν τῷ πνεύματι τῷ ἁγίῳ καὶ ἡμῖν (edoxen tō pneumati tō hagiō kai hēmin)",
+        "force": "the Jerusalem Council's ruling on Gentile believers is issued as the joint decision of the Holy Spirit and the apostles and elders, bound on the churches as authoritative apostolic-era determination distinct from prior written Scripture",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Matt.15.3-6",
+        "key_term": "παράδοσιν ὑμῶν (paradosin hymōn) G3862",
+        "force": "parallel to Mark 7; Jesus condemns nullifying the word of God through human tradition; the paradigm passage establishing that tradition contradicting Scripture has no binding force",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Gal.1.14",
+        "key_term": "παραδόσεων (paradoseōn) G3862",
+        "force": "Paul describes his pre-conversion zeal for the traditions of the fathers (the Pharisaic oral law); negative valence; corroborates that paradosis can name binding-but-erroneous traditions distinct from God's revelation",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.3",
+        "key_term": "παρέδωκα γὰρ ὑμῖν ἐν πρώτοις ὃ καὶ παρέλαβον (paredōka... parelabon) G3860+G3880",
+        "force": "Paul delivered to the Corinthians what he also received, the gospel kerygma about Christ's death, burial, and resurrection; the apostolic transmission verbs frame the gospel itself as paradosis from God through apostles",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G3862", "G3860", "G3880", "G1124", "G2315", "G2583", "G739", "G530", "G350", "G1785"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "sola-scriptura",
+          "verdict": "affirms",
+          "note": "Reads Acts 17:11 plus Mark 7 plus 2 Tim 3:16-17 plus Jude 3 as establishing Scripture as the unique norma normans non normata, with Paul's positive paradosis commands referring to content now substantively preserved in the canon"
+        },
+        {
+          "lens": "scripture-and-tradition",
+          "verdict": "denies",
+          "note": "Reads 2 Thess 2:15 plus 1 Cor 11:2 plus 2 Thess 3:6 plus Acts 15 plus 1 Tim 3:15 as establishing apostolic Tradition as a co-equal stream of revelation alongside Scripture, with both bearing on conscience"
+        },
+        {
+          "lens": "prima-scriptura",
+          "verdict": "complicates",
+          "note": "Holds Scripture as supreme but recognizes apostolic tradition and church teaching as subordinate authorities; Scripture is the final court but not the only court"
+        }
+      ],
+      "notes": "The lexical evidence does not settle the strong form. The paradosis word group is morally neutral and context-determined across the canon. The verdict on the soft form (Scripture is supreme criterion, no novel content binds) is well-grounded; the strong form (no apostolic-age non-canonical tradition binds at all) requires inference beyond what apparatus and interlinear alone yield. The relevant question 'what survived into the canon' is a historical-canonical question downstream of the lexical question."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Dei Verbum 9 (Second Vatican Council, 1965)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Sacred Tradition and Sacred Scripture, then, are bound closely together, and communicate one with the other. For both of them, flowing out from the same divine well-spring, come together in some fashion to form one thing"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Dei Verbum 10",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Sacred Tradition, Sacred Scripture, and the teaching authority of the Church...are so connected and associated that one of them cannot stand without the others"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA Orthodox Faith, Doctrine: Scripture and Tradition",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Holy Scripture is part of Holy Tradition. Without it Tradition could not be. But outside of Tradition Holy Scripture could not have been produced or interpreted"
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Basil of Caesarea, On the Holy Spirit 27.66",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Of the beliefs and practices...some we possess derived from written teaching; others we have received delivered to us in a mystery by the tradition of the apostles; and both...have the same force"
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Vincent of Lerins, Commonitorium 2.6 (434)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "in the Catholic Church itself, all possible care must be taken, that we hold that faith which has been believed everywhere, always, by all"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 1.6 (1646)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the whole counsel of God concerning all things necessary for his own glory, man's salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture: unto which nothing at any time is to be added"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Belgic Confession 7 (1561)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We believe that the Holy Scriptures fully contain the will of God, and that whatsoever man ought to believe unto salvation is sufficiently taught therein"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Second London Baptist Confession 1.1 (1689)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scripture is the only sufficient, certain, and infallible rule of all saving knowledge, faith, and obedience"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome, Of the Comprehensive Summary (1577)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We believe, confess, and teach that the only rule and norm, according to which all doctrines and teachers alike must be appraised and judged, is no other whatever than the prophetic and apostolic writings"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article VI (1571)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man, that it should be believed as an article of the Faith"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Articles of Religion (UMC), Article V (Wesley's 1784 abridgement of the 39 Articles)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scriptures contain all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man that it should be believed as an article of faith"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527), preamble",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the articles which we discussed and on which we were of one mind in the Lord as obedient children of God...explained to you in the form of articles"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 1 (The Scriptures Inspired)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Scriptures, both the Old and New Testaments, are verbally inspired of God and are the revelation of God to man, the infallible, authoritative rule of faith and conduct"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/greek/3862.htm",
+        "category": "interlinear",
+        "stance": "nuance",
+        "quote": "paradosis: a handing down or over, a tradition; thirteen NT uses; positive (apostolic) and negative (human) valences attested in the same word"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_thessalonians/2-15.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "stēkete kai krateite tas paradoseis...eite dia logou eite di epistolēs hēmōn (stand and hold the traditions whether by word or letter of ours)"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/17-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "anakrinontes tas graphas kath hēmeran ei echoi tauta houtōs (examining the Scriptures daily whether these things were so)"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/7-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "aphentes tēn entolēn tou theou krateite tēn paradosin tōn anthrōpōn (leaving the commandment of God you hold the tradition of men)"
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "Sacred Tradition and Sacred Scripture form one sacred deposit of the word of God, committed to the Church"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/holy-tradition",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Holy Tradition is the life of the Holy Spirit in the Church...Scripture exists within Tradition, not above or apart from it"
+      },
+      {
+        "url": "https://bookofconcord.org/epitome/rule-and-norm/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "the prophetic and apostolic writings of the Old and New Testaments alone...is the only rule and norm"
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Holy Scripture containeth all things necessary to salvation"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf208/npnf208.viii.iii.xxix.html",
+        "category": "patristic_archive",
+        "stance": "opposes",
+        "quote": "Basil On the Holy Spirit 27.66: some teachings from written instruction, others from apostolic tradition...both have the same force in true religion"
+      }
+    ],
+    "confidence": "medium",
+    "flags": ["lexically-contested-strong-form", "framework-divergence"]
+  }
+}

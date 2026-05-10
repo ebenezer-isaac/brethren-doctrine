@@ -1,0 +1,298 @@
+{
+  "id": "doc-scripture-inerrancy-chicago-scope",
+  "answer": {
+    "id": "doc-scripture-inerrancy-chicago-scope",
+    "affirms": null,
+    "rationale": "The anchor lemma network (aletheia G225, lyo G3089, apseudes G893, theopneustos G2315, emet H571, tamim H8549, tsaruph H6884) lexically licenses the soft-form claim that Scripture is truthful in what it teaches (settled in doc-scripture-truthfulness); these same anchors do not by themselves license the 1978 Chicago Statement's specific scope extension to 'history, science, and chronology' as quantitative-modern-scientific precision. The phenomenological language of Josh 10:13 and Eccl 1:5, the numerical variance between 2 Sam 24:9 and 1 Chr 21:5, the Goliath-slayer datum at 2 Sam 21:19 vs 1 Chr 20:5, and the botanical 'least of all seeds' at Matt 13:32 are all canonical complications a maximalist Chicago-scope reading must absorb; apparatus + interlinear yield no lexeme that requires the Chicago-scope qualifier. Honest null on the scope claim while the truthfulness floor stands.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "This is the hard-form Chicago-scope claim, distinct from the soft-form truthfulness claim in doc-scripture-truthfulness (which affirms=true, cult_marker=true). The Chicago Statement on Biblical Inerrancy (1978) is a post-Princeton evangelical scope-definition document; its specific extension of inerrancy to history, science, and chronology is a hermeneutical commitment built on top of Scripture's self-attested truthfulness, not a lexeme retrievable from the anchor verses themselves. Carriers of denial of the soft-form claim (Christian Science, Jehovah's Witnesses on Christological texts, Mormonism's 'plain and precious parts' loss, Iglesia ni Cristo) are addressed in the sibling question. Denial of the Chicago-scope specifically is broad: Roman Catholic Dei Verbum 11 restricts scope to saving truth; Eastern Orthodoxy declines propositional-inerrancy framing; mainstream Lutheran, Anglican, and Methodist bodies often affirm infallibility-in-saving-matters without committing to Chicago-scope; many evangelical Old Princeton successors (B. B. Warfield's heirs in conservative Presbyterianism, Southern Baptists, conservative Anglicans, Assemblies of God) affirm it. Fruit-vs-precision note: a church that affirms Scripture's truthfulness in what it teaches but declines Chicago-scope vocabulary is not denying the gospel; the engagement-ladder accordingly remains open until the let-children-be-taught threshold, where the formation-question becomes load-bearing."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Does Scripture's truthfulness in its original autographs extend to matters of history, science, and chronology at the scope defined by the 1978 Chicago Statement on Biblical Inerrancy, or is it best read as truthfulness in what Scripture teaches (faith and practice plus what Scripture itself affirms)?",
+      "notes": "The statement smuggles Chicago-scope vocabulary ('without error in matters of history, science, and chronology as well as faith and practice') as if it were the neutral baseline rather than one particular post-Princeton evangelical scope-definition. The phrase 'as well as' presupposes that history-science-chronology is on the same footing as faith and practice, which is itself the contested claim. A genuinely neutral form would interrogate the scope rather than assume it."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: undecided on this specific scope claim. The Bible plainly teaches that Scripture is true and trustworthy in what it actually teaches, and that question is answered yes in a separate entry. This question is the narrower and harder one. It asks whether that truthfulness extends to every detail of history, science, and chronology at the exact level of precision a modern reader expects. The strongest reason for the broader claim is the same set of verses that anchors the simpler claim. John 17:17 says God's word is truth without adding a qualifier. John 10:35 says Scripture cannot be broken. Titus 1:2 says God cannot lie. If God cannot lie and Scripture is his word, then everything Scripture says ought to be true at every level. The strongest counterargument comes from inside Scripture itself. Joshua 10:13 says the sun stood still and Ecclesiastes 1:5 says the sun rises and goes down, but the sun does not literally move that way. The books of Kings and Chronicles sometimes give different numbers for the same census or the same battle. Second Samuel 21:19 says Elhanan killed Goliath, while First Chronicles 20:5 says he killed Goliath's brother. Matthew 13:32 calls the mustard seed the least of all seeds, which is not strictly true botanically. These are complications a maximally precise scope must absorb. The verdict handles this tension honestly. The simpler claim that Scripture is truthful in what it teaches is settled by named verses. The specific scope extension to history, science, and chronology at the modern-precision level is a hermeneutical commitment placed on top of those verses, not a meaning retrievable from the verses themselves. The lexical evidence does not by itself require that specific scope, so this answer leaves it open.",
+      "denominational_landscape": "Christian traditions divide on this specific scope question even though they agree on the simpler claim. Confessional Reformed bodies, Southern Baptists, conservative Presbyterian denominations, the Assemblies of God, and most conservative evangelical seminaries affirm the 1978 Chicago Statement on Biblical Inerrancy in its full scope, treating history, science, and chronology as falling within Scripture's inerrant assertion. The Roman Catholic Church through Vatican II in Dei Verbum, paragraph 11, frames the scope more narrowly, saying Scripture teaches without error 'that truth which God wanted put into the sacred writings for the sake of our salvation'; many Catholic interpreters read this as restricting inerrancy to saving truth and not extending to historical-scientific minutiae, though others read Dei Verbum as compatible with broader inerrancy. Eastern Orthodoxy generally declines the propositional-inerrancy framing entirely, reading Scripture inside the patristic and liturgical mind of the Church and treating questions of scientific or historical detail as a category mismatch with what Scripture is for. Mainstream Lutheran bodies (the LCMS and WELS) affirm a strong inerrancy close to Chicago-scope; the ELCA does not. Anglican bodies vary widely; many evangelical Anglicans affirm Chicago-scope while broad-church Anglicans affirm infallibility-in-saving-matters. Methodist confessions in the Articles of Religion treat Scripture as containing all things necessary to salvation without making a Chicago-scope commitment. Anabaptist confessions like Schleitheim and Dordrecht treat Scripture as the binding standard without specifying the scope debate. The Chicago Statement itself was a 1978 document; pre-1978 Christianity confessed Scripture's truthfulness without committing to its specific scope framing. Carriers of denial of the simpler claim (Christian Science, Jehovah's Witnesses, Mormonism, Iglesia ni Cristo) are addressed in the sibling entry; denial of the Chicago-scope specifically is broad and includes bodies firmly inside historic Christianity."
+    },
+    "scripture": [
+      {
+        "ref": "John 17:17",
+        "key_term": "ἀλήθεια (aletheia) G225; ὁ λόγος ὁ σὸς ἀλήθειά ἐστιν",
+        "force": "predicate-nominative identification of God's word with truth; lexically licenses the soft-form truthfulness claim but carries no scope-qualifier specifying history, science, or chronology",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John 10:35",
+        "key_term": "λύω (lyo) G3089; οὐ δύναται λυθῆναι ἡ γραφή",
+        "force": "Scripture cannot be broken; Jesus stands the argument on a single Psalm phrase. Supports inviolability of the text in what it teaches; does not by lemma alone extend to a modern-precision scope on natural-science questions",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Titus 1:2",
+        "key_term": "ἀψευδής (apseudes) G893; ὁ ἀψευδὴς θεός",
+        "force": "God cannot lie; ontological truthfulness of the speaker behind Scripture. Grounds the soft-form claim. The leap from 'God cannot lie' to 'every numerical and astronomical particular in the autographs is precise at modern-scientific scope' is a hermeneutical step, not a lexical entailment",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Psalm 19:7",
+        "key_term": "תָּמִים (tamim) H8549; תּוֹרַת יְהוָה תְּמִימָה",
+        "force": "torah of YHWH is tamim, 'whole, complete, unblemished'. Asserts integrity of God's instruction; the scope of tamim in this verse is moral-spiritual perfection of the law, not natural-scientific precision",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Psalm 119:160",
+        "key_term": "אֱמֶת (emet) H571; רֹאשׁ־דְּבָרְךָ אֱמֶת",
+        "force": "the sum of God's word is truth; emet = firmness, faithfulness. Covers Scripture's totality but the lemma is moral-relational reliability, not a quantitative-precision claim about chronology",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Proverbs 30:5",
+        "key_term": "צָרוּף (tsaruph) H6884; כָּל־אִמְרַת אֱלוֹהַּ צְרוּפָה",
+        "force": "every word of God is tsaruph, 'refined/tested/proven pure'. Metallurgical metaphor. Asserts every utterance is proven; the metaphor's domain is purity, not encyclopedic precision",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Matthew 22:29-32",
+        "key_term": "πλανᾶσθε μὴ εἰδότες τὰς γραφάς; present-tense ἐγώ εἰμι",
+        "force": "Jesus grounds resurrection on the present tense of Ex 3:6. Demonstrates Scripture's reliability at the level of verbal aspect; sets a precedent for grammatical precision in doctrinally salient passages, not a programmatic claim about every chronological detail",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Joshua 10:13",
+        "key_term": "וַיִּדֹּם הַשֶּׁמֶשׁ; phenomenological language",
+        "force": "sun 'stood still' over Gibeon; the same phenomenological idiom recurs in Eccl 1:5. Lexically describes observed sky-phenomena from a human viewpoint, not a Ptolemaic or geocentric astronomical claim. A Chicago-scope reading must classify this as accommodated phenomenological language rather than scientific assertion; possible, but the classification is a hermeneutical move, not a lexical given",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["idiom"]
+      },
+      {
+        "ref": "Ecclesiastes 1:5",
+        "key_term": "וְזָרַח הַשֶּׁמֶשׁ וּבָא הַשָּׁמֶשׁ",
+        "force": "the sun rises and the sun goes down; identical phenomenological idiom. Confirms that biblical Hebrew normally describes the natural world from observer-frame, not absolute-frame. Complicates a Chicago-scope reading that would require autograph-level scientific precision; coherent only under an accommodation hermeneutic",
+        "supports": "complicates",
+        "genre": "wisdom",
+        "figures": ["idiom"]
+      },
+      {
+        "ref": "2 Samuel 24:9",
+        "key_term": "וַיְהִי בְיִשְׂרָאֵל שְׁמֹנֶה מֵאוֹת אֶלֶף... וְאִישׁ יְהוּדָה חֲמֵשׁ־מֵאוֹת אָלֶף",
+        "force": "800,000 men of valor in Israel, 500,000 in Judah. 1 Chr 21:5 reports 1,100,000 and 470,000 for the same census. Best read as scribal transmission variation or different counting conventions, but at the level of the received text this is a chronological-numerical tension a maximalist Chicago-scope reading must resolve",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "2 Samuel 21:19",
+        "key_term": "וַיַּךְ אֶלְחָנָן... אֵת גָּלְיָת הַגִּתִּי",
+        "force": "names Elhanan as slayer of Goliath the Gittite. 1 Chr 20:5 names him as slayer of Lahmi the brother of Goliath. The autographs-qualifier is the standard Chicago-scope defense; that defense is exegetically possible but is not lexically forced by the anchor lemma network",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Matthew 13:32",
+        "key_term": "μικρότερον πάντων τῶν σπερμάτων; mikroteron (G3398 comparative) panton ton spermaton",
+        "force": "Jesus calls the mustard seed 'least of all seeds'. The orchid family and other angiosperms have smaller seeds; the Chicago-scope-coherent reading is phenomenological (least of the agricultural seeds known to a Galilean farmer), which works hermeneutically but again classifies the language outside modern-scientific precision",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "2 Timothy 3:16",
+        "key_term": "θεόπνευστος (theopneustos) G2315; πᾶσα γραφὴ θεόπνευστος",
+        "force": "every Scripture is God-breathed and profitable for teaching, reproof, correction, training in righteousness. Source-clause for Scripture's authority. The four named uses are catechetical-moral; the verse does not by lemma extend the inspiration-scope to encyclopedic history, science, and chronology",
+        "supports": "neutral",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Numbers 23:19",
+        "key_term": "לֹא אִישׁ אֵל וִיכַזֵּב; כָּזַב (kazab) H3576",
+        "force": "God is not a man that he should lie. Hebrew side of the apseudes lemma network. Same lexical force as Titus 1:2; same hermeneutical step required to extend it to Chicago-scope precision",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G225", "G3089", "G893", "G5574", "G2315", "G3398", "H571", "H8549", "H6884", "H3576"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["accommodation"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "strict-Chicago-scope (full inerrancy)",
+          "verdict": "affirms",
+          "note": "Reads phenomenological language (Josh 10:13, Eccl 1:5, Matt 13:32) as observer-frame description that Scripture is permitted to use without it being 'error', reads Kings/Chronicles numerical variance as scribal transmission not autographic, and reads 2 Sam 21:19 as scribal corruption from an autograph that originally agreed with 1 Chr 20:5. Coherent under this hermeneutic; Chicago Statement Article XIII explicitly licenses these moves"
+        },
+        {
+          "lens": "limited-inerrancy (faith-and-practice scope)",
+          "verdict": "complicates",
+          "note": "Reads Dei Verbum 11 ('truth which God wanted put into sacred writings for the sake of our salvation') as the scope-marker; treats history-science-chronology as outside the intended teaching domain. Coherent; the soft-form truthfulness claim still stands without committing to the harder Chicago-scope claim"
+        },
+        {
+          "lens": "patristic-typological (Eastern Orthodox)",
+          "verdict": "complicates",
+          "note": "Declines the propositional-inerrancy framing as a category mismatch. Scripture is read inside the liturgical-patristic mind of the Church; questions about Galilean botany or Iron-Age numerical conventions are not the kind of question Scripture is for. Coherent but pre-empts the question rather than answering yes or no"
+        }
+      ],
+      "notes": "The verdict turns on a hermeneutical commitment, not on a lexical reading. Under the accommodation principle (Origen's 'baby-talk', Calvin's 'lisps'), Chicago-scope is coherent and the complicating texts dissolve into phenomenological-language classifications; under a stricter literal hermeneutic without accommodation, those same texts create genuine tension. The lemma network at the anchor verses establishes the soft-form truthfulness claim (settled in doc-scripture-truthfulness, affirms=true) but does not by itself license the Chicago-scope extension. Therefore affirms=null is the honest verdict on the scope claim specifically."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Letter 82 to Jerome",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "I have learned to yield this respect and honour only to the canonical books of Scripture: of these alone do I most firmly believe that the authors were completely free from error"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Vatican II, Dei Verbum 11",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "the books of Scripture must be acknowledged as teaching solidly, faithfully and without error that truth which God wanted put into sacred writings for the sake of salvation"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Lutheran Church-Missouri Synod, A Statement on Scripture (1973 / Brief Statement 1932)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Scripture, since it is the Word of God, is in all its parts and words the infallible truth, also in those parts which treat of historical, geographical, and other secular matters"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 6 (1571)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 1.4-1.5; Chicago Statement on Biblical Inerrancy 1978",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Scripture in the entirety of its autographs was without error or fault in all its teaching, no less in what it states about God's acts in creation, about the events of world history, and about its own literary origins under God, than in its witness to God's saving grace in individual lives"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article 5; UMC Book of Discipline",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "the Holy Scriptures containeth all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Faith (1995), Article 4",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "We believe that all Scripture is inspired by God through the Holy Spirit for instruction in salvation and training in righteousness; we acknowledge the Scriptures as the authoritative source and standard for preaching and teaching about faith and life"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Scriptures, both the Old and New Testaments, are verbally inspired of God and are the revelation of God to man, the infallible, authoritative rule of faith and conduct"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, Vol 1, Doctrine and Scripture",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Orthodoxy does not engage the propositional-inerrancy framing; Scripture is the inspired witness to God read within Holy Tradition, not a textbook of natural science or chronology"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/17-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ὁ λόγος ὁ σὸς ἀλήθειά ἐστιν; aletheia G225 in predicate-nominative; lexically licenses soft-form truthfulness, no scope-qualifier"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/joshua/10-13.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "וַיִּדֹּם הַשֶּׁמֶשׁ, 'and the sun was silent/stood still'; phenomenological idiom; Chicago-scope reading classifies this as accommodated observer-frame description"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_samuel/21-19.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "וַיַּךְ אֶלְחָנָן... אֵת גָּלְיָת; 1 Chr 20:5 reads 'Lahmi the brother of Goliath'; standard Chicago-scope defense appeals to scribal transmission and the autographs-qualifier"
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "Dei Verbum 11: scope of inerrancy framed as 'truth which God wanted put into the sacred writings for the sake of our salvation'"
+      },
+      {
+        "url": "https://bookofconcord.org/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord, Epitome: prophetic and apostolic writings are the only rule and norm for all doctrines; LCMS Brief Statement extends explicitly to historical and geographical matters"
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "39 Articles, Article 6: Scripture 'containeth all things necessary to salvation'; scope-framing does not commit to Chicago-scope extension to history, science, chronology"
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "AG Statement 1: Scriptures are verbally inspired, infallible, authoritative rule of faith and conduct; AG generally affirms Chicago Statement scope"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "OCA: Bible is divinely-inspired Word of God in the words of men; Orthodoxy reads Scripture in Holy Tradition rather than through propositional-inerrancy scope-debates"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Methodist Articles of Religion, Article 5: 'Holy Scriptures containeth all things necessary to salvation'; same scope-framing as Anglican Article 6"
+      },
+      {
+        "url": "https://www.umc.org/en/content/our-theological-task",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "UMC Our Theological Task: Scripture as the primary source and criterion, alongside tradition, reason, experience; no commitment to Chicago-scope inerrancy"
+      }
+    ],
+    "confidence": "medium",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence"]
+  }
+}

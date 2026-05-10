@@ -1,0 +1,266 @@
+{
+  "id": "doc-scripture-truthfulness",
+  "answer": {
+    "id": "doc-scripture-truthfulness",
+    "affirms": true,
+    "rationale": "John 17:17 makes Scripture and truth lexically identical (ho logos ho sos aletheia estin, G225); John 10:35 uses lyo (G3089) to declare Scripture cannot be 'broken'; Ps 119:160 (emet, H571), Ps 19:7 (tamim, H8549), Prov 30:5 (tsaruph, H6884), and Titus 1:2 (apseudes, G893) form a pan-canonical lemma network in which God's word is truthful in what it teaches and the speaking God cannot lie.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Scope of inerrancy (history, science, chronology vs. faith and practice only) is a separate verdict handled in doc-scripture-inerrancy-chicago-scope; this question affirms only the canonically unambiguous floor: Scripture is truthful in what it affirms. Public-record carriers of denial: Christian Science (Mary Baker Eddy's claim that physical Scripture-events are non-binding), Jehovah's Witnesses (New World Translation's Christological distortions at John 1:1, Col 1:16-17, Titus 2:13), Mormonism (claim that 'plain and precious parts' were lost from the Bible), Iglesia ni Cristo (Felix Manalo's reading that the canonical text errs and requires INC apostolic correction). Fruit-vs-precision note: liberal mainline theologians who hold Scripture's spiritual reliability while disputing every historical particular often retain orthodox liturgical fruit; the gospel-stake here is the proposition that the God who breathed Scripture cannot lie, not the maximalist Chicago scope."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": null
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: Scripture is true and trustworthy in everything it actually teaches. The strongest reason from Scripture itself is Jesus' own prayer in John 17:17, 'Your word is truth.' He does not say the word contains truth or points to truth; he identifies the word with truth. In John 10:35 he stands on a single Old Testament phrase and says 'Scripture cannot be broken,' treating the smallest unit of the text as binding. Psalm 119:160 says 'the sum of your word is truth,' Psalm 19:7 calls the law of the LORD perfect, Proverbs 30:5 says 'every word of God proves true,' and Titus 1:2 grounds the believer's hope in 'God, who never lies.' Together these verses say the same thing in different vocabulary across both Testaments. The strongest counterargument inside the Bible itself is that Scripture sometimes describes the world in everyday observational language (Joshua 10:13 'the sun stood still,' Ecclesiastes 1:5 'the sun rises and goes down') and that the books of Kings and Chronicles sometimes carry different numbers for the same event, and 1 Samuel 17 versus 2 Samuel 21 raise a question about who killed Goliath. These look like errors to a modern reader. The verdict handles this tension by limiting the claim to what Scripture itself affirms. The poetic and observational passages are not making astronomical claims, they describe the sky as people see it. The numerical and harmonization questions live at the level of scribal transmission and ancient historiographical convention, not at the level of what the inspired author intends to teach. The narrower and stronger question of whether Scripture is also without error in every detail of history and science is treated separately in another answer and stands or falls on its own evidence.",
+      "denominational_landscape": "Every major historic Christian lineage confesses that Scripture is true and trustworthy in what it teaches. The patristic fathers (Irenaeus, Athanasius, Augustine) treat Scripture as truthful because God is its author. The Catholic Church confesses in Dei Verbum 11 that 'the books of Scripture must be acknowledged as teaching solidly, faithfully and without error that truth which God wanted put into sacred writings for the sake of salvation.' Lutherans confess in the Formula of Concord that Scripture is the sole rule and judge of doctrine. Anglicans in the 39 Articles, Article 6, treat Scripture as containing all things necessary for salvation. The Reformed confessions (Westminster Confession 1.4 to 1.5, Belgic, Heidelberg) bind Scripture's authority to its divine authorship. Methodists in the Articles of Religion, Article 5, follow the Anglican formulation. Anabaptists at Schleitheim and after treat Scripture as the binding standard. Pentecostals in the Assemblies of God Fundamental Truths confess Scripture as 'the inspired, infallible, and authoritative rule of faith and conduct.' Eastern Orthodoxy confesses Scripture as truth within Holy Tradition. Carriers of denial place themselves outside historic Christianity. Christian Science under Mary Baker Eddy treats physical Scripture-events (creation, virgin birth, bodily resurrection) as non-literal and re-reads them through her Science and Health. Jehovah's Witnesses preserve a critical-text base but distort key Christological passages in their New World Translation. Mormonism teaches that the Bible has lost 'plain and precious parts' and requires Joseph Smith's additional revelations to be reliable. Iglesia ni Cristo holds that the Bible alone is insufficient and requires the apostle Felix Manalo's authoritative interpretation. Some hyper-liberal academic positions reduce Scripture to ancient religious myth without binding truthfulness, placing themselves outside the historic Christian confession on this point."
+    },
+    "scripture": [
+      {
+        "ref": "John 17:17",
+        "key_term": "ἀλήθεια (aletheia) G225; ὁ λόγος ὁ σὸς ἀλήθειά ἐστιν",
+        "force": "predicate-nominative identification of Scripture's content with truth itself; ho logos ho sos aletheia estin makes the Father's word and truth coextensive, not merely truth-containing",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John 10:35",
+        "key_term": "λύω (lyo) G3089; οὐ δύναται λυθῆναι ἡ γραφή",
+        "force": "lyo here means 'to break, annul, set aside'; the aorist passive infinitive lythenai with ou dynatai forms a categorical impossibility statement: 'Scripture cannot be broken'. Jesus stands the argument on the inviolability of a single word in Ps 82:6",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Psalm 19:7",
+        "key_term": "תָּמִים (tamim) H8549; תּוֹרַת יְהוָה תְּמִימָה",
+        "force": "tamim = whole, complete, blameless, unblemished (used of sacrificial animals in Lev 1:3, of Noah in Gen 6:9). Applied to torah, it asserts integrity without defect",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Psalm 119:160",
+        "key_term": "אֱמֶת (emet) H571; רֹאשׁ־דְּבָרְךָ אֱמֶת",
+        "force": "rosh-debarka emet, 'the sum/head of your word is truth'. Emet = firmness, faithfulness, truth; root aman ('to be firm, reliable'). The clause covers Scripture's totality, not isolated passages",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Proverbs 30:5",
+        "key_term": "צָרוּף (tsaruph) H6884; כָּל־אִמְרַת אֱלוֹהַּ צְרוּפָה",
+        "force": "tsaruph = refined (by smelting), tested, purified. Same root used of refining silver in Ps 12:6, Mal 3:3. Every imrah ('utterance') of God is metallurgically tested and proven pure",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Matthew 22:29-32",
+        "key_term": "πλανᾶσθε μὴ εἰδότες τὰς γραφάς; ὁ θεὸς οὐκ ἔστιν θεὸς νεκρῶν",
+        "force": "Jesus grounds the doctrine of resurrection on the present tense of 'I am the God of Abraham' (Ex 3:6); the lexical force of the verbal aspect carries the doctrinal weight, indicating Scripture's words are truthful at the grammatical level",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Titus 1:2",
+        "key_term": "ἀψευδής (apseudes) G893; ὁ ἀψευδὴς θεός",
+        "force": "alpha-privative + pseudes ('false'); = 'cannot lie'. Predicates ontological truthfulness of God himself, the speaker behind Scripture. Hapax in NT but the lemma family (pseudos, pseudomai) is dense",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Numbers 23:19",
+        "key_term": "לֹא אִישׁ אֵל וִיכַזֵּב; כָּזַב (kazab) H3576",
+        "force": "kazab = 'to lie, deceive'. The Balaam oracle states categorically that God is not a man that he should lie. Pan-canonical reinforcement of Titus 1:2's apseudes claim; Hebrew side of the same lemma network",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Hebrews 6:18",
+        "key_term": "ἀδύνατον ψεύσασθαι θεόν; ψεύδομαι (pseudomai) G5574",
+        "force": "adynaton pseusasthai theon = 'impossible for God to lie'. Parallels Titus 1:2 with stronger modal language (adynaton, ontological impossibility). Concordance cross-link confirming canonical reach of the doctrine",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Joshua 10:13",
+        "key_term": "וַיִּדֹּם הַשֶּׁמֶשׁ; phenomenological language",
+        "force": "Sun 'stood still' over Gibeon. Lexically describes observed sky-phenomena, not a Ptolemaic astronomical claim; the same idiom in Eccl 1:5. Complicates a maximalist scientific-precision reading but not the doctrine that Scripture is truthful in what it affirms",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["idiom"]
+      },
+      {
+        "ref": "2 Samuel 21:19",
+        "key_term": "וַיַּךְ אֶלְחָנָן... אֵת גָּלְיָת",
+        "force": "Names Elhanan as slayer of Goliath; 1 Chr 20:5 names him as slayer of Lahmi, Goliath's brother. Best read as scribal transmission variation (MT vs. Chronicler's harmonization); complicates a flat zero-variance reading but not the doctrine of Scripture's truthful intent",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "2 Timothy 3:16",
+        "key_term": "θεόπνευστος (theopneustos) G2315; πᾶσα γραφὴ θεόπνευστος",
+        "force": "theopneustos = 'God-breathed'. Source-clause for Scripture's truthfulness: every Scripture is exhaled by the truth-speaking God. Concordance reinforcement linking John 17:17 (Scripture = truth) to Titus 1:2 (God cannot lie)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G225", "G3089", "G893", "G5574", "G2315", "H571", "H8549", "H6884", "H3576"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [],
+      "notes": "Verdict rests on a pan-canonical lemma network: Greek aletheia/lyo/apseudes/pseudomai/theopneustos + Hebrew emet/tamim/tsaruph/kazab. The proposition operates at the level of authorial intent ('all that it affirms'), which is the standard grammatico-historical scope. No framework divergence: covenant, dispensational, new-covenant, and progressive-covenantalism all confess Scripture's truthfulness in what it teaches. Phenomenological language (Josh 10:13, Eccl 1:5) and numerical variation between Kings/Chronicles are addressed by the 'affirms' qualifier built into the proposition itself; the question of full inerrancy in history/science/chronology is handled separately in doc-scripture-inerrancy-chicago-scope."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Letter 82 to Jerome",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "I have learned to yield this respect and honour only to the canonical books of Scripture: of these alone do I most firmly believe that the authors were completely free from error"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Vatican II, Dei Verbum 11",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the books of Scripture must be acknowledged as teaching solidly, faithfully and without error that truth which God wanted put into sacred writings for the sake of salvation"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome, Rule and Norm",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the prophetic and apostolic writings of the Old and New Testaments are the only rule and norm according to which all doctrines and teachers alike must be appraised and judged"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 6",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 1.4-1.5",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The authority of the Holy Scripture, for which it ought to be believed and obeyed, dependeth not upon the testimony of any man or Church, but wholly upon God (who is truth itself), the author thereof"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Articles of Religion (Methodist), Article 5",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scriptures containeth all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 (implicit), Dordrecht Confession Article 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "we confess with the mouth, and believe with the heart, with all the pious, according to the holy Scriptures, that there is one only, eternal, almighty God"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Scriptures, both the Old and New Testaments, are verbally inspired of God and are the revelation of God to man, the infallible, authoritative rule of faith and conduct"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, Vol 1, Doctrine and Scripture",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the Bible is the divinely-inspired Word of God in the words of men; the inspired Scripture is the true witness to the God-given way of life"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/17-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ὁ λόγος ὁ σὸς ἀλήθειά ἐστιν, 'the word, the one of you, truth is'; aletheia G225 in predicate-nominative position"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/10-35.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "οὐ δύναται λυθῆναι ἡ γραφή, 'not is able to be broken the Scripture'; lyo G3089 aorist passive infinitive with modal of impossibility"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/1-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ὁ ἀψευδὴς θεός, 'the unlying God'; apseudes G893 alpha-privative formation"
+      },
+      {
+        "url": "https://hb.openscriptures.org",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ps 119:160 ראשׁ דברך אמת, rosh debarka emet; Ps 19:7 תורת יהוה תמימה, torat YHWH temimah; Prov 30:5 כל אמרת אלוה צרופה"
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "Dei Verbum 11: 'the books of Scripture must be acknowledged as teaching solidly, faithfully and without error that truth which God wanted put into sacred writings for the sake of salvation'"
+      },
+      {
+        "url": "https://bookofconcord.org/formula-of-concord/epitome/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord, Epitome: prophetic and apostolic writings are 'the only rule and norm according to which all doctrines and teachers alike must be appraised and judged'"
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 6: 'Holy Scripture containeth all things necessary to salvation'"
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Statement 1: 'The Scriptures...are verbally inspired of God...the infallible, authoritative rule of faith and conduct'"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: 'the Bible is the divinely-inspired Word of God in the words of men; the inspired Scripture is the true witness to the God-given way of life'"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf101/npnf101.iii.LXXXII.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine, Letter 82 to Jerome: 'I have learned to yield this respect and honour only to the canonical books of Scripture: of these alone do I most firmly believe that the authors were completely free from error'"
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

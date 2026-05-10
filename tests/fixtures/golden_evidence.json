@@ -21,7 +21,10 @@
       "neutralized_form": null,
       "notes": null
     },
-    "lay_summary": "The verdict is YES. Scripture teaches that God can do anything that is genuinely possible. The strongest evidence is the consistent canon wide pattern. Genesis names God as El Shaddai (Almighty), Job says nothing can be withheld from God, and Jeremiah 32:17 and Luke 1:37 both negate the word for impossibility (nothing is too hard for the LORD, and nothing will be impossible with God). Critics like Open Theists and Process Theologians point to passages where God seems to change his mind, such as Genesis 6:6, Jonah 3:10, and 1 Samuel 15:11. They claim this shows limited divine power or knowledge. The standard answer is that these are accommodation language. The Bible describes God in human emotional terms so that humans can grasp his real moral response, not literally that God did not know what would happen. Major Christian traditions agree God is omnipotent, but they handle the open theism debate differently. Most Christian lineages reject it as outside historic orthodoxy, while some Wesleyans tolerate it as an intramural debate. That is why this question is gospel essential (would die for is true) but not classified here as a cult marker. The dissent is not pan tradition rejected.",
+    "lay_summary": {
+      "reasoning": "Scripture teaches that God is all-powerful and able to do all that he wills, limited only by his own nature. The clearest passages are Genesis 17:1 where God reveals himself as El Shaddai, Job 42:2 where Job confesses God can do all things and no purpose of his can be thwarted, Jeremiah 32:17 where the prophet says nothing is too hard for God, and Matthew 19:26 where Jesus says with God all things are possible. The strongest counterargument cites passages where God appears to repent or change course, such as Genesis 6:6 where the LORD is sorry he made humankind, Exodus 32:14 where the LORD changes his mind about the calamity, 1 Samuel 15:11 where the LORD regrets making Saul king, and Jonah 3:10 where God relents from the disaster he had said he would do. The verdict handles this tension by reading these passages as accommodation language describing God in human terms so finite minds can understand his real interaction with creatures.",
+      "denominational_landscape": "All eight major historic Christian lineages affirm divine omnipotence as a core attribute of God: patristic teaching from Athanasius onward, Catholic magisterial teaching, Lutheran confessions, Anglican formularies, Reformed standards, Methodist articles, Anabaptist tradition, and Pentecostal statements all confess God as almighty. Open Theism (Greg Boyd, Clark Pinnock) is a minority position within evangelical theology that limits divine knowledge of future free actions but still affirms omnipotence proper. Process theology (Charles Hartshorne, John Cobb) denies classical omnipotence in favor of a persuasive rather than coercive deity; this position is held by some mainline scholars but is outside historic Christian confession. Mormonism's eternal-progression doctrine implies God is one being among many and was once like humanity; this places Mormonism outside historic Christianity on this point."
+    },
     "scripture": [
       {
         "ref": "Jer.32.17",
@@ -45,7 +48,9 @@
         "force": "Niphal of nacham = 'to be sorry / regret'; literal reading would imply mutability, but the form is anthropopathic accommodation language for divine response to human moral state",
         "supports": "complicates",
         "genre": "narrative",
-        "figures": ["anthropopathism"]
+        "figures": [
+          "anthropopathism"
+        ]
       },
       {
         "ref": "Jonah.3.10",
@@ -53,10 +58,16 @@
         "force": "God 'relents' from declared judgment; same anthropopathic figure as Gen 6:6, conditional-prophecy framework softens the apparent mutability",
         "supports": "complicates",
         "genre": "narrative",
-        "figures": ["anthropopathism"]
+        "figures": [
+          "anthropopathism"
+        ]
       }
     ],
-    "concordance_lemmas_traversed": ["H6381", "H5162", "G101"],
+    "concordance_lemmas_traversed": [
+      "H6381",
+      "H5162",
+      "G101"
+    ],
     "complicating_texts_searched": true,
     "hermeneutics": {
       "primary_method": "grammatico-historical",

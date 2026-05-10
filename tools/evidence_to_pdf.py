@@ -325,15 +325,30 @@ def build_story(data: dict, styles: dict, question: dict | None) -> list:
         story.append(statement_box(statement, styles))
         story.append(Spacer(1, 10))
 
-    lay = evidence.get("lay_summary")
-    if lay:
-        story.append(Paragraph("Reasoning", styles["h2"]))
-        story.append(Paragraph(esc(lay), styles["body"]))
-        story.append(Spacer(1, 10))
-
+    # Rationale (lexical verdict justification) appears FIRST so the reader sees
+    # the verdict-deciding logic before the contextual lay paragraphs.
     if answer.get("rationale"):
         story.append(Paragraph("Rationale", styles["h2"]))
         story.append(Paragraph(esc(answer["rationale"]), styles["body"]))
+        story.append(Spacer(1, 10))
+
+    lay = evidence.get("lay_summary")
+    if isinstance(lay, dict):
+        reasoning = lay.get("reasoning")
+        if reasoning:
+            story.append(Paragraph("Reasoning", styles["h2"]))
+            story.append(Paragraph(esc(reasoning), styles["body"]))
+            story.append(Spacer(1, 10))
+        denom = lay.get("denominational_landscape")
+        if denom:
+            story.append(Paragraph("Denominational landscape", styles["h2"]))
+            story.append(Paragraph(esc(denom), styles["body"]))
+            story.append(Spacer(1, 10))
+    elif isinstance(lay, str) and lay:
+        # Backward compatibility for older evidence files with flat lay_summary.
+        story.append(Paragraph("Reasoning", styles["h2"]))
+        story.append(Paragraph(esc(lay), styles["body"]))
+        story.append(Spacer(1, 10))
 
     story.append(Paragraph("Position thresholds", styles["h2"]))
     story.append(attitude_table(answer, styles))

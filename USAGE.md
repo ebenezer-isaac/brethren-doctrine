@@ -10,9 +10,9 @@ For the full project picture, read [docs/PROJECT.md](docs/PROJECT.md). For the i
 
 Two distinct stores share a Neo4j + Qdrant backbone:
 
-**Tier 1 — sermon + SOF corpus (live)**: structured JSON in `parsed/`, plus Tier 2 hybrid retrieval CLI for semantic queries. This is the "what does my teaching tradition say?" layer. Used by Pipeline B (per-respondent files); NOT used during inferred-baseline derivation.
+**Tier 1, sermon + SOF corpus (live)**: structured JSON in `parsed/`, plus Tier 2 hybrid retrieval CLI for semantic queries. This is the "what does my teaching tradition say?" layer. Used by Pipeline B (per-respondent files); NOT used during inferred-baseline derivation.
 
-**Concordance + Bible text (loaders written, not yet run)**: STEPBible TAHOT + TAGNT + OSHB + OpenBible + TSK. This is the spider-map layer that backs the inferred-baseline pipeline. See `docs/CONCORDANCE.md`.
+**Concordance + Bible text (built)**: STEPBible TAHOT + TAGNT + OSHB + OpenBible + TSK ingested into Neo4j (17k lemmas, 448k tokens, 34k verses, 600k OpenBible refs, 591k TSK refs). This is the spider-map layer that backs the inferred-baseline pipeline. See `docs/CONCORDANCE.md`.
 
 ---
 
@@ -86,12 +86,12 @@ This CLI is for Pipeline B (per-respondent overlays) and downstream church-evalu
 
 ## Inferred-baseline pipeline
 
-The 221-question doctrinal baseline is derived by `tools/baseline_orchestrator.py` — one subagent per question, each writing to `evidence/<id>.json`. The pipeline does NOT consult `parsed/`, `source-docs/`, confessions, or Brethren teaching notes. It only consults:
+The 231-question doctrinal baseline is derived by `tools/baseline_orchestrator.py`, one subagent per question, each writing to `evidence/<id>.json`. The pipeline does NOT consult `parsed/`, `source-docs/`, confessions, or Brethren teaching notes. It only consults:
 
 - Critical apparatus (BHS, NA28/UBS5)
 - Interlinear (STEPBible, BibleHub, OSHB)
 - Concordance (TAHOT + TAGNT lemma index, OpenBible + TSK cross-references) via Cypher
-- Counter-witness traditions (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox primary sources) — **research aids only, not authority**
+- Counter-witness traditions (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox primary sources), **research aids only, not authority**
 
 Read `tools/derive_baseline_prompt.md` for the full methodology and `tools/verify_baseline.py` for the KPI matrix that gates the orchestrator run.
 
@@ -116,14 +116,14 @@ The `tests/` directory contains pytest fixtures that lock:
 - STEPBible TAHOT/TAGNT parser column extraction (`tests/test_concordance_parsers.py`)
 - Evidence-schema validator + PDF renderer round-trip (`tests/test_evidence_schema.py`)
 - Legacy-key rejection (any v1 schema field is hard-rejected by validator)
-- Cult-marker pan-tradition consensus enforcement
+- Cult-marker canonical-demonstration enforcement (pan-canonical lexical breadth, not lineage count)
 - Empty `concordance_lemmas_traversed` rejection (universal, all tiers)
 
 If pytest exits zero AND `tools/verify_baseline.py --check all` exits zero, phase 2 (orchestrator run) is unblocked.
 
 ---
 
-## Concordance ingestion (loaders written, not yet run)
+## Concordance ingestion (complete)
 
 ```bash
 # Drop the STEPBible-Data and OSHB clones under data/private/

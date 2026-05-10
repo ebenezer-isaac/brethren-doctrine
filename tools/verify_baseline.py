@@ -250,17 +250,19 @@ def check_concordance_traversed() -> list[KPIResult]:
 
 
 def check_counter_witness() -> list[KPIResult]:
-    """W1: tier=essential / convictional require counter_witness OR explicit flag.
-    W2: cross-tradition diversity &gt;= 6 of 10 tracked lineages across corpus.
-    W3: no Reformed-only fallback on tier=essential.
+    """W1: every evidence file has counter_witness[] OR explicit flag
+    `counter-witness-missing`. Counter-witness is encouraged for diagnostic
+    completeness on all questions; tier-gating retired (tier abolished).
+    W2: cross-tradition diversity >= 6 of 10 tracked lineages across corpus.
+    W3: no Reformed-only counter-witness on gospel-stake answers
+    (would_die_for=true); flagged for diagnostic completeness.
     """
-    questions = {q["id"]: q for q in _load_questions()}
     files = _evidence_files()
     if not files:
         return [
-            ("W1_counter_witness_mandatory", True, ["SKIP: orchestrator not yet run (no evidence files)"]),
-            ("W2_cross_tradition_diversity", True, ["SKIP: orchestrator not yet run"]),
-            ("W3_no_reformed_only_fallback", True, ["SKIP: orchestrator not yet run"]),
+            ("W1_counter_witness_present_or_flagged", True, ["SKIP: orchestrator not yet run (no evidence files)"]),
+            ("W2_research_quality_tradition_diversity", True, ["SKIP: orchestrator not yet run"]),
+            ("W3_no_reformed_only_fallback_on_gospel_stake", True, ["SKIP: orchestrator not yet run"]),
         ]
 
     w1_failures: list[str] = []
@@ -274,7 +276,7 @@ def check_counter_witness() -> list[KPIResult]:
         except Exception:
             continue
         qid = d.get("id")
-        q = questions.get(qid, {})
+        ans = d.get("answer", {}) or {}
         cw = d.get("evidence", {}).get("counter_witness") or []
         flags = d.get("evidence", {}).get("flags") or []
 
@@ -282,33 +284,39 @@ def check_counter_witness() -> list[KPIResult]:
             if c.get("tradition"):
                 distinct_traditions.add(c["tradition"])
 
-        if q.get("tier") in {"essential", "convictional"}:
-            if not cw and "counter-witness-missing" not in flags:
-                w1_failures.append(f"{qid}: tier={q.get('tier')} has no counter_witness and no missing-flag")
+        if not cw and "counter-witness-missing" not in flags:
+            w1_failures.append(f"{qid}: no counter_witness and no `counter-witness-missing` flag")
 
-        if q.get("tier") == "essential" and cw:
+        if ans.get("would_die_for") is True and cw:
             traditions = {c.get("tradition") for c in cw}
             if traditions and traditions.issubset(REFORMED_ONLY):
-                w3_failures.append(f"{qid}: tier=essential has only Reformed-substrate counter-witness {traditions}")
+                w3_failures.append(f"{qid}: would_die_for=true has only Reformed-substrate counter-witness {traditions}")
 
     w2_pass = len(distinct_traditions) >= 6
 
     return [
-        ("W1_counter_witness_mandatory", not w1_failures, w1_failures[:10]),
-        ("W2_cross_tradition_diversity", w2_pass,
+        ("W1_counter_witness_present_or_flagged", not w1_failures, w1_failures[:10]),
+        ("W2_research_quality_tradition_diversity", w2_pass,
          [f"distinct traditions seen: {sorted(distinct_traditions)} (need &gt;=6)"] if not w2_pass else
          [f"distinct traditions seen: {sorted(distinct_traditions)}"]),
-        ("W3_no_reformed_only_fallback", not w3_failures, w3_failures[:10]),
+        ("W3_no_reformed_only_fallback_on_gospel_stake", not w3_failures, w3_failures[:10]),
     ]
 
 
 def check_cult_marker() -> list[KPIResult]:
-    """K1: pan-tradition consensus &gt;=6 affirming on cult_marker=true.
+    """K1: canonical demonstration on cult_marker=true (pan-canonical lexical
+    reading, not single-passage). Mirrors the structural check in
+    baseline_orchestrator.py: at least 2 distinct concordance lemmas traversed
+    AND at least 3 scripture[] anchors. Lineage agreement does not factor in;
+    Scripture's clarity drives the bar.
     K2: cult_marker=true only on catalogued ids.
-    K3: moral entailment cult_marker → would_die_for.
+    K3: moral entailment cult_marker -> would_die_for.
     """
     catalogs = _load_catalogs()
     eligible = set(catalogs.get("K2_cult_marker_eligible", []))
+
+    K1_MIN_LEMMAS = 2
+    K1_MIN_ANCHORS = 3
 
     k1_failures: list[str] = []
     k2_failures: list[str] = []
@@ -326,18 +334,23 @@ def check_cult_marker() -> list[KPIResult]:
         if a.get("would_die_for") is not True:
             k3_failures.append(f"{qid}: cult_marker=true but would_die_for=false")
 
-        cw = d.get("evidence", {}).get("counter_witness") or []
-        affirming = {c.get("tradition") for c in cw if c.get("stance") == "affirms"}
-        if len(affirming) < 6:
+        ev = d.get("evidence", {}) or {}
+        n_lemmas = len(ev.get("concordance_lemmas_traversed", []) or [])
+        n_anchors = len(ev.get("scripture", []) or [])
+        if n_lemmas < K1_MIN_LEMMAS:
             k1_failures.append(
-                f"{qid}: cult_marker=true with {len(affirming)} affirming traditions {sorted(affirming)}"
+                f"{qid}: cult_marker=true with {n_lemmas} lemmas traversed (need >={K1_MIN_LEMMAS}; single-passage doctrine cannot clear bar)"
+            )
+        if n_anchors < K1_MIN_ANCHORS:
+            k1_failures.append(
+                f"{qid}: cult_marker=true with {n_anchors} scripture anchors (need >={K1_MIN_ANCHORS})"
             )
 
         if eligible and qid not in eligible:
             k2_failures.append(f"{qid}: cult_marker=true on non-eligible question")
 
     return [
-        ("K1_pan_tradition_consensus", not k1_failures, k1_failures[:10]),
+        ("K1_canonical_demonstration", not k1_failures, k1_failures[:10]),
         ("K2_cult_marker_catalog_match", not k2_failures, k2_failures[:10]),
         ("K3_moral_entailment", not k3_failures, k3_failures[:10]),
     ]
@@ -475,9 +488,9 @@ def check_velocity() -> list[KPIResult]:
 
     pass_count = 0
     total = 0
-    essential_with_cw = 0
-    essential_total = 0
-    high_confidence_essential = 0
+    gospel_stake_with_cw = 0
+    gospel_stake_total = 0
+    high_confidence_gospel_stake = 0
     for f in files:
         total += 1
         try:
@@ -487,29 +500,30 @@ def check_velocity() -> list[KPIResult]:
         ok, _ = bo.validate(d.get("id", ""))
         if ok:
             pass_count += 1
-        qid = d.get("id")
-        q = questions.get(qid, {})
-        if q.get("tier") == "essential":
-            essential_total += 1
+        # Standing now inferred from the answer's boolean pattern (tier abolished
+        # from questions.json). would_die_for=true is the gospel-stake marker.
+        ans = d.get("answer", {}) or {}
+        if ans.get("would_die_for") is True:
+            gospel_stake_total += 1
             cw = d.get("evidence", {}).get("counter_witness") or []
             if cw:
-                essential_with_cw += 1
+                gospel_stake_with_cw += 1
             if d.get("evidence", {}).get("confidence") == "high":
-                high_confidence_essential += 1
+                high_confidence_gospel_stake += 1
 
     v3_pass = total == 0 or (pass_count / total) >= 0.85
-    v4_pass = essential_total == 0 or (essential_with_cw / essential_total) >= 0.95
-    v5_ratio = high_confidence_essential / essential_total if essential_total else 0
+    v4_pass = gospel_stake_total == 0 or (gospel_stake_with_cw / gospel_stake_total) >= 0.95
+    v5_ratio = high_confidence_gospel_stake / gospel_stake_total if gospel_stake_total else 0
     # Only meaningful with a real sample size; small-N runs always look "lopsided"
-    v5_pass = essential_total < 5 or (0.30 <= v5_ratio <= 0.70)
+    v5_pass = gospel_stake_total < 5 or (0.30 <= v5_ratio <= 0.70)
 
     return [
         ("V3_first_pass_validator_success", v3_pass,
          [f"pass={pass_count}/{total} ({pass_count/total*100:.1f}%)" if total else "0/0"]),
-        ("V4_counter_witness_coverage_essentials", v4_pass,
-         [f"essentials_with_cw={essential_with_cw}/{essential_total}" if essential_total else "no essentials yet"]),
+        ("V4_counter_witness_coverage_gospel_stake", v4_pass,
+         [f"gospel_stake_with_cw={gospel_stake_with_cw}/{gospel_stake_total}" if gospel_stake_total else "no gospel-stake answers yet"]),
         ("V5_confidence_distribution_sane", v5_pass,
-         [f"high_confidence_essential_ratio={v5_ratio:.2f} (target 0.30-0.70)"]),
+         [f"high_confidence_gospel_stake_ratio={v5_ratio:.2f} (target 0.30-0.70)"]),
     ]
 
 

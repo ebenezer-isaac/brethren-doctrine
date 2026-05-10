@@ -14,7 +14,7 @@ Two failure modes hermeneutics catches that concordance alone cannot:
 
 **Lens-dependent verdicts hidden under "lexical clarity."** Two subagents reading the same `scripture[]` array can produce opposite verdicts if one reads `Daniel 9` dispensationally and the other reads it covenantally, and neither has lied about the lexical force of any single word. The lens is doing work that the lexical force isn't. Without recording the lens, this is invisible.
 
-**Figure-of-speech omissions.** Anthropomorphism, anthropopathism, and hyperbole are textbook sources of bias: passages like Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10 read literally produce an open-theist God; read accommodationally they preserve immutability. A subagent that omits these passages from a `scripture[]` array on omnipotence/immutability/omniscience questions is not lying — it is hiding the hermeneutical commitment. Forcing `figures: ["anthropomorphism"]` or `figures: ["anthropopathism"]` on each such citation makes the commitment visible.
+**Figure-of-speech omissions.** Anthropomorphism, anthropopathism, and hyperbole are textbook sources of bias: passages like Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10 read literally produce an open-theist God; read accommodationally they preserve immutability. A subagent that omits these passages from a `scripture[]` array on omnipotence/immutability/omniscience questions is not lying, it is hiding the hermeneutical commitment. Forcing `figures: ["anthropomorphism"]` or `figures: ["anthropopathism"]` on each such citation makes the commitment visible.
 
 Making hermeneutics first-class evidence exposes both failures.
 
@@ -26,8 +26,8 @@ The subagent picks one as the primary method behind the verdict.
 
 | Method | What it privileges | Default home |
 |---|---|---|
-| `grammatico-historical` | Original grammar, syntax, semantic range, immediate historical setting. (`literal-grammatical` is a synonym; do not record it as a separate method.) Founded by Ernesti (1707–1781), consolidated by Hengstenberg/Delitzsch/Keil. | Reformed, Lutheran, evangelical mainstream — the default |
-| `redemptive-historical` | Whole-Bible storyline; OT read in light of Christ's accomplishment. Geerhardus Vos (1862–1949). | Confessional Reformed (OPC, URC), New Covenant Theology |
+| `grammatico-historical` | Original grammar, syntax, semantic range, immediate historical setting. (`literal-grammatical` is a synonym; do not record it as a separate method.) Founded by Ernesti (1707-1781), consolidated by Hengstenberg/Delitzsch/Keil. | Reformed, Lutheran, evangelical mainstream, the default |
+| `redemptive-historical` | Whole-Bible storyline; OT read in light of Christ's accomplishment. Geerhardus Vos (1862-1949). | Confessional Reformed (OPC, URC), New Covenant Theology |
 | `quadriga` | Four senses (literal, allegorical, tropological, anagogical); literal sense primary for doctrine. Origen → Cassian → Aquinas (ST I.1.10). | Catholic |
 | `patristic-typological` | Scripture read in/through the Church's liturgical-patristic mind; OT events as forward-pointing types fulfilled in Christ + Church. | Eastern Orthodox |
 | `accommodation` | Anthropomorphic / phenomenal language as God's accommodation to human capacity. Origen ("baby-talk"), Calvin ("lisps"). A *principle* often layered onto another method, not a standalone school. | Cross-tradition |
@@ -48,7 +48,7 @@ Major contested interpretive frameworks. Each produces consistently different ve
 | **Progressive covenantalism** | Mediating between covenant and dispensational systems | Israel/church relationship, kingdom ethics |
 | **Historic premillennialism** | Christ returns before the millennium, but no separate Israel/church future | Eschatology specifically |
 
-When a question's verdict diverges across these frameworks, subagents MUST record `competing_lens_verdicts[]` with at least the lenses in play. This is how dispensationalism — a Brethren distinctive — becomes auditable rather than smuggled.
+When a question's verdict diverges across these frameworks, subagents MUST record `competing_lens_verdicts[]` with at least the lenses in play. This is how dispensationalism, a Brethren distinctive, becomes auditable rather than smuggled.
 
 ---
 
@@ -76,10 +76,10 @@ Operational subset for doctrinal interpretation:
 | `idiom` | Culturally locked phrasing not transparent to literal reading | Translation choices, doctrinal misreadings |
 | `typology` | OT person/event/institution as forward-pointing pattern | Christ-pattern in Adam, Melchizedek, Moses; Israel/church |
 | `apocalyptic-symbolism` | Numbered, beastly, cosmic imagery in apocalyptic genre | Revelation, Daniel; rapture, millennium |
-| `parallelism` | Hebrew poetic restatement (synonymous, antithetic, synthetic) | Psalms, prophets — counts ONE thought, not two |
+| `parallelism` | Hebrew poetic restatement (synonymous, antithetic, synthetic) | Psalms, prophets, counts ONE thought, not two |
 | `parable` | Extended comparison, single point | Synoptic teachings; reading as allegory inflates points |
 
-**Anthropomorphism / anthropopathism deserve special attention** — they are the largest source of selection-bias smell on divine-attributes questions. The validator (`tools/verify_baseline.py`) checks (per the H5 catalog) that omnipotence/immutability/omniscience/impassibility/sovereignty questions carry at least one such citation. Omitting them carries flag `anthropomorphic-passages-omitted`.
+**Anthropomorphism / anthropopathism deserve special attention**, they are the largest source of selection-bias smell on divine-attributes questions. The validator (`tools/verify_baseline.py`) checks (per the H5 catalog) that omnipotence/immutability/omniscience/impassibility/sovereignty questions carry at least one such citation. Omitting them carries flag `anthropomorphic-passages-omitted`.
 
 ---
 
@@ -105,7 +105,7 @@ Every `scripture[]` citation MUST carry its genre. A verdict resting on a wisdom
 
 ## Cross-passage principles
 
-**Analogia scripturae** (Scripture interprets Scripture): obscure passages are read in light of clear ones. The clear passages on a doctrine are the controlling ones. *In the evidence schema*: when a verdict invokes this principle, `analogia_scripturae_invoked: true` and the controlling passages should appear in `scripture[]`. The concordance spider-map is what makes this principle mechanical instead of editorial — see [CONCORDANCE.md](CONCORDANCE.md).
+**Analogia scripturae** (Scripture interprets Scripture): obscure passages are read in light of clear ones. The clear passages on a doctrine are the controlling ones. *In the evidence schema*: when a verdict invokes this principle, `analogia_scripturae_invoked: true` and the controlling passages should appear in `scripture[]`. The concordance spider-map is what makes this principle mechanical instead of editorial, see [CONCORDANCE.md](CONCORDANCE.md).
 
 **Analogia fidei** (the analogy of faith): individual passages read in light of the whole-canon doctrinal coherence. **Dangerous because it can become "read every passage to confirm what I already believe."** *In the evidence schema*: this principle is NOT recorded as a separate boolean field, because it leaks easily into formation-confirmation. If a verdict requires invoking it, the subagent must say so in `notes` and explain *which* doctrinal whole is doing the controlling work.
 
@@ -144,7 +144,7 @@ And on each `scripture[]` entry:
 ```json
 {
   "ref": "Genesis 6:6",
-  "key_term": "וַיִּנָּחֶם (vayyinnachem) — Niphal of nacham, H5162",
+  "key_term": "וַיִּנָּחֶם (vayyinnachem), Niphal of nacham, H5162",
   "force": "...",
   "supports": "complicates",
   "genre": "narrative",
@@ -159,10 +159,10 @@ And on each `scripture[]` entry:
 ## Hard rules for subagents
 
 1. **Default `primary_method` is `grammatico-historical`.** A verdict resting on a non-default method must be defensible from the apparatus / interlinear AND must record the method explicitly.
-2. **Anthropomorphism / anthropopathism passages on omnipotence, immutability, omniscience, impassibility, sovereignty questions are NOT optional.** The H5 catalog in `tools/verify_catalogs.json` lists the question ids; the validator enforces at least one such citation per catalogued question. Omission → `flags: ["anthropomorphic-passages-omitted"]` and confidence drops a tier.
-3. **Dispensational verdicts are flagged.** Any verdict that requires dispensational hermeneutics gets `flags: ["dispensational-lens-required"]` and `frameworks_in_play` must list `dispensationalism`. The verdict can stand — but as a Brethren-distinctive position, not as cross-tradition consensus. Catalogued in H6.
+2. **Anthropomorphism / anthropopathism passages on omnipotence, immutability, omniscience, impassibility, sovereignty questions are NOT optional.** The H5 catalog in `tools/verify_catalogs.json` lists the question ids; the validator enforces at least one such citation per catalogued question. Omission produces `flags: ["anthropomorphic-passages-omitted"]`. The flag is a research-quality marker; it does not lower confidence by itself, since confidence reflects lexical clarity rather than completeness of figure tagging.
+3. **Dispensational verdicts are flagged.** Any verdict that requires dispensational hermeneutics gets `flags: ["dispensational-lens-required"]` and `frameworks_in_play` must list `dispensationalism`. The flag notes for the reader that the verdict requires a non-default hermeneutic; it does not demote the verdict. Verdict stands or falls on apparatus, interlinear, and concordance. Catalogued in H6.
 4. **Genre mismatch is flagged.** A verdict that treats a wisdom-genre passage as a doctrinal promise, or apocalyptic as calendar, or narrative as prescription, gets `flags: ["genre-mismatch"]` with a note.
-5. **`competing_lens_verdicts` is mandatory** for any tier=essential or tier=convictional question where `frameworks_in_play.length > 1`.
+5. **`competing_lens_verdicts` is mandatory** for any question where `frameworks_in_play.length > 1`. (Tier-gating removed; tier abolished from questions.json. The frameworks-in-play count alone triggers the mandate.)
 
 ---
 

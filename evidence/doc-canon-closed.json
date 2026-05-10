@@ -1,0 +1,362 @@
+{
+  "id": "doc-canon-closed",
+  "answer": {
+    "id": "doc-canon-closed",
+    "affirms": true,
+    "rationale": "Heb 1:1-2 places the Son-speech 'at the end of these days' as the eschatological terminus of God's polymerous address; Jude 3 fixes the faith as 'once for all delivered' (hapax paradotheise, aorist passive participle); Eph 2:20 makes the apostles-and-prophets foundation singular and already laid; Gal 1:8-9 anathematizes any gospel beyond what the apostles preached; Rev 22:18-19 forbids adding to or taking from the prophetic word. The pan-canonical lemma pattern is unambiguous: the apostolic deposit is closed, and any later revelation claiming to stand on par with or add to it falls under apostolic anathema.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Distinguish (a) ongoing illumination, providential guidance, and lesser-charismata that point back to the closed canon as their judge from (b) claims of new revelation that adds to or stands on par with Scripture. The verdict targets only (b). Named public-record carriers of denial whose extra-canonical 'revelations' function as rule-of-faith alongside or above Scripture: Mormonism (Joseph Smith, Book of Mormon, Doctrine and Covenants, Pearl of Great Price), Jehovah's Witnesses (Watchtower's interpretive authority), Iglesia ni Cristo (Felix Manalo as 'last messenger'), Branhamism (William Branham's tape ministry as 'spoken word'), Christian Science (Mary Baker Eddy's Science and Health), Seventh-day Adventism's high view of Ellen White's writings (contested within the movement), Unification Church (Sun Myung Moon's Divine Principle), The Family International. Continuationist Pentecostal and charismatic traditions that affirm ongoing prophecy as edificatory and canon-subordinate (AG, Vineyard, classical Pentecostal) do NOT fall under this verdict because they explicitly subordinate any prophetic utterance to Scripture as final norm; they affirm the closed canon."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": null
+    },
+    "lay_summary": {
+      "reasoning": "Yes. After the apostles died, no new message from God carries the same weight as the Bible or can add new rules to the faith. The strongest reason from Scripture is Hebrews 1:1-2, which says God spoke long ago in many ways through the prophets but in these last days has spoken to us by his Son. Jude 3 says the faith was delivered to the saints 'once for all,' the language of a finished hand-off. Ephesians 2:20 calls the apostles and prophets the foundation of the church, and a foundation is laid once. Galatians 1:8-9 says even an angel from heaven preaching a different gospel is under God's curse, which fences off any later message that would add to or change the gospel the apostles preached. Revelation 22:18-19 warns that anyone who adds to or takes away from the prophetic words faces serious consequences. The strongest counterargument also comes from Scripture. Acts 21:9 records Philip's four daughters who prophesied. 1 Corinthians 14 treats prophecy as a live gift in the New Testament church. Joel 2, quoted by Peter in Acts 2, says in the last days God will pour out his Spirit and sons and daughters will prophesy. So does the New Testament itself not assume ongoing prophecy? The answer holds because the issue is not whether God's Spirit still speaks to believers in personal guidance, illumination, or edifying prophecy. The issue is whether any later message ranks alongside or above the apostolic Scriptures as a rule of faith. 1 Corinthians 14:29 itself tells the church to weigh prophecies, and the standard by which they are weighed is the apostolic deposit. 2 Timothy 3:16-17 says Scripture is enough to make the man of God complete and equipped for every good work. Personal impressions, ongoing guidance, and even genuine spiritual gifts remain answerable to Scripture, never the other way around. Where a later message claims to stand on par with the Bible or to add a new article to the faith, the apostolic curse of Galatians 1 falls on it.",
+      "denominational_landscape": "On this proposition the eight major Christian lineages are in unusually firm agreement, though with important differences in how they construe tradition's role. Catholic teaching holds that public revelation closed with the death of the last apostle and that Scripture together with apostolic tradition transmits that closed deposit, with private revelations after the apostles never adding to the deposit of faith. Eastern Orthodoxy holds the same closure with tradition as Scripture's living interpretive matrix. Lutheran, Anglican, Reformed, Methodist, and Anabaptist traditions affirm the closed canon explicitly and treat Scripture as the final rule of faith. Classical Pentecostal and continuationist traditions, including the Assemblies of God, affirm both the closed canon and ongoing prophecy as edificatory and canon-subordinate; they do not place modern prophetic utterance on par with Scripture or treat it as adding to the rule of faith. So all eight lineages affirm the proposition as stated. The denial line runs through groups that publicly carry extra-canonical writings or living prophetic figures as rule-of-faith alongside or above Scripture. Mormonism adds the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price as scripture, and ongoing pronouncements from its prophet-president. Jehovah's Witnesses functionally subordinate Scripture to the Watchtower's interpretive authority. Iglesia ni Cristo treats Felix Manalo as the 'last messenger' whose teaching is binding. Branhamism treats William Branham's recorded sermons as the spoken word for the end-time church. Christian Science treats Mary Baker Eddy's Science and Health as the key that unlocks Scripture. Unification Church treats Sun Myung Moon's Divine Principle as completing Christian revelation. By the historic Christian standard reflected in the eight lineages and grounded in the apostolic warning of Galatians 1:8-9, those movements place themselves outside historic Christianity on this point, which is why mainstream Christian bodies have consistently classified them as new religious movements rather than Christian denominations."
+    },
+    "scripture": [
+      {
+        "ref": "Heb.1.1-2",
+        "key_term": "ἐπ' ἐσχάτου τῶν ἡμερῶν τούτων (ep' eschatou tōn hēmerōn toutōn) G2078; ἐλάλησεν ἐν υἱῷ (elalēsen en huiō) G2980/G5207; πολυμερῶς καὶ πολυτρόπως (polymerōs kai polytropōs) G4181/G4187",
+        "force": "God's prior speech to the fathers via the prophets was 'in many portions and many ways'; the Son-speech is positioned as the eschatological terminus ('at the end of these days'); the contrast structure presents Son-revelation as the final mode, not one more in a continuing series",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jude.1.3",
+        "key_term": "ἅπαξ παραδοθείσῃ τοῖς ἁγίοις πίστει (hapax paradotheisē tois hagiois pistei) G530/G3860/G4102",
+        "force": "ἅπαξ ('once for all') modifies παραδοθείσῃ (aorist passive participle of παραδίδωμι, 'having been delivered'); the grammar fixes the faith as a single completed deposit handed over to the saints, the very object the audience is exhorted to contend for",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.20",
+        "key_term": "ἐποικοδομηθέντες ἐπὶ τῷ θεμελίῳ τῶν ἀποστόλων καὶ προφητῶν (epoikodomēthentes epi tō themeliō tōn apostolōn kai prophētōn) G2026/G2310/G652/G4396",
+        "force": "θεμέλιος ('foundation') is singular; the genitive 'of the apostles and prophets' identifies whose foundation it is; foundations are laid once at the start of a building and not relaid; the participle ἐποικοδομηθέντες places later believers as those built upon that already-laid foundation",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Gal.1.8-9",
+        "key_term": "ἄγγελος ἐξ οὐρανοῦ εὐαγγελίζηται… παρ' ὃ εὐηγγελισάμεθα ὑμῖν, ἀνάθεμα ἔστω (angelos ex ouranou euangelizētai… par' ho euēngelisametha hymin, anathema estō) G32/G2097/G331",
+        "force": "ἀνάθεμα ('devoted to destruction, accursed') is invoked twice for emphasis; the standard is what the apostles already preached (εὐηγγελισάμεθα, aorist active indicative, completed apostolic preaching); even a heavenly messenger preaching beyond that standard falls under the curse; the apostolic gospel is the fixed canon against which later claims are measured",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.22.18-19",
+        "key_term": "ἐάν τις ἐπιθῇ ἐπ' αὐτά… ἐάν τις ἀφέλῃ ἀπὸ τῶν λόγων (ean tis epithē ep' auta… ean tis aphelē apo tōn logōn) G2007/G851/G3056",
+        "force": "ἐπιτίθημι ('to add upon') and ἀφαιρέω ('to take away from') frame the prophetic words of this book as a fixed deposit; the formula echoes Deut 4:2, Deut 12:32, Prov 30:6, a pan-canonical pattern guarding the deposit at both Mosaic and apostolic termini",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.3.16-17",
+        "key_term": "πᾶσα γραφὴ θεόπνευστος (pasa graphē theopneustos) G1124/G2315; ἄρτιος… ἐξηρτισμένος (artios… exērtismenos) G739/G1822",
+        "force": "θεόπνευστος ('God-breathed') predicates inspiration of γραφή (Scripture as a class); the result clause uses ἄρτιος ('complete, fitted') and ἐξηρτισμένος (perfect passive participle of ἐξαρτίζω, 'fully equipped') to claim that Scripture is sufficient to make the man of God complete and equipped for every good work, not requiring supplementation",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Deut.4.2",
+        "key_term": "לֹא תֹסִפוּ עַל-הַדָּבָר… וְלֹא תִגְרְעוּ מִמֶּנּוּ (lo' tosipu… lo' tigre'u) H3254/H1639",
+        "force": "Mosaic prohibition against adding to or subtracting from the commanded word; the Hebrew lemmas yasaph ('to add') and gara' ('to diminish, take from') establish the pan-canonical pattern that Rev 22:18-19 echoes at the canon's close; the deposit-guard formula spans Old and New Testaments",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Prov.30.6",
+        "key_term": "אַל-תּוֹסְףְּ עַל-דְּבָרָיו (al-tosephe al-debarav) H3254",
+        "force": "Wisdom-genre reaffirmation of the same yasaph prohibition: 'do not add to his words, lest he rebuke you and you be found a liar'; the canonical pattern of guarding God's deposit against addition is not a single-passage doctrine but a recurring Hebrew lexical pattern",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": []
+      },
+      {
+        "ref": "Acts.21.9",
+        "key_term": "θυγατέρες τέσσαρες παρθένοι προφητεύουσαι (thygateres tessares parthenoi prophēteuousai) G4395",
+        "force": "Philip's four daughters prophesy in the post-Pentecost apostolic era; the participle is present active, indicating ongoing activity; complicates any cessationist reading that places the prophetic gift entirely in the apostles, but does NOT complicate the closed-canon verdict because prophecy in the NT church is canon-subordinate (1 Cor 14:29 weighing) and never claims to stand on par with the apostolic deposit",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.14.29",
+        "key_term": "προφῆται δὲ δύο ἢ τρεῖς λαλείτωσαν, καὶ οἱ ἄλλοι διακρινέτωσαν (prophētai de duo ē treis laleitōsan, kai hoi alloi diakrinetōsan) G4396/G1252",
+        "force": "διακρίνω ('to discern, weigh, judge between') governs prophetic utterance in the assembly; the very existence of a weighing rule presupposes that prophecy in the church is subordinate to a higher norm; complicates a hard cessationism, but supports the closed-canon verdict by placing prophecy under apostolic judgment rather than alongside it",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.17-18",
+        "key_term": "ἐν ταῖς ἐσχάταις ἡμέραις… ἐκχεῶ ἀπὸ τοῦ πνεύματός μου… προφητεύσουσιν (en tais eschatais hēmerais… ekcheō apo tou pneumatos mou… prophēteusousin) G2078/G1632/G4395",
+        "force": "Peter cites Joel 2:28-32 to interpret Pentecost: in the last days God pours out his Spirit and 'sons and daughters shall prophesy'; this anchors the entire 'last days' (eschatai hēmerai) as the era of Spirit-given prophecy; complicates any reading that confines prophecy strictly to twelve apostles, but does not complicate canonical closure because the apostolic deposit is what defines and judges the prophecy",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.13.8-12",
+        "key_term": "προφητεῖαι καταργηθήσονται… ὅταν ἔλθῃ τὸ τέλειον (prophēteiai katargēthēsontai… hotan elthē to teleion) G4395/G2673/G5046",
+        "force": "Prophecies will be 'rendered inoperative' (katargēthēsontai, future passive of katargeō) 'when the perfect comes' (to teleion); the lexical ambiguity of to teleion ('the perfect/complete/mature thing') is genuinely contested: cessationists read it as the closed canon, continuationists as the parousia or eschatological consummation; either reading leaves a determinate end-state of charismatic gifts in subordination to a higher fixed norm",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.1.20-21",
+        "key_term": "πᾶσα προφητεία γραφῆς ἰδίας ἐπιλύσεως οὐ γίνεται… ὑπὸ πνεύματος ἁγίου φερόμενοι ἐλάλησαν ἀπὸ θεοῦ ἄνθρωποι (pasa prophēteia graphēs… hypo pneumatos hagiou pheromenoi elalēsan) G4394/G1124/G5342",
+        "force": "Prophecy of Scripture (γραφῆς) is not a matter of private interpretation; the prophets spoke being 'carried along' (pheromenoi, present passive participle of pherō) by the Holy Spirit; the lexical pattern identifies the prophetic word as a closed inspired deposit issuing from God, distinguishing γραφή from generic ongoing prophecy",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2078",
+      "G530",
+      "G3860",
+      "G2310",
+      "G652",
+      "G4396",
+      "G331",
+      "G2007",
+      "G851",
+      "G1124",
+      "G2315",
+      "G4395",
+      "G739",
+      "H3254",
+      "H1639"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenantal",
+          "verdict": "affirms",
+          "note": "Reads Heb 1:1-2, Jude 3, Eph 2:20 as marking the apostolic deposit as the terminus of redemptive-historical revelation; the closed canon is the rule of the new covenant administration"
+        },
+        {
+          "lens": "dispensational",
+          "verdict": "affirms",
+          "note": "Reads the apostolic age as ending the foundational church-dispensation revelation; the closed canon is the church-age rule of faith; future revelation tied to ethnic-Israel program is exegetical interpretation of already-given prophecy, not new revelation on par with Scripture"
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Same verdict as covenantal on this point; the apostolic foundation in Eph 2:20 and the once-for-all delivery in Jude 3 settle canonical closure independent of covenantal vs new-covenantal disagreements on Mosaic continuity"
+        },
+        {
+          "lens": "continuationist (Pentecostal/charismatic)",
+          "verdict": "affirms",
+          "note": "Affirms the closed canon while maintaining that prophecy and other gifts continue in the church as edificatory and canon-subordinate; AG Fundamental Truths explicitly subordinate prophecy to Scripture as final norm; continuationism is compatible with the verdict, only post-apostolic claims to revelation that stand on par with or add to Scripture deny it"
+        }
+      ],
+      "notes": "Verdict converges across orthodox interpretive lenses because the lexical pattern (hapax in Jude 3, themelios singular in Eph 2:20, anathema in Gal 1:8-9, the deposit-guard formula Deut 4:2 / Prov 30:6 / Rev 22:18-19, eschatos in Heb 1:1-2) does not depend on a contested framework. Analogia scripturae is invoked because the pan-canonical pattern is what carries the verdict, not any single passage. Progressive revelation factors because the closure-claim is itself the terminus of a progressive sequence: prophetic word, Son-speech, apostolic deposit."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasius, Festal Letter 39 (367 AD)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Let no one add to these [canonical books], neither let him take aught from these. Concerning these the Lord put to shame the Sadducees, saying, Ye do err, not knowing the Scriptures."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies 3.1.1 (c. 180 AD)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We have learned from none others the plan of our salvation, than from those through whom the Gospel has come down to us, which they did at one time proclaim in public, and, at a later period, by the will of God, handed down to us in the Scriptures, to be the ground and pillar of our faith."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church §66-67",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Christian economy, therefore, since it is the new and definitive Covenant, will never pass away; and no new public revelation is to be expected before the glorious manifestation of our Lord Jesus Christ. Yet even if Revelation is already complete, it has not been made completely explicit; it remains for Christian faith gradually to grasp its full significance."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Dei Verbum §4 (Vatican II, 1965)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Christian dispensation, therefore, as the new and definitive covenant, will never pass away and we now await no further new public revelation before the glorious manifestation of our Lord Jesus Christ."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome, Rule and Norm (1577)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We believe, teach, and confess that the prophetic and apostolic writings of the Old and New Testaments are the only rule and norm according to which all doctrines and teachers alike must be appraised and judged."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article VI (1571)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man, that it should be believed as an article of the Faith, or be thought requisite or necessary to salvation."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 1.1, 1.6 (1647)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Those former ways of God's revealing his will unto his people being now ceased… The whole counsel of God concerning all things necessary for his own glory, man's salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture: unto which nothing at any time is to be added, whether by new revelations of the Spirit, or traditions of men."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "1689 London Baptist Confession 1.1, 1.6",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Those former ways of God's revealing His will unto His people being now ceased… The whole counsel of God concerning all things necessary for His own glory, man's salvation, faith and life, is either expressly set down or necessarily contained in the Holy Scripture: unto which nothing at any time is to be added, whether by new revelation of the Spirit, or traditions of men."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527), preface; Mennonite Confession of Dordrecht (1632), Article I",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We believe in and confess that one eternal, almighty, and incomprehensible God… as the same is testified in the Holy Scriptures, and as in this true God alone we believe."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article V (Wesley's 1784 abridgement of the 39 Articles)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scriptures contain all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man that it should be believed as an article of faith, or be thought requisite or necessary to salvation."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 1 (1916, revised)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Scriptures, both the Old and New Testaments, are verbally inspired of God and are the revelation of God to man, the infallible, authoritative rule of faith and conduct."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, Volume I: Doctrine and Scripture (Hopko)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Bible, as the inspired Word of God in human language, has supreme authority in the Church… The Church's Tradition is the Bible's living context, but Tradition does not add to the deposit of faith; it preserves and transmits it."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἐπ᾽ ἐσχάτου τῶν ἡμερῶν τούτων ἐλάλησεν ἡμῖν ἐν Υἱῷ - 'in these last days has spoken to us in His Son'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jude/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἅπαξ παραδοθείσῃ τοῖς ἁγίοις πίστει - 'once for all having been delivered to the saints faith'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-20.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἐποικοδομηθέντες ἐπὶ τῷ θεμελίῳ τῶν ἀποστόλων καὶ προφητῶν - 'having been built upon the foundation of the apostles and prophets'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/1-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "παρ᾽ ὃ εὐηγγελισάμεθα ὑμῖν, ἀνάθεμα ἔστω - 'beyond what we proclaimed to you, accursed let him be'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/22-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἐάν τις ἐπιθῇ ἐπ᾽ αὐτά, ἐπιθήσει ὁ Θεὸς ἐπ᾽ αὐτὸν τὰς πληγάς - 'if anyone adds to them, will add God upon him the plagues'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/3-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "πᾶσα γραφὴ θεόπνευστος καὶ ὠφέλιμος - 'every Scripture God-breathed and profitable'"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/530.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "ἅπαξ (hapax) G530: once, once for all; used 14 times in NT; in Jude 3 modifies the aorist passive participle to mark the faith as delivered as a completed deposit"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ccc_css/archive/catechism/p1s1c2a1.htm",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC §66: 'The Christian economy, therefore, since it is the new and definitive Covenant, will never pass away; and no new public Revelation is to be expected.'"
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "Dei Verbum §4: 'we now await no further new public revelation before the glorious manifestation of our Lord Jesus Christ.'"
+      },
+      {
+        "url": "https://bookofconcord.org/formula-of-concord/epitome/rule-and-norm/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord, Epitome: 'the prophetic and apostolic writings of the Old and New Testaments are the only rule and norm.'"
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles, Article VI: 'Holy Scripture containeth all things necessary to salvation.'"
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "AG Statement, Article 1: 'The Scriptures… are the revelation of God to man, the infallible, authoritative rule of faith and conduct.'"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Articles, Article V: 'The Holy Scriptures contain all things necessary to salvation.'"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/holy-scripture",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Orthodox Church in America: 'The Bible, as the inspired Word of God in human language, has supreme authority in the Church.'"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf204/npnf204.xxv.iii.iv.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Athanasius, Festal Letter 39: 'Let no one add to these, neither let him take aught from these.' Canon list of 27 NT books."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

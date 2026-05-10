@@ -1,22 +1,17 @@
 {
   "$schema_version": "2.0",
-  "formation_under_examination": "Plymouth Brethren-adjacent: classical Reformed Protestant orthodoxy plus Brethren distinctives. This formation is the position under examination, NOT the rubric. The inferred-baseline run tests whether each proposition holds against apparatus + interlinear + concordance, with counter-witness traditions corroborating the lexical reading.",
+  "formation_under_examination": "Plymouth Brethren-adjacent: classical Reformed Protestant orthodoxy plus Brethren distinctives. This formation is the position under examination, NOT the rubric. The inferred-baseline run tests whether each proposition holds against apparatus + interlinear + concordance. Counter-witness traditions are recorded as diagnostic information showing how each major lineage reads the same lexical text; they do not vote on any verdict field.",
   "judging_panel": [
     "critical_apparatus",
     "interlinear",
-    "concordance",
+    "concordance"
+  ],
+  "research_panel": [
     "counter_witness_traditions"
   ],
   "location_context": "evaluating churches across denominations",
   "generated_at": "2026-05-10",
-  "description": "Universal question bank: statement, anchors, tier, consensus, brethren-distinctive flag. Combines with the answer file (baseline.json or responses/<id>.json or consolidated.json) to render the personal beliefs PDF; stands alone to render the blank questionnaire. The 222 question entries are scheduled for a phase-3 reframe pass (verdict-pre-loading audit + overlap disambiguation); see docs/QUESTION_SCHEMA.md.",
-  "tier_definitions": {
-    "essential": "Core gospel and Trinitarian boundaries. Denial = false gospel or cult-grade error. Always teach to children, always correct, never become member where denied.",
-    "convictional": "Clear scriptural conviction. Membership-level threshold. Would not compromise on doctrine, but visit/participate is usually fine where denied.",
-    "important": "Matters significantly but does not break fellowship. Reservations about membership, but not absolute. Marry across is usually fine.",
-    "preference": "Methodological or practical. Membership across is fine. Worship style, communion frequency, calendar customs.",
-    "adiaphora": "Truly indifferent. Freedom of conscience. All thresholds permissive."
-  },
+  "description": "Universal question bank: statement, anchors, historical_consensus, brethren_distinctive flag. Combines with the answer file (baseline.json or responses/<id>.json or consolidated.json) to render the personal beliefs PDF; stands alone to render the blank questionnaire. The 231 question entries are pending a stem-audit pass that flags verdict-pre-loading, conflated multi-clause stems, and confessional-vocabulary smuggling. See docs/QUESTION_SCHEMA.md.",
   "category_index": [
     "Bibliology",
     "Theology Proper",
@@ -50,35 +45,27 @@
     "category": "High-level theological category. See category_index.",
     "subcategory": "Optional finer grouping; null if not applicable.",
     "kind": "doctrine = belief; practice = practical/applied position.",
-    "statement": "The proposition under examination. Phase-3 target: neutral interrogative-equivalent proposition, NOT a verdict assertion. Existing 222 entries inherited a 'phrased as the orthodox/affirming claim so denial is clear' rule that pre-loads verdicts and uses Reformed-confessional vocabulary as if neutral; the inferred-baseline run flags such cases via evidence.stem_audit and a phase-3 rewrite pass produces neutral-form replacements. See docs/QUESTION_SCHEMA.md.",
+    "statement": "The proposition under examination. Phase-3 target: neutral interrogative-equivalent proposition, NOT a verdict assertion. The 221 entries are pending a stem-audit pass that flags verdict-pre-loading, conflated multi-clause stems, and confessional-vocabulary smuggling. The inferred-baseline run also flags such cases at runtime via evidence.stem_audit. See docs/QUESTION_SCHEMA.md.",
     "scripture_anchors": "Seed biblical passages relevant to the proposition. Inferred-baseline subagents extend these via concordance traversal (every Strong's lemma in the seed verses spider-mapped to the canon); the anchors are a starting point, not a closed list.",
-    "confessional_anchors": "Creeds/confessions historically addressing this proposition. Recorded as INFORMATIONAL research aids during the inferred run (under evidence.counter_witness with the appropriate tradition tag), NOT as authority. Confessions never settle a verdict; apparatus + interlinear + concordance do. See tools/derive_baseline_prompt.md.",
-    "tier": "essential = Nicene-Chalcedonian-Apostolic foundations under cross-tradition consensus (denial = false gospel) | convictional = clear from apparatus + concordance with legitimate intramural dispute | important = matters but does not break fellowship | preference = methodological/practical | adiaphora = indifferent, freedom of conscience.",
-    "historical_consensus": "orthodox = cross-tradition consensus across patristic + magisterial + Lutheran + Anglican + Reformed + Methodist + Anabaptist + Pentecostal lineages | divided = legitimate intramural disagreement | minority = real but smaller stream | heterodox = outside historic consensus, not formally cult | heretical = formally condemned in early ecumenical councils.",
-    "brethren_distinctive": "true if this position is distinctive to the Brethren tradition (vs. broadly held by orthodox Christianity). Marker for when a verdict aligns with a brethren-distinctive — not a disqualifier, but a sign the verdict requires extra counter-witness scrutiny."
+    "confessional_anchors": "Creeds and confessions historically addressing this proposition. Recorded as INFORMATIONAL research aids during the inferred run (under evidence.counter_witness with the appropriate tradition tag), NOT as authority. Confessions never settle a verdict; apparatus + interlinear + concordance do. See tools/derive_baseline_prompt.md.",
+    "historical_consensus": "Descriptive metadata about church history, NOT a verdict-shaper. unanimous_lineages = patristic + Catholic magisterial + Lutheran + Anglican + Reformed + Methodist + Anabaptist + Pentecostal converge | divided_lineages = legitimate intramural disagreement | minority_lineages = real but smaller stream | outside_majority_lineages = held by some but rejected by majority of major lineages | outside_historic_christianity = formally outside historic Christian confession (e.g., Mormonism, JWs, Christadelphians, Iglesia ni Cristo, Branhamism).",
+    "brethren_distinctive": "true if this position is distinctive to the Brethren tradition (versus broadly held by orthodox Christianity). Marker for when a verdict aligns with a brethren-distinctive, useful for downstream analysis. Not a disqualifier; the discipline is canonical demonstration, not formation-flagging."
   },
   "stats": {
-    "total": 221,
-    "by_tier": {
-      "essential": 56,
-      "convictional": 79,
-      "important": 50,
-      "preference": 35,
-      "adiaphora": 1
-    },
+    "total": 231,
     "by_category": {
-      "Bibliology": 8,
+      "Bibliology": 11,
       "Theology Proper": 14,
       "Christology": 13,
       "Pneumatology": 10,
       "Anthropology": 5,
       "Hamartiology": 9,
       "Soteriology": 28,
-      "Ecclesiology": 8,
-      "Sacraments": 13,
+      "Ecclesiology": 10,
+      "Sacraments": 15,
       "Leadership & Polity": 13,
       "Church Discipline": 4,
-      "Worship Structure": 5,
+      "Worship Structure": 6,
       "Inter-church Relations": 4,
       "Eschatology": 18,
       "Angelology": 3,
@@ -89,27 +76,27 @@
       "Worship Style": 6,
       "Christian Ethics": 10,
       "Marriage & Sexuality": 10,
-      "Family & Discipleship": 3,
+      "Family & Discipleship": 4,
       "Money & Stewardship": 3,
-      "Engagement with World": 6,
+      "Engagement with World": 7,
       "Calendar & Customs": 5
     },
     "by_historical_consensus": {
-      "orthodox": 122,
-      "divided": 75,
-      "heretical": 7,
-      "heterodox": 9,
-      "minority": 9
+      "unanimous_lineages": 131,
+      "divided_lineages": 83,
+      "outside_majority_lineages": 7,
+      "minority_lineages": 9,
+      "outside_historic_christianity": 1
     },
-    "brethren_distinctives": 43
+    "brethren_distinctives": 46
   },
   "questions": [
     {
-      "id": "doc-ongoing-revelation-binding",
+      "id": "doc-canon-closed",
       "category": "Bibliology",
       "subcategory": "Revelation",
       "kind": "doctrine",
-      "statement": "The biblical canon is closed at the close of the apostolic age, and no later writing or oral revelation given after the apostolic age stands on par with Scripture or binds the conscience as Scripture does.",
+      "statement": "No revelation given after the apostolic age stands on par with Scripture or adds to the rule of faith.",
       "scripture_anchors": [
         "Hebrews 1:1-2",
         "Ephesians 2:20",
@@ -123,8 +110,28 @@
         "1689 Baptist Confession 1.1",
         "Belgic Confession 7"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-tradition-not-on-par-with-scripture",
+      "category": "Bibliology",
+      "subcategory": "Revelation",
+      "kind": "doctrine",
+      "statement": "Apostolic-age oral or written tradition not preserved in canonical Scripture does not bind the conscience as Scripture does.",
+      "scripture_anchors": [
+        "2 Thessalonians 2:15",
+        "1 Corinthians 11:2",
+        "2 Thessalonians 3:6",
+        "Acts 17:11",
+        "Mark 7:8-13"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.1",
+        "1689 Baptist Confession 1.1",
+        "Belgic Confession 7"
+      ],
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -143,16 +150,15 @@
         "Westminster Confession 1.10",
         "1689 Baptist Confession 1.10"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
-      "id": "doc-scripture-inerrancy",
+      "id": "doc-scripture-truthfulness",
       "category": "Bibliology",
       "subcategory": "Inerrancy",
       "kind": "doctrine",
-      "statement": "Scripture in the original autographs is without error in all that it affirms, including its statements about history, science, and doctrine.",
+      "statement": "Scripture is true and trustworthy in all that it affirms.",
       "scripture_anchors": [
         "John 17:17",
         "John 10:35",
@@ -166,8 +172,29 @@
         "Chicago Statement on Biblical Inerrancy",
         "Westminster Confession 1.4-1.5"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-scripture-inerrancy-chicago-scope",
+      "category": "Bibliology",
+      "subcategory": "Inerrancy",
+      "kind": "doctrine",
+      "statement": "Scripture, in its original autographs, is without error in matters of history, science, and chronology as well as faith and practice.",
+      "scripture_anchors": [
+        "John 17:17",
+        "John 10:35",
+        "Psalm 19:7",
+        "Psalm 119:160",
+        "Proverbs 30:5",
+        "Matthew 22:29-32",
+        "Titus 1:2"
+      ],
+      "confessional_anchors": [
+        "Chicago Statement on Biblical Inerrancy",
+        "Westminster Confession 1.4-1.5"
+      ],
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -185,8 +212,7 @@
         "Westminster Confession 1.5",
         "1689 Baptist Confession 1.5"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -206,8 +232,7 @@
         "1689 Baptist Confession 1.2",
         "Chicago Statement on Biblical Inerrancy"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -226,16 +251,15 @@
         "Westminster Confession 1.6",
         "1689 Baptist Confession 1.6"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
-      "id": "doc-canon-66-books",
+      "id": "doc-canon-protestant-66",
       "category": "Bibliology",
       "subcategory": "Canon",
       "kind": "doctrine",
-      "statement": "The biblical canon comprises the 39 Old Testament and 27 New Testament books recognized by the Protestant tradition; the Apocryphal/Deuterocanonical books are not Scripture and not authoritative for doctrine, though they may have historical or edifying value.",
+      "statement": "The Christian canon comprises the 39 Hebrew Old Testament books and the 27 New Testament books.",
       "scripture_anchors": [
         "Luke 24:44",
         "Luke 11:51",
@@ -246,8 +270,26 @@
         "Westminster Confession 1.2-1.3",
         "39 Articles 6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-deuterocanon-not-scripture",
+      "category": "Bibliology",
+      "subcategory": "Canon",
+      "kind": "doctrine",
+      "statement": "The books historically called Apocryphal or Deuterocanonical are not Scripture and do not carry authority for doctrine.",
+      "scripture_anchors": [
+        "Luke 24:44",
+        "Luke 11:51",
+        "Romans 3:2",
+        "2 Peter 3:15-16"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.2-1.3",
+        "39 Articles 6"
+      ],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -265,8 +307,7 @@
       "confessional_anchors": [
         "Westminster Confession 1.7"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -284,8 +325,7 @@
       "confessional_anchors": [
         "Westminster Confession 2.1"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -303,8 +343,7 @@
       "confessional_anchors": [
         "Westminster Confession 2.1"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -323,8 +362,7 @@
         "Apostles' Creed",
         "Westminster Confession 2.1"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -349,8 +387,7 @@
         "1689 Baptist Confession 2.2",
         "ETS statement"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -369,8 +406,7 @@
         "Westminster Confession 3.1",
         "Belgic Confession 13"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -390,8 +426,7 @@
         "Nicene Creed",
         "Westminster Confession 2.1"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -412,8 +447,7 @@
         "Athanasian Creed",
         "condemnation of Sabellius (3rd century)"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -435,8 +469,7 @@
         "Athanasian Creed",
         "Chalcedonian Definition"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -454,8 +487,7 @@
         "Athanasian Creed",
         "Nicene Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -473,8 +505,7 @@
         "Westminster Confession 2.2",
         "Belgic Confession 1"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -493,8 +524,7 @@
         "Westminster Confession 2.1",
         "1689 Baptist Confession 2.1"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -512,8 +542,7 @@
         "Westminster Confession 2.1",
         "Belgic Confession 1"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -531,8 +560,7 @@
       "confessional_anchors": [
         "Westminster Confession 3.1-3.2"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -551,8 +579,7 @@
         "Westminster Confession 2.1",
         "Belgic Confession 1"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -571,8 +598,7 @@
         "Apostles' Creed",
         "Nicene Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -592,8 +618,7 @@
         "Apostles' Creed",
         "Nicene Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -614,8 +639,7 @@
         "Nicene Creed (325/381)",
         "Athanasian Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -634,8 +658,7 @@
         "Chalcedonian Definition",
         "Nicene Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -654,8 +677,7 @@
         "Chalcedonian Definition",
         "Westminster Confession 8.2"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -674,8 +696,7 @@
         "Westminster Confession 8.1",
         "39 Articles 22"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -694,8 +715,7 @@
         "Nicene Creed",
         "Athanasian Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -714,8 +734,7 @@
         "Chalcedonian Definition",
         "Athanasian Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -736,8 +755,7 @@
         "Westminster Confession 8.5",
         "1689 Baptist Confession 8.5"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -755,8 +773,7 @@
         "Apostles' Creed",
         "Nicene Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -775,8 +792,7 @@
         "Apostles' Creed",
         "Westminster Confession 8.4"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -794,8 +810,7 @@
       "confessional_anchors": [
         "Chalcedonian Definition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -812,8 +827,7 @@
       "confessional_anchors": [
         "Third Council of Constantinople (681)"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -832,8 +846,7 @@
         "Nicene-Constantinopolitan Creed",
         "Athanasian Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -852,8 +865,7 @@
         "Westminster Confession 13.1",
         "1689 Baptist Confession 13.1"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -872,8 +884,7 @@
       "confessional_anchors": [
         "Nicene-Constantinopolitan Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -892,8 +903,7 @@
         "Westminster Confession 10.1-10.2",
         "1689 Baptist Confession 10"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -911,8 +921,7 @@
       "confessional_anchors": [
         "Westminster Confession 17.3"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -930,8 +939,7 @@
       "confessional_anchors": [
         "1689 Baptist Confession 13.1"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -949,8 +957,7 @@
       "confessional_anchors": [
         "Westminster Confession 1.6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -967,8 +974,7 @@
       "confessional_anchors": [
         "Westminster Confession 18.2"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -984,8 +990,7 @@
       "confessional_anchors": [
         "Nicene-Constantinopolitan Creed (381)"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1003,8 +1008,7 @@
         "Western tradition; Athanasian Creed",
         "Council of Toledo 589"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1025,8 +1029,7 @@
         "Westminster Confession 4.2",
         "Belgic Confession Article 14"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1043,8 +1046,7 @@
       "confessional_anchors": [
         "Westminster Confession 4.2"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1064,8 +1066,7 @@
         "Nashville Statement",
         "Westminster Confession 24"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1086,8 +1087,7 @@
         "Belgic Confession Article 14",
         "Heidelberg Catechism Q6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1106,8 +1106,7 @@
       "confessional_anchors": [
         "Westminster Confession 32.1"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1126,8 +1125,7 @@
         "Westminster Confession 6",
         "Belgic Confession Article 14"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1147,8 +1145,7 @@
         "Canons of Dort 3/4.3",
         "Westminster Confession 9.3"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1168,8 +1165,7 @@
         "Heidelberg Catechism Q7-Q8",
         "39 Articles Article 9"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1186,8 +1182,7 @@
         "Westminster Confession 6.3",
         "Augustinian tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1207,8 +1202,7 @@
         "Westminster Shorter Catechism Q14",
         "Heidelberg Catechism Q3-Q5"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1230,8 +1224,7 @@
         "Westminster Confession 6.4",
         "Heidelberg Catechism Q8"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1251,8 +1244,7 @@
         "Westminster Confession 20.2",
         "Westminster Confession 21.1"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1270,8 +1262,7 @@
         "Westminster Confession 6.3",
         "Westminster Larger Catechism Q22"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1291,8 +1282,7 @@
         "Heidelberg Catechism Q94-Q95",
         "Westminster Larger Catechism Q104-Q105"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1312,8 +1302,7 @@
         "Westminster Confession 32-33",
         "Apostles' Creed"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1321,7 +1310,7 @@
       "category": "Soteriology",
       "subcategory": "Justification",
       "kind": "doctrine",
-      "statement": "In justification, Christ's righteousness — both His perfect obedience and His vicarious endurance of the law's penalty — is reckoned to the believer's account, so that the believer is accounted righteous before God on the basis of what Christ has done, not on the basis of any righteousness inherent in the believer.",
+      "statement": "In justification, the believer is reckoned righteous before God on the basis of Christ's work received by faith, not on the basis of righteousness inherent in the believer.",
       "scripture_anchors": [
         "2 Corinthians 5:21",
         "Romans 4:3-8",
@@ -1333,8 +1322,7 @@
         "Westminster Confession 11.1-11.3",
         "Heidelberg Catechism Q60-Q61"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1342,7 +1330,7 @@
       "category": "Soteriology",
       "subcategory": "Justification",
       "kind": "doctrine",
-      "statement": "Justification is God's declarative act in which He pardons the sinner and accepts him as righteous — not on the ground of any change wrought within the sinner, but on the ground of Christ's righteousness received by faith.",
+      "statement": "Justification is God's declarative act of pardoning the sinner and accepting him as righteous on account of Christ, received by faith.",
       "scripture_anchors": [
         "Romans 3:21-26",
         "Romans 4:5",
@@ -1356,8 +1344,7 @@
         "Heidelberg Catechism Q60",
         "Belgic Confession Article 22-23"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1378,8 +1365,7 @@
         "Canons of Dort 3/4",
         "Westminster Confession 6"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1387,7 +1373,7 @@
       "category": "Soteriology",
       "subcategory": "Atonement",
       "kind": "doctrine",
-      "statement": "Christ's atoning death includes the bearing of God's just judgment against sin in the place of sinners — Christ taking on Himself the penalty their sins deserved, so that God's justice against sin is satisfied at the cross.",
+      "statement": "Christ's atoning death includes bearing God's judgment against sin in the place of sinners (penal-substitutionary aspect).",
       "scripture_anchors": [
         "Romans 3:25",
         "1 John 2:2",
@@ -1400,8 +1386,7 @@
         "Westminster Confession 8.4-8.5",
         "39 Articles Article 31"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1420,8 +1405,7 @@
         "Westminster Confession 10.4",
         "Heidelberg Catechism Q20"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1440,8 +1424,7 @@
         "Westminster Confession 10.4",
         "Heidelberg Catechism Q20"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1460,8 +1443,7 @@
       "confessional_anchors": [
         "historic Reformed and Brethren tradition"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1482,8 +1464,7 @@
         "Westminster Confession 15",
         "Heidelberg Catechism Q88-Q90"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1491,7 +1472,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Justification is received by faith alone, apart from works of the law as a meritorious ground; works are the necessary fruit, never the basis, of justification, and any system that makes human merit, ritual observance, law-keeping, or moral effort the partial or whole ground of justification before God denies what Scripture says is the basis of justification.",
+      "statement": "A sinner is justified before God by faith in Christ apart from works of the law as a ground of justification; works are the fruit, not the basis, of justification.",
       "scripture_anchors": [
         "Romans 3:20",
         "Romans 3:28",
@@ -1509,8 +1490,7 @@
         "Heidelberg Catechism Q60-Q62",
         "Augsburg Confession Article 4"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1518,7 +1498,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Salvation is by grace alone — wholly God's unmerited favor, never earned, contributed to, or co-purchased by human effort, ritual, ethnic descent, or moral merit.",
+      "statement": "Salvation is wholly God's unmerited favor; it is not earned or contributed to by human effort or merit.",
       "scripture_anchors": [
         "Ephesians 2:8-9",
         "Romans 3:24",
@@ -1531,8 +1511,7 @@
         "Westminster Confession 11",
         "Heidelberg Catechism Q60"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1540,7 +1519,7 @@
       "category": "Soteriology",
       "subcategory": "Five Solas",
       "kind": "doctrine",
-      "statement": "Salvation is in Christ alone — there is no other name under heaven by which men must be saved, no other mediator between God and man.",
+      "statement": "Salvation is through Christ; no other name under heaven and no other mediator between God and humanity is given for salvation.",
       "scripture_anchors": [
         "John 14:6",
         "Acts 4:12",
@@ -1552,8 +1531,7 @@
         "Westminster Confession 8",
         "Heidelberg Catechism Q29-Q31"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1574,8 +1552,7 @@
         "Westminster Confession 8.4-8.5",
         "Heidelberg Catechism Q37-Q40"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1595,8 +1572,7 @@
         "Westminster Confession 12",
         "Heidelberg Catechism Q33"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1616,8 +1592,7 @@
         "Westminster Confession 19",
         "Heidelberg Catechism (third use of the law)"
       ],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1635,8 +1610,7 @@
       "confessional_anchors": [
         "Westminster Confession 10-11"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1653,8 +1627,7 @@
         "Mark 7:1-13"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1675,8 +1648,7 @@
         "Westminster Confession 17",
         "Canons of Dort 5"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1698,8 +1670,7 @@
         "Westminster Confession 13",
         "Heidelberg Catechism Q86-Q90"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1720,8 +1691,7 @@
         "Westminster Confession 10",
         "Canons of Dort 3/4.11-12"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1741,8 +1711,7 @@
         "Second Council of Orange 529",
         "Canons of Dort 3/4"
       ],
-      "tier": "convictional",
-      "historical_consensus": "heretical",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1762,8 +1731,7 @@
         "Westminster Confession 18",
         "Heidelberg Catechism Q1"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1779,8 +1747,7 @@
         "1 Peter 1:23"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1799,8 +1766,7 @@
       "confessional_anchors": [
         "Westminster Confession 10"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1820,8 +1786,7 @@
         "Canons of Dort 1 (Calvinist)",
         "Five Articles of Remonstrance Article 1 (Arminian)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1843,8 +1808,7 @@
         "Canons of Dort 2 (particular)",
         "Five Articles of Remonstrance Article 2 (general)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1864,8 +1828,7 @@
         "Westminster Larger Catechism Q154",
         "Westminster Shorter Catechism Q88"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1881,8 +1844,7 @@
         "1 John 5:13"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1902,8 +1864,7 @@
         "Belgic Confession 31",
         "Second Helvetic Confession 17"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1925,8 +1886,7 @@
         "Belgic Confession 27",
         "Nicene Creed (one holy catholic apostolic Church)"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -1946,16 +1906,15 @@
         "1689 Baptist Confession 26.7-26.8",
         "Cambridge Platform (congregationalist)"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
-      "id": "doc-marks-of-true-church",
+      "id": "doc-mark-word-preached",
       "category": "Ecclesiology",
       "subcategory": "Nature of the Church",
       "kind": "doctrine",
-      "statement": "A true visible church is marked by: (1) the Word of God rightly preached, (2) the ordinances rightly administered, (3) church discipline rightly exercised.",
+      "statement": "Right preaching of the Word is a mark of a true visible church.",
       "scripture_anchors": [
         "Acts 2:42",
         "Matthew 28:19-20",
@@ -1968,16 +1927,57 @@
         "Scots Confession 18",
         "Westminster Confession 25.4"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
-      "id": "doc-no-clergy-laity-distinction",
+      "id": "doc-mark-ordinances-administered",
       "category": "Ecclesiology",
       "subcategory": "Nature of the Church",
       "kind": "doctrine",
-      "statement": "Scripture knows no two-tier clergy/laity distinction; all believers are saints and ministers, with elders functioning as servant-overseers, not a priestly class.",
+      "statement": "Right administration of the ordinances (baptism and the Lord's Supper) is a mark of a true visible church.",
+      "scripture_anchors": [
+        "Acts 2:42",
+        "Matthew 28:19-20",
+        "Matthew 18:15-20",
+        "1 Timothy 3:15",
+        "Titus 1:5"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 29",
+        "Scots Confession 18",
+        "Westminster Confession 25.4"
+      ],
+      "historical_consensus": "unanimous_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-mark-discipline-exercised",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "Faithful exercise of church discipline is a mark of a true visible church.",
+      "scripture_anchors": [
+        "Acts 2:42",
+        "Matthew 28:19-20",
+        "Matthew 18:15-20",
+        "1 Timothy 3:15",
+        "Titus 1:5"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 29",
+        "Scots Confession 18",
+        "Westminster Confession 25.4"
+      ],
+      "historical_consensus": "unanimous_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-elders-not-sacerdotal",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "New Testament elders and overseers are servant-shepherds, not a sacerdotal priesthood offering sacrifice.",
       "scripture_anchors": [
         "1 Peter 2:9",
         "Matthew 23:8-12",
@@ -1988,8 +1988,7 @@
       "confessional_anchors": [
         "Brethren tradition (no formal confession; embodied in assembly practice)"
       ],
-      "tier": "convictional",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -1997,7 +1996,7 @@
       "category": "Ecclesiology",
       "subcategory": "Nature of the Church",
       "kind": "doctrine",
-      "statement": "The Church is one (united in Christ), holy (set apart, indwelt by the Spirit), catholic (universal across time and place), and apostolic (built on the apostles' teaching, not on apostolic succession of office).",
+      "statement": "The Church is one, holy, catholic, and apostolic, as the Nicene Creed confesses.",
       "scripture_anchors": [
         "Ephesians 2:19-22",
         "Ephesians 4:3-6",
@@ -2009,8 +2008,7 @@
         "Apostles' Creed",
         "Westminster Confession 25"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2033,8 +2031,7 @@
         "Heidelberg Catechism Q31",
         "1689 Baptist Confession 26.4"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2054,8 +2051,7 @@
         "Westminster Confession 25.1-25.4",
         "1689 Baptist Confession 26.1-26.5"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2076,8 +2072,7 @@
         "Belgic Confession 34",
         "1689 Baptist Confession 29"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2095,8 +2090,7 @@
         "1689 Baptist Confession 30",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2115,16 +2109,15 @@
         "Westminster Confession 29",
         "Calvinist tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
-      "id": "doc-paedobaptism-denial",
+      "id": "doc-baptism-faith-precedes",
       "category": "Sacraments",
       "subcategory": "Baptism",
       "kind": "doctrine",
-      "statement": "The covenant-of-grace argument that the New Covenant sign of baptism replaces the Old Covenant sign of circumcision and therefore extends to the children of believers fails to override the consistent New Testament pattern of faith preceding baptism.",
+      "statement": "In the New Testament pattern, conscious faith precedes baptism.",
       "scripture_anchors": [
         "Acts 2:41",
         "Acts 8:12",
@@ -2136,8 +2129,27 @@
         "1689 Baptist Confession 29.2",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-paedobaptism-not-warranted",
+      "category": "Sacraments",
+      "subcategory": "Baptism",
+      "kind": "doctrine",
+      "statement": "Infant baptism on the basis of believing-household covenant inclusion is not warranted by the New Testament.",
+      "scripture_anchors": [
+        "Acts 2:41",
+        "Acts 8:12",
+        "Acts 18:8",
+        "Mark 16:16",
+        "Acts 2:38"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 29.2",
+        "Brethren tradition"
+      ],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2159,8 +2171,7 @@
         "Westminster Confession 29.6",
         "1689 Baptist Confession 30.6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2178,8 +2189,7 @@
         "1689 Baptist Confession 28.1",
         "Westminster Confession 27.4"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2199,8 +2209,7 @@
         "1689 Baptist Confession 29",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2218,16 +2227,15 @@
         "1689 Baptist Confession 29",
         "Brethren tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
-      "id": "doc-consubstantiation-position",
+      "id": "doc-consubstantiation-affirm",
       "category": "Sacraments",
       "subcategory": "Lord's Supper",
       "kind": "doctrine",
-      "statement": "Real-presence language preserved by the Lutheran \"in, with, and under\" formula avoids transubstantiation but requires a doctrine of the ubiquity of Christ's glorified body that creates Christological tensions of its own.",
+      "statement": "Christ is bodily present in, with, and under the bread and wine of the Lord's Supper without the elements being substantially changed.",
       "scripture_anchors": [
         "Acts 1:9-11",
         "Luke 24:39",
@@ -2238,8 +2246,26 @@
         "Westminster Confession 29 (against)",
         "1689 Baptist Confession 30 (against)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-ubiquity-of-christs-body",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "doctrine",
+      "statement": "Christ's glorified human body is ubiquitous (omnipresent) by virtue of its union with the divine nature.",
+      "scripture_anchors": [
+        "Acts 1:9-11",
+        "Luke 24:39",
+        "John 6:63",
+        "1 Corinthians 11:23-26"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 29 (against)",
+        "1689 Baptist Confession 30 (against)"
+      ],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2247,7 +2273,7 @@
       "category": "Sacraments",
       "subcategory": "Number and Nature",
       "kind": "doctrine",
-      "statement": "Of the seven rites the Catholic and Orthodox traditions identify as sacraments (baptism, confirmation, eucharist, penance, anointing of the sick, holy orders, matrimony), only baptism and the Lord's Supper are explicitly instituted by Christ as ordinances of the Church.",
+      "statement": "Christ explicitly instituted two ordinances for the Church (baptism and the Lord's Supper); other rites later identified as sacraments lack explicit dominical institution.",
       "scripture_anchors": [
         "Matthew 28:19",
         "Luke 22:19-20",
@@ -2258,8 +2284,7 @@
         "Thirty-Nine Articles 25",
         "Westminster Confession 27.4"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2275,8 +2300,7 @@
       "confessional_anchors": [
         "Mainstream Protestant tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2293,8 +2317,7 @@
       "confessional_anchors": [
         "Open Brethren practice"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2311,8 +2334,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2332,8 +2354,7 @@
         "Belgic Confession 31",
         "Westminster Confession"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2354,8 +2375,7 @@
         "1689 Baptist Confession 26",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2375,8 +2395,7 @@
         "Belgic Confession 7",
         "Thirty-Nine Articles 21"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2400,8 +2419,7 @@
         "Brethren tradition",
         "1689 Baptist Confession 26.8"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2421,8 +2439,7 @@
         "Confessional Reformed and Baptist tradition",
         "Danvers Statement"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2443,8 +2460,7 @@
         "Cambridge Platform",
         "Brethren tradition (assembly-led)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2463,8 +2479,7 @@
         "Westminster Confession 25-31 framework",
         "1689 Baptist Confession 26.8"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2483,8 +2498,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2503,8 +2517,7 @@
         "Westminster Confession 31 (Presbyterian view)",
         "1689 Baptist Confession 26.7-26.15 (independent view)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2526,8 +2539,7 @@
         "Brethren tradition",
         "Danvers Statement"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2546,8 +2558,7 @@
       "confessional_anchors": [
         "Brethren tradition (lay eldership default)"
       ],
-      "tier": "preference",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2565,8 +2576,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2584,8 +2594,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2606,8 +2615,7 @@
         "Westminster Confession 30",
         "1689 Baptist Confession 26.7"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2626,8 +2634,7 @@
         "Westminster Confession 30.4",
         "Belgic Confession 32"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2646,8 +2653,7 @@
         "Westminster Confession 30",
         "Belgic Confession 32"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2666,16 +2672,15 @@
         "1689 Baptist Confession 26",
         "Brethren reception practice"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
-      "id": "prc-women-silence-in-mixed-assembly",
+      "id": "prc-women-authoritative-teaching-restricted",
       "category": "Worship Structure",
       "subcategory": "Order in Assembly",
       "kind": "practice",
-      "statement": "Women are not to take up authoritative speaking ministry in the gathered mixed assembly (sermon preaching, doctrinal teaching of mixed adults, and leading the assembly authoritatively per 1 Cor 14:34-35; 1 Tim 2:11-12); women may pray, sing, prophesy in non-authoritative contexts, share testimony, teach women and children, and minister widely otherwise.",
+      "statement": "Women are not to exercise authoritative teaching ministry over mixed adult assemblies (sermon preaching, doctrinal teaching of mixed adults, leading the assembly authoritatively).",
       "scripture_anchors": [
         "1 Corinthians 14:33-35",
         "1 Timothy 2:11-15",
@@ -2687,8 +2692,27 @@
         "Brethren tradition",
         "Danvers Statement"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-women-non-authoritative-ministry-open",
+      "category": "Worship Structure",
+      "subcategory": "Order in Assembly",
+      "kind": "practice",
+      "statement": "Women may pray, sing, prophesy in non-authoritative contexts, share testimony, teach women and children, and minister widely outside the authoritative-teaching office.",
+      "scripture_anchors": [
+        "1 Corinthians 14:33-35",
+        "1 Timothy 2:11-15",
+        "1 Corinthians 11:5",
+        "Titus 2:3-5",
+        "Acts 18:26"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "Danvers Statement"
+      ],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2703,8 +2727,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2723,8 +2746,7 @@
         "Westminster Confession 21 (regulative principle)",
         "Brethren practice (spontaneous worship)"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2741,8 +2763,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2763,8 +2784,7 @@
         "Athanasian Creed",
         "all Reformed confessions"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2782,8 +2802,7 @@
         "Westminster Confession 25.6",
         "Belgic Confession 29"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2801,8 +2820,7 @@
       "confessional_anchors": [
         "Brethren tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -2819,8 +2837,7 @@
       "confessional_anchors": [
         "Modern evangelical practice"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2842,8 +2859,7 @@
         "Nicene Creed",
         "Westminster Confession 32"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2865,8 +2881,7 @@
         "Athanasian Creed",
         "Brethren tradition"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2888,8 +2903,7 @@
         "Westminster Confession 33",
         "Brethren tradition"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2912,8 +2926,7 @@
         "Nicene Creed",
         "Westminster Confession 33"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2934,8 +2947,7 @@
         "Westminster Confession 33",
         "Reformed and Brethren tradition"
       ],
-      "tier": "essential",
-      "historical_consensus": "heretical",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2955,8 +2967,7 @@
         "Westminster Confession 33",
         "historic Reformed and Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2976,8 +2987,7 @@
         "historic Christian consensus",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -2997,8 +3007,7 @@
         "Westminster Confession 32",
         "historic Christian consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3018,8 +3027,7 @@
         "Westminster Confession 33",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3040,8 +3048,7 @@
         "Westminster Confession 32",
         "Brethren tradition"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3060,8 +3067,7 @@
         "Brethren tradition",
         "many Reformed (Murray, Piper, MacArthur)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3080,8 +3086,7 @@
         "Westminster Confession 21.4",
         "Brethren tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3089,7 +3094,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "The thousand-year reign of Revelation 20 is a symbolic representation of the present church age between Christ's two advents (amillennialism).",
+      "statement": "The thousand-year reign of Revelation 20 is a symbolic representation of the present church age between Christ's two advents.",
       "scripture_anchors": [
         "Revelation 20:1-6",
         "Matthew 12:29",
@@ -3101,8 +3106,7 @@
         "Heidelberg Catechism",
         "Augustine's City of God"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3121,8 +3125,7 @@
         "Brethren tradition (Darby origin)",
         "Scofield Reference Bible"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3130,7 +3133,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "Christ returns after — not before — an extended age of gospel triumph in which the kingdom progressively transforms the world (postmillennialism).",
+      "statement": "Christ returns after an extended age of gospel triumph in which the kingdom progressively transforms the world.",
       "scripture_anchors": [
         "Matthew 28:18-20",
         "Psalm 110:1",
@@ -3142,8 +3145,7 @@
         "Edwards",
         "modern theonomic Reformed"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3161,8 +3163,7 @@
         "Early church consensus",
         "modern historic premillennialists (Ladd)"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3170,7 +3171,7 @@
       "category": "Eschatology",
       "subcategory": "Millennium",
       "kind": "doctrine",
-      "statement": "Christ returns before a literal thousand-year reign on earth (premillennialism), as a future, post-second-coming era distinct from the present age.",
+      "statement": "Christ returns before a literal thousand-year reign on earth, as a future, post-second-coming era distinct from the present age.",
       "scripture_anchors": [
         "Revelation 20:1-6",
         "Zechariah 14:4-9",
@@ -3181,8 +3182,7 @@
         "Brethren tradition (premillennial)",
         "early Church (Justin Martyr, Irenaeus)"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3201,8 +3201,7 @@
         "Brethren tradition (Darby)",
         "Scofield Reference Bible"
       ],
-      "tier": "preference",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3223,8 +3222,7 @@
         "Westminster Confession 4",
         "historic Christian consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3244,8 +3242,7 @@
         "Westminster Confession 4",
         "historic Christian consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3263,8 +3260,7 @@
       "confessional_anchors": [
         "historic Christian piety"
       ],
-      "tier": "adiaphora",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3285,8 +3281,7 @@
         "Westminster Confession 4",
         "all historic creeds"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3305,8 +3300,7 @@
       "confessional_anchors": [
         "historic Reformed and Brethren tradition"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3325,8 +3319,7 @@
         "Brethren tradition (cautious)",
         "Reformed cessationist caution"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3345,8 +3338,7 @@
         "historic Christian consensus",
         "missionary testimony"
       ],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3368,8 +3360,7 @@
         "Chalcedonian Definition",
         "all historic confessions"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3388,8 +3379,7 @@
       "confessional_anchors": [
         "all Reformation confessions on sola fide"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3413,8 +3403,7 @@
         "Athanasian Creed",
         "Chalcedonian Definition"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3432,8 +3421,7 @@
       "confessional_anchors": [
         "all historic creeds and confessions"
       ],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3454,8 +3442,7 @@
         "Westminster Larger Catechism 109",
         "Reformation consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3476,8 +3463,7 @@
         "Heidelberg Catechism",
         "Reformation consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3497,8 +3483,7 @@
         "Marrow of Modern Divinity",
         "historic Reformed (Spurgeon, Andrew Fuller)"
       ],
-      "tier": "important",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3514,8 +3499,7 @@
         "2 Corinthians 4:16-17"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3523,7 +3507,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Charismatic Excess",
       "kind": "doctrine",
-      "statement": "Phenomena such as falling under the Spirit treated as normative, sustained ecstatic laughter, prophetic decrees claimed to bind the conscience, and physically dramatic signs treated as the standard of Spirit-presence are not the New Testament pattern of orderly worship.",
+      "statement": "Treating dramatic ecstatic phenomena (falling, sustained laughter, conscience-binding prophetic decrees) as the standard or normative evidence of the Spirit's presence departs from the New Testament pattern of orderly worship.",
       "scripture_anchors": [
         "1 Corinthians 14:33",
         "1 Corinthians 14:40",
@@ -3531,8 +3515,7 @@
         "1 John 4:1"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3553,8 +3536,7 @@
         "historic Reformed and Brethren tradition",
         "Westminster Confession 1"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3572,8 +3554,7 @@
       "confessional_anchors": [
         "Westminster Confession 1.6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3581,7 +3562,7 @@
       "category": "Spiritual Gifts",
       "subcategory": "Tongues",
       "kind": "doctrine",
-      "statement": "Speaking in tongues is the necessary evidence of Spirit baptism and/or genuine salvation (classical Pentecostal initial-evidence doctrine).",
+      "statement": "Speaking in tongues is the necessary evidence of Spirit baptism or of genuine salvation.",
       "scripture_anchors": [
         "1 Corinthians 12:11",
         "1 Corinthians 12:30",
@@ -3589,8 +3570,7 @@
         "Galatians 3:2"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "minority",
+      "historical_consensus": "minority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3606,8 +3586,7 @@
         "1 Timothy 6:5"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_majority_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3628,8 +3607,7 @@
       "confessional_anchors": [
         "Westminster Confession 1.1 (Scripture sufficiency)"
       ],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3645,8 +3623,7 @@
         "1 Peter 5:8-9"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3662,8 +3639,7 @@
         "1 Timothy 5:23"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3678,8 +3654,7 @@
         "1 Corinthians 14:27-28"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3694,8 +3669,7 @@
         "Hebrews 12:28-29"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3711,8 +3685,7 @@
         "Nehemiah 8:1-8"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3728,8 +3701,7 @@
         "Psalm 95:1-2"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3743,8 +3715,7 @@
         "Ephesians 5:19"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3757,8 +3728,7 @@
         "Romans 14:5-6"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3773,8 +3743,7 @@
         "Psalm 100:1-2"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3794,8 +3763,7 @@
       "confessional_anchors": [
         "Didache 2.2"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3811,8 +3779,7 @@
         "Daniel 6"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3827,8 +3794,7 @@
         "Deuteronomy 32:39"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3844,8 +3810,7 @@
         "Colossians 3:9-10"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3860,8 +3825,7 @@
         "Luke 22:36-38"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3875,8 +3839,7 @@
         "Romans 14:1-12"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3892,8 +3855,7 @@
         "1 Corinthians 6:19-20"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3910,8 +3872,7 @@
         "Romans 14:21"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -3926,8 +3887,7 @@
         "Numbers 35:30-31"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3942,8 +3902,7 @@
         "Ephesians 4:28"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3959,8 +3918,7 @@
         "Psalm 139:13-16"
       ],
       "confessional_anchors": [],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3978,8 +3936,7 @@
       "confessional_anchors": [
         "Westminster Confession 24"
       ],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -3996,8 +3953,7 @@
         "Genesis 19"
       ],
       "confessional_anchors": [],
-      "tier": "essential",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4015,8 +3971,7 @@
       "confessional_anchors": [
         "Westminster Confession 24.5-6"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4032,8 +3987,7 @@
         "Psalm 101:3"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4049,8 +4003,7 @@
         "Ephesians 5:3"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4065,8 +4018,7 @@
         "1 Corinthians 7:32-35"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4080,8 +4032,7 @@
         "Genesis 1:27"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4095,8 +4046,7 @@
         "Psalm 127:3-5"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4110,16 +4060,15 @@
         "1 Peter 3:3-4"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
-      "id": "prc-complementarianism",
+      "id": "prc-equality-of-worth-with-role-distinction",
       "category": "Family & Discipleship",
       "subcategory": "Gender Roles",
       "kind": "doctrine",
-      "statement": "Complementarianism: men and women are equal in worth and dignity, with distinct, complementary roles; the offices of elder/overseer and the function of authoritative church teaching are reserved for qualified men, husbands have headship and wives respond with willing submission in mutual love and Christ-likeness. Egalitarianism (that all church offices and authoritative-teaching functions are open to women and that no role distinction obtains in marriage) is not the position of this baseline.",
+      "statement": "Men and women are equal in worth and dignity before God, with distinct, complementary roles in the household and the gathered church.",
       "scripture_anchors": [
         "1 Timothy 2:11-14",
         "1 Timothy 3:1-7",
@@ -4131,8 +4080,27 @@
       "confessional_anchors": [
         "Danvers Statement"
       ],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-husband-headship",
+      "category": "Family & Discipleship",
+      "subcategory": "Gender Roles",
+      "kind": "doctrine",
+      "statement": "Within marriage, the husband has loving headship and the wife responds with willing submission, both in mutual love and Christ-likeness.",
+      "scripture_anchors": [
+        "1 Timothy 2:11-14",
+        "1 Timothy 3:1-7",
+        "Titus 1:5-9",
+        "Ephesians 5:22-33",
+        "1 Corinthians 11:3",
+        "1 Peter 3:1-7"
+      ],
+      "confessional_anchors": [
+        "Danvers Statement"
+      ],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -4147,8 +4115,7 @@
         "Psalm 78:5-7"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": true
     },
     {
@@ -4165,8 +4132,7 @@
         "Ephesians 6:4"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4180,8 +4146,7 @@
         "Acts 6:1-6"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4197,8 +4162,7 @@
         "Acts 4:32-35"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -4214,16 +4178,15 @@
         "Galatians 6:6"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
-      "id": "prc-social-justice-as-gospel",
+      "id": "prc-biblical-justice-as-duty",
       "category": "Engagement with World",
       "subcategory": "Social Concern",
       "kind": "doctrine",
-      "statement": "Biblical justice (care for the poor, the orphan, the widow, the oppressed) is a Christian duty; but ideological 'social justice' that supplants the gospel of forgiveness in Christ with group-based justice is a different gospel.",
+      "statement": "Care for the poor, the orphan, the widow, and the oppressed is a Christian duty.",
       "scripture_anchors": [
         "Micah 6:8",
         "James 1:27",
@@ -4231,8 +4194,23 @@
         "Isaiah 1:17"
       ],
       "confessional_anchors": [],
-      "tier": "convictional",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-different-gospel-warning-against-replacement-justice",
+      "category": "Engagement with World",
+      "subcategory": "Social Concern",
+      "kind": "doctrine",
+      "statement": "A teaching that replaces the gospel of forgiveness in Christ with a primarily group-based or this-worldly justice scheme falls under Galatians 1:6-9.",
+      "scripture_anchors": [
+        "Micah 6:8",
+        "James 1:27",
+        "Galatians 1:6-9",
+        "Isaiah 1:17"
+      ],
+      "confessional_anchors": [],
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4248,8 +4226,7 @@
         "Galatians 3:28"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4265,8 +4242,7 @@
         "Matthew 5:10-12"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4281,8 +4257,7 @@
         "Psalm 24:1"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4297,8 +4272,7 @@
         "Romans 13:1-7"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4312,8 +4286,7 @@
         "Ephesians 6:4"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4329,8 +4302,7 @@
         "John 20:19"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4346,8 +4318,7 @@
         "Hebrews 4:9-10"
       ],
       "confessional_anchors": [],
-      "tier": "important",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4361,8 +4332,7 @@
         "Colossians 2:16-17"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -4377,8 +4347,7 @@
         "1 Corinthians 10:31"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4392,8 +4361,7 @@
         "Colossians 2:16-17"
       ],
       "confessional_anchors": [],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     },
     {
@@ -4411,8 +4379,7 @@
       "confessional_anchors": [
         "historic Christian consensus"
       ],
-      "tier": "convictional",
-      "historical_consensus": "heterodox",
+      "historical_consensus": "outside_historic_christianity",
       "brethren_distinctive": false
     },
     {
@@ -4430,8 +4397,7 @@
       "confessional_anchors": [
         "Brethren tradition (priesthood of all believers)"
       ],
-      "tier": "convictional",
-      "historical_consensus": "orthodox",
+      "historical_consensus": "unanimous_lineages",
       "brethren_distinctive": false
     },
     {
@@ -4449,8 +4415,7 @@
       "confessional_anchors": [
         "Brethren tradition (varies by assembly)"
       ],
-      "tier": "preference",
-      "historical_consensus": "divided",
+      "historical_consensus": "divided_lineages",
       "brethren_distinctive": true
     }
   ]
