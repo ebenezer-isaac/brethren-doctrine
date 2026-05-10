@@ -6,7 +6,7 @@ Per docs/TIER_2_SPEC.md §5 Stages 1-2. One Qdrant Query-API call:
   - server-side RRF fusion -> top K (default 60)
 
 Per-source weights from Routing are not natively supported by Qdrant's
-Fusion.RRF, so we emulate them by adjusting per-prefetch limits — boosting
+Fusion.RRF, so we emulate them by adjusting per-prefetch limits, boosting
 the side the router favors. Equivalent to weighted RRF at this scale per
 hybrid_search_rerank_2026.md §1.
 """

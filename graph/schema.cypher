@@ -1,4 +1,4 @@
-// brethren-doctrine — Tier 2 Neo4j schema
+// brethren-doctrine Tier 2 Neo4j schema
 // Per docs/TIER_2_SPEC.md §3.3
 // Idempotent: every statement is IF NOT EXISTS.
 
@@ -42,7 +42,7 @@ CREATE CONSTRAINT source_uri_uq IF NOT EXISTS
   FOR (s:Source) REQUIRE s.uri IS UNIQUE;
 
 // ============================================================================
-// Vector indexes (1024 dim, COSINE — voyage-context-3)
+// Vector indexes (1024 dim, COSINE, voyage-context-3)
 // ============================================================================
 CREATE VECTOR INDEX verse_embed IF NOT EXISTS
   FOR (v:Verse) ON v.embedding

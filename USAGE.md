@@ -1,4 +1,4 @@
-# USAGE — Querying the brethren-doctrine corpus
+# USAGE: Querying the brethren-doctrine corpus
 
 This guide is for any Claude session opening the project in VSCode (or any other tool with file access). It tells you what's where, what queries work today, and what's planned but not yet built.
 
@@ -8,23 +8,23 @@ For the full project picture, read [docs/PROJECT.md](docs/PROJECT.md) first.
 
 ## Tier 1 (available now)
 
-The static corpus is queryable using only Read + Grep — no external services, no embeddings, no graph DB. This is the baseline working today.
+The static corpus is queryable using only Read + Grep. No external services, no embeddings, no graph DB. This is the baseline working today.
 
 ### What's in `parsed/`
 
 15 structured JSON files, one per source document. Each follows the schema in `.claude/skills/ingest-sermons/SKILL.md` Step 4.
 
 Per-document fields you'll use most:
-- `doc_slug` — anchor identifier
+- `doc_slug`: anchor identifier
 - `session_metadata.title`, `session_metadata.session_topic`, `session_metadata.topic_clusters`
-- `theological_themes` — top-level themes for the document
-- `scripture_refs` — every scripture reference, OSIS-normalized
-- `chunks[]` — semantic chunks with `content`, `themes`, `claims`, `scripture_refs`, optional `perspectives_within_chunk`
-- `confidence` — extraction confidence per dimension
+- `theological_themes`: top-level themes for the document
+- `scripture_refs`: every scripture reference, OSIS-normalized
+- `chunks[]`: semantic chunks with `content`, `themes`, `claims`, `scripture_refs`, optional `perspectives_within_chunk`
+- `confidence`: extraction confidence per dimension
 
 Two aggregate files at the root of `parsed/`:
-- `_index.json` — corpus-wide aggregate (themes, scripture coverage, per-doc summaries)
-- `_perspectives.json` — cross-document perspective sets (where different docs address the same theme with distinct claims)
+- `_index.json`: corpus-wide aggregate (themes, scripture coverage, per-doc summaries)
+- `_perspectives.json`: cross-document perspective sets (where different docs address the same theme with distinct claims)
 
 ### Common query patterns
 
@@ -43,7 +43,7 @@ Two aggregate files at the root of `parsed/`:
 
 **"Where do documents disagree or present multiple angles?"**
 - Read `parsed/_perspectives.json` → `perspective_sets[]`.
-- Each set has `shared_theme`, `perspectives[]` (each anchored to `source_doc` + `chunk_id`), and a `relationship` tag.
+- Each set has `shared_theme`, `perspectives[]` (each anchored to `source_doc` plus `chunk_id`), and a `relationship` tag.
 - For deeper context, follow the `chunk_id` back to its document JSON.
 
 **"Find every claim about [doctrine]"**
@@ -51,7 +51,7 @@ Two aggregate files at the root of `parsed/`:
 - Filter by theme overlap or keyword match.
 
 **"What's the doctrinal position on [topic]?"**
-- Look at any `sof_*.json` (Statement of Faith documents) first — they state positions canonically.
+- Look at any `sof_*.json` (Statement of Faith documents) first; they state positions canonically.
 - Then expand to teaching documents (`baptism_and_communion`, `salvation_soteriology`, etc.) for the supporting reasoning.
 
 ### Example: jq one-liners
@@ -77,7 +77,7 @@ Every parsed chunk is `authority_level: 4` (exegetical application). When you ci
 
 ---
 
-## Tier 2 (planned — see `docs/TIER_2_SPEC.md`)
+## Tier 2 (planned, see `docs/TIER_2_SPEC.md`)
 
 Tier 2 adds:
 - Semantic search ("find chunks about anxiety even if the word isn't used").
@@ -93,9 +93,9 @@ When Tier 2 lands, you'll switch most queries from Read+Grep to MCP tool calls. 
 ## What you should NOT do (in any tier)
 
 - **Never write personal contributor names into outputs.** See [docs/ANONYMIZATION.md](docs/ANONYMIZATION.md). External published authors are fine; teachers whose lessons populate this corpus are not.
-- **Never override authority levels** — a teaching claim doesn't trump an interlinear reading. See [docs/AUTHORITY_HIERARCHY.md](docs/AUTHORITY_HIERARCHY.md).
-- **Never modify `source-docs/`** — those files are read-only inputs.
-- **Don't reinvent ingestion** — re-run the `ingest-sermons` skill if new docs land in `source-docs/`. It's resumable (skips files whose JSON is already current).
+- **Never override authority levels.** A teaching claim doesn't trump an interlinear reading. See [docs/AUTHORITY_HIERARCHY.md](docs/AUTHORITY_HIERARCHY.md).
+- **Never modify `source-docs/`.** Those files are read-only inputs.
+- **Don't reinvent ingestion.** Re-run the `ingest-sermons` skill if new docs land in `source-docs/`. It's resumable (skips files whose JSON is already current).
 
 ---
 
@@ -104,7 +104,7 @@ When Tier 2 lands, you'll switch most queries from Read+Grep to MCP tool calls. 
 If new files land in `source-docs/`, invoke the `ingest-sermons` skill (or just say "ingest the sermons" / "process source-docs"). It will:
 1. Inventory new/changed files.
 2. Pre-convert DOCX (pandoc) and PPTX (python-pptx).
-3. Dispatch parallel Opus subagents — one per file.
+3. Dispatch parallel Opus subagents, one per file.
 4. Rebuild `parsed/_index.json` and `parsed/_perspectives.json`.
 
 Existing parsed files are not re-processed unless their source `mtime` has changed.

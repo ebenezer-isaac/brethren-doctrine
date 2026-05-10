@@ -3,12 +3,12 @@
 .env.local
 .env.*.local
 
-# Private source materials — contain personal contributor names; never commit
+# Private source materials. Contain personal contributor names; never commit.
 source-docs/
 converted/
 .tmp-beliefs/
 
-# Private data — external corpora, cached translations, indexed working sets
+# Private data. External corpora, cached translations, indexed working sets.
 data/
 chunks/
 embeddings/cache/

@@ -1,4 +1,4 @@
-"""Pydantic GraphRecord types — every record carries authority_level explicitly.
+"""Pydantic GraphRecord types. Every record carries authority_level explicitly.
 
 Per docs/TIER_2_SPEC.md §4.f, authority is stamped at the adapter boundary.
 No defaults, no inference downstream. Records are the wire format between
@@ -24,7 +24,7 @@ ChunkType = Literal[
 
 
 class ChunkRecord(_Strict):
-    """A SermonChunk or SOFChunk row — covers both because the parsed shape is identical."""
+    """A SermonChunk or SOFChunk row. Covers both because the parsed shape is identical."""
 
     chunk_id: str
     source_doc: str

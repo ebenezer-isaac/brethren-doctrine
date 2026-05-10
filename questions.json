@@ -1,0 +1,4467 @@
+{
+  "$schema_version": "2.0",
+  "tradition_baseline": "Plymouth Brethren-adjacent: classical Reformed Protestant orthodoxy plus Brethren distinctives",
+  "location_context": "evaluating churches across denominations",
+  "generated_at": "2026-05-10",
+  "description": "Universal question bank: statement, anchors, tier, consensus, brethren-distinctive flag. Combines with the answer file (baseline.json or responses/<id>.json or consolidated.json) to render the personal beliefs PDF; stands alone to render the blank questionnaire.",
+  "tier_definitions": {
+    "essential": "Core gospel and Trinitarian boundaries. Denial = false gospel or cult-grade error. Always teach to children, always correct, never become member where denied.",
+    "convictional": "Clear scriptural conviction. Membership-level threshold. Would not compromise on doctrine, but visit/participate is usually fine where denied.",
+    "important": "Matters significantly but does not break fellowship. Reservations about membership, but not absolute. Marry across is usually fine.",
+    "preference": "Methodological or practical. Membership across is fine. Worship style, communion frequency, calendar customs.",
+    "adiaphora": "Truly indifferent. Freedom of conscience. All thresholds permissive."
+  },
+  "category_index": [
+    "Bibliology",
+    "Theology Proper",
+    "Christology",
+    "Pneumatology",
+    "Anthropology",
+    "Hamartiology",
+    "Soteriology",
+    "Ecclesiology",
+    "Sacraments",
+    "Leadership & Polity",
+    "Church Discipline",
+    "Worship Structure",
+    "Inter-church Relations",
+    "Eschatology",
+    "Angelology",
+    "Demonology",
+    "Cult Marker",
+    "Heterodoxy Marker",
+    "Spiritual Gifts",
+    "Worship Style",
+    "Christian Ethics",
+    "Marriage & Sexuality",
+    "Family & Discipleship",
+    "Money & Stewardship",
+    "Engagement with World",
+    "Calendar & Customs"
+  ],
+  "field_definitions": {
+    "id": "Stable kebab-case slug. Prefix doc- for doctrine, prc- for practice, cult- for cult marker, het- for heterodoxy marker.",
+    "category": "High-level theological category. See category_index.",
+    "subcategory": "Optional finer grouping; null if not applicable.",
+    "kind": "doctrine = belief; practice = practical/applied position.",
+    "statement": "One-sentence affirmation of the position (phrased as the orthodox/affirming claim so denial is clear).",
+    "scripture_anchors": "Primary biblical passages supporting the position.",
+    "confessional_anchors": "Creeds/confessions affirming this (Nicene, Chalcedon, Westminster, 1689 Baptist, etc.).",
+    "tier": "essential = core gospel/Trinitarian boundary | convictional = clear scripture, would not compromise, church-membership level | important = matters but will not break fellowship | preference = methodological/practical | adiaphora = indifferent, freedom of conscience.",
+    "historical_consensus": "orthodox = Nicene/Chalcedonian + Magisterial Reformation consensus | divided = legitimate Protestant disagreement | minority = real but smaller stream | heterodox = outside historic consensus, not formally cult | heretical = formally condemned in early creeds.",
+    "brethren_distinctive": "true if this position is distinctive to the Brethren tradition (vs. broadly held by orthodox Christianity)."
+  },
+  "stats": {
+    "total": 222,
+    "by_tier": {
+      "essential": 56,
+      "convictional": 79,
+      "important": 50,
+      "preference": 36,
+      "adiaphora": 1
+    },
+    "by_category": {
+      "Bibliology": 8,
+      "Theology Proper": 14,
+      "Christology": 13,
+      "Pneumatology": 10,
+      "Anthropology": 5,
+      "Hamartiology": 9,
+      "Soteriology": 28,
+      "Ecclesiology": 8,
+      "Sacraments": 13,
+      "Leadership & Polity": 13,
+      "Church Discipline": 4,
+      "Worship Structure": 5,
+      "Inter-church Relations": 4,
+      "Eschatology": 18,
+      "Angelology": 3,
+      "Demonology": 4,
+      "Cult Marker": 4,
+      "Heterodoxy Marker": 5,
+      "Spiritual Gifts": 10,
+      "Worship Style": 7,
+      "Christian Ethics": 10,
+      "Marriage & Sexuality": 10,
+      "Family & Discipleship": 3,
+      "Money & Stewardship": 3,
+      "Engagement with World": 6,
+      "Calendar & Customs": 5
+    },
+    "by_historical_consensus": {
+      "orthodox": 122,
+      "divided": 75,
+      "heretical": 7,
+      "heterodox": 9,
+      "minority": 9
+    },
+    "brethren_distinctives": 43
+  },
+  "questions": [
+    {
+      "id": "doc-ongoing-revelation-binding",
+      "category": "Bibliology",
+      "subcategory": "Revelation",
+      "kind": "doctrine",
+      "statement": "No revelation given after the apostolic age binds the conscience or stands on par with Scripture; the 66-book canon is closed and sufficient. Additions (Book of Mormon / D&C / Pearl of Great Price; Ellen G. White's writings; Mo Letters; Branham's tape ministry; Watch Tower publications; Iglesia ni Cristo's Manalo; Unification 'Divine Principle') are cult-grade error.",
+      "scripture_anchors": [
+        "Hebrews 1:1-2",
+        "Ephesians 2:20",
+        "Jude 1:3",
+        "Revelation 22:18-19",
+        "Galatians 1:8-9",
+        "2 Timothy 3:16-17"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.1",
+        "1689 Baptist Confession 1.1",
+        "Belgic Confession 7"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-scripture-final-authority",
+      "category": "Bibliology",
+      "subcategory": "Authority",
+      "kind": "doctrine",
+      "statement": "Scripture is the final and supreme authority for the Church, above all tradition, councils, and personal experience.",
+      "scripture_anchors": [
+        "Isaiah 8:20",
+        "Mark 7:8-13",
+        "Acts 17:11",
+        "2 Timothy 3:16-17"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.10",
+        "1689 Baptist Confession 1.10"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-scripture-inerrancy",
+      "category": "Bibliology",
+      "subcategory": "Inerrancy",
+      "kind": "doctrine",
+      "statement": "Scripture in the original autographs is without error in all that it affirms (history, science, doctrine), and the errantist view that Scripture contains real errors is to be rejected.",
+      "scripture_anchors": [
+        "John 17:17",
+        "John 10:35",
+        "Psalm 19:7",
+        "Psalm 119:160",
+        "Proverbs 30:5",
+        "Matthew 22:29-32",
+        "Titus 1:2"
+      ],
+      "confessional_anchors": [
+        "Chicago Statement on Biblical Inerrancy",
+        "Westminster Confession 1.4-1.5"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-scripture-infallibility",
+      "category": "Bibliology",
+      "subcategory": "Infallibility",
+      "kind": "doctrine",
+      "statement": "Scripture cannot fail to accomplish what God intends and is incapable of misleading in matters of faith and practice.",
+      "scripture_anchors": [
+        "Isaiah 55:11",
+        "Matthew 5:18",
+        "Luke 16:17"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.5",
+        "1689 Baptist Confession 1.5"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-scripture-inspiration-verbal-plenary",
+      "category": "Bibliology",
+      "subcategory": "Inspiration",
+      "kind": "doctrine",
+      "statement": "All Scripture is verbally and plenarily inspired by God, such that the very words of the original autographs are God-breathed.",
+      "scripture_anchors": [
+        "2 Timothy 3:16-17",
+        "2 Peter 1:20-21",
+        "Matthew 5:18",
+        "John 10:35"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.2",
+        "1689 Baptist Confession 1.2",
+        "Chicago Statement on Biblical Inerrancy"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-scripture-sufficiency",
+      "category": "Bibliology",
+      "subcategory": "Sufficiency",
+      "kind": "doctrine",
+      "statement": "Scripture is sufficient for faith, doctrine, and practice; no further revelation is needed for salvation or godliness.",
+      "scripture_anchors": [
+        "2 Timothy 3:16-17",
+        "2 Peter 1:3",
+        "Deuteronomy 4:2",
+        "Revelation 22:18-19"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.6",
+        "1689 Baptist Confession 1.6"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-canon-66-books",
+      "category": "Bibliology",
+      "subcategory": "Canon",
+      "kind": "doctrine",
+      "statement": "The biblical canon comprises the 39 Old Testament and 27 New Testament books recognized by the Protestant tradition; the Apocryphal/Deuterocanonical books are not Scripture and not authoritative for doctrine, though they may have historical or edifying value.",
+      "scripture_anchors": [
+        "Luke 24:44",
+        "Luke 11:51",
+        "Romans 3:2",
+        "2 Peter 3:15-16"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.2-1.3",
+        "39 Articles 6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-scripture-perspicuity",
+      "category": "Bibliology",
+      "subcategory": "Perspicuity",
+      "kind": "doctrine",
+      "statement": "Scripture is sufficiently clear in matters necessary for salvation that any literate believer with the Spirit's help can grasp them.",
+      "scripture_anchors": [
+        "Deuteronomy 6:6-7",
+        "Psalm 119:105",
+        "Psalm 119:130",
+        "2 Timothy 3:15"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.7"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-divine-holiness",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is utterly holy: set apart in moral purity and majestic transcendence.",
+      "scripture_anchors": [
+        "Isaiah 6:3",
+        "Leviticus 11:44",
+        "1 Peter 1:15-16",
+        "Revelation 4:8"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.1"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-love",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is love in His very essence, eternally loving within the Trinity and toward His creatures.",
+      "scripture_anchors": [
+        "1 John 4:8",
+        "1 John 4:16",
+        "John 3:16",
+        "Romans 5:8"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.1"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-omnipotence",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is all-powerful, able to do all that He wills, limited only by His own nature.",
+      "scripture_anchors": [
+        "Genesis 17:1",
+        "Job 42:2",
+        "Jeremiah 32:17",
+        "Luke 1:37"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Westminster Confession 2.1"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-omniscience",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God knows all things (actual and possible, past, present, and future) exhaustively and eternally, including all future free human actions; therefore Open Theism (the view that God does not exhaustively foreknow future free actions) is to be rejected as heterodox.",
+      "scripture_anchors": [
+        "Psalm 139:1-6",
+        "Isaiah 46:9-10",
+        "Isaiah 44:28-45:1",
+        "1 John 3:20",
+        "Hebrews 4:13",
+        "Matthew 26:34",
+        "Acts 2:23",
+        "Ephesians 1:11",
+        "Romans 8:29-30"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.2",
+        "1689 Baptist Confession 2.2",
+        "ETS statement"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-sovereignty",
+      "category": "Theology Proper",
+      "subcategory": "Sovereignty",
+      "kind": "doctrine",
+      "statement": "God sovereignly rules over all things, working all events according to the counsel of His will.",
+      "scripture_anchors": [
+        "Ephesians 1:11",
+        "Daniel 4:34-35",
+        "Psalm 115:3",
+        "Romans 11:36"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 3.1",
+        "Belgic Confession 13"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-god-existence",
+      "category": "Theology Proper",
+      "subcategory": "Existence",
+      "kind": "doctrine",
+      "statement": "The one true and living God exists eternally as the self-existent creator and sustainer of all things.",
+      "scripture_anchors": [
+        "Genesis 1:1",
+        "Deuteronomy 6:4",
+        "Romans 1:19-20",
+        "Hebrews 11:6"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed",
+        "Westminster Confession 2.1"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-modalism-denial",
+      "category": "Theology Proper",
+      "subcategory": "Trinity",
+      "kind": "doctrine",
+      "statement": "The Father, Son, and Holy Spirit are three distinct, coeternal Persons sharing one divine essence. Modalism / Sabellianism (one Person operating in three modes or roles) is rejected as heretical and cult-grade.",
+      "scripture_anchors": [
+        "Matthew 3:16-17",
+        "John 17:1-5",
+        "John 14:16",
+        "Matthew 28:19",
+        "John 1:1-2"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Athanasian Creed",
+        "condemnation of Sabellius (3rd century)"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-trinity",
+      "category": "Theology Proper",
+      "subcategory": "Trinity",
+      "kind": "doctrine",
+      "statement": "There is one God eternally existing in three coequal, coeternal, distinct Persons: Father, Son, and Holy Spirit. Denial of the Trinity (whether Arian, Unitarian, modalist, or by movements such as Jehovah's Witnesses, Iglesia ni Cristo, The Way International, Christadelphians, Unitarian Universalism) is cult-grade error.",
+      "scripture_anchors": [
+        "Matthew 28:19",
+        "2 Corinthians 13:14",
+        "John 1:1",
+        "Acts 5:3-4",
+        "John 14:16-17",
+        "Genesis 1:26"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed (381)",
+        "Athanasian Creed",
+        "Chalcedonian Definition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-tritheism-denial",
+      "category": "Theology Proper",
+      "subcategory": "Trinity",
+      "kind": "doctrine",
+      "statement": "Tritheism (the view that the three persons are three separate gods) is to be rejected as heretical.",
+      "scripture_anchors": [
+        "Deuteronomy 6:4",
+        "Isaiah 45:5",
+        "1 Corinthians 8:6"
+      ],
+      "confessional_anchors": [
+        "Athanasian Creed",
+        "Nicene Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-aseity",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is self-existent, deriving His being from nothing outside Himself.",
+      "scripture_anchors": [
+        "Exodus 3:14",
+        "John 5:26",
+        "Acts 17:25"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.2",
+        "Belgic Confession 1"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-immutability",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is unchanging in His being, perfections, purposes, and promises.",
+      "scripture_anchors": [
+        "Malachi 3:6",
+        "Numbers 23:19",
+        "James 1:17",
+        "Hebrews 13:8"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.1",
+        "1689 Baptist Confession 2.1"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-omnipresence",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is fully present everywhere, not bounded by space, while remaining distinct from creation.",
+      "scripture_anchors": [
+        "Psalm 139:7-10",
+        "Jeremiah 23:23-24",
+        "Acts 17:27-28"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.1",
+        "Belgic Confession 1"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-decrees",
+      "category": "Theology Proper",
+      "subcategory": "Decrees",
+      "kind": "doctrine",
+      "statement": "God eternally decrees whatsoever comes to pass, in a way consistent with creaturely responsibility.",
+      "scripture_anchors": [
+        "Acts 2:23",
+        "Acts 4:27-28",
+        "Ephesians 1:11",
+        "Isaiah 14:24"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 3.1-3.2"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-divine-simplicity",
+      "category": "Theology Proper",
+      "subcategory": "Attributes",
+      "kind": "doctrine",
+      "statement": "God is not composed of parts; His attributes are identical with His essence.",
+      "scripture_anchors": [
+        "Deuteronomy 6:4",
+        "John 4:24",
+        "1 John 1:5",
+        "1 John 4:8"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 2.1",
+        "Belgic Confession 1"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-bodily-ascension",
+      "category": "Christology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "Christ ascended bodily into heaven forty days after His resurrection.",
+      "scripture_anchors": [
+        "Luke 24:50-51",
+        "Acts 1:9-11",
+        "Ephesians 4:8-10",
+        "1 Timothy 3:16"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-bodily-resurrection-of-christ",
+      "category": "Christology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "Jesus Christ rose bodily from the dead in the same physical body that was crucified, now glorified. Denial (as in Jehovah's Witnesses, Christian Science, and various liberal/progressive groups holding only a 'spiritual' resurrection) is cult-grade or heterodox depending on system.",
+      "scripture_anchors": [
+        "Luke 24:39-43",
+        "John 20:27",
+        "1 Corinthians 15:3-8",
+        "John 2:19-21",
+        "Acts 2:31"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-full-deity",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Jesus Christ is fully and uniquely God, eternally begotten and not created, equal in essence with the Father. Arian, Unitarian, JW (Christ as Michael / 'a god'), Christadelphian, Iglesia ni Cristo, and Way International denials are cult-grade error.",
+      "scripture_anchors": [
+        "John 1:1",
+        "John 8:58",
+        "John 20:28",
+        "Colossians 2:9",
+        "Hebrews 1:8",
+        "Philippians 2:6"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed (325/381)",
+        "Athanasian Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-full-humanity",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Jesus Christ is fully and truly human, taking on a complete human nature including body and rational soul.",
+      "scripture_anchors": [
+        "John 1:14",
+        "Hebrews 2:14-17",
+        "Hebrews 4:15",
+        "1 John 4:2-3"
+      ],
+      "confessional_anchors": [
+        "Chalcedonian Definition",
+        "Nicene Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-sinlessness",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Jesus Christ was without sin in His thoughts, words, and deeds throughout His earthly life.",
+      "scripture_anchors": [
+        "Hebrews 4:15",
+        "2 Corinthians 5:21",
+        "1 Peter 2:22",
+        "1 John 3:5"
+      ],
+      "confessional_anchors": [
+        "Chalcedonian Definition",
+        "Westminster Confession 8.2"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-sole-mediator",
+      "category": "Christology",
+      "subcategory": "Mediation",
+      "kind": "doctrine",
+      "statement": "Christ is the sole mediator between God and humanity; no saint, angel, or Mary mediates access to God.",
+      "scripture_anchors": [
+        "1 Timothy 2:5",
+        "Hebrews 7:25",
+        "Hebrews 9:15",
+        "John 14:6"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 8.1",
+        "39 Articles 22"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-eternal-sonship",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "The Son is eternally the Son (co-eternal and co-equal with the Father), not adopted or begun in time.",
+      "scripture_anchors": [
+        "John 1:1-2",
+        "John 17:5",
+        "Colossians 1:15-17",
+        "Hebrews 1:8"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Athanasian Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-hypostatic-union",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Christ is one person in two natures (fully divine and fully human), without confusion, change, division, or separation.",
+      "scripture_anchors": [
+        "John 1:14",
+        "Philippians 2:6-8",
+        "Colossians 2:9",
+        "1 Timothy 2:5"
+      ],
+      "confessional_anchors": [
+        "Chalcedonian Definition",
+        "Athanasian Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-vicarious-atonement",
+      "category": "Christology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "Christ died as a substitute, bearing the penalty for the sins of His people in their place.",
+      "scripture_anchors": [
+        "Isaiah 53:4-6",
+        "Romans 3:25",
+        "2 Corinthians 5:21",
+        "1 Peter 2:24",
+        "1 John 2:2"
+      ],
+      "confessional_anchors": [
+        "Heidelberg Catechism Q37-39",
+        "Westminster Confession 8.5",
+        "1689 Baptist Confession 8.5"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-virgin-birth",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Jesus Christ was conceived by the Holy Spirit and born of the virgin Mary.",
+      "scripture_anchors": [
+        "Matthew 1:18-25",
+        "Luke 1:26-35",
+        "Isaiah 7:14"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-session-exaltation",
+      "category": "Christology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "The risen Christ is exalted at the right hand of the Father, reigning and interceding for His people.",
+      "scripture_anchors": [
+        "Hebrews 1:3",
+        "Hebrews 7:25",
+        "Romans 8:34",
+        "Ephesians 1:20-22"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Westminster Confession 8.4"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-kenoticism-denial",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Kenoticism (the view that Christ surrendered or gave up divine attributes in the incarnation) is to be rejected.",
+      "scripture_anchors": [
+        "Philippians 2:6-7",
+        "Colossians 2:9",
+        "John 1:14",
+        "Hebrews 1:3"
+      ],
+      "confessional_anchors": [
+        "Chalcedonian Definition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-christ-two-wills",
+      "category": "Christology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "Christ possesses two wills (divine and human) corresponding to His two natures, working in harmony.",
+      "scripture_anchors": [
+        "Luke 22:42",
+        "John 6:38",
+        "Matthew 26:39"
+      ],
+      "confessional_anchors": [
+        "Third Council of Constantinople (681)"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-full-deity",
+      "category": "Pneumatology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit is fully and truly God, co-equal and co-eternal with the Father and the Son.",
+      "scripture_anchors": [
+        "Acts 5:3-4",
+        "1 Corinthians 3:16",
+        "Matthew 28:19",
+        "2 Corinthians 13:14"
+      ],
+      "confessional_anchors": [
+        "Nicene-Constantinopolitan Creed",
+        "Athanasian Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-indwelling",
+      "category": "Pneumatology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit indwells every true believer permanently from the moment of regeneration.",
+      "scripture_anchors": [
+        "Romans 8:9-11",
+        "John 14:16-17",
+        "1 Corinthians 6:19",
+        "Ephesians 1:13-14"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 13.1",
+        "1689 Baptist Confession 13.1"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-personhood",
+      "category": "Pneumatology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit is a personal being (possessing intellect, will, and emotion), not an impersonal force or energy.",
+      "scripture_anchors": [
+        "John 14:26",
+        "John 16:13-14",
+        "Acts 13:2",
+        "Romans 8:26-27",
+        "Ephesians 4:30"
+      ],
+      "confessional_anchors": [
+        "Nicene-Constantinopolitan Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-regeneration",
+      "category": "Pneumatology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit is the agent of regeneration, granting new birth to those dead in sin.",
+      "scripture_anchors": [
+        "John 3:5-8",
+        "Titus 3:5",
+        "Ezekiel 36:26-27",
+        "John 6:63"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10.1-10.2",
+        "1689 Baptist Confession 10"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-blasphemy-of-spirit",
+      "category": "Pneumatology",
+      "subcategory": "Sin",
+      "kind": "doctrine",
+      "statement": "Blasphemy against the Holy Spirit (final, hardened rejection of His witness to Christ) is unforgivable.",
+      "scripture_anchors": [
+        "Mark 3:28-30",
+        "Matthew 12:31-32",
+        "Hebrews 6:4-6",
+        "1 John 5:16"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 17.3"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-baptism-at-conversion",
+      "category": "Pneumatology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "Spirit baptism (being baptized into the body of Christ by the Spirit) occurs at conversion for every believer, not as a subsequent second blessing.",
+      "scripture_anchors": [
+        "1 Corinthians 12:13",
+        "Ephesians 4:5",
+        "Romans 6:3-4",
+        "Galatians 3:27"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 13.1"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-spirit-illumination",
+      "category": "Pneumatology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit illumines Scripture to believers, enabling spiritual understanding of God's word.",
+      "scripture_anchors": [
+        "1 Corinthians 2:10-14",
+        "1 John 2:27",
+        "Ephesians 1:17-18",
+        "John 16:13"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-sealing",
+      "category": "Pneumatology",
+      "subcategory": "Work",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit seals every believer as God's possession, guaranteeing their final inheritance.",
+      "scripture_anchors": [
+        "Ephesians 1:13-14",
+        "Ephesians 4:30",
+        "2 Corinthians 1:21-22"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 18.2"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-procession-from-father",
+      "category": "Pneumatology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit eternally proceeds from the Father (Nicene-Constantinopolitan confession of 381).",
+      "scripture_anchors": [
+        "John 15:26",
+        "John 14:26"
+      ],
+      "confessional_anchors": [
+        "Nicene-Constantinopolitan Creed (381)"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-spirit-filioque",
+      "category": "Pneumatology",
+      "subcategory": "Person",
+      "kind": "doctrine",
+      "statement": "The Holy Spirit also eternally proceeds from the Son (filioque, per the Western tradition).",
+      "scripture_anchors": [
+        "John 15:26",
+        "John 16:7",
+        "Galatians 4:6"
+      ],
+      "confessional_anchors": [
+        "Western tradition; Athanasian Creed",
+        "Council of Toledo 589"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-adam-historical",
+      "category": "Anthropology",
+      "subcategory": "Historicity",
+      "kind": "doctrine",
+      "statement": "Adam and Eve were real historical persons, the first human pair, from whom all humanity descends.",
+      "scripture_anchors": [
+        "Genesis 1-3",
+        "Romans 5:12-21",
+        "1 Corinthians 15:21-22",
+        "1 Corinthians 15:45",
+        "Luke 3:38",
+        "1 Timothy 2:13-14"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4.2",
+        "Belgic Confession Article 14"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-special-creation-of-humanity",
+      "category": "Anthropology",
+      "subcategory": "Historicity",
+      "kind": "doctrine",
+      "statement": "Adam and Eve were specially created by God and are not the product of unguided evolutionary processes.",
+      "scripture_anchors": [
+        "Genesis 1:26-27",
+        "Genesis 2:7",
+        "Genesis 2:21-22"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4.2"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-gender-binary",
+      "category": "Anthropology",
+      "subcategory": "Created Order",
+      "kind": "doctrine",
+      "statement": "God created humanity male and female as a fixed binary rooted in creation; biological sex and gender identity are coherent and not subject to self-determined redefinition.",
+      "scripture_anchors": [
+        "Genesis 1:27",
+        "Genesis 2:18-24",
+        "Matthew 19:4-6",
+        "Mark 10:6",
+        "Romans 1:26-27"
+      ],
+      "confessional_anchors": [
+        "Nashville Statement",
+        "Westminster Confession 24"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-image-of-god",
+      "category": "Anthropology",
+      "subcategory": "Imago Dei",
+      "kind": "doctrine",
+      "statement": "All human beings are created in the image of God (imago Dei), bearing inherent dignity, moral agency, rationality, and capacity for relationship with God, irrespective of age, ability, ethnicity, or stage of development.",
+      "scripture_anchors": [
+        "Genesis 1:26-27",
+        "Genesis 9:6",
+        "Psalm 8:4-6",
+        "James 3:9",
+        "Colossians 3:10"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4.2",
+        "Belgic Confession Article 14",
+        "Heidelberg Catechism Q6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-body-soul-constitution",
+      "category": "Anthropology",
+      "subcategory": "Constitution of Man",
+      "kind": "doctrine",
+      "statement": "Human beings are a unity of material body and immaterial soul/spirit; whether constitution is dichotomous (body+soul) or trichotomous (body+soul+spirit) is a debated but in-house question.",
+      "scripture_anchors": [
+        "Genesis 2:7",
+        "1 Thessalonians 5:23",
+        "Hebrews 4:12",
+        "Matthew 10:28",
+        "2 Corinthians 5:8"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 32.1"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-fall-historical",
+      "category": "Hamartiology",
+      "subcategory": "The Fall",
+      "kind": "doctrine",
+      "statement": "The Fall was a real historical event in which Adam, as covenant head, disobeyed God, plunging humanity and the created order into sin, death, and corruption.",
+      "scripture_anchors": [
+        "Genesis 3",
+        "Romans 5:12-19",
+        "Romans 8:20-22",
+        "1 Corinthians 15:21-22"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 6",
+        "Belgic Confession Article 14"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-inability-of-fallen-man",
+      "category": "Hamartiology",
+      "subcategory": "Spiritual Inability",
+      "kind": "doctrine",
+      "statement": "Fallen humans, apart from the Spirit's prior work, are unable to please God, repent, or believe savingly; the natural man cannot receive the things of the Spirit.",
+      "scripture_anchors": [
+        "John 6:44",
+        "John 6:65",
+        "Romans 8:7-8",
+        "1 Corinthians 2:14",
+        "Ephesians 2:1"
+      ],
+      "confessional_anchors": [
+        "Canons of Dort 3/4.3",
+        "Westminster Confession 9.3"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-inherited-corruption",
+      "category": "Hamartiology",
+      "subcategory": "Original Sin",
+      "kind": "doctrine",
+      "statement": "All human beings are born with a sinful nature inherited from Adam, sharing in his corruption, and are by nature objects of divine wrath.",
+      "scripture_anchors": [
+        "Psalm 51:5",
+        "Romans 5:12-19",
+        "Ephesians 2:1-3",
+        "Job 14:4"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 6.2",
+        "Heidelberg Catechism Q7-Q8",
+        "39 Articles Article 9"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-inherited-guilt",
+      "category": "Hamartiology",
+      "subcategory": "Original Sin",
+      "kind": "doctrine",
+      "statement": "Adam's guilt is imputed to all his natural descendants such that all are guilty in him from conception (Augustinian / Reformed framing of inherited guilt).",
+      "scripture_anchors": [
+        "Romans 5:12-19",
+        "1 Corinthians 15:22"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 6.3",
+        "Augustinian tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-sin-as-transgression",
+      "category": "Hamartiology",
+      "subcategory": "Definition of Sin",
+      "kind": "doctrine",
+      "statement": "Sin is any want of conformity to, or transgression of, the law of God (in thought, word, deed, and disposition) and is fundamentally an offense against God's holy character, not merely against neighbour.",
+      "scripture_anchors": [
+        "1 John 3:4",
+        "Romans 7:7-13",
+        "James 2:10-11",
+        "James 4:17",
+        "Psalm 51:4"
+      ],
+      "confessional_anchors": [
+        "Westminster Shorter Catechism Q14",
+        "Heidelberg Catechism Q3-Q5"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-total-depravity",
+      "category": "Hamartiology",
+      "subcategory": "Depravity",
+      "kind": "doctrine",
+      "statement": "Sin has corrupted every faculty of fallen man (mind, will, affections, body) such that no part is untouched and unaided man cannot save himself or initiate saving faith.",
+      "scripture_anchors": [
+        "Romans 3:10-18",
+        "Jeremiah 17:9",
+        "Ephesians 2:1-5",
+        "John 6:44",
+        "1 Corinthians 2:14",
+        "Romans 8:7-8"
+      ],
+      "confessional_anchors": [
+        "Canons of Dort 3/4.1-4",
+        "Westminster Confession 6.4",
+        "Heidelberg Catechism Q8"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-conscience-witness",
+      "category": "Hamartiology",
+      "subcategory": "Conscience",
+      "kind": "doctrine",
+      "statement": "Conscience is a divinely-given internal witness to God's law that, though damaged by sin, accuses or excuses moral agents and renders all without excuse before God.",
+      "scripture_anchors": [
+        "Romans 2:14-15",
+        "Romans 1:18-20",
+        "1 Timothy 1:5",
+        "1 Timothy 1:19",
+        "Hebrews 9:14"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 20.2",
+        "Westminster Confession 21.1"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-federal-headship-adam",
+      "category": "Hamartiology",
+      "subcategory": "Federal Headship",
+      "kind": "doctrine",
+      "statement": "Adam acted as the covenant/federal head of humanity, so that his sin and its consequences are imputed to all his natural descendants, paralleling Christ as federal head of the redeemed.",
+      "scripture_anchors": [
+        "Romans 5:12-19",
+        "1 Corinthians 15:21-22",
+        "1 Corinthians 15:45-49"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 6.3",
+        "Westminster Larger Catechism Q22"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-idolatry-root-sin",
+      "category": "Hamartiology",
+      "subcategory": "Root of Sin",
+      "kind": "doctrine",
+      "statement": "Idolatry (exchanging the glory of the Creator for created things) is the root of all sin; every transgression is a derivative form of misplaced worship.",
+      "scripture_anchors": [
+        "Romans 1:21-25",
+        "Exodus 20:3-6",
+        "Colossians 3:5",
+        "1 John 5:21",
+        "Ezekiel 14:3"
+      ],
+      "confessional_anchors": [
+        "Heidelberg Catechism Q94-Q95",
+        "Westminster Larger Catechism Q104-Q105"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-glorification",
+      "category": "Soteriology",
+      "subcategory": "Glorification",
+      "kind": "doctrine",
+      "statement": "At Christ's return, believers will be raised bodily, transformed, and glorified: the final consummation of salvation in resurrection bodies free from sin and decay.",
+      "scripture_anchors": [
+        "Romans 8:30",
+        "1 Corinthians 15:42-57",
+        "1 John 3:2",
+        "Philippians 3:21",
+        "Romans 8:18-23"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 32-33",
+        "Apostles' Creed"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-imputed-righteousness",
+      "category": "Soteriology",
+      "subcategory": "Justification",
+      "kind": "doctrine",
+      "statement": "In justification, the active and passive righteousness of Christ is imputed (reckoned, credited) to the believer, so that the believer stands clothed in Christ's perfect obedience before God.",
+      "scripture_anchors": [
+        "2 Corinthians 5:21",
+        "Romans 4:3-8",
+        "Romans 5:19",
+        "Philippians 3:9",
+        "Jeremiah 23:6"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 11.1-11.3",
+        "Heidelberg Catechism Q60-Q61"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-justification-forensic",
+      "category": "Soteriology",
+      "subcategory": "Justification",
+      "kind": "doctrine",
+      "statement": "Justification is a forensic, declarative act of God in which He pardons sinners and accounts them righteous in His sight, not on the basis of any inherent change, but solely on account of Christ's imputed righteousness received by faith.",
+      "scripture_anchors": [
+        "Romans 3:21-26",
+        "Romans 4:5",
+        "Romans 5:1",
+        "Romans 5:18-19",
+        "2 Corinthians 5:21",
+        "Philippians 3:9"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 11.1",
+        "Heidelberg Catechism Q60",
+        "Belgic Confession Article 22-23"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-pelagianism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Pelagianism (the teaching that humans are born morally neutral, unaffected by Adam's sin, and able to choose God and obey His law by natural ability) is a denied heresy.",
+      "scripture_anchors": [
+        "Romans 5:12-19",
+        "Ephesians 2:1-5",
+        "Psalm 51:5",
+        "Romans 3:10-12",
+        "John 6:44"
+      ],
+      "confessional_anchors": [
+        "Council of Carthage 418",
+        "Canons of Dort 3/4",
+        "Westminster Confession 6"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-penal-substitution",
+      "category": "Soteriology",
+      "subcategory": "Atonement",
+      "kind": "doctrine",
+      "statement": "The atonement is penal in nature: Christ bore the just punishment and divine wrath that sinners deserved, satisfying God's justice and propitiating His wrath.",
+      "scripture_anchors": [
+        "Romans 3:25",
+        "1 John 2:2",
+        "1 John 4:10",
+        "Hebrews 2:17",
+        "Isaiah 53:10",
+        "Galatians 3:13"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 8.4-8.5",
+        "39 Articles Article 31"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-pluralism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Religious pluralism (the view that all religions are valid paths to God) is denied; salvation is through Christ alone.",
+      "scripture_anchors": [
+        "John 14:6",
+        "Acts 4:12",
+        "1 Timothy 2:5",
+        "1 John 5:11-12"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10.4",
+        "Heidelberg Catechism Q20"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-inclusivism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Christian inclusivism (the view that people may be saved through Christ's work without conscious explicit faith in the historical Jesus, Rahner-style 'anonymous Christians') is denied; explicit faith in the historical Jesus is necessary for salvation.",
+      "scripture_anchors": [
+        "Romans 10:9-17",
+        "John 3:18",
+        "John 3:36",
+        "Acts 4:12"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10.4",
+        "Heidelberg Catechism Q20"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-prosperity-gospel-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "The gospel is the good news of forgiveness of sins through Christ's death and resurrection; God does not guarantee material wealth or physical health in this life. The prosperity / Word-Faith gospel is rejected as heterodox, with the 'little gods' doctrine approaching cult-grade.",
+      "scripture_anchors": [
+        "John 16:33",
+        "2 Corinthians 11:23-29",
+        "Philippians 4:11-13",
+        "1 Timothy 6:5-10",
+        "James 4:3"
+      ],
+      "confessional_anchors": [
+        "historic Reformed and Brethren tradition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-repentance",
+      "category": "Soteriology",
+      "subcategory": "Conversion",
+      "kind": "doctrine",
+      "statement": "Repentance (a Spirit-given change of mind toward sin and toward God, issuing in turning from sin to Christ) is integral to saving conversion, never separable from saving faith.",
+      "scripture_anchors": [
+        "Mark 1:15",
+        "Acts 2:38",
+        "Acts 17:30",
+        "Acts 20:21",
+        "2 Corinthians 7:10",
+        "Luke 13:3"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 15",
+        "Heidelberg Catechism Q88-Q90"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-sola-fide",
+      "category": "Soteriology",
+      "subcategory": "Five Solas",
+      "kind": "doctrine",
+      "statement": "Justification is by faith alone (sola fide); faith is the empty hand that receives Christ's imputed righteousness; works are the necessary fruit, never the ground, of justification, and any system in which human merit, sacraments, ritual, law-keeping, or moral effort partly or wholly grounds justification before God is a false gospel.",
+      "scripture_anchors": [
+        "Romans 3:20",
+        "Romans 3:28",
+        "Romans 4:1-8",
+        "Galatians 1:6-9",
+        "Galatians 2:16",
+        "Galatians 3:1-14",
+        "Galatians 3:11",
+        "Ephesians 2:8-9",
+        "Philippians 3:9",
+        "Titus 3:5"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 11",
+        "Heidelberg Catechism Q60-Q62",
+        "Augsburg Confession Article 4"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-sola-gratia",
+      "category": "Soteriology",
+      "subcategory": "Five Solas",
+      "kind": "doctrine",
+      "statement": "Salvation is by grace alone (sola gratia); wholly God's unmerited favour, never earned, contributed to, or co-purchased by human effort, ritual, or pedigree.",
+      "scripture_anchors": [
+        "Ephesians 2:8-9",
+        "Romans 3:24",
+        "Romans 11:6",
+        "Titus 3:5-7",
+        "2 Timothy 1:9"
+      ],
+      "confessional_anchors": [
+        "Canons of Dort 2.7",
+        "Westminster Confession 11",
+        "Heidelberg Catechism Q60"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-solus-christus",
+      "category": "Soteriology",
+      "subcategory": "Five Solas",
+      "kind": "doctrine",
+      "statement": "Salvation is in Christ alone (solus Christus); there is no other name under heaven by which men must be saved, no other mediator between God and man.",
+      "scripture_anchors": [
+        "John 14:6",
+        "Acts 4:12",
+        "1 Timothy 2:5",
+        "1 John 5:11-12",
+        "Hebrews 7:25"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 8",
+        "Heidelberg Catechism Q29-Q31"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-substitutionary-atonement",
+      "category": "Soteriology",
+      "subcategory": "Atonement",
+      "kind": "doctrine",
+      "statement": "Christ died as a substitute in the place of sinners, bearing the penalty due for their sin so that they might be reconciled to God.",
+      "scripture_anchors": [
+        "Isaiah 53:4-6",
+        "1 Peter 2:24",
+        "1 Peter 3:18",
+        "2 Corinthians 5:21",
+        "Romans 5:8",
+        "Galatians 3:13"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 8.4-8.5",
+        "Heidelberg Catechism Q37-Q40"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-adoption",
+      "category": "Soteriology",
+      "subcategory": "Adoption",
+      "kind": "doctrine",
+      "statement": "By adoption, those justified are received into the family of God, granted the privileges, name, and inheritance of sons through union with Christ and indwelling of the Spirit of adoption.",
+      "scripture_anchors": [
+        "Romans 8:14-17",
+        "Galatians 4:4-7",
+        "Ephesians 1:5",
+        "John 1:12",
+        "1 John 3:1-2"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 12",
+        "Heidelberg Catechism Q33"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-antinomianism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Grace empowers believers to walk in holiness; the moral law remains binding as the rule of life for the believer, though not as the means of justification. Antinomianism in all its forms (classical antinomianism condemned in the Marrow Controversy; modern hyper-grace teaching that denies the need for ongoing confession or repentance) is rejected.",
+      "scripture_anchors": [
+        "Romans 6:1-14",
+        "Titus 2:11-12",
+        "1 John 1:9",
+        "1 John 3:4-10",
+        "Matthew 5:17-20"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 19",
+        "Heidelberg Catechism (third use of the law)"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-conversion",
+      "category": "Soteriology",
+      "subcategory": "Conversion",
+      "kind": "doctrine",
+      "statement": "Conversion is the conscious human response to the gospel (repentance and faith) by which the regenerated sinner turns from sin to Christ; both gift of God and act of the believer.",
+      "scripture_anchors": [
+        "Acts 3:19",
+        "1 Thessalonians 1:9",
+        "Acts 26:18",
+        "Acts 11:21"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10-11"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-legalism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Legalism (adding human rules to God's commands as conditions of acceptance, fellowship, or sanctification, or treating obedience as the ground rather than fruit of grace) is a denied error.",
+      "scripture_anchors": [
+        "Matthew 23:1-28",
+        "Galatians 2:11-21",
+        "Galatians 5:1-6",
+        "Colossians 2:16-23",
+        "Mark 7:1-13"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-perseverance-eternal-security",
+      "category": "Soteriology",
+      "subcategory": "Perseverance",
+      "kind": "doctrine",
+      "statement": "Those truly born again will be kept by the power of God through faith unto final salvation; genuine believers cannot ultimately and finally fall away.",
+      "scripture_anchors": [
+        "John 10:27-29",
+        "Romans 8:30-39",
+        "Philippians 1:6",
+        "1 Peter 1:5",
+        "1 John 2:19",
+        "Jude 24"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 17",
+        "Canons of Dort 5"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-progressive-sanctification",
+      "category": "Soteriology",
+      "subcategory": "Sanctification",
+      "kind": "doctrine",
+      "statement": "Sanctification is the progressive, Spirit-wrought work of conforming believers to the image of Christ; distinct from justification but inseparable from it; engaged through means of grace and Spirit-empowered effort.",
+      "scripture_anchors": [
+        "Romans 6:11-14",
+        "Romans 8:13",
+        "2 Corinthians 3:18",
+        "Philippians 2:12-13",
+        "1 Thessalonians 4:3",
+        "Hebrews 12:14",
+        "Colossians 3:5-10"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 13",
+        "Heidelberg Catechism Q86-Q90"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-regeneration-monergistic",
+      "category": "Soteriology",
+      "subcategory": "Regeneration",
+      "kind": "doctrine",
+      "statement": "Regeneration (the new birth) is a monergistic work of the Holy Spirit, sovereignly imparting spiritual life to those dead in sin; logically prior to and the cause of saving faith.",
+      "scripture_anchors": [
+        "John 3:3-8",
+        "John 6:63-65",
+        "Ezekiel 36:26-27",
+        "Ephesians 2:4-5",
+        "Titus 3:5",
+        "1 Peter 1:3"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10",
+        "Canons of Dort 3/4.11-12"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-semi-pelagianism-denial",
+      "category": "Soteriology",
+      "subcategory": "Denied Errors",
+      "kind": "doctrine",
+      "statement": "Semi-Pelagianism (the teaching that the sinner takes the first step toward God by natural ability, with grace then assisting) is a denied error.",
+      "scripture_anchors": [
+        "John 6:44",
+        "John 6:65",
+        "Romans 9:16",
+        "Philippians 2:13",
+        "Ephesians 2:8-9"
+      ],
+      "confessional_anchors": [
+        "Second Council of Orange 529",
+        "Canons of Dort 3/4"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-assurance-of-salvation",
+      "category": "Soteriology",
+      "subcategory": "Assurance",
+      "kind": "doctrine",
+      "statement": "Believers may have well-grounded assurance of salvation, founded on the promises of God in Christ, the inward witness of the Spirit, and the evidence of Spirit-wrought fruit.",
+      "scripture_anchors": [
+        "1 John 5:13",
+        "Romans 8:16",
+        "Romans 5:1-5",
+        "Hebrews 10:22",
+        "2 Peter 1:10"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 18",
+        "Heidelberg Catechism Q1"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-decisional-regeneration",
+      "category": "Soteriology",
+      "subcategory": "Methodology",
+      "kind": "doctrine",
+      "statement": "Decisional regeneration (the view that salvation is effected by the act of decision such as raised hand, walked aisle, or repeated prayer rather than by Spirit-wrought new birth received through faith) is a methodological error to be resisted.",
+      "scripture_anchors": [
+        "John 1:13",
+        "John 3:8",
+        "James 1:18",
+        "1 Peter 1:23"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-effectual-calling",
+      "category": "Soteriology",
+      "subcategory": "Calling",
+      "kind": "doctrine",
+      "statement": "God calls His people through the Word and Spirit: outwardly through preaching and inwardly so that the call is effective unto salvation in those who respond by faith.",
+      "scripture_anchors": [
+        "Romans 8:30",
+        "2 Thessalonians 2:14",
+        "1 Corinthians 1:9",
+        "1 Corinthians 1:23-24",
+        "John 6:44-45"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 10"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-election",
+      "category": "Soteriology",
+      "subcategory": "Election",
+      "kind": "doctrine",
+      "statement": "Before the foundation of the world, God chose a people for salvation in Christ; whether election is unconditional (Calvinist) or based on foreseen faith (classical Arminian/Brethren) is a divided question.",
+      "scripture_anchors": [
+        "Ephesians 1:4-5",
+        "Romans 8:29-30",
+        "Romans 9:10-24",
+        "1 Peter 1:1-2",
+        "2 Thessalonians 2:13"
+      ],
+      "confessional_anchors": [
+        "Canons of Dort 1 (Calvinist)",
+        "Five Articles of Remonstrance Article 1 (Arminian)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-extent-of-atonement",
+      "category": "Soteriology",
+      "subcategory": "Atonement",
+      "kind": "doctrine",
+      "statement": "The atonement is sufficient for all but applied/efficient for the elect (or, in some traditions, genuinely universal in provision); Brethren tradition typically holds general atonement, with sincere universal gospel offer.",
+      "scripture_anchors": [
+        "1 Timothy 2:4-6",
+        "1 John 2:2",
+        "John 3:16",
+        "2 Peter 3:9",
+        "Hebrews 2:9",
+        "John 10:11",
+        "John 10:15"
+      ],
+      "confessional_anchors": [
+        "Canons of Dort 2 (particular)",
+        "Five Articles of Remonstrance Article 2 (general)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-means-of-grace",
+      "category": "Soteriology",
+      "subcategory": "Means of Grace",
+      "kind": "doctrine",
+      "statement": "God ordinarily nourishes faith and sanctifies His people through appointed means: the Word read and preached, prayer, the breaking of bread, baptism, and Spirit-empowered Christian fellowship.",
+      "scripture_anchors": [
+        "Acts 2:42",
+        "Romans 10:17",
+        "1 Corinthians 11:23-26",
+        "Hebrews 10:24-25",
+        "1 Timothy 4:13"
+      ],
+      "confessional_anchors": [
+        "Westminster Larger Catechism Q154",
+        "Westminster Shorter Catechism Q88"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-sinners-prayer-method",
+      "category": "Soteriology",
+      "subcategory": "Methodology",
+      "kind": "doctrine",
+      "statement": "The 'sinner's prayer' as a evangelistic tool is permissible if it expresses genuine repentance and faith, but is dangerous when treated as a saving formula or basis for assurance apart from ongoing fruit.",
+      "scripture_anchors": [
+        "Luke 18:13",
+        "Romans 10:9-10",
+        "Acts 16:30-31",
+        "1 John 5:13"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-christ-alone-head-of-church",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "Christ alone is the Head of the Church; no human being holds that office or shares that authority.",
+      "scripture_anchors": [
+        "Ephesians 1:22-23",
+        "Ephesians 5:23",
+        "Colossians 1:18",
+        "Colossians 2:19"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 25.6",
+        "Belgic Confession 31",
+        "Second Helvetic Confession 17"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-church-body-of-christ",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "The Church is the body of Christ, a spiritual organism composed of all true believers from Pentecost to the rapture, united to Christ by the indwelling Holy Spirit.",
+      "scripture_anchors": [
+        "1 Corinthians 12:12-27",
+        "Ephesians 1:22-23",
+        "Ephesians 4:4-6",
+        "Ephesians 5:25-32",
+        "Colossians 1:18",
+        "Romans 12:4-5"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 25.1",
+        "Belgic Confession 27",
+        "Nicene Creed (one holy catholic apostolic Church)"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-autonomy-of-local-assembly",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "Each local assembly is autonomous under Christ's headship, governed by its own elders, not subordinate to a denominational hierarchy or external bishop.",
+      "scripture_anchors": [
+        "Acts 14:23",
+        "Titus 1:5",
+        "Acts 20:17-28",
+        "1 Peter 5:1-4",
+        "Revelation 2-3"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 26.7-26.8",
+        "Cambridge Platform (congregationalist)"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-marks-of-true-church",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "A true visible church is marked by: (1) the Word of God rightly preached, (2) the ordinances rightly administered, (3) church discipline rightly exercised.",
+      "scripture_anchors": [
+        "Acts 2:42",
+        "Matthew 28:19-20",
+        "Matthew 18:15-20",
+        "1 Timothy 3:15",
+        "Titus 1:5"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 29",
+        "Scots Confession 18",
+        "Westminster Confession 25.4"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-no-clergy-laity-distinction",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "Scripture knows no two-tier clergy/laity distinction; all believers are saints and ministers, with elders functioning as servant-overseers, not a priestly class.",
+      "scripture_anchors": [
+        "1 Peter 2:9",
+        "Matthew 23:8-12",
+        "1 Corinthians 12:4-31",
+        "Ephesians 4:11-12",
+        "1 Peter 5:1-4"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (no formal confession; embodied in assembly practice)"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-one-holy-catholic-apostolic-church",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "The Church is one (united in Christ), holy (set apart, indwelt by the Spirit), catholic (universal across time and place), and apostolic (built on the apostles' teaching, not on apostolic succession of office).",
+      "scripture_anchors": [
+        "Ephesians 2:19-22",
+        "Ephesians 4:3-6",
+        "Acts 2:42",
+        "Jude 3"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Apostles' Creed",
+        "Westminster Confession 25"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-priesthood-of-all-believers",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "Every believer is a priest before God through Christ; there is no mediatorial priesthood between Christ and the believer beyond Christ Himself.",
+      "scripture_anchors": [
+        "1 Peter 2:5",
+        "1 Peter 2:9",
+        "Revelation 1:6",
+        "Revelation 5:10",
+        "Hebrews 4:14-16",
+        "Hebrews 10:19-22",
+        "1 Timothy 2:5"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 8.1",
+        "Heidelberg Catechism Q31",
+        "1689 Baptist Confession 26.4"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-universal-vs-local-church",
+      "category": "Ecclesiology",
+      "subcategory": "Nature of the Church",
+      "kind": "doctrine",
+      "statement": "The Church exists in two senses: universal (all believers in all times and places) and local (particular gatherings of believers in covenanted fellowship).",
+      "scripture_anchors": [
+        "Ephesians 1:22-23",
+        "Hebrews 12:22-23",
+        "1 Corinthians 1:2",
+        "Revelation 2-3",
+        "Acts 14:23"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 25.1-25.4",
+        "1689 Baptist Confession 26.1-26.5"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-baptismal-regeneration-denial",
+      "category": "Sacraments",
+      "subcategory": "Baptism",
+      "kind": "doctrine",
+      "statement": "Baptism does not regenerate, save, or wash away sin in itself (ex opere operato); it is the outward sign of an inward reality already accomplished by grace through faith.",
+      "scripture_anchors": [
+        "Ephesians 2:8-9",
+        "Romans 4:9-12",
+        "1 Peter 3:21",
+        "Luke 23:43",
+        "Acts 10:44-48"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 28.5",
+        "Belgic Confession 34",
+        "1689 Baptist Confession 29"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-supper-as-memorial",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "doctrine",
+      "statement": "The Lord's Supper is primarily a memorial of Christ's once-for-all atoning death; 'do this in remembrance of me.'",
+      "scripture_anchors": [
+        "Luke 22:19",
+        "1 Corinthians 11:23-26",
+        "Hebrews 10:10-14"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 30",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-supper-spiritual-communion",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "doctrine",
+      "statement": "The Lord's Supper includes spiritual communion with the risen Christ by faith; believers feed on Christ spiritually, distinguishing the position from bare Zwinglian memorialism.",
+      "scripture_anchors": [
+        "1 Corinthians 10:16-17",
+        "John 6:53-58",
+        "John 6:63"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 35",
+        "Westminster Confession 29",
+        "Calvinist tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-paedobaptism-denial",
+      "category": "Sacraments",
+      "subcategory": "Baptism",
+      "kind": "doctrine",
+      "statement": "Infant baptism (paedobaptism) lacks New Testament warrant; the covenant-of-grace argument from circumcision is theologically inadequate to override the consistent NT pattern of faith preceding baptism.",
+      "scripture_anchors": [
+        "Acts 2:41",
+        "Acts 8:12",
+        "Acts 18:8",
+        "Mark 16:16",
+        "Acts 2:38"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 29.2",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-transubstantiation-denial",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "doctrine",
+      "statement": "Transubstantiation (the Roman doctrine that the substance of the bread and wine is changed into the substance of Christ's body and blood while only the accidents remain) is unbiblical and philosophically untenable.",
+      "scripture_anchors": [
+        "Hebrews 7:27",
+        "Hebrews 9:12",
+        "Hebrews 10:10-14",
+        "Acts 1:9-11",
+        "John 6:63"
+      ],
+      "confessional_anchors": [
+        "Thirty-Nine Articles 28",
+        "Belgic Confession 35",
+        "Westminster Confession 29.6",
+        "1689 Baptist Confession 30.6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-two-ordinances",
+      "category": "Sacraments",
+      "subcategory": "Number and Nature",
+      "kind": "doctrine",
+      "statement": "Christ instituted two ordinances for the Church: baptism and the Lord's Supper. They are signs and seals, not means of saving grace ex opere operato.",
+      "scripture_anchors": [
+        "Matthew 28:19",
+        "Luke 22:19-20",
+        "1 Corinthians 11:23-26"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 28.1",
+        "Westminster Confession 27.4"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-believers-baptism-only",
+      "category": "Sacraments",
+      "subcategory": "Baptism",
+      "kind": "practice",
+      "statement": "Baptism is for professing believers only, not for infants; faith precedes baptism in the New Testament pattern.",
+      "scripture_anchors": [
+        "Acts 2:38",
+        "Acts 8:36-38",
+        "Acts 16:31-33",
+        "Matthew 28:19",
+        "Mark 16:16"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 29",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-baptism-by-immersion",
+      "category": "Sacraments",
+      "subcategory": "Baptism",
+      "kind": "practice",
+      "statement": "Baptism is administered by full immersion as a public confession of faith and identification with Christ's death, burial, and resurrection.",
+      "scripture_anchors": [
+        "Romans 6:3-4",
+        "Colossians 2:12",
+        "Acts 8:36-38"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 29",
+        "Brethren tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-consubstantiation-position",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "doctrine",
+      "statement": "Consubstantiation (the Lutheran 'in, with, and under' the elements) preserves real-presence language without transubstantiation but introduces ubiquity claims about Christ's body that strain Christology.",
+      "scripture_anchors": [
+        "Acts 1:9-11",
+        "Luke 24:39",
+        "John 6:63",
+        "1 Corinthians 11:23-26"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 29 (against)",
+        "1689 Baptist Confession 30 (against)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-roman-seven-sacrament-system-denial",
+      "category": "Sacraments",
+      "subcategory": "Number and Nature",
+      "kind": "doctrine",
+      "statement": "The Roman Catholic seven-sacrament system (baptism, confirmation, eucharist, penance, anointing of the sick, holy orders, matrimony) lacks NT warrant for treating five of those as Christ-instituted ordinances of the Church.",
+      "scripture_anchors": [
+        "Matthew 28:19",
+        "Luke 22:19-20",
+        "1 Corinthians 11:23-26"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 33",
+        "Thirty-Nine Articles 25",
+        "Westminster Confession 27.4"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-foot-washing-not-ordinance",
+      "category": "Sacraments",
+      "subcategory": "Other Practices",
+      "kind": "practice",
+      "statement": "Foot-washing (John 13) is a beautiful pattern of servant love but was not instituted by Christ as an ongoing ordinance for the Church alongside baptism and the Supper.",
+      "scripture_anchors": [
+        "John 13:1-17",
+        "1 Timothy 5:10"
+      ],
+      "confessional_anchors": [
+        "Mainstream Protestant tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-open-vs-closed-communion",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "practice",
+      "statement": "Communion should be open to all believers in Christ who are walking in fellowship with the Lord and not under church discipline, regardless of denominational affiliation or specific baptismal mode.",
+      "scripture_anchors": [
+        "1 Corinthians 11:27-29",
+        "1 Corinthians 10:16-17",
+        "Romans 14:1-4"
+      ],
+      "confessional_anchors": [
+        "Open Brethren practice"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-weekly-breaking-of-bread",
+      "category": "Sacraments",
+      "subcategory": "Lord's Supper",
+      "kind": "practice",
+      "statement": "The Lord's Supper (breaking of bread) is observed weekly on the Lord's Day as the central act of corporate worship.",
+      "scripture_anchors": [
+        "Acts 20:7",
+        "Acts 2:42",
+        "1 Corinthians 11:20-26"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-apostolic-succession-denial",
+      "category": "Leadership & Polity",
+      "subcategory": "Ordination",
+      "kind": "doctrine",
+      "statement": "Apostolic succession as an unbroken episcopal line conferring valid ministry, sacraments, and ecclesiastical authority is unbiblical; true apostolic continuity is doctrinal fidelity to apostolic teaching.",
+      "scripture_anchors": [
+        "Ephesians 2:20",
+        "Jude 3",
+        "1 Corinthians 3:11",
+        "Acts 20:30"
+      ],
+      "confessional_anchors": [
+        "Thirty-Nine Articles",
+        "Belgic Confession 31",
+        "Westminster Confession"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-episcopal-polity-denial",
+      "category": "Leadership & Polity",
+      "subcategory": "Polity",
+      "kind": "doctrine",
+      "statement": "Episcopal polity (bishops with authority over multiple local churches as a distinct tier above presbyters) lacks NT warrant; the NT uses 'bishop' (overseer) and 'elder' interchangeably for the same office.",
+      "scripture_anchors": [
+        "Acts 20:17",
+        "Acts 20:28",
+        "Titus 1:5",
+        "Titus 1:7",
+        "1 Peter 5:1-2",
+        "Philippians 1:1"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 26",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-papal-supremacy-denial",
+      "category": "Leadership & Polity",
+      "subcategory": "Ordination",
+      "kind": "doctrine",
+      "statement": "No human bishop or council possesses supreme authority over the universal church or infallibility ex cathedra; Scripture alone is the infallible rule of faith and life. Roman claims of papal supremacy and papal infallibility (Vatican I, 1870) are rejected.",
+      "scripture_anchors": [
+        "2 Timothy 3:16-17",
+        "Galatians 2:11-14",
+        "Acts 17:11",
+        "Mark 7:8-9"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1",
+        "Belgic Confession 7",
+        "Thirty-Nine Articles 21"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-plurality-of-elders",
+      "category": "Leadership & Polity",
+      "subcategory": "Eldership",
+      "kind": "doctrine",
+      "statement": "Each local assembly should be led by a plurality of qualified elders (overseers/shepherds) shepherding jointly, not by a single senior pastor or CEO-style sole leader; concentrating authority and teaching ministry in one man departs from the apostolic plurality pattern. Watch for elder boards that exist only nominally and rubber-stamp a CEO-pastor.",
+      "scripture_anchors": [
+        "Acts 14:23",
+        "Acts 20:17",
+        "Acts 20:28",
+        "Titus 1:5",
+        "Philippians 1:1",
+        "1 Timothy 5:17",
+        "1 Peter 5:1-4",
+        "Hebrews 13:17",
+        "James 5:14"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "1689 Baptist Confession 26.8"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-women-elders-pastors-denial",
+      "category": "Leadership & Polity",
+      "subcategory": "Office and Gender",
+      "kind": "doctrine",
+      "statement": "The office of elder/overseer is reserved for qualified men; women are not to hold the eldership/teaching-pastor office over mixed adult assemblies.",
+      "scripture_anchors": [
+        "1 Timothy 2:11-15",
+        "1 Timothy 3:1-7",
+        "Titus 1:5-9",
+        "1 Corinthians 14:33-35"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "Confessional Reformed and Baptist tradition",
+        "Danvers Statement"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-congregational-polity-position",
+      "category": "Leadership & Polity",
+      "subcategory": "Polity",
+      "kind": "doctrine",
+      "statement": "Congregational polity (final earthly authority resting in the gathered congregation under Christ, with elders leading and the assembly affirming) best preserves NT autonomy and accountability.",
+      "scripture_anchors": [
+        "Acts 6:1-6",
+        "Acts 15:22",
+        "1 Corinthians 5:1-13",
+        "2 Corinthians 2:6",
+        "Matthew 18:15-20"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 26",
+        "Cambridge Platform",
+        "Brethren tradition (assembly-led)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-deacons",
+      "category": "Leadership & Polity",
+      "subcategory": "Diaconate",
+      "kind": "doctrine",
+      "statement": "Deacons are a NT office of servant-ministers handling practical care and administration in the local assembly, distinct from the teaching/oversight role of elders.",
+      "scripture_anchors": [
+        "Acts 6:1-6",
+        "Philippians 1:1",
+        "1 Timothy 3:8-13",
+        "Romans 16:1"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 25-31 framework",
+        "1689 Baptist Confession 26.8"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-formal-ordination-rejection",
+      "category": "Leadership & Polity",
+      "subcategory": "Ordination",
+      "kind": "doctrine",
+      "statement": "Formal ordination as conferral of sacerdotal status or unique ministerial grace is rejected; recognition of elders/deacons by the local assembly with prayer and laying on of hands is biblical, but creates no clergy class.",
+      "scripture_anchors": [
+        "Acts 13:1-3",
+        "Acts 14:23",
+        "1 Timothy 4:14",
+        "1 Timothy 5:22",
+        "2 Timothy 1:6"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-presbyterian-polity-position",
+      "category": "Leadership & Polity",
+      "subcategory": "Polity",
+      "kind": "doctrine",
+      "statement": "Presbyterian polity (graded courts of teaching and ruling elders: session, presbytery, general assembly) has biblical merit (Acts 15) but tends toward over-institutionalisation and erodes local-assembly autonomy.",
+      "scripture_anchors": [
+        "Acts 14:23",
+        "Acts 15:1-29",
+        "Acts 20:17",
+        "1 Peter 5:1-4"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 31 (Presbyterian view)",
+        "1689 Baptist Confession 26.7-26.15 (independent view)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-women-in-diaconal-serving-roles",
+      "category": "Leadership & Polity",
+      "subcategory": "Office and Gender",
+      "kind": "practice",
+      "statement": "Women may serve in significant diaconal, hospitality, mercy, evangelism, women's ministry, children's ministry, missionary, and helping roles; gifting and calling are not gender-restricted in non-authoritative contexts.",
+      "scripture_anchors": [
+        "Romans 16:1-2",
+        "Romans 16:3",
+        "Romans 16:6-7",
+        "Romans 16:12",
+        "Acts 18:26",
+        "Philippians 4:2-3",
+        "Titus 2:3-5"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "Danvers Statement"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-bivocational-vs-paid-ministry",
+      "category": "Leadership & Polity",
+      "subcategory": "Support of Ministry",
+      "kind": "practice",
+      "statement": "Both bivocational eldership (tentmaking) and full-time supported ministry are biblically valid; neither is the only legitimate form, and Brethren tradition has favoured bivocational/lay eldership.",
+      "scripture_anchors": [
+        "Acts 18:3",
+        "Acts 20:33-35",
+        "1 Corinthians 9:14",
+        "1 Timothy 5:17-18",
+        "2 Thessalonians 3:7-9"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (lay eldership default)"
+      ],
+      "tier": "preference",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-formal-seminary-not-required-for-elders",
+      "category": "Leadership & Polity",
+      "subcategory": "Elder Qualifications",
+      "kind": "practice",
+      "statement": "Formal seminary or theological-college credentials are not biblically required for elder qualification; the NT criteria are character, doctrinal soundness, and ability to teach (1 Tim 3, Titus 1).",
+      "scripture_anchors": [
+        "1 Timothy 3:1-7",
+        "Titus 1:5-9",
+        "1 Peter 5:1-4",
+        "Acts 4:13"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-small-family-style-assembly-preference",
+      "category": "Leadership & Polity",
+      "subcategory": "Assembly Size",
+      "kind": "practice",
+      "statement": "Small to mid-sized assemblies (sub-Dunbar) where members are known by name and elders can shepherd individually are preferable to mega-church structures.",
+      "scripture_anchors": [
+        "John 10:14",
+        "Acts 20:28",
+        "1 Peter 5:1-4",
+        "Hebrews 13:17"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-church-discipline",
+      "category": "Church Discipline",
+      "subcategory": "Discipline Process",
+      "kind": "practice",
+      "statement": "Church discipline follows the Matthew 18 progression (private confrontation, small-group confrontation, assembly confrontation, removal) and is exercised in love for repentance and restoration.",
+      "scripture_anchors": [
+        "Matthew 18:15-20",
+        "1 Corinthians 5:1-13",
+        "2 Thessalonians 3:6-15",
+        "Galatians 6:1",
+        "Titus 3:10-11"
+      ],
+      "confessional_anchors": [
+        "Belgic Confession 32",
+        "Westminster Confession 30",
+        "1689 Baptist Confession 26.7"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-excommunication-as-final-step",
+      "category": "Church Discipline",
+      "subcategory": "Discipline Process",
+      "kind": "practice",
+      "statement": "Excommunication (removal from fellowship and the Lord's Table) is the final step of the Matthew 18 process for unrepentant sin, intended to provoke repentance and protect the assembly.",
+      "scripture_anchors": [
+        "1 Corinthians 5:1-13",
+        "2 Thessalonians 3:14-15",
+        "Matthew 18:17",
+        "1 Timothy 1:20"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 30.4",
+        "Belgic Confession 32"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-restoration-after-discipline",
+      "category": "Church Discipline",
+      "subcategory": "Restoration",
+      "kind": "practice",
+      "statement": "When a disciplined member shows credible repentance, the assembly should restore them publicly, forgiving and reaffirming love.",
+      "scripture_anchors": [
+        "2 Corinthians 2:5-11",
+        "Galatians 6:1-2",
+        "James 5:19-20",
+        "Luke 17:3-4"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 30",
+        "Belgic Confession 32"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-formal-church-membership",
+      "category": "Church Discipline",
+      "subcategory": "Membership",
+      "kind": "practice",
+      "statement": "Formal church membership (public covenanted commitment between believer and local assembly under elder oversight) is biblically warranted and prudentially essential for accountability and discipline.",
+      "scripture_anchors": [
+        "Hebrews 13:17",
+        "1 Corinthians 5:12-13",
+        "Matthew 18:15-20",
+        "Acts 2:41-42"
+      ],
+      "confessional_anchors": [
+        "1689 Baptist Confession 26",
+        "Brethren reception practice"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-women-silence-in-mixed-assembly",
+      "category": "Worship Structure",
+      "subcategory": "Order in Assembly",
+      "kind": "practice",
+      "statement": "Women are not to take up authoritative speaking ministry in the gathered mixed assembly (sermon preaching, doctrinal teaching of mixed adults, and leading the assembly authoritatively per 1 Cor 14:34-35; 1 Tim 2:11-12); women may pray, sing, prophesy in non-authoritative contexts, share testimony, teach women and children, and minister widely otherwise.",
+      "scripture_anchors": [
+        "1 Corinthians 14:33-35",
+        "1 Timothy 2:11-15",
+        "1 Corinthians 11:5",
+        "Titus 2:3-5",
+        "Acts 18:26"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "Danvers Statement"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-head-coverings-for-women-in-worship",
+      "category": "Worship Structure",
+      "subcategory": "Symbolism",
+      "kind": "practice",
+      "statement": "Head coverings for women during prayer and prophecy in the gathered assembly (1 Cor 11) are practiced in Brethren tradition; the principle (creation-order distinction) is permanent, the form (literal covering) is a culturally embodied expression.",
+      "scripture_anchors": [
+        "1 Corinthians 11:2-16"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-liturgical-vs-spontaneous-worship",
+      "category": "Worship Structure",
+      "subcategory": "Service Form",
+      "kind": "practice",
+      "statement": "Both liturgical (set forms) and spontaneous (Spirit-led) worship are biblically defensible; the regulative principle requires that whatever is done in worship has scriptural warrant, but the form-spectrum is wide.",
+      "scripture_anchors": [
+        "1 Corinthians 14:26",
+        "1 Corinthians 14:40",
+        "Colossians 3:16",
+        "1 Timothy 4:13"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 21 (regulative principle)",
+        "Brethren practice (spontaneous worship)"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-open-worship-open-ministry-meeting",
+      "category": "Worship Structure",
+      "subcategory": "Service Form",
+      "kind": "practice",
+      "statement": "An open worship/open ministry meeting (any qualified brother may rise as the Spirit leads to read, pray, give thanks, give a word, suggest a hymn) recovers NT participatory worship (1 Cor 14) and is a treasured Brethren distinctive.",
+      "scripture_anchors": [
+        "1 Corinthians 14:26-33",
+        "Colossians 3:16",
+        "Ephesians 5:18-21"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-ecumenism-with-non-trinitarian-groups-denial",
+      "category": "Inter-church Relations",
+      "subcategory": "Ecumenism",
+      "kind": "doctrine",
+      "statement": "Ecumenical or fellowship union with non-Trinitarian groups (Mormonism, Jehovah's Witnesses, Oneness Pentecostalism, Unitarianism) is rejected; these groups are not Christian in the historical-creedal sense and require evangelism, not partnership.",
+      "scripture_anchors": [
+        "Matthew 28:19",
+        "John 1:1-18",
+        "John 5:23",
+        "1 John 2:22-23",
+        "2 John 9-11"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Athanasian Creed",
+        "all Reformed confessions"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-ecumenism-with-rome-denial",
+      "category": "Inter-church Relations",
+      "subcategory": "Ecumenism",
+      "kind": "doctrine",
+      "statement": "Formal ecumenical union with the Roman Catholic Church on shared sacramental, ministerial, and gospel ground is rejected so long as Rome maintains its post-Tridentine positions on justification, the Mass as sacrifice, papal infallibility, and Marian dogmas.",
+      "scripture_anchors": [
+        "Galatians 1:6-9",
+        "2 Corinthians 6:14-18",
+        "2 John 9-11"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 25.6",
+        "Belgic Confession 29"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-denominationalism-position",
+      "category": "Inter-church Relations",
+      "subcategory": "Denominations",
+      "kind": "doctrine",
+      "statement": "Denominationalism (the proliferation of human party-labels: Lutheran, Methodist, etc.) is a regrettable historical reality, but recognition of distinct gospel-faithful traditions is realistic; Brethren conviction is to gather simply on the name of Christ without sectarian label.",
+      "scripture_anchors": [
+        "1 Corinthians 1:10-13",
+        "1 Corinthians 3:3-4",
+        "Ephesians 4:1-6",
+        "John 17:20-23"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-parachurch-ministries",
+      "category": "Inter-church Relations",
+      "subcategory": "Parachurch",
+      "kind": "doctrine",
+      "statement": "Parachurch ministries (mission agencies, campus ministries, mercy organisations, training institutions) are legitimate when they support and serve the local church rather than replace it.",
+      "scripture_anchors": [
+        "Acts 13:1-3",
+        "2 Corinthians 8:1-9:15",
+        "Romans 15:25-28"
+      ],
+      "confessional_anchors": [
+        "Modern evangelical practice"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-bodily-resurrection-all",
+      "category": "Eschatology",
+      "subcategory": "Resurrection",
+      "kind": "doctrine",
+      "statement": "There will be a bodily resurrection of both the just and the unjust at the end of the age.",
+      "scripture_anchors": [
+        "John 5:28-29",
+        "Acts 24:15",
+        "Daniel 12:2",
+        "1 Corinthians 15:42-49",
+        "Philippians 3:21",
+        "Revelation 20:12-13"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed",
+        "Westminster Confession 32"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-eternal-conscious-torment",
+      "category": "Eschatology",
+      "subcategory": "Hell",
+      "kind": "doctrine",
+      "statement": "Unbelievers face eternal, conscious punishment in hell as the just judgment of a holy God.",
+      "scripture_anchors": [
+        "Matthew 25:46",
+        "Revelation 14:9-11",
+        "Revelation 20:10",
+        "Mark 9:43-48",
+        "2 Thessalonians 1:9",
+        "Jude 1:7"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 33",
+        "Athanasian Creed",
+        "Brethren tradition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-final-judgment",
+      "category": "Eschatology",
+      "subcategory": "Judgment",
+      "kind": "doctrine",
+      "statement": "Christ will judge all people at his return: believers to eternal life, unbelievers to eternal punishment.",
+      "scripture_anchors": [
+        "Matthew 25:31-46",
+        "Revelation 20:11-15",
+        "2 Corinthians 5:10",
+        "Acts 17:31",
+        "Hebrews 9:27",
+        "Romans 2:5-11"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Westminster Confession 33",
+        "Brethren tradition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-second-coming-bodily",
+      "category": "Eschatology",
+      "subcategory": "Return of Christ",
+      "kind": "doctrine",
+      "statement": "Jesus Christ will return personally, visibly, audibly, and bodily in a yet-future event to judge the living and the dead. Full preterism (all prophecy including the second coming was fulfilled in AD 70) is rejected.",
+      "scripture_anchors": [
+        "Acts 1:11",
+        "Matthew 24:30",
+        "1 Thessalonians 4:16-17",
+        "Revelation 1:7",
+        "1 Corinthians 15:23-28",
+        "2 Thessalonians 1:7-10",
+        "Titus 2:13"
+      ],
+      "confessional_anchors": [
+        "Apostles' Creed",
+        "Nicene Creed",
+        "Westminster Confession 33"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-universalism-denial",
+      "category": "Eschatology",
+      "subcategory": "Hell",
+      "kind": "doctrine",
+      "statement": "Universalism (the view that all people will ultimately be saved) is rejected as contrary to Scripture and historic Christianity.",
+      "scripture_anchors": [
+        "Matthew 25:46",
+        "Matthew 7:13-14",
+        "John 3:36",
+        "2 Thessalonians 1:9",
+        "Revelation 21:8"
+      ],
+      "confessional_anchors": [
+        "Second Council of Constantinople (553)",
+        "Westminster Confession 33",
+        "Reformed and Brethren tradition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "heretical",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-annihilationism-denial",
+      "category": "Eschatology",
+      "subcategory": "Hell",
+      "kind": "doctrine",
+      "statement": "Annihilationism (the view that the wicked are ultimately destroyed and cease to exist) is rejected as inconsistent with biblical teaching on eternal punishment.",
+      "scripture_anchors": [
+        "Matthew 25:46",
+        "Revelation 14:11",
+        "Revelation 20:10",
+        "Daniel 12:2",
+        "Mark 9:48"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 33",
+        "historic Reformed and Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "minority",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-imminence-no-date-setting",
+      "category": "Eschatology",
+      "subcategory": "Return of Christ",
+      "kind": "doctrine",
+      "statement": "Christ's return is imminent and could occur at any time, but no one knows the day or the hour, and date-setting is forbidden.",
+      "scripture_anchors": [
+        "Matthew 24:36",
+        "Matthew 24:42-44",
+        "Acts 1:7",
+        "1 Thessalonians 5:1-2",
+        "Mark 13:32-33"
+      ],
+      "confessional_anchors": [
+        "historic Christian consensus",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-intermediate-state",
+      "category": "Eschatology",
+      "subcategory": "Intermediate State",
+      "kind": "doctrine",
+      "statement": "Believers who die are immediately and consciously present with the Lord, at rest, awaiting bodily resurrection. Soul sleep (unconsciousness of the dead until resurrection) is rejected.",
+      "scripture_anchors": [
+        "Philippians 1:21-23",
+        "2 Corinthians 5:6-8",
+        "Luke 23:43",
+        "Revelation 6:9-11",
+        "Luke 16:19-31"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 32",
+        "historic Christian consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-new-heavens-new-earth",
+      "category": "Eschatology",
+      "subcategory": "Final State",
+      "kind": "doctrine",
+      "statement": "God will create new heavens and a new earth in which righteousness dwells, the eternal home of the redeemed.",
+      "scripture_anchors": [
+        "Isaiah 65:17",
+        "2 Peter 3:13",
+        "Revelation 21:1-5",
+        "Romans 8:19-23",
+        "Isaiah 66:22"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 33",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-purgatory-denial",
+      "category": "Eschatology",
+      "subcategory": "Intermediate State",
+      "kind": "doctrine",
+      "statement": "Purgatory (a post-mortem place of purification for believers) is rejected as having no biblical basis.",
+      "scripture_anchors": [
+        "Hebrews 10:14",
+        "2 Corinthians 5:8",
+        "Luke 23:43",
+        "1 John 1:7",
+        "Romans 8:1"
+      ],
+      "confessional_anchors": [
+        "Thirty-Nine Articles 22",
+        "Westminster Confession 32",
+        "Brethren tradition"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-future-for-israel",
+      "category": "Eschatology",
+      "subcategory": "Israel",
+      "kind": "doctrine",
+      "statement": "There is a future, visible salvation of ethnic Israel as a people when 'all Israel will be saved' (Rom 11:26).",
+      "scripture_anchors": [
+        "Romans 11:25-29",
+        "Zechariah 12:10",
+        "Genesis 17:7-8",
+        "Jeremiah 31:31-37"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition",
+        "many Reformed (Murray, Piper, MacArthur)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-prayers-for-dead-denial",
+      "category": "Eschatology",
+      "subcategory": "Intermediate State",
+      "kind": "doctrine",
+      "statement": "Prayers for the dead are rejected as having no biblical warrant and as undermining the finality of judgment.",
+      "scripture_anchors": [
+        "Hebrews 9:27",
+        "Luke 16:26",
+        "2 Samuel 12:22-23"
+      ],
+      "confessional_anchors": [
+        "Thirty-Nine Articles 22",
+        "Westminster Confession 21.4",
+        "Brethren tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-amillennialism",
+      "category": "Eschatology",
+      "subcategory": "Millennium",
+      "kind": "doctrine",
+      "statement": "Amillennialism (the millennium is symbolic of the present church age between Christ's two advents) is a legitimate orthodox position.",
+      "scripture_anchors": [
+        "Revelation 20:1-6",
+        "Matthew 12:29",
+        "Colossians 2:15",
+        "John 5:28-29"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession",
+        "Heidelberg Catechism",
+        "Augustine's City of God"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-dispensationalism",
+      "category": "Eschatology",
+      "subcategory": "Hermeneutics",
+      "kind": "doctrine",
+      "statement": "Classical dispensationalism (distinct programs for Israel and the Church across multiple dispensations) is a Brethren-origin system held loosely.",
+      "scripture_anchors": [
+        "Romans 11:25-29",
+        "Genesis 12:1-3",
+        "Ephesians 2:11-22",
+        "Galatians 3:28-29"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (Darby origin)",
+        "Scofield Reference Bible"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-postmillennialism",
+      "category": "Eschatology",
+      "subcategory": "Millennium",
+      "kind": "doctrine",
+      "statement": "Postmillennialism (Christ returns after a long age of gospel triumph) is a legitimate orthodox position though less likely.",
+      "scripture_anchors": [
+        "Matthew 28:18-20",
+        "Psalm 110:1",
+        "Isaiah 2:2-4",
+        "1 Corinthians 15:24-25"
+      ],
+      "confessional_anchors": [
+        "Some Puritan theology",
+        "Edwards",
+        "modern theonomic Reformed"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-posttrib-rapture",
+      "category": "Eschatology",
+      "subcategory": "Rapture",
+      "kind": "doctrine",
+      "statement": "Post-tribulation rapture (the church is gathered to Christ at his visible return after the tribulation) has substantial scriptural support.",
+      "scripture_anchors": [
+        "Matthew 24:29-31",
+        "1 Thessalonians 4:13-18",
+        "2 Thessalonians 2:1-4"
+      ],
+      "confessional_anchors": [
+        "Early church consensus",
+        "modern historic premillennialists (Ladd)"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-premillennialism",
+      "category": "Eschatology",
+      "subcategory": "Millennium",
+      "kind": "doctrine",
+      "statement": "Premillennialism (Christ returns before a literal thousand-year reign on earth) is the position best supported by Revelation 20 and Brethren tradition.",
+      "scripture_anchors": [
+        "Revelation 20:1-6",
+        "Zechariah 14:4-9",
+        "Isaiah 11:1-10",
+        "Romans 11:25-29"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (premillennial)",
+        "early Church (Justin Martyr, Irenaeus)"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-pretrib-rapture",
+      "category": "Eschatology",
+      "subcategory": "Rapture",
+      "kind": "doctrine",
+      "statement": "The pre-tribulation rapture (Christ secretly removes the church before a seven-year tribulation) is the historic Brethren-Darby position.",
+      "scripture_anchors": [
+        "1 Thessalonians 4:13-18",
+        "1 Corinthians 15:51-52",
+        "Revelation 3:10",
+        "John 14:1-3"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (Darby)",
+        "Scofield Reference Bible"
+      ],
+      "tier": "preference",
+      "historical_consensus": "minority",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "doc-angels-exist",
+      "category": "Angelology",
+      "subcategory": "Existence",
+      "kind": "doctrine",
+      "statement": "Angels exist as personal, created, ministering spirits who serve God and his elect.",
+      "scripture_anchors": [
+        "Hebrews 1:14",
+        "Psalm 103:20-21",
+        "Isaiah 6:1-3",
+        "Daniel 10:13",
+        "Luke 1:19",
+        "Jude 1:9"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4",
+        "historic Christian consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-fallen-angels",
+      "category": "Angelology",
+      "subcategory": "Fallen Angels",
+      "kind": "doctrine",
+      "statement": "A portion of the angels fell into rebellion under Satan and are now demons opposed to God.",
+      "scripture_anchors": [
+        "2 Peter 2:4",
+        "Jude 1:6",
+        "Revelation 12:7-9",
+        "Matthew 25:41",
+        "Ephesians 6:12"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4",
+        "historic Christian consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-guardian-angels",
+      "category": "Angelology",
+      "subcategory": "Ministry",
+      "kind": "doctrine",
+      "statement": "Guardian angels (angels assigned to particular believers) is a permissible but not dogmatically required position.",
+      "scripture_anchors": [
+        "Matthew 18:10",
+        "Acts 12:15",
+        "Hebrews 1:14",
+        "Psalm 91:11"
+      ],
+      "confessional_anchors": [
+        "historic Christian piety"
+      ],
+      "tier": "adiaphora",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-satan-personal-being",
+      "category": "Demonology",
+      "subcategory": "Satan",
+      "kind": "doctrine",
+      "statement": "Satan is a real, personal, created spiritual being who opposes God and his people.",
+      "scripture_anchors": [
+        "Matthew 4:1-11",
+        "Job 1:6-12",
+        "1 Peter 5:8",
+        "Revelation 12:9",
+        "John 8:44",
+        "Genesis 3:1-5"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 4",
+        "all historic creeds"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-believer-cannot-be-possessed",
+      "category": "Demonology",
+      "subcategory": "Possession",
+      "kind": "doctrine",
+      "statement": "A genuine believer, indwelt by the Holy Spirit, cannot be possessed (inhabited) by a demon, though believers can be oppressed, tempted, and harassed.",
+      "scripture_anchors": [
+        "1 John 4:4",
+        "1 Corinthians 6:19",
+        "Romans 8:9-11",
+        "2 Corinthians 12:7",
+        "Ephesians 6:10-18"
+      ],
+      "confessional_anchors": [
+        "historic Reformed and Brethren tradition"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-deliverance-ministry-cautious",
+      "category": "Demonology",
+      "subcategory": "Deliverance",
+      "kind": "doctrine",
+      "statement": "Deliverance ministry is biblically warranted in genuine cases of demonic possession but is open to abuse and requires great caution.",
+      "scripture_anchors": [
+        "Mark 16:17",
+        "Acts 16:18",
+        "Ephesians 6:12",
+        "Acts 19:13-16"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (cautious)",
+        "Reformed cessationist caution"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "doc-demon-possession-of-unbelievers",
+      "category": "Demonology",
+      "subcategory": "Possession",
+      "kind": "doctrine",
+      "statement": "Unbelievers can be subject to demonic possession (full inhabitation), as the Gospels and Acts repeatedly attest.",
+      "scripture_anchors": [
+        "Mark 5:1-20",
+        "Matthew 12:22-29",
+        "Acts 16:16-18",
+        "Acts 19:13-16"
+      ],
+      "confessional_anchors": [
+        "historic Christian consensus",
+        "missionary testimony"
+      ],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "cult-christian-science-physical-reality",
+      "category": "Cult Marker",
+      "subcategory": "Christian Science",
+      "kind": "doctrine",
+      "statement": "Sin, sickness, suffering, and physical reality are real; salvation is from real sin to real eternal life through Christ's real death and resurrection.",
+      "scripture_anchors": [
+        "John 1:14",
+        "1 Peter 2:24",
+        "Genesis 1:31",
+        "1 John 4:2-3",
+        "Romans 3:23",
+        "Romans 6:23"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Chalcedonian Definition",
+        "all historic confessions"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "cult-icc-baptismal-regeneration",
+      "category": "Cult Marker",
+      "subcategory": "International Churches of Christ",
+      "kind": "doctrine",
+      "statement": "Salvation is by grace alone through faith alone in Christ alone; baptism is an outward sign of inward faith, not the instrument of regeneration; and 'discipling' must not become spiritual abuse.",
+      "scripture_anchors": [
+        "Ephesians 2:8-9",
+        "Luke 23:43",
+        "Romans 4:5",
+        "Galatians 2:16",
+        "Acts 10:44-48"
+      ],
+      "confessional_anchors": [
+        "all Reformation confessions on sola fide"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "cult-mormon-polytheism",
+      "category": "Cult Marker",
+      "subcategory": "Mormonism",
+      "kind": "doctrine",
+      "statement": "There is one and only one true God, eternally and unchangeably; humans cannot become gods. Jesus Christ is the eternal uncreated Son, of the same substance as the Father; Satan is a created fallen angel, not Christ's 'spirit brother.' LDS polytheism, plurality-of-gods, human-exaltation-to-godhood, and the spirit-brothers cosmology are rejected as cult-grade error.",
+      "scripture_anchors": [
+        "Deuteronomy 6:4",
+        "Isaiah 43:10",
+        "Isaiah 44:6",
+        "1 Timothy 2:5",
+        "Isaiah 45:5",
+        "John 1:1-3",
+        "Colossians 1:16-17",
+        "Hebrews 1:5-8"
+      ],
+      "confessional_anchors": [
+        "Nicene Creed",
+        "Athanasian Creed",
+        "Chalcedonian Definition"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "het-british-israelism",
+      "category": "Heterodoxy Marker",
+      "subcategory": "British Israelism",
+      "kind": "doctrine",
+      "statement": "There is no biblical or genealogical basis for identifying modern Anglo-Saxons or Europeans as the lost tribes of Israel; Christian Identity racialism is heretical.",
+      "scripture_anchors": [
+        "Galatians 3:28",
+        "Acts 17:26",
+        "Romans 11:25-29",
+        "Colossians 3:11"
+      ],
+      "confessional_anchors": [
+        "all historic creeds and confessions"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "het-icon-veneration",
+      "category": "Heterodoxy Marker",
+      "subcategory": "Eastern Orthodoxy",
+      "kind": "doctrine",
+      "statement": "Veneration of icons (proskynesis) and prayers to saints are rejected as violating the second commandment and Christ's unique mediation.",
+      "scripture_anchors": [
+        "Exodus 20:4-5",
+        "Deuteronomy 5:8-9",
+        "1 Timothy 2:5",
+        "Acts 10:25-26",
+        "Revelation 22:8-9"
+      ],
+      "confessional_anchors": [
+        "Heidelberg Catechism 96-98",
+        "Westminster Larger Catechism 109",
+        "Reformation consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "het-rc-marian-dogmas",
+      "category": "Heterodoxy Marker",
+      "subcategory": "Roman Catholicism",
+      "kind": "doctrine",
+      "statement": "Mary was a sinner saved by grace like every other believer; she was not immaculately conceived, was not bodily assumed, and is not co-redemptrix.",
+      "scripture_anchors": [
+        "Romans 3:23",
+        "1 Timothy 2:5",
+        "Luke 1:47",
+        "Hebrews 7:25"
+      ],
+      "confessional_anchors": [
+        "Thirty-Nine Articles 22",
+        "Westminster Confession",
+        "Heidelberg Catechism",
+        "Reformation consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "het-hyper-calvinism",
+      "category": "Heterodoxy Marker",
+      "subcategory": "Hyper-Calvinism",
+      "kind": "doctrine",
+      "statement": "The gospel is to be freely offered to all people; God commands all to repent and believe; hyper-Calvinism's denial of the free offer of the gospel is rejected.",
+      "scripture_anchors": [
+        "Acts 17:30",
+        "2 Peter 3:9",
+        "Matthew 23:37",
+        "Ezekiel 18:23",
+        "Isaiah 55:1"
+      ],
+      "confessional_anchors": [
+        "Marrow of Modern Divinity",
+        "historic Reformed (Spurgeon, Andrew Fuller)"
+      ],
+      "tier": "important",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-healing-in-atonement-guaranteed",
+      "category": "Spiritual Gifts",
+      "subcategory": "Healing",
+      "kind": "doctrine",
+      "statement": "Physical healing is guaranteed in the atonement for every believer in this life (such that lack of healing implies lack of faith).",
+      "scripture_anchors": [
+        "Isaiah 53:4-5",
+        "Matthew 8:16-17",
+        "Romans 8:18-23",
+        "2 Corinthians 4:16-17"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-hyper-charismatic-excess",
+      "category": "Spiritual Gifts",
+      "subcategory": "Charismatic Excess",
+      "kind": "doctrine",
+      "statement": "Hyper-charismatic excess (slain in the Spirit as normative, holy laughter, Toronto Blessing phenomena, Bethel/NAR-style signs, fire tunnels, prophetic decrees binding consciences) is to be rejected as disorderly and unscriptural.",
+      "scripture_anchors": [
+        "1 Corinthians 14:33",
+        "1 Corinthians 14:40",
+        "Deuteronomy 18:20-22",
+        "1 John 4:1"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-modern-apostles",
+      "category": "Spiritual Gifts",
+      "subcategory": "Offices",
+      "kind": "doctrine",
+      "statement": "The office of apostle in the foundational, Scripture-authoring sense (eyewitness of the risen Christ, sent with Christ's authority to lay the church's foundation) ended with the apostles of Christ. Modern self-appointed 'apostles' (NAR: Wagner, Hamon, Bickle/IHOPKC, Bill Johnson/Bethel, Che Ahn, Lou Engle) and 'prophets' do not hold binding authority over the church. Functional missionary 'apostolic' work (church-planting) is fine; claims to apostolic OFFICE are not.",
+      "scripture_anchors": [
+        "Ephesians 2:20",
+        "Acts 1:21-22",
+        "1 Corinthians 9:1",
+        "Jude 1:3",
+        "Revelation 21:14",
+        "Deuteronomy 18:21-22"
+      ],
+      "confessional_anchors": [
+        "historic Reformed and Brethren tradition",
+        "Westminster Confession 1"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-prophecy-fallible-vs-binding",
+      "category": "Spiritual Gifts",
+      "subcategory": "Prophecy",
+      "kind": "doctrine",
+      "statement": "Any modern claim to prophecy must be tested by Scripture and is never binding on conscience the way Scripture is. New revelation that adds to or contradicts Scripture is rejected.",
+      "scripture_anchors": [
+        "1 Thessalonians 5:20-21",
+        "Deuteronomy 18:20-22",
+        "Revelation 22:18-19",
+        "2 Timothy 3:16-17"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-tongues-as-evidence-of-salvation",
+      "category": "Spiritual Gifts",
+      "subcategory": "Tongues",
+      "kind": "doctrine",
+      "statement": "Speaking in tongues is the necessary evidence of Spirit baptism and/or genuine salvation (classical Pentecostal initial-evidence doctrine).",
+      "scripture_anchors": [
+        "1 Corinthians 12:11",
+        "1 Corinthians 12:30",
+        "Romans 8:16",
+        "Galatians 3:2"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "minority",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-word-of-faith",
+      "category": "Spiritual Gifts",
+      "subcategory": "Word of Faith",
+      "kind": "doctrine",
+      "statement": "Word of Faith / 'name it and claim it' / decreeing and declaring as a creative force of human speech is a false gospel that confuses the creature with the Creator.",
+      "scripture_anchors": [
+        "Isaiah 55:8-11",
+        "Psalm 115:3",
+        "James 4:13-15",
+        "1 Timothy 6:5"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-cessationism",
+      "category": "Spiritual Gifts",
+      "subcategory": "Sign Gifts",
+      "kind": "doctrine",
+      "statement": "The miraculous sign gifts (apostleship, prophecy, tongues, miraculous healings) ceased with the apostolic age and the closing of the canon (cessationism); the contrary position (orderly continuationism, that the Spirit may still distribute miraculous gifts today, tested by Scripture and exercised in order) is held by faithful Christians and acceptable when paired with Scripture sufficiency.",
+      "scripture_anchors": [
+        "1 Corinthians 13:8-10",
+        "Ephesians 2:20",
+        "Hebrews 1:1-2",
+        "Hebrews 2:3-4",
+        "1 Corinthians 12:7-11",
+        "1 Corinthians 14:26-33",
+        "1 Thessalonians 5:19-21"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 1.1 (Scripture sufficiency)"
+      ],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-deliverance-ministry",
+      "category": "Spiritual Gifts",
+      "subcategory": "Deliverance",
+      "kind": "practice",
+      "statement": "Demonic activity is real and Christians may need pastoral care including prayer for deliverance, but routinized 'deliverance ministry' that locates a demon behind every sin and trauma is unbalanced.",
+      "scripture_anchors": [
+        "Ephesians 6:12",
+        "Mark 9:14-29",
+        "James 4:7",
+        "1 Peter 5:8-9"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-divine-healing-open",
+      "category": "Spiritual Gifts",
+      "subcategory": "Healing",
+      "kind": "doctrine",
+      "statement": "God can and sometimes does heal in answer to prayer; healing is a sovereign mercy, not a guaranteed outcome.",
+      "scripture_anchors": [
+        "James 5:14-16",
+        "2 Corinthians 12:7-10",
+        "2 Timothy 4:20",
+        "1 Timothy 5:23"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-tongues-real-languages",
+      "category": "Spiritual Gifts",
+      "subcategory": "Tongues",
+      "kind": "doctrine",
+      "statement": "The biblical gift of tongues, as exhibited at Pentecost, is the Spirit-given ability to speak real human languages previously unknown to the speaker, for the sake of intelligible witness.",
+      "scripture_anchors": [
+        "Acts 2:4-11",
+        "1 Corinthians 14:9-11",
+        "1 Corinthians 14:27-28"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-seeker-sensitive-style",
+      "category": "Worship Style",
+      "subcategory": "Service Design",
+      "kind": "practice",
+      "statement": "A seeker-sensitive worship design that downplays Scripture, sin, judgment, or the cross to attract unbelievers compromises worship's God-ward orientation.",
+      "scripture_anchors": [
+        "1 Corinthians 14:23-25",
+        "John 4:23-24",
+        "Hebrews 12:28-29"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-sermon-centered-service",
+      "category": "Worship Style",
+      "subcategory": "Service Design",
+      "kind": "practice",
+      "statement": "Christian worship rightly centers on the public reading and preaching of Scripture, alongside prayer, song, and the Lord's Supper.",
+      "scripture_anchors": [
+        "Acts 2:42",
+        "1 Timothy 4:13",
+        "2 Timothy 4:2",
+        "Nehemiah 8:1-8"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-communion-frequency",
+      "category": "Worship Style",
+      "subcategory": "Lord's Supper",
+      "kind": "practice",
+      "statement": "Weekly observance of the Lord's Supper (the breaking of bread) is the New Testament and historic Brethren pattern.",
+      "scripture_anchors": [
+        "Acts 20:7",
+        "Acts 2:42",
+        "1 Corinthians 11:23-26"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-congregational-singing",
+      "category": "Worship Style",
+      "subcategory": "Music",
+      "kind": "practice",
+      "statement": "Congregational singing (the people of God lifting voices together) is the primary musical mode of Christian worship.",
+      "scripture_anchors": [
+        "Ephesians 5:19",
+        "Colossians 3:16",
+        "Hebrews 13:15",
+        "Psalm 95:1-2"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-instrumentation",
+      "category": "Worship Style",
+      "subcategory": "Music",
+      "kind": "practice",
+      "statement": "Instrumentation in worship is a matter of Christian liberty; simple instrumentation or a cappella worship is honored historically in Brethren practice but not binding on others.",
+      "scripture_anchors": [
+        "Psalm 150",
+        "Ephesians 5:19"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-liturgical-worship",
+      "category": "Worship Style",
+      "subcategory": "Liturgy",
+      "kind": "practice",
+      "statement": "A formal liturgy or lectionary is not commanded but is a permissible Christian-liberty matter when it preserves the gospel and Scripture's primacy.",
+      "scripture_anchors": [
+        "Romans 14:5-6"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-psalm-and-hymn-singing",
+      "category": "Worship Style",
+      "subcategory": "Music",
+      "kind": "practice",
+      "statement": "Singing psalms, hymns, and spiritual songs (including doctrinally rich historic hymns and biblically grounded modern songs) is good and commanded.",
+      "scripture_anchors": [
+        "Ephesians 5:19",
+        "Colossians 3:16",
+        "Psalm 100:1-2"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-sanctity-of-life",
+      "category": "Christian Ethics",
+      "subcategory": "Sanctity of Life",
+      "kind": "doctrine",
+      "statement": "Human life bears the image of God from conception to natural death and is to be protected; intentional taking of innocent unborn human life (abortion) is sin, and pro-choice ethics that treats elective abortion as morally neutral or a Christian-liberty matter is incompatible with biblical anthropology and the sixth commandment.",
+      "scripture_anchors": [
+        "Psalm 139:13-16",
+        "Exodus 20:13",
+        "Jeremiah 1:5",
+        "Luke 1:41-44",
+        "Genesis 1:27",
+        "Proverbs 6:16-17"
+      ],
+      "confessional_anchors": [
+        "Didache 2.2"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-civil-disobedience",
+      "category": "Christian Ethics",
+      "subcategory": "Civil Authority",
+      "kind": "doctrine",
+      "statement": "Christians submit to civil authority as God's servant, but must obey God rather than man when laws command sin or forbid commanded obedience.",
+      "scripture_anchors": [
+        "Romans 13:1-7",
+        "Acts 5:29",
+        "Daniel 3",
+        "Daniel 6"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-euthanasia",
+      "category": "Christian Ethics",
+      "subcategory": "End of Life",
+      "kind": "doctrine",
+      "statement": "Active euthanasia and assisted suicide are wrong; allowing natural death and refusing futile treatment is permitted.",
+      "scripture_anchors": [
+        "Exodus 20:13",
+        "Job 1:21",
+        "Deuteronomy 32:39"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-honesty-and-restitution",
+      "category": "Christian Ethics",
+      "subcategory": "Integrity",
+      "kind": "practice",
+      "statement": "Truth-telling, integrity in word, and restitution where wrong has been done are required Christian practice.",
+      "scripture_anchors": [
+        "Exodus 20:16",
+        "Ephesians 4:25",
+        "Luke 19:8",
+        "Colossians 3:9-10"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-pacifism-vs-just-war",
+      "category": "Christian Ethics",
+      "subcategory": "War & Violence",
+      "kind": "doctrine",
+      "statement": "Just-war and pacifist positions are both held by faithful Christians; Brethren tradition has historically leaned toward pacifism or non-combatant service while not making it absolute.",
+      "scripture_anchors": [
+        "Matthew 5:38-48",
+        "Romans 13:1-7",
+        "Luke 22:36-38"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-tobacco-liberty",
+      "category": "Christian Ethics",
+      "subcategory": "Substances",
+      "kind": "practice",
+      "statement": "Tobacco use is a matter of Christian liberty with health-stewardship cautions, not sin per se.",
+      "scripture_anchors": [
+        "1 Corinthians 6:19-20",
+        "Romans 14:1-12"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-recreational-drugs-sin",
+      "category": "Christian Ethics",
+      "subcategory": "Substances",
+      "kind": "practice",
+      "statement": "Recreational drug use, including illegal drugs and intoxication-aimed cannabis, is sin and lawbreaking.",
+      "scripture_anchors": [
+        "Ephesians 5:18",
+        "Romans 13:1-2",
+        "Galatians 5:21",
+        "1 Corinthians 6:19-20"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-alcohol",
+      "category": "Christian Ethics",
+      "subcategory": "Substances",
+      "kind": "practice",
+      "statement": "Alcohol consumption in moderation is a matter of Christian liberty; drunkenness is sin. Brethren tradition often counsels abstinence or strict moderation.",
+      "scripture_anchors": [
+        "Ephesians 5:18",
+        "1 Timothy 5:23",
+        "John 2:1-11",
+        "Proverbs 20:1",
+        "Romans 14:21"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-capital-punishment",
+      "category": "Christian Ethics",
+      "subcategory": "Civil Justice",
+      "kind": "doctrine",
+      "statement": "Capital punishment for the most serious crimes, administered by lawful civil authority with due process, is permissible (open, with prudential cautions).",
+      "scripture_anchors": [
+        "Genesis 9:6",
+        "Romans 13:1-4",
+        "Numbers 35:30-31"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-gambling",
+      "category": "Christian Ethics",
+      "subcategory": "Money",
+      "kind": "practice",
+      "statement": "Gambling for gain at another's loss is unwise and contrary to neighbor-love; it is to be avoided as a regular practice.",
+      "scripture_anchors": [
+        "1 Timothy 6:9-10",
+        "Proverbs 13:11",
+        "Ephesians 4:28"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-gender-binary",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Gender",
+      "kind": "doctrine",
+      "statement": "God created humanity male and female; biological sex is binary, given by God, and immutable. Transgender ideology (that gender identity supersedes biological sex) is to be rejected.",
+      "scripture_anchors": [
+        "Genesis 1:27",
+        "Matthew 19:4",
+        "Deuteronomy 22:5",
+        "Psalm 139:13-16"
+      ],
+      "confessional_anchors": [],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-marriage-one-man-one-woman",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Definition of Marriage",
+      "kind": "doctrine",
+      "statement": "Marriage is a covenant union of one man and one woman, instituted by God at creation, intended for life, picturing Christ and the church.",
+      "scripture_anchors": [
+        "Genesis 2:24",
+        "Matthew 19:4-6",
+        "Ephesians 5:31-32",
+        "Mark 10:6-9"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 24"
+      ],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-same-sex-sexual-activity",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Sexual Ethics",
+      "kind": "doctrine",
+      "statement": "Same-sex sexual activity is sin, contrary to creation design and the consistent witness of Scripture.",
+      "scripture_anchors": [
+        "Romans 1:26-27",
+        "1 Corinthians 6:9-10",
+        "Leviticus 18:22",
+        "1 Timothy 1:9-10",
+        "Genesis 19"
+      ],
+      "confessional_anchors": [],
+      "tier": "essential",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-divorce-and-remarriage",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Divorce",
+      "kind": "doctrine",
+      "statement": "Marriage is intended for life; divorce is permitted only in cases of sexual immorality (Matt 19) and abandonment by an unbelieving spouse (1 Cor 7); remarriage after such biblically permitted divorce is permissible.",
+      "scripture_anchors": [
+        "Matthew 19:9",
+        "1 Corinthians 7:15",
+        "Malachi 2:16",
+        "Mark 10:11-12"
+      ],
+      "confessional_anchors": [
+        "Westminster Confession 24.5-6"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-pornography",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Sexual Ethics",
+      "kind": "practice",
+      "statement": "Pornography use is sin: adultery of the heart, exploitation of those in the industry, and corrosive of the marriage bed.",
+      "scripture_anchors": [
+        "Matthew 5:27-28",
+        "1 Thessalonians 4:3-5",
+        "Job 31:1",
+        "Psalm 101:3"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-pre-marital-sex-and-cohabitation",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Sexual Ethics",
+      "kind": "doctrine",
+      "statement": "Sexual intimacy is reserved for marriage between one man and one woman; pre-marital sex (fornication) and unmarried cohabitation that includes sexual relations are sin.",
+      "scripture_anchors": [
+        "Hebrews 13:4",
+        "1 Corinthians 6:18-20",
+        "1 Thessalonians 4:3-5",
+        "Ephesians 5:3"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-celibacy-as-gift",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Singleness",
+      "kind": "doctrine",
+      "statement": "Singleness and celibacy are honorable callings, gifts from God, equally valued with marriage.",
+      "scripture_anchors": [
+        "1 Corinthians 7:7-8",
+        "Matthew 19:11-12",
+        "1 Corinthians 7:32-35"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-ivf-reproductive-tech",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Family Planning",
+      "kind": "practice",
+      "statement": "IVF and reproductive technologies are open with serious ethical concerns about embryo destruction, selection, and surrogacy detached from marriage.",
+      "scripture_anchors": [
+        "Psalm 139:13-16",
+        "Genesis 1:27"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-contraception",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Family Planning",
+      "kind": "practice",
+      "statement": "Non-abortifacient contraception is a matter of Christian liberty; abortifacient methods (those that prevent implantation of a fertilized egg) are inconsistent with sanctity-of-life ethics.",
+      "scripture_anchors": [
+        "Genesis 1:28",
+        "Psalm 127:3-5"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-modesty",
+      "category": "Marriage & Sexuality",
+      "subcategory": "Modesty",
+      "kind": "practice",
+      "statement": "Modesty in dress and self-presentation, without legalism, is a Christian virtue rooted in love of neighbor and godly self-restraint.",
+      "scripture_anchors": [
+        "1 Timothy 2:9-10",
+        "1 Peter 3:3-4"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-complementarianism",
+      "category": "Family & Discipleship",
+      "subcategory": "Gender Roles",
+      "kind": "doctrine",
+      "statement": "Complementarianism: men and women are equal in worth and dignity, with distinct, complementary roles; the offices of elder/overseer and the function of authoritative church teaching are reserved for qualified men, husbands have headship and wives respond with willing submission in mutual love and Christ-likeness. Egalitarianism (that all church offices and authoritative-teaching functions are open to women and that no role distinction obtains in marriage) is not the position of this baseline.",
+      "scripture_anchors": [
+        "1 Timothy 2:11-14",
+        "1 Timothy 3:1-7",
+        "Titus 1:5-9",
+        "Ephesians 5:22-33",
+        "1 Corinthians 11:3",
+        "1 Peter 3:1-7"
+      ],
+      "confessional_anchors": [
+        "Danvers Statement"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-fathers-as-disciplers-and-family-worship",
+      "category": "Family & Discipleship",
+      "subcategory": "Family Discipleship",
+      "kind": "practice",
+      "statement": "Fathers bear primary responsibility for the spiritual formation of their children, with mothers; family worship and household catechesis are normal Christian practice.",
+      "scripture_anchors": [
+        "Deuteronomy 6:6-9",
+        "Ephesians 6:4",
+        "Psalm 78:5-7"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-corporal-discipline",
+      "category": "Family & Discipleship",
+      "subcategory": "Parenting",
+      "kind": "practice",
+      "statement": "Loving, measured corporal discipline of young children is permitted by Scripture; abusive practice is sinful and unlawful. Cultural and legal contexts shape application.",
+      "scripture_anchors": [
+        "Proverbs 13:24",
+        "Proverbs 22:15",
+        "Proverbs 29:15",
+        "Hebrews 12:5-11",
+        "Ephesians 6:4"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-financial-transparency",
+      "category": "Money & Stewardship",
+      "subcategory": "Church Finances",
+      "kind": "practice",
+      "statement": "Church finances should be handled with integrity, transparency, plural oversight, and openness to the congregation.",
+      "scripture_anchors": [
+        "2 Corinthians 8:18-21",
+        "Acts 6:1-6"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-grace-giving-vs-mandatory-tithe",
+      "category": "Money & Stewardship",
+      "subcategory": "Giving",
+      "kind": "doctrine",
+      "statement": "Christians are called to generous, proportional, cheerful giving from a willing heart; the mandatory 10% tithe of the Mosaic covenant is not directly binding on the church, though tithing is a useful baseline.",
+      "scripture_anchors": [
+        "2 Corinthians 9:6-8",
+        "1 Corinthians 16:2",
+        "2 Corinthians 8:1-15",
+        "Acts 4:32-35"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-supporting-elders-and-missionaries",
+      "category": "Money & Stewardship",
+      "subcategory": "Giving",
+      "kind": "practice",
+      "statement": "The church is to financially support its elders who labor in the word and its missionaries sent out for the gospel.",
+      "scripture_anchors": [
+        "1 Timothy 5:17-18",
+        "3 John 5-8",
+        "Philippians 4:14-18",
+        "Galatians 6:6"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-social-justice-as-gospel",
+      "category": "Engagement with World",
+      "subcategory": "Social Concern",
+      "kind": "doctrine",
+      "statement": "Biblical justice (care for the poor, the orphan, the widow, the oppressed) is a Christian duty; but ideological 'social justice' that supplants the gospel of forgiveness in Christ with group-based justice is a different gospel.",
+      "scripture_anchors": [
+        "Micah 6:8",
+        "James 1:27",
+        "Galatians 1:6-9",
+        "Isaiah 1:17"
+      ],
+      "confessional_anchors": [],
+      "tier": "convictional",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-christian-nationalism",
+      "category": "Engagement with World",
+      "subcategory": "Politics",
+      "kind": "doctrine",
+      "statement": "Christian nationalism (the fusion of Christian identity with national identity such that the nation-state is treated as a vehicle of Christ's kingdom) is to be regarded with caution and largely rejected.",
+      "scripture_anchors": [
+        "John 18:36",
+        "Revelation 5:9-10",
+        "Philippians 3:20",
+        "Galatians 3:28"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-persecution-expected",
+      "category": "Engagement with World",
+      "subcategory": "Suffering",
+      "kind": "doctrine",
+      "statement": "Persecution and suffering for Christ are normal, expected aspects of Christian discipleship in this age.",
+      "scripture_anchors": [
+        "John 15:18-20",
+        "2 Timothy 3:12",
+        "1 Peter 4:12-19",
+        "Matthew 5:10-12"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-environmental-stewardship",
+      "category": "Engagement with World",
+      "subcategory": "Creation Care",
+      "kind": "practice",
+      "statement": "Caring for creation as God's stewards is a Christian duty, distinct from creation-worship or pantheist environmentalism.",
+      "scripture_anchors": [
+        "Genesis 1:28",
+        "Genesis 2:15",
+        "Psalm 24:1"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-political-engagement",
+      "category": "Engagement with World",
+      "subcategory": "Politics",
+      "kind": "practice",
+      "statement": "Christians are free to engage politically (voting, advocacy, public service) as a form of neighbor-love, while the church's mission is the gospel and not partisan alignment.",
+      "scripture_anchors": [
+        "Jeremiah 29:7",
+        "1 Timothy 2:1-2",
+        "Romans 13:1-7"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-schooling-options",
+      "category": "Engagement with World",
+      "subcategory": "Schooling",
+      "kind": "practice",
+      "statement": "Public schooling, Christian schooling, and homeschooling are all permissible Christian approaches; parental responsibility for discipleship remains primary regardless.",
+      "scripture_anchors": [
+        "Deuteronomy 6:6-9",
+        "Ephesians 6:4"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-lords-day-primacy",
+      "category": "Calendar & Customs",
+      "subcategory": "Lord's Day",
+      "kind": "doctrine",
+      "statement": "The first day of the week, the Lord's Day, is the appointed Christian gathering day in honor of Christ's resurrection.",
+      "scripture_anchors": [
+        "Acts 20:7",
+        "1 Corinthians 16:2",
+        "Revelation 1:10",
+        "John 20:19"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-saturday-sabbatarianism",
+      "category": "Calendar & Customs",
+      "subcategory": "Sabbath",
+      "kind": "doctrine",
+      "statement": "Mandatory Saturday Sabbath observance for Christians (Seventh-Day Adventism, Hebrew Roots) is rejected; the moral principle of one-in-seven rest stands, but binding the Saturday Sabbath on Christians is contrary to NT teaching.",
+      "scripture_anchors": [
+        "Colossians 2:16-17",
+        "Romans 14:5-6",
+        "Galatians 4:9-11",
+        "Hebrews 4:9-10"
+      ],
+      "confessional_anchors": [],
+      "tier": "important",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-christmas-easter-observance",
+      "category": "Calendar & Customs",
+      "subcategory": "Holy Days",
+      "kind": "practice",
+      "statement": "Observance of Christmas and Easter (Resurrection Sunday) is permissible Christian liberty; Brethren tradition is divided, with many observing and some rejecting the calendar as Roman accretion.",
+      "scripture_anchors": [
+        "Romans 14:5-6",
+        "Colossians 2:16-17"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "prc-halloween",
+      "category": "Calendar & Customs",
+      "subcategory": "Holy Days",
+      "kind": "practice",
+      "statement": "Active participation in occult or death-glorifying aspects of Halloween is rejected; harmless cultural participation (costumes, neighbor-friendly engagement) is a matter of conscience.",
+      "scripture_anchors": [
+        "Deuteronomy 18:9-12",
+        "Ephesians 5:11",
+        "1 Corinthians 10:31"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-lent-and-saint-days",
+      "category": "Calendar & Customs",
+      "subcategory": "Holy Days",
+      "kind": "practice",
+      "statement": "Lent, Ash Wednesday, and saint-days are not commanded; Brethren typically do not observe. Personal fasting and reflection are commendable; treating the calendar as binding is rejected.",
+      "scripture_anchors": [
+        "Romans 14:5-6",
+        "Colossians 2:16-17"
+      ],
+      "confessional_anchors": [],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    },
+    {
+      "id": "het-serpent-seed-anthropology",
+      "category": "Heterodoxy Marker",
+      "subcategory": "Anthropology",
+      "kind": "doctrine",
+      "statement": "Eve's sin in Eden was not sexual intercourse with Satan; Cain was not Satan's biological son; humanity is one race in Adam. Serpent Seed anthropology and racialised genealogical heresies are rejected.",
+      "scripture_anchors": [
+        "Genesis 3",
+        "Genesis 4:1",
+        "Acts 17:26",
+        "Romans 5:12-19"
+      ],
+      "confessional_anchors": [
+        "historic Christian consensus"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "heterodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "cult-discipling-control",
+      "category": "Cult Marker",
+      "subcategory": "Authoritarian Shepherding",
+      "kind": "practice",
+      "statement": "Authoritarian 'discipling' or shepherding regimes that require submission of every life decision to a discipler / shepherd / apostle are spiritual abuse and cult-grade in pattern, regardless of the surrounding doctrinal statement.",
+      "scripture_anchors": [
+        "Matthew 23:8-12",
+        "1 Peter 5:1-4",
+        "2 Corinthians 1:24",
+        "Galatians 5:1"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (priesthood of all believers)"
+      ],
+      "tier": "convictional",
+      "historical_consensus": "orthodox",
+      "brethren_distinctive": false
+    },
+    {
+      "id": "prc-women-non-teaching-platform-leadership",
+      "category": "Worship Structure",
+      "subcategory": "Order in Assembly",
+      "kind": "practice",
+      "statement": "Women may take up non-teaching platform-leadership roles in the gathered mixed assembly (leading congregational singing, leading public prayer, reading Scripture, sharing testimony, making announcements) without exercising authoritative teaching.",
+      "scripture_anchors": [
+        "1 Corinthians 11:5",
+        "Romans 16:1-2",
+        "Acts 18:26",
+        "Acts 21:9"
+      ],
+      "confessional_anchors": [
+        "Brethren tradition (varies by assembly)"
+      ],
+      "tier": "preference",
+      "historical_consensus": "divided",
+      "brethren_distinctive": true
+    }
+  ]
+}

@@ -61,7 +61,7 @@ def upsert_chunk(driver: Driver, rec: ChunkRecord, embedding: list[float] | None
 
 
 def chunk_count(driver: Driver) -> dict[str, int]:
-    """Return {label: count} for SermonChunk and SOFChunk — health check."""
+    """Return {label: count} for SermonChunk and SOFChunk. Health check."""
     out: dict[str, int] = {}
     with driver.session() as session:
         for label in ("SermonChunk", "SOFChunk", "Concept"):

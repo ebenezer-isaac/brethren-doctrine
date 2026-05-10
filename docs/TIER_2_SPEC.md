@@ -1,4 +1,4 @@
-# Tier 2 Implementation Spec — Semantic + Graph Layer
+# Tier 2 Implementation Spec: Semantic + Graph Layer
 
 Status: design-locked draft. Synthesized from `research/embeddings_2026.md`,
 `research/graphrag_2026.md`, `research/bible_data_sources_2026.md`,
@@ -23,7 +23,7 @@ Five queries the system must answer:
 4. *"Find sermon chunks that paraphrase Romans 6:1–4 without quoting it
    verbatim."* (dense recall on `voyage-context-3` plus BM25 fallback for the
    handful of literal references.)
-5. *"Score this 600-word doctrinal statement against my SOF — section-by-section
+5. *"Score this 600-word doctrinal statement against my SOF: section-by-section
    alignment, citations, and any divergences."* (`evaluate_statement_of_faith`
    tool exercising the full envelope.)
 
@@ -34,7 +34,7 @@ Success bar:
 - Embedding spend $0/month while the Voyage 200M-token free tier holds (per
   `embeddings_2026.md` §4b).
 - Every retrieved item carries `authority_level` and `source_type` so the LLM
-  can hedge correctly — non-negotiable for theological discernment use.
+  can hedge correctly. Non-negotiable for theological discernment use.
 
 ---
 
@@ -55,13 +55,13 @@ clears the success bar.
 
 Rationale shorthand:
 - **Qdrant over Neo4j-only vector**: 50k nodes × 4 translations + ~700k interlinear words push embedding count past 500k, where Qdrant out-recalls Neo4j HNSW (`graphrag_2026.md` §1). `QdrantNeo4jRetriever` keeps orchestration first-party.
-- **Neo4j over Postgres+AGE**: 3–5 hop traversals with property filters at every hop are AGE's worst case (`graphrag_2026.md` §1).
+- **Neo4j over Postgres+AGE**: 3 to 5 hop traversals with property filters at every hop are AGE's worst case (`graphrag_2026.md` §1).
 - **FastMCP 3.x**: 70%+ install share, Feb-2026 added OAuth + OTel; backend is Python anyway (`mcp_server_2026.md` §2).
 - **`neo4j-graphrag-python` over LlamaIndex**: first-party `QdrantNeo4jRetriever` + template Cypher cuts hallucinated traversals 23% → <4% (`graphrag_2026.md` §4).
 
 ---
 
-## 3. Data Model — Neo4j Schema
+## 3. Data Model: Neo4j Schema
 
 Single shared ontology, namespaced by label prefix (per `graphrag_2026.md` §2).
 One Neo4j database. Authority lives as a **property on every retrievable
@@ -73,7 +73,7 @@ weight in one expression.
 ```cypher
 // Bible canonical text, one node per OSIS verse_id
 (:Verse {
-  verse_id,            // OSIS, e.g. 'Rom.8.1' — UNIQUE
+  verse_id,            // OSIS, e.g. 'Rom.8.1', UNIQUE
   book_osis, chapter, verse, testament,
   translations,        // map<trans_code, text>
   embedding,           // 1024-dim, voyage-context-3
@@ -82,7 +82,7 @@ weight in one expression.
 
 // Original-language word, one per Strong's-disambiguated lemma
 (:Token:Hebrew | :Token:Greek {
-  strongs,             // extended form, e.g. 'G0026' — UNIQUE
+  strongs,             // extended form, e.g. 'G0026', UNIQUE
   lemma, transliteration, morph,
   gloss_short, gloss_long,
   embedding,           // optional; populate for top-N salient tokens
@@ -91,7 +91,7 @@ weight in one expression.
 
 // Sermon-note chunk from parsed/*.json
 (:SermonChunk {
-  chunk_id,            // doc_slug + index — UNIQUE
+  chunk_id,            // doc_slug + index, UNIQUE
   source_doc,          // filename only, never personal name
   text,                // verbatim chunk content
   type,                // teaching|quote|perspective|application|definition|illustration|...
@@ -110,9 +110,9 @@ weight in one expression.
   authority_level      // 3
 })
 
-// Concept / theme node — the join table for cross-domain reasoning
+// Concept / theme node, the join table for cross-domain reasoning
 (:Concept {
-  name,                // canonical, e.g. 'imputed_righteousness' — UNIQUE
+  name,                // canonical, e.g. 'imputed_righteousness', UNIQUE
   aliases,             // list<string>
   domain,              // soteriology|ecclesiology|...
   embedding
@@ -164,7 +164,7 @@ CREATE CONSTRAINT concept_name_uq IF NOT EXISTS
 CREATE CONSTRAINT figure_name_uq IF NOT EXISTS
   FOR (f:Figure) REQUIRE f.name IS UNIQUE;
 
-// Vector indexes (1024 dim, COSINE — voyage-context-3 default)
+// Vector indexes (1024 dim, COSINE, voyage-context-3 default)
 CREATE VECTOR INDEX verse_embed       IF NOT EXISTS
   FOR (v:Verse)       ON v.embedding       OPTIONS { indexConfig: {`vector.dimensions`: 1024, `vector.similarity_function`: 'COSINE'} };
 CREATE VECTOR INDEX sermon_chunk_embed IF NOT EXISTS
@@ -225,7 +225,7 @@ Output: `chunks/sermons.jsonl` (one chunk per line). SOF chunks go to
 `chunks/sof.jsonl` with `authority_level: 3` and `section` extracted from the
 filename (`sof_god.json` → `god`).
 
-No re-chunking — Tier 1's chunks (100–600 words) fit `voyage-context-3`'s 32k
+No re-chunking. Tier 1's chunks (100 to 600 words) fit `voyage-context-3`'s 32k
 ctx; each embeds as one vector with the parent doc passed as `context`.
 
 ### 4.b Bible text ingest
@@ -234,7 +234,7 @@ Per `bible_data_sources_2026.md` §1, in this exact order:
 
 1. `git clone https://github.com/STEPBible/STEPBible-Data data/private/stepbible`.
    Load TAHOT (Hebrew OT) + TAGNT (Greek NT) TSVs via `pandas.read_csv(sep='\t', comment='#')`.
-   Each row → a `Verse`-or-`Token` upsert. `verse_id` is OSIS.
+   Each row becomes a `Verse`-or-`Token` upsert. `verse_id` is OSIS.
 2. `git clone https://github.com/openscriptures/morphhb data/private/oshb`.
    Parse OSIS XML with `lxml`; cross-validate token counts vs TAHOT,
    write diffs to `logs/oshb_vs_tahot.diff`.
@@ -243,12 +243,12 @@ Per `bible_data_sources_2026.md` §1, in this exact order:
 5. Load TTESV (ESV with Strong's already mapped) → `Verse.translations.ESV`
    plus `(:Verse)-[:CONTAINS_TOKEN]->(:Token)` edges.
 6. ESV / NLT / NIV / NKJV / KJV via API (`httpx` + `tenacity` + `diskcache`).
-   Cache aggressively — text is static. Store private translations under
+   Cache aggressively; text is static. Store private translations under
    `data/private/`; gitignore.
 
 ### 4.c Interlinear (Hebrew/Greek)
 
-Side effect of 4.b — STEPBible is the single backbone. OSHB + MorphGNT are
+Side effect of 4.b. STEPBible is the single backbone. OSHB + MorphGNT are
 loaded as second witnesses for QA only; we flag mismatches, do not duplicate
 token nodes (`bible_data_sources_2026.md` §1.1).
 
@@ -311,7 +311,7 @@ Embeddings are written to Qdrant first; Neo4j stores the same chunk_id and
 optionally a copy of the embedding for graph-side ANN entry points
 (`Verse.embedding`, `Concept.embedding`, `SermonChunk.embedding`). Outbox
 table (`outbox_events`) ensures dual-write consistency: Neo4j tx writes the
-graph + an outbox row; a worker drains outbox → Qdrant; row deleted on ack.
+graph + an outbox row; a worker drains outbox into Qdrant; row deleted on ack.
 Per `graphrag_2026.md` §4 step 7: add the outbox before Qdrant goes live, not
 after.
 
@@ -339,7 +339,7 @@ inference downstream.
 Server-side in Qdrant where possible (`hybrid_search_rerank_2026.md` §1). K
 values tuned high (80/80 → 60) because theology is paraphrase-heavy.
 
-### Stage 0 — Intent routing
+### Stage 0: Intent routing
 
 Cheap regex + small classifier returns `{bm25_w, dense_w, use_graph}`:
 
@@ -350,11 +350,11 @@ def route(query: str) -> Routing:
     if NAMED_FIGURE_RE.search(query):
         return Routing(bm25_w=0.6, dense_w=0.4, use_graph=True)
     if any(w in query.lower() for w in ("vs", "versus", "differ", "disagree")):
-        return Routing(bm25_w=0.3, dense_w=0.7, use_graph=True)  # comparative → graph traversal
+        return Routing(bm25_w=0.3, dense_w=0.7, use_graph=True)  # comparative; graph traversal
     return Routing(bm25_w=0.5, dense_w=0.5, use_graph=False)
 ```
 
-### Stage 1 — Parallel hybrid retrieval, K=80 each
+### Stage 1: Parallel hybrid retrieval, K=80 each
 
 One Qdrant Query-API call:
 
@@ -376,13 +376,13 @@ If Stage 0 set `use_graph=True`: in parallel, run a Cypher hop-1 query from
 matched scripture/figure/concept nodes via the `VectorCypherRetriever`, cap 40
 chunks. Merge into the fusion input.
 
-### Stage 2 — Weighted RRF
+### Stage 2: Weighted RRF
 
 Use Qdrant's `Fusion.RRF` (`k=60`) with per-source weights from Stage 0. RRF
 beats alpha-weighted normalization here because BM25 and cosine scores live in
 different distributions (`hybrid_search_rerank_2026.md` §1).
 
-### Stage 3 — Cross-encoder rerank, 60 → 10
+### Stage 3: Cross-encoder rerank, 60 → 10
 
 ```python
 from sentence_transformers import CrossEncoder
@@ -396,7 +396,7 @@ pairs = [(query, tag(d)) for d in fused]
 scores = reranker.predict(pairs, batch_size=16)
 ```
 
-### Stage 4 — Authority + recency boost
+### Stage 4: Authority + recency boost
 
 ```python
 final = rerank_score \
@@ -405,12 +405,12 @@ final = rerank_score \
       - 0.05 * is_speculative_flag
 ```
 
-Caps small (`hybrid_search_rerank_2026.md` §4) — authority nudges ties, never overrides.
+Caps small (`hybrid_search_rerank_2026.md` §4). Authority nudges ties, never overrides.
 
-### Stage 5 — Graph expansion (route-flagged): hop-1 Cypher per top-K chunk
+### Stage 5: Graph expansion (route-flagged): hop-1 Cypher per top-K chunk
 (verses, concepts, opposing-stance peers) → `graph_context`.
 
-### Stage 6 — Contradiction surface: query (b) from `graphrag_2026.md` §3 over the top-K set; opposing-stance pairs → `disagreements: []`.
+### Stage 6: Contradiction surface: query (b) from `graphrag_2026.md` §3 over the top-K set; opposing-stance pairs → `disagreements: []`.
 
 ### Response envelope (returned to caller and to MCP clients)
 
@@ -440,7 +440,7 @@ Caps small (`hybrid_search_rerank_2026.md` §4) — authority nudges ties, never
 
 ## 6. MCP Tool Surface
 
-Five tools — within Phil Schmid's 5–15 sweet spot
+Five tools, within Phil Schmid's 5 to 15 sweet spot
 (`mcp_server_2026.md` §1). All return the uniform envelope from §5.
 
 ```jsonc
@@ -466,7 +466,7 @@ Five tools — within Phil Schmid's 5–15 sweet spot
     "cursor": "string?"
   } }
 
-// 3. Multi-perspective doctrine retrieval — surfaces the contradiction graph.
+// 3. Multi-perspective doctrine retrieval. Surfaces the contradiction graph.
 { "name": "get_doctrine_perspectives",
   "input": {
     "theme": "string",
@@ -496,7 +496,7 @@ Qdrant/Neo4j tools. Each exposed tool maps to a workflow the user actually
 performs (`mcp_server_2026.md` §1).
 
 URI scheme for citations:
-`brethren://{source_type}/{slug}#chunk-{n}` — e.g.
+`brethren://{source_type}/{slug}#chunk-{n}`. Examples:
 `brethren://sermon/baptism_and_communion#chunk-02`,
 `brethren://sof/god_the_son#section-3.2`,
 `brethren://verse/Rom.8.28`.
@@ -507,11 +507,11 @@ URI scheme for citations:
 
 ```
 brethren-doctrine/
-├── chunks/                       # NEW — JSONL output of build_chunk_payloads.py
+├── chunks/                       # NEW. JSONL output of build_chunk_payloads.py
 │   ├── sermons.jsonl
 │   └── sof.jsonl
 ├── data/
-│   └── private/                  # NEW — gitignored
+│   └── private/                  # NEW, gitignored
 │       ├── stepbible/            # git submodule of STEPBible-Data
 │       ├── oshb/                 # git submodule of openscriptures/morphhb
 │       └── translations/         # cached JSON from ESV/NLT/api.bible
@@ -541,7 +541,7 @@ brethren-doctrine/
 │   ├── boost.py                  # Stage 4: authority + recency
 │   ├── graph_expand.py           # Stage 5: Cypher hop-1
 │   └── contradictions.py         # Stage 6: opposing-stance scan
-├── server/                       # NEW — FastMCP 3.x server
+├── server/                       # NEW. FastMCP 3.x server
 │   ├── main.py                   # FastMCP() + tool registrations
 │   ├── tools/
 │   │   ├── search_bible_interlinear.py
@@ -551,7 +551,7 @@ brethren-doctrine/
 │   │   └── evaluate_statement_of_faith.py
 │   └── envelope.py               # uniform response envelope helpers
 ├── eval/                         # NEW
-│   ├── gold_set.jsonl            # 30–50 query × expected-chunk_id pairs
+│   ├── gold_set.jsonl            # 30 to 50 query × expected-chunk_id pairs
 │   ├── run_eval.py               # recall@10, nDCG@10, MRR
 │   └── results/                  # per-run JSON + markdown report
 ├── docker/                       # NEW
@@ -565,7 +565,7 @@ brethren-doctrine/
 
 ## 8. Implementation Milestones
 
-Five milestones, dependency-ordered. S = 1–2 days, M = 3–7 days, L = 2 weeks.
+Five milestones, dependency-ordered. S = 1 to 2 days, M = 3 to 7 days, L = 2 weeks.
 
 | # | Name | Build | Testable when | Effort |
 |---|---|---|---|---|
@@ -574,7 +574,7 @@ Five milestones, dependency-ordered. S = 1–2 days, M = 3–7 days, L = 2 weeks
 | M3 | Bible + interlinear | STEPBible/OSHB/MorphGNT loaders, TBESH/TBESG glosses, ESV via API | Cypher query (c) §3 returns Hebrew/Greek under "love" for a chosen passage; gold-set scripture intents pass | M |
 | M4 | Hybrid retrieval + rerank + boost | `router`, `hybrid`, `rerank`, `boost`, `graph_expand`, `contradictions`; 30-query gold set | `recall@10 ≥ 0.90`, `nDCG@10 ≥ 0.75`, p95 < 1500 ms; toggling boost moves SOF above sermons on ambiguous queries | M |
 | M5 | MCP server | FastMCP 3.x, all 5 tools, uniform envelope, opaque cursor pagination, `no_results` + `ambiguous` paths populated, stdio | `tools_eval.py` (happy/no-result/ambiguous/adversarial) all envelopes valid; Claude Desktop runs `evaluate_statement_of_faith` end-to-end | M |
-| M6 | Cross-doc perspectives + archaeology | Emit `PRESENTS_PERSPECTIVE_ON` from `parsed/_perspectives.json`; Open Context client for Levant bbox `[34,29,39,34]` | Query (b) §3 surfaces real disagreements; archaeology tool returns ≥3 Open Context records for "Capernaum" | S–M |
+| M6 | Cross-doc perspectives + archaeology | Emit `PRESENTS_PERSPECTIVE_ON` from `parsed/_perspectives.json`; Open Context client for Levant bbox `[34,29,39,34]` | Query (b) §3 surfaces real disagreements; archaeology tool returns ≥3 Open Context records for "Capernaum" | S to M |
 | M7 | Production hardening | Streamable-HTTP (`stateless_http=True, json_response=True`), health checks, snapshot backup, re-embed migration script | `curl` against HTTP endpoint works; snapshot restore clean; `voyage-context-3` → `voyage-4-large` swap in <30 min | S |
 | M8 | Bible translation expansion (optional) | NIV/NKJV/NLT/KJV adapters via api.bible + nlt.to with diskcache | `search_bible_interlinear(reference="Rom 8:28", versions=['ESV','NIV','KJV','NLT'])` returns all four | S |
 
@@ -586,18 +586,18 @@ Numbers in 2026 USD, single-user / personal-use load.
 
 | Line item | One-shot | Monthly |
 |---|---|---|
-| Embeddings — `voyage-context-3` for entire corpus (~7–8M tokens, per `embeddings_2026.md` §4b) | **$0** (200M-token free tier covers it ~25×) | **$0** baseline; deltas (~50–500k tokens / month for new sermons) also free |
-| Reranker — BGE-reranker-v2-m3 self-host on CPU, in-process | $0 | **$0** |
-| Vector DB — Qdrant self-host (Docker, ~200 MB at 50k vectors per `embeddings_2026.md` §4c) | $0 | **$0** locally; **$0** on Qdrant Cloud free tier (1 GB) |
-| Knowledge graph — Neo4j Community (Docker) on personal machine | $0 | **$0** locally; if pushed to Aura Free, **$0** (50k-node ceiling matches our scale) |
-| MCP server hosting — stdio for desktop, fly.io shared-cpu-1x if HTTP needed | $0 | **$0** stdio only; **~$2** if HTTP-hosted |
-| Bible API calls — ESV / NLT / api.bible (cached) | $0 | **$0** within free tiers (5k/mo api.bible) |
-| Open Context — public CC BY API | $0 | **$0** |
+| Embeddings: `voyage-context-3` for entire corpus (~7 to 8M tokens, per `embeddings_2026.md` §4b) | **$0** (200M-token free tier covers it ~25×) | **$0** baseline; deltas (~50 to 500k tokens / month for new sermons) also free |
+| Reranker: BGE-reranker-v2-m3 self-host on CPU, in-process | $0 | **$0** |
+| Vector DB: Qdrant self-host (Docker, ~200 MB at 50k vectors per `embeddings_2026.md` §4c) | $0 | **$0** locally; **$0** on Qdrant Cloud free tier (1 GB) |
+| Knowledge graph: Neo4j Community (Docker) on personal machine | $0 | **$0** locally; if pushed to Aura Free, **$0** (50k-node ceiling matches our scale) |
+| MCP server hosting: stdio for desktop, fly.io shared-cpu-1x if HTTP needed | $0 | **$0** stdio only; **~$2** if HTTP-hosted |
+| Bible API calls: ESV / NLT / api.bible (cached) | $0 | **$0** within free tiers (5k/mo api.bible) |
+| Open Context: public CC BY API | $0 | **$0** |
 | Cohere reranker (only if BGE self-host fails) | n/a | **~$2** at single-digit QPS |
 | Voyage AI overflow (only if free tier exhausted) | n/a | **~$1.50** worst case ($0.18/1M × 8M tokens monthly delta) |
-| **Expected total** | **$0** | **$0–$5** |
+| **Expected total** | **$0** | **$0 to $5** |
 
-Worst case <$10/month. No LLM inference cost in this layer — Claude Max 20
+Worst case <$10/month. No LLM inference cost in this layer; Claude Max 20
 covers orchestration.
 
 ---
@@ -618,16 +618,16 @@ covers orchestration.
 - Audio/video transcription path: Whisper self-host, Whisper API, or deferred? Required if `parsed/_pending_transcription/` enters M2.
 - Open Context bbox: is Levant `[34,29,39,34]` enough, or expand to Egypt + Asia Minor for later books?
 - Public-facing surface: Flutter app in scope at M5 (HTTP), or stdio + Claude Desktop only?
-- Embedding spend ceiling if Voyage free tier ends — pay up to $X, or hard switch to BGE-M3?
+- Embedding spend ceiling if Voyage free tier ends: pay up to $X, or hard switch to BGE-M3?
 
 ---
 
-## 11. Build Order — First 3 Steps
+## 11. Build Order: First 3 Steps
 
 Smallest viable slice that proves the architecture E2E. No other Tier-2 work
 starts until green.
 
-### Step 1 — Stand up Neo4j + Qdrant locally, apply schema (≈ half a day)
+### Step 1: Stand up Neo4j + Qdrant locally, apply schema (≈ half a day)
 
 ```powershell
 # docker/docker-compose.yml: neo4j:5-community + qdrant/qdrant + APOC mounted
@@ -639,7 +639,7 @@ python -m embeddings.bootstrap_qdrant
 Done when both services start clean, all constraints + vector indexes show in
 `SHOW INDEXES`, and Qdrant returns the `chunks` collection schema.
 
-### Step 2 — Ingest the existing 15 parsed/*.json into both stores (≈ 1–2 days)
+### Step 2: Ingest the existing 15 parsed/*.json into both stores (≈ 1 to 2 days)
 
 `ingest/adapters/sermon_loader.py` + `sof_loader.py` →
 `build_chunk_payloads.py` → `embed_and_load.py`.
@@ -653,11 +653,11 @@ Done when:
   `MATCH (c:SermonChunk)-[:MENTIONS]->(k:Concept {name:'believers baptism'}) RETURN c.chunk_id, c.source_doc LIMIT 5`
   returns expected chunks from `baptism_and_communion.json`.
 
-### Step 3 — Wire hybrid retrieval + reranker behind a one-shot CLI (≈ 2 days)
+### Step 3: Wire hybrid retrieval + reranker behind a one-shot CLI (≈ 2 days)
 
 `retrieval/router.py` + `hybrid.py` + `rerank.py` exposed as
 `python -m retrieval.cli "what do the notes say about communion?"` returning
-the §5 envelope (without graph expansion / contradictions yet — those land
+the §5 envelope (without graph expansion / contradictions yet; those land
 in M4/M6).
 
 Done when:

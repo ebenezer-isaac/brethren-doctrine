@@ -13,7 +13,7 @@ from retrieval.hybrid import Hit
 
 CITATION_BASE = "brethren://"
 
-# Stage 4 caps from spec §5 — authority nudges ties, never overrides rerank.
+# Stage 4 caps from spec §5. Authority nudges ties, never overrides rerank.
 AUTHORITY_BOOST = 0.08
 
 

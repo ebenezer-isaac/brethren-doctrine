@@ -44,10 +44,11 @@ def search(
     started = time.time()
 
     routing = route(query)
-    console.print(
-        f"[dim]intent={routing.intent}  bm25_w={routing.bm25_w}  dense_w={routing.dense_w}  "
-        f"use_graph={routing.use_graph}[/dim]"
-    )
+    if pretty:
+        console.print(
+            f"[dim]intent={routing.intent}  bm25_w={routing.bm25_w}  dense_w={routing.dense_w}  "
+            f"use_graph={routing.use_graph}[/dim]"
+        )
 
     qc = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6433"), prefer_grpc=False)
     vo = voyageai.Client(api_key=os.getenv("VOYAGE_API_KEY"))

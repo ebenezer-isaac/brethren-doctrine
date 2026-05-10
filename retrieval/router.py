@@ -1,4 +1,4 @@
-"""Stage 0 intent routing — cheap regex-driven classifier.
+"""Stage 0 intent routing. Cheap regex-driven classifier.
 
 Per docs/TIER_2_SPEC.md §5 Stage 0. Returns weights for hybrid fusion plus a
 flag for whether to run graph-side expansion. Graph traversal lands in M4-M6;
@@ -26,7 +26,7 @@ _OSIS_BOOKS = (
 SCRIPTURE_RE = re.compile(rf"\b(?:{_OSIS_BOOKS})\.?\s*\d+(?::\d+(?:[-,]\d+)?)?", re.IGNORECASE)
 
 # Theologian / movement names that meaningfully shift retrieval toward exact-name
-# matching. Kept narrow on purpose — broader name lists were rejected as noisy
+# matching. Kept narrow on purpose; broader name lists were rejected as noisy
 # (false positives like "John" the gospel collide with the apostle name).
 NAMED_FIGURE_RE = re.compile(
     r"\b(?:Calvin|Luther|Augustine|Aquinas|Wesley|Spurgeon|Piper|Ryrie|"
