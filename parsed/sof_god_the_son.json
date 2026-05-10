@@ -1,0 +1,282 @@
+{
+  "doc_slug": "sof_god_the_son",
+  "source_type": "docx",
+  "source_mtime": "2026-05-10T00:26:05+01:00",
+  "ingested_at": "2026-05-10T00:00:00Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "Statement of Faith — God the Son (Jesus)",
+    "estimated_date": null,
+    "session_topic": "Statement-of-faith outline on the person and work of Jesus Christ: deity, incarnation, sinlessness, hypostatic union, substitutionary atonement, burial, resurrection, ascension, present priestly intercession, and bodily second coming.",
+    "topic_clusters": ["Christology", "Soteriology", "Eschatology", "Theology Proper"],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "Gal 4:4", "book": "Galatians", "chapter": 4, "verse_start": 4, "verse_end": 4, "normalized": "Gal 4:4"},
+    {"raw": "Matthew 1:21", "book": "Matthew", "chapter": 1, "verse_start": 21, "verse_end": 21, "normalized": "Matt 1:21"},
+    {"raw": "John 1:1-2", "book": "John", "chapter": 1, "verse_start": 1, "verse_end": 2, "normalized": "John 1:1-2"},
+    {"raw": "Hebrews 1:3", "book": "Hebrews", "chapter": 1, "verse_start": 3, "verse_end": 3, "normalized": "Heb 1:3"},
+    {"raw": "John 3:16", "book": "John", "chapter": 3, "verse_start": 16, "verse_end": 16, "normalized": "John 3:16"},
+    {"raw": "Isaiah 7:14", "book": "Isaiah", "chapter": 7, "verse_start": 14, "verse_end": 14, "normalized": "Isa 7:14"},
+    {"raw": "Matthew 1:20", "book": "Matthew", "chapter": 1, "verse_start": 20, "verse_end": 20, "normalized": "Matt 1:20"},
+    {"raw": "1 John 3:5", "book": "1 John", "chapter": 3, "verse_start": 5, "verse_end": 5, "normalized": "1John 3:5"},
+    {"raw": "2 Corinthians 5:21", "book": "2 Corinthians", "chapter": 5, "verse_start": 21, "verse_end": 21, "normalized": "2Cor 5:21"},
+    {"raw": "1 Peter 2:22", "book": "1 Peter", "chapter": 2, "verse_start": 22, "verse_end": 22, "normalized": "1Pet 2:22"},
+    {"raw": "Philippians 2:6-8", "book": "Philippians", "chapter": 2, "verse_start": 6, "verse_end": 8, "normalized": "Phil 2:6-8"},
+    {"raw": "John 1:14", "book": "John", "chapter": 1, "verse_start": 14, "verse_end": 14, "normalized": "John 1:14"},
+    {"raw": "Luke 2:52", "book": "Luke", "chapter": 2, "verse_start": 52, "verse_end": 52, "normalized": "Luke 2:52"},
+    {"raw": "1 Peter 2:23-24", "book": "1 Peter", "chapter": 2, "verse_start": 23, "verse_end": 24, "normalized": "1Pet 2:23-24"},
+    {"raw": "1 John 2:1-2", "book": "1 John", "chapter": 2, "verse_start": 1, "verse_end": 2, "normalized": "1John 2:1-2"},
+    {"raw": "Hebrews 9:28", "book": "Hebrews", "chapter": 9, "verse_start": 28, "verse_end": 28, "normalized": "Heb 9:28"},
+    {"raw": "1 Corinthians 15:3-4", "book": "1 Corinthians", "chapter": 15, "verse_start": 3, "verse_end": 4, "normalized": "1Cor 15:3-4"},
+    {"raw": "Phil 2:8", "book": "Philippians", "chapter": 2, "verse_start": 8, "verse_end": 8, "normalized": "Phil 2:8"},
+    {"raw": "John 10:17-18", "book": "John", "chapter": 10, "verse_start": 17, "verse_end": 18, "normalized": "John 10:17-18"},
+    {"raw": "Acts 1:9-11", "book": "Acts", "chapter": 1, "verse_start": 9, "verse_end": 11, "normalized": "Acts 1:9-11"},
+    {"raw": "Hebrews 4:15", "book": "Hebrews", "chapter": 4, "verse_start": 15, "verse_end": 15, "normalized": "Heb 4:15"},
+    {"raw": "1 Timothy 2:5", "book": "1 Timothy", "chapter": 2, "verse_start": 5, "verse_end": 5, "normalized": "1Tim 2:5"},
+    {"raw": "Romans 8:34", "book": "Romans", "chapter": 8, "verse_start": 34, "verse_end": 34, "normalized": "Rom 8:34"},
+    {"raw": "1 Thessalonians 4:16", "book": "1 Thessalonians", "chapter": 4, "verse_start": 16, "verse_end": 16, "normalized": "1Thess 4:16"}
+  ],
+
+  "theological_themes": [
+    "deity of Christ",
+    "eternal preexistence of the Son",
+    "incarnation",
+    "virgin birth",
+    "Holy Spirit conception",
+    "Messianic identity",
+    "sinlessness of Christ",
+    "hypostatic union",
+    "kenosis (self-emptying)",
+    "substitutionary atonement",
+    "propitiation",
+    "penal substitution",
+    "burial of Christ",
+    "bodily resurrection",
+    "ascension",
+    "session at the right hand of God",
+    "Christ as High Priest",
+    "Christ as Mediator",
+    "Christ as Advocate",
+    "intercession of Christ",
+    "bodily second coming",
+    "Trinity"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "sof_god_the_son_01",
+      "type": "definition",
+      "content": "God the Son. Gal 4:4 — 'But when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law.' This identifies Jesus as 'God the Son,' the second Person of the Godhead, sent by the Father in the fullness of time and incarnated through human birth under the Mosaic law.",
+      "scripture_refs": ["Gal 4:4"],
+      "themes": ["deity of Christ", "incarnation", "Trinity"],
+      "claims": [
+        "Jesus is God the Son.",
+        "The Son was sent forth by the Father at the appointed time ('fullness of the time').",
+        "The Son was born of a woman, taking true human nature.",
+        "The Son was born under the law."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_god_the_son_02",
+      "type": "definition",
+      "content": "The Lord Jesus Christ. Matthew 1:21 — 'And she will bring forth a Son, and you shall call His name JESUS, for He will save His people from their sins.' His given name 'Jesus' (Yeshua, 'Yahweh saves') itself encodes His mission: to save His people from their sins.",
+      "scripture_refs": ["Matt 1:21"],
+      "themes": ["Messianic identity", "substitutionary atonement"],
+      "claims": [
+        "The Son's incarnate name is Jesus.",
+        "The name 'Jesus' is given because He will save His people from their sins.",
+        "Jesus' essential mission is the salvation of His people from sin."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_god_the_son_03",
+      "type": "teaching",
+      "content": "He is an eternal person of the Godhead. John 1:1-2 — 'In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God.' Hebrews 1:3 — 'who being the brightness of His glory and the express image of His person, and upholding all things by the word of His power, when He had by Himself purged our sins, sat down at the right hand of the Majesty on high.' The Son is eternally existent, fully divine, distinct in person from the Father yet sharing the one divine essence, and is the active sustainer of all creation.",
+      "scripture_refs": ["John 1:1-2", "Heb 1:3"],
+      "themes": ["deity of Christ", "eternal preexistence of the Son", "Trinity"],
+      "claims": [
+        "The Son is eternal — He existed 'in the beginning.'",
+        "The Son is a distinct person within the Godhead, 'with God.'",
+        "The Son is fully God — 'the Word was God.'",
+        "The Son is the radiance of the Father's glory and the exact representation ('express image') of His person.",
+        "The Son upholds all things by the word of His power.",
+        "After purging sins by Himself, the Son sat down at the right hand of the Majesty on high."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_god_the_son_04",
+      "type": "teaching",
+      "content": "He was sent by the Father into this world. Gal 4:4 — 'But when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law.' John 3:16 — 'For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.' The incarnation is the Father's initiative: the Son's coming is a sending and a giving rooted in divine love, with eternal life through faith as the intended outcome.",
+      "scripture_refs": ["Gal 4:4", "John 3:16"],
+      "themes": ["incarnation", "Trinity"],
+      "claims": [
+        "The Son did not come on His own initiative — He was sent by the Father.",
+        "The sending occurred 'in the fullness of time' — at the divinely appointed moment in redemptive history.",
+        "The Father's giving of the Son is the supreme expression of His love for the world.",
+        "Faith in the Son secures everlasting life and rescues from perishing."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_01"]
+    },
+    {
+      "chunk_id": "sof_god_the_son_05",
+      "type": "teaching",
+      "content": "He was born as the Messiah to the virgin Mary, conceived by the Holy Spirit. Isaiah 7:14 — 'Therefore the Lord Himself will give you a sign: Behold, the virgin shall conceive and bear a Son, and shall call His name Immanuel.' Matthew 1:20 — 'But while he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, Joseph, son of David, do not be afraid to take to you Mary your wife, for that which is conceived in her is of the Holy Spirit.' The Messiah's entrance into the world was both a fulfillment of prophetic sign and a supernatural conception by the Spirit, preserving the Son's identity as Immanuel ('God with us').",
+      "scripture_refs": ["Isa 7:14", "Matt 1:20"],
+      "themes": ["virgin birth", "Holy Spirit conception", "Messianic identity", "incarnation"],
+      "claims": [
+        "Jesus is the promised Messiah.",
+        "The Messiah was born to a virgin (Mary), as a fulfilling sign given by the Lord.",
+        "The conception was effected by the Holy Spirit, not by a human father.",
+        "The prophesied name 'Immanuel' identifies Him as 'God with us.'"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_god_the_son_06",
+      "type": "teaching",
+      "content": "He was born without sin and lived a completely sinless life. 1 John 3:5 — 'And you know that He was manifested to take away our sins, and in Him there is no sin.' 2 Corinthians 5:21 — 'For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him.' 1 Peter 2:22 — 'Who committed no sin, nor was deceit found in His mouth.' The Son's sinlessness is asserted absolutely: no inherent sin in His being, no committed sin in His acts, and no deceit in His speech. This sinlessness is the indispensable qualification for substitutionary atonement and for the imputation of God's righteousness to believers.",
+      "scripture_refs": ["1John 3:5", "2Cor 5:21", "1Pet 2:22"],
+      "themes": ["sinlessness of Christ", "substitutionary atonement", "propitiation"],
+      "claims": [
+        "Christ was born without sin.",
+        "Christ lived a wholly sinless life.",
+        "There is no sin in Him (no sinful nature).",
+        "He committed no sin (no sinful acts).",
+        "No deceit was found in His mouth (no sinful speech).",
+        "Christ 'knew no sin' yet was made sin for us — penal substitution.",
+        "Through union with the sinless Christ, believers become the righteousness of God in Him."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_god_the_son_07",
+      "type": "teaching",
+      "content": "He is both truly Man and truly God (the hypostatic union). Philippians 2:6-8 — 'who, being in the form of God, did not consider it robbery to be equal with God, but made Himself of no reputation, taking the form of a bondservant, and coming in the likeness of men. And being found in appearance as a man, He humbled Himself and became obedient to the point of death, even the death of the cross.' Two distinct lines of evidence are presented: (a) FULLY GOD — John 1:1-2 ('the Word was God; He was in the beginning with God') and Phil 2:6 ('being in the form of God... equal with God'); and (b) FULLY MAN — John 1:14 ('the Word became flesh and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father, full of grace and truth') and Luke 2:52 ('Jesus increased in wisdom and stature, and in favor with God and men'). The Son did not relinquish His deity in becoming man; He humbled Himself by taking on the form of a servant in genuine humanity, while remaining fully God.",
+      "scripture_refs": ["Phil 2:6-8", "John 1:1-2", "John 1:14", "Luke 2:52"],
+      "themes": ["hypostatic union", "deity of Christ", "incarnation", "kenosis (self-emptying)"],
+      "claims": [
+        "Jesus is truly God and truly man — one person with two natures.",
+        "Existing in 'the form of God,' equality with God was already His by right and not something to be grasped at.",
+        "He 'made Himself of no reputation' (kenosis), taking the form of a bondservant in true human likeness.",
+        "His humanity was real: He was 'found in appearance as a man.'",
+        "His humiliation extended to obedience even to death — specifically the death of the cross.",
+        "Deity proof: 'the Word was God' and existed 'in the beginning with God.'",
+        "Humanity proof: 'the Word became flesh and dwelt among us.'",
+        "Humanity proof: He 'increased in wisdom and stature, and in favor with God and men' — true human development."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_03"]
+    },
+    {
+      "chunk_id": "sof_god_the_son_08",
+      "type": "teaching",
+      "content": "Jesus willingly suffered and died on a cross as a substitute for mankind, satisfying the penalty for their sin. 2 Corinthians 5:21 — 'For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him.' Hebrews 1:3 — '...when He had by Himself purged our sins, sat down at the right hand of the Majesty on high.' 1 Peter 2:23-24 — 'who, when He was reviled, did not revile in return; when He suffered, He did not threaten, but committed Himself to Him who judges righteously; who Himself bore our sins in His own body on the tree, that we, having died to sins, might live for righteousness — by whose stripes you were healed.' 1 John 2:1-2 — 'we have an Advocate with the Father, Jesus Christ the righteous. And He Himself is the propitiation for our sins, and not for ours only but also for the whole world.' Hebrews 9:28 — 'so Christ was offered once to bear the sins of many. To those who eagerly wait for Him He will appear a second time, apart from sin, for salvation.' The atonement is voluntary, vicarious, sin-bearing, propitiatory (turning aside divine wrath), and definitive — accomplished by Christ Himself once for all.",
+      "scripture_refs": ["2Cor 5:21", "Heb 1:3", "1Pet 2:23-24", "1John 2:1-2", "Heb 9:28"],
+      "themes": ["substitutionary atonement", "propitiation", "penal substitution", "sinlessness of Christ"],
+      "claims": [
+        "Christ's suffering and death were voluntary ('willingly').",
+        "Christ died as a substitute for mankind.",
+        "His death satisfied the penalty for human sin.",
+        "The sinless One was 'made sin for us' so that believers might become God's righteousness in Him.",
+        "Christ Himself purged our sins — the cleansing is His own work, not ours.",
+        "Under reviling and suffering Christ did not retaliate but entrusted Himself to the righteous Judge.",
+        "Christ bore our sins in His own body on the tree.",
+        "Believers, having died to sins through the cross, are to live for righteousness.",
+        "By His stripes (wounds) we are healed.",
+        "Christ is the propitiation for the sins of believers and for the whole world.",
+        "Christ was offered once to bear the sins of many — the atonement is singular and unrepeatable."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_06"]
+    },
+    {
+      "chunk_id": "sof_god_the_son_09",
+      "type": "teaching",
+      "content": "He was buried, rose from the dead on the third day, and ascended into heaven. 1 Corinthians 15:3-4 — 'For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures, and that He was buried, and that He rose again the third day according to the Scriptures.' Phil 2:8 — 'And being found in appearance as a man, He humbled Himself and became obedient to the point of death, even the death of the cross.' John 10:17-18 — 'Therefore My Father loves Me, because I lay down My life that I may take it again. No one takes it from Me, but I lay it down of Myself. I have power to lay it down, and I have power to take it again. This command I have received from My Father.' Acts 1:9-11 — 'Now when He had spoken these things, while they watched, He was taken up, and a cloud received Him out of their sight... two men stood by them in white apparel, who also said, Men of Galilee, why do you stand gazing up into heaven? This same Jesus, who was taken up from you into heaven, will so come in like manner as you saw Him go into heaven.' The death, burial, resurrection on the third day, and visible bodily ascension are presented as historical events fulfilling Scripture and grounded in Christ's own divine authority over His life.",
+      "scripture_refs": ["1Cor 15:3-4", "Phil 2:8", "John 10:17-18", "Acts 1:9-11"],
+      "themes": ["burial of Christ", "bodily resurrection", "ascension", "deity of Christ"],
+      "claims": [
+        "Christ died for our sins according to the Scriptures.",
+        "Christ was truly buried.",
+        "Christ rose again on the third day according to the Scriptures.",
+        "Christ's death was the climax of His incarnate humiliation and obedience.",
+        "Christ laid down His life voluntarily — no one took it from Him.",
+        "Christ has divine authority both to lay down His life and to take it up again.",
+        "This authority over His own life and death was received as a command from the Father.",
+        "The ascension was visible and witnessed — the disciples watched Him taken up.",
+        "A cloud received Him out of their sight as He ascended.",
+        "Two angelic witnesses promised that this same Jesus will return in the same manner He departed."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_07"]
+    },
+    {
+      "chunk_id": "sof_god_the_son_10",
+      "type": "teaching",
+      "content": "He is seated at the right hand of God the Father as our High Priest and Advocate. As High Priest — Hebrews 4:15 ('For we do not have a High Priest who cannot sympathize with our weaknesses, but was in all points tempted as we are, yet without sin') and Hebrews 1:3 ('upholding all things by the word of His power, when He had by Himself purged our sins, sat down at the right hand of the Majesty on high'). As Advocate — 1 Timothy 2:5 ('For there is one God and one Mediator between God and men, the Man Christ Jesus'); Romans 8:34 ('Who is he who condemns? It is Christ who died, and furthermore is also risen, who is even at the right hand of God, who also makes intercession for us'); 1 John 2:1-2 ('we have an Advocate with the Father, Jesus Christ the righteous. And He Himself is the propitiation for our sins, and not for ours only but also for the whole world'). Christ's present heavenly ministry combines sympathetic high-priestly identification with His tempted-yet-sinless humanity, exclusive mediatorship between God and men as the God-Man, and active intercession that secures believers against all condemnation.",
+      "scripture_refs": ["Heb 4:15", "Heb 1:3", "1Tim 2:5", "Rom 8:34", "1John 2:1-2"],
+      "themes": ["session at the right hand of God", "Christ as High Priest", "Christ as Mediator", "Christ as Advocate", "intercession of Christ", "propitiation"],
+      "claims": [
+        "Christ is presently seated at the right hand of God the Father.",
+        "Christ functions as our High Priest.",
+        "As High Priest He sympathizes with our weaknesses, having been tempted in all points as we are.",
+        "He remained without sin under all temptation.",
+        "Christ's session at the right hand follows His finished work of purging sins by Himself.",
+        "There is one God and one Mediator between God and men — the Man Christ Jesus.",
+        "Mediation between God and men is exclusively through the incarnate Christ — there is no other.",
+        "Christ — having died and risen — actively makes intercession for believers at God's right hand.",
+        "Because of His intercession, no one can effectively condemn the believer.",
+        "Christ is the believer's Advocate with the Father.",
+        "Christ Himself is the propitiation for the sins of His people and of the world."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_03", "sof_god_the_son_06", "sof_god_the_son_08"]
+    },
+    {
+      "chunk_id": "sof_god_the_son_11",
+      "type": "teaching",
+      "content": "He will return from heaven in the future — visible, in person, fulfilling all prophecies about His life. Acts 1:9-11 — 'Now when He had spoken these things, while they watched, He was taken up, and a cloud received Him out of their sight... This same Jesus, who was taken up from you into heaven, will so come in like manner as you saw Him go into heaven.' Hebrews 9:28 — 'so Christ was offered once to bear the sins of many. To those who eagerly wait for Him He will appear a second time, apart from sin, for salvation.' 1 Thessalonians 4:16 — 'For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first.' The return of Christ is bodily, visible, personal ('this same Jesus'), and parallels in form the manner of His ascension. It will appear unto salvation for those who eagerly wait for Him, and will involve the resurrection of the dead in Christ.",
+      "scripture_refs": ["Acts 1:9-11", "Heb 9:28", "1Thess 4:16"],
+      "themes": ["bodily second coming", "ascension"],
+      "claims": [
+        "Christ will return from heaven in the future.",
+        "His return will be visible.",
+        "His return will be in person — 'this same Jesus.'",
+        "His return will fulfill all the prophecies concerning His life.",
+        "He will return in the same manner He ascended.",
+        "Christ's first appearance was to bear sin; His second appearance is apart from sin, for salvation.",
+        "His second appearance is for those who eagerly wait for Him.",
+        "The Lord Himself (not a delegate) will descend from heaven.",
+        "His descent will be heralded with a shout, an archangel's voice, and the trumpet of God.",
+        "The dead in Christ will rise first at His return."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_god_the_son_09"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "God the Son (Jesus)\n\n1. God the Son\n   a. Gal 4:4 — But when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law.\n\n2. The Lord Jesus Christ\n   a. Matthew 1:21 — And she will bring forth a Son, and you shall call His name JESUS, for He will save His people from their sins.\n\n3. is an eternal person of the Godhead who was\n   a. John 1:1-2 — In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God.\n   b. Hebrews 1:3 — who being the brightness of His glory and the express image of His person, and upholding all things by the word of His power, when He had by Himself purged our sins, sat down at the right hand of the Majesty on high.\n\n4. sent by the Father into this world.\n   a. Gal 4:4 — But when the fullness of the time had come, God sent forth His Son, born of a woman, born under the law.\n   b. John 3:16 — For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.\n\n5. He was born as the Messiah\n6. to the virgin Mary conceived by the Holy Spirit.\n   a. Isaiah 7:14 — Therefore the Lord Himself will give you a sign: Behold, the virgin shall conceive and bear a Son, and shall call His name Immanuel.\n   b. Matthew 1:20 — But while he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, Joseph, son of David, do not be afraid to take to you Mary your wife, for that which is conceived in her is of the Holy Spirit.\n\n7. He was born without sin and lived a completely sinless life.\n   a. 1 John 3:5 — And you know that He was manifested to take away our sins, and in Him there is no sin.\n   b. 2 Corinthians 5:21 — For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him.\n   c. 1 Peter 2:22 — Who committed no sin, nor was deceit found in His mouth.\n\n8. He is both truly Man and truly God.\n   a. Philippians 2:6-8 — who, being in the form of God, did not consider it robbery to be equal with God, but made Himself of no reputation, taking the form of a bondservant, and coming in the likeness of men. And being found in appearance as a man, He humbled Himself and became obedient to the point of death, even the death of the cross.\n   b. Fully God (Deity)\n      i. John 1:1-2 — In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God.\n      ii. Philippians 2:6-8 — who, being in the form of God, did not consider it robbery to be equal with God, but made Himself of no reputation, taking the form of a bondservant, and coming in the likeness of men. And being found in appearance as a man, He humbled Himself and became obedient to the point of death, even the death of the cross.\n   c. Fully Man (Humanity)\n      i. John 1:14 — And the Word became flesh and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father, full of grace and truth.\n      ii. Luke 2:52 — And Jesus increased in wisdom and stature, and in favor with God and men.\n\n9. Jesus willingly suffered and died on a cross as a substitute for mankind satisfying the penalty for their sin,\n   a. 2 Corinthians 5:21 — For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him.\n   b. Hebrews 1:3 — who being the brightness of His glory and the express image of His person, and upholding all things by the word of His power, when He had by Himself purged our sins, sat down at the right hand of the Majesty on high.\n   c. 1 Peter 2:23-24 — who, when He was reviled, did not revile in return; when He suffered, He did not threaten, but committed Himself to Him who judges righteously; who Himself bore our sins in His own body on the tree, that we, having died to sins, might live for righteousness — by whose stripes you were healed.\n   d. 1 John 2:1-2 — My little children, these things I write to you, so that you may not sin. And if anyone sins, we have an Advocate with the Father, Jesus Christ the righteous. And He Himself is the propitiation for our sins, and not for ours only but also for the whole world.\n   e. Hebrews 9:28 — so Christ was offered once to bear the sins of many. To those who eagerly wait for Him He will appear a second time, apart from sin, for salvation.\n\n10. was\n    a. buried, and\n    b. rose from the dead on the third day.\n    c. 1 Corinthians 15:3-4 — For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures, and that He was buried, and that He rose again the third day according to the Scriptures.\n    d. Phil 2:8 — And being found in appearance as a man, He humbled Himself and became obedient to the point of death, even the death of the cross.\n    e. John 10:17-18 — Therefore My Father loves Me, because I lay down My life that I may take it again. No one takes it from Me, but I lay it down of Myself. I have power to lay it down, and I have power to take it again. This command I have received from My Father.\n    f. He ascended into heaven, and\n       i. Acts 1:9-11 — Now when He had spoken these things, while they watched, He was taken up, and a cloud received Him out of their sight. And while they looked steadfastly toward heaven as He went up, behold, two men stood by them in white apparel, who also said, Men of Galilee, why do you stand gazing up into heaven? This same Jesus, who was taken up from you into heaven, will so come in like manner as you saw Him go into heaven.\n\n11. is seated at the right hand of God the Father\n    a. as our High Priest and\n       i. Hebrews 4:15 — For we do not have a High Priest who cannot sympathize with our weaknesses, but was in all points tempted as we are, yet without sin.\n       ii. Hebrews 1:3 — who being the brightness of His glory and the express image of His person, and upholding all things by the word of His power, when He had by Himself purged our sins, sat down at the right hand of the Majesty on high.\n    b. Advocate.\n       i. 1 Timothy 2:5 — For there is one God and one Mediator between God and men, the Man Christ Jesus.\n       ii. Romans 8:34 — Who is he who condemns? It is Christ who died, and furthermore is also risen, who is even at the right hand of God, who also makes intercession for us.\n       iii. 1 John 2:1-2 — My little children, these things I write to you, so that you may not sin. And if anyone sins, we have an Advocate with the Father, Jesus Christ the righteous. And He Himself is the propitiation for our sins, and not for ours only but also for the whole world.\n\n12. He will return from heaven in the future,\n    a. visible, in person,\n    b. fulfilling all of the prophecies about his life.\n       i. Acts 1:9-11 — Now when He had spoken these things, while they watched, He was taken up, and a cloud received Him out of their sight. And while they looked steadfastly toward heaven as He went up, behold, two men stood by them in white apparel, who also said, Men of Galilee, why do you stand gazing up into heaven? This same Jesus, who was taken up from you into heaven, will so come in like manner as you saw Him go into heaven.\n       ii. Hebrews 9:28 — so Christ was offered once to bear the sins of many. To those who eagerly wait for Him He will appear a second time, apart from sin, for salvation.\n       iii. 1 Thessalonians 4:16 — For the Lord Himself will descend from heaven with a shout, with the voice of an archangel, and with the trumpet of God. And the dead in Christ will rise first.\n\nVerses cited (master list at end of source): Gal 4:4, John 1:1-2, John 1:14, Isa 7:14, Matt 1:20-21, 1 John 3:5, 2 Cor 5:21, 1 Pet 2:22, Heb 4:15, John 1:1, Luke 2:52, Phil 2:6-8, 1 Tim 2:5, Heb 2:5, 1 Cor 15:3-4, Heb 1:3, Rom 8:34, 1 Pet 2:23-24, John 10:17-18, John 3:16, Acts 1:9-11, 1 John 2:1-2, Heb 9:28, 1 Thess 4:16.",
+
+  "parsing_notes": "Source is a clean Statement-of-Faith outline on Christology presented as a single 12-point doctrinal structure with NKJV proof-texts. No personal names, attributions, perspectives, or organization names appeared in the source content — anonymization was therefore not exercised on contributor names (none present). Document contained no embedded media (only Bible Gateway URL footnote anchors, which were stripped from extracted text). The source's master 'Verses' list at the end included 'Heb. 2:5' which is not actually quoted in the body of the document — preserved in raw_extracted_text for fidelity but NOT added to scripture_refs since it has no exposition. Some scripture proof-texts (Gal 4:4, John 1:1-2, Hebrews 1:3, Phil 2:6-8, 2 Cor 5:21, 1 John 2:1-2, Acts 1:9-11) recur across multiple doctrinal points; they are listed once in scripture_refs and referenced by multiple chunks. presents_multiple_perspectives is false — the document is monovocal doctrinal teaching. Confidence is high: text was clean, structure unambiguous, scripture references explicit.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

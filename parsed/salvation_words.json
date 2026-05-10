@@ -1,0 +1,475 @@
+{
+  "doc_slug": "salvation_words",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-10T00:26:11+01:00",
+  "ingested_at": "2026-05-09T23:50:36Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "Salvation Words",
+    "estimated_date": null,
+    "session_topic": "Word study of key salvation-related terms (Grace, Repentance, Faith) with supporting scripture references and discussion points on faith, the heart, and obedience.",
+    "topic_clusters": ["Soteriology", "Hamartiology", "Pneumatology", "Practical Theology"],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {
+      "raw": "Hebrews 11:1-3 NKJV",
+      "book": "Hebrews",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 3,
+      "normalized": "Heb 11:1-3"
+    },
+    {
+      "raw": "Hebrews 11:6 NKJV",
+      "book": "Hebrews",
+      "chapter": 11,
+      "verse_start": 6,
+      "verse_end": 6,
+      "normalized": "Heb 11:6"
+    },
+    {
+      "raw": "Romans 10:8-13 NKJV",
+      "book": "Romans",
+      "chapter": 10,
+      "verse_start": 8,
+      "verse_end": 13,
+      "normalized": "Rom 10:8-13"
+    },
+    {
+      "raw": "Luke 6:44-49 NKJV",
+      "book": "Luke",
+      "chapter": 6,
+      "verse_start": 44,
+      "verse_end": 49,
+      "normalized": "Luke 6:44-49"
+    },
+    {
+      "raw": "1 Pet 2:3",
+      "book": "1 Peter",
+      "chapter": 2,
+      "verse_start": 3,
+      "verse_end": 3,
+      "normalized": "1Pet 2:3"
+    },
+    {
+      "raw": "Eph 2:8",
+      "book": "Ephesians",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 8,
+      "normalized": "Eph 2:8"
+    },
+    {
+      "raw": "Eph 2:1-3",
+      "book": "Ephesians",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 3,
+      "normalized": "Eph 2:1-3"
+    },
+    {
+      "raw": "Isa 64:6",
+      "book": "Isaiah",
+      "chapter": 64,
+      "verse_start": 6,
+      "verse_end": 6,
+      "normalized": "Isa 64:6"
+    },
+    {
+      "raw": "Rom 3:23",
+      "book": "Romans",
+      "chapter": 3,
+      "verse_start": 23,
+      "verse_end": 23,
+      "normalized": "Rom 3:23"
+    },
+    {
+      "raw": "Mat 4:17",
+      "book": "Matthew",
+      "chapter": 4,
+      "verse_start": 17,
+      "verse_end": 17,
+      "normalized": "Matt 4:17"
+    },
+    {
+      "raw": "Acts 17:30",
+      "book": "Acts",
+      "chapter": 17,
+      "verse_start": 30,
+      "verse_end": 30,
+      "normalized": "Acts 17:30"
+    },
+    {
+      "raw": "Acts 20:21",
+      "book": "Acts",
+      "chapter": 20,
+      "verse_start": 21,
+      "verse_end": 21,
+      "normalized": "Acts 20:21"
+    },
+    {
+      "raw": "Rom 10:17",
+      "book": "Romans",
+      "chapter": 10,
+      "verse_start": 17,
+      "verse_end": 17,
+      "normalized": "Rom 10:17"
+    },
+    {
+      "raw": "Jn 16:8-10",
+      "book": "John",
+      "chapter": 16,
+      "verse_start": 8,
+      "verse_end": 10,
+      "normalized": "John 16:8-10"
+    },
+    {
+      "raw": "Jn 1:9",
+      "book": "John",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 9,
+      "normalized": "John 1:9"
+    },
+    {
+      "raw": "Psa 119:130",
+      "book": "Psalms",
+      "chapter": 119,
+      "verse_start": 130,
+      "verse_end": 130,
+      "normalized": "Ps 119:130"
+    },
+    {
+      "raw": "Jn 3:16",
+      "book": "John",
+      "chapter": 3,
+      "verse_start": 16,
+      "verse_end": 16,
+      "normalized": "John 3:16"
+    },
+    {
+      "raw": "Acts 16:30-31",
+      "book": "Acts",
+      "chapter": 16,
+      "verse_start": 30,
+      "verse_end": 31,
+      "normalized": "Acts 16:30-31"
+    },
+    {
+      "raw": "Mk 1:15",
+      "book": "Mark",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 15,
+      "normalized": "Mark 1:15"
+    },
+    {
+      "raw": "Eph 1:13",
+      "book": "Ephesians",
+      "chapter": 1,
+      "verse_start": 13,
+      "verse_end": 13,
+      "normalized": "Eph 1:13"
+    },
+    {
+      "raw": "Jn 5:24",
+      "book": "John",
+      "chapter": 5,
+      "verse_start": 24,
+      "verse_end": 24,
+      "normalized": "John 5:24"
+    }
+  ],
+
+  "theological_themes": [
+    "saving faith",
+    "repentance as change of mind (metanoia)",
+    "grace as unmerited favour",
+    "salvation by grace through faith",
+    "confession of Christ as Lord",
+    "heart belief and verbal confession",
+    "faith and works",
+    "obedience as fruit of faith",
+    "conviction of sin by the Holy Spirit",
+    "illumination by the Word of God",
+    "human inability to self-save",
+    "universal invitation of the gospel",
+    "non-meritorious faith",
+    "penitence vs repentance distinction"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "salvation_words_01",
+      "type": "quote",
+      "content": "Hebrews 11:1-3 NKJV — Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good testimony. By faith we understand that the worlds were framed by the word of God, so that the things which are seen were not made of things which are visible.",
+      "scripture_refs": ["Heb 11:1-3"],
+      "themes": ["saving faith"],
+      "claims": [
+        "Faith is the substance of things hoped for and the evidence of things not seen.",
+        "The elders of old obtained a good testimony by faith.",
+        "By faith we understand that the worlds were framed by the word of God."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_02"]
+    },
+    {
+      "chunk_id": "salvation_words_02",
+      "type": "teaching",
+      "content": "Points on Hebrews 11:1-3: We must humbly acknowledge our dependence and the limitation of our understanding. It is by faith that we understand.",
+      "scripture_refs": ["Heb 11:1-3"],
+      "themes": ["saving faith", "human inability to self-save"],
+      "claims": [
+        "Human understanding is limited and dependent.",
+        "Understanding spiritual realities comes by faith, not by autonomous reasoning."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_01"]
+    },
+    {
+      "chunk_id": "salvation_words_03",
+      "type": "quote",
+      "content": "Hebrews 11:6 NKJV — But without faith it is impossible to please Him, for he who comes to God must believe that He is, and that He is a rewarder of those who diligently seek Him.",
+      "scripture_refs": ["Heb 11:6"],
+      "themes": ["saving faith"],
+      "claims": [
+        "Without faith it is impossible to please God.",
+        "Coming to God requires believing that He exists and that He rewards those who diligently seek Him."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_04"]
+    },
+    {
+      "chunk_id": "salvation_words_04",
+      "type": "teaching",
+      "content": "Points on Hebrews 11:6: Faith is essential to please God. In addition to believing He exists, we must understand that there are specific things about Him that we must also believe. Our personal faith matters.",
+      "scripture_refs": ["Heb 11:6"],
+      "themes": ["saving faith"],
+      "claims": [
+        "Faith is essential to pleasing God.",
+        "Saving belief is more than bare belief in God's existence — it includes believing specific truths about Him.",
+        "Personal faith is required; vicarious or generalized belief is insufficient."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_03"]
+    },
+    {
+      "chunk_id": "salvation_words_05",
+      "type": "quote",
+      "content": "Romans 10:8-13 NKJV — But what does it say? \"The word is near you, in your mouth and in your heart\" (that is, the word of faith which we preach): that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved. For with the heart one believes unto righteousness, and with the mouth confession is made unto salvation. For the Scripture says, \"Whoever believes on Him will not be put to shame.\" For there is no distinction between Jew and Greek, for the same Lord over all is rich to all who call upon Him. For \"whoever calls on the name of the LORD shall be saved.\"",
+      "scripture_refs": ["Rom 10:8-13"],
+      "themes": [
+        "confession of Christ as Lord",
+        "heart belief and verbal confession",
+        "universal invitation of the gospel"
+      ],
+      "claims": [
+        "Salvation is granted to those who confess Jesus as Lord with the mouth and believe in the heart that God raised Him from the dead.",
+        "Belief unto righteousness is a matter of the heart; confession unto salvation is verbal.",
+        "There is no distinction between Jew and Greek in this offer.",
+        "Whoever calls on the name of the Lord shall be saved."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_06"]
+    },
+    {
+      "chunk_id": "salvation_words_06",
+      "type": "teaching",
+      "content": "Points on Romans 10:8-13: What is in our hearts is apparent through our words and actions. Faith is a matter of the heart. When there is inward faith, it must be confessed with our mouths. God desires all to have faith and call upon Him. The invitation is open to \"all\".",
+      "scripture_refs": ["Rom 10:8-13"],
+      "themes": [
+        "heart belief and verbal confession",
+        "confession of Christ as Lord",
+        "universal invitation of the gospel"
+      ],
+      "claims": [
+        "The contents of the heart are revealed through speech and conduct.",
+        "Saving faith is fundamentally a heart matter.",
+        "Genuine inward faith will produce verbal confession.",
+        "God desires all people to believe and call upon Him.",
+        "The gospel invitation is open to all without distinction."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_05"]
+    },
+    {
+      "chunk_id": "salvation_words_07",
+      "type": "quote",
+      "content": "Luke 6:44-49 NKJV — \"For every tree is known by its own fruit. For men do not gather figs from thorns, nor do they gather grapes from a bramble bush. \"A good man out of the good treasure of his heart brings forth good; and an evil man out of the evil treasure of his heart brings forth evil. For out of the abundance of the heart his mouth speaks. \"But why do you call Me 'Lord, Lord,' and not do the things which I say? \"Whoever comes to Me, and hears My sayings and does them, I will show you whom he is like: \"He is like a man building a house, who dug deep and laid the foundation on the rock. And when the flood arose, the stream beat vehemently against that house, and could not shake it, for it was founded on the rock. \"But he who heard and did nothing is like a man who built a house on the earth without a foundation, against which the stream beat vehemently; and immediately it fell. And the ruin of that house was great.\"",
+      "scripture_refs": ["Luke 6:44-49"],
+      "themes": [
+        "faith and works",
+        "obedience as fruit of faith",
+        "heart belief and verbal confession"
+      ],
+      "claims": [
+        "A tree is known by its fruit; people are likewise known by what they produce.",
+        "A good man brings forth good out of the good treasure of his heart, and an evil man brings forth evil from the evil treasure of his heart.",
+        "Out of the abundance of the heart the mouth speaks.",
+        "Calling Jesus 'Lord' without doing what He says is incoherent.",
+        "Hearing and doing Christ's words is like building on rock; hearing without doing is like building without a foundation, and the ruin is great."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_08"]
+    },
+    {
+      "chunk_id": "salvation_words_08",
+      "type": "teaching",
+      "content": "Points on Luke 6:44-49: Faith is the foundation. Faith produces action. Action apart from faith is vain. Obedience follows faith.",
+      "scripture_refs": ["Luke 6:44-49"],
+      "themes": [
+        "faith and works",
+        "obedience as fruit of faith",
+        "saving faith"
+      ],
+      "claims": [
+        "Faith is the foundation of the Christian life.",
+        "Genuine faith produces action.",
+        "Action that is not rooted in faith is vain.",
+        "Obedience is the fruit, not the root, of faith — it follows faith."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_07"]
+    },
+    {
+      "chunk_id": "salvation_words_09",
+      "type": "other",
+      "content": "Please also consider reviewing the statement of faith regarding salvation.",
+      "scripture_refs": [],
+      "themes": [],
+      "claims": [],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "salvation_words_10",
+      "type": "definition",
+      "content": "Grace: It is an attribute of God by which He seeks the good of His creation (1 Pet 2:3). By His nature, God is gracious and bestows unmerited favour on mankind. God has prepared salvation and offered it to humans as a gift on the basis of His grace (Eph 2:8).",
+      "scripture_refs": ["1Pet 2:3", "Eph 2:8"],
+      "themes": [
+        "grace as unmerited favour",
+        "salvation by grace through faith"
+      ],
+      "claims": [
+        "Grace is an attribute of God by which He seeks the good of His creation.",
+        "God by nature is gracious and bestows unmerited favour on mankind.",
+        "Salvation is prepared by God and offered as a gift on the basis of His grace."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "salvation_words_11",
+      "type": "definition",
+      "content": "Repentance: metanoia means a change of mind. Repentance is agreeing with God about the problem — I am a sinner (Eph 2:1-3), my righteousness is like filthy rags before God (Isa 64:6), I cannot save myself (Rom 3:23) — and also agreeing with God about the solution — Jesus is my Saviour. Repentance is necessary for salvation. It was preached by Jesus (Mat 4:17), and by Paul (Acts 17:30, 20:21). Although sorrow might accompany repentance, penitence is not repentance. Repentance cannot be a work someone performs to attain salvation. It is a change of mind to think the way God thinks.",
+      "scripture_refs": [
+        "Eph 2:1-3",
+        "Isa 64:6",
+        "Rom 3:23",
+        "Matt 4:17",
+        "Acts 17:30",
+        "Acts 20:21"
+      ],
+      "themes": [
+        "repentance as change of mind (metanoia)",
+        "human inability to self-save",
+        "penitence vs repentance distinction",
+        "non-meritorious faith"
+      ],
+      "claims": [
+        "The Greek word metanoia means a change of mind.",
+        "Repentance is agreeing with God about the problem (sin) and about the solution (Jesus as Saviour).",
+        "Agreement with God about the problem includes acknowledging that one is a sinner, that one's righteousness is like filthy rags, and that one cannot save oneself.",
+        "Repentance is necessary for salvation.",
+        "Repentance was preached by Jesus and by Paul.",
+        "Sorrow may accompany repentance but penitence (sorrow) is not repentance.",
+        "Repentance is not a meritorious work performed to attain salvation.",
+        "Repentance is a change of mind to think the way God thinks."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_12", "salvation_words_13"]
+    },
+    {
+      "chunk_id": "salvation_words_12",
+      "type": "definition",
+      "content": "Faith: It is the reasonable response of the heart to Christ by believing the evidence God has given. Faith is believing God and taking Him at His word. It involves transferring of trust to the Lord after hearing the Word of truth (Rom 10:17). Faith is a non-meritorious work. While it is something that the sinner does or more specifically responds with, it is not a work that needs to be done in the general sense of the word.",
+      "scripture_refs": ["Rom 10:17"],
+      "themes": [
+        "saving faith",
+        "non-meritorious faith",
+        "heart belief and verbal confession"
+      ],
+      "claims": [
+        "Faith is the reasonable response of the heart to Christ by believing the evidence God has given.",
+        "Faith is believing God and taking Him at His word.",
+        "Faith involves transferring trust to the Lord after hearing the Word of truth.",
+        "Faith comes by hearing the Word of truth.",
+        "Faith is a non-meritorious work — it is what the sinner does or responds with, but is not a work in the meritorious sense."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_11", "salvation_words_13"]
+    },
+    {
+      "chunk_id": "salvation_words_13",
+      "type": "teaching",
+      "content": "Faith and repentance work hand-in-hand in the process of salvation: The Spirit of God convicts a sinner of his sin (Jn 16:8-10). Under such conviction, the sinner can either repent or reject. The Word of God illuminates (Jn 1:9, Psa 119:130) the mind of the sinner (Jn 3:16, Acts 16:30-31). Under such illumination, the sinner can either respond in faith or in unbelief. The sinner who responds with obedience — repenting and responding in faith — is saved (Mk 1:15, Eph 1:13, Jn 5:24).",
+      "scripture_refs": [
+        "John 16:8-10",
+        "John 1:9",
+        "Ps 119:130",
+        "John 3:16",
+        "Acts 16:30-31",
+        "Mark 1:15",
+        "Eph 1:13",
+        "John 5:24"
+      ],
+      "themes": [
+        "saving faith",
+        "repentance as change of mind (metanoia)",
+        "conviction of sin by the Holy Spirit",
+        "illumination by the Word of God",
+        "obedience as fruit of faith"
+      ],
+      "claims": [
+        "Faith and repentance work hand-in-hand in the process of salvation.",
+        "The Spirit of God convicts a sinner of his sin.",
+        "Under conviction the sinner can either repent or reject.",
+        "The Word of God illuminates the mind of the sinner.",
+        "Under illumination the sinner can either respond in faith or in unbelief.",
+        "The sinner who responds with obedience — repenting and responding in faith — is saved."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_11", "salvation_words_12"]
+    },
+    {
+      "chunk_id": "salvation_words_14",
+      "type": "question",
+      "content": "Discussion: Read each word defined above and discuss the main ideas that stand out to you. 1. Describe faith in your own words. 2. What is one example of someone who changes the direction they are going because they had a change in mind? 3. Describe this change of mind, known as repentance, in your own words. 4. If you had faith in God, realized you were on a path going away from Him, and felt a conviction to turn around, what would you do next?",
+      "scripture_refs": [],
+      "themes": [
+        "saving faith",
+        "repentance as change of mind (metanoia)",
+        "conviction of sin by the Holy Spirit"
+      ],
+      "claims": [],
+      "perspectives_within_chunk": [],
+      "cross_references": ["salvation_words_11", "salvation_words_12", "salvation_words_13"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "Additional references:\n\nHebrews 11:1-3 NKJV — Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good testimony. By faith we understand that the worlds were framed by the word of God, so that the things which are seen were not made of things which are visible.\n\nPoints:\n- We must humbly acknowledge our dependence and the limitation of our understanding. It is by faith that we understand.\n\nHebrews 11:6 NKJV — But without faith it is impossible to please Him, for he who comes to God must believe that He is, and that He is a rewarder of those who diligently seek Him.\n\nPoints:\n- Faith is essential to please God\n- In addition to believing He exists, we must understand that there are specific things about Him that we must also believe\n- Our personal faith matters\n\nRomans 10:8-13 NKJV — But what does it say? \"The word is near you, in your mouth and in your heart\" (that is, the word of faith which we preach): that if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved. For with the heart one believes unto righteousness, and with the mouth confession is made unto salvation. For the Scripture says, \"Whoever believes on Him will not be put to shame.\" For there is no distinction between Jew and Greek, for the same Lord over all is rich to all who call upon Him. For \"whoever calls on the name of the LORD shall be saved.\"\n\nPoints:\n- What is in our hearts is apparent through our words and actions\n- Faith is a matter of the heart\n- When there is inward faith, it must be confessed with our mouths\n- God desires all to have faith and call upon Him\n- The invitation is open to \"all\"\n\nLuke 6:44-49 NKJV — \"For every tree is known by its own fruit. For men do not gather figs from thorns, nor do they gather grapes from a bramble bush. \"A good man out of the good treasure of his heart brings forth good; and an evil man out of the evil treasure of his heart brings forth evil. For out of the abundance of the heart his mouth speaks. \"But why do you call Me 'Lord, Lord,' and not do the things which I say? \"Whoever comes to Me, and hears My sayings and does them, I will show you whom he is like: \"He is like a man building a house, who dug deep and laid the foundation on the rock. And when the flood arose, the stream beat vehemently against that house, and could not shake it, for it was founded on the rock. \"But he who heard and did nothing is like a man who built a house on the earth without a foundation, against which the stream beat vehemently; and immediately it fell. And the ruin of that house was great.\"\n\nPoints:\n- Faith is the foundation\n- Faith produces action. Action apart from faith is vain.\n- Obedience follows faith.\n\nPlease also consider reviewing our statement of faith regarding salvation.\n\nSalvation Words\n\nGrace\nIt is an attribute of God by which He seeks the good of His creation (1 Pet 2:3). By His nature, God is gracious and bestows unmerited favour on mankind. God has prepared salvation and offered it to humans as a gift on the basis of His grace (Eph 2:8).\n\nRepentance\nmetanoia - means a change of mind. Repentance is agreeing with God about the problem - I am a sinner (Eph 2:1-3), my righteousness is like filthy rags before God (Isa 64:6), I cannot save myself (Rom 3:23) - and also agreeing with God about the solution - Jesus is my Saviour. Repentance is necessary for salvation. It was preached by Jesus (Mat 4:17), and by Paul (Acts 17:30, 20:21). Although sorrow might accompany repentance, penitence is not repentance. Repentance cannot be a work someone performs to attain salvation. It is a change of mind to think the way God thinks.\n\nFaith\nIt is the reasonable response of the heart to Christ by believing the evidence God has given. Faith is believing God and taking Him at His word. It involves transferring of trust to the Lord after hearing the Word of truth (Rom 10:17). Faith is a non-meritorious work. While it is something that the sinner does or more specifically responds with, it is not a work that needs to be done in the general sense of the word.\n\n*Faith and repentance work hand-in-hand in the process of salvation:\nThe Spirit of God convicts a sinner of his sin (Jn 16:8-10). Under such conviction, the sinner can either repent or reject.\nThe Word of God illuminates (Jn 1:9, Psa 119:130) the mind of the sinner (Jn 3:16, Acts 16:30-31). Under such illumination, the sinner can either respond in faith or in unbelief.\nThe sinner who responds with obedience - repenting and responding in faith - is saved. (Mk 1:15, Eph 1:13, Jn 5:24).\n\nDiscussion:\n\nRead each word defined above and discuss the main ideas that stand out to you.\n\n1. Describe faith in your own words\n2. What is one example of someone who changes the direction they are going because they had a change in mind?\n3. Describe this change of mind, known as repentance, in your own words\n4. If you had faith in God, realized you were on a path going away from Him, and felt a conviction to turn around, what would you do next?",
+
+  "parsing_notes": "Document is a 3-page PDF. Page 1 begins with 'Additional references:' suggesting it is the latter portion of a longer teaching set; the heading 'Salvation Words' appears on page 2 followed by the core word-study section (Grace, Repentance, Faith). Greek term 'metanoia' preserved verbatim as theological content (not a personal name). All scripture references retained in their source forms in 'raw' and OSIS-style canonical forms in 'normalized'. No personal names or organization names appeared in the source text; nothing required redaction. Source text refers to 'our statement of faith' — generalized to 'the statement of faith' to avoid implicit organization identification.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

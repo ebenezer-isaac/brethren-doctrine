@@ -1,0 +1,2201 @@
+{
+  "generated_at": "2026-05-10T00:14:43Z",
+  "corpus_version": "1.0.0",
+  "total_documents": 15,
+  "total_chunks": 243,
+  "by_theme": {
+    "ordinances of the church": [
+      "baptism_and_communion"
+    ],
+    "believers baptism": [
+      "baptism_and_communion"
+    ],
+    "the Lord's Supper / breaking of bread": [
+      "baptism_and_communion"
+    ],
+    "baptism by immersion": [
+      "baptism_and_communion"
+    ],
+    "Trinitarian baptismal formula": [
+      "baptism_and_communion"
+    ],
+    "credobaptism (faith precedes baptism)": [
+      "baptism_and_communion"
+    ],
+    "outward sign of inward reality": [
+      "baptism_and_communion"
+    ],
+    "identification with Christ's death and resurrection": [
+      "baptism_and_communion"
+    ],
+    "union with Christ": [
+      "baptism_and_communion",
+      "salvation_soteriology"
+    ],
+    "great commission": [
+      "baptism_and_communion"
+    ],
+    "regeneration": [
+      "baptism_and_communion",
+      "sof_holy_spirit"
+    ],
+    "household baptisms": [
+      "baptism_and_communion"
+    ],
+    "local church authority": [
+      "baptism_and_communion"
+    ],
+    "John 3:5 — born of water and Spirit": [
+      "baptism_and_communion"
+    ],
+    "remembrance of Christ": [
+      "baptism_and_communion"
+    ],
+    "proclamation of Christ's death": [
+      "baptism_and_communion"
+    ],
+    "second coming / parousia": [
+      "baptism_and_communion"
+    ],
+    "new covenant": [
+      "baptism_and_communion"
+    ],
+    "first day of the week worship": [
+      "baptism_and_communion"
+    ],
+    "self-examination before communion": [
+      "baptism_and_communion"
+    ],
+    "church discipline and the Table": [
+      "baptism_and_communion"
+    ],
+    "weekly observance of communion": [
+      "baptism_and_communion"
+    ],
+    "open vs. closed table (visiting believers)": [
+      "baptism_and_communion"
+    ],
+    "biblical boundaries": [
+      "boundaries"
+    ],
+    "sexual purity": [
+      "boundaries"
+    ],
+    "marital fidelity": [
+      "boundaries"
+    ],
+    "personal holiness": [
+      "boundaries"
+    ],
+    "guarding the heart": [
+      "boundaries"
+    ],
+    "depravity of the heart": [
+      "boundaries"
+    ],
+    "above reproach (overseer qualifications)": [
+      "boundaries"
+    ],
+    "Christian witness and testimony": [
+      "boundaries"
+    ],
+    "treating the opposite sex as family": [
+      "boundaries"
+    ],
+    "avoiding emotional intimacy with the opposite sex": [
+      "boundaries"
+    ],
+    "digital purity": [
+      "boundaries"
+    ],
+    "redirecting pastoral care to same-gender mentors": [
+      "boundaries"
+    ],
+    "spiritual leadership in the home": [
+      "boundaries"
+    ],
+    "accountability and community": [
+      "boundaries"
+    ],
+    "imitating Christ": [
+      "boundaries"
+    ],
+    "headship and order": [
+      "boundaries"
+    ],
+    "royal priesthood identity": [
+      "boundaries"
+    ],
+    "diligence in obedience": [
+      "boundaries"
+    ],
+    "headship of Christ over the church": [
+      "church_governance"
+    ],
+    "elder qualifications": [
+      "church_governance"
+    ],
+    "shepherding/oversight": [
+      "church_governance"
+    ],
+    "Holy Spirit appointment of elders": [
+      "church_governance"
+    ],
+    "ethos/pathos/logos and persuasion in ministry": [
+      "church_governance"
+    ],
+    "priesthood of believers": [
+      "church_governance",
+      "membership"
+    ],
+    "obedience and submission to elders": [
+      "church_governance"
+    ],
+    "plurality of elders": [
+      "church_governance",
+      "membership"
+    ],
+    "pastoral care": [
+      "church_governance",
+      "membership"
+    ],
+    "tenure of eldership": [
+      "church_governance"
+    ],
+    "male headship": [
+      "church_governance"
+    ],
+    "creation order": [
+      "church_governance"
+    ],
+    "female roles in the gathering": [
+      "church_governance"
+    ],
+    "women teaching women": [
+      "church_governance"
+    ],
+    "private versus public instruction": [
+      "church_governance"
+    ],
+    "head covering": [
+      "church_governance",
+      "membership"
+    ],
+    "angels as witnesses to the church": [
+      "church_governance"
+    ],
+    "manifold wisdom of God displayed through the church": [
+      "church_governance"
+    ],
+    "silence of women in the assembly": [
+      "church_governance"
+    ],
+    "deacons": [
+      "church_governance"
+    ],
+    "church membership": [
+      "membership"
+    ],
+    "statement of faith subscription": [
+      "membership"
+    ],
+    "doctrinal boundaries": [
+      "membership"
+    ],
+    "local church autonomy": [
+      "membership"
+    ],
+    "believer's baptism by immersion": [
+      "membership"
+    ],
+    "weekly observance of the Lord's Supper": [
+      "membership"
+    ],
+    "role of women in the church": [
+      "membership",
+      "topics_to_discuss"
+    ],
+    "distinction between members, attendees, and visitors": [
+      "membership"
+    ],
+    "submission to elders": [
+      "membership"
+    ],
+    "one another passages": [
+      "membership"
+    ],
+    "not forsaking the gathering": [
+      "membership"
+    ],
+    "spiritual gifts": [
+      "membership",
+      "sign_gifts",
+      "sof_holy_spirit"
+    ],
+    "conflict resolution in the church": [
+      "membership"
+    ],
+    "discipleship": [
+      "membership",
+      "topics_to_discuss"
+    ],
+    "church discipline": [
+      "membership",
+      "topics_to_discuss"
+    ],
+    "unity of the body": [
+      "membership"
+    ],
+    "free-will / cheerful giving": [
+      "offerings"
+    ],
+    "care for widows and the needy": [
+      "offerings"
+    ],
+    "communal sharing in the early church": [
+      "offerings"
+    ],
+    "believer as living sacrifice": [
+      "offerings"
+    ],
+    "continuity and discontinuity between Old and New Testament giving": [
+      "offerings"
+    ],
+    "humility and secrecy in almsgiving": [
+      "offerings"
+    ],
+    "tithing under the new covenant": [
+      "offerings"
+    ],
+    "Christ's once-for-all sacrifice": [
+      "offerings"
+    ],
+    "support of those who minister the gospel": [
+      "offerings"
+    ],
+    "Melchizedekian priesthood and offerings before Moses": [
+      "offerings"
+    ],
+    "first-fruits and Old Testament tithe purposes": [
+      "offerings"
+    ],
+    "redemption of tithes / giving as non-burdensome": [
+      "offerings"
+    ],
+    "corporate worship and the offering": [
+      "offerings"
+    ],
+    "alignment of collections with congregational vision and mission": [
+      "offerings"
+    ],
+    "eternal security": [
+      "salvation_soteriology"
+    ],
+    "grace alone": [
+      "salvation_soteriology"
+    ],
+    "faith and repentance": [
+      "salvation_soteriology"
+    ],
+    "substitutionary atonement": [
+      "salvation_soteriology",
+      "sof_god_the_son"
+    ],
+    "wrath of God": [
+      "salvation_soteriology",
+      "sof_man"
+    ],
+    "adoption": [
+      "salvation_soteriology"
+    ],
+    "sanctification": [
+      "salvation_soteriology",
+      "sof_holy_spirit"
+    ],
+    "conformity to Christ": [
+      "salvation_soteriology"
+    ],
+    "Christ's intercession": [
+      "salvation_soteriology"
+    ],
+    "perseverance": [
+      "salvation_soteriology"
+    ],
+    "faith alone": [
+      "salvation_soteriology"
+    ],
+    "universal offer of salvation": [
+      "salvation_soteriology"
+    ],
+    "no distinction between Jew and Greek": [
+      "salvation_soteriology"
+    ],
+    "Christ's death and resurrection": [
+      "salvation_soteriology"
+    ],
+    "propitiation": [
+      "salvation_soteriology",
+      "sof_god_the_father",
+      "sof_god_the_son"
+    ],
+    "redemption through blood": [
+      "salvation_soteriology"
+    ],
+    "justification": [
+      "salvation_soteriology"
+    ],
+    "eternal punishment": [
+      "salvation_soteriology"
+    ],
+    "second death": [
+      "salvation_soteriology"
+    ],
+    "judgment by works": [
+      "salvation_soteriology"
+    ],
+    "Book of Life": [
+      "salvation_soteriology"
+    ],
+    "eternal life as gift": [
+      "salvation_soteriology"
+    ],
+    "repentance": [
+      "salvation_soteriology",
+      "sof_man"
+    ],
+    "faith in Christ": [
+      "salvation_soteriology"
+    ],
+    "kingdom of heaven": [
+      "salvation_soteriology"
+    ],
+    "universal call": [
+      "salvation_soteriology"
+    ],
+    "forgiveness of sins": [
+      "salvation_soteriology"
+    ],
+    "judgment day": [
+      "salvation_soteriology"
+    ],
+    "family of God": [
+      "salvation_soteriology"
+    ],
+    "right of sonship": [
+      "salvation_soteriology"
+    ],
+    "believing in Christ's name": [
+      "salvation_soteriology"
+    ],
+    "death to sin": [
+      "salvation_soteriology"
+    ],
+    "alive to God": [
+      "salvation_soteriology"
+    ],
+    "freedom from sin's dominion": [
+      "salvation_soteriology"
+    ],
+    "under grace not law": [
+      "salvation_soteriology"
+    ],
+    "holiness": [
+      "salvation_soteriology"
+    ],
+    "transformation in Christ": [
+      "salvation_soteriology"
+    ],
+    "exclusion of the unrighteous from the kingdom": [
+      "salvation_soteriology"
+    ],
+    "washed and justified": [
+      "salvation_soteriology"
+    ],
+    "predestination": [
+      "salvation_soteriology",
+      "sof_god_the_father"
+    ],
+    "foreknowledge": [
+      "salvation_soteriology"
+    ],
+    "Christ as firstborn": [
+      "salvation_soteriology"
+    ],
+    "salvation through faith (sola fide)": [
+      "salvation_soteriology"
+    ],
+    "propitiation through Christ's blood": [
+      "salvation_soteriology"
+    ],
+    "second death and lake of fire": [
+      "salvation_soteriology"
+    ],
+    "universal call to repentance": [
+      "salvation_soteriology"
+    ],
+    "predestination to conformity with Christ": [
+      "salvation_soteriology"
+    ],
+    "salvation as a secure and unlosable gift": [
+      "salvation_soteriology"
+    ],
+    "separation unto Christ": [
+      "salvation_soteriology"
+    ],
+    "freedom from the dominion of sin": [
+      "salvation_soteriology"
+    ],
+    "wrath of God against sin": [
+      "salvation_soteriology"
+    ],
+    "sanctification and pursuit of holiness": [
+      "salvation_soteriology"
+    ],
+    "conformity to the image of Christ": [
+      "salvation_soteriology"
+    ],
+    "Christ's death and resurrection as the sole sufficient ground of salvation": [
+      "salvation_soteriology"
+    ],
+    "union with Christ in death and resurrection": [
+      "salvation_soteriology"
+    ],
+    "eternal separation as the penalty of sin": [
+      "salvation_soteriology"
+    ],
+    "adoption as children of God": [
+      "salvation_soteriology"
+    ],
+    "salvation by grace alone (sola gratia)": [
+      "salvation_soteriology"
+    ],
+    "repentance toward God": [
+      "salvation_soteriology"
+    ],
+    "saving faith": [
+      "salvation_words"
+    ],
+    "human inability to self-save": [
+      "salvation_words"
+    ],
+    "confession of Christ as Lord": [
+      "salvation_words"
+    ],
+    "heart belief and verbal confession": [
+      "salvation_words"
+    ],
+    "universal invitation of the gospel": [
+      "salvation_words"
+    ],
+    "faith and works": [
+      "salvation_words"
+    ],
+    "obedience as fruit of faith": [
+      "salvation_words"
+    ],
+    "grace as unmerited favour": [
+      "salvation_words"
+    ],
+    "salvation by grace through faith": [
+      "salvation_words"
+    ],
+    "repentance as change of mind (metanoia)": [
+      "salvation_words"
+    ],
+    "penitence vs repentance distinction": [
+      "salvation_words"
+    ],
+    "non-meritorious faith": [
+      "salvation_words"
+    ],
+    "conviction of sin by the Holy Spirit": [
+      "salvation_words"
+    ],
+    "illumination by the Word of God": [
+      "salvation_words"
+    ],
+    "peripheral vs gospel-essential doctrine": [
+      "sign_gifts"
+    ],
+    "sign gifts": [
+      "sign_gifts"
+    ],
+    "cessationism": [
+      "sign_gifts"
+    ],
+    "completion of the canon": [
+      "sign_gifts"
+    ],
+    "tongues": [
+      "sign_gifts"
+    ],
+    "prayer language": [
+      "sign_gifts"
+    ],
+    "extra-biblical revelation": [
+      "sign_gifts"
+    ],
+    "soteriology": [
+      "sign_gifts"
+    ],
+    "ecclesiology": [
+      "sign_gifts"
+    ],
+    "continuationism": [
+      "sign_gifts"
+    ],
+    "prophecy": [
+      "sign_gifts"
+    ],
+    "hermeneutics": [
+      "sign_gifts"
+    ],
+    "unity across denominations": [
+      "sign_gifts"
+    ],
+    "faith and the power of faith": [
+      "sign_gifts"
+    ],
+    "reaction theology": [
+      "sign_gifts"
+    ],
+    "edification of the church": [
+      "sign_gifts"
+    ],
+    "indwelling of the Holy Spirit": [
+      "sign_gifts"
+    ],
+    "sealing of the Spirit": [
+      "sign_gifts"
+    ],
+    "filling of the Spirit": [
+      "sign_gifts",
+      "sof_holy_spirit"
+    ],
+    "baptism in the Holy Spirit": [
+      "sign_gifts"
+    ],
+    "spiritual discernment": [
+      "sign_gifts"
+    ],
+    "miracles": [
+      "sign_gifts"
+    ],
+    "healing": [
+      "sign_gifts"
+    ],
+    "monotheism": [
+      "sof_god",
+      "sof_god_the_father"
+    ],
+    "anti-polytheism": [
+      "sof_god"
+    ],
+    "creation ex nihilo": [
+      "sof_god"
+    ],
+    "anti-evolution apologetic": [
+      "sof_god"
+    ],
+    "divine sustenance of creation": [
+      "sof_god"
+    ],
+    "anti-Deism": [
+      "sof_god"
+    ],
+    "eternal existence of God": [
+      "sof_god"
+    ],
+    "Trinity": [
+      "sof_god",
+      "sof_god_the_son"
+    ],
+    "equality of the Persons of the Godhead": [
+      "sof_god"
+    ],
+    "deity of the Son": [
+      "sof_god"
+    ],
+    "deity of the Holy Spirit": [
+      "sof_god",
+      "sof_holy_spirit"
+    ],
+    "divine attributes (incommunicable and communicable)": [
+      "sof_god"
+    ],
+    "distinct and harmonious roles of the Trinity": [
+      "sof_god"
+    ],
+    "providence": [
+      "sof_god"
+    ],
+    "Trinitarian creation": [
+      "sof_god"
+    ],
+    "Trinitarian redemption": [
+      "sof_god"
+    ],
+    "Trinitarian sanctification": [
+      "sof_god"
+    ],
+    "Trinitarian distinction of the Father": [
+      "sof_god_the_father"
+    ],
+    "Fatherhood within the Godhead": [
+      "sof_god_the_father"
+    ],
+    "eternality of God": [
+      "sof_god_the_father"
+    ],
+    "creation ex nihilo by the Father": [
+      "sof_god_the_father"
+    ],
+    "doxology — all things for God's glory": [
+      "sof_god_the_father"
+    ],
+    "divine sustenance / providence": [
+      "sof_god_the_father"
+    ],
+    "divine sovereignty and decree": [
+      "sof_god_the_father"
+    ],
+    "mission of the Son sent by the Father": [
+      "sof_god_the_father"
+    ],
+    "redemption of sinful humanity": [
+      "sof_god_the_father"
+    ],
+    "adoption as sons and daughters": [
+      "sof_god_the_father"
+    ],
+    "Abba Father": [
+      "sof_god_the_father"
+    ],
+    "spiritual heirship through Christ": [
+      "sof_god_the_father"
+    ],
+    "election before the foundation of the world": [
+      "sof_god_the_father"
+    ],
+    "begotten Son (eternal sonship)": [
+      "sof_god_the_father"
+    ],
+    "deity of Christ": [
+      "sof_god_the_son"
+    ],
+    "incarnation": [
+      "sof_god_the_son"
+    ],
+    "Messianic identity": [
+      "sof_god_the_son"
+    ],
+    "eternal preexistence of the Son": [
+      "sof_god_the_son"
+    ],
+    "virgin birth": [
+      "sof_god_the_son"
+    ],
+    "Holy Spirit conception": [
+      "sof_god_the_son"
+    ],
+    "sinlessness of Christ": [
+      "sof_god_the_son",
+      "sof_man"
+    ],
+    "hypostatic union": [
+      "sof_god_the_son"
+    ],
+    "kenosis (self-emptying)": [
+      "sof_god_the_son"
+    ],
+    "penal substitution": [
+      "sof_god_the_son"
+    ],
+    "burial of Christ": [
+      "sof_god_the_son"
+    ],
+    "bodily resurrection": [
+      "sof_god_the_son"
+    ],
+    "ascension": [
+      "sof_god_the_son"
+    ],
+    "session at the right hand of God": [
+      "sof_god_the_son"
+    ],
+    "Christ as High Priest": [
+      "sof_god_the_son"
+    ],
+    "Christ as Mediator": [
+      "sof_god_the_son"
+    ],
+    "Christ as Advocate": [
+      "sof_god_the_son"
+    ],
+    "intercession of Christ": [
+      "sof_god_the_son"
+    ],
+    "bodily second coming": [
+      "sof_god_the_son"
+    ],
+    "personhood of the Holy Spirit": [
+      "sof_holy_spirit"
+    ],
+    "intellect of the Spirit": [
+      "sof_holy_spirit"
+    ],
+    "emotion of the Spirit": [
+      "sof_holy_spirit"
+    ],
+    "will of the Spirit": [
+      "sof_holy_spirit"
+    ],
+    "co-equality within the Trinity": [
+      "sof_holy_spirit"
+    ],
+    "Trinitarian formula": [
+      "sof_holy_spirit"
+    ],
+    "invisibility of the Spirit": [
+      "sof_holy_spirit"
+    ],
+    "Spirit in creation": [
+      "sof_holy_spirit"
+    ],
+    "Spirit empowering the work of God": [
+      "sof_holy_spirit"
+    ],
+    "Old Testament 'coming upon' versus New Testament indwelling": [
+      "sof_holy_spirit"
+    ],
+    "indwelling of believers": [
+      "sof_holy_spirit"
+    ],
+    "sovereignty of the Spirit": [
+      "sof_holy_spirit"
+    ],
+    "Spirit-inspired Scripture": [
+      "sof_holy_spirit"
+    ],
+    "Holy Spirit word-pictures (clothing, dove, fire, oil, pledge, seal, water, wind)": [
+      "sof_holy_spirit"
+    ],
+    "conviction of sin": [
+      "sof_holy_spirit"
+    ],
+    "Spirit baptism into the body of Christ": [
+      "sof_holy_spirit"
+    ],
+    "sealing of the believer": [
+      "sof_holy_spirit"
+    ],
+    "Spirit as guarantee/earnest of inheritance": [
+      "sof_holy_spirit"
+    ],
+    "Comforter / Paraclete": [
+      "sof_holy_spirit"
+    ],
+    "Spirit's intercession": [
+      "sof_holy_spirit"
+    ],
+    "dispensational distinctives of Spirit baptism": [
+      "sof_holy_spirit"
+    ],
+    "permanence of indwelling and sealing": [
+      "sof_holy_spirit"
+    ],
+    "Anthropology": [
+      "sof_man"
+    ],
+    "Hamartiology": [
+      "sof_man"
+    ],
+    "Soteriology": [
+      "sof_man"
+    ],
+    "imago Dei (image of God)": [
+      "sof_man"
+    ],
+    "creation of humanity": [
+      "sof_man"
+    ],
+    "male and female": [
+      "sof_man"
+    ],
+    "stewardship / dominion mandate": [
+      "sof_man"
+    ],
+    "purpose of humanity (glorify God)": [
+      "sof_man"
+    ],
+    "fellowship with God": [
+      "sof_man"
+    ],
+    "fellowship with fellow man": [
+      "sof_man"
+    ],
+    "eschatological dwelling of God with humanity": [
+      "sof_man"
+    ],
+    "the fall of mankind": [
+      "sof_man"
+    ],
+    "original sin / sin nature": [
+      "sof_man"
+    ],
+    "sin by choice (actual sin)": [
+      "sof_man"
+    ],
+    "spiritual death / total depravity": [
+      "sof_man"
+    ],
+    "separation from God": [
+      "sof_man"
+    ],
+    "eternal separation": [
+      "sof_man"
+    ],
+    "imputation (Christ made sin / believers righteousness of God)": [
+      "sof_man"
+    ],
+    "faith in Christ as Savior": [
+      "sof_man"
+    ],
+    "salvation": [
+      "sof_man"
+    ],
+    "eternal fellowship with God": [
+      "sof_man"
+    ],
+    "hell and final judgment": [
+      "sof_man"
+    ],
+    "reconciliation through the cross": [
+      "sof_man"
+    ],
+    "justification by faith": [
+      "sof_man"
+    ],
+    "church planting motivations": [
+      "topics_to_discuss"
+    ],
+    "evangelism": [
+      "topics_to_discuss"
+    ],
+    "vision and mission of the local church": [
+      "topics_to_discuss"
+    ],
+    "core values and beliefs": [
+      "topics_to_discuss"
+    ],
+    "social contract and meeting expectations": [
+      "topics_to_discuss"
+    ],
+    "statement of faith and theological triage": [
+      "topics_to_discuss"
+    ],
+    "free will and divine sovereignty": [
+      "topics_to_discuss"
+    ],
+    "eldership and formal deacons": [
+      "topics_to_discuss"
+    ],
+    "membership and church polity": [
+      "topics_to_discuss"
+    ],
+    "songs and corporate worship music": [
+      "topics_to_discuss"
+    ],
+    "church registration and legal status": [
+      "topics_to_discuss"
+    ],
+    "preaching and pulpit ministry": [
+      "topics_to_discuss"
+    ],
+    "small groups": [
+      "topics_to_discuss",
+      "vision_and_mission"
+    ],
+    "training for ministry (preaching, counseling, language)": [
+      "topics_to_discuss"
+    ],
+    "Sunday gathering format": [
+      "topics_to_discuss"
+    ],
+    "communion and breaking of bread": [
+      "topics_to_discuss"
+    ],
+    "Sunday school and children's ministry": [
+      "topics_to_discuss"
+    ],
+    "church budget and ministry support": [
+      "topics_to_discuss"
+    ],
+    "translation choice for the church": [
+      "topics_to_discuss"
+    ],
+    "full-time worker support and avoiding paid pastoral model": [
+      "topics_to_discuss"
+    ],
+    "expository and systematic preaching": [
+      "topics_to_discuss"
+    ],
+    "Acts 2:42 marks of the church (teaching, fellowship, breaking of bread, prayer)": [
+      "topics_to_discuss"
+    ],
+    "head covering in corporate worship": [
+      "topics_to_discuss"
+    ],
+    "silence of women in church meetings": [
+      "topics_to_discuss"
+    ],
+    "scope of church-order vs evangelistic meetings": [
+      "topics_to_discuss"
+    ],
+    "premarital counseling and marriage practices": [
+      "topics_to_discuss"
+    ],
+    "dowry and culturally-tied marriage practices": [
+      "topics_to_discuss"
+    ],
+    "rings and ornaments": [
+      "topics_to_discuss"
+    ],
+    "marriage with non-believers": [
+      "topics_to_discuss"
+    ],
+    "dating among believers": [
+      "topics_to_discuss"
+    ],
+    "divorce and restoration": [
+      "topics_to_discuss"
+    ],
+    "honoring elders (1 Tim 5:17)": [
+      "topics_to_discuss"
+    ],
+    "church budget transparency": [
+      "topics_to_discuss"
+    ],
+    "tithing and giving": [
+      "topics_to_discuss"
+    ],
+    "guest speakers and pulpit access": [
+      "topics_to_discuss"
+    ],
+    "cessationism vs continuationism (sign gifts)": [
+      "topics_to_discuss"
+    ],
+    "partnership with other churches and organizations": [
+      "topics_to_discuss"
+    ],
+    "grounds for leaving a church": [
+      "topics_to_discuss"
+    ],
+    "Matthew 18 / 1 Cor 5 discipline procedure": [
+      "topics_to_discuss"
+    ],
+    "election (unconditional, conditional, in-Christ)": [
+      "topics_to_discuss"
+    ],
+    "avoiding the labels Calvinism and Arminianism": [
+      "topics_to_discuss"
+    ],
+    "complementarianism and created order": [
+      "topics_to_discuss"
+    ],
+    "1 Cor 11 head hierarchy (God-Christ-man-woman)": [
+      "topics_to_discuss"
+    ],
+    "headship and creation order": [
+      "topics_to_discuss"
+    ],
+    "natural revelation and women's hair": [
+      "topics_to_discuss"
+    ],
+    "angels and corporate worship": [
+      "topics_to_discuss"
+    ],
+    "role of women as titus 2 model, gospel witness, and home-keeper": [
+      "topics_to_discuss"
+    ],
+    "modest dress and dress code for leadership": [
+      "topics_to_discuss"
+    ],
+    "baptism practice": [
+      "topics_to_discuss"
+    ],
+    "church inauguration": [
+      "topics_to_discuss"
+    ],
+    "pre-tribulation rapture": [
+      "topics_to_discuss"
+    ],
+    "literal millennial reign": [
+      "topics_to_discuss"
+    ],
+    "Israel and the church (no replacement)": [
+      "topics_to_discuss"
+    ],
+    "Pauline correctives to early churches (gifts, doctrine, ethics, unity, eschatology)": [
+      "topics_to_discuss"
+    ],
+    "alcohol consumption": [
+      "topics_to_discuss"
+    ],
+    "fellowship": [
+      "topics_to_discuss"
+    ],
+    "trusteeship and church registration": [
+      "topics_to_discuss"
+    ],
+    "local church identity": [
+      "vision_and_mission"
+    ],
+    "geographic locality of the church": [
+      "vision_and_mission"
+    ],
+    "biblical authority and sufficiency of Scripture": [
+      "vision_and_mission"
+    ],
+    "expository preaching and teaching": [
+      "vision_and_mission"
+    ],
+    "intentional Christian fellowship": [
+      "vision_and_mission"
+    ],
+    "Acts 2:42 marks of the early church": [
+      "vision_and_mission"
+    ],
+    "corporate prayer": [
+      "vision_and_mission"
+    ],
+    "Christ-centered worship": [
+      "vision_and_mission"
+    ],
+    "the Lord's Supper": [
+      "vision_and_mission"
+    ],
+    "Great Commission discipleship": [
+      "vision_and_mission"
+    ],
+    "evangelism and teaching": [
+      "vision_and_mission"
+    ],
+    "body life and one-another ministry": [
+      "vision_and_mission"
+    ],
+    "spiritual gifts and gift-oriented ministry": [
+      "vision_and_mission"
+    ],
+    "leadership development": [
+      "vision_and_mission"
+    ],
+    "mission focus and good works": [
+      "vision_and_mission"
+    ],
+    "vision for gospel proclamation in a geographic area": [
+      "vision_and_mission"
+    ],
+    "personal holiness and magnifying Christ": [
+      "vision_and_mission"
+    ],
+    "church membership and commitment": [
+      "vision_and_mission"
+    ],
+    "self-examination of believers": [
+      "vision_and_mission"
+    ]
+  },
+  "scripture_coverage": {
+    "Matt": {
+      "total_refs": 22,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        12,
+        18,
+        23,
+        25,
+        26,
+        28
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "offerings",
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "topics_to_discuss",
+        "vision_and_mission"
+      ]
+    },
+    "Acts": {
+      "total_refs": 57,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        24
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "church_governance",
+        "offerings",
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "topics_to_discuss",
+        "vision_and_mission"
+      ]
+    },
+    "Rom": {
+      "total_refs": 35,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "offerings",
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "sof_man",
+        "topics_to_discuss",
+        "vision_and_mission"
+      ]
+    },
+    "Gal": {
+      "total_refs": 14,
+      "chapters_referenced": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit"
+      ]
+    },
+    "1Cor": {
+      "total_refs": 64,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "boundaries",
+        "church_governance",
+        "offerings",
+        "salvation_soteriology",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "sof_man",
+        "topics_to_discuss",
+        "vision_and_mission"
+      ]
+    },
+    "Col": {
+      "total_refs": 7,
+      "chapters_referenced": [
+        1,
+        2
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "church_governance",
+        "sof_god",
+        "sof_man"
+      ]
+    },
+    "John": {
+      "total_refs": 40,
+      "chapters_referenced": [
+        1,
+        3,
+        5,
+        7,
+        10,
+        14,
+        15,
+        16,
+        17
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "sof_man",
+        "topics_to_discuss"
+      ]
+    },
+    "Ezek": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        36
+      ],
+      "documents_citing": [
+        "baptism_and_communion"
+      ]
+    },
+    "Isa": {
+      "total_refs": 7,
+      "chapters_referenced": [
+        7,
+        11,
+        44,
+        45,
+        63,
+        64
+      ],
+      "documents_citing": [
+        "baptism_and_communion",
+        "salvation_words",
+        "sof_god",
+        "sof_god_the_son",
+        "sof_holy_spirit"
+      ]
+    },
+    "2Thess": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        3
+      ],
+      "documents_citing": [
+        "baptism_and_communion"
+      ]
+    },
+    "Jas": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        5
+      ],
+      "documents_citing": [
+        "baptism_and_communion"
+      ]
+    },
+    "Prov": {
+      "total_refs": 3,
+      "chapters_referenced": [
+        4
+      ],
+      "documents_citing": [
+        "boundaries"
+      ]
+    },
+    "Jer": {
+      "total_refs": 2,
+      "chapters_referenced": [
+        17
+      ],
+      "documents_citing": [
+        "boundaries"
+      ]
+    },
+    "Titus": {
+      "total_refs": 6,
+      "chapters_referenced": [
+        1,
+        2,
+        3
+      ],
+      "documents_citing": [
+        "boundaries",
+        "church_governance",
+        "sof_holy_spirit",
+        "topics_to_discuss"
+      ]
+    },
+    "1Tim": {
+      "total_refs": 12,
+      "chapters_referenced": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "documents_citing": [
+        "boundaries",
+        "church_governance",
+        "offerings",
+        "sof_god_the_son",
+        "topics_to_discuss"
+      ]
+    },
+    "Eph": {
+      "total_refs": 32,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "documents_citing": [
+        "boundaries",
+        "church_governance",
+        "offerings",
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_holy_spirit",
+        "sof_man",
+        "topics_to_discuss"
+      ]
+    },
+    "1Pet": {
+      "total_refs": 11,
+      "chapters_referenced": [
+        1,
+        2,
+        5
+      ],
+      "documents_citing": [
+        "boundaries",
+        "church_governance",
+        "salvation_soteriology",
+        "salvation_words",
+        "sof_god",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "sof_man"
+      ]
+    },
+    "Heb": {
+      "total_refs": 22,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        10,
+        11,
+        13
+      ],
+      "documents_citing": [
+        "church_governance",
+        "offerings",
+        "salvation_soteriology",
+        "salvation_words",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "vision_and_mission"
+      ]
+    },
+    "Phil": {
+      "total_refs": 7,
+      "chapters_referenced": [
+        2,
+        4
+      ],
+      "documents_citing": [
+        "church_governance",
+        "sof_god",
+        "sof_god_the_son",
+        "topics_to_discuss"
+      ]
+    },
+    "2Cor": {
+      "total_refs": 11,
+      "chapters_referenced": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        9,
+        12,
+        13
+      ],
+      "documents_citing": [
+        "offerings",
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit",
+        "sof_man"
+      ]
+    },
+    "Deut": {
+      "total_refs": 6,
+      "chapters_referenced": [
+        6,
+        12,
+        14,
+        25,
+        26,
+        33
+      ],
+      "documents_citing": [
+        "offerings",
+        "sof_god"
+      ]
+    },
+    "Luke": {
+      "total_refs": 10,
+      "chapters_referenced": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        10,
+        21
+      ],
+      "documents_citing": [
+        "offerings",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god_the_son",
+        "sof_holy_spirit"
+      ]
+    },
+    "Gen": {
+      "total_refs": 11,
+      "chapters_referenced": [
+        1,
+        4,
+        14,
+        28
+      ],
+      "documents_citing": [
+        "offerings",
+        "sof_god",
+        "sof_holy_spirit",
+        "sof_man"
+      ]
+    },
+    "Num": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        18
+      ],
+      "documents_citing": [
+        "offerings"
+      ]
+    },
+    "Neh": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        13
+      ],
+      "documents_citing": [
+        "offerings"
+      ]
+    },
+    "Lev": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        27
+      ],
+      "documents_citing": [
+        "offerings"
+      ]
+    },
+    "Rev": {
+      "total_refs": 5,
+      "chapters_referenced": [
+        20,
+        21
+      ],
+      "documents_citing": [
+        "salvation_soteriology",
+        "sof_man"
+      ]
+    },
+    "Mark": {
+      "total_refs": 6,
+      "chapters_referenced": [
+        1,
+        6,
+        12
+      ],
+      "documents_citing": [
+        "salvation_soteriology",
+        "salvation_words",
+        "sign_gifts",
+        "sof_god",
+        "sof_man"
+      ]
+    },
+    "Ps": {
+      "total_refs": 5,
+      "chapters_referenced": [
+        51,
+        90,
+        104,
+        119
+      ],
+      "documents_citing": [
+        "salvation_words",
+        "sof_god",
+        "sof_holy_spirit",
+        "sof_man"
+      ]
+    },
+    "1Thess": {
+      "total_refs": 5,
+      "chapters_referenced": [
+        1,
+        4,
+        5
+      ],
+      "documents_citing": [
+        "sign_gifts",
+        "sof_god",
+        "sof_god_the_son",
+        "sof_holy_spirit"
+      ]
+    },
+    "1John": {
+      "total_refs": 6,
+      "chapters_referenced": [
+        2,
+        3,
+        4
+      ],
+      "documents_citing": [
+        "sign_gifts",
+        "sof_god_the_father",
+        "sof_god_the_son",
+        "sof_holy_spirit"
+      ]
+    },
+    "Job": {
+      "total_refs": 4,
+      "chapters_referenced": [
+        26,
+        32,
+        33,
+        34
+      ],
+      "documents_citing": [
+        "sof_god"
+      ]
+    },
+    "1Chr": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        17
+      ],
+      "documents_citing": [
+        "sof_god"
+      ]
+    },
+    "Judg": {
+      "total_refs": 2,
+      "chapters_referenced": [
+        6,
+        14
+      ],
+      "documents_citing": [
+        "sof_holy_spirit"
+      ]
+    },
+    "2Pet": {
+      "total_refs": 1,
+      "chapters_referenced": [
+        1
+      ],
+      "documents_citing": [
+        "sof_holy_spirit"
+      ]
+    },
+    "2Tim": {
+      "total_refs": 3,
+      "chapters_referenced": [
+        2,
+        3,
+        4
+      ],
+      "documents_citing": [
+        "topics_to_discuss",
+        "vision_and_mission"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "doc_slug": "baptism_and_communion",
+      "title": "The Two Ordinances — Baptism and Communion",
+      "session_topic": "Doctrinal exposition of the two church ordinances: Believers Baptism and the Lord's Supper — their biblical basis, mode, recipients, meaning, and local-church practice.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Sacramentology / Ordinances",
+        "Soteriology",
+        "Christology"
+      ],
+      "presents_multiple_perspectives": true,
+      "chunk_count": 19,
+      "scripture_ref_count": 47,
+      "unique_scripture_books": 11,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "high"
+      }
+    },
+    {
+      "doc_slug": "boundaries",
+      "title": "Boundaries Talk with the Guys",
+      "session_topic": "Establishing healthy biblical boundaries for men with the opposite sex — physical, emotional, digital, spiritual, and social safeguards that honor God, protect marriages, and maintain personal purity.",
+      "topic_clusters": [
+        "Christian Ethics",
+        "Sanctification",
+        "Practical Theology",
+        "Ecclesiology",
+        "Hamartiology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 20,
+      "scripture_ref_count": 13,
+      "unique_scripture_books": 7,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "church_governance",
+      "title": "Church Governance",
+      "session_topic": "Biblical pattern of church governance: Lord Jesus as head, elders and deacons as appointed servants, believers as the body; qualifications and responsibility of elders; roles of men and women in the gathering, headship, and head covering.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Church Leadership",
+        "Eldership",
+        "Gender Roles in the Church",
+        "Headship and Head Covering"
+      ],
+      "presents_multiple_perspectives": true,
+      "chunk_count": 14,
+      "scripture_ref_count": 28,
+      "unique_scripture_books": 9,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "high"
+      }
+    },
+    {
+      "doc_slug": "membership",
+      "title": "Agreement to Become a Member",
+      "session_topic": "Outline of the church's formal membership process, distinctives members must affirm, expectations of members, privileges granted, and rationale for instituting formal membership.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Church Polity",
+        "Discipleship",
+        "Church Discipline"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 9,
+      "scripture_ref_count": 0,
+      "unique_scripture_books": 0,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "n/a",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "offerings",
+      "title": "A Biblical New Testament Perspective on Tithes and Offerings",
+      "session_topic": "A New Testament-anchored survey of tithes and offerings, arguing that Old Testament tithing does not directly bind the church while the underlying principles of generous, willing giving and supporting ministers and the needy are reaffirmed in the New Testament.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Christian Ethics / Stewardship",
+        "Soteriology (Christ's once-for-all sacrifice)",
+        "Biblical Theology (Old Testament / New Testament continuity)"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 25,
+      "scripture_ref_count": 28,
+      "unique_scripture_books": 14,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "salvation_soteriology",
+      "title": "On Salvation (Soteriology)",
+      "session_topic": "Statement of Faith on the doctrine of salvation: a secure gift received by grace through faith and repentance, grounded in Christ's atoning death and resurrection, issuing in adoption and a call to holiness",
+      "topic_clusters": [
+        "Soteriology",
+        "Justification",
+        "Sanctification",
+        "Eschatology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 10,
+      "scripture_ref_count": 28,
+      "unique_scripture_books": 10,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "salvation_words",
+      "title": "Salvation Words",
+      "session_topic": "Word study of key salvation-related terms (Grace, Repentance, Faith) with supporting scripture references and discussion points on faith, the heart, and obedience.",
+      "topic_clusters": [
+        "Soteriology",
+        "Hamartiology",
+        "Pneumatology",
+        "Practical Theology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 14,
+      "scripture_ref_count": 21,
+      "unique_scripture_books": 11,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "sign_gifts",
+      "title": "On Sign Gifts",
+      "session_topic": "Cessationism vs continuationism regarding the sign gifts of the Spirit (tongues, prophecy, healing, miracles), with arguments for both positions and a personal bridging perspective",
+      "topic_clusters": [
+        "Pneumatology",
+        "Ecclesiology",
+        "Hermeneutics",
+        "Spiritual Gifts"
+      ],
+      "presents_multiple_perspectives": true,
+      "chunk_count": 14,
+      "scripture_ref_count": 39,
+      "unique_scripture_books": 12,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "high"
+      }
+    },
+    {
+      "doc_slug": "sof_god",
+      "title": "God (Trinity)",
+      "session_topic": "Statement of Faith class: doctrine of God as One God eternally existing in three Persons (Trinity), with shared divine attributes and distinct harmonious roles in creation, providence, redemption, and sanctification.",
+      "topic_clusters": [
+        "Theology Proper",
+        "Trinitarianism",
+        "Divine Attributes",
+        "Doctrine of Creation",
+        "Soteriology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 13,
+      "scripture_ref_count": 41,
+      "unique_scripture_books": 20,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "sof_god_the_father",
+      "title": "Statement of Faith — God the Father",
+      "session_topic": "Statement of Faith article on God the Father: His identity within the Trinity, eternal nature, role as all-powerful Creator and sustainer, sovereign ordering of all things for His glory, sending of the Son for redemption, and adoption of believers as His children.",
+      "topic_clusters": [
+        "Theology Proper",
+        "Trinitarianism",
+        "Soteriology",
+        "Adoption",
+        "Creation and Providence"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 10,
+      "scripture_ref_count": 20,
+      "unique_scripture_books": 8,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "sof_god_the_son",
+      "title": "Statement of Faith — God the Son (Jesus)",
+      "session_topic": "Statement-of-faith outline on the person and work of Jesus Christ: deity, incarnation, sinlessness, hypostatic union, substitutionary atonement, burial, resurrection, ascension, present priestly intercession, and bodily second coming.",
+      "topic_clusters": [
+        "Christology",
+        "Soteriology",
+        "Eschatology",
+        "Theology Proper"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 11,
+      "scripture_ref_count": 24,
+      "unique_scripture_books": 15,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "sof_holy_spirit",
+      "title": "SOF Classes - Holy Spirit",
+      "session_topic": "Statement of Faith class on the Person, nature, attributes, word-pictures, and ministries of the Holy Spirit",
+      "topic_clusters": [
+        "Pneumatology",
+        "Trinitarianism",
+        "Soteriology",
+        "Sanctification",
+        "Ecclesiology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 18,
+      "scripture_ref_count": 71,
+      "unique_scripture_books": 19,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "sof_man",
+      "title": "Statement of Faith — Man (Anthropology)",
+      "session_topic": "Statement of Faith class on biblical anthropology: God's original design for humanity, the impact of the fall and sin, and the redemptive impact of the cross of Christ.",
+      "topic_clusters": [
+        "Anthropology",
+        "Hamartiology",
+        "Soteriology",
+        "Eschatology"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 5,
+      "scripture_ref_count": 22,
+      "unique_scripture_books": 11,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    },
+    {
+      "doc_slug": "topics_to_discuss",
+      "title": "Topics to Discuss in Future (Church Plant Planning Document)",
+      "session_topic": "Working agenda and decision log for planting a local church: motivations, vision, governance, theological essentials, non-negotiables, finalized positions on contested doctrines (head coverings, sign gifts, eschatology, etc.), and operational to-dos.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Church Practice and Polity",
+        "Pneumatology",
+        "Eschatology",
+        "Soteriology",
+        "Christian Ethics and Marriage"
+      ],
+      "presents_multiple_perspectives": true,
+      "chunk_count": 45,
+      "scripture_ref_count": 34,
+      "unique_scripture_books": 10,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "high"
+      }
+    },
+    {
+      "doc_slug": "vision_and_mission",
+      "title": "Vision and Mission of this Fellowship",
+      "session_topic": "An introductory teaching presenting this fellowship's identity, name etymology, core values, vision, mission, and an invitation to membership and engagement.",
+      "topic_clusters": [
+        "Ecclesiology",
+        "Discipleship",
+        "Missiology",
+        "Bibliology",
+        "Christian Community"
+      ],
+      "presents_multiple_perspectives": false,
+      "chunk_count": 16,
+      "scripture_ref_count": 7,
+      "unique_scripture_books": 6,
+      "confidence": {
+        "text_extraction": "high",
+        "scripture_normalization": "high",
+        "perspective_separation": "n/a"
+      }
+    }
+  ],
+  "themes_summary": {
+    "total_unique_themes": 359,
+    "top_20_themes": [
+      {
+        "theme": "propitiation",
+        "doc_count": 3,
+        "chunk_count": 5
+      },
+      {
+        "theme": "spiritual gifts",
+        "doc_count": 3,
+        "chunk_count": 5
+      },
+      {
+        "theme": "role of women in the church",
+        "doc_count": 2,
+        "chunk_count": 8
+      },
+      {
+        "theme": "Trinity",
+        "doc_count": 2,
+        "chunk_count": 7
+      },
+      {
+        "theme": "church discipline",
+        "doc_count": 2,
+        "chunk_count": 6
+      },
+      {
+        "theme": "discipleship",
+        "doc_count": 2,
+        "chunk_count": 6
+      },
+      {
+        "theme": "sanctification",
+        "doc_count": 2,
+        "chunk_count": 6
+      },
+      {
+        "theme": "union with Christ",
+        "doc_count": 2,
+        "chunk_count": 6
+      },
+      {
+        "theme": "regeneration",
+        "doc_count": 2,
+        "chunk_count": 5
+      },
+      {
+        "theme": "substitutionary atonement",
+        "doc_count": 2,
+        "chunk_count": 5
+      },
+      {
+        "theme": "monotheism",
+        "doc_count": 2,
+        "chunk_count": 4
+      },
+      {
+        "theme": "sinlessness of Christ",
+        "doc_count": 2,
+        "chunk_count": 4
+      },
+      {
+        "theme": "wrath of God",
+        "doc_count": 2,
+        "chunk_count": 4
+      },
+      {
+        "theme": "filling of the Spirit",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "head covering",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "pastoral care",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "plurality of elders",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "predestination",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "repentance",
+        "doc_count": 2,
+        "chunk_count": 3
+      },
+      {
+        "theme": "small groups",
+        "doc_count": 2,
+        "chunk_count": 3
+      }
+    ]
+  },
+  "scripture_summary": {
+    "total_unique_books": 36,
+    "total_unique_normalized_refs": 385,
+    "most_referenced_books": [
+      {
+        "book": "1Cor",
+        "ref_count": 64
+      },
+      {
+        "book": "Acts",
+        "ref_count": 57
+      },
+      {
+        "book": "John",
+        "ref_count": 40
+      },
+      {
+        "book": "Rom",
+        "ref_count": 35
+      },
+      {
+        "book": "Eph",
+        "ref_count": 32
+      },
+      {
+        "book": "Heb",
+        "ref_count": 22
+      },
+      {
+        "book": "Matt",
+        "ref_count": 22
+      },
+      {
+        "book": "Gal",
+        "ref_count": 14
+      },
+      {
+        "book": "1Tim",
+        "ref_count": 12
+      },
+      {
+        "book": "1Pet",
+        "ref_count": 11
+      },
+      {
+        "book": "2Cor",
+        "ref_count": 11
+      },
+      {
+        "book": "Gen",
+        "ref_count": 11
+      },
+      {
+        "book": "Luke",
+        "ref_count": 10
+      },
+      {
+        "book": "Col",
+        "ref_count": 7
+      },
+      {
+        "book": "Isa",
+        "ref_count": 7
+      },
+      {
+        "book": "Phil",
+        "ref_count": 7
+      },
+      {
+        "book": "1John",
+        "ref_count": 6
+      },
+      {
+        "book": "Deut",
+        "ref_count": 6
+      },
+      {
+        "book": "Mark",
+        "ref_count": 6
+      },
+      {
+        "book": "Titus",
+        "ref_count": 6
+      }
+    ]
+  },
+  "documents_with_multiple_perspectives": [
+    "baptism_and_communion",
+    "church_governance",
+    "sign_gifts",
+    "topics_to_discuss"
+  ],
+  "low_confidence_documents": [],
+  "pending_transcription": [],
+  "unparseable": []
+}

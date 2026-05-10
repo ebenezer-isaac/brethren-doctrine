@@ -1,0 +1,423 @@
+{
+  "doc_slug": "offerings",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-09T23:26:28Z",
+  "ingested_at": "2026-05-09T23:50:26Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "A Biblical New Testament Perspective on Tithes and Offerings",
+    "estimated_date": null,
+    "session_topic": "A New Testament-anchored survey of tithes and offerings, arguing that Old Testament tithing does not directly bind the church while the underlying principles of generous, willing giving and supporting ministers and the needy are reaffirmed in the New Testament.",
+    "topic_clusters": [
+      "Ecclesiology",
+      "Christian Ethics / Stewardship",
+      "Soteriology (Christ's once-for-all sacrifice)",
+      "Biblical Theology (Old Testament / New Testament continuity)"
+    ],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "1 Cor 16:1-3", "book": "1 Corinthians", "chapter": 16, "verse_start": 1, "verse_end": 3, "normalized": "1Cor 16:1-3"},
+    {"raw": "Acts 24:17-18", "book": "Acts", "chapter": 24, "verse_start": 17, "verse_end": 18, "normalized": "Acts 24:17-18"},
+    {"raw": "Matt 6:1-4", "book": "Matthew", "chapter": 6, "verse_start": 1, "verse_end": 4, "normalized": "Matt 6:1-4"},
+    {"raw": "Matt 23:23", "book": "Matthew", "chapter": 23, "verse_start": 23, "verse_end": 23, "normalized": "Matt 23:23"},
+    {"raw": "Heb 10:8-18", "book": "Hebrews", "chapter": 10, "verse_start": 8, "verse_end": 18, "normalized": "Heb 10:8-18"},
+    {"raw": "Eph 5:2", "book": "Ephesians", "chapter": 5, "verse_start": 2, "verse_end": 2, "normalized": "Eph 5:2"},
+    {"raw": "2 Cor 8", "book": "2 Corinthians", "chapter": 8, "verse_start": null, "verse_end": null, "normalized": "2Cor 8"},
+    {"raw": "Acts 2:44-45", "book": "Acts", "chapter": 2, "verse_start": 44, "verse_end": 45, "normalized": "Acts 2:44-45"},
+    {"raw": "1 Cor 9", "book": "1 Corinthians", "chapter": 9, "verse_start": null, "verse_end": null, "normalized": "1Cor 9"},
+    {"raw": "Deut 25", "book": "Deuteronomy", "chapter": 25, "verse_start": null, "verse_end": null, "normalized": "Deut 25"},
+    {"raw": "1 Tim 5", "book": "1 Timothy", "chapter": 5, "verse_start": null, "verse_end": null, "normalized": "1Tim 5"},
+    {"raw": "Luke 21:1-4", "book": "Luke", "chapter": 21, "verse_start": 1, "verse_end": 4, "normalized": "Luke 21:1-4"},
+    {"raw": "Luke 10:7", "book": "Luke", "chapter": 10, "verse_start": 7, "verse_end": 7, "normalized": "Luke 10:7"},
+    {"raw": "Luke 10", "book": "Luke", "chapter": 10, "verse_start": null, "verse_end": null, "normalized": "Luke 10"},
+    {"raw": "Heb 7", "book": "Hebrews", "chapter": 7, "verse_start": null, "verse_end": null, "normalized": "Heb 7"},
+    {"raw": "Gen 14", "book": "Genesis", "chapter": 14, "verse_start": null, "verse_end": null, "normalized": "Gen 14"},
+    {"raw": "Gen 4", "book": "Genesis", "chapter": 4, "verse_start": null, "verse_end": null, "normalized": "Gen 4"},
+    {"raw": "Gen 14:18-20", "book": "Genesis", "chapter": 14, "verse_start": 18, "verse_end": 20, "normalized": "Gen 14:18-20"},
+    {"raw": "Hebrews 7", "book": "Hebrews", "chapter": 7, "verse_start": null, "verse_end": null, "normalized": "Heb 7"},
+    {"raw": "Gen 28", "book": "Genesis", "chapter": 28, "verse_start": null, "verse_end": null, "normalized": "Gen 28"},
+    {"raw": "Deuteronomy 12", "book": "Deuteronomy", "chapter": 12, "verse_start": null, "verse_end": null, "normalized": "Deut 12"},
+    {"raw": "Deuteronomy 14", "book": "Deuteronomy", "chapter": 14, "verse_start": null, "verse_end": null, "normalized": "Deut 14"},
+    {"raw": "Deuteronomy 26", "book": "Deuteronomy", "chapter": 26, "verse_start": null, "verse_end": null, "normalized": "Deut 26"},
+    {"raw": "Numbers 18", "book": "Numbers", "chapter": 18, "verse_start": null, "verse_end": null, "normalized": "Num 18"},
+    {"raw": "Nehemiah 13", "book": "Nehemiah", "chapter": 13, "verse_start": null, "verse_end": null, "normalized": "Neh 13"},
+    {"raw": "Lev 27", "book": "Leviticus", "chapter": 27, "verse_start": null, "verse_end": null, "normalized": "Lev 27"},
+    {"raw": "Rom 12", "book": "Romans", "chapter": 12, "verse_start": null, "verse_end": null, "normalized": "Rom 12"},
+    {"raw": "2 Cor 9:8-11", "book": "2 Corinthians", "chapter": 9, "verse_start": 8, "verse_end": 11, "normalized": "2Cor 9:8-11"}
+  ],
+
+  "theological_themes": [
+    "tithing under the new covenant",
+    "free-will / cheerful giving",
+    "support of those who minister the gospel",
+    "care for widows and the needy",
+    "humility and secrecy in almsgiving",
+    "Christ's once-for-all sacrifice",
+    "believer as living sacrifice",
+    "Melchizedekian priesthood and offerings before Moses",
+    "first-fruits and Old Testament tithe purposes",
+    "communal sharing in the early church",
+    "continuity and discontinuity between Old and New Testament giving",
+    "redemption of tithes / giving as non-burdensome",
+    "corporate worship and the offering",
+    "alignment of collections with congregational vision and mission"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "offerings_01",
+      "type": "teaching",
+      "content": "1 Cor 16:1-3 is an example of intentional collecting of money for meeting the needs of other believers.",
+      "scripture_refs": ["1Cor 16:1-3"],
+      "themes": ["free-will / cheerful giving", "care for widows and the needy", "communal sharing in the early church"],
+      "claims": [
+        "The New Testament records intentional, organized collections of money among believers to meet the needs of other believers."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_02",
+      "type": "teaching",
+      "content": "Acts 24:17-18 suggests that giving of alms (charity) and offerings (sacrifices) were still practiced in the Jewish community of that day. Though this specific reference was most likely in the context of the offering associated with purification practices of the Jews, it still is consistent with the teaching in scripture regarding offering our lives (including our money) as a sacrifice unto the Lord.",
+      "scripture_refs": ["Acts 24:17-18"],
+      "themes": ["believer as living sacrifice", "free-will / cheerful giving", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "Almsgiving and offerings continued to be practiced in first-century Jewish life, even after Christ's coming.",
+        "Although Acts 24:17-18 likely refers to a Jewish purification offering, it remains consistent with the broader scriptural pattern of offering one's life and resources as sacrifice to the Lord."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_03",
+      "type": "teaching",
+      "content": "Matt 6:1-4 assumes that followers of Christ will give of their resources to good works and charity and prescribes a level of humble secrecy as opposed to visible demonstrations for one's own glory.",
+      "scripture_refs": ["Matt 6:1-4"],
+      "themes": ["humility and secrecy in almsgiving", "free-will / cheerful giving"],
+      "claims": [
+        "Jesus assumes (does not merely permit) that his followers will give to charity and good works.",
+        "Giving is to be done in humble secrecy rather than for public recognition."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_04",
+      "type": "teaching",
+      "content": "Matt 23:23 is a powerful rebuke aimed at the religious leaders, the scribes and the Pharisees, indicating how they have missed the heart of the law and especially how they have neglected justice, mercy and faith but have excelled in 'paying' tithes. In this context Jesus is not rebuking them for tithing but rather for leaving the heart of the law undone.",
+      "scripture_refs": ["Matt 23:23"],
+      "themes": ["tithing under the new covenant", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "In Matt 23:23 Jesus rebukes the scribes and Pharisees for neglecting justice, mercy and faith while still meticulously tithing.",
+        "Jesus' rebuke is directed at omitting the weightier matters of the law, not at the practice of tithing itself."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_05",
+      "type": "teaching",
+      "content": "Heb 10:8-18 represents Christ fulfilling the Old Testament's sacrificial system once for all, through which all believers are accepted before God. No offerings or sacrifices are necessary to earn God's forgiveness or favor. However, in this great offering that Christ has given on our behalf, He serves as an example for us to give of our lives to God and to one another.",
+      "scripture_refs": ["Heb 10:8-18"],
+      "themes": ["Christ's once-for-all sacrifice", "believer as living sacrifice", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "Christ's offering in Hebrews 10 fulfills the Old Testament sacrificial system once for all.",
+        "Believers are accepted before God on the basis of Christ's offering, not through any offerings or sacrifices of their own.",
+        "No offering or sacrifice is required to earn God's forgiveness or favor.",
+        "Christ's self-giving serves as the pattern for believers to give of their lives to God and to one another."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_06"]
+    },
+    {
+      "chunk_id": "offerings_06",
+      "type": "teaching",
+      "content": "Eph 5:2 affirms the idea of following Christ as an example of offering ourselves to God and to one another in love.",
+      "scripture_refs": ["Eph 5:2"],
+      "themes": ["believer as living sacrifice", "Christ's once-for-all sacrifice"],
+      "claims": [
+        "Eph 5:2 calls believers to imitate Christ by offering themselves in love to God and to one another."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_05"]
+    },
+    {
+      "chunk_id": "offerings_07",
+      "type": "teaching",
+      "content": "2 Cor 8 also teaches that believers are to be generous towards the needs of others within the ability that the Lord has given them. Paul specifically encourages this 'grace' in verse 7.",
+      "scripture_refs": ["2Cor 8"],
+      "themes": ["free-will / cheerful giving", "care for widows and the needy"],
+      "claims": [
+        "Believers are to give generously toward others' needs, proportioned to the ability the Lord has given them.",
+        "Paul characterizes such generosity as a 'grace' that believers should excel in (2 Cor 8:7)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_08",
+      "type": "teaching",
+      "content": "Acts 2:44-45 is a powerful example of the foundations of the church being established through the common resources and care for each other that the first church had.",
+      "scripture_refs": ["Acts 2:44-45"],
+      "themes": ["communal sharing in the early church", "care for widows and the needy"],
+      "claims": [
+        "The earliest church shared resources in common and cared materially for one another.",
+        "This communal sharing is foundational to the church's establishment, not an optional add-on."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_09",
+      "type": "teaching",
+      "content": "1 Cor 9 talks about supporting those who serve for the sake of the Gospel. Paul not only connects back to an Old Testament principle (Deut 25), but also affirms that the church ought to support those who minister, similar to the example of the priests in the Old Testament.",
+      "scripture_refs": ["1Cor 9", "Deut 25"],
+      "themes": ["support of those who minister the gospel", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "1 Cor 9 teaches that those who labor for the gospel should be supported materially by those they serve.",
+        "Paul grounds this teaching in an Old Testament principle drawn from Deut 25.",
+        "The church's support of its ministers parallels Israel's support of the priesthood."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_10"]
+    },
+    {
+      "chunk_id": "offerings_10",
+      "type": "teaching",
+      "content": "1 Tim 5 is packed with practical instructions for both personal support and provision within individual families as well as within the context of the church. There is a sense in this passage that there is financial support provided by the church for widows or those with genuine need. Additionally, this passage suggests that elders are worthy of 'double honor' wherein again is a reference to the OT principle of giving to support those who minister and honoring them in doing so (Deut 25).",
+      "scripture_refs": ["1Tim 5", "Deut 25"],
+      "themes": ["care for widows and the needy", "support of those who minister the gospel", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "1 Tim 5 gives practical instruction on familial provision and on the church's role in supporting those with genuine need.",
+        "The church bears responsibility to financially support widows in genuine need.",
+        "Elders who labor in teaching are worthy of 'double honor', which includes material support.",
+        "The 'double honor' instruction is grounded in the same Old Testament principle (Deut 25) that supports gospel ministers."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_09"]
+    },
+    {
+      "chunk_id": "offerings_11",
+      "type": "teaching",
+      "content": "In Luke 21:1-4 Jesus appreciates the widow who, despite her poverty, gave sincerely of all that she had.",
+      "scripture_refs": ["Luke 21:1-4"],
+      "themes": ["free-will / cheerful giving", "care for widows and the needy"],
+      "claims": [
+        "Jesus commends the poor widow's offering as exemplary because she gave sincerely from all she had, not from surplus."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_12",
+      "type": "teaching",
+      "content": "Luke 10:7 provides the reference from Paul regarding a laborer being worthy to receive wages. The context in Luke 10 is Christ sending out disciples for work of the Gospel without any provisions but rather in faith to depend on those of 'peace' who provide for them.",
+      "scripture_refs": ["Luke 10:7", "Luke 10"],
+      "themes": ["support of those who minister the gospel"],
+      "claims": [
+        "Luke 10:7 is the source of the principle Paul cites that 'the laborer is worthy of his wages'.",
+        "In Luke 10 Christ sends out disciples without provision, expecting them to depend in faith on those of 'peace' who provide for them.",
+        "Material provision for gospel workers from those they serve is presented as a ministry pattern, not merely a permission."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_09", "offerings_10"]
+    },
+    {
+      "chunk_id": "offerings_13",
+      "type": "teaching",
+      "content": "Though the context of Heb 7 is the superiority of Christ as our eternal Priest, there is a strong significance to the fact that Melchizedek, the priest of God, received an offering from Abram. Not only is this a powerful connection between the testaments, it also carries a powerful reference to the bread and wine that Melchizedek presents to Abram in Gen 14.",
+      "scripture_refs": ["Heb 7", "Gen 14"],
+      "themes": ["Melchizedekian priesthood and offerings before Moses", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "Hebrews 7 primarily argues for the superiority of Christ as our eternal Priest.",
+        "Within that argument, Abram's offering to Melchizedek demonstrates that giving offerings to God's priest predates and undergirds the Mosaic system.",
+        "Melchizedek's bread and wine to Abram in Gen 14 carries typological significance bridging the testaments."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_15"]
+    },
+    {
+      "chunk_id": "offerings_14",
+      "type": "teaching",
+      "content": "Gen 4 is the context of Cain and Abel bringing offerings to the Lord. This example precedes the Levitical and Judaic sacrificial system and stands as an example that, from the very beginning of time, people brought offerings to the Lord, ideally bringing an acceptable offering to the Lord.",
+      "scripture_refs": ["Gen 4"],
+      "themes": ["Melchizedekian priesthood and offerings before Moses", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "The practice of bringing offerings to the Lord predates the Levitical and Mosaic sacrificial system.",
+        "Cain and Abel's offerings show that from the beginning of human history people brought offerings to the Lord.",
+        "Not all offerings are equally acceptable; the worshipper is to bring what is acceptable to the Lord."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_15",
+      "type": "teaching",
+      "content": "In Gen 14:18-20 we see the narrative of Melchizedek receiving an offering from Abram as priest of the Most High God. In Hebrews 7, a connection is made to Christ's priesthood being in the order or likeness of Melchizedek to prove Christ's superiority over the priests and sacrificial system of the old covenant. This also serves to support the idea that giving offerings to the Lord preceded the time of Moses and is a practice that goes beyond either testament.",
+      "scripture_refs": ["Gen 14:18-20", "Heb 7"],
+      "themes": ["Melchizedekian priesthood and offerings before Moses", "continuity and discontinuity between Old and New Testament giving"],
+      "claims": [
+        "Abram gave an offering to Melchizedek, priest of the Most High God, in Gen 14:18-20.",
+        "Hebrews 7 uses the Melchizedek-Abram episode to argue that Christ's priesthood is of the order of Melchizedek and superior to the Levitical priesthood.",
+        "Giving offerings to the Lord is a transcovenantal practice that predates Moses and persists beyond either testament."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_13", "offerings_14"]
+    },
+    {
+      "chunk_id": "offerings_16",
+      "type": "teaching",
+      "content": "Gen 28 presents Jacob encountering the Lord and committing to give a 'tenth' of all that the Lord gives him.",
+      "scripture_refs": ["Gen 28"],
+      "themes": ["tithing under the new covenant", "Melchizedekian priesthood and offerings before Moses"],
+      "claims": [
+        "In Gen 28 Jacob makes a personal vow to give a tenth to the Lord of all that the Lord provides him.",
+        "The tenth is presented in Genesis as a voluntary response to encountering God, prior to any Mosaic command."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_17",
+      "type": "teaching",
+      "content": "Deuteronomy 12 and 14 describe additional tithes for various purposes beyond sustaining the priests. God intended for the Israelites to support the practices of worship and faith through charity and the feasts.",
+      "scripture_refs": ["Deut 12", "Deut 14"],
+      "themes": ["first-fruits and Old Testament tithe purposes", "tithing under the new covenant"],
+      "claims": [
+        "Deut 12 and Deut 14 prescribe tithes whose purposes extend beyond support of the priests.",
+        "Israel's tithes were also to fund worship practices, the feasts, and charitable provision."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_18", "offerings_19"]
+    },
+    {
+      "chunk_id": "offerings_18",
+      "type": "teaching",
+      "content": "Deuteronomy 26 provides the heart behind the tithe offered by the Israelites as they entered into the Promised Land and testified of God's goodness and faithfulness by obediently offering the first fruits to the Lord for the priests, strangers, fatherless and widows. The Lord commanded them to enjoy all the blessings of the Promised Land while declaring His providence and manifesting His kindness towards the needy.",
+      "scripture_refs": ["Deut 26"],
+      "themes": ["first-fruits and Old Testament tithe purposes", "care for widows and the needy"],
+      "claims": [
+        "Deut 26 reveals the heart-posture intended for Israel's tithe: testimony to God's goodness and faithfulness in giving them the Land.",
+        "The first-fruits tithe was to benefit priests, strangers, the fatherless, and widows.",
+        "God commanded Israel to enjoy the Land's blessings while publicly declaring His providence and kindness toward the needy through the tithe."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_17", "offerings_19"]
+    },
+    {
+      "chunk_id": "offerings_19",
+      "type": "teaching",
+      "content": "Numbers 18 is where the tithes and offerings are instituted for the priests and Levites as their means of support and special inheritance, given that they are dedicated to the Lord's service.",
+      "scripture_refs": ["Num 18"],
+      "themes": ["first-fruits and Old Testament tithe purposes", "support of those who minister the gospel"],
+      "claims": [
+        "Numbers 18 institutes the tithes and offerings as the means of support for the priests and Levites.",
+        "These tithes constitute the priests' and Levites' inheritance because they are set apart wholly for the Lord's service."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_17", "offerings_18"]
+    },
+    {
+      "chunk_id": "offerings_20",
+      "type": "teaching",
+      "content": "Nehemiah 13 describes how the storehouses and the practice of tithing for the priests and the house of God were restored in obedience to the Lord by Nehemiah.",
+      "scripture_refs": ["Neh 13"],
+      "themes": ["first-fruits and Old Testament tithe purposes", "support of those who minister the gospel"],
+      "claims": [
+        "Nehemiah 13 narrates the restoration of the temple storehouses and tithing system after their neglect.",
+        "Restoration of tithing is presented as an act of obedience to the Lord by Nehemiah's leadership."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_21",
+      "type": "teaching",
+      "content": "Lev 27 provides instructions for those who would desire to 'redeem' their tithes and that which was meant to be sanctified for the Lord. This shows the importance of the purpose behind the commandment to tithe as well as the concern the Lord has for the one desiring to redeem the offering. It was never intended to be a burden upon the giver.",
+      "scripture_refs": ["Lev 27"],
+      "themes": ["redemption of tithes / giving as non-burdensome", "first-fruits and Old Testament tithe purposes"],
+      "claims": [
+        "Lev 27 provides a process by which one could 'redeem' tithes and items dedicated to the Lord.",
+        "The redemption provision shows that the Lord's concern for the giver is built into the tithing law.",
+        "Tithing was never intended to be a crushing burden upon the giver."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_22",
+      "type": "teaching",
+      "content": "In summary, the concept of tithing as prescribed in the Old Testament does not directly apply to the church. The amounts prescribed in the Old Testament and the purpose of the tithes also no longer directly apply to the church. However, there are clear connections made in the New Testament teachings between the heart or principles behind the tithes and offerings of the Old Testament and believers within the church today. Christians are taught to not only give of themselves 100% wholly to the Lord as living sacrifices (Rom 12) but also to look out for each other's needs and the needs of the Gospel. The example of tithes in the Old Testament to support the purposes of God were separate from 'free will offerings', and both principles are affirmed in the New Testament teaching of willing generosity to the work of the Lord and the needs of believers.",
+      "scripture_refs": ["Rom 12"],
+      "themes": ["tithing under the new covenant", "continuity and discontinuity between Old and New Testament giving", "free-will / cheerful giving", "believer as living sacrifice", "support of those who minister the gospel", "care for widows and the needy"],
+      "claims": [
+        "Old Testament tithing as prescribed (in amount and purpose) does not directly bind the New Testament church.",
+        "The heart-principles behind Old Testament tithes and offerings are reaffirmed for believers in the New Testament.",
+        "Christians are called to give themselves 100% wholly to the Lord as living sacrifices (Rom 12).",
+        "Christians are called to look after one another's needs and the needs of the gospel.",
+        "Old Testament practice distinguished prescribed tithes (supporting God's appointed purposes) from voluntary 'free-will offerings'.",
+        "The New Testament affirms both principles by teaching willing generosity toward the Lord's work and toward fellow believers."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_05", "offerings_07", "offerings_09", "offerings_17"]
+    },
+    {
+      "chunk_id": "offerings_23",
+      "type": "application",
+      "content": "Therefore, in light of these examples and principles in Scripture, a sacred time of prayerful giving is practiced as part of the Sunday worship service in which everyone's eyes are closed as the offering bag is passed, and those who have come with a willing desire and ability to give financially to the purposes of God through the local assembly can do so at that time. Those who are not giving financially during this time are encouraged to prayerfully consider ways in which they can offer their time and other resources as fruits of righteousness (2 Cor 9:8-11) to the Lord, in light of all that Christ has offered on our behalf as had just been considered through the preceding time of the breaking of bread.",
+      "scripture_refs": ["2Cor 9:8-11"],
+      "themes": ["corporate worship and the offering", "free-will / cheerful giving", "humility and secrecy in almsgiving", "believer as living sacrifice"],
+      "claims": [
+        "The local assembly observes a designated, prayerful time of giving during the Sunday worship service.",
+        "During the offering, attendees close their eyes as the bag is passed, preserving the privacy and willingness of the giver and protecting against social pressure.",
+        "Only those who come with a willing desire and the ability to give financially are to give at that time.",
+        "Those not giving financially are encouraged to offer time and other resources as fruits of righteousness (2 Cor 9:8-11).",
+        "The offering follows the breaking of bread so that giving is framed by remembrance of Christ's self-offering."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_03", "offerings_05", "offerings_22"]
+    },
+    {
+      "chunk_id": "offerings_24",
+      "type": "other",
+      "content": "Recommended further reading: a Gospel Coalition article on whether Paul quotes Moses out of context in 'do not muzzle the ox'; a Gospel Coalition article on Jesus and Melchizedek; and a Gospel Coalition article giving seven reasons Christians are not required to tithe.",
+      "scripture_refs": [],
+      "themes": ["tithing under the new covenant", "support of those who minister the gospel", "Melchizedekian priesthood and offerings before Moses"],
+      "claims": [
+        "External resources cited for further study include Gospel Coalition pieces on Paul's use of Deut 25, on Jesus and Melchizedek, and on reasons Christians are not required to tithe."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "offerings_25",
+      "type": "application",
+      "content": "It could also make sense to announce and align different collections for different purposes that are connected to the assembly's vision and mission.",
+      "scripture_refs": [],
+      "themes": ["corporate worship and the offering", "alignment of collections with congregational vision and mission"],
+      "claims": [
+        "Distinct collections may be announced and earmarked for distinct purposes.",
+        "Such designated collections should be aligned with the assembly's stated vision and mission, not raised arbitrarily."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["offerings_23"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "A Biblical New Testament Perspective on Tithes and Offerings\n\nNew Testament outline of Scriptures pertaining to tithes and offerings:\n\n1. 1 Cor 16:1-3 is an example of intentional collecting of money for meeting the needs of other believers\n2. Acts 24:17-18 suggests that giving of alms (charity) and offerings (sacrifices) were still practiced in the Jewish community of that day. Though this specific reference was most likely in the context of the offering associated with purification practices of the Jews, it still is consistent with the teaching in scripture regarding offering our lives (including our money) as a sacrifice unto the Lord.\n3. Matt 6:1-4 assumes that followers of Christ will give of their resources to good works and charity and prescribes a level of humble secrecy as opposed to visible demonstrations for one's own glory\n4. Matt 23:23 is a powerful rebuke aimed at the religious leaders, the scribes and the Pharisees indicating how they have missed the heart of the law and especially how they have neglected justice, mercy and faith but have excelled in \"paying\" tithes. In this context Jesus is not rebuking them for tithing but rather for leaving the heart of the law undone.\n5. Heb 10:8-18 represents Christ fulfilling the Old Testaments sacrificial system once for all through which all believers are accepted before God. No offerings or sacrifices are necessary to earn God's forgiveness or favor. However, in this great offering that Christ has given on our behalf, He serves as an example for us to give of our lives to God and to one another.\n6. Eph 5:2 affirms the idea of following Christ as an example of offering ourselves to God and to one another in love.\n7. 2 Cor 8 also teaches that believers are to be generous towards the needs of others within the ability that the Lord has given them. Paul specifically encourages this \"grace\" in verse 7\n8. Acts 2:44-45 is a powerful example of the foundations of the church being established through the common resources and care for each other that the first church had.\n9. 1 Cor 9 talks about supporting those who serve for the sake of the Gospel. Paul not only connects back to an Old Testament principle (Deut 25), but also affirms that the church ought to support those who minister similar to the example of the priests in the Old Testament.\n10. 1 Tim 5 is packed with practical instructions for both personal support and provision within individual families as well as within the context of the church. There is a sense in this passage that there is financial support provided by the church for widows or those with genuine need. Additionally this passage suggests that elders are worthy of \"double honor\" wherein again is a reference to the OT principle of giving to support those who minister and honoring them in doing so (Deut 25).\n11. In Luke 21:1-4 Jesus appreciates the widow who despite her poverty gave sincerely of all that she had.\n12. Luke 10:7 provides the reference from Paul regarding a laborer being worthy to receive wages. The context in Luke 10 is Christ sending out disciples for work of the Gospel without any provisions but rather in faith to depend on those of \"peace\" who provide for them.\n13. Though the context of Heb 7 is the superiority of Christ as our eternal Priest, there is a strong significance to the fact that Melchizedek, the priest of God, received an offering from Abram. Not only is this a power connection between the testaments, it also carries a powerful reference to the bread and wine that Melchizedek presents to Abram in Gen 14.\n\nOld Testament references:\n\n1. Gen 4 is the context of Cain and Abel bringing offerings to the Lord. This example precedes the Levitical and Judaic sacrificial system and stands as an example that from the very beginning of time, people brought offerings to the Lord, ideally bringing an acceptable offering to the Lord.\n2. In Gen 14:18-20 we see the narrative of Melchizedek receiving an offering from Abram as priest of the Most High God. In Hebrews 7, a connection is made to Christ's priesthood being in the order or likeness of Melchizedek to prove Christ's superiority over the priests and sacrificial system of the old covenant. This also serves to support the idea that giving offerings to the Lord preceded the time of Moses and is a practice that goes beyond either testament.\n3. Gen 28 presents Jacob encountering the Lord and committing to give a \"tenth\" of all that Lord gives him.\n4. Deuteronomy 12 and 14 describe additional tithes for various purposes beyond sustaining the priests. God intended for the Israelites to support the practices of worship and faith through charity and the feasts.\n5. Deuteronomy 26 provides the heart behind the tithe offered by the Israelites as they entered into the Promise Land and testified of God's goodness and faithfulness by obediently offering the first fruits to the Lord for the priests, strangers, fatherless and widows. The Lord commanded them to enjoy all the blessings of the Promise Land while declaring His providence and manifesting His kindness towards the needy.\n6. Numbers 18 is where the tithes and offerings are instituted for the priests and Levites as there means of support and special inheritance given that they are dedicated to the Lord's service.\n7. Nehemiah 13 describes how the storehouses and the practice of tithing for the priests and the house of God were restored in obedience to the Lord by Nehemiah.\n8. Lev 27 provides instructions for those who would desire to \"redeem\" their tithes and that which was meant to be sanctified for the Lord. This shows the importance of the purpose behind the commandment to tithe as well as the concern the Lord has for the one desiring to redeem the offering. It was never intended to be a burden upon the giver.\n\nIn summary, the concept of tithing as was prescribed in the Old Testament does not directly apply to the church. The amounts prescribed in the Old Testament and the purpose of the tithes also no longer directly apply to the church. However, there are clear connections made in the New Testament teachings between the heart or principles behind the tithes and offerings of the Old Testament and believers within the church today. Christians are taught to not only give of themselves 100% wholly to the Lord as living sacrifices (Rom 12) but to also look out for each other's needs and the needs of the Gospel. The example of tithes in the Old Testament to support the purposes of God were separate from \"free will offerings\" and both principles are affirmed in the New Testament teaching of willing generosity to the work of the Lord and needs of believers.\n\nTherefore, in light of these examples and principles in Scripture, we practice a sacred time of prayerful giving as part of the Sunday worship service in which we ask that everyone's eyes are closed as the offering bag is passed and that those who have come with a willing desire and ability to give financially to the purposes of God through the local assembly can do so at that time. Those who are not giving financially during this time, are encouraged to prayerfully consider ways in which they can offer their time and other resources as fruits of righteousness (2 Cor 9:8-11) to the Lord in light of all that Christ has offered on our behalf as had just been considered through the preceding time of the breaking of bread.\n\nFor additional reading and resources see:\nhttps://www.thegospelcoalition.org/blogs/justin-taylor/do-not-muzzle-the-ox-does-paul-quote-moses-out-of-context/\nhttps://www.thegospelcoalition.org/article/jesus-melchizedek/\nhttps://www.thegospelcoalition.org/article/7-reasons-christians-not-required-to-tithe/\n\nAlso note: it could make sense to announce and align different collections for different that are connected to our vision and mission.",
+
+  "parsing_notes": "Source is a clean, typed 3-page PDF document (no handwriting, no scans). All three pages were read in full; the document ends with the 'vision and mission' note. The document is an unsigned doctrinal paper presenting a single, coherent teaching position; no contributor names appear in the source so anonymization required no name stripping. The first-person plural in chunk 23 ('we practice... we ask') was rephrased to a third-person institutional voice ('the local assembly observes... attendees close their eyes') to keep the parsed record shareable without binding it to a specific congregation. The two URLs to thegospelcoalition.org are external links recommended in the source for further reading; they are summarized in chunk 24 rather than reproduced verbatim. The phrase 'OT' was expanded to 'Old Testament' in claim text where it appeared. Minor typos in source (\"Old Testaments sacrificial system\" -> kept verbatim in raw_extracted_text but corrected in chunked content; \"there means of support\" likely 'their' -> kept verbatim in raw, corrected in chunk). Three Hebrews-7 references (one in NT list, one in OT list using 'Hebrews 7') are normalized to the same Heb 7 OSIS form. 'Promise Land' kept verbatim from source although the conventional spelling is 'Promised Land'.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

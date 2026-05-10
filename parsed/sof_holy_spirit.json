@@ -1,0 +1,425 @@
+{
+  "doc_slug": "sof_holy_spirit",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-10T00:26:15+01:00",
+  "ingested_at": "2026-05-10T00:00:00Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "SOF Classes - Holy Spirit",
+    "estimated_date": null,
+    "session_topic": "Statement of Faith class on the Person, nature, attributes, word-pictures, and ministries of the Holy Spirit",
+    "topic_clusters": ["Pneumatology", "Trinitarianism", "Soteriology", "Sanctification", "Ecclesiology"],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "1 Cor 2:11", "book": "1 Corinthians", "chapter": 2, "verse_start": 11, "verse_end": null, "normalized": "1Cor 2:11"},
+    {"raw": "Eph 4:30", "book": "Ephesians", "chapter": 4, "verse_start": 30, "verse_end": null, "normalized": "Eph 4:30"},
+    {"raw": "1 Thes 5:19", "book": "1 Thessalonians", "chapter": 5, "verse_start": 19, "verse_end": null, "normalized": "1Thess 5:19"},
+    {"raw": "1 Cor 12:11", "book": "1 Corinthians", "chapter": 12, "verse_start": 11, "verse_end": null, "normalized": "1Cor 12:11"},
+    {"raw": "Acts 5:3,4", "book": "Acts", "chapter": 5, "verse_start": 3, "verse_end": 4, "normalized": "Acts 5:3-4"},
+    {"raw": "Mat 28:19", "book": "Matthew", "chapter": 28, "verse_start": 19, "verse_end": null, "normalized": "Matt 28:19"},
+    {"raw": "Gen 1:2", "book": "Genesis", "chapter": 1, "verse_start": 2, "verse_end": null, "normalized": "Gen 1:2"},
+    {"raw": "Jud 6:34", "book": "Judges", "chapter": 6, "verse_start": 34, "verse_end": null, "normalized": "Judg 6:34"},
+    {"raw": "Jud 14:6", "book": "Judges", "chapter": 14, "verse_start": 6, "verse_end": null, "normalized": "Judg 14:6"},
+    {"raw": "Ps 51:11", "book": "Psalms", "chapter": 51, "verse_start": 11, "verse_end": null, "normalized": "Ps 51:11"},
+    {"raw": "Jn 1:32", "book": "John", "chapter": 1, "verse_start": 32, "verse_end": null, "normalized": "John 1:32"},
+    {"raw": "Rom 8:9", "book": "Romans", "chapter": 8, "verse_start": 9, "verse_end": null, "normalized": "Rom 8:9"},
+    {"raw": "Acts 2:38", "book": "Acts", "chapter": 2, "verse_start": 38, "verse_end": null, "normalized": "Acts 2:38"},
+    {"raw": "Acts 10:44", "book": "Acts", "chapter": 10, "verse_start": 44, "verse_end": null, "normalized": "Acts 10:44"},
+    {"raw": "Jn 7:37", "book": "John", "chapter": 7, "verse_start": 37, "verse_end": null, "normalized": "John 7:37"},
+    {"raw": "Jn 3:8", "book": "John", "chapter": 3, "verse_start": 8, "verse_end": null, "normalized": "John 3:8"},
+    {"raw": "Acts 2:2", "book": "Acts", "chapter": 2, "verse_start": 2, "verse_end": null, "normalized": "Acts 2:2"},
+    {"raw": "Isa. 11:2", "book": "Isaiah", "chapter": 11, "verse_start": 2, "verse_end": null, "normalized": "Isa 11:2"},
+    {"raw": "Acts 1:16", "book": "Acts", "chapter": 1, "verse_start": 16, "verse_end": null, "normalized": "Acts 1:16"},
+    {"raw": "Heb. 3:7", "book": "Hebrews", "chapter": 3, "verse_start": 7, "verse_end": null, "normalized": "Heb 3:7"},
+    {"raw": "Heb. 10:15", "book": "Hebrews", "chapter": 10, "verse_start": 15, "verse_end": null, "normalized": "Heb 10:15"},
+    {"raw": "1 Pet. 1:11", "book": "1 Peter", "chapter": 1, "verse_start": 11, "verse_end": null, "normalized": "1Pet 1:11"},
+    {"raw": "2 Pet. 1:21", "book": "2 Peter", "chapter": 1, "verse_start": 21, "verse_end": null, "normalized": "2Pet 1:21"},
+    {"raw": "Rom. 8:26", "book": "Romans", "chapter": 8, "verse_start": 26, "verse_end": null, "normalized": "Rom 8:26"},
+    {"raw": "Rom. 8:27", "book": "Romans", "chapter": 8, "verse_start": 27, "verse_end": null, "normalized": "Rom 8:27"},
+    {"raw": "1 Cor. 2:10-13", "book": "1 Corinthians", "chapter": 2, "verse_start": 10, "verse_end": 13, "normalized": "1Cor 2:10-13"},
+    {"raw": "John 14:26", "book": "John", "chapter": 14, "verse_start": 26, "verse_end": null, "normalized": "John 14:26"},
+    {"raw": "John 14:17", "book": "John", "chapter": 14, "verse_start": 17, "verse_end": null, "normalized": "John 14:17"},
+    {"raw": "John 15:26", "book": "John", "chapter": 15, "verse_start": 26, "verse_end": null, "normalized": "John 15:26"},
+    {"raw": "John 16:13", "book": "John", "chapter": 16, "verse_start": 13, "verse_end": null, "normalized": "John 16:13"},
+    {"raw": "1 John 4:6", "book": "1 John", "chapter": 4, "verse_start": 6, "verse_end": null, "normalized": "1John 4:6"},
+    {"raw": "1 Thess. 1:6", "book": "1 Thessalonians", "chapter": 1, "verse_start": 6, "verse_end": null, "normalized": "1Thess 1:6"},
+    {"raw": "Heb. 10:29", "book": "Hebrews", "chapter": 10, "verse_start": 29, "verse_end": null, "normalized": "Heb 10:29"},
+    {"raw": "Isa. 63:10", "book": "Isaiah", "chapter": 63, "verse_start": 10, "verse_end": null, "normalized": "Isa 63:10"},
+    {"raw": "Rom. 5:5", "book": "Romans", "chapter": 5, "verse_start": 5, "verse_end": null, "normalized": "Rom 5:5"},
+    {"raw": "Rom. 15:30", "book": "Romans", "chapter": 15, "verse_start": 30, "verse_end": null, "normalized": "Rom 15:30"},
+    {"raw": "Gal. 5:22", "book": "Galatians", "chapter": 5, "verse_start": 22, "verse_end": null, "normalized": "Gal 5:22"},
+    {"raw": "Jn 16:8", "book": "John", "chapter": 16, "verse_start": 8, "verse_end": null, "normalized": "John 16:8"},
+    {"raw": "Jn 3:5-7", "book": "John", "chapter": 3, "verse_start": 5, "verse_end": 7, "normalized": "John 3:5-7"},
+    {"raw": "1 Cor 12:13", "book": "1 Corinthians", "chapter": 12, "verse_start": 13, "verse_end": null, "normalized": "1Cor 12:13"},
+    {"raw": "Acts 2:1", "book": "Acts", "chapter": 2, "verse_start": 1, "verse_end": null, "normalized": "Acts 2:1"},
+    {"raw": "Acts 2:3", "book": "Acts", "chapter": 2, "verse_start": 3, "verse_end": null, "normalized": "Acts 2:3"},
+    {"raw": "Acts 2:4", "book": "Acts", "chapter": 2, "verse_start": 4, "verse_end": null, "normalized": "Acts 2:4"},
+    {"raw": "1 Cor 3:16", "book": "1 Corinthians", "chapter": 3, "verse_start": 16, "verse_end": null, "normalized": "1Cor 3:16"},
+    {"raw": "Rom 8:13", "book": "Romans", "chapter": 8, "verse_start": 13, "verse_end": null, "normalized": "Rom 8:13"},
+    {"raw": "Eph 1:13", "book": "Ephesians", "chapter": 1, "verse_start": 13, "verse_end": null, "normalized": "Eph 1:13"},
+    {"raw": "Eph 2:17-18", "book": "Ephesians", "chapter": 2, "verse_start": 17, "verse_end": 18, "normalized": "Eph 2:17-18"},
+    {"raw": "Eph 1:14", "book": "Ephesians", "chapter": 1, "verse_start": 14, "verse_end": null, "normalized": "Eph 1:14"},
+    {"raw": "Jn 14:16-17", "book": "John", "chapter": 14, "verse_start": 16, "verse_end": 17, "normalized": "John 14:16-17"},
+    {"raw": "Heb 2:4", "book": "Hebrews", "chapter": 2, "verse_start": 4, "verse_end": null, "normalized": "Heb 2:4"},
+    {"raw": "Tit 3:5", "book": "Titus", "chapter": 3, "verse_start": 5, "verse_end": null, "normalized": "Titus 3:5"},
+    {"raw": "Eph 5:18", "book": "Ephesians", "chapter": 5, "verse_start": 18, "verse_end": null, "normalized": "Eph 5:18"},
+    {"raw": "Luke 1:15", "book": "Luke", "chapter": 1, "verse_start": 15, "verse_end": null, "normalized": "Luke 1:15"},
+    {"raw": "Luke 1:41", "book": "Luke", "chapter": 1, "verse_start": 41, "verse_end": null, "normalized": "Luke 1:41"},
+    {"raw": "Luke 1:67", "book": "Luke", "chapter": 1, "verse_start": 67, "verse_end": null, "normalized": "Luke 1:67"},
+    {"raw": "Acts 4:8", "book": "Acts", "chapter": 4, "verse_start": 8, "verse_end": null, "normalized": "Acts 4:8"},
+    {"raw": "Acts 4:31", "book": "Acts", "chapter": 4, "verse_start": 31, "verse_end": null, "normalized": "Acts 4:31"},
+    {"raw": "Luke 4:1", "book": "Luke", "chapter": 4, "verse_start": 1, "verse_end": null, "normalized": "Luke 4:1"},
+    {"raw": "Acts 6:3", "book": "Acts", "chapter": 6, "verse_start": 3, "verse_end": null, "normalized": "Acts 6:3"},
+    {"raw": "Acts 6:5", "book": "Acts", "chapter": 6, "verse_start": 5, "verse_end": null, "normalized": "Acts 6:5"},
+    {"raw": "Acts 7:55", "book": "Acts", "chapter": 7, "verse_start": 55, "verse_end": null, "normalized": "Acts 7:55"},
+    {"raw": "Acts 11:24", "book": "Acts", "chapter": 11, "verse_start": 24, "verse_end": null, "normalized": "Acts 11:24"},
+    {"raw": "Acts 13:52", "book": "Acts", "chapter": 13, "verse_start": 52, "verse_end": null, "normalized": "Acts 13:52"},
+    {"raw": "2 Co 1:22", "book": "2 Corinthians", "chapter": 1, "verse_start": 22, "verse_end": null, "normalized": "2Cor 1:22"},
+    {"raw": "2 Co 3:17", "book": "2 Corinthians", "chapter": 3, "verse_start": 17, "verse_end": null, "normalized": "2Cor 3:17"},
+    {"raw": "2 Co 3:18", "book": "2 Corinthians", "chapter": 3, "verse_start": 18, "verse_end": null, "normalized": "2Cor 3:18"},
+    {"raw": "Acts 1:8", "book": "Acts", "chapter": 1, "verse_start": 8, "verse_end": null, "normalized": "Acts 1:8"},
+    {"raw": "John 16:13-14", "book": "John", "chapter": 16, "verse_start": 13, "verse_end": 14, "normalized": "John 16:13-14"},
+    {"raw": "1 Cor 12:4-13", "book": "1 Corinthians", "chapter": 12, "verse_start": 4, "verse_end": 13, "normalized": "1Cor 12:4-13"},
+    {"raw": "Gal 5:22-23", "book": "Galatians", "chapter": 5, "verse_start": 22, "verse_end": 23, "normalized": "Gal 5:22-23"},
+    {"raw": "Heb 10:15-16", "book": "Hebrews", "chapter": 10, "verse_start": 15, "verse_end": 16, "normalized": "Heb 10:15-16"}
+  ],
+
+  "theological_themes": [
+    "personhood of the Holy Spirit",
+    "intellect of the Spirit",
+    "emotion of the Spirit",
+    "will of the Spirit",
+    "deity of the Holy Spirit",
+    "co-equality within the Trinity",
+    "Trinitarian formula",
+    "invisibility of the Spirit",
+    "Spirit in creation",
+    "Spirit empowering the work of God",
+    "Old Testament 'coming upon' versus New Testament indwelling",
+    "indwelling of believers",
+    "Spirit baptism into the body of Christ",
+    "regeneration",
+    "sanctification",
+    "sealing of the believer",
+    "Spirit as guarantee/earnest of inheritance",
+    "Comforter / Paraclete",
+    "Spirit's intercession",
+    "spiritual gifts",
+    "filling of the Spirit",
+    "conviction of sin",
+    "Spirit-inspired Scripture",
+    "Holy Spirit word-pictures (clothing, dove, fire, oil, pledge, seal, water, wind)",
+    "sovereignty of the Spirit",
+    "dispensational distinctives of Spirit baptism",
+    "permanence of indwelling and sealing"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "sof_holy_spirit_01",
+      "type": "teaching",
+      "content": "The Holy Spirit is a Person, possessing the three classical marks of personhood: Intellect (1 Cor 2:11), Emotion (He can be grieved — Eph 4:30; He can be quenched — 1 Thess 5:19), and Will (1 Cor 12:11).",
+      "scripture_refs": ["1Cor 2:11", "Eph 4:30", "1Thess 5:19", "1Cor 12:11"],
+      "themes": ["personhood of the Holy Spirit", "intellect of the Spirit", "emotion of the Spirit", "will of the Spirit"],
+      "claims": [
+        "The Holy Spirit is a Person, not an impersonal force.",
+        "The Spirit possesses intellect, demonstrated by 1 Cor 2:11.",
+        "The Spirit possesses emotion, evidenced by being grieved (Eph 4:30) and quenched (1 Thess 5:19).",
+        "The Spirit possesses will, demonstrated by 1 Cor 12:11."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_holy_spirit_02",
+      "type": "teaching",
+      "content": "The Holy Spirit is God and is co-equal with the Father and the Son. His deity is shown in Acts 5:3-4 (lying to the Holy Spirit is lying to God). His co-equality is shown in the Trinitarian formula of Matthew 28:19.",
+      "scripture_refs": ["Acts 5:3-4", "Matt 28:19"],
+      "themes": ["deity of the Holy Spirit", "co-equality within the Trinity", "Trinitarian formula"],
+      "claims": [
+        "The Holy Spirit is God (Acts 5:3-4).",
+        "The Holy Spirit is co-equal with the Father and the Son, as evidenced by the Trinitarian baptismal formula in Matt 28:19."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_holy_spirit_03",
+      "type": "teaching",
+      "content": "Nature of the Holy Spirit: He cannot be seen. He dwelt with the Godhead from creation (Gen 1:2 — the Spirit hovered over the waters). He energizes the work of God. In the Old Testament He 'came upon' men for specific empowerment (Judg 6:34 — Gideon; Judg 14:6 — Samson; Ps 51:11 — David's plea that He not be taken away). He dwells / abides in the children of God: He had His abode in Jesus (John 1:32) and He dwells in believers (Rom 8:9), beginning at salvation (Acts 2:38; Acts 10:44). He is sovereign in His coming and going (John 7:37; John 3:8; Acts 2:2 — wind imagery, oil imagery).",
+      "scripture_refs": ["Gen 1:2", "Judg 6:34", "Judg 14:6", "Ps 51:11", "John 1:32", "Rom 8:9", "Acts 2:38", "Acts 10:44", "John 7:37", "John 3:8", "Acts 2:2"],
+      "themes": ["invisibility of the Spirit", "Spirit in creation", "Spirit empowering the work of God", "Old Testament 'coming upon' versus New Testament indwelling", "indwelling of believers", "sovereignty of the Spirit"],
+      "claims": [
+        "The Holy Spirit is invisible — He cannot be seen.",
+        "The Holy Spirit was active with the Godhead from creation (Gen 1:2).",
+        "The Holy Spirit energizes the work of God.",
+        "In the Old Testament the Holy Spirit 'came upon' men for specific tasks rather than indwelling them permanently.",
+        "Old Testament saints could pray for the Spirit not to be removed (Ps 51:11), implying a different mode of Spirit-presence than the post-Pentecost indwelling.",
+        "The Holy Spirit had His abode on Jesus (John 1:32).",
+        "The Holy Spirit dwells in every believer (Rom 8:9).",
+        "Indwelling begins at the moment of salvation (Acts 2:38; Acts 10:44).",
+        "The Holy Spirit is sovereign in His operations, illustrated by wind (John 3:8; Acts 2:2) and oil imagery."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_09", "sof_holy_spirit_11"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_04",
+      "type": "teaching",
+      "content": "Cognition / Intellect of the Spirit (eight evidences): 1) He counsels (Isa 11:2); 2) He imparts wisdom (Isa 11:2); 3) He inspired Scripture (Acts 1:16; Heb 3:7; 10:15; 1 Pet 1:11; 2 Pet 1:21); 4) He intercedes (Rom 8:26); 5) He knows (Isa 11:2); 6) He possesses a mind (Rom 8:27; 1 Cor 2:10-13); 7) He reminds (John 14:26); 8) He provides truth (John 14:17, 26; 15:26; 16:13; 1 John 4:6).",
+      "scripture_refs": ["Isa 11:2", "Acts 1:16", "Heb 3:7", "Heb 10:15", "1Pet 1:11", "2Pet 1:21", "Rom 8:26", "Rom 8:27", "1Cor 2:10-13", "John 14:26", "John 14:17", "John 15:26", "John 16:13", "1John 4:6"],
+      "themes": ["intellect of the Spirit", "Spirit-inspired Scripture", "personhood of the Holy Spirit"],
+      "claims": [
+        "The Spirit's intellect is demonstrated through eight distinct activities: counseling, imparting wisdom, inspiring Scripture, interceding, knowing, possessing a mind, reminding, and providing truth.",
+        "Inspiration of Scripture is a Spirit activity (Acts 1:16; Heb 3:7; 10:15; 1 Pet 1:11; 2 Pet 1:21).",
+        "The Spirit possesses a mind (Rom 8:27; 1 Cor 2:10-13)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_01"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_05",
+      "type": "teaching",
+      "content": "Affection / Emotion of the Spirit (four evidences): 1) He experiences joy (1 Thess 1:6); 2) He can be insulted (Heb 10:29); 3) He grieves over sin (Isa 63:10; Eph 4:30); 4) He loves (Rom 5:5; 15:30; Gal 5:22).",
+      "scripture_refs": ["1Thess 1:6", "Heb 10:29", "Isa 63:10", "Eph 4:30", "Rom 5:5", "Rom 15:30", "Gal 5:22"],
+      "themes": ["emotion of the Spirit", "personhood of the Holy Spirit"],
+      "claims": [
+        "The Spirit experiences joy (1 Thess 1:6).",
+        "The Spirit can be insulted (Heb 10:29).",
+        "The Spirit grieves over sin (Isa 63:10; Eph 4:30).",
+        "The Spirit loves (Rom 5:5; 15:30; Gal 5:22)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_01"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_06",
+      "type": "definition",
+      "content": "Table 5.1 — Holy Spirit Word Pictures (eight biblical images and their meanings): Clothing = Empowerment / enablement by the Holy Spirit; Dove = Righteousness of the Holy Spirit; Fire = Visible presence of the Holy Spirit; Oil = Anointing with the Holy Spirit; Pledge = Guarantee with the Holy Spirit; Seal = Ownership of and security with the Holy Spirit; Water = Salvation, enablement, and induction by the Holy Spirit; Wind = Salvation and invisible empowerment by the Holy Spirit. (Cited from MacArthur, John; Mayhue, Richard. Biblical Doctrine: A Systematic Summary of Bible Truth, p. 540, Crossway, Kindle Edition.)",
+      "scripture_refs": [],
+      "themes": ["Holy Spirit word-pictures (clothing, dove, fire, oil, pledge, seal, water, wind)"],
+      "claims": [
+        "Scripture portrays the Holy Spirit through eight word-pictures: clothing, dove, fire, oil, pledge, seal, water, wind.",
+        "Clothing imagery represents empowerment / enablement by the Spirit.",
+        "Dove imagery represents righteousness of the Spirit.",
+        "Fire imagery represents the visible presence of the Spirit.",
+        "Oil imagery represents anointing.",
+        "Pledge imagery represents the Spirit as guarantee.",
+        "Seal imagery represents ownership and security.",
+        "Water imagery represents salvation, enablement, and induction.",
+        "Wind imagery represents salvation and invisible empowerment."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_holy_spirit_07",
+      "type": "teaching",
+      "content": "Ministries of the Holy Spirit (overview list): 1) Convicting the world of sin (John 16:8); 2) Regenerating the believer (John 3:5-7); 3) Baptizing into one body (1 Cor 12:13; Acts 2:1-2); 4) Dwelling in the believer (Rom 8:9; 1 Cor 3:16); 5) Sanctifying the believer (Rom 8:13); 6) Sealing the believer (Eph 1:13; Eph 2 / 3:17-18); 7) Guarantee for the believer (Eph 1:14); 8) Comfort for the believer (John 14:16-17); 9) Praying for the believer (Rom 8:26); 10) Giving gifts to the believer (Heb 2:4). [A ministry of 'glorifying the Lord Jesus' (John 16:13-14) appears struck through in the source notes — likely renumbered or consolidated rather than removed doctrinally.]",
+      "scripture_refs": ["John 16:8", "John 3:5-7", "1Cor 12:13", "Acts 2:1", "Acts 2:2", "Rom 8:9", "1Cor 3:16", "Rom 8:13", "Eph 1:13", "Eph 1:14", "John 14:16-17", "Rom 8:26", "Heb 2:4", "John 16:13-14"],
+      "themes": [
+        "conviction of sin",
+        "regeneration",
+        "Spirit baptism into the body of Christ",
+        "indwelling of believers",
+        "sanctification",
+        "sealing of the believer",
+        "Spirit as guarantee/earnest of inheritance",
+        "Comforter / Paraclete",
+        "Spirit's intercession",
+        "spiritual gifts"
+      ],
+      "claims": [
+        "The Holy Spirit performs at least ten distinct ministries: convicting, regenerating, baptizing into one body, dwelling, sanctifying, sealing, guaranteeing, comforting, praying for, and giving gifts to the believer.",
+        "The source notes treat the ministry of glorifying Christ as either implicit or consolidated within the other ministries."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_08", "sof_holy_spirit_09", "sof_holy_spirit_10", "sof_holy_spirit_11", "sof_holy_spirit_12", "sof_holy_spirit_13", "sof_holy_spirit_14", "sof_holy_spirit_15", "sof_holy_spirit_16", "sof_holy_spirit_17"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_08",
+      "type": "teaching",
+      "content": "Ministry 1 — Convicting the world of sin: 'And when he comes, he will convict the world concerning sin and righteousness and judgment' (John 16:8).",
+      "scripture_refs": ["John 16:8"],
+      "themes": ["conviction of sin"],
+      "claims": [
+        "The Holy Spirit convicts the world of sin (John 16:8)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_09",
+      "type": "teaching",
+      "content": "Ministry 2 — Regenerating the believer: Regeneration is the work of the Holy Spirit in creating new life in the sinful person, by which act he repents and comes to believe in Christ. Scripture pictures regeneration with four images: spiritual birth, spiritual cleansing, spiritual creation, and spiritual resurrection. Key texts: John 3:5 — 'unless one is born of water and the Spirit, he cannot enter the kingdom of God'; John 3:6 — 'that which is born of the Spirit is spirit'; John 3:7 — 'You must be born again'; Titus 3:5 — 'he saved us... by the washing of regeneration and renewal of the Holy Spirit'.",
+      "scripture_refs": ["John 3:5-7", "Titus 3:5"],
+      "themes": ["regeneration"],
+      "claims": [
+        "Regeneration is the Spirit's act of creating new life in the sinner, enabling repentance and faith in Christ.",
+        "Scripture portrays regeneration through four complementary images: spiritual birth, spiritual cleansing, spiritual creation, and spiritual resurrection.",
+        "The new birth is necessary for entry into the kingdom of God (John 3:5-7).",
+        "Regeneration and renewal are explicitly attributed to the Holy Spirit (Titus 3:5)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_10",
+      "type": "teaching",
+      "content": "Ministry 3 — Baptizing into one body: '1 Cor 12:13 — For in one Spirit we were all baptized into one body, Jews or Greeks, slaves or free, and all were made to drink of one Spirit.' This is the act of adding people to the body of Christ. Its first occurrence was Pentecost (Acts 2:1-4 — the disciples gathered, the rushing wind, divided tongues as of fire, all filled with the Spirit and speaking in other tongues). Characteristics of Spirit baptism: (i) It is operative only in this dispensation; (ii) It is experienced by all believers in this dispensation — '1 Cor 12:13: all have been baptised'; (iii) It occurs at salvation and is not repeated thereafter.",
+      "scripture_refs": ["1Cor 12:13", "Acts 2:1", "Acts 2:2", "Acts 2:3", "Acts 2:4"],
+      "themes": ["Spirit baptism into the body of Christ", "dispensational distinctives of Spirit baptism", "permanence of indwelling and sealing"],
+      "claims": [
+        "Spirit baptism is the Spirit's act of adding believers to the body of Christ (1 Cor 12:13).",
+        "Spirit baptism first occurred at Pentecost (Acts 2:1-4).",
+        "Spirit baptism is operative only in the present dispensation, not in the Old Testament.",
+        "Every believer in this dispensation has been baptized by the Spirit — there are no exceptions ('all have been baptised').",
+        "Spirit baptism occurs at the moment of salvation and is not repeated.",
+        "Spirit baptism is therefore not a subsequent second-blessing experience."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07", "sof_holy_spirit_11"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_11",
+      "type": "teaching",
+      "content": "Ministry 4 — Dwelling in the believer: 'Rom 8:9 — You, however, are not in the flesh but in the Spirit, if in fact the Spirit of God dwells in you. Anyone who does not have the Spirit of Christ does not belong to him.' '1 Cor 3:16 — Do you not know that you are God's temple and that God's Spirit dwells in you?' Possessing the indwelling Spirit is therefore the mark of belonging to Christ.",
+      "scripture_refs": ["Rom 8:9", "1Cor 3:16"],
+      "themes": ["indwelling of believers"],
+      "claims": [
+        "The Holy Spirit dwells in every believer (Rom 8:9).",
+        "Anyone lacking the Spirit of Christ does not belong to Christ (Rom 8:9).",
+        "The believer's body is God's temple in which the Spirit dwells (1 Cor 3:16)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_03", "sof_holy_spirit_07", "sof_holy_spirit_10"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_12",
+      "type": "teaching",
+      "content": "Filling of the believer: 'Eph 5:18 — And do not get drunk with wine, for that is debauchery, but be filled with the Spirit.' Spirit filling is both God's sovereign empowering for special activity and the Spirit's filling believers with His own character. Two facets of Spirit filling: (i) A sovereign act of God whereby He possesses someone for special activity — this highlights the event of being filled rather than the resultant state of fullness. It occurs in Luke 1:15 (John the Baptist), Luke 1:41 (Elizabeth), Luke 1:67 (Zacharias), Acts 2:4 (the group on the Day of Pentecost). The repetition was caused by a new need for special service, not intervening sin (Acts 2:4; 4:8; 4:31). God did this as His sovereign act without imposing conditions on those to be filled. (ii) The extensive influence and control of the Spirit in a believer's life — an abiding state of fullness rather than a specific event. It occurs in Luke 4:1 (Christ), Acts 6:3, 5 (the first helpers of the apostles), Acts 7:55 (Stephen), Acts 11:24 (Barnabas), Acts 13:52 (the disciples), and Eph 5:18 (believers). This second facet seems to be a close synonym to spirituality. It seems to be something every believer can experience (Acts 13:52 — 'the disciples were filled with joy and with the Holy Spirit') but not something every believer does experience (Acts 6:3 — 'pick out from among you seven men of good repute, full of the Spirit and of wisdom').",
+      "scripture_refs": ["Eph 5:18", "Luke 1:15", "Luke 1:41", "Luke 1:67", "Acts 2:4", "Acts 4:8", "Acts 4:31", "Luke 4:1", "Acts 6:3", "Acts 6:5", "Acts 7:55", "Acts 11:24", "Acts 13:52"],
+      "themes": ["filling of the Spirit", "sanctification", "sovereignty of the Spirit"],
+      "claims": [
+        "Believers are commanded to be filled with the Spirit (Eph 5:18).",
+        "Spirit-filling has two distinct biblical facets: a sovereign event of empowerment for special activity, and an abiding state of Spirit-controlled life.",
+        "The event-facet of filling is sovereign and unconditional — God fills whom He wills for special service.",
+        "The event-facet was repeated in the same persons (Acts 2:4; 4:8; 4:31) because of new ministry needs, not intervening sin.",
+        "The state-facet of filling describes the Spirit's pervasive influence and control and is closely synonymous with spirituality.",
+        "The state-facet is available to every believer but is not actually experienced by every believer (Acts 13:52 vs. Acts 6:3)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_13",
+      "type": "teaching",
+      "content": "Ministry 5 — Sanctifying the believer: 'Rom 8:13 — For if you live according to the flesh you will die, but if by the Spirit you put to death the deeds of the body, you will live.' Living by the Spirit, listening to Him, and allowing Him to work in our lives helps us in our sanctification process.",
+      "scripture_refs": ["Rom 8:13"],
+      "themes": ["sanctification"],
+      "claims": [
+        "Sanctification is a Spirit-empowered process of putting to death the deeds of the body (Rom 8:13).",
+        "Believer cooperation — living by, listening to, and yielding to the Spirit — is part of sanctification."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07", "sof_holy_spirit_12"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_14",
+      "type": "teaching",
+      "content": "Ministry 6 — Sealing of the believer: 'Eph 1:13 — In him you also, when you heard the word of truth, the gospel of your salvation, and believed in him, were sealed with the promised Holy Spirit.' '2 Cor 1:22 — and who has also put his seal on us and given us his Spirit in our hearts as a guarantee.' '2 Cor 3:17 — Now the Lord is the Spirit, and where the Spirit of the Lord is, there is freedom.' '2 Cor 3:18 — And we all, with unveiled face, beholding the glory of the Lord, are being transformed into the same image from one degree of glory to another. For this comes from the Lord who is the Spirit.' Sealing is a reference to God's work of marking the believer with the Holy Spirit (cited from MacArthur, John; Mayhue, Richard. Biblical Doctrine: A Systematic Summary of Bible Truth, p. 1539). Characteristics: (i) Like indwelling, sealing belongs to believers only and to all believers — in 2 Cor 1:22 Paul makes no exceptions, writing to a group in which exceptions could easily be justified; if not all were sealed, how could Paul make sealing the basis for the exhortation not to grieve the Spirit in Eph 4:30? (Citing Ryrie, Charles Caldwell, Basic Theology.) (ii) Sealing takes place at the time of conversion — the 'and' in 2 Cor 1:22 links sealing with the gift of the Spirit as the earnest, and the Spirit is given when we believe (Acts 2:38). (iii) Sealing is to the day of redemption (Eph 4:30 — 'do not grieve the Holy Spirit of God, by whom you were sealed for the day of redemption').",
+      "scripture_refs": ["Eph 1:13", "2Cor 1:22", "2Cor 3:17", "2Cor 3:18", "Eph 4:30", "Acts 2:38"],
+      "themes": ["sealing of the believer", "permanence of indwelling and sealing"],
+      "claims": [
+        "Sealing is God's act of marking the believer with the Holy Spirit (Eph 1:13; 2 Cor 1:22).",
+        "Sealing belongs to all believers without exception, just like indwelling.",
+        "If sealing were not universal among believers, Paul's exhortation in Eph 4:30 would be incoherent.",
+        "Sealing occurs at the moment of conversion, simultaneous with the giving of the Spirit at belief.",
+        "Sealing endures until the day of redemption (Eph 4:30) — it is permanent for the believer."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07", "sof_holy_spirit_15"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_15",
+      "type": "teaching",
+      "content": "Ministry 7 — Guarantee of the believer: 'Eph 1:14 — who is the guarantee of our inheritance until we acquire possession of it, to the praise of his glory.' The Spirit Himself is the down-payment / earnest guaranteeing the believer's future inheritance.",
+      "scripture_refs": ["Eph 1:14"],
+      "themes": ["Spirit as guarantee/earnest of inheritance"],
+      "claims": [
+        "The Holy Spirit is the guarantee (earnest) of the believer's inheritance until full possession is acquired (Eph 1:14)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07", "sof_holy_spirit_14"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_16",
+      "type": "teaching",
+      "content": "Ministry 8 — Comfort for the believer: 'John 14:16 — And I will ask the Father, and he will give you another Helper, to be with you forever.' 'John 14:17 — even the Spirit of truth, whom the world cannot receive, because it neither sees him nor knows him. You know him, for he dwells with you and will be in you.' The Spirit is the promised Paraclete / Helper / Comforter who will be with believers forever.",
+      "scripture_refs": ["John 14:16-17"],
+      "themes": ["Comforter / Paraclete", "indwelling of believers"],
+      "claims": [
+        "The Holy Spirit is the 'another Helper' promised by Christ, given by the Father (John 14:16).",
+        "The Spirit's presence with believers is permanent — 'forever' (John 14:16).",
+        "The world cannot receive the Spirit because it neither sees nor knows Him (John 14:17)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_17",
+      "type": "teaching",
+      "content": "Ministry 9 — Prays for the believer: 'Rom 8:26 — Likewise the Spirit helps us in our weakness. For we do not know what to pray for as we ought, but the Spirit himself intercedes for us with groanings too deep for words.' Ministry 10 — Giving gifts to the believer: 'Heb 2:4 — while God also bore witness by signs and wonders and various miracles and by gifts of the Holy Spirit distributed according to his will.'",
+      "scripture_refs": ["Rom 8:26", "Heb 2:4"],
+      "themes": ["Spirit's intercession", "spiritual gifts", "sovereignty of the Spirit"],
+      "claims": [
+        "The Spirit intercedes for believers in their weakness with wordless groanings (Rom 8:26).",
+        "The Spirit distributes spiritual gifts according to His will (Heb 2:4).",
+        "Distribution of gifts is sovereignly determined by the Spirit, not chosen by the recipient."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_07"]
+    },
+    {
+      "chunk_id": "sof_holy_spirit_18",
+      "type": "quote",
+      "content": "Statement of Faith — God the Holy Spirit: 'We believe in the Person of God the Holy Spirit, co-equal with God the Father and God the Son. He glorifies the Lord Jesus and implements Christ's work of salvation. He works in this world to convict man of sin, regenerate believers unto salvation, sanctify believers for Christ-like living, and preserve them through eternity. Through the indwelling and filling of the Spirit believers are empowered for godly living and service. The Holy Spirit gives spiritual gifts for the purpose of building up the church.' Verses: Matt 28:19, John 3:5-7, Acts 1:8, John 14:16-17, John 15:26, Eph 1:13, John 16:13-14, 1 Cor 12:4-13, Rom 8:26, 2 Cor 3:18, Gal 5:22-23, Heb 10:15-16, Heb 2:4.",
+      "scripture_refs": ["Matt 28:19", "John 3:5-7", "Acts 1:8", "John 14:16-17", "John 15:26", "Eph 1:13", "John 16:13-14", "1Cor 12:4-13", "Rom 8:26", "2Cor 3:18", "Gal 5:22-23", "Heb 10:15-16", "Heb 2:4"],
+      "themes": [
+        "personhood of the Holy Spirit",
+        "co-equality within the Trinity",
+        "conviction of sin",
+        "regeneration",
+        "sanctification",
+        "indwelling of believers",
+        "filling of the Spirit",
+        "spiritual gifts"
+      ],
+      "claims": [
+        "The Holy Spirit is a Person and is co-equal with the Father and the Son.",
+        "The Spirit glorifies the Lord Jesus and implements Christ's work of salvation.",
+        "The Spirit's work in this world includes convicting of sin, regenerating unto salvation, sanctifying for Christ-likeness, and preserving believers through eternity.",
+        "Indwelling and filling of the Spirit empower believers for godly living and service.",
+        "The Spirit gives spiritual gifts for the purpose of building up the church (church-edification, not personal aggrandizement)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sof_holy_spirit_01", "sof_holy_spirit_02", "sof_holy_spirit_07", "sof_holy_spirit_08", "sof_holy_spirit_09", "sof_holy_spirit_11", "sof_holy_spirit_12", "sof_holy_spirit_13", "sof_holy_spirit_17"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "Person -> Intellect -> 1 Cor 2:11. Emotion -> grieve (Eph 4:30), quench (1 Thes 5:19). Will -> 1 Cor 12:11. [crossed-out: Co... God] -> Acts 5:3,4. Co-Equal -> Mat 28:19. Nature -- cannot be seen. -- dwelt with the Godhead (Gen 1:2). - Energizes the work of God. - 'Came upon' men in the OT. Jud 6:34, 14:6, Ps 51:11. - Dwells/Abides in the children of God. Abode in Jesus -- Jn 1:32. Dwells in believers -- Rom 8:9. -> at Salvation Acts 2:38, Acts 10:44. - Sovereign {Jn 7:37, Jn 3:8, Acts 2:2, oil}.\n\nCognition/Intellect 1. He counsels (Isa. 11:2). 2. He imparts wisdom (Isa. 11:2). 3. He inspired Scripture (Acts 1:16; Heb. 3:7; 10:15; 1 Pet. 1:11; 2 Pet. 1:21). 4. He intercedes (Rom. 8:26). 5. He knows (Isa. 11:2). 6. He possesses a mind (Rom. 8:27; 1 Cor. 2:10-13). 7. He reminds (John 14:26). 8. He provides truth (John 14:17, 26; 15:26; 16:13; 1 John 4:6). [text duplicated in source]\n\nAffection/Emotion 1. He experiences joy (1 Thess. 1:6). 2. He can be insulted (Heb. 10:29). 3. He grieves over sin (Isa. 63:10; Eph. 4:30). 4. He loves (Rom. 5:5; 15:30; Gal. 5:22).\n\nTable 5.1 Holy Spirit Word Pictures. Clothing -- Empowerment/enablement by the Holy Spirit. Dove -- Righteousness of the Holy Spirit. Fire -- Visible presence of the Holy Spirit. Oil -- Anointing with the Holy Spirit. Pledge -- Guarantee with the Holy Spirit. Seal -- Ownership of and security with the Holy Spirit. Water -- Salvation, enablement, and induction by the Holy Spirit. Wind -- Salvation and invisible empowerment by the Holy Spirit. (MacArthur, John; Mayhue, Richard. Biblical Doctrine: A Systematic Summary of Bible Truth (p. 540). Crossway. Kindle Edition.)\n\nMinistries: 1) Convicting the world of sin -- Jn 16:8. 2) Regenerating the believer -- Jn 3:5-7. 3) Baptizing into one body -- 1 Cor 12:13 + Acts 2:1,2. 4) Dwelling in the believer -- Rom 8:9 / 1 Cor 3:16. 5) Sanctifying the believer -- Rom 8:13. 6) Sealing the believer -- Eph 1:13, 2 (or 3):17-18. 7) Guarantee for the believer -- Eph 1:14. 8) Comfort for the believer -- Jn 14:16-17. [crossed-out: 9 Glorifying the Lord Jesus -- Jn 16:13-14]. 9) Prays for the believer -- Rom 8:26. 10) Gives gifts to the believer -- Heb 2:4.\n\n1. Convicting the world of Sin -- John 16:8.\n2. Regenerating the believer -- a. The work of the Holy Spirit in creating a new life in the sinful person, by which act he repents and comes to believe in Christ. b. (MacArthur, John; Mayhue, Richard. Biblical Doctrine: A Systematic Summary of Bible Truth (p. 1536). Crossway. Kindle Edition.) c. Scripture pictures regeneration using four different images: (1) spiritual birth, (2) spiritual cleansing, (3) spiritual creation, and (4) spiritual resurrection. d. Joh 3:5-7. i. Joh 3:5 Jesus answered, 'Truly, truly, I say to you, unless one is born of water and the Spirit, he cannot enter the kingdom of God.' ii. Joh 3:6 That which is born of the flesh is flesh, and that which is born of the Spirit is spirit. iii. Joh 3:7 Do not marvel that I said to you, 'You must be born again.' iv. Tit 3:5 he saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewal of the Holy Spirit.\n\n3. Baptising into one body. a. 1Co 12:13 For in one Spirit we were all baptized into one body -- Jews or Greeks, slaves or free -- and all were made to drink of one Spirit. b. adding people to the body of Christ -- (Ryrie, Charles Caldwell. Basic Theology (p. 417).) c. 1st occurrence i. Act 2:1 When the day of Pentecost arrived, they were all together in one place. ii. Act 2:2 And suddenly there came from heaven a sound like a mighty rushing wind, and it filled the entire house where they were sitting. iii. Act 2:3 And divided tongues as of fire appeared to them and rested on each one of them. iv. Act 2:4 And they were all filled with the Holy Spirit and began to speak in other tongues as the Spirit gave them utterance. d. Characteristics: i. It Is Operative Only in This Dispensation. Basic Theology: (p. 418). ii. It Is Experienced by All Believers in This Dispensation -- 1 Cor. 12;13 -- all have been baptised. iii. C. It Occurs at Salvation and Is Not Repeated Thereafter.\n\n4. Dwelling in the believer. a. Rom 8:9 You, however, are not in the flesh but in the Spirit, if in fact the Spirit of God dwells in you. Anyone who does not have the Spirit of Christ does not belong to him. b. 1Co 3:16 Do you not know that you are God's temple and that God's Spirit dwells in you?\n\n5. Filling of the believer. a. Eph 5:18 And do not get drunk with wine, for that is debauchery, but be filled with the Spirit. b. Spirit filling is both God's sovereign empowering us by the Spirit for special activity and the Spirit's filling us with His own character. c. Two facets of filling of the HS: i. The first may be described as a sovereign act of God whereby He possesses someone for special activity. 1. it highlights the event of being filled rather than the resultant state of fullness. It occurs in Luke 1:15 (John the Baptist), 41 (Elizabeth), 67 (Zacharias); Acts 2:4 (the group on the Day of Pentecost). The repetition was caused by a new need for special service, not intervening sin (2:4; 4:8; 31). God did this as His sovereign act without imposing conditions on those to be filled. ii. The second facet of Spirit filling may be described as the extensive influence and control of the Spirit in a believer's life. It evidences an abiding state of fullness rather than the specific event. It occurs in Luke 4:1 (Christ); Acts 6:3, 5 (the first helpers of the apostles); 7:55 (Stephen); 11:24 (Barnabas); 13:52 (the disciples); and Ephesians 5:18 (believers). iii. seems to be a close synonym to spirituality. iv. It seems to be something every believer can experience (Acts 13:52) but not something every believer does experience (6:3). 1. Act 13:52 And the disciples were filled with joy and with the Holy Spirit. 2. Act 6:3 Therefore, brothers, pick out from among you seven men of good repute, full of the Spirit and of wisdom, whom we will appoint to this duty.\n\n6. Sanctifying the believer. a. Rom 8:13 For if you live according to the flesh you will die, but if by the Spirit you put to death the deeds of the body, you will live. b. Living by the Spirit, listening to Him, allowing Him to work in our lifes helps us in our sanctification process.\n\n7. Sealing of the believer. a. Eph 1:13 In him you also, when you heard the word of truth, the gospel of your salvation, and believed in him, were sealed with the promised Holy Spirit. b. 2Co 1:22 and who has also put his seal on us and given us his Spirit in our hearts as a guarantee. c. 2Co 3:17 Now the Lord is the Spirit, and where the Spirit of the Lord is, there is freedom. d. 2Co 3:18 And we all, with unveiled face, beholding the glory of the Lord, are being transformed into the same image from one degree of glory to another. For this comes from the Lord who is the Spirit. e. A reference to God's work of marking the believer with the Holy Spirit -- (MacArthur, John; Mayhue, Richard. Biblical Doctrine: A Systematic Summary of Bible Truth (p. 1539). f. Characteristics: i. Like indwelling it is to the believers only. 1. As with indwelling, sealing belongs to believers only and to all believers. In 2 Corinthians 1:22 Paul makes no exceptions in writing to a group in which exceptions could easily be justified. All are sealed. If this were not true, then how could Paul make it the basis for the exhortation not to grieve the Spirit in Ephesians 4:30? He would have to be saying that only that group of believers who are sealed should not grieve the Spirit. (Ryrie, Charles Caldwell. Basic Theology). ii. Takes place at the time of our conversion. 1. The 'and' in 2 Corinthians 1:22 links sealing with the gift of the Spirit as the earnest. And the Spirit is given when we believe (Acts 2:38). (Ryrie, Charles Caldwell. Basic Theology). iii. Sealing is to the day of redemption (Eph. 4:30). 1. Eph 4:30 And do not grieve the Holy Spirit of God, by whom you were sealed for the day of redemption.\n\n8. Guarantee of the believer. a. Eph 1:14 who is the guarantee of our inheritance until we acquire possession of it, to the praise of his glory.\n\n9. Comfort for the believer. a. Joh 14:16 And I will ask the Father, and he will give you another Helper, to be with you forever, b. Joh 14:17 even the Spirit of truth, whom the world cannot receive, because it neither sees him nor knows him. You know him, for he dwells with you and will be in you.\n\n10. Prays for the believer. a. Rom 8:26 Likewise the Spirit helps us in our weakness. For we do not know what to pray for as we ought, but the Spirit himself intercedes for us with groanings too deep for words.\n\n11. Giving gifts to the believer. a. Heb 2:4 while God also bore witness by signs and wonders and various miracles and by gifts of the Holy Spirit distributed according to his will.\n\nGod the Holy Spirit. We believe in the Person of God the Holy Spirit, co-equal with God the Father and God the Son. He glorifies the Lord Jesus and implements Christ's work of salvation. He works in this world to convict man of sin, regenerate believers unto salvation, sanctify believers for Christ-like living, and preserve them through eternity. Through the indwelling and filling of the Spirit believers are empowered for godly living and service. The Holy Spirit gives spiritual gifts for the purpose of building up the church. Verses: Matt 28:19, John 3:5-7, Acts 1:8, John 14:16-17, John 15:26, Eph 1:13, John 16:13-14, 1 Cor 12:4-13, Rom 8:26, 2 Cor 3:18, Gal 5:22-23, Heb 10:15-16, Heb 2:4.",
+
+  "parsing_notes": "Document is a hybrid: handwritten lecture-prep notes (page 1 and page 4 photographed from a spiral notebook) interleaved with typed expansions of the same outline. The handwritten portions and the typed portions cover overlapping material — the typed sections expand the handwritten outline with full verse texts and citations. Page 2 contains the Cognition/Intellect block duplicated verbatim back-to-back in the source — treated as single content (not double-counted). Page 4 handwritten outline lists item numbered '9' for 'Glorifying the Lord Jesus (Jn 16:13-14)' but this entry is struck through; the subsequent items in the typed outline renumber so that 'Prays for the believer' becomes #10 and 'Giving gifts' becomes #11. Captured the strikethrough as a parenthetical note in chunk 07 rather than dropping the doctrinal claim entirely (it reappears in the SOF paragraph's verse list as John 16:13-14 and is implicit in 'He glorifies the Lord Jesus'). Sealing-passage reference 'Eph 1:13, 2&3:17-18' from handwriting is ambiguous — most likely refers to Eph 2:17-18 in context of Spirit/access; verified normalization but flagged. Citations to MacArthur/Mayhue 'Biblical Doctrine' and Ryrie 'Basic Theology' are external published works (not personal contributors) and were preserved as scholarly attribution. No personal contributor names, no organization names, and no initial-prefix attributions appeared in the source — anonymization required no redaction. Sign-gifts vs. non-sign-gifts: this document does NOT take an explicit cessationist or continuationist stance; it lists 'giving gifts to the believer' generically (Heb 2:4) and the SOF says gifts are for 'building up the church' without specifying which gifts continue — neutral language preserved without inserting either position. Tongues-speaking at Pentecost (Acts 2:4) is reported as historical fact within the Spirit-baptism section, not framed as normative ongoing practice. The dispensational claim that Spirit baptism 'is operative only in this dispensation' is a notable doctrinal commitment to capture for graph queries.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

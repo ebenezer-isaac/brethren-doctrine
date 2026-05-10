@@ -1,0 +1,260 @@
+{
+  "doc_slug": "salvation_soteriology",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-10T00:26:00Z",
+  "ingested_at": "2026-05-10T00:00:00Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "On Salvation (Soteriology)",
+    "estimated_date": null,
+    "session_topic": "Statement of Faith on the doctrine of salvation: a secure gift received by grace through faith and repentance, grounded in Christ's atoning death and resurrection, issuing in adoption and a call to holiness",
+    "topic_clusters": ["Soteriology", "Justification", "Sanctification", "Eschatology"],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "John 10:27-30", "book": "John", "chapter": 10, "verse_start": 27, "verse_end": 30, "normalized": "John 10:27-30"},
+    {"raw": "Hebrews 7:24-25", "book": "Hebrews", "chapter": 7, "verse_start": 24, "verse_end": 25, "normalized": "Heb 7:24-25"},
+    {"raw": "Romans 8:31-35", "book": "Romans", "chapter": 8, "verse_start": 31, "verse_end": 35, "normalized": "Rom 8:31-35"},
+    {"raw": "John 3:16-17", "book": "John", "chapter": 3, "verse_start": 16, "verse_end": 17, "normalized": "John 3:16-17"},
+    {"raw": "Ephesians 2:8-10", "book": "Ephesians", "chapter": 2, "verse_start": 8, "verse_end": 10, "normalized": "Eph 2:8-10"},
+    {"raw": "1 Corinthians 15:3-4", "book": "1 Corinthians", "chapter": 15, "verse_start": 3, "verse_end": 4, "normalized": "1Cor 15:3-4"},
+    {"raw": "Romans 10:9-13", "book": "Romans", "chapter": 10, "verse_start": 9, "verse_end": 13, "normalized": "Rom 10:9-13"},
+    {"raw": "Romans 5:18", "book": "Romans", "chapter": 5, "verse_start": 18, "verse_end": 18, "normalized": "Rom 5:18"},
+    {"raw": "Romans 1:16-18", "book": "Romans", "chapter": 1, "verse_start": 16, "verse_end": 18, "normalized": "Rom 1:16-18"},
+    {"raw": "Romans 3:21-26", "book": "Romans", "chapter": 3, "verse_start": 21, "verse_end": 26, "normalized": "Rom 3:21-26"},
+    {"raw": "Ephesians 1:7", "book": "Ephesians", "chapter": 1, "verse_start": 7, "verse_end": 7, "normalized": "Eph 1:7"},
+    {"raw": "Romans 6:23", "book": "Romans", "chapter": 6, "verse_start": 23, "verse_end": 23, "normalized": "Rom 6:23"},
+    {"raw": "John 3:36", "book": "John", "chapter": 3, "verse_start": 36, "verse_end": 36, "normalized": "John 3:36"},
+    {"raw": "Matt 25:46", "book": "Matthew", "chapter": 25, "verse_start": 46, "verse_end": 46, "normalized": "Matt 25:46"},
+    {"raw": "Revelation 20:11-15", "book": "Revelation", "chapter": 20, "verse_start": 11, "verse_end": 15, "normalized": "Rev 20:11-15"},
+    {"raw": "1 Peter 1:17-21", "book": "1 Peter", "chapter": 1, "verse_start": 17, "verse_end": 21, "normalized": "1Pet 1:17-21"},
+    {"raw": "Acts 20:21", "book": "Acts", "chapter": 20, "verse_start": 21, "verse_end": 21, "normalized": "Acts 20:21"},
+    {"raw": "Acts 3:16-21", "book": "Acts", "chapter": 3, "verse_start": 16, "verse_end": 21, "normalized": "Acts 3:16-21"},
+    {"raw": "Matthew 4:15-17", "book": "Matthew", "chapter": 4, "verse_start": 15, "verse_end": 17, "normalized": "Matt 4:15-17"},
+    {"raw": "Mark 1:15", "book": "Mark", "chapter": 1, "verse_start": 15, "verse_end": 15, "normalized": "Mark 1:15"},
+    {"raw": "Mark 6:12", "book": "Mark", "chapter": 6, "verse_start": 12, "verse_end": 12, "normalized": "Mark 6:12"},
+    {"raw": "Acts 2:38", "book": "Acts", "chapter": 2, "verse_start": 38, "verse_end": 38, "normalized": "Acts 2:38"},
+    {"raw": "Acts 17:30-31", "book": "Acts", "chapter": 17, "verse_start": 30, "verse_end": 31, "normalized": "Acts 17:30-31"},
+    {"raw": "John 1:12", "book": "John", "chapter": 1, "verse_start": 12, "verse_end": 12, "normalized": "John 1:12"},
+    {"raw": "Romans 6:8-14", "book": "Romans", "chapter": 6, "verse_start": 8, "verse_end": 14, "normalized": "Rom 6:8-14"},
+    {"raw": "1 Corinthians 6:9-11", "book": "1 Corinthians", "chapter": 6, "verse_start": 9, "verse_end": 11, "normalized": "1Cor 6:9-11"},
+    {"raw": "1 Pet 1:15", "book": "1 Peter", "chapter": 1, "verse_start": 15, "verse_end": 15, "normalized": "1Pet 1:15"},
+    {"raw": "Romans 8:29", "book": "Romans", "chapter": 8, "verse_start": 29, "verse_end": 29, "normalized": "Rom 8:29"}
+  ],
+
+  "theological_themes": [
+    "eternal security",
+    "salvation as a secure and unlosable gift",
+    "salvation by grace alone (sola gratia)",
+    "salvation through faith (sola fide)",
+    "repentance toward God",
+    "substitutionary atonement",
+    "Christ's death and resurrection as the sole sufficient ground of salvation",
+    "propitiation through Christ's blood",
+    "forgiveness of sins",
+    "wrath of God against sin",
+    "eternal separation as the penalty of sin",
+    "second death and lake of fire",
+    "universal call to repentance",
+    "adoption as children of God",
+    "union with Christ in death and resurrection",
+    "freedom from the dominion of sin",
+    "sanctification and pursuit of holiness",
+    "separation unto Christ",
+    "conformity to the image of Christ",
+    "predestination to conformity with Christ"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "salvation_soteriology_01_doctrinal_statement",
+      "type": "definition",
+      "content": "We believe that Salvation is a secure gift that cannot be lost which God offers to all humans by His grace. It is received by faith through repentance and personally trusting Jesus' all-sufficient sacrificial death and resurrection through which God forgives our sins. We, therefore, are saved from the penalty of sin, which is the eternal separation and wrath of God. Once saved, a believer lives in an eternally restored relationship with God as a part of His family. We believe that Christians are called to a life of separation unto Christ, one that exhibits obedience and pursues holiness as we seek to be conformed to His image.",
+      "scripture_refs": [],
+      "themes": ["eternal security", "grace alone", "faith and repentance", "substitutionary atonement", "wrath of God", "adoption", "sanctification", "conformity to Christ"],
+      "claims": [
+        "Salvation is a secure gift that cannot be lost",
+        "Salvation is offered to all humans by God's grace",
+        "Salvation is received by faith through repentance",
+        "Salvation is grounded in personally trusting Christ's all-sufficient sacrificial death and resurrection",
+        "God forgives sins through Christ's sacrifice",
+        "The penalty of sin is eternal separation from God and the wrath of God",
+        "Saved believers live in an eternally restored relationship with God as part of His family",
+        "Christians are called to a life of separation unto Christ",
+        "The Christian life exhibits obedience and pursues holiness",
+        "Believers seek to be conformed to the image of Christ"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_02_eternal_security",
+      "type": "quote",
+      "content": "Eternal security proof-texts cited under the doctrinal claim that salvation 'cannot be lost.'\n\nJohn 10:27-30 NKJV — \"My sheep hear My voice, and I know them, and they follow Me. And I give them eternal life, and they shall never perish; neither shall anyone snatch them out of My hand. My Father, who has given them to Me, is greater than all; and no one is able to snatch them out of My Father's hand. I and My Father are one.\"\n\nHebrews 7:24-25 NKJV — But He, because He continues forever, has an unchangeable priesthood. Therefore He is also able to save to the uttermost those who come to God through Him, since He always lives to make intercession for them.\n\nRomans 8:31-35 NKJV — What then shall we say to these things? If God is for us, who can be against us? He who did not spare His own Son, but delivered Him up for us all, how shall He not with Him also freely give us all things? Who shall bring a charge against God's elect? It is God who justifies. Who is he who condemns? It is Christ who died, and furthermore is also risen, who is even at the right hand of God, who also makes intercession for us. Who shall separate us from the love of Christ? Shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?",
+      "scripture_refs": ["John 10:27-30", "Heb 7:24-25", "Rom 8:31-35"],
+      "themes": ["eternal security", "Christ's intercession", "perseverance"],
+      "claims": [
+        "Christ gives believers eternal life and they shall never perish",
+        "No one is able to snatch a believer out of the Father's hand",
+        "Christ's unchangeable priesthood guarantees His ability to save to the uttermost",
+        "Christ continually intercedes for believers",
+        "No charge stands against God's elect because God justifies them",
+        "Nothing can separate believers from the love of Christ"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_03_grace_through_faith",
+      "type": "quote",
+      "content": "Proof-texts for salvation by grace alone, received through faith.\n\nJohn 3:16-17 NKJV — For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life. For God did not send His Son into the world to condemn the world, but that the world through Him might be saved.\n\nEphesians 2:8-10 NKJV — For by grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, lest anyone should boast. For we are His workmanship, created in Christ Jesus for good works, which God prepared beforehand that we should walk in them.\n\nRomans 1:16-18 ESV — For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek. For in it the righteousness of God is revealed from faith for faith, as it is written, 'The righteous shall live by faith.' For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who by their unrighteousness suppress the truth.\n\nRomans 10:9-13 ESV — because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved. For with the heart one believes and is justified, and with the mouth one confesses and is saved. For the Scripture says, 'Everyone who believes in him will not be put to shame.' For there is no distinction between Jew and Greek; for the same Lord is Lord of all, bestowing his riches on all who call on him. For 'everyone who calls on the name of the Lord will be saved.'",
+      "scripture_refs": ["John 3:16-17", "Eph 2:8-10", "Rom 1:16-18", "Rom 10:9-13"],
+      "themes": ["grace alone", "faith alone", "universal offer of salvation", "no distinction between Jew and Greek"],
+      "claims": [
+        "God's love motivated the giving of the Son so believers would not perish",
+        "Salvation is by grace through faith, a gift of God, not of works",
+        "Believers are God's workmanship created in Christ for good works",
+        "The gospel is the power of God for salvation to everyone who believes",
+        "Justification is received through belief in Christ's resurrection and confession of His Lordship",
+        "Everyone who calls on the name of the Lord will be saved"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_04_atonement_and_blood",
+      "type": "quote",
+      "content": "Proof-texts for the substitutionary atoning death of Christ and redemption through His blood.\n\n1 Corinthians 15:3-4 NKJV — For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures, and that He was buried, and that He rose again the third day according to the Scriptures.\n\nRomans 5:18 ESV — Therefore, as one trespass led to condemnation for all men, so one act of righteousness leads to justification and life for all men.\n\nRomans 3:21-26 NKJV — But now the righteousness of God apart from the law is revealed, being witnessed by the Law and the Prophets, even the righteousness of God, through faith in Jesus Christ, to all and on all who believe. For there is no difference; for all have sinned and fall short of the glory of God, being justified freely by His grace through the redemption that is in Christ Jesus, whom God set forth as a propitiation by His blood, through faith, to demonstrate His righteousness, because in His forbearance God had passed over the sins that were previously committed, to demonstrate at the present time His righteousness, that He might be just and the justifier of the one who has faith in Jesus.\n\nEphesians 1:7 NKJV — In Him we have redemption through His blood, the forgiveness of sins, according to the riches of His grace.\n\n1 Peter 1:17-21 NKJV — And if you call on the Father, who without partiality judges according to each one's work, conduct yourselves throughout the time of your stay here in fear; knowing that you were not redeemed with corruptible things, like silver or gold, from your aimless conduct received by tradition from your fathers, but with the precious blood of Christ, as of a lamb without blemish and without spot. He indeed was foreordained before the foundation of the world, but was manifest in these last times for you who through Him believe in God, who raised Him from the dead and gave Him glory, so that your faith and hope are in God.",
+      "scripture_refs": ["1Cor 15:3-4", "Rom 5:18", "Rom 3:21-26", "Eph 1:7", "1Pet 1:17-21"],
+      "themes": ["substitutionary atonement", "Christ's death and resurrection", "propitiation", "redemption through blood", "justification"],
+      "claims": [
+        "Christ died for sins, was buried, and rose again on the third day, according to the Scriptures",
+        "One act of righteousness (Christ's) leads to justification and life",
+        "All have sinned and fall short of the glory of God",
+        "Justification is freely by grace through redemption in Christ Jesus",
+        "Christ was set forth by God as a propitiation by His blood, received through faith",
+        "God is both just and the justifier of the one who has faith in Jesus",
+        "Believers have redemption and forgiveness through Christ's blood",
+        "Believers were redeemed with the precious blood of Christ, foreordained before the foundation of the world"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_05_wrath_and_judgment",
+      "type": "quote",
+      "content": "Proof-texts for God's wrath against sin and the eternal penalty from which salvation delivers.\n\nRomans 6:23 NKJV — For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.\n\nJohn 3:36 NKJV — 'He who believes in the Son has everlasting life; and he who does not believe the Son shall not see life, but the wrath of God abides on him.'\n\nMatt 25:46 NKJV — 'And these will go away into everlasting punishment, but the righteous into eternal life.'\n\nRevelation 20:11-15 NKJV — Then I saw a great white throne and Him who sat on it, from whose face the earth and the heaven fled away. And there was found no place for them. And I saw the dead, small and great, standing before God, and books were opened. And another book was opened, which is the Book of Life. And the dead were judged according to their works, by the things which were written in the books. The sea gave up the dead who were in it, and Death and Hades delivered up the dead who were in them. And they were judged, each one according to his works. Then Death and Hades were cast into the lake of fire. This is the second death. And anyone not found written in the Book of Life was cast into the lake of fire.",
+      "scripture_refs": ["Rom 6:23", "John 3:36", "Matt 25:46", "Rev 20:11-15"],
+      "themes": ["wrath of God", "eternal punishment", "second death", "judgment by works", "Book of Life", "eternal life as gift"],
+      "claims": [
+        "The wages of sin is death; eternal life is the gift of God in Christ Jesus",
+        "The one who does not believe the Son does not see life; the wrath of God abides on him",
+        "The unrighteous go away into everlasting punishment; the righteous into eternal life",
+        "Final judgment is conducted by God before a great white throne, with the dead judged by what is written in the books",
+        "Anyone not found written in the Book of Life is cast into the lake of fire — the second death"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_06_call_to_repentance",
+      "type": "quote",
+      "content": "Proof-texts for the universal call to repentance as the response to the gospel.\n\nActs 20:21 ESV — testifying both to Jews and to Greeks of repentance toward God and of faith in our Lord Jesus Christ.\n\nActs 3:16-21 ESV — And his name—by faith in his name—has made this man strong whom you see and know, and the faith that is through Jesus has given the man this perfect health in the presence of you all. 'And now, brothers, I know that you acted in ignorance, as did also your rulers. But what God foretold by the mouth of all the prophets, that his Christ would suffer, he thus fulfilled. Repent therefore, and turn back, that your sins may be blotted out, that times of refreshing may come from the presence of the Lord, and that he may send the Christ appointed for you, Jesus, whom heaven must receive until the time for restoring all the things about which God spoke by the mouth of his holy prophets long ago.\n\nMatthew 4:15-17 ESV — 'The land of Zebulun and the land of Naphtali, the way of the sea, beyond the Jordan, Galilee of the Gentiles—the people dwelling in darkness have seen a great light, and for those dwelling in the region and shadow of death, on them a light has dawned.' From that time Jesus began to preach, saying, 'Repent, for the kingdom of heaven is at hand.'\n\nMark 1:15 ESV — and saying, 'The time is fulfilled, and the kingdom of God is at hand; repent and believe in the gospel.'\n\nMark 6:12 ESV — So they went out and proclaimed that people should repent.\n\nActs 2:38 ESV — And Peter said to them, 'Repent and be baptized every one of you in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.'\n\nActs 17:30-31 ESV — The times of ignorance God overlooked, but now he commands all people everywhere to repent, because he has fixed a day on which he will judge the world in righteousness by a man whom he has appointed; and of this he has given assurance to all by raising him from the dead.'",
+      "scripture_refs": ["Acts 20:21", "Acts 3:16-21", "Matt 4:15-17", "Mark 1:15", "Mark 6:12", "Acts 2:38", "Acts 17:30-31"],
+      "themes": ["repentance", "faith in Christ", "kingdom of heaven", "universal call", "forgiveness of sins", "judgment day"],
+      "claims": [
+        "The apostolic message paired repentance toward God with faith in Christ for both Jews and Gentiles",
+        "Repentance and turning back is the means by which sins are blotted out",
+        "Jesus' inaugural preaching called for repentance because the kingdom of heaven is at hand",
+        "The disciples were sent to proclaim that people should repent",
+        "Repentance and baptism in the name of Jesus result in forgiveness of sins and receipt of the Holy Spirit",
+        "God commands all people everywhere to repent because He has fixed a day of righteous judgment, assured by Christ's resurrection"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_07_adoption_as_children",
+      "type": "quote",
+      "content": "Proof-text for the adoption of believers into God's family.\n\nJohn 1:12 NKJV — But as many as received Him, to them He gave the right to become children of God, to those who believe in His name.",
+      "scripture_refs": ["John 1:12"],
+      "themes": ["adoption", "family of God", "right of sonship", "believing in Christ's name"],
+      "claims": [
+        "All who receive Christ are given the right to become children of God",
+        "This right is granted to those who believe in Christ's name"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_08_dead_to_sin_alive_to_god",
+      "type": "quote",
+      "content": "Proof-text for the believer's union with Christ in death and resurrection, and freedom from the dominion of sin.\n\nRomans 6:8-14 NKJV — Now if we died with Christ, we believe that we shall also live with Him, knowing that Christ, having been raised from the dead, dies no more. Death no longer has dominion over Him. For the death that He died, He died to sin once for all; but the life that He lives, He lives to God. Likewise you also, reckon yourselves to be dead indeed to sin, but alive to God in Christ Jesus our Lord. Therefore do not let sin reign in your mortal body, that you should obey it in its lusts. And do not present your members as instruments of unrighteousness to sin, but present yourselves to God as being alive from the dead, and your members as instruments of righteousness to God. For sin shall not have dominion over you, for you are not under law but under grace.",
+      "scripture_refs": ["Rom 6:8-14"],
+      "themes": ["union with Christ", "death to sin", "alive to God", "freedom from sin's dominion", "under grace not law"],
+      "claims": [
+        "Believers who died with Christ shall also live with Him",
+        "Christ's death to sin and life to God is the pattern for the believer",
+        "Believers are to reckon themselves dead to sin and alive to God in Christ Jesus",
+        "Believers are not to let sin reign in their mortal bodies",
+        "Believers are to present themselves to God as alive from the dead, with their members as instruments of righteousness",
+        "Sin shall not have dominion over the believer because the believer is not under law but under grace"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_09_call_to_holiness",
+      "type": "quote",
+      "content": "Proof-texts for the call to sanctification and holy conduct as the consequence of salvation.\n\n1 Corinthians 6:9-11 ESV — Or do you not know that the unrighteous will not inherit the kingdom of God? Do not be deceived: neither the sexually immoral, nor idolaters, nor adulterers, nor men who practice homosexuality, nor thieves, nor the greedy, nor drunkards, nor revilers, nor swindlers will inherit the kingdom of God. And such were some of you. But you were washed, you were sanctified, you were justified in the name of the Lord Jesus Christ and by the Spirit of our God.\n\n1 Pet 1:15 NKJV — but as He who called you is holy, you also be holy in all your conduct.",
+      "scripture_refs": ["1Cor 6:9-11", "1Pet 1:15"],
+      "themes": ["sanctification", "holiness", "transformation in Christ", "exclusion of the unrighteous from the kingdom", "washed and justified"],
+      "claims": [
+        "The unrighteous will not inherit the kingdom of God",
+        "Various categories of unrepented sinful conduct are listed as incompatible with kingdom inheritance",
+        "Believers were once characterized by such conduct but have been washed, sanctified, and justified in the name of the Lord Jesus Christ and by the Spirit of God",
+        "Because the One who called believers is holy, they are to be holy in all their conduct"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+
+    {
+      "chunk_id": "salvation_soteriology_10_conformity_to_christ",
+      "type": "quote",
+      "content": "Proof-text for the predestined conformity of believers to the image of Christ.\n\nRomans 8:29 ESV — For those whom he foreknew he also predestined to be conformed to the image of his Son, in order that he might be the firstborn among many brothers.",
+      "scripture_refs": ["Rom 8:29"],
+      "themes": ["conformity to Christ", "predestination", "foreknowledge", "Christ as firstborn"],
+      "claims": [
+        "Those whom God foreknew He also predestined",
+        "The end of predestination is conformity to the image of God's Son",
+        "Christ is to be the firstborn among many brothers"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "On Salvation (Soteriology)\n\nWe believe that Salvation is a secure gift that cannot be lost which God offers to all humans by His grace. It is received by faith through repentance and personally trusting Jesus' all-sufficient sacrificial death and resurrection through which God forgives our sins. We, therefore, are saved from the penalty of sin, which is the eternal separation and wrath of God. Once saved, a believer lives in an eternally restored relationship with God as a part of His family. We believe that Christians are called to a life of separation unto Christ, one that exhibits obedience and pursues holiness as we seek to be conformed to His image.\n\nVerses:\n\nJohn 10:27-30 NKJV; Hebrews 7:24-25 NKJV; Romans 8:31-35 NKJV; John 3:16-17 NKJV; Ephesians 2:8-10 NKJV; 1 Corinthians 15:3-4 NKJV; Romans 10:9-13 ESV; Romans 5:18 ESV; Romans 1:16-18 ESV; Romans 3:21-26 NKJV; Ephesians 1:7 NKJV; Romans 6:23 NKJV; John 3:36 NKJV; Matt 25:46 NKJV; Revelation 20:11-15 NKJV; 1 Peter 1:17-21 NKJV; Acts 20:21 ESV; Acts 3:16-21 ESV; Matthew 4:15-17 ESV; Mark 1:15 ESV; Mark 6:12 ESV; Acts 2:38 ESV; Acts 17:30-31 ESV; John 1:12 NKJV; Romans 6:8-14 NKJV; 1 Corinthians 6:9-11 ESV; 1 Pet 1:15 NKJV; Romans 8:29 ESV. (Full verbatim text of each citation is preserved within the corresponding chunk's content field.)",
+
+  "parsing_notes": "Document is a Statement of Faith (SOF) format: one foundational doctrinal paragraph on page 1 followed by ~28 supporting scripture citations spread across pages 1-4. Chunks group the citations by which sub-claim of the doctrinal statement they support: eternal security, grace through faith, atonement and blood, wrath and judgment, call to repentance, adoption, union with Christ, sanctification, conformity to Christ. Single doctrinal position throughout — no multiple perspectives within the document. The 'secure gift that cannot be lost' formulation aligns the document with Reformed/dispensational eternal-security soteriology rather than Arminian conditional-security. Document was extracted directly by the orchestrator after two prior subagent attempts hit content-filter API errors at the agent's reply stage; content itself is canonical Bible text and standard doctrinal language. Translations cited are NKJV and ESV interleaved.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

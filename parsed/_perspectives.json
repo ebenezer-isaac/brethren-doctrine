@@ -1,0 +1,953 @@
+{
+  "generated_at": "2026-05-10T01:30:00Z",
+  "method_notes": "Cross-document grouping of chunks addressing the same theme with distinct claims. Source-anchored only — no personal attribution. Chunks are referenced solely by doc_slug and chunk_id. External theological authors cited in source documents (e.g., John Piper, Wayne Grudem, D.A. Carson, Charles Ryrie, Louis Berkhof, MacArthur/Mayhue, Justin Martyr, Didache) are retained as legitimate published-author citations within claim text where they appeared in the source. Perspective sets are formed where two or more chunks from different docs address the same theological theme but advance distinct, complementary, contrasting, or disputed claims. Stance markers are short, neutral, doctrine-focused tags.",
+
+  "perspective_sets": [
+    {
+      "set_id": "ps_001",
+      "shared_theme": "cessationism vs continuationism (sign gifts)",
+      "scripture_refs_in_common": ["1Cor 12-14", "1Cor 13:8", "1Cor 14:1"],
+      "perspectives": [
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_02",
+          "claim": "The sign gifts have ceased: the completion of the canon plus the maturity of the church together provide a solid case for cessation; tongues without interpreter are not genuinely documented, 'prayer tongue' is a coined term, and Matt 12:39-41 supports that signs will not be given.",
+          "scripture_refs": ["1Cor 13:8", "Matt 12:39-41"],
+          "stance_marker": "strict_cessationist"
+        },
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_05",
+          "claim": "Scripture does not explicitly teach cessation; 1 Cor 1:7 frames the waiting context as Christ's return rather than the closing of the canon, and 1 Cor 14:24-25 / 1 Cor 1:6-8 show continued legitimate function of signs.",
+          "scripture_refs": ["1Cor 1:7", "1Cor 14:24-25", "1Cor 1:6-8", "1Cor 14:37"],
+          "stance_marker": "continuationist"
+        },
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_10",
+          "claim": "A bridging position: scripture does not explicitly describe cessation, openness to gifts reduces invisible walls between churches, and a hard cessationist conclusion is largely a deductive theological reaction to extreme charismatic movements.",
+          "scripture_refs": [],
+          "stance_marker": "openness_bridging"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_24",
+          "claim": "The church believes the sign gifts have ceased as a continuous practice (one-time occurrences are not denied); this position is to be mentioned in the church practices.",
+          "scripture_refs": [],
+          "stance_marker": "practical_cessationist_published"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_25",
+          "claim": "Revised position: sign gifts are not used as an everyday practice in this church, but God can use these gifts when He wishes for His purposes and the expansion of His kingdom; this is an internal understanding, not to be published in practices, statement of faith, or online documents.",
+          "scripture_refs": [],
+          "stance_marker": "soft_cessationist_open_to_sovereign_use"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_40",
+          "claim": "1 Cor 13:8-10's 'when the perfect comes' refers to the return of the Perfector (Christ), not the closing of the canon; Paul commands believers to eagerly desire spiritual gifts and forbids forbidding tongues, so a cessationist or practically cessationist position contradicts Paul's command.",
+          "scripture_refs": ["1Cor 13:8-10", "1Cor 14:1", "1Cor 14:39-40"],
+          "stance_marker": "exegetical_continuationist"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_18",
+          "claim": "The Holy Spirit gives spiritual gifts for the purpose of building up the church (no specification of which gifts continue or have ceased — neutral SOF formulation).",
+          "scripture_refs": ["1Cor 12:4-13", "Heb 2:4"],
+          "stance_marker": "neutral_silent_on_cessation"
+        }
+      ],
+      "relationship": "disputed",
+      "notes": "The most internally contested doctrine across the corpus. Multiple positions (strict cessationist, soft/practical cessationist, openness-bridging, exegetical continuationist) appear within and across documents. The official church position evolved from a published cessationist statement to an unpublished internal soft-cessationist formulation that explicitly preserves divine prerogative."
+    },
+
+    {
+      "set_id": "ps_002",
+      "shared_theme": "open vs. closed table (visiting believers and prerequisites for communion)",
+      "scripture_refs_in_common": ["Acts 2:41", "Acts 2:42", "Rom 6:3-5", "Gal 3:27", "Col 2:9-13"],
+      "perspectives": [
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_14",
+          "claim": "Strict view: only baptised believers should partake of the Lord's Supper; although no explicit verse demands it, the consistent pairing of regeneration and baptism in Acts and the meaning of baptism as identification with Christ's body make it ideal that only the baptised partake.",
+          "scripture_refs": ["Acts 2:42", "Acts 20:7", "Acts 2:41", "Rom 6:3-5", "Gal 3:27", "Col 2:9-13"],
+          "stance_marker": "baptism_required_for_table"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_14",
+          "claim": "Acknowledged tension: there is no explicit New Testament statement restricting the Table to baptised believers only — the requirement is inferred rather than commanded.",
+          "scripture_refs": [],
+          "stance_marker": "tension_acknowledged_no_explicit_command"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_18",
+          "claim": "Visiting believers are welcome at the Lord's Table on condition that they are walking in the same practice in another Bible-believing church under the conviction of the elders.",
+          "scripture_refs": [],
+          "stance_marker": "qualified_open_table_under_elder_oversight"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_05",
+          "claim": "Members are formally distinguished from attendees and visitors; non-members may attend and partake of meetings but do not receive other privileges of membership.",
+          "scripture_refs": [],
+          "stance_marker": "attendance_and_partaking_open_to_non_members"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_04",
+          "claim": "Membership is restricted to those who are saved and have been baptized.",
+          "scripture_refs": [],
+          "stance_marker": "membership_requires_baptism_not_table"
+        }
+      ],
+      "relationship": "nuanced_agreement",
+      "notes": "All sources converge on baptism+belief being the ideal qualification for the Table, but they differ on enforcement. The baptism_and_communion document admits the requirement is inferred rather than commanded, while the same document also opens the Table to visiting believers from other Bible-believing churches. The membership document treats attendance/partaking as separable from full membership."
+    },
+
+    {
+      "set_id": "ps_003",
+      "shared_theme": "head covering in corporate worship",
+      "scripture_refs_in_common": ["1Cor 11:1-16", "1Cor 11:3", "1Cor 11:5"],
+      "perspectives": [
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_12",
+          "claim": "A woman should wear a literal/physical head covering when praying or prophesying in the gathering — the passage gives multiple reasons (creation order, glory, angels) that transcend culture.",
+          "scripture_refs": ["1Cor 11:5", "1Cor 11:7", "1Cor 11:8-9", "1Cor 11:10", "Eph 3:10"],
+          "stance_marker": "literal_cloth_covering"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_12",
+          "claim": "A woman's natural long hair is itself the covering, so an additional cloth covering is not required — 1 Cor 11:14-15 says her hair is given to her for a covering and the glory order God-Man-Woman-Hair places hair in the covering position.",
+          "scripture_refs": ["1Cor 11:14-15"],
+          "stance_marker": "hair_is_the_covering"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_31",
+          "claim": "The application of the head covering is unclear because 1 Cor 11 ties it to prayer/prophecy with men present, while 1 Cor 14 prescribes silence in the gathered meeting; if women are simply silent, the necessity of the in-meeting covering is not clearly grounded in these passages.",
+          "scripture_refs": ["1Tim 2:8-15", "1Cor 14:34-35", "1Cor 11"],
+          "stance_marker": "covering_unclear_pending_resolution_of_silence"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_32",
+          "claim": "Five reasons support the head covering: nascent trinitarianism (four-level head hierarchy), creation order, general revelation (long hair), angelology, and universal church practice in the area; women should cover during all worship gatherings as a symbol of submission.",
+          "scripture_refs": ["1Cor 11"],
+          "stance_marker": "covering_required_in_all_worship"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_35",
+          "claim": "Final position: head coverings are required in all church-initiated meetings where men are present; not required where men are absent or in external evangelistic meetings.",
+          "scripture_refs": ["1Cor 11:1-16"],
+          "stance_marker": "required_in_mixed_meetings_only"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_02",
+          "claim": "Head covering is a practiced distinctive of the church that members are expected to affirm.",
+          "scripture_refs": [],
+          "stance_marker": "membership_required_distinctive"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_17",
+          "claim": "God has designed an order in male-female relationships (1 Cor 11:3) — there is a reason for it (cited as part of the basis for boundaries, not as direct head-covering instruction).",
+          "scripture_refs": ["1Cor 11:3"],
+          "stance_marker": "headship_order_affirmed_indirectly"
+        }
+      ],
+      "relationship": "disputed",
+      "notes": "Distinct positions on the mode (cloth vs. hair) and on the scope (all worship vs. mixed meetings only vs. uncertain). The final church position lands on cloth covering required only in church-initiated mixed-gender meetings. The hair-is-covering view is preserved as a recognized minority reading from 1 Cor 11:14-15."
+    },
+
+    {
+      "set_id": "ps_004",
+      "shared_theme": "silence of women in the assembly",
+      "scripture_refs_in_common": ["1Cor 14:34-35", "1Cor 11:5", "1Tim 2:8-15"],
+      "perspectives": [
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_13",
+          "claim": "A covered woman may pray and prophesy aloud in the assembly because 1 Cor 11:5 envisions her doing so — the rule given is about covering, not silence.",
+          "scripture_refs": ["1Cor 11:5"],
+          "stance_marker": "covered_speech_permitted"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_13",
+          "claim": "Even when covered, a woman is to remain silent in the gathered assembly because 1 Cor 14:33-34 (and parallel passages) commands silence — the two passages address two distinct problems and the silence command still binds.",
+          "scripture_refs": ["1Cor 14:33-34", "1Tim 4"],
+          "stance_marker": "silence_binds_even_when_covered"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_14",
+          "claim": "Women's silence is given without the conditions attached to silence of tongues-speakers and prophets, but the binding application is that women are not to lead the congregation — the command does not necessarily require absolute silence.",
+          "scripture_refs": ["1Cor 14", "1Cor 14:33-34"],
+          "stance_marker": "silence_in_leading_only"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_11",
+          "claim": "Women hold significant roles and ministries — older women teach younger women (Titus 2:4), a wife may participate in privately instructing a man (Acts 18:26), women labored in the gospel (Phil 4:3) — the restriction is on the public leading/teaching of the assembly.",
+          "scripture_refs": ["Titus 2:4", "Acts 18:26", "Phil 4:3"],
+          "stance_marker": "private_instruction_permitted_public_leading_restricted"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_31",
+          "claim": "Possible reconciliation: 'silence' in 1 Cor 14 refers to judging prophecy or teaching (not praying/prophesying); women may pray and prophesy in the gathered meeting if covered.",
+          "scripture_refs": ["1Cor 14:34-35", "1Cor 11"],
+          "stance_marker": "silence_means_no_judging_prophecy_or_teaching"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_33",
+          "claim": "1 Cor 14:34-35 presumes the headship order — women keep silence in the churches and ask their husbands at home if they want to learn anything; v.35 encourages them to ask, not be silent, when home order is applicable.",
+          "scripture_refs": ["1Cor 11:8-9", "1Cor 11:3", "1Cor 14:34-35"],
+          "stance_marker": "silence_in_church_questioning_at_home"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_35",
+          "claim": "Final position: women remain silent and do not hold leadership/teaching/preaching roles in the gathered church; exception is meetings like Sunday school or women's meetings where overall responsibility lies with elders or a man assigned by them.",
+          "scripture_refs": [],
+          "stance_marker": "silence_in_leadership_with_sunday_school_exception"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_17",
+          "claim": "During the breaking-of-bread meeting, men, when led by the Spirit, may spontaneously share scripture, prayer, or song — by implication this open ministry is for men.",
+          "scripture_refs": ["1Cor 14:26"],
+          "stance_marker": "men_only_open_ministry_at_table"
+        }
+      ],
+      "relationship": "disputed",
+      "notes": "Silence is interpreted across at least four substantive bands: (a) absolute silence even when covered, (b) silence only from leading/teaching, (c) silence from judging prophecy or teaching only (allowing prayer/prophecy), and (d) silence in church but free questioning at home. The settled church position is silence from leadership/teaching with explicit Sunday school and women's meeting exceptions where male oversight remains."
+    },
+
+    {
+      "set_id": "ps_005",
+      "shared_theme": "tithing and giving / free-will offering",
+      "scripture_refs_in_common": ["Rom 12", "1Cor 9", "Deut 25", "1Tim 5", "2Cor 8"],
+      "perspectives": [
+        {
+          "source_doc": "offerings",
+          "chunk_id": "offerings_22",
+          "claim": "Old Testament tithing as prescribed (in amount and purpose) does not directly bind the New Testament church; the heart-principles of tithes and offerings are reaffirmed as willing generosity to the Lord's work and to fellow believers.",
+          "scripture_refs": ["Rom 12"],
+          "stance_marker": "free_will_offering_no_binding_tithe"
+        },
+        {
+          "source_doc": "offerings",
+          "chunk_id": "offerings_23",
+          "claim": "The local assembly observes a designated, prayerful time of giving on Sunday; everyone closes their eyes as the offering bag is passed; only those with willing desire and ability give financially; others offer time and resources.",
+          "scripture_refs": ["2Cor 9:8-11"],
+          "stance_marker": "private_voluntary_sunday_offering"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_22",
+          "claim": "Open questions remain on tithing position and teaching on giving; the church should give a gift to outside ministers, publish an annual budget, give monthly transparency to members, and investigate Indian 80G tax-exemption status.",
+          "scripture_refs": [],
+          "stance_marker": "tithing_position_open_pending_study"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_21",
+          "claim": "The church should not have a full-time paid pastor but should financially support full-time workers serving locally and include this in commendations; 1 Tim 5:17 grounds honoring elders.",
+          "scripture_refs": ["1Tim 5:17"],
+          "stance_marker": "no_paid_pastor_but_support_workers"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_17",
+          "claim": "The breaking-of-bread meeting concludes with communion and an intentional time of offering to the Lord financially and in life-giving ways.",
+          "scripture_refs": ["1Cor 14:26"],
+          "stance_marker": "offering_follows_communion_in_worship"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Sources agree that giving is voluntary and proportional, not a mandated tithe. The offerings document gives the fullest theological grounding; the planning document treats the formal tithing question as still open. All sources agree on no paid-pastor model and on supporting full-time workers via voluntary giving."
+    },
+
+    {
+      "set_id": "ps_006",
+      "shared_theme": "eternal security / perseverance of believers",
+      "scripture_refs_in_common": ["John 10:27-30", "Rom 8:31-35", "Eph 1:13-14"],
+      "perspectives": [
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_01_doctrinal_statement",
+          "claim": "Salvation is a secure gift that cannot be lost; once saved, a believer lives in an eternally restored relationship with God as part of His family.",
+          "scripture_refs": [],
+          "stance_marker": "eternal_security_unconditional"
+        },
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_02_eternal_security",
+          "claim": "Christ gives believers eternal life and they shall never perish; no one is able to snatch them from the Father's hand; nothing can separate believers from the love of Christ.",
+          "scripture_refs": ["John 10:27-30", "Heb 7:24-25", "Rom 8:31-35"],
+          "stance_marker": "eternal_security_christ_intercession"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_14",
+          "claim": "Sealing belongs to all believers without exception, occurs at the moment of conversion, and endures until the day of redemption — sealing is permanent for the believer (Eph 4:30).",
+          "scripture_refs": ["Eph 1:13", "2Cor 1:22", "Eph 4:30", "Acts 2:38"],
+          "stance_marker": "permanent_sealing_to_day_of_redemption"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_18",
+          "claim": "The Spirit's work in this world includes preserving believers through eternity.",
+          "scripture_refs": [],
+          "stance_marker": "preservation_by_the_spirit"
+        },
+        {
+          "source_doc": "sof_god_the_father",
+          "chunk_id": "sof_god_the_father_08",
+          "claim": "Believers are God's own possession, claimed according to His sovereign purpose; election to adoption was made in Christ before the foundation of the world.",
+          "scripture_refs": ["Eph 1:4", "Eph 1:5", "Eph 1:11"],
+          "stance_marker": "election_in_christ_before_foundation_of_world"
+        },
+        {
+          "source_doc": "sof_man",
+          "chunk_id": "sof_man_04",
+          "claim": "The decisive deadline for repentance and faith is death; there is no post-mortem opportunity envisioned. If a person repents and trusts Christ, he is brought into eternal fellowship with God.",
+          "scripture_refs": ["John 3:16", "Mark 1:15", "Rom 5:1"],
+          "stance_marker": "deadline_at_death_no_postmortem"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "All sources converge on once-saved-always-saved (eternal security via the Father's grasp, Christ's intercession, and the Spirit's permanent sealing). The doctrine is grounded in three Trinitarian sources separately and meets in the salvation document. No conditional-security view is advanced anywhere in the corpus."
+    },
+
+    {
+      "set_id": "ps_007",
+      "shared_theme": "election (unconditional, conditional, in-Christ)",
+      "scripture_refs_in_common": ["Rom 8:29", "Eph 1:4-5", "Rom 9-11"],
+      "perspectives": [
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_30",
+          "claim": "Unconditional Election — God's choice of the elect is not based on any condition foreseen in them.",
+          "scripture_refs": ["Rom 9-11"],
+          "stance_marker": "unconditional_election"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_30",
+          "claim": "Conditional Election — God's choice of the elect is conditioned on something (commonly foreseen faith).",
+          "scripture_refs": [],
+          "stance_marker": "conditional_election"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_30",
+          "claim": "In-Christ Election — Election is corporate and 'in Christ' rather than individual selection apart from Him.",
+          "scripture_refs": [],
+          "stance_marker": "in_christ_corporate_election"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_30",
+          "claim": "The team rejects 5-point Calvinism, will not use the labels 'Calvinism' or 'Arminianism', and affirms both divine sovereignty and human free will.",
+          "scripture_refs": [],
+          "stance_marker": "non_calvinist_compatibilist"
+        },
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_10_conformity_to_christ",
+          "claim": "Those whom God foreknew He also predestined to be conformed to the image of His Son so that He might be the firstborn among many brothers.",
+          "scripture_refs": ["Rom 8:29"],
+          "stance_marker": "predestination_to_conformity_with_christ"
+        },
+        {
+          "source_doc": "sof_god_the_father",
+          "chunk_id": "sof_god_the_father_05",
+          "claim": "God the Father has predestined believers to adoption as legal heirs through Jesus Christ according to His sovereign decree (Eph 1:5; 1:11).",
+          "scripture_refs": ["Eph 1:5", "Eph 1:11", "Eph 3:9"],
+          "stance_marker": "predestination_to_adoption"
+        },
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_03_grace_through_faith",
+          "claim": "The gospel is the power of God for salvation to everyone who believes — everyone who calls on the name of the Lord will be saved.",
+          "scripture_refs": ["Rom 10:9-13", "Eph 2:8-10"],
+          "stance_marker": "universal_offer_to_whoever_believes"
+        }
+      ],
+      "relationship": "disputed",
+      "notes": "The planning document explicitly preserves three live election positions (unconditional / conditional / in-Christ) without resolving them, while rejecting the Calvinist label. The SOF documents commit to predestination + foreknowledge + universal offer simultaneously, leaving the precise reconciliation between sovereignty and free will deliberately under-specified."
+    },
+
+    {
+      "set_id": "ps_008",
+      "shared_theme": "plurality of elders / pastoral structure",
+      "scripture_refs_in_common": ["1Tim 3:1", "Titus 1:6-9", "1Pet 5:1-4", "Acts 20:28", "Heb 13:17"],
+      "perspectives": [
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_06",
+          "claim": "Eldership is a group function — the plurality itself keeps the elders in check (mutual accountability).",
+          "scripture_refs": [],
+          "stance_marker": "plurality_for_mutual_accountability"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_07",
+          "claim": "Pastoral function is held collectively by a group ('pastors' is used in the plural in Eph 5); there is no biblical warrant for a singular senior-pastor role distinct from a plurality of shepherds.",
+          "scripture_refs": ["Eph 5"],
+          "stance_marker": "no_senior_pastor_office"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_02",
+          "claim": "Church government is by a plurality of elders rather than a single pastor or hierarchical body — this is a distinctive members are expected to affirm.",
+          "scripture_refs": [],
+          "stance_marker": "plurality_as_membership_distinctive"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_21",
+          "claim": "The church should not have a full-time paid pastor; service to the church must be distributed and not fall on one person.",
+          "scripture_refs": ["1Tim 5:17"],
+          "stance_marker": "no_full_time_paid_pastor"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_02",
+          "claim": "The Holy Spirit appoints elders by placing convictions in certain men; elders serve God, not merely the church, and are part of the congregation ('elder among you'), not a separate caste.",
+          "scripture_refs": ["Acts 20:28", "1Pet 5:1-2", "1Tim 3:1"],
+          "stance_marker": "spirit_appointed_within_congregation"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_08",
+          "claim": "Whether eldership is a full-time or bi-vocational role and the appropriate tenure of an eldership are left as open questions.",
+          "scripture_refs": [],
+          "stance_marker": "tenure_and_full_time_status_open"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_19",
+          "claim": "Desiring leadership in the church is honourable (1 Tim 3:1); men who do not yet meet the qualifications should work towards them.",
+          "scripture_refs": ["1Tim 3:1"],
+          "stance_marker": "honorable_aspiration_to_eldership"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Strong unanimity on plurality-of-elders, no senior pastor, and Spirit-appointment within the congregation. Open questions remain about tenure, full-time vs. bi-vocational, and the distinct role of formal deacons."
+    },
+
+    {
+      "set_id": "ps_009",
+      "shared_theme": "weekly observance of communion / first day of the week worship",
+      "scripture_refs_in_common": ["Acts 2:42", "Acts 20:7"],
+      "perspectives": [
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_16",
+          "claim": "The biblical pattern is to observe the Lord's Supper on the first day of the week; Acts 20:7 supports a weekly gathering for the breaking of bread; early Christian sources (Didache; Justin Martyr's First Apology) attest to weekly observance.",
+          "scripture_refs": ["Acts 20:7"],
+          "stance_marker": "weekly_observance_first_day"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_02",
+          "claim": "Weekly observance of the Lord's Supper is a practiced distinctive of the church.",
+          "scripture_refs": [],
+          "stance_marker": "weekly_observance_distinctive"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_13",
+          "claim": "The weekly Sunday meeting is structured around the four Acts 2:42 marks: breaking of bread, teaching, prayer, and fellowship; the meeting opens with a period of reflective silence and includes a remembrance meeting.",
+          "scripture_refs": ["Acts 2:42"],
+          "stance_marker": "weekly_acts_2_42_structure"
+        },
+        {
+          "source_doc": "vision_and_mission",
+          "chunk_id": "vision_and_mission_06",
+          "claim": "The Lord's Supper is a primary practical expression of Christ-centered church life.",
+          "scripture_refs": ["1Cor 1:10-24"],
+          "stance_marker": "lord_supper_as_christ_centeredness"
+        },
+        {
+          "source_doc": "vision_and_mission",
+          "chunk_id": "vision_and_mission_05",
+          "claim": "Acts 2:42's four practices — teaching, fellowship, breaking of bread, and prayer — serve as the foundational pattern for the fellowship's core values.",
+          "scripture_refs": ["Acts 2:42"],
+          "stance_marker": "acts_2_42_as_core_value_template"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Unanimous across the corpus: weekly Sunday breaking-of-bread anchored in Acts 2:42 and Acts 20:7, with explicit appeal to Didache and Justin Martyr for early-church support. No alternative frequency is presented."
+    },
+
+    {
+      "set_id": "ps_010",
+      "shared_theme": "Trinitarian formulation and equality of the Persons",
+      "scripture_refs_in_common": ["Matt 28:19", "2Cor 13:14", "1Pet 1:2", "Acts 5:3-4"],
+      "perspectives": [
+        {
+          "source_doc": "sof_god",
+          "chunk_id": "sof_god_05",
+          "claim": "God exists eternally in three Persons (Father, Son, Holy Spirit) who are equal in being and dignity (Phil 2:6, John 14:6); the Son is fully God and the Holy Spirit is fully God (Acts 5:3-4).",
+          "scripture_refs": ["Matt 28:19", "Matt 3:16", "2Cor 13:14", "Phil 2:6", "John 14:6", "Matt 28:18", "Acts 5:3-4"],
+          "stance_marker": "classical_trinity_equal_persons"
+        },
+        {
+          "source_doc": "sof_god",
+          "chunk_id": "sof_god_09",
+          "claim": "Each Person of the Trinity has a distinct role in the divine works of creation, providence, and redemption — the roles are harmonious, never in conflict.",
+          "scripture_refs": ["1Pet 1:2"],
+          "stance_marker": "distinct_harmonious_roles"
+        },
+        {
+          "source_doc": "sof_god_the_father",
+          "chunk_id": "sof_god_the_father_01",
+          "claim": "There is one God, the Father, from whom all things originate and for whom believers live; God the Father is the Father of the Lord Jesus Christ; the Father is over all, through all, and in all.",
+          "scripture_refs": ["1Cor 8:6", "Eph 1:3", "Eph 4:6"],
+          "stance_marker": "father_as_source_within_godhead"
+        },
+        {
+          "source_doc": "sof_god_the_son",
+          "chunk_id": "sof_god_the_son_07",
+          "claim": "Jesus is truly God and truly man — one person with two natures (hypostatic union); existing in 'the form of God,' equality with God was already His by right; He humbled Himself in real human likeness while remaining fully God.",
+          "scripture_refs": ["Phil 2:6-8", "John 1:1-2", "John 1:14", "Luke 2:52"],
+          "stance_marker": "hypostatic_union_kenosis_without_relinquishing_deity"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_02",
+          "claim": "The Holy Spirit is God (Acts 5:3-4) and is co-equal with the Father and the Son as evidenced by the Trinitarian baptismal formula in Matt 28:19.",
+          "scripture_refs": ["Acts 5:3-4", "Matt 28:19"],
+          "stance_marker": "spirit_co_equal_with_father_and_son"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_07",
+          "claim": "Baptism must be performed in the name of the Father, the Son, and the Holy Spirit — the Trinitarian formula is an appeal to and dependence on each Person of the Godhead.",
+          "scripture_refs": ["Matt 28:19"],
+          "stance_marker": "trinitarian_formula_in_baptism"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_10",
+          "claim": "Headship distinguishes role, not essential equality — analogous to the Father being 'greater' than the Son in role only; Christ is not inferior to God in essence.",
+          "scripture_refs": ["1Cor 11:3"],
+          "stance_marker": "role_subordination_essential_equality"
+        }
+      ],
+      "relationship": "nuanced_agreement",
+      "notes": "Core Trinitarian doctrine is uniform across all four Trinitarian SOF documents and the practical documents (baptism, governance). The interesting nuance is the role-subordination claim invoked in church_governance_10 to ground male headship by analogy — equal in essence, distinct in role — which goes beyond the simpler 'equal Persons' formulations elsewhere."
+    },
+
+    {
+      "set_id": "ps_011",
+      "shared_theme": "John 3:5 — born of water and Spirit / regeneration",
+      "scripture_refs_in_common": ["John 3:5", "Titus 3:5"],
+      "perspectives": [
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_11",
+          "claim": "John 3:5 should not be read as teaching baptismal regeneration since other Acts passages show baptism follows belief; the most contextually fitting reading is that 'water' refers to Old Testament cleansing imagery (Ezekiel 36; Isaiah 44).",
+          "scripture_refs": ["John 3:5", "Ezek 36:25-27", "Isa 44:3"],
+          "stance_marker": "water_as_ot_cleansing_imagery"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_11",
+          "claim": "Alternative view: 'Water' in John 3:5 refers to water baptism — baptism is required for regeneration (rejected here because Acts shows baptism follows repentance and belief).",
+          "scripture_refs": ["John 3:5"],
+          "stance_marker": "baptismal_regeneration_rejected"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_11",
+          "claim": "Alternative view: 'Water' refers to amniotic waters of physical birth, contrasted with spiritual rebirth (rejected here because being born again is spiritual, not physical).",
+          "scripture_refs": ["John 3:5"],
+          "stance_marker": "amniotic_birth_reading_rejected"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_09",
+          "claim": "Regeneration is the Spirit's act of creating new life in the sinner; the new birth is necessary for entry into the kingdom (John 3:5-7); regeneration and renewal are explicitly attributed to the Holy Spirit (Titus 3:5).",
+          "scripture_refs": ["John 3:5-7", "Titus 3:5"],
+          "stance_marker": "spirit_as_regenerator_no_baptism_link"
+        },
+        {
+          "source_doc": "salvation_words",
+          "chunk_id": "salvation_words_13",
+          "claim": "Faith and repentance work hand-in-hand: the Spirit convicts, the Word illuminates, and the sinner who repents and responds in faith is saved (Mk 1:15, Eph 1:13, Jn 5:24).",
+          "scripture_refs": ["John 16:8-10", "John 1:9", "John 3:16", "Mark 1:15", "Eph 1:13"],
+          "stance_marker": "regeneration_via_word_and_spirit_no_baptism"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "All sources reject baptismal regeneration. The baptism document surveys three readings of John 3:5 and prefers the Ezekiel cleansing imagery; the SOF on the Holy Spirit treats John 3:5-7 directly under the Spirit's regenerating ministry without engaging the baptismal-regeneration alternative; salvation_words anchors regeneration in Spirit conviction + Word illumination."
+    },
+
+    {
+      "set_id": "ps_012",
+      "shared_theme": "credobaptism / household baptisms",
+      "scripture_refs_in_common": ["Matt 28:19", "Acts 2:38", "Acts 16:33"],
+      "perspectives": [
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_08",
+          "claim": "Baptism is only for those who have come to faith; the scriptural order is always belief first, then baptism (Matt 3:2-6; 28:19; Acts 2:37-38; 16:14-15, 34).",
+          "scripture_refs": ["Matt 3:2-6", "Matt 28:19", "Acts 2:37-38", "Acts 16:14-15", "Acts 16:34", "Acts 19:1-6", "Gal 3:25-27"],
+          "stance_marker": "credobaptism_belief_then_baptism"
+        },
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_06",
+          "claim": "Household-baptism passages do not specify the ages of those baptized and therefore do not establish infant baptism.",
+          "scripture_refs": ["Rom 6:3-4", "Acts 8:37-39", "John 3:23"],
+          "stance_marker": "household_baptisms_do_not_prove_paedobaptism"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_02",
+          "claim": "Baptism is for believers and is administered by immersion — a practiced distinctive of the church that members affirm.",
+          "scripture_refs": [],
+          "stance_marker": "credobaptism_by_immersion_distinctive"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_36",
+          "claim": "Baptism is administered as soon as possible after evaluation, with a signed affidavit, a baptism class, and elder discussion; public baptism is encouraged; secret discipleship is discouraged.",
+          "scripture_refs": [],
+          "stance_marker": "credobaptism_with_elder_process"
+        },
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_06_call_to_repentance",
+          "claim": "Repentance and baptism in the name of Jesus result in forgiveness of sins and receipt of the Holy Spirit (Acts 2:38).",
+          "scripture_refs": ["Acts 2:38"],
+          "stance_marker": "repentance_then_baptism_normative_pattern"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Unanimous credobaptism by immersion across all relevant documents. The baptism document explicitly handles the household-baptism objection. No paedobaptist position is given any weight."
+    },
+
+    {
+      "set_id": "ps_013",
+      "shared_theme": "spiritual gifts — when and how given",
+      "scripture_refs_in_common": ["1Cor 12:11", "Heb 2:4", "1Cor 12:4-13"],
+      "perspectives": [
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_17",
+          "claim": "The Spirit distributes spiritual gifts according to His will (Heb 2:4) — distribution is sovereignly determined by the Spirit, not chosen by the recipient.",
+          "scripture_refs": ["Rom 8:26", "Heb 2:4"],
+          "stance_marker": "sovereign_distribution_by_spirit"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_18",
+          "claim": "The Holy Spirit gives spiritual gifts for the purpose of building up the church (church-edification, not personal aggrandizement).",
+          "scripture_refs": ["1Cor 12:4-13"],
+          "stance_marker": "gifts_for_church_edification"
+        },
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_14",
+          "claim": "Earnestly desiring spiritual gifts is a corporate church activity, not an individual pursuit; spiritual gifts are bestowed at the point of salvation, not later acquired.",
+          "scripture_refs": [],
+          "stance_marker": "gifts_at_salvation_corporate_desire"
+        },
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_08",
+          "claim": "Scripture instructs believers to earnestly desire the higher gifts (1 Cor 12:31); explicit references in favor of the gifts outnumber explicit references arguing for cessation.",
+          "scripture_refs": ["1Cor 12:31"],
+          "stance_marker": "earnestly_desire_individual_or_corporate"
+        },
+        {
+          "source_doc": "vision_and_mission",
+          "chunk_id": "vision_and_mission_13",
+          "claim": "Discovering and exercising one's spiritual gift is treated as a normative duty of every member.",
+          "scripture_refs": [],
+          "stance_marker": "individual_gift_discovery_normative"
+        }
+      ],
+      "relationship": "nuanced_agreement",
+      "notes": "Agreement that gifts are sovereignly given by the Spirit for the church's edification. Tension on locus: sign_gifts_14 frames desiring gifts as corporate (praying that gifted people would be added), while vision_and_mission_13 makes individual gift-discovery a normative duty for each member."
+    },
+
+    {
+      "set_id": "ps_014",
+      "shared_theme": "membership requirements / formal church membership",
+      "scripture_refs_in_common": [],
+      "perspectives": [
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_04",
+          "claim": "Eligibility for church membership is restricted to those who are saved and have been baptized.",
+          "scripture_refs": [],
+          "stance_marker": "saved_and_baptized_required"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_07",
+          "claim": "Formal membership exists to discern salvation and Christian state, enable governance and pastoral care, secure doctrinal agreement, make church discipline workable, distinguish members from attendees and visitors, promote unity, and fulfill civic duties.",
+          "scripture_refs": [],
+          "stance_marker": "formal_membership_for_governance_and_discipline"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_18",
+          "claim": "Formal membership clarifies spiritual standing, enables elder oversight and pastoral care, secures agreement to the statement of faith, supports church discipline, and distinguishes members from attendees and visitors.",
+          "scripture_refs": [],
+          "stance_marker": "membership_planning_consensus"
+        },
+        {
+          "source_doc": "vision_and_mission",
+          "chunk_id": "vision_and_mission_12",
+          "claim": "Engagement with the body is a deliberate decision contingent on agreement with the statement of faith, practices, vision, and mission; the pathway to membership begins with a conversation with one of the leaders.",
+          "scripture_refs": [],
+          "stance_marker": "membership_by_deliberate_agreement"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Unanimous across the three relevant documents: formal, deliberate, baptism-and-belief-gated membership distinct from mere attendance, primarily to enable elder oversight and church discipline."
+    },
+
+    {
+      "set_id": "ps_015",
+      "shared_theme": "role of women in the church (positive ministries vs. restrictions)",
+      "scripture_refs_in_common": ["Titus 2:4-5", "Acts 18:26", "Phil 4:3"],
+      "perspectives": [
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_11",
+          "claim": "Women hold significant ministries: older women teach younger women (Titus 2:4); a wife may participate in privately instructing a man alongside her husband (Acts 18:26); women labored in the gospel (Phil 4:3) — restriction is on public leading/teaching of the assembly only.",
+          "scripture_refs": ["Titus 2:4", "Acts 18:26", "Phil 4:3"],
+          "stance_marker": "private_teaching_and_co_labor_permitted"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_34",
+          "claim": "Women's biblical roles include role model to younger women, doer of good works, saved through childbearing, keeper of the home, dispenser of private instruction (Priscilla pattern), servant, gospel witness, example of holy living, sufferer for Christ, and worshipper.",
+          "scripture_refs": ["Titus 2:4-5", "1Tim 2:9-10", "1Tim 2:15", "Titus 2:5", "Acts 18:2", "Acts 18:18", "Acts 18:26", "Rom 16:3", "1Cor 16:19", "2Tim 4:19", "Phil 4:3"],
+          "stance_marker": "ten_positive_roles_complementarian"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_35",
+          "claim": "Final position: women may lead in Sunday school or women's meetings where overall responsibility remains with elders or a man assigned by them.",
+          "scripture_refs": [],
+          "stance_marker": "women_may_lead_under_male_oversight"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_17",
+          "claim": "Older men should teach men and older women should teach women — same-gender discipleship.",
+          "scripture_refs": ["Eph 5:1-2,15-17", "Jer 17:9-10", "Prov 4:20-23", "1Cor 11:3"],
+          "stance_marker": "same_gender_discipleship"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_10",
+          "claim": "A man should not become the primary spiritual support, counselor, or advisor for a woman; spiritual support for women should be redirected to same-gender helpers or mature leaders.",
+          "scripture_refs": [],
+          "stance_marker": "redirect_to_same_gender_mentors"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_31",
+          "claim": "The contributor's position is complementarianism: men and women both lead in different contexts; women are not to teach or have authority over men in the recognized gathering.",
+          "scripture_refs": ["1Tim 2:8-15", "1Cor 14:34-35"],
+          "stance_marker": "complementarianism_general"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "All sources occupy the complementarian space, but they emphasize different facets: positive ministries (church_governance_11, topics_to_discuss_34), specific exceptions for women's leadership under male oversight (topics_to_discuss_35), and same-gender pastoral care discipline (boundaries_10, boundaries_17)."
+    },
+
+    {
+      "set_id": "ps_016",
+      "shared_theme": "church discipline (Matthew 18 / 1 Cor 5)",
+      "scripture_refs_in_common": ["Matt 18", "1Cor 5", "1Cor 5:11-13"],
+      "perspectives": [
+        {
+          "source_doc": "baptism_and_communion",
+          "chunk_id": "baptism_and_communion_15",
+          "claim": "Unrepentant believers under church discipline were excluded from the Lord's Supper in the New Testament (1 Cor 5:11-13; 2 Thess 3:6, 11-15).",
+          "scripture_refs": ["1Cor 5:11-13", "2Thess 3:6,11-15"],
+          "stance_marker": "discipline_excludes_from_table"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_29",
+          "claim": "Church discipline is grounded in Matthew 18 and 1 Corinthians 5; repentant offenders whose sin has affected the body still go through a process that may include confession to the church and to persons affected; elders must act on discipline issues immediately, not wait for the next regular meeting.",
+          "scripture_refs": ["Matt 18", "1Cor 5"],
+          "stance_marker": "elder_proactive_discipline_with_restoration"
+        },
+        {
+          "source_doc": "membership",
+          "chunk_id": "membership_07",
+          "claim": "Formal membership makes church discipline workable because members have agreed to be under the elders' authority.",
+          "scripture_refs": [],
+          "stance_marker": "membership_as_basis_for_discipline"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_20",
+          "claim": "If a member marries a non-believer against counsel, the church will not perform the wedding and the person's membership is in question; restoration remains the goal — whatever discipline is given, restoration must be the key.",
+          "scripture_refs": [],
+          "stance_marker": "discipline_with_restoration_as_goal"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Unanimous on Matt 18 / 1 Cor 5 grounding, restoration as goal, exclusion from the Table for unrepentant cases, and formal membership as the structural enabler of discipline."
+    },
+
+    {
+      "set_id": "ps_017",
+      "shared_theme": "creation order and male headship",
+      "scripture_refs_in_common": ["1Cor 11:3", "1Cor 11:8-9", "Eph 5"],
+      "perspectives": [
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_09",
+          "claim": "'Head' in Scripture carries multiple meanings (authority, source/control center, representative, relational order); Eph 5 sets a relational order: wife-husband-Christ, modeled on Christ-and-church.",
+          "scripture_refs": ["Col 2", "Col 1:15", "Eph 4:15-16", "Eph 5"],
+          "stance_marker": "multi_layered_headship_meaning"
+        },
+        {
+          "source_doc": "church_governance",
+          "chunk_id": "church_governance_10",
+          "claim": "1 Cor 11:3 sets a chain of headship: God-Christ, Christ-Man, Man-Woman; headship distinguishes role, not essential equality; cultural oppression of women by men is not what this passage is teaching.",
+          "scripture_refs": ["1Cor 11:2-16", "1Cor 11:3"],
+          "stance_marker": "headship_chain_role_distinction"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_15",
+          "claim": "Men are called to be spiritual leaders, especially in their homes.",
+          "scripture_refs": [],
+          "stance_marker": "male_spiritual_leadership_in_home"
+        },
+        {
+          "source_doc": "boundaries",
+          "chunk_id": "boundaries_17",
+          "claim": "God has designed an order in male-female relationships, and there is a reason for it (1 Cor 11:3).",
+          "scripture_refs": ["1Cor 11:3"],
+          "stance_marker": "order_by_design"
+        },
+        {
+          "source_doc": "topics_to_discuss",
+          "chunk_id": "topics_to_discuss_33",
+          "claim": "1 Cor 11:8-9 grounds the order in creation: the woman is from and for the man; Paul's analogy is between Christ and His bride — as the bride does not teach or lead Christ, women do not teach or lead in the setting of the church.",
+          "scripture_refs": ["1Cor 11:8-9", "1Cor 11:3", "1Cor 14:34-35"],
+          "stance_marker": "creation_order_christ_bride_analogy"
+        },
+        {
+          "source_doc": "sof_man",
+          "chunk_id": "sof_man_02",
+          "claim": "Humanity was created as male and female; man was created to be the steward of the Earth (dominion mandate).",
+          "scripture_refs": ["Gen 1:27", "Gen 1:28"],
+          "stance_marker": "male_female_creation_with_dominion"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "All sources affirm a complementarian, role-based reading of male headship grounded in creation order. Church_governance_09 expands the semantic range of 'head' more thoroughly than the others."
+    },
+
+    {
+      "set_id": "ps_018",
+      "shared_theme": "Spirit baptism and indwelling",
+      "scripture_refs_in_common": ["1Cor 12:13", "Rom 8:9", "Acts 2:38", "Eph 1:13"],
+      "perspectives": [
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_10",
+          "claim": "Spirit baptism is the Spirit's act of adding believers to the body of Christ (1 Cor 12:13); operative only in the present dispensation; experienced by all believers in this dispensation; occurs at the moment of salvation and is not repeated — therefore not a subsequent second-blessing experience.",
+          "scripture_refs": ["1Cor 12:13", "Acts 2:1", "Acts 2:2", "Acts 2:3", "Acts 2:4"],
+          "stance_marker": "dispensational_spirit_baptism_at_salvation"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_03",
+          "claim": "In the Old Testament the Holy Spirit 'came upon' men for specific tasks rather than indwelling permanently; in the New Testament He dwells in every believer (Rom 8:9), beginning at salvation (Acts 2:38; Acts 10:44).",
+          "scripture_refs": ["Gen 1:2", "Judg 6:34", "Judg 14:6", "Ps 51:11", "John 1:32", "Rom 8:9", "Acts 2:38", "Acts 10:44"],
+          "stance_marker": "ot_coming_upon_vs_nt_indwelling"
+        },
+        {
+          "source_doc": "sof_holy_spirit",
+          "chunk_id": "sof_holy_spirit_12",
+          "claim": "Spirit-filling has two facets: a sovereign event of empowerment for special activity (repeated, unconditional), and an abiding state of Spirit-controlled life (closely synonymous with spirituality, available to all but not actually experienced by all).",
+          "scripture_refs": ["Eph 5:18", "Luke 1:15", "Acts 2:4", "Acts 4:8", "Acts 4:31", "Acts 6:3", "Acts 13:52"],
+          "stance_marker": "two_facets_event_and_state"
+        },
+        {
+          "source_doc": "sign_gifts",
+          "chunk_id": "sign_gifts_03",
+          "claim": "A consistent cessationist position would not require 'tongues' as proof of salvation.",
+          "scripture_refs": [],
+          "stance_marker": "tongues_not_required_for_salvation"
+        },
+        {
+          "source_doc": "salvation_soteriology",
+          "chunk_id": "salvation_soteriology_06_call_to_repentance",
+          "claim": "Repentance and baptism in the name of Jesus result in forgiveness of sins and receipt of the Holy Spirit (Acts 2:38).",
+          "scripture_refs": ["Acts 2:38"],
+          "stance_marker": "spirit_received_at_repentance_and_baptism"
+        }
+      ],
+      "relationship": "complementary",
+      "notes": "Strong dispensational position on Spirit baptism (one-time, at salvation, universal among believers in this dispensation), explicitly rejecting second-blessing pentecostalism. The two-facets-of-filling formulation creates careful internal space for both event-empowerment and abiding state without conceding to charismatic categories."
+    }
+  ],
+
+  "themes_with_no_disagreement": [
+    "monotheism",
+    "Christ's substitutionary atonement / penal substitution",
+    "bodily resurrection of Christ",
+    "ascension and session at the right hand",
+    "bodily second coming of Christ",
+    "deity of Christ",
+    "deity of the Holy Spirit",
+    "personhood of the Holy Spirit",
+    "inspiration and authority of Scripture",
+    "expository preaching as the default pulpit method",
+    "Acts 2:42 as the template for Sunday gathering",
+    "biblical authority and sufficiency of Scripture",
+    "evangelism and Great Commission discipleship",
+    "no paid pastor model",
+    "support of those who minister the gospel via voluntary giving",
+    "communal sharing and care for the needy",
+    "sinlessness of Christ as the unique exception to universal sinfulness",
+    "imago Dei and male-female creation",
+    "original sin (both nature and choice)",
+    "eternal hell as just punishment for the unrepentant",
+    "Spirit-led conviction of sin and Word-mediated illumination",
+    "regeneration as a Spirit work (not a baptismal work)",
+    "marriage between believers as the church-conducted norm",
+    "no replacement theology — the church has not replaced Israel",
+    "private and humble almsgiving (eyes-closed offering)",
+    "trinitarian baptismal formula",
+    "baptism by immersion of believers only"
+  ],
+
+  "summary": {
+    "total_perspective_sets": 18,
+    "total_themes_compared": 18,
+    "contrasting_sets": 0,
+    "complementary_sets": 10,
+    "disputed_sets": 4,
+    "nuanced_agreement_sets": 4
+  }
+}

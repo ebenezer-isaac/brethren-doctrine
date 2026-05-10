@@ -1,0 +1,276 @@
+{
+  "doc_slug": "sof_man",
+  "source_type": "docx",
+  "source_mtime": "2026-05-09T23:26:07Z",
+  "ingested_at": "2026-05-09T23:51:24Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "Statement of Faith — Man (Anthropology)",
+    "estimated_date": null,
+    "session_topic": "Statement of Faith class on biblical anthropology: God's original design for humanity, the impact of the fall and sin, and the redemptive impact of the cross of Christ.",
+    "topic_clusters": [
+      "Anthropology",
+      "Hamartiology",
+      "Soteriology",
+      "Eschatology"
+    ],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "Gen 1:27", "book": "Genesis", "chapter": 1, "verse_start": 27, "verse_end": 27, "normalized": "Gen 1:27"},
+    {"raw": "Gen 1:28", "book": "Genesis", "chapter": 1, "verse_start": 28, "verse_end": 28, "normalized": "Gen 1:28"},
+    {"raw": "Gen 1:29", "book": "Genesis", "chapter": 1, "verse_start": 29, "verse_end": 29, "normalized": "Gen 1:29"},
+    {"raw": "Gen 1:31", "book": "Genesis", "chapter": 1, "verse_start": 31, "verse_end": 31, "normalized": "Gen 1:31"},
+    {"raw": "Rev 21:3", "book": "Revelation", "chapter": 21, "verse_start": 3, "verse_end": 3, "normalized": "Rev 21:3"},
+    {"raw": "Rev 21:4", "book": "Revelation", "chapter": 21, "verse_start": 4, "verse_end": 4, "normalized": "Rev 21:4"},
+    {"raw": "Rev 21:3-4", "book": "Revelation", "chapter": 21, "verse_start": 3, "verse_end": 4, "normalized": "Rev 21:3-4"},
+    {"raw": "1Co 10:31", "book": "1 Corinthians", "chapter": 10, "verse_start": 31, "verse_end": 31, "normalized": "1Cor 10:31"},
+    {"raw": "Col 1:21", "book": "Colossians", "chapter": 1, "verse_start": 21, "verse_end": 21, "normalized": "Col 1:21"},
+    {"raw": "Col 1:20", "book": "Colossians", "chapter": 1, "verse_start": 20, "verse_end": 20, "normalized": "Col 1:20"},
+    {"raw": "Col 1:20-21", "book": "Colossians", "chapter": 1, "verse_start": 20, "verse_end": 21, "normalized": "Col 1:20-21"},
+    {"raw": "2Co 5:21", "book": "2 Corinthians", "chapter": 5, "verse_start": 21, "verse_end": 21, "normalized": "2Cor 5:21"},
+    {"raw": "Eph 2:1", "book": "Ephesians", "chapter": 2, "verse_start": 1, "verse_end": 1, "normalized": "Eph 2:1"},
+    {"raw": "Rom 5:12", "book": "Romans", "chapter": 5, "verse_start": 12, "verse_end": 12, "normalized": "Rom 5:12"},
+    {"raw": "Psa 51:5", "book": "Psalms", "chapter": 51, "verse_start": 5, "verse_end": 5, "normalized": "Ps 51:5"},
+    {"raw": "1Pe 2:22", "book": "1 Peter", "chapter": 2, "verse_start": 22, "verse_end": 22, "normalized": "1Pet 2:22"},
+    {"raw": "Joh 3:16", "book": "John", "chapter": 3, "verse_start": 16, "verse_end": 16, "normalized": "John 3:16"},
+    {"raw": "John 3:36", "book": "John", "chapter": 3, "verse_start": 36, "verse_end": 36, "normalized": "John 3:36"},
+    {"raw": "Rom 2:5", "book": "Romans", "chapter": 2, "verse_start": 5, "verse_end": 5, "normalized": "Rom 2:5"},
+    {"raw": "Rev 20:15", "book": "Revelation", "chapter": 20, "verse_start": 15, "verse_end": 15, "normalized": "Rev 20:15"},
+    {"raw": "Rom 5:1", "book": "Romans", "chapter": 5, "verse_start": 1, "verse_end": 1, "normalized": "Rom 5:1"},
+    {"raw": "Mar 1:15", "book": "Mark", "chapter": 1, "verse_start": 15, "verse_end": 15, "normalized": "Mark 1:15"}
+  ],
+
+  "theological_themes": [
+    "imago Dei (image of God)",
+    "creation of humanity",
+    "male and female",
+    "stewardship / dominion mandate",
+    "purpose of humanity (glorify God)",
+    "fellowship with God",
+    "fellowship with fellow man",
+    "the fall of mankind",
+    "original sin / sin nature",
+    "sin by choice (actual sin)",
+    "spiritual death / total depravity",
+    "separation from God",
+    "eternal separation",
+    "sinlessness of Christ",
+    "repentance",
+    "faith in Christ as Savior",
+    "salvation",
+    "eternal fellowship with God",
+    "hell and final judgment",
+    "wrath of God",
+    "reconciliation through the cross",
+    "justification by faith",
+    "imputation (Christ made sin / believers righteousness of God)",
+    "eschatological dwelling of God with humanity"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "sof_man_01",
+      "type": "definition",
+      "content": "Statement of Faith section on Man (Anthropology). Opens with the credal preamble 'We believe that' which governs every assertion that follows. The document is structured as three doctrinal movements: God's Initial Design, the Impact of Sin, and the Impact of the Cross — each a credal proposition followed by supporting Scripture, and finally a consolidated prose paragraph restating the whole confession.",
+      "scripture_refs": [],
+      "themes": [
+        "Anthropology",
+        "Hamartiology",
+        "Soteriology"
+      ],
+      "claims": [
+        "Biblical anthropology in this confession is structured around three movements: original design, fall, and redemption.",
+        "All assertions in the document fall under the credal frame 'We believe that...'."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sof_man_02",
+      "type": "teaching",
+      "content": "GOD'S INITIAL DESIGN. We believe that God created man in His own image, without sin, as male and female. God created man to glorify Himself, to be the stewards of this Earth, and to enjoy perfect fellowship — both with God and with fellow man. Supporting Scripture: 'So God created man in his own image, in the image of God he created him; male and female he created them' (Gen 1:27). 'And God blessed them. And God said to them, Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth' (Gen 1:28). 'And God said, Behold, I have given you every plant yielding seed that is on the face of all the earth, and every tree with seed in its fruit. You shall have them for food' (Gen 1:29). The eschatological consummation of fellowship is anticipated: 'Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people, and God himself will be with them as their God. He will wipe away every tear from their eyes, and death shall be no more...' (Rev 21:3-4). And the abiding human telos: 'So, whether you eat or drink, or whatever you do, do all to the glory of God' (1 Cor 10:31).",
+      "scripture_refs": [
+        "Gen 1:27",
+        "Gen 1:28",
+        "Gen 1:29",
+        "Rev 21:3-4",
+        "1Cor 10:31"
+      ],
+      "themes": [
+        "imago Dei (image of God)",
+        "creation of humanity",
+        "male and female",
+        "stewardship / dominion mandate",
+        "purpose of humanity (glorify God)",
+        "fellowship with God",
+        "fellowship with fellow man",
+        "eschatological dwelling of God with humanity"
+      ],
+      "claims": [
+        "God created man in His own image.",
+        "Man was created without sin (originally sinless).",
+        "Humanity was created as male and female.",
+        "Man was created to glorify God.",
+        "Man was created to be the steward of the Earth (dominion mandate).",
+        "Man was created to enjoy perfect fellowship with God.",
+        "Man was created to enjoy perfect fellowship with fellow man.",
+        "The eschatological hope (Rev 21:3-4) restores and consummates the fellowship-with-God for which humanity was originally designed.",
+        "1 Cor 10:31 grounds the human vocation: every human act is to be done for the glory of God."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": [
+        "sof_man_05"
+      ]
+    },
+    {
+      "chunk_id": "sof_man_03",
+      "type": "teaching",
+      "content": "IMPACT OF SIN. As a result of the fall of mankind, all humans are sinners — by their nature and by their choice — and are spiritually dead. The result of this is separation from God, both now and for all eternity. Supporting Scripture: 'And you, who once were alienated and hostile in mind, doing evil deeds' (Col 1:21). 'For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God' (2 Cor 5:21). 'And you were dead in the trespasses and sins' (Eph 2:1). 'Therefore, just as sin came into the world through one man, and death through sin, and so death spread to all men because all sinned' (Rom 5:12). 'Behold, I was brought forth in iniquity, and in sin did my mother conceive me' (Ps 51:5).",
+      "scripture_refs": [
+        "Col 1:21",
+        "2Cor 5:21",
+        "Eph 2:1",
+        "Rom 5:12",
+        "Ps 51:5"
+      ],
+      "themes": [
+        "the fall of mankind",
+        "original sin / sin nature",
+        "sin by choice (actual sin)",
+        "spiritual death / total depravity",
+        "separation from God",
+        "eternal separation",
+        "imputation (Christ made sin / believers righteousness of God)"
+      ],
+      "claims": [
+        "The fall of mankind is a historical event with universal consequences for the human race.",
+        "All humans are sinners — both by nature (inherited condition) and by choice (actual sins).",
+        "All humans are spiritually dead apart from Christ.",
+        "The result of sin is separation from God in the present.",
+        "Without remedy, this separation extends for all eternity.",
+        "Romans 5:12 grounds universal sin in the headship of one man (Adamic federalism).",
+        "Psalm 51:5 grounds sinfulness from conception, supporting an inherited sin nature, not merely chosen acts."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": [
+        "sof_man_02",
+        "sof_man_04"
+      ]
+    },
+    {
+      "chunk_id": "sof_man_04",
+      "type": "teaching",
+      "content": "IMPACT OF THE CROSS. The only exception to universal human sinfulness is the Lord Jesus Christ, who is completely perfect and without sin. If a person repents of his sin and trusts in Jesus Christ as Savior, he will then be saved and brought into eternal fellowship with God. Those, however, who do not repent and trust in Christ before death will eternally abide in hell, separated from God, and will suffer His just wrath upon them as a result of their sins. Supporting Scripture: 'He committed no sin, neither was deceit found in his mouth' (1 Pet 2:22). 'And through him to reconcile to himself all things, whether on earth or in heaven, making peace by the blood of his cross' (Col 1:20). 'For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God' (2 Cor 5:21). 'For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life' (John 3:16). 'But because of your hard and impenitent heart you are storing up wrath for yourself on the day of wrath when God's righteous judgment will be revealed' (Rom 2:5). 'And if anyone's name was not found written in the book of life, he was thrown into the lake of fire' (Rev 20:15). 'Therefore, since we have been justified by faith, we have peace with God through our Lord Jesus Christ' (Rom 5:1). 'The time is fulfilled, and the kingdom of God is at hand; repent and believe in the gospel' (Mark 1:15).",
+      "scripture_refs": [
+        "1Pet 2:22",
+        "Col 1:20",
+        "2Cor 5:21",
+        "John 3:16",
+        "Rom 2:5",
+        "Rev 20:15",
+        "Rom 5:1",
+        "Mark 1:15"
+      ],
+      "themes": [
+        "sinlessness of Christ",
+        "repentance",
+        "faith in Christ as Savior",
+        "salvation",
+        "eternal fellowship with God",
+        "hell and final judgment",
+        "wrath of God",
+        "reconciliation through the cross",
+        "justification by faith",
+        "imputation (Christ made sin / believers righteousness of God)"
+      ],
+      "claims": [
+        "Jesus Christ is the only human exception to universal sinfulness — completely perfect and without sin.",
+        "Salvation requires both repentance from sin AND trust in Jesus Christ as Savior (the two are paired, not alternatives).",
+        "The saved person is brought into eternal fellowship with God — restoring the original design (cf. sof_man_02).",
+        "The decisive deadline for repentance and faith is death; there is no post-mortem opportunity envisioned in this confession.",
+        "Those who do not repent and believe before death will eternally abide in hell.",
+        "Hell is characterized as eternal separation from God.",
+        "Hell involves the just wrath of God being suffered by the unrepentant as a result of their sins (retributive, deserved, not arbitrary).",
+        "Reconciliation of all things is accomplished through the blood of the cross (Col 1:20).",
+        "Justification is by faith and produces peace with God through Christ (Rom 5:1).",
+        "The gospel call summarized by Christ Himself is repent + believe (Mark 1:15)."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": [
+        "sof_man_02",
+        "sof_man_03",
+        "sof_man_05"
+      ]
+    },
+    {
+      "chunk_id": "sof_man_05",
+      "type": "definition",
+      "content": "Consolidated Statement of Faith — Man: 'We believe that God created man in His own image, without sin, as male and female. God created man to glorify Himself, to be the stewards of this Earth, and to enjoy perfect fellowship with both God and fellow man. As a result of the fall of mankind all humans are sinners by their nature and choice and are spiritually dead. The result of this is separation from God both now and for all eternity. The only exception being the Lord Jesus Christ who is completely perfect and without sin. We further believe that if man repents of his sin and trusts in Jesus Christ as Savior he will then be saved and brought into eternal fellowship with God. Those, however, who do not repent and trust in Christ before death will eternally abide in hell, separated from God, and will suffer His just wrath upon them as a result of their sins.' Supporting verses listed at close of confession: Gen 1:27; Gen 1:31; Rev 21:3-4; 1 Pet 2:22; Col 1:20-21; 2 Cor 5:21; Eph 2:1; John 3:36; Rom 2:5; Rev 20:15; Rom 5:1.",
+      "scripture_refs": [
+        "Gen 1:27",
+        "Gen 1:31",
+        "Rev 21:3-4",
+        "1Pet 2:22",
+        "Col 1:20-21",
+        "2Cor 5:21",
+        "Eph 2:1",
+        "John 3:36",
+        "Rom 2:5",
+        "Rev 20:15",
+        "Rom 5:1"
+      ],
+      "themes": [
+        "imago Dei (image of God)",
+        "creation of humanity",
+        "male and female",
+        "stewardship / dominion mandate",
+        "purpose of humanity (glorify God)",
+        "fellowship with God",
+        "fellowship with fellow man",
+        "the fall of mankind",
+        "original sin / sin nature",
+        "sin by choice (actual sin)",
+        "spiritual death / total depravity",
+        "separation from God",
+        "eternal separation",
+        "sinlessness of Christ",
+        "repentance",
+        "faith in Christ as Savior",
+        "salvation",
+        "eternal fellowship with God",
+        "hell and final judgment",
+        "wrath of God"
+      ],
+      "claims": [
+        "This is the publishable creedal-paragraph form of the doctrine of Man as held by the assembly producing this Statement of Faith.",
+        "The confession integrates anthropology (creation), hamartiology (fall + sin), christology (Christ's sinlessness), and soteriology (repent + believe → eternal fellowship; otherwise eternal hell + wrath) into one continuous statement.",
+        "Sin is attributed to BOTH nature and choice (compatibilist on the nature/choice question — neither pure imputation only nor pure act-only).",
+        "The eschatological dichotomy is absolute: eternal fellowship with God OR eternal abiding in hell — no third option (no annihilationism, no universalism, no purgatory).",
+        "Hell is described as personally suffered, just, wrath-bearing punishment — not merely metaphorical separation.",
+        "The closing verse list cites John 3:36 (not John 3:16 as quoted in the body) — both passages support the salvation/wrath dichotomy."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": [
+        "sof_man_02",
+        "sof_man_03",
+        "sof_man_04"
+      ]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "Man (Anthropology)\n\nWe believe that\n\nGOD INITIAL DESIGN\n\nGod created man\nin His own image,\nwithout sin,\nas male and female.\nto glorify Himself,\nto be the stewards of this Earth,\nto enjoy perfect fellowship\nwith both God\nfellow man.\n\nGen 1:27 So God created man in his own image, in the image of God he created him; male and female he created them.\n\nGen 1:28 And God blessed them. And God said to them, \"Be fruitful and multiply and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the heavens and over every living thing that moves on the earth.\"\n\nGen 1:29 And God said, \"Behold, I have given you every plant yielding seed that is on the face of all the earth, and every tree with seed in its fruit. You shall have them for food.\n\nRev 21:3 And I heard a loud voice from the throne saying, \"Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people, and God himself will be with them as their God.\n\nRev 21:4 He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.\"\n\n1Co 10:31 So, whether you eat or drink, or whatever you do, do all to the glory of God\n\nIMPACT OF SIN\n\nAs a result of the fall of mankind\nall humans are sinners\nby their nature\nchoice\nare spiritually dead.\nThe result of this\nis separation from God\nboth now\nfor all eternity.\n\nCol 1:21 And you, who once were alienated and hostile in mind, doing evil deeds,\n\n2Co 5:21 For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God.\n\nEph 2:1 And you were dead in the trespasses and sins\n\nRom 5:12 Therefore, just as sin came into the world through one man, and death through sin, and so death spread to all men because all sinned---\n\nPsa 51:5 Behold, I was brought forth in iniquity, and in sin did my mother conceive me.\n\nIMPACT OF CROSS\n\nThe only exception\nbeing the Lord Jesus Christ\nwho is completely perfect and without sin.\nif man repents\nof his sin\ntrusts in Jesus Christ as Savior\nhe will then be saved and\nbrought into eternal fellowship with God.\nwho do not repent and trust in Christ\nbefore death\nwill eternally abide in hell,\nseparated from God,\nwill suffer His just wrath upon\nthem as a result of their sins.\n\n1Pe 2:22 He committed no sin, neither was deceit found in his mouth.\n\nCol 1:20 and through him to reconcile to himself all things, whether on earth or in heaven, making peace by the blood of his cross.\n\n2Co 5:21 For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God.\n\nJoh 3:16 \"For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.\n\nRom 2:5 But because of your hard and impenitent heart you are storing up wrath for yourself on the day of wrath when God's righteous judgment will be revealed.\n\nRev 20:15 And if anyone's name was not found written in the book of life, he was thrown into the lake of fire.\n\nRom 5:1 Therefore, since we have been justified by faith, we have peace with God through our Lord Jesus Christ.\n\nMar 1:15 and saying, \"The time is fulfilled, and the kingdom of God is at hand; repent and believe in the gospel.\"\n\nVerses: Gen 1:27, Gen 1:31, Rev 21:3-4, 1 Peter 2:22, Col 1:20-21, 2 Cor 5:21, Eph 2:1, John 3:36, Rom 2:5, Rev 20:15, Rom 5:1,\n\nMan\n\nWe believe that God created man in His own image, without sin, as male and female. God created man to glorify Himself, to be the stewards of this Earth, and to enjoy perfect fellowship with both God and fellow man. As a result of the fall of mankind all humans are sinners by their nature and choice and are spiritually dead. The result of this is separation from God both now and for all eternity. The only exception being the Lord Jesus Christ who is completely perfect and without sin. We further believe that if man repents of his sin and trusts in Jesus Christ as Savior he will then be saved and brought into eternal fellowship with God. Those, however, who do not repent and trust in Christ before death will eternally abide in hell, separated from God, and will suffer His just wrath upon them as a result of their sins.\n\nVerses: Gen 1:27, Gen 1:31, Rev 21:3-4, 1 Peter 2:22, Col 1:20-21, 2 Cor 5:21, Eph 2:1, John 3:36, Rom 2:5, Rev 20:15, Rom 5:1,",
+
+  "parsing_notes": "Source is a tightly structured Statement of Faith (SOF) class document on biblical anthropology — three doctrinal headings (GOD INITIAL DESIGN, IMPACT OF SIN, IMPACT OF CROSS) followed by supporting Scripture, then a final consolidated paragraph and a verses-list. The original .docx uses underline formatting on most credal phrases; a small number of phrases were NOT underlined ('choice' under sin nature, 'fellow man' as object of fellowship, 'both now / for all eternity' as duration of separation). Treating these as integral to the confession because (a) they appear in the consolidated final prose paragraph without distinction, and (b) they are required to make the surrounding underlined clauses syntactically and theologically complete. Document presents a single unified position — no internal disagreements or alternative views recorded. presents_multiple_perspectives is therefore false. Minor textual note: the body of the document quotes John 3:16 in support of the cross/salvation section, but the closing verses-list cites John 3:36 — both have been preserved in scripture_refs because both appear in the source. No personal names of contributors appear in the source content (only biblical figures: 'Jesus Christ', 'Lord', 'God', 'Adam' implicit in Rom 5:12). No anonymization redactions were required to chunk content. The header 'GOD INITIAL DESIGN' appears to be a typo for 'GOD'S INITIAL DESIGN' — preserved verbatim in raw_extracted_text but normalized to 'GOD'S INITIAL DESIGN' in chunk content for readability.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

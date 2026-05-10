@@ -1,0 +1,47 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Private source materials — contain personal contributor names; never commit
+source-docs/
+converted/
+.tmp-beliefs/
+
+# Private data — external corpora, cached translations, indexed working sets
+data/
+chunks/
+embeddings/cache/
+parsed/_pending_transcription/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.uv/
+dist/
+build/
+
+# uv
+.python-version
+
+# Logs
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/settings.json
+
+# Docker
+docker/data/
+
+# Eval results (per-run output, not source)
+eval/results/
+
+# OS
+.DS_Store
+Thumbs.db

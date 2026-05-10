@@ -1,0 +1,382 @@
+{
+  "doc_slug": "boundaries",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-10T00:26:26+01:00",
+  "ingested_at": "2026-05-10T00:00:00Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "Boundaries Talk with the Guys",
+    "estimated_date": "2026-03-21",
+    "session_topic": "Establishing healthy biblical boundaries for men with the opposite sex — physical, emotional, digital, spiritual, and social safeguards that honor God, protect marriages, and maintain personal purity.",
+    "topic_clusters": ["Christian Ethics", "Sanctification", "Practical Theology", "Ecclesiology", "Hamartiology"],
+    "presents_multiple_perspectives": false
+  },
+
+  "scripture_refs": [
+    {"raw": "Proverbs 4:23", "book": "Proverbs", "chapter": 4, "verse_start": 23, "verse_end": 23, "normalized": "Prov 4:23"},
+    {"raw": "Jeremiah 17:9", "book": "Jeremiah", "chapter": 17, "verse_start": 9, "verse_end": 9, "normalized": "Jer 17:9"},
+    {"raw": "Titus 1:7", "book": "Titus", "chapter": 1, "verse_start": 7, "verse_end": 7, "normalized": "Titus 1:7"},
+    {"raw": "1 Timothy 4:12", "book": "1 Timothy", "chapter": 4, "verse_start": 12, "verse_end": 12, "normalized": "1Tim 4:12"},
+    {"raw": "1 Timothy 5:1-2", "book": "1 Timothy", "chapter": 5, "verse_start": 1, "verse_end": 2, "normalized": "1Tim 5:1-2"},
+    {"raw": "1 Cor. 7:1", "book": "1 Corinthians", "chapter": 7, "verse_start": 1, "verse_end": 1, "normalized": "1Cor 7:1"},
+    {"raw": "Eph. 5:1-2, 15-17", "book": "Ephesians", "chapter": 5, "verse_start": 1, "verse_end": 17, "normalized": "Eph 5:1-2,15-17"},
+    {"raw": "Jer 17:9-10", "book": "Jeremiah", "chapter": 17, "verse_start": 9, "verse_end": 10, "normalized": "Jer 17:9-10"},
+    {"raw": "Proverbs 4:20-23", "book": "Proverbs", "chapter": 4, "verse_start": 20, "verse_end": 23, "normalized": "Prov 4:20-23"},
+    {"raw": "1 Cor. 11:3", "book": "1 Corinthians", "chapter": 11, "verse_start": 3, "verse_end": 3, "normalized": "1Cor 11:3"},
+    {"raw": "1 Tim. 3:1", "book": "1 Timothy", "chapter": 3, "verse_start": 1, "verse_end": 1, "normalized": "1Tim 3:1"},
+    {"raw": "1 Peter 2:9", "book": "1 Peter", "chapter": 2, "verse_start": 9, "verse_end": 9, "normalized": "1Pet 2:9"},
+    {"raw": "Pro. 4:20-27", "book": "Proverbs", "chapter": 4, "verse_start": 20, "verse_end": 27, "normalized": "Prov 4:20-27"}
+  ],
+
+  "theological_themes": [
+    "biblical boundaries",
+    "guarding the heart",
+    "sexual purity",
+    "marital fidelity",
+    "personal holiness",
+    "above reproach (overseer qualifications)",
+    "Christian witness and testimony",
+    "imitating Christ",
+    "depravity of the heart",
+    "treating the opposite sex as family",
+    "accountability and community",
+    "spiritual leadership in the home",
+    "headship and order",
+    "royal priesthood identity",
+    "diligence in obedience",
+    "avoiding emotional intimacy with the opposite sex",
+    "digital purity",
+    "redirecting pastoral care to same-gender mentors"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "boundaries_01",
+      "type": "definition",
+      "content": "Establishing healthy boundaries with the opposite sex in a Christian church involves creating safeguards that honor God, protect marriages, and maintain personal purity. The goal is to set clear physical, emotional, and digital limits.",
+      "scripture_refs": [],
+      "themes": ["biblical boundaries", "sexual purity", "marital fidelity", "personal holiness"],
+      "claims": [
+        "Healthy boundaries with the opposite sex are safeguards that honor God, protect marriages, and maintain personal purity.",
+        "The goal of boundaries is to set clear physical, emotional, and digital limits."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_02",
+      "type": "definition",
+      "content": "When we hear the word boundaries, many think restriction. But biblical boundaries are not fences to trap us — they are guardrails to protect what God has entrusted to us. Boundaries define us: they define what is me and what is not me. A boundary shows me where I end and where someone else begins, leading me to a sense of ownership. Knowing what I am to own and take responsibility for gives me freedom (citing Henry Cloud). Boundaries are not something we walk on; they are something we walk within.",
+      "scripture_refs": [],
+      "themes": ["biblical boundaries"],
+      "claims": [
+        "Biblical boundaries are guardrails that protect what God has entrusted to us, not fences that trap us.",
+        "Boundaries define identity by marking where one person ends and another begins.",
+        "Owning what is mine and taking responsibility for it produces freedom.",
+        "Boundaries are not something we walk on but something we walk within."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_03",
+      "type": "teaching",
+      "content": "Why boundaries matter — first, to protect your heart. Proverbs 4:23 says 'Above all else, guard your heart.' Jeremiah 17:9 says 'The heart is deceitful.' Therefore do not trust your feelings, your intentions, or your 'I won't go that far' mindset.",
+      "scripture_refs": ["Prov 4:23", "Jer 17:9"],
+      "themes": ["guarding the heart", "depravity of the heart", "biblical boundaries"],
+      "claims": [
+        "Boundaries matter because they protect the heart, which Scripture commands us to guard above all else.",
+        "Because the heart is deceitful, a man must not trust his feelings, his intentions, or a self-confident 'I won't go that far' mindset."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_04",
+      "type": "teaching",
+      "content": "Boundaries also protect others and protect your testimony. Titus 1:7 (ESV): 'For an overseer, as God's steward, must be above reproach — not self-willed, not quick-tempered, not given to drunkenness, not violent, not fond of sordid gain.' 1 Timothy 4:12 (ESV): 'Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity.'",
+      "scripture_refs": ["Titus 1:7", "1Tim 4:12"],
+      "themes": ["above reproach (overseer qualifications)", "Christian witness and testimony", "personal holiness"],
+      "claims": [
+        "Boundaries protect other people and one's own testimony.",
+        "An overseer as God's steward must be above reproach, not self-willed, quick-tempered, drunken, violent, or greedy.",
+        "Believers — including the young — are to set an example in speech, conduct, love, faith, and purity."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_05",
+      "type": "teaching",
+      "content": "Boundaries protect future and present marriages. Prioritize your spouse: if married, your spouse must be your top priority, and they should never feel competition from a friend.",
+      "scripture_refs": [],
+      "themes": ["marital fidelity", "biblical boundaries"],
+      "claims": [
+        "Boundaries protect both future and present marriages.",
+        "If married, the spouse must be the top priority and should never feel competition from any friend."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_06",
+      "type": "teaching",
+      "content": "Boundaries protect your thoughts — how you see people. 1 Timothy 5:1-2: 'Do not rebuke an older man harshly, but exhort him as if he were your father. Treat younger men as brothers, older women as mothers, and younger women as sisters, with absolute purity.' We care for those we are speaking to and do not want anyone to cross boundaries.",
+      "scripture_refs": ["1Tim 5:1-2"],
+      "themes": ["treating the opposite sex as family", "personal holiness", "biblical boundaries"],
+      "claims": [
+        "Boundaries protect a man's thoughts by shaping how he sees people.",
+        "Men are to treat older men as fathers, younger men as brothers, older women as mothers, and younger women as sisters, with absolute purity.",
+        "This teaching is given out of care, not to shame or induce guilt but to bring awareness."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_07",
+      "type": "teaching",
+      "content": "Physical boundaries. 1 Corinthians 7:1 (NKJV): 'Now concerning the things of which you wrote to me: It is good for a man not to touch a woman.' (NLT): 'Now regarding the questions you asked in your letter. Yes, it is good to abstain from sexual relations.' The Greek 'hap-tom-ahee' means to fasten oneself to, adhere to, cling to — covering touch, carnal intercourse with a woman or cohabitation, the Levitical practice of having no fellowship with heathen practices (so celibacy and abstinence from certain foods and drinks are recommended), and to assail anyone. Practical applications: avoid unnecessary touch; be wise with proximity; keep it simple — handshake over hug; avoid confusion or mixed signals if you think you are conveying it; you know when you touch with the wrong emotions; be aware of the setting — you represent the church even outside the church setting.",
+      "scripture_refs": ["1Cor 7:1"],
+      "themes": ["sexual purity", "biblical boundaries", "Christian witness and testimony"],
+      "claims": [
+        "Scripture teaches that it is good for a man not to touch a woman, and good to abstain from sexual relations.",
+        "The Greek term behind 'touch' means to fasten oneself to, adhere to, cling to — encompassing physical contact, sexual relations, cohabitation, and avoiding heathen entanglements.",
+        "Men should avoid unnecessary touch, be wise with proximity, prefer handshakes over hugs, and avoid mixed signals.",
+        "A man knows when he is touching with wrong emotions and must stop.",
+        "A believer represents the church even outside the church setting."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_08",
+      "type": "teaching",
+      "content": "Emotional boundaries. Do not build emotional intimacy with the opposite gender, especially through late-night calls or deep personal sharing.",
+      "scripture_refs": [],
+      "themes": ["avoiding emotional intimacy with the opposite sex", "biblical boundaries"],
+      "claims": [
+        "Men should not build emotional intimacy with the opposite gender.",
+        "Late-night calls and deep personal sharing are particular gateways to emotional intimacy and must be avoided."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_09",
+      "type": "teaching",
+      "content": "Digital boundaries. Private chats are a dangerous space. Emotional affairs often begin here. If you must communicate digitally, keep it clear, short, and purposeful.",
+      "scripture_refs": [],
+      "themes": ["digital purity", "biblical boundaries", "avoiding emotional intimacy with the opposite sex"],
+      "claims": [
+        "Private chats with the opposite sex are a dangerous space because emotional affairs often begin there.",
+        "Necessary digital communication with the opposite sex should be clear, short, and purposeful."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_10",
+      "type": "teaching",
+      "content": "Spiritual boundaries. Do not become the 'go-to spiritual support' for a woman — neither for counseling nor for advice — and do not step into ongoing personal counseling. Redirect wisely to someone of the same gender or to mature leaders.",
+      "scripture_refs": [],
+      "themes": ["redirecting pastoral care to same-gender mentors", "biblical boundaries", "spiritual leadership in the home"],
+      "claims": [
+        "A man should not become the primary spiritual support, counselor, or advisor for a woman.",
+        "Ongoing personal counseling of women by men is to be avoided.",
+        "Spiritual support for women should be redirected to same-gender helpers or mature leaders."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_11",
+      "type": "application",
+      "content": "Social boundaries — group settings over isolation. Avoid isolation: do not be alone with the opposite sex in rooms, cars, or private spaces. 'If you wouldn't do it publicly, don't do it privately.' Public over private. Bike rides between a man and a woman — if possible, avoid going together. Avoid traveling late back home, especially with girls. Behave in public spaces in an appropriate way during Bible studies and casual meets. Speak with older people in a respectful way. Dress appropriately in host homes, especially keeping in mind those of the opposite sex are present, and for meetings or Bible studies. Curfew: keep in mind especially on Saturday night that we have to get up for Sunday worship and be active for worship — prepare for the next day. Follow the curfew of the host home. We understand these are times we get to talk about life and what is happening. Host homes — good practices: be respectful of where you stay, aware of neighbors, observe bathroom etiquette, clear tables and help out.",
+      "scripture_refs": [],
+      "themes": ["biblical boundaries", "Christian witness and testimony", "personal holiness"],
+      "claims": [
+        "Group settings are preferable to isolation with the opposite sex.",
+        "Men should not be alone with women in rooms, cars, or private spaces.",
+        "If you would not do something publicly, you should not do it privately.",
+        "Bike rides between a man and a woman alone should be avoided where possible.",
+        "Late-night travel with the opposite sex, especially with women, should be avoided.",
+        "Conduct in public, dress in host homes, respect for elders, and curfew are part of social boundary-keeping.",
+        "Sunday worship readiness governs Saturday night curfews.",
+        "Guests in host homes should be respectful, aware of neighbors, and helpful with bathroom etiquette and clearing tables."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_12",
+      "type": "application",
+      "content": "If married: your wife comes first; no competition; full transparency.",
+      "scripture_refs": [],
+      "themes": ["marital fidelity", "biblical boundaries"],
+      "claims": [
+        "For a married man, his wife comes first.",
+        "There must be no competition with the wife from any other relationship.",
+        "Full transparency with the wife is required."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_13",
+      "type": "application",
+      "content": "Motivation check. Ask honestly: Why am I doing this? What do I enjoy about this interaction? Would I do this if others were watching?",
+      "scripture_refs": [],
+      "themes": ["guarding the heart", "personal holiness", "biblical boundaries"],
+      "claims": [
+        "Boundary-keeping requires honest self-examination of motives.",
+        "Three diagnostic questions: Why am I doing this? What do I enjoy about this interaction? Would I do this if others were watching?"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_14",
+      "type": "application",
+      "content": "Community and accountability. 'You cannot keep boundaries alone.' Be known by other men, share struggles, and invite correction — call out one another.",
+      "scripture_refs": [],
+      "themes": ["accountability and community", "biblical boundaries"],
+      "claims": [
+        "Boundaries cannot be kept alone — community and accountability are necessary.",
+        "Men are to be known by other men, share their struggles, and invite mutual correction."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_15",
+      "type": "definition",
+      "content": "Boundaries are principles, with the opposite gender, not to walk on but to walk within. Kinds of boundaries with the opposite sex include emotional, physical, spiritual (men are called to be spiritual leaders, especially in their homes), and social.",
+      "scripture_refs": [],
+      "themes": ["biblical boundaries", "spiritual leadership in the home"],
+      "claims": [
+        "Boundaries are principles to be walked within, not walked on.",
+        "Boundaries with the opposite sex are categorized as emotional, physical, spiritual, and social.",
+        "Men are called to be spiritual leaders, especially in their homes."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_16",
+      "type": "teaching",
+      "content": "Boundaries are for me and for other persons — it is both. They are kept out of love for the other person. God calls us to live for and care for one another; thinking about others changes your behavior.",
+      "scripture_refs": [],
+      "themes": ["biblical boundaries", "Christian witness and testimony"],
+      "claims": [
+        "Boundaries serve both the self and others.",
+        "Keeping boundaries is an act of love for the other person.",
+        "God's call to live for and care for one another should reshape behavior toward others."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_17",
+      "type": "teaching",
+      "content": "Where do we get our boundaries from? From how we were raised; from books and influences; from times when we crossed a boundary and realized we needed it; and chiefly from the Bible — what would Jesus do? Ephesians 5:1-2, 15-17 — follow God, imitate Him, walk in love as Christ, be wise, be careful. Be holy for He is holy. Jeremiah 17:9-10 — the heart is deceitful, desperately wicked; you should not just follow your heart because you feel like it. Proverbs 4:20-23 — protect our hearts diligently. 1 Corinthians 11:3 — God has designed a certain way; there is a reason; there is an order. Older men or women are to teach those of the same gender.",
+      "scripture_refs": ["Eph 5:1-2,15-17", "Jer 17:9-10", "Prov 4:20-23", "1Cor 11:3"],
+      "themes": [
+        "biblical boundaries",
+        "imitating Christ",
+        "personal holiness",
+        "depravity of the heart",
+        "guarding the heart",
+        "headship and order",
+        "redirecting pastoral care to same-gender mentors"
+      ],
+      "claims": [
+        "Boundaries come from upbringing, books and influences, lived failure, and supremely from Scripture.",
+        "Believers are called to imitate God and walk in love as Christ did.",
+        "Believers are to be holy because God is holy.",
+        "The heart is deceitful and desperately wicked, so feelings are not a sufficient guide.",
+        "We are commanded to protect our hearts diligently.",
+        "God has designed an order in male-female relationships, and there is a reason for it.",
+        "Older men should teach men and older women should teach women — same-gender discipleship."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["boundaries_03", "boundaries_10"]
+    },
+    {
+      "chunk_id": "boundaries_18",
+      "type": "application",
+      "content": "Practical questions and applications: What are some things we should avoid? What is your motivation in all that you do? Practical ways to keep boundaries — never be alone with a girl in a room or a car; complimenting and not telling anything bad about people or teasing, especially toward the opposite gender or to anyone; chatting with people on the phone and building an emotional connect; if you are doing something you would not do in public, you should not do it; talking to girls is powerful for them, so do not grab intimacy; physical touch — be careful with that too; advice giving — divert to another person of the same sex, preferably an older person, biblically grounded; the boundaries you have might be fine for you but think of the boundaries of that group and the boundaries set by your social system.",
+      "scripture_refs": [],
+      "themes": [
+        "biblical boundaries",
+        "avoiding emotional intimacy with the opposite sex",
+        "redirecting pastoral care to same-gender mentors",
+        "Christian witness and testimony",
+        "sexual purity"
+      ],
+      "claims": [
+        "A man should never be alone with a woman in a room or a car.",
+        "Teasing or speaking badly about people, especially the opposite gender, is to be avoided.",
+        "Phone chatting can build an emotional connection that crosses boundaries.",
+        "If you would not do something in public, you should not do it in private.",
+        "Words spoken to women carry weight for them; men should not 'grab intimacy' through speech.",
+        "Physical touch must be handled with care.",
+        "Advice-giving to the opposite sex should be diverted to a same-gender, preferably older and biblically grounded, person.",
+        "Personal boundary-keeping must take into account the boundaries of the group and social system one is in."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["boundaries_07", "boundaries_08", "boundaries_10"]
+    },
+    {
+      "chunk_id": "boundaries_19",
+      "type": "teaching",
+      "content": "On leadership — in some cultures, men come to church thinking that they will have to lead or start a church. 1 Timothy 3:1: if you desire to lead in the church, it is an honourable task — a good thing. Think about leading in the church in some way. If you do not yet fit, work towards it.",
+      "scripture_refs": ["1Tim 3:1"],
+      "themes": ["spiritual leadership in the home", "above reproach (overseer qualifications)"],
+      "claims": [
+        "In some cultural settings, men come to church assuming they will have to lead or plant a church.",
+        "Desiring leadership in the church is honourable — a good thing.",
+        "Men should think about leading in the church in some capacity.",
+        "If a man does not yet meet the qualifications, he should work towards them."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "boundaries_20",
+      "type": "teaching",
+      "content": "Boundaries for leaders and non-leaders sometimes seem different, but most boundaries are relational. 1 Peter 2:9 — believers are royal, grand, not common; this is not based on our skills, but God has made us this. We do not walk in arrogance but in confidence. God has called me for this and I work towards it. Proverbs 4:20-27 — diligence, a showing of dedication. We are called to be deliberate and to keep our heart in the right place. The Bible says so. We are called to guard our heart.",
+      "scripture_refs": ["1Pet 2:9", "Prov 4:20-27"],
+      "themes": [
+        "royal priesthood identity",
+        "guarding the heart",
+        "diligence in obedience",
+        "biblical boundaries",
+        "above reproach (overseer qualifications)"
+      ],
+      "claims": [
+        "Most boundaries — for leaders and non-leaders alike — are relational in nature.",
+        "Believers are a royal priesthood, made so by God, not by their own skills.",
+        "Confidence in identity is appropriate; arrogance is not.",
+        "Calling from God is to be received and worked towards.",
+        "Diligence is the showing of dedication required for boundary-keeping.",
+        "Believers are commanded by Scripture to be deliberate and to guard the heart."
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["boundaries_03", "boundaries_19"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "Boundaries talk with the guys\n\nBoundaries for Men with the opposite sex\n\n21st March 26 — men's meeting\n\nEstablishing healthy boundaries with the opposite sex in a Christian church involves creating safeguards that honor God, protect marriages, and maintain personal purity. The goal is set clear physical, emotional, and digital limits.\n\nDefining\n- 'When we hear the word boundaries, many think restriction. But biblical boundaries are not fences to trap us… They are guardrails to protect what God has entrusted to us.'\n- 'Boundaries define us. They define what is me, and what is not me. A boundary shows me where I end, and where someone else begins, leading me to a sense of ownership. Know what I am to own and take responsibility for, gives me Freedom.' Henry Cloud\n\nDefine Boundaries:\n- Not something we walk on\n- Something we walk within\n\nWhy boundaries matter:\n- Protect your heart\n  - Proverbs 4:23 'Above all else, guard your heart…'\n  - Jeremiah 17:9 'The heart is deceitful…'\n    - Don't trust: your feelings; your intentions; your 'I won't go that far' mindset\n- Protect others\n- Protect your testimony\n  - Titus 1:7 (ESV): 'For an overseer, as God's steward, must be above reproach—not self-willed, not quick-tempered, not given to drunkenness, not violent, not fond of sordid gain.'\n  - 1 Timothy 4:12 (ESV): 'Let no one despise you for your youth, but set the believers an example in speech, in conduct, in love, in faith, in purity.'\n- Protect future and present marriages\n  - Prioritize Your Spouse: If married, your spouse must be your top priority, and they should never feel competition from a friend.\n- Protect your thoughts\n  - How you see people?\n  - 1 Timothy 5:1-2 — Do not rebuke an older man harshly, but exhort him as if he were your father. Treat younger men as brothers, older women as mothers, and younger women as sisters, with absolute purity.\n- We care for them and that we don't want any of you to cross boundaries.\n\nThis is not\n- To shame or make any one feel guilty but to bring to awareness.\n\nTYPES OF BOUNDARIES (5 mins)\n\n1. Physical Boundaries\n- 1 Cor. 7:1 — Now concerning the things of which you wrote to me: It is good for a man not to touch a woman. (NKJV)\n- Now regarding the questions you asked in your letter. Yes, it is good to abstain from sexual relations. NLT\n- Hap'-tom-ahee — to fasten one's self to, adhere to, cling to\n  - to touch\n  - of carnal intercourse with a woman or cohabitation\n  - of levitical practice of having no fellowship with heathen practices. Things not to be touched appear to be both women and certain kinds of food, so celibacy and abstinence of certain kinds of food and drink are recommended.\n  - to touch, assail anyone\n- Avoid unnecessary touch\n- Be wise with proximity\n- Keep it simple: Handshake > hug\n- Avoid confusion or mixed signals if you think you are conveying it\n  - You know when you touch with the wrong emotions.\n- Being aware of the setting. You represent the church even when outside church setting.\n\n2. Emotional Boundaries\n- Don't build emotional intimacy with the opposite gender\n- Especially through: Late-night calls; Deep personal sharing\n\n3. Digital Boundaries\n- Private chats → dangerous space\n- Emotional affairs often begin here\n- If then Keep it: Clear; Short; Purposeful\n\n4. Spiritual Boundaries\n- Don't become the 'go-to spiritual support' for a woman — Counseling / Advice; Don't step into ongoing personal counseling\n- Redirect wisely: Same gender; Mature leaders\n\n5. Social Boundaries\n- Group settings over isolation\n  - Avoid isolation\n  - No being alone in: Rooms; Cars; Private spaces; 'If you wouldn't do it publicly, don't do it privately.'; Public over private\n  - Bike — M & W — if possible avoid going together\n  - Traveling late back home especially girls\n- Behaving in Public spaces in an appropriate way during Bible studies, casual meets.\n- Speaking with older people in a respectful way\n- Dressing\n  - Appropriate dressing in the host homes especially keeping in mind there are those of the opposite sex.\n  - For meeting/Bible studies.\n- Curfew\n  - Keeping in mind especially on sat night that we have to get up for sunday worship and be active for worship — Preparing for the next day.\n  - Following the curfew of the host home\n  - We understand these are times we get to talk about life and what is happening\n- Host homes — Good practices\n  - Respectful of where you stay\n  - Aware of neighbour.\n  - Bathroom etiquette\n  - Clearing tables and helping out\n\n6. If Married:\n- Your wife comes first\n- No competition\n- Full transparency\n\n6. MOTIVATION CHECK (3–4 mins)\nAsk honestly:\n- Why am I doing this?\n- What do I enjoy about this interaction?\n- Would I do this if others were watching?\n\n8. COMMUNITY & ACCOUNTABILITY (2 mins)\n'You cannot keep boundaries alone.'\n- Be known by other men\n- Share struggles\n- Invite correction and call out each other\n\n— — — — —\n\nBoundaries talk with the guys (23 Nov, 23 — host home — men's meeting)\n\nBoundaries — Principles, with the opposite gender, not to walk on but walk within.\n\nKinds of boundaries\n- Opposite sex: Emotional; Physical; Spiritual (Called to be spiritual leaders. At homes.); Social\n\nBoundaries are for me and other persons.\n- It's both. It's out of love for the other person.\n- God's call for us to live and care for one another. Thinking about others you change your behavior.\n\nWhere we get our boundaries from?\n- How we were raised?\n- Books and influences.\n- When we crossed a boundary and realized we need that boundaries.\n- Bible.. What would Jesus does.\n  - Eph. 5:1-2, 15-17 — Follow God. Imitate Him. Walk in love — As Christ. Be wise. We have to be careful.\n  - Being holy for He is holy.\n  - Jer 17:9-10 — Heart is deceitful, desperately wicked. You shouldn't just follow your heart, just because you feel like it.\n  - Proverbs 4:20-23 — Protect our hearts. Diligently.\n  - 1 Cor. 11:3 — God has designed a certain way..there is a reason. There is an order.\n  - Older man or women to teach to the same gender.\n\nWhat are some things we should avoid.\nWhat's your motivation in all that you do ?\nPractical what are some ways we can keep boundaries\n- Don't ever be alone with a girl in a room, car.\n- Complementing and not telling anything bad about people or teasing especially the opposite gender and to anyone.\n- Chatting with people on the phone. Building an emotional connect.\n- If you are doing something which you will not do in public you shouldn't do it.\n- Talking to girls is powerful for them. So don't grab intimacy.\n- Physical touch — be careful with that too.\n- Advice giving — Divert to another person of the same sex. Older person preferably. Biblical.\n- Boundaries that you have might be fine for you but think of the boundaries of that group and the boundaries that are set by your social system.\n\n— — — — —\n\n16 Feb, 25 — men's meeting — Boundaries talk\n\nIn Africa men came to church thinking that I will have to lead or start a church.\n\n1 Tim. 3:1\n- If you desire to lead in the church it is an honourable task. Good thing.\n- Think about leading in the church. So some way.\n- If you don't fit then work towards it.\n\nBoundaries\n- Some times as leaders and non leaders seems like is different\n- What are some boundaries we have had?  General.\n- Most boundaries are relational.\n- 1 Peter 2:9 — Royal — Grand — Not common. It is not based on our skills. But He has made us this. We don't walk in arogance but in confidence.\n  - God has called me for this and I work towards it.\n- Pro. 4:20-27 — Diligence — showing of dedication. We are called to be deliebent and keep our heart in the right place. The Bible says so. We are called to guard our heart.",
+
+  "parsing_notes": "Document is a multi-session compilation of three men's-meeting outlines on the same topic of boundaries with the opposite sex. Original notes contained personal proper names of attendees and one apparent speaker tag for one session, plus a host-home reference and the organization name; all such names and the organization identifier have been stripped from every field per anonymization protocol. Initials prefixes were not present in this document. Three meeting dates appear in the source: 21 March 2026, 23 November 2023, and 16 February 2025; the first (most fully developed) was used for estimated_date in session_metadata. The document is structured outline notes (bullet points, fragments) rather than continuous prose, so some chunks paraphrase/condense slightly while preserving every distinct claim. Two minor source-text typos were preserved in the raw_extracted_text only ('arogance', 'deliebent'). Section numbering in the source is irregular (jumps from 5 to 6, then to 6 again, then 8); the structure has been preserved semantically. The document does not present competing theological perspectives — it is a single coherent teaching reinforced across three sessions, so presents_multiple_perspectives is false. Text extraction is high confidence; the PDF is a clean digital export with full readability. Flags: anonymization_applied; multi_session_compilation; outline_format.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "n/a"
+  }
+}

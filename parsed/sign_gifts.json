@@ -1,0 +1,310 @@
+{
+  "doc_slug": "sign_gifts",
+  "source_type": "pdf",
+  "source_mtime": "2026-05-10T00:26:23+01:00",
+  "ingested_at": "2026-05-10T00:00:00Z",
+  "ingester_model": "claude-opus-4-7",
+  "authority_level": 4,
+
+  "session_metadata": {
+    "title": "On Sign Gifts",
+    "estimated_date": null,
+    "session_topic": "Cessationism vs continuationism regarding the sign gifts of the Spirit (tongues, prophecy, healing, miracles), with arguments for both positions and a personal bridging perspective",
+    "topic_clusters": ["Pneumatology", "Ecclesiology", "Hermeneutics", "Spiritual Gifts"],
+    "presents_multiple_perspectives": true
+  },
+
+  "scripture_refs": [
+    {"raw": "1 Cor 13:8", "book": "1 Corinthians", "chapter": 13, "verse_start": 8, "verse_end": null, "normalized": "1Cor 13:8"},
+    {"raw": "Matt 12:39-41", "book": "Matthew", "chapter": 12, "verse_start": 39, "verse_end": 41, "normalized": "Matt 12:39-41"},
+    {"raw": "1 Cor 1:7", "book": "1 Corinthians", "chapter": 1, "verse_start": 7, "verse_end": null, "normalized": "1Cor 1:7"},
+    {"raw": "1 Cor 14:24-25", "book": "1 Corinthians", "chapter": 14, "verse_start": 24, "verse_end": 25, "normalized": "1Cor 14:24-25"},
+    {"raw": "1 Cor 1:6-8", "book": "1 Corinthians", "chapter": 1, "verse_start": 6, "verse_end": 8, "normalized": "1Cor 1:6-8"},
+    {"raw": "1 Cor 14:37", "book": "1 Corinthians", "chapter": 14, "verse_start": 37, "verse_end": null, "normalized": "1Cor 14:37"},
+    {"raw": "Acts 2:11", "book": "Acts", "chapter": 2, "verse_start": 11, "verse_end": null, "normalized": "Acts 2:11"},
+    {"raw": "1 Cor 14:14-18", "book": "1 Corinthians", "chapter": 14, "verse_start": 14, "verse_end": 18, "normalized": "1Cor 14:14-18"},
+    {"raw": "1 Cor 14:28", "book": "1 Corinthians", "chapter": 14, "verse_start": 28, "verse_end": null, "normalized": "1Cor 14:28"},
+    {"raw": "1 Cor 14:2", "book": "1 Corinthians", "chapter": 14, "verse_start": 2, "verse_end": null, "normalized": "1Cor 14:2"},
+    {"raw": "1 Cor 14:4", "book": "1 Corinthians", "chapter": 14, "verse_start": 4, "verse_end": null, "normalized": "1Cor 14:4"},
+    {"raw": "1 Cor 14:14-15", "book": "1 Corinthians", "chapter": 14, "verse_start": 14, "verse_end": 15, "normalized": "1Cor 14:14-15"},
+    {"raw": "1 Cor 14:18", "book": "1 Corinthians", "chapter": 14, "verse_start": 18, "verse_end": null, "normalized": "1Cor 14:18"},
+    {"raw": "1 Thess 5:18-21", "book": "1 Thessalonians", "chapter": 5, "verse_start": 18, "verse_end": 21, "normalized": "1Thess 5:18-21"},
+    {"raw": "Acts 21", "book": "Acts", "chapter": 21, "verse_start": null, "verse_end": null, "normalized": "Acts 21"},
+    {"raw": "1 Cor 12-14", "book": "1 Corinthians", "chapter": 12, "verse_start": null, "verse_end": null, "normalized": "1Cor 12-14"},
+    {"raw": "1 Cor 12:31", "book": "1 Corinthians", "chapter": 12, "verse_start": 31, "verse_end": null, "normalized": "1Cor 12:31"},
+    {"raw": "John 7:38-39", "book": "John", "chapter": 7, "verse_start": 38, "verse_end": 39, "normalized": "John 7:38-39"},
+    {"raw": "1 Jn 2:27", "book": "1 John", "chapter": 2, "verse_start": 27, "verse_end": null, "normalized": "1John 2:27"},
+    {"raw": "1 Jn 3:24", "book": "1 John", "chapter": 3, "verse_start": 24, "verse_end": null, "normalized": "1John 3:24"},
+    {"raw": "2 Cor 12:1", "book": "2 Corinthians", "chapter": 12, "verse_start": 1, "verse_end": null, "normalized": "2Cor 12:1"},
+    {"raw": "2 Cor 12:7", "book": "2 Corinthians", "chapter": 12, "verse_start": 7, "verse_end": null, "normalized": "2Cor 12:7"},
+    {"raw": "Gal 3:2", "book": "Galatians", "chapter": 3, "verse_start": 2, "verse_end": null, "normalized": "Gal 3:2"},
+    {"raw": "Gal 3:3", "book": "Galatians", "chapter": 3, "verse_start": 3, "verse_end": null, "normalized": "Gal 3:3"},
+    {"raw": "Gal 3:5", "book": "Galatians", "chapter": 3, "verse_start": 5, "verse_end": null, "normalized": "Gal 3:5"},
+    {"raw": "Gal 5:16", "book": "Galatians", "chapter": 5, "verse_start": 16, "verse_end": null, "normalized": "Gal 5:16"},
+    {"raw": "Gal 5:17", "book": "Galatians", "chapter": 5, "verse_start": 17, "verse_end": null, "normalized": "Gal 5:17"},
+    {"raw": "Gal 5:18", "book": "Galatians", "chapter": 5, "verse_start": 18, "verse_end": null, "normalized": "Gal 5:18"},
+    {"raw": "Gal 6:8", "book": "Galatians", "chapter": 6, "verse_start": 8, "verse_end": null, "normalized": "Gal 6:8"},
+    {"raw": "Eph 1:13", "book": "Ephesians", "chapter": 1, "verse_start": 13, "verse_end": null, "normalized": "Eph 1:13"},
+    {"raw": "Eph 1:17", "book": "Ephesians", "chapter": 1, "verse_start": 17, "verse_end": null, "normalized": "Eph 1:17"},
+    {"raw": "Eph 2:22", "book": "Ephesians", "chapter": 2, "verse_start": 22, "verse_end": null, "normalized": "Eph 2:22"},
+    {"raw": "Eph 3:16-21", "book": "Ephesians", "chapter": 3, "verse_start": 16, "verse_end": 21, "normalized": "Eph 3:16-21"},
+    {"raw": "Eph 4:30", "book": "Ephesians", "chapter": 4, "verse_start": 30, "verse_end": null, "normalized": "Eph 4:30"},
+    {"raw": "Eph 5:18", "book": "Ephesians", "chapter": 5, "verse_start": 18, "verse_end": null, "normalized": "Eph 5:18"},
+    {"raw": "Eph 6:10-18", "book": "Ephesians", "chapter": 6, "verse_start": 10, "verse_end": 18, "normalized": "Eph 6:10-18"},
+    {"raw": "Luke 3:16", "book": "Luke", "chapter": 3, "verse_start": 16, "verse_end": null, "normalized": "Luke 3:16"},
+    {"raw": "Mar 1:8", "book": "Mark", "chapter": 1, "verse_start": 8, "verse_end": null, "normalized": "Mark 1:8"},
+    {"raw": "Rom 8:1,14", "book": "Romans", "chapter": 8, "verse_start": 1, "verse_end": null, "normalized": "Rom 8:1,14"}
+  ],
+
+  "theological_themes": [
+    "cessationism",
+    "continuationism",
+    "sign gifts",
+    "tongues",
+    "prophecy",
+    "healing",
+    "miracles",
+    "completion of the canon",
+    "prayer language",
+    "indwelling of the Holy Spirit",
+    "sealing of the Spirit",
+    "filling of the Spirit",
+    "edification of the church",
+    "peripheral vs gospel-essential doctrine",
+    "extra-biblical revelation",
+    "spiritual discernment",
+    "faith and the power of faith",
+    "unity across denominations",
+    "reaction theology",
+    "baptism in the Holy Spirit"
+  ],
+
+  "chunks": [
+    {
+      "chunk_id": "sign_gifts_01",
+      "type": "teaching",
+      "content": "The question of sign gifts is a peripheral theology, not a Gospel issue. Those who practice these gifts in their church would still be considered brothers and sisters in Christ.",
+      "scripture_refs": [],
+      "themes": ["peripheral vs gospel-essential doctrine", "sign gifts"],
+      "claims": [
+        "The cessationism/continuationism debate is peripheral, not gospel-essential",
+        "Practitioners of sign gifts remain in Christian fellowship as brothers and sisters in Christ"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sign_gifts_02",
+      "type": "perspective",
+      "content": "Reasons for cessation: (1) Completion of the scriptural Canon — does not stand alone but combined with maturity of the Church provides a solid case for cessation (1 Cor 13:8). (2) Continuation of sign gifts leaves the door dangerously open for extra-biblical knowledge. (3) There is no need for multi-language gifts for proclaiming the Gospel anymore except in rare exceptional cases. (4) If the gifts were genuinely operative they would be more consistently found across denominations and mission fields. (5) If tongues were consistent with the early-church gift, organizations like New Tribes / Wycliffe would not still need to exist. (6) There are no genuine documented cases of valid practice of the gift with an interpreter. (7) There is no evidence in Scripture of privately practicing tongues as a prayer language. (8) 'Prayer tongue' is a coined term based on verses saying 'pray in a tongue or sing in a tongue' and 1 Cor 13 which refers to the tongues of men and angels. (9) Tongues is not encouraged and Paul's tone is hyperbole. (10) Everyone agrees the sign gifts will cease — the question is 'when'. (11) The 'need' for tongues was pertaining to dispersion of the 'Hebrew' Gospel to the 'World'. (12) Miracles continue but practice as 'gifts' is what has ceased. (13) 'Healers' have ceased. (14) Jesus says in Matt 12:39-41 that signs will not be given.",
+      "scripture_refs": ["1Cor 13:8", "Matt 12:39-41"],
+      "themes": ["cessationism", "completion of the canon", "tongues", "prayer language", "sign gifts", "extra-biblical revelation"],
+      "claims": [
+        "Completion of the canon plus maturity of the Church together make a solid case for cessation",
+        "Continuation of sign gifts leaves the door open for extra-biblical knowledge",
+        "Multi-language tongues are no longer needed for Gospel proclamation",
+        "Genuine sign gifts would be consistently distributed across denominations and mission fields if real",
+        "The persistence of mission-translation organizations argues against current operation of tongues",
+        "There are no documented genuine cases of tongues with interpreter today",
+        "Scripture provides no evidence of privately practiced tongues as a prayer language",
+        "'Prayer tongue' is a constructed term not present in Scripture",
+        "Paul's tone regarding tongues is hyperbole and not encouragement",
+        "All parties agree sign gifts will cease — only the timing is disputed",
+        "Tongues' purpose was tied to the dispersion of the Hebrew Gospel to the world",
+        "Miracles continue but the formal 'gift' of miracles has ceased",
+        "The gift of healing as a personal endowment has ceased",
+        "Matt 12:39-41 supports that signs will not be given"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_05"]
+    },
+    {
+      "chunk_id": "sign_gifts_03",
+      "type": "claim",
+      "content": "A consistent cessationist position would not require 'tongues' as proof of salvation.",
+      "scripture_refs": [],
+      "themes": ["cessationism", "tongues", "soteriology"],
+      "claims": [
+        "Salvation does not require evidence of tongues"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_02"]
+    },
+    {
+      "chunk_id": "sign_gifts_04",
+      "type": "question",
+      "content": "Find examples of churches that are practicing the sign gifts well — there are none.",
+      "scripture_refs": [],
+      "themes": ["cessationism", "sign gifts", "ecclesiology"],
+      "claims": [
+        "No contemporary church can be cited as practicing sign gifts well"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sign_gifts_05",
+      "type": "perspective",
+      "content": "Reasons for continuation: (1) The interpretation of the biblical passages is not explicit on cessation. (2) 1 Cor 1:7 suggests a context of waiting for Christ's return as opposed to the cessationist reference to the 'Bible'. (3) Though they should never be the end goal for validation, the scope for signs still exists (1 Cor 14:24-25) and gifts were a part of the confirmation of Christ among them (1 Cor 1:6-8). (4) Early-church practice included the practice of prophetic words that were supposed to be judged by all (except women), and even Philip's daughters were known as prophets. (5) If the point was connected to Canon of scripture, it does not seem like Philip's daughters' prophesies or other prophesies by Agabus were documented or even included in scripture. (6) Paul distinguishes these gifts and prophesies from 'scripture' in 1 Cor 14:37 in which he clarifies that the prophets among them must recognize that Paul's words are the commands of God.",
+      "scripture_refs": ["1Cor 1:7", "1Cor 14:24-25", "1Cor 1:6-8", "1Cor 14:37"],
+      "themes": ["continuationism", "completion of the canon", "prophecy", "sign gifts", "extra-biblical revelation"],
+      "claims": [
+        "Scripture does not explicitly teach cessation",
+        "1 Cor 1:7 frames the waiting context as Christ's return, not the closing of the canon",
+        "Sign gifts still serve as scope for confirmation though not as validation goals",
+        "1 Cor 14:24-25 and 1 Cor 1:6-8 show continued legitimate function of signs",
+        "Early-church prophecy (including Philip's daughters and Agabus) was practiced and judged communally",
+        "Apostolic-era prophecies were not all preserved in canon, weakening the canon-equivalence argument for cessation",
+        "1 Cor 14:37 distinguishes prophetic gifts from scripture itself, as Paul claims unique apostolic authority"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_02"]
+    },
+    {
+      "chunk_id": "sign_gifts_06",
+      "type": "teaching",
+      "content": "Scripture at face value indicates prayer in tongues without interpretation to be a personal matter. Tongues was never meant to be spoken as exhortation or instruction to someone else; it was always directed to God as praise or prayer, and those around heard what the individual was saying to God and were encouraged by it (see Acts 2:11, 1 Cor 14:14-18, 1 Cor 14:28). Tongues without interpretation as a prayer tongue through the Spirit is indicated by the following: 1 Cor 14:2; 1 Cor 14:4; 1 Cor 14:14-15; 1 Cor 14:18; 1 Cor 14:28.",
+      "scripture_refs": ["Acts 2:11", "1Cor 14:14-18", "1Cor 14:28", "1Cor 14:2", "1Cor 14:4", "1Cor 14:14-15", "1Cor 14:18"],
+      "themes": ["tongues", "prayer language", "continuationism"],
+      "claims": [
+        "Prayer in tongues without interpretation is a personal matter when read at face value",
+        "Tongues was always directed Godward — as praise or prayer — never as exhortation or instruction to others",
+        "Hearers of tongues were encouraged by overhearing the worshipper's address to God",
+        "Acts 2:11, 1 Cor 14:14-18, and 1 Cor 14:28 support the Godward direction of tongues",
+        "1 Cor 14:2,4,14-15,18,28 collectively support uninterpreted tongues as Spirit-enabled prayer"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_05"]
+    },
+    {
+      "chunk_id": "sign_gifts_07",
+      "type": "other",
+      "content": "Other references to consider on the question of sign gifts: 1 Thess 5:18-21; Acts 21; 1 Cor 12-14; 1 Cor 1:7.",
+      "scripture_refs": ["1Thess 5:18-21", "Acts 21", "1Cor 12-14", "1Cor 1:7"],
+      "themes": ["sign gifts", "continuationism", "prophecy"],
+      "claims": [],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sign_gifts_08",
+      "type": "claim",
+      "content": "Bare-text justifications for continuation: 'The Bible says so'; 1 Cor 12:31 ('earnestly desire the higher gifts'). Interesting observation to consider for those who say there is not enough scripture to support the sign gifts: count explicit references to the gifts compared with explicit references for cessation. Don't throw the baby out with the bath water on both extremes.",
+      "scripture_refs": ["1Cor 12:31"],
+      "themes": ["continuationism", "sign gifts", "hermeneutics"],
+      "claims": [
+        "Scripture itself instructs believers to earnestly desire the higher gifts (1 Cor 12:31)",
+        "Explicit scriptural references in favor of the gifts outnumber explicit references arguing for cessation",
+        "Both cessationist and continuationist extremes risk discarding what is genuinely biblical"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sign_gifts_09",
+      "type": "question",
+      "content": "Questions for a cessationist: (1) Since it refers to the gifts being given by the Spirit as He wills, how can you confidently say someone who receives the gift did not receive it through the Holy Spirit if it is in line with the teaching of scripture and is motivated by love for the edification of the church? (2) If the Canon-of-scripture argument doesn't stand, what other logic / theology / verses can be used for cessationism? (3) When Paul is speaking in 'hyperbole' in other parts, he seems to make it very clear — why would he be so subtle here? (4) Are there scriptural examples of every other gift of the Spirit being practiced in the New Testament? (5) What motivates your disagreement with continuationism? (6) What is the role of the Holy Spirit in scripture and what is His role today?",
+      "scripture_refs": [],
+      "themes": ["cessationism", "continuationism", "hermeneutics", "sign gifts"],
+      "claims": [
+        "Sovereign distribution of gifts by the Spirit makes confident denial of authentic contemporary gifting hard to defend",
+        "If the canon argument fails there is no clear alternative scriptural basis for cessationism",
+        "Paul's hyperbole elsewhere is overt; treating his tongues language as subtle hyperbole is inconsistent",
+        "Cessationist motivation deserves examination beyond the proof texts",
+        "The Holy Spirit's biblical role and present-day role need a coherent account from any cessationist position"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_02"]
+    },
+    {
+      "chunk_id": "sign_gifts_10",
+      "type": "perspective",
+      "content": "Personal point of view (a bridging position): There is a fundamental difference in perspective between cessationists and continuationists, but encouragement can come from both points of view; the dream is to find a way to bridge the divide since scripture does not explicitly describe cessation. Paul's points about unity and love can be applied between denominational divides, and holding an openness to the gifts helps reduce the divides — believers could be much more edifying to one another and more effective together, but churches and theologies create natural invisible walls. The expectation of God using the gifts is higher in this view than in a cessationist's, since a cessationist might even say God will not act that way. These interpretive issues create the kind of situation that the Pharisees found themselves in — Jesus was very clearly defying their expectations and they hated Him and completely missed what God was doing. There is also a personal passion for 'faith' and the 'power' of faith for a believer who has both the Word of God and the Spirit of God; the sign gifts are often aligned to the fueling of faith or the presence of faith. At face value, the essential point of the passage is an active and ongoing desire to surrender and submit to the Holy Spirit for the sake of the church being built up. If there is agreement that some sign gifts were intended to last until the present day, then only a 'deductive theological' conclusion would produce cessation. While deductive theological conclusions have value, in this context they may primarily reflect a 'reaction' to extreme charismatic movements (which is a trademark of assembly Theology).",
+      "scripture_refs": [],
+      "themes": ["continuationism", "unity across denominations", "faith and the power of faith", "reaction theology", "sign gifts", "edification of the church"],
+      "claims": [
+        "Both cessationist and continuationist positions can be sources of genuine encouragement",
+        "Scripture does not explicitly describe cessation, leaving room to bridge the divide",
+        "Pauline teaching on unity and love applies across denominational lines on this issue",
+        "Openness to the gifts reduces invisible walls between churches and increases mutual edification",
+        "Continuationist expectation of God's gift-activity is higher than the cessationist's",
+        "Cessationist interpretive posture risks repeating the Pharisees' error of missing what God is doing because it defies expectations",
+        "Faith is fueled by, and aligned with, the operation of the sign gifts when both Word and Spirit are present",
+        "The essential point of the relevant passages is ongoing surrender to the Spirit for the building up of the church",
+        "Cessation would only follow from a deductive theological conclusion, not from an explicit scriptural statement",
+        "Cessationist conclusions in this tradition function largely as a reaction to extreme charismatic movements"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_02", "sign_gifts_05"]
+    },
+    {
+      "chunk_id": "sign_gifts_11",
+      "type": "other",
+      "content": "Passages this bridging view helps interpret and apply: John 7:38-39; 1 Jn 2:27; 1 Jn 3:24; 2 Cor 12:1; 2 Cor 12:7; Gal 3:2; Gal 3:3; Gal 3:5; Gal 5:16; Gal 5:17; Gal 5:18; Gal 6:8; Eph 1:13; Eph 1:17; Eph 2:22; Eph 3:16-21; Eph 4:30; Eph 5:18; Eph 6:10-18; Luke 3:16; Mark 1:8; Rom 8:1,14.",
+      "scripture_refs": ["John 7:38-39", "1John 2:27", "1John 3:24", "2Cor 12:1", "2Cor 12:7", "Gal 3:2", "Gal 3:3", "Gal 3:5", "Gal 5:16", "Gal 5:17", "Gal 5:18", "Gal 6:8", "Eph 1:13", "Eph 1:17", "Eph 2:22", "Eph 3:16-21", "Eph 4:30", "Eph 5:18", "Eph 6:10-18", "Luke 3:16", "Mark 1:8", "Rom 8:1,14"],
+      "themes": ["indwelling of the Holy Spirit", "sealing of the Spirit", "filling of the Spirit", "baptism in the Holy Spirit", "continuationism"],
+      "claims": [
+        "These passages — covering walking in the Spirit, the indwelling and sealing of the Spirit, the Spirit's leading, and the baptism in the Spirit — are coherently interpreted under a continuationist/openness framework"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_10"]
+    },
+    {
+      "chunk_id": "sign_gifts_12",
+      "type": "other",
+      "content": "External theologians whose views on this subject are appreciated: Wayne Grudem, D.A. Carson, John Piper, Mike Winger, Matt Chandler. Three referenced YouTube videos are linked in the source.",
+      "scripture_refs": [],
+      "themes": ["sign gifts", "cessationism", "continuationism"],
+      "claims": [
+        "Wayne Grudem, D.A. Carson, John Piper, Mike Winger, and Matt Chandler are flagged as helpful external voices on the sign-gifts question"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": []
+    },
+    {
+      "chunk_id": "sign_gifts_13",
+      "type": "perspective",
+      "content": "Possible evidences cited for continuation, with caveats noted in the source: personal experience that is aligned with the interpretation of Scripture; testimony of salvation because of a 'word of knowledge' (objection/question raised: does that mean it supports the continued practice of such gifts?); testimonies of healing (objection raised: these occurrences do not prove continuationism — these cases are not valid points for the context of practice of the church).",
+      "scripture_refs": [],
+      "themes": ["continuationism", "sign gifts", "spiritual discernment"],
+      "claims": [
+        "Personal experience aligned with Scripture is a possible support for continuation",
+        "Reports of conversion through a 'word of knowledge' are cited as possible evidence",
+        "Healing testimonies are cited as possible evidence",
+        "Counterpoint: testimonies of healing do not by themselves prove continuationism",
+        "Counterpoint: such reports do not necessarily justify ongoing church practice of the gifts"
+      ],
+      "perspectives_within_chunk": [
+        {"marker": "perspective_a", "view": "Personal experience and testimonies (word of knowledge, healing) support the continued operation and practice of the sign gifts.", "reasoning": "Lived evidence consistent with scripture indicates the Spirit still works through these gifts."},
+        {"marker": "perspective_b", "view": "Personal testimonies do not prove continuationism and are not valid grounds for ongoing church practice of sign gifts.", "reasoning": "Anecdotal occurrences do not establish doctrine or normative church practice."}
+      ],
+      "cross_references": ["sign_gifts_05", "sign_gifts_10"]
+    },
+    {
+      "chunk_id": "sign_gifts_14",
+      "type": "perspective",
+      "content": "Feedback from the group: desiring gifts was for the church as a unit to pray that people with those gifts would be added to the church, since gifts are given at the point of salvation.",
+      "scripture_refs": [],
+      "themes": ["spiritual gifts", "ecclesiology", "edification of the church"],
+      "claims": [
+        "Earnestly desiring spiritual gifts is a corporate church activity, not an individual pursuit",
+        "The desire is fulfilled through God adding gifted people to the church",
+        "Spiritual gifts are bestowed at the point of salvation, not later acquired"
+      ],
+      "perspectives_within_chunk": [],
+      "cross_references": ["sign_gifts_08"]
+    }
+  ],
+
+  "embedded_assets": [],
+
+  "raw_extracted_text": "Is a peripheral theology? - Yes, not a \"Gospel\" issue, we would consider those who practice these gifts in their church as \"brothers and sisters in Christ\".\n\nReasons for cessation:\n- Completion of scriptural Canon (doesn't stand alone but combined with maturity of the \"Church\" provides a solid case for cessation) 1 Cor 13:8\n- It leaves the door dangerously open for extra Biblical knowledge\n- No need for multi language Gifts for proclaiming the Gospel anymore except in rare cases where there may be an exception to the rule\n- If it were real it would be more consistently found across denominations and mission fields\n- Why do places like new tribes / Wycliff still exist if the gift of tongues was consistent with what it was in the early church?\n- There aren't any genuine documented cases of valid practice of the gift with an interpreter etc\n- There is no evidence in Scripture of privately practicing tongues as a prayer language\n- \"Prayer tongue\" is a coined term based on verses saying \"pray in a tongue or sing in a tongue\" and 1 Cor 13 which refers to the tongues of men and angels\n- It is not encouraged and Paul's tone is hyperbole\n- Everyone agrees the sign gifts will cease but the question is \"when\"\n- \"Need\" was pertaining to dispersion of the \"Hebrew\" Gospel to the \"World\"\n- Miracles continue but practice as \"gifts\" is what has ceased\n- \"Healers\" have ceased\n- Jesus says in Matt 12:39-41 that signs will not be given\n\nWould not require \"tongues\" as proof of salvation.\nFind examples of churches that are practicing it well as there are none\n\nReasons for continuation:\n- The interpretation of the Biblical passages is not explicit on cessation\n- 1 Cor 1:7 suggests a context of waiting for Christ's return as opposed to the cessationist reference to the \"Bible\"\n- Though they should never be the end goal for validation, the scope for signs still exists (1 Cor 14:24-25) and gifts were a part of the confirmation of Christ among them 1 Cor 1:6-8\n- Early church practice included the practice of prophetic words that were supposed to be judged by all, except women, and even Phillips daughters were known as prophets\n- If the point was connected to Canon of scripture, it didn't seem like Philips daughter's prophesies or other prophesies by Agabus were documented or even included in scripture\n- Paul distinguishes these gifts and prophesies from \"scripture\" in 1 Cor 14:37 in which he clarifies that the prophets among them must recognize that Paul's words are the commands of God\n- Scripture at face value indicates prayer in tongues without interpretation to be a personal matter\n- Tongues was never meant to be spoken as exhortation or instruction to someone else, it was always directed to God as praise or prayer and those around heard what the individual was saying to God and were encouraged by it. See Acts 2:11, 1 Cor 14:14-18, 1 Cor 14:28\n- Tongues without interpretation as a prayer tongue through the Spirit indicated by the following: 1 Cor 14:2; 1 Cor 14:4; 1 Cor 14:14-15; 1 Cor 14:18; 1 Cor 14:28\n- Other References to consider: 1 Thess 5:18-21; Acts 21; 1 Cor 12-14; 1 Cor 1:7\n- The Bible says so\n- 1 Cor 12:31\n- Interesting observation to consider for those who say there is not enough scripture to support the sign gifts: count explicit references to the gifts compared with explicit references for cessation.\n- Don't throw the baby out with the bath water on both extremes\n\nQuestions for a cessationist:\n1. Since it refers to the gifts being given by the Spirit as He wills, how can you confidently say someone who receives the gift did not receive it through the Holy Spirit if it is in line with the teaching of the scripture and is motivated by love for the edification of the church?\n2. If the Canon of scripture argument doesn't stand, what other logic/ Theology/ verses can be used for cessationism?\n3. When Paul is speaking in \"hyperbole\" in other parts, he seems to make it very clear...why would he be so subtle here?\n4. Are there scriptural examples of every other gift of the Spirit being practiced in the new testament?\n5. What motivates your disagreement with continuationism?\n6. What is the role of the Holy Spirit in scripture and what is His role today?\n\nPersonal point of view:\n- From experience, there is a fundamental difference in perspective between the two groups and there has been encouragement from both points of view; the dream was always to find a way to bridge the divide since scripture does not explicitly describe cessation\n- All of Paul's points about unity and love could be applied between the divides of denominations and holding an openness to the gifts helps reduce the divides and in fact we could be so much more edifying to each other and more effective together but our churches and theologies create natural invisible walls\n- The expectation of God using the gifts is higher than a cessationist's since the cessationist might even say God won't act that way\n- In some ways these interpretive issues create the kind of situation that the Pharisees find themselves in where in their case Jesus was very clearly defying their \"expectations\" and they hated Him and completely missed what God was doing\n- There is also a personal passion for \"faith\" and the \"power\" of faith for a believer who has both the Word of God and the Spirit of God and the sign gifts are often aligned to the fueling of faith or the presence of faith\n- At face value, the essential point of the passage is an active and ongoing desire to surrender and submit to the Holy Spirit for the sake of the church being built up. If there is agreement that some were intended to last until current day still be active, then only a \"deductive theological\" conclusion would produce cessation. Though there is value in deductive theological conclusions, it doesn't sense it must apply in this context for any reason other than the result of a \"reaction\" to extreme charismatic movements (which is a trademark of assembly Theology).\n- This current view also helps interpret and apply passages like: John 7:38-39; 1 Jn 2:27; 1 Jn 3:24; 2 Cor 12:1; 2 Cor 12:7; Gal 3:2; Gal 3:3; Gal 3:5; Gal 5:16; Gal 5:17; Gal 5:18; Gal 6:8; Eph 1:13; Eph 1:17; Eph 2:22; Eph 3:16-21; Eph 4:30; Eph 5:18; Eph 6:10-18; Luke 3:16; Mar 1:8; Rom 8:1,14\n- Theologians with views appreciated on the subject: Wayne Grudem, DA Carson, John Piper, Mike Winger, Matt Chandler\n\nInteresting videos: [three YouTube links in source]\n\n- Personal experience that is aligned with interpretation of Scripture\n- Testimony of salvation because of a \"word of knowledge\" (Objection/Question: does that mean it supports the \"continued practice\" of such?)\n- Testimonies of healing (Objection: these occurrences do not prove \"continuationism\") - these cases not valid points for the context of practice of the church\n\nFeedback from group:\n\nDesiring gifts was for the church as a unit to pray that people with those gifts would be added to the church since gifts are given at the point of salvation.",
+
+  "parsing_notes": "Document is a clean typed PDF (4 pages); text extraction confidence is high. The doc itself is a discussion outline that lays out cessationist arguments, continuationist arguments, questions for cessationists, a 'Personal point of view' that takes a bridging/openness position, sample evidences with counter-objections, and a final group-feedback note that essentially asserts gifts are given at salvation (a cessationist-leaning corrective). Anonymization: the source contains no personal names of teachers/contributors in the body — only references to public theologians (Wayne Grudem, DA Carson, John Piper, Mike Winger, Matt Chandler) which are retained as legitimate published authorities, not anonymized contributors. The 'Personal point of view' first-person voice was rewritten in third person to avoid implicit attribution. Multiple distinct perspectives are present at the document level (cessationist vs continuationist vs bridging), captured via separate perspective-type chunks; explicit perspective_a/b markers were used for chunk 13 where competing claims about evidentiary value of testimonies appear together. Three YouTube URLs from the source were summarized rather than reproduced. The phrase 'assembly Theology' (lowercase 't') is preserved as a generic descriptor of the broader Brethren-assembly tradition. Original heading 'Personal point of view' is reframed as 'a bridging position' to remove the implicit personal attribution.",
+
+  "confidence": {
+    "text_extraction": "high",
+    "scripture_normalization": "high",
+    "perspective_separation": "high"
+  }
+}
