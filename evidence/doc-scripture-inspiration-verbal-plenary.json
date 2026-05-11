@@ -1,0 +1,261 @@
+{
+  "id": "doc-scripture-inspiration-verbal-plenary",
+  "answer": {
+    "id": "doc-scripture-inspiration-verbal-plenary",
+    "affirms": true,
+    "rationale": "2 Tim 3:16 calls all γραφή theopneustos (G2315, 'God-breathed'), and 2 Pet 1:21 says prophets spoke being 'carried along' (φερόμενοι, pheromenoi, G5342) by the Holy Spirit; Jesus grounds an argument on a single word in John 10:35 ('the Scripture cannot be broken') and on the smallest letter and stroke in Matt 5:18, demonstrating that divine origin extends to the written form, not only to general ideas.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The Scriptural data (theopneustos in 2 Tim 3:16, pherō in 2 Pet 1:21, Jesus' word-level argument in John 10:35 and letter-level argument in Matt 5:18) clearly grounds divine origin of the written text. The post-Reformation labels 'verbal' (extending to words, not just ideas) and 'plenary' (extending to all parts, not just doctrinal portions) are theological summaries of that data, not the data itself. The doctrine is canonically demonstrable, but the specific 'verbal plus plenary' phrasing is a Reformed and evangelical scholastic formulation; Catholic and Orthodox traditions affirm inspiration without using that wording. Denial of inspiration itself (Scripture is mere human reflection) places one outside historic Christianity; denial of the specific 'verbal plenary' label while still affirming Scripture as God's word does not. Hence would_die_for=true but cult_marker_if_denied=false. Public-record carriers of substantive denial (Scripture as fallible human document): liberal Protestant traditions following Schleiermacher and Bultmann; Mormonism subordinates Bible to additional revelation and Joseph Smith's translation; Christian Science (Mary Baker Eddy) treats Bible as containing errors corrected by Science and Health."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Scripture is inspired by God in such a way that its written form, including the wording, carries divine authority.",
+      "notes": "The terms 'verbally and plenarily' are post-Reformation theological labels (Old Princeton, Hodge, Warfield, later Chicago Statement). 'God-breathed' is the canonical claim in 2 Tim 3:16 (theopneustos). The stem imports a specific Reformed-confessional vocabulary as if it were the only neutral way to state the doctrine; honest audit works the underlying Scriptural claim, which the data does support, while flagging that the wording is confessional."
+    },
+    "lay_summary": {
+      "reasoning": "Yes. Scripture is inspired by God in such a way that the actual written words carry his authority, not only the general ideas behind them. The strongest reason is 2 Timothy 3:16, which says 'all Scripture is God-breathed.' Peter adds in 2 Peter 1:21 that the prophets did not speak from their own will but were 'carried along' by the Holy Spirit as they spoke from God. Jesus himself builds an argument on one word in John 10:35, saying 'Scripture cannot be broken,' and in Matthew 5:18 he says not even the smallest letter or stroke of the Law will pass away. That argument only works if the words themselves, not just the broad message, come from God. The strongest complicating texts are passages like 1 Corinthians 7:12 where Paul writes 'I, not the Lord' about marriage advice, and Luke 1:1-4 where Luke says he carefully investigated written sources before writing his Gospel. Critics ask: if the human author is researching, choosing words, or distinguishing his own judgment from the Lord's, in what sense are the words God's? The honest answer is that inspiration in Scripture itself includes the human author's research, personality, and word choice; God works through real human writing rather than dictating around it. Paul still claims in the same chapter that he has the Spirit of God, 1 Corinthians 7:40. So the doctrine holds, but the precise label 'verbal and plenary' is a later church formulation summarizing the Scriptural pattern. The Scriptural claim of God-breathed Scripture is firm. The exact wording 'verbal plenary' is a useful summary, not a verse.",
+      "denominational_landscape": "Nearly all historic Christian traditions affirm that Scripture is inspired by God. Catholic teaching in Dei Verbum says that what the human authors assert, the Holy Spirit asserts, and Scripture teaches the truth God wanted recorded for salvation without error. Eastern Orthodox tradition affirms inspiration but reads Scripture inside the wider stream of Holy Tradition rather than as a standalone book. Lutheran, Reformed, Anglican (Article VI), and Methodist (Article V) confessions all teach that Scripture contains all things necessary to salvation and is given by God. Pentecostal statements like the Assemblies of God Fundamental Truths affirm verbal inspiration explicitly. Anabaptist traditions affirm Scripture as God's word though they differ on how community and Spirit interpret it. The specific phrase 'verbal and plenary inspiration' is most at home in Reformed and evangelical circles after the 1800s and was sharpened by the Chicago Statement on Biblical Inerrancy in 1978. Public denial of Scripture as God's authoritative word is the historic position of liberal Protestantism following Schleiermacher and Bultmann, who treat the Bible as primarily human religious reflection. Mormonism formally subordinates the Bible to the Book of Mormon, Doctrine and Covenants, and Joseph Smith's 'inspired translation' that alters the biblical text. Christian Science under Mary Baker Eddy treats the Bible as containing errors that Science and Health corrects. Jehovah's Witnesses affirm inspiration but their New World Translation alters key Christological wording. So historic Christianity broadly agrees that Scripture is from God; the sharp disagreements concern how far the inspiration extends to specific wording and whether further revelations stand alongside or above the biblical text."
+    },
+    "scripture": [
+      {
+        "ref": "2Tim.3.16",
+        "key_term": "θεόπνευστος (theopneustos) G2315",
+        "force": "Adjective 'God-breathed', applied to pasa graphē; predicates divine origin of the written text itself. Hapax legomenon in NT.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "2Pet.1.21",
+        "key_term": "φερόμενοι (pheromenoi) G5342",
+        "force": "Present passive participle of pherō, 'being carried along'; same root used in Acts 27:15 of a ship driven by wind. Prophets spoke 'from God' under Spirit's propulsion, not from human will.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Matt.5.18",
+        "key_term": "ἰῶτα (iota) G2503 / κεραία (keraia) G2762",
+        "force": "Smallest Hebrew letter (yod) and the smallest stroke or projection of a letter; Jesus places authority at the sub-word, sub-letter level of the Torah text. Direct support for words-not-just-ideas inspiration.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "John.10.35",
+        "key_term": "γραφή (graphē) G1124 / λυθῆναι (lythēnai) G3089",
+        "force": "Jesus grounds an argument on the use of one word ('gods') in Psalm 82:6, declaring graphē cannot be 'broken' (loosened, set aside). Argument requires word-level divine authority.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.7.12",
+        "key_term": "ἐγὼ λέγω, οὐχ ὁ Κύριος (egō legō, ouch ho Kyrios)",
+        "force": "Paul distinguishes his apostolic instruction from a direct dominical command; in 7:40 he claims to have the Spirit of God. Shows inspiration operates through, not around, human authorial awareness and circumstance.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Luke.1.1-4",
+        "key_term": "παρηκολουθηκότι (parēkolouthēkoti) G3877",
+        "force": "Luke describes investigating eyewitness sources and writing 'in order' for Theophilus. Inspiration does not bypass historical research; God works through it. Complicates a dictation theory of verbal inspiration without overturning theopneustos.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.3.16",
+        "key_term": "γραφάς (graphas) G1124",
+        "force": "Peter refers to Paul's letters as among 'the other Scriptures', placing apostolic writings on the same authority footing as the Old Testament. Pan-canonical extension of inspiration to NT writings.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.27.15",
+        "key_term": "ἐφερόμεθα (epherometha) G5342",
+        "force": "Same verb pherō used of a ship driven helplessly by the storm. Lexical illumination for 2 Pet 1:21: prophets carried along by Spirit, an irresistible propulsive image.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Heb.1.1-2",
+        "key_term": "πολυμερῶς καὶ πολυτρόπως (polymerōs kai polytropōs) G4181 G4187",
+        "force": "'In many parts and many ways' God spoke in the prophets, now in the Son. Affirms God as actual speaker through the prophetic text while acknowledging diverse modes of inspiration.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2315",
+      "G1124",
+      "G5342",
+      "G2503",
+      "G2762",
+      "G3089",
+      "G3551",
+      "G3877",
+      "G4181",
+      "G4187",
+      "G3056",
+      "G4396"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "Reformed scholastic inerrancy",
+        "Catholic accommodation and analogy",
+        "Eastern Orthodox tradition-internal reading",
+        "neo-orthodox encounter model"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed scholastic / Chicago Statement",
+          "verdict": "affirms verbal-plenary inerrancy in the original autographs"
+        },
+        {
+          "lens": "Catholic Dei Verbum",
+          "verdict": "affirms inspiration and inerrancy 'for the sake of salvation', without using the verbal-plenary label"
+        },
+        {
+          "lens": "Eastern Orthodox",
+          "verdict": "affirms inspiration within Holy Tradition; does not isolate Scripture as a standalone inerrant text"
+        },
+        {
+          "lens": "neo-orthodox (Barth/Bultmann)",
+          "verdict": "denies verbal inspiration; Scripture witnesses to revelation rather than being it"
+        }
+      ],
+      "notes": "Apparatus + interlinear support divine origin extending to the written form. 'Verbal' (every word) and 'plenary' (every part) are post-Reformation theological labels that summarize the Scriptural data accurately but go beyond what any single verse states verbatim. The verdict holds under grammatico-historical reading; the specific labels are confessional."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Dei Verbum 11 (Vatican II, 1965)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Everything asserted by the inspired authors must be held to be asserted by the Holy Spirit; Scripture teaches without error the truth God wanted recorded for salvation."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article V",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scripture containeth all things necessary to salvation."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 1.2 (1647)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Under the name of Holy Scripture are now contained all the Books of the Old and New Testament, all which are given by inspiration of God to be the rule of faith and life."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome, Comprehensive Summary, Rule and Norm (1577)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We believe and confess that the only rule and norm by which all doctrines and teachers are to be judged is the prophetic and apostolic writings of the Old and New Testaments."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles, Article VI (1571)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 1",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Scriptures, both the Old and New Testaments, are verbally inspired of God and are the revelation of God to man, the infallible, authoritative rule of faith and conduct."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, Doctrine and Scripture",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Scripture is divinely inspired and read within Holy Tradition; the Church receives Scripture as God's word but does not isolate it as a standalone rule apart from the worshiping community."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Letter 82 to Jerome, ch. 1.3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "I have learned to yield this respect and honour only to the canonical books of Scripture: of these alone do I most firmly believe that the authors were completely free from error."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/3-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "pasa graphē theopneustos (G2315), 'every Scripture is God-breathed'; theopneustos is hapax legomenon, adjective predicating divine origin of the written text."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_peter/1-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hypo Pneumatos Hagiou pheromenoi elalēsan apo Theou anthrōpoi: 'men spoke from God being carried along by the Holy Spirit' (pherō, G5342)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/10-35.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hē graphē ou dynatai lythēnai (G3089): Jesus' argument turns on the use of one word in Psalm 82:6, requiring word-level authority of the text."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/5-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "iōta hen ē mia keraia ou mē parelthē: not the smallest letter or stroke of the Law will pass; locates authority below the word."
+      },
+      {
+        "url": "https://biblehub.com/greek/2315.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "Theopneustos (G2315) occurs once in NT, 2 Tim 3:16. From theos and pneō, 'divinely breathed in'. Adjective applied to graphē."
+      },
+      {
+        "url": "https://biblehub.com/greek/5342.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "Pherō (G5342) used in Acts 27:15 of a ship driven by storm; in 2 Pet 1:21 of prophets carried along by the Spirit; propulsive image of divine agency."
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "The books of Scripture must be acknowledged as teaching solidly, faithfully and without error that truth which God wanted put into sacred writings for the sake of salvation."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article V: The Holy Scripture containeth all things necessary to salvation."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

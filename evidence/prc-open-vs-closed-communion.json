@@ -1,0 +1,306 @@
+{
+  "id": "prc-open-vs-closed-communion",
+  "answer": {
+    "id": "prc-open-vs-closed-communion",
+    "affirms": true,
+    "rationale": "1 Cor 10:16-17 grounds the Supper in koinonia (G2842) of one bread / one body across the whole church, and 1 Cor 11:28 lays the gate of dokimazo (G1381) on the individual reflexively (heauton), not on a congregational gatekeeper; the canonical pattern is open to any baptized believer in fellowship with Christ.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "In-house Christian practice; spectrum runs from open (most evangelical, Anglican, Methodist, Pentecostal, Open Brethren) through close (LCMS, WELS, some Baptist, some Brethren) to closed (Catholic, Orthodox, Exclusive Brethren). The closed reading rests on diakrino-the-body and corporate examination; the open reading rests on koinonia / proslambano (Rom 14:1) / reflexive self-examination. Excommunication contexts (1 Cor 5, Matt 18) carve out a legitimate exclusion category that even open-communion congregations honor. Cult-marker concerns attach not to the practice itself but to extreme-sectarian application (e.g. some Exclusive Brethren streams using closed communion to enforce isolation and shunning across family lines)."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Should the Lord's Supper be open to all baptized believers in Christ walking in fellowship with the Lord, or restricted to members of the same local congregation or sub-denomination?",
+      "notes": "The stem as written embeds 'walking in fellowship with the Lord and not under church discipline' which is already the open-communion qualifier. A truly neutral stem would name the three positions (open, close, closed) and ask which is canonical. Work the neutralized form."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible teaches that the Lord's Supper should be open to any baptized believer in Christ who is in fellowship with the Lord and not under formal church discipline. The strongest reason for this comes from 1 Corinthians 10:16-17, where Paul says the one bread we break is a sharing in the body of Christ, and because there is one bread, we who are many are one body. The picture is the whole body of Christ sharing one loaf, not a tribe within the body guarding its own loaf. The strongest counterargument is 1 Corinthians 11:27-29, where Paul warns against eating in an unworthy manner and tells the participant to discern the body. Some Christians read this as a corporate gate, meaning the local church must examine and fence the table. But the verb in verse 28 is reflexive. Paul says let a person examine himself, not let the elders examine him. The individual is the gate, with one published exception. 1 Corinthians 5 commands the church to exclude the unrepentant immoral brother from the meal, and Matthew 18 grounds church discipline. So formal discipline is a real fence, but denominational affiliation is not. Romans 14:1 reinforces this. Paul says receive the one weak in faith, but not for disputes over opinions. Acts 2:42 and Acts 20:7 show the early church gathered as one body to break bread. The early manual called the Didache, from around the second century, restricts the meal to the baptized, which is the historic minimum gate the open-communion reading still honors. The tension between the open reading and the closed reading is real and cannot be erased. The closed reading is not unbiblical; it is a defensible exegesis of discerning the body as discerning the corporate church. But the canonical weight of one bread, one body, and the reflexive verb in verse 28 favors the open reading. Christians have disagreed about this for two thousand years and continue to disagree. The verdict here is that open communion to baptized believers, with discipline as the only legitimate fence, is the canonical position, while acknowledging that close and closed practices are in-house Christian options, not heresy.",
+      "denominational_landscape": "Christians disagree about this. The patristic witness in the Didache restricts the meal to the baptized, which is a minimal closed-to-the-unbaptized stance shared by virtually every tradition. From there the traditions split. The Catholic Church practices closed communion in normative form. Non-Catholic Christians are not admitted to the Eucharist except in narrow emergency circumstances, on the theology that visible communion presupposes full ecclesial communion. The Eastern Orthodox practice is the same or stricter. Only Orthodox in good standing who have prepared by confession and fasting may receive. The Lutheran world is divided. The Missouri Synod and Wisconsin Synod practice close communion, restricting the table to those confessing the same Lutheran doctrine of the real presence, while the larger Evangelical Lutheran Church in America practices open communion. The Anglican Communion in its historic form admits all baptized confirmed Christians, with the Articles of Religion making worthy reception by faith the qualifier rather than denominational membership. The Methodist tradition descended from John Wesley practices an open table, often called the open table of the Lord, welcoming all who seek Christ. The Pentecostal Assemblies of God and most evangelical and Baptist congregations practice open communion to any believing Christian. Within the Plymouth Brethren movement the practice itself splits the streams. Open Brethren generally welcome any Christian believer in fellowship with the Lord. Exclusive Brethren in various sub-streams restrict the table progressively, with the strictest Taylorite line restricting it to their own sub-fellowship. The practice itself, across this whole spectrum, is in-house Christian. Denial of one position is not denial of the gospel."
+    },
+    "scripture": [
+      {
+        "ref": "1Cor.10.16",
+        "key_term": "κοινωνία (koinonia) G2842",
+        "force": "sharing or participation; the cup and the bread are participation in the blood and body of Christ",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "1Cor.10.17",
+        "key_term": "ἄρτος (artos) G740, σῶμα (soma) G4983, εἷς (heis) G1520",
+        "force": "one bread, one body; the many are one because all partake of one bread",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metonymy", "synecdoche"]
+      },
+      {
+        "ref": "1Cor.11.27",
+        "key_term": "ἀναξίως (anaxios) G371, ἔνοχος (enochos) G1777",
+        "force": "whoever eats unworthily is liable for the body and blood",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.28",
+        "key_term": "δοκιμάζω (dokimazo) G1381, ἑαυτόν (heauton) G1438",
+        "force": "let a person test himself; reflexive present imperative, individual subject",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.29",
+        "key_term": "διακρίνω (diakrino) G1252, σῶμα (soma) G4983",
+        "force": "without discerning the body; ambiguous between Christ's eucharistic body and the corporate church body",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "Rom.14.1",
+        "key_term": "προσλαμβάνω (proslambano) G4355, ἀσθενῶν (astheneo) G770",
+        "force": "receive the one weak in faith, but not for disputes over opinions",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.15.7",
+        "key_term": "προσλαμβάνω (proslambano) G4355",
+        "force": "receive one another as Christ also received us, to the glory of God",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.42",
+        "key_term": "κοινωνία (koinonia) G2842, κλάσις τοῦ ἄρτου (klasis tou artou) G2800 G740",
+        "force": "early church devoted to the apostles' teaching, the fellowship, the breaking of bread, and prayers",
+        "supports": "neutral",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.20.7",
+        "key_term": "κλάω (klao) G2806, ἄρτος (artos) G740, συνάγω (sunago) G4863",
+        "force": "first day of the week, disciples gathered to break bread",
+        "supports": "neutral",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.5.11",
+        "key_term": "συνεσθίω (sunesthio) G4906",
+        "force": "do not even eat with such a one; named immoral brother excluded from the meal",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.18.17",
+        "key_term": "ἐκκλησία (ekklesia) G1577",
+        "force": "the unrepentant offender is treated as a gentile and tax collector; church discipline as fence",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.12.13",
+        "key_term": "βαπτίζω (baptizo) G907, σῶμα (soma) G4983",
+        "force": "by one Spirit we were all baptized into one body; the body crosses ethnic and social lines",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "Eph.4.4",
+        "key_term": "σῶμα (soma) G4983, ἕν (hen) G1520",
+        "force": "one body and one Spirit; pan-ecclesial unity",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2842",
+      "G740",
+      "G4983",
+      "G1520",
+      "G371",
+      "G1777",
+      "G1381",
+      "G1438",
+      "G1252",
+      "G4355",
+      "G770",
+      "G2800",
+      "G2806",
+      "G4863",
+      "G4906",
+      "G1577",
+      "G907",
+      "G3348",
+      "G4342",
+      "G129"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "sacramental_realism",
+        "memorialism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "sacramental_realism (Catholic / Orthodox)",
+          "verdict": "closed; visible Eucharistic sharing presupposes full ecclesial and doctrinal communion"
+        },
+        {
+          "lens": "close_communion_confessionalism (LCMS, WELS, some Baptists)",
+          "verdict": "close; table restricted to those confessing the same eucharistic and baptismal theology"
+        },
+        {
+          "lens": "evangelical_memorialism / open_table (Anglican, Methodist, Pentecostal, Open Brethren, most Baptists in practice)",
+          "verdict": "open; any baptized believer in fellowship with Christ and not under discipline may partake"
+        }
+      ],
+      "notes": "The lexical pattern (reflexive self-examination, one-bread one-body, proslambano-the-weak) leans open. The closed reading hangs on a contested reading of diakrino-the-body as corporate, plus ecclesiology that requires visible communion to mirror doctrinal communion. The lexical case is medium-strong for open; the ecclesiological case can be argued either way honestly."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Didache 9.5",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Let no one eat or drink of your Eucharist except those baptized in the name of the Lord; the baptized-only gate is the minimum historic fence."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 1399-1401; Code of Canon Law 844",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Catholic norm restricts the Eucharist to those in full communion with the Catholic Church; intercommunion with Reformation communities not normally permitted."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article X",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The body and blood of Christ are truly present and distributed to those who eat the Supper; LCMS and WELS apply this confessionally and practice close communion."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 28-29",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Worthy reception by faith is the gate; the wicked eat to their condemnation regardless of administration. Historic Anglican practice opens the table to baptized communicants."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 29",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Ignorant and ungodly are unfit and not to be admitted; fencing by the eldership is the Reformed practice, but baptized believers in good standing are welcomed across Presbyterian polity."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "UMC Articles of Religion XVIII; This Holy Mystery (2004)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Methodist practice is the open table; all who respond in faith to the invitation are welcome regardless of denominational affiliation."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527, Article 3",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Breaking of bread restricted to those united in one body of Christ by baptism; closed to the unbaptized world, open to fellow believers."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Lord's Supper",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Lord's Supper is a memorial enjoined on all believers; open communion to all who confess Christ is the standard Pentecostal practice."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA sacramental teaching",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Only Orthodox Christians in good standing, prepared by confession and fasting, may receive Holy Communion; non-Orthodox are not admitted."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/10-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "koinonia G2842 appears twice in 10:16; the cup is sharing in the blood, the bread is sharing in the body of Christ."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/10-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "one bread (heis artos), one body (hen soma); the many are one because all partake (metecho G3348) of the one bread."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-28.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "dokimazeto G1381 is present imperative active with reflexive heauton G1438; the verb places the examination on the individual."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2842.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "koinonia spans 19 NT occurrences; fellowship with the Son (1 Cor 1:9), with Father and Son (1 John 1:3), pan-canonical not bounded locally."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4355.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "proslambano G4355 in Rom 14:1 and 15:7: receive the one weak in faith, receive one another as Christ received us; welcoming verb."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1252.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "diakrino G1252 in 1 Cor 11:29 is ambiguous between recognizing Christ's eucharistic body and discerning the corporate church body."
+      },
+      {
+        "url": "https://www.ccel.org/ccel/richardson/fathers.viii.i.iii.html",
+        "category": "patristic_archive",
+        "stance": "nuance",
+        "quote": "Didache 9.5: let no one eat or drink of your Eucharist except those baptized in the Lord's name; baptismal gate is the historic minimum."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 28: to such as rightly, worthily, and with faith receive the same, the bread which we break is a partaking of the body of Christ."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

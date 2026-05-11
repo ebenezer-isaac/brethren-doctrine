@@ -1,0 +1,321 @@
+{
+  "id": "doc-scripture-perspicuity",
+  "answer": {
+    "id": "doc-scripture-perspicuity",
+    "affirms": true,
+    "rationale": "Deut 30:11-14 (nip'let H6381 'too marvelous', rachoq H7350 'distant'; the command is not too hard nor far), Ps 19:7 and Ps 119:130 (peti H6612 'simple' made wise / given understanding), and 2 Tim 3:15 (hiera grammata G2413/G1121 'sacred writings' sophisai G4679 'able to make wise for salvation') canonically support that what is necessary for salvation is accessible to the ordinary reader, while 2 Pet 3:16 (dysnoeta G1425 'hard to understand') honestly limits the claim to essentials rather than every passage.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The qualified Protestant formulation (clear in essentials for salvation, not in every detail) holds canonically. Catholic and Eastern Orthodox lineages historically deny perspicuity in the Protestant sense and require interpretation within Magisterium / Holy Tradition; many godly believers stand there, so this is not gospel-stake. Cult groups (Mormons with Joseph Smith's 'translation', Christian Science with Mary Baker Eddy's Key to the Scriptures, Iglesia ni Cristo with Felix Manalo as sole interpreter, Branhamite movements) functionally deny perspicuity by inserting a sole prophet or seer, but that denial is one symptom of their gospel-altering pattern, not the gospel-stake itself."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Scripture is sufficiently clear in matters necessary for salvation for the ordinary reader, even if some passages are difficult and require teaching, study, or the Church's help.",
+      "notes": "The original stem uses Reformation-confessional vocabulary ('perspicuity' implied; 'ordinary believer reading with the Spirit's help', 'without specialized mediation') that already takes a Protestant side of a historic Catholic / Orthodox / Protestant dispute. Worked the neutralized form."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible says that what people need to know to be saved is reachable for normal readers. Moses says in Deuteronomy 30 that God's command is not too hard or too far away, it is near, in your mouth and in your heart. Psalm 19 says God's law makes wise the simple, and Psalm 119 says the opening of God's words gives light and understanding to the simple. Paul tells Timothy that from childhood he knew the sacred writings that are able to make him wise for salvation through faith in Christ Jesus. That is a strong canonical line that the saving message is plain enough for an ordinary reader, even a child. The honest counterargument is 2 Peter 3:16, where Peter says some things in Paul's letters are hard to understand, which the untaught and unstable twist to their own destruction. Acts 8 also shows the Ethiopian official reading Isaiah and saying he cannot understand unless someone guides him, and Philip then explains it. So the Bible itself does not promise that every passage is equally clear, and it does not promise that any reader will always read rightly without teaching. The honest verdict is that Scripture is clear in what is necessary for salvation, but not in every detail, and good teaching, careful reading, and humility before texts that are hard to understand are part of how God uses Scripture. Denying that the saving message itself is accessible to ordinary readers would cut off the children Paul commends and the simple the Psalms address, so the core claim stands. Refusing to let any ordinary reader come to Scripture and insisting on a single prophet or seer to unlock it goes beyond what the Bible itself says.",
+      "denominational_landscape": "Protestant lineages broadly affirm this proposition in its qualified form. Lutherans treat Scripture as the pure clear fountain by which all teachers are judged. Anglicans, in Article 6, hold that Holy Scripture contains all things necessary to salvation. Methodists, in Wesley's abridgement of those articles, hold the same. Reformed and Baptist confessions teach the same in their first chapters on Scripture. Pentecostals, including the Assemblies of God, treat Scripture as the infallible rule of faith and conduct. Anabaptists historically read Scripture in congregational gathering rather than through a magisterium. The Catholic position, taught at Vatican II in Dei Verbum and in the Catechism, holds that Scripture and Sacred Tradition form one deposit of the Word of God, and that authentic interpretation has been entrusted to the living teaching office of the Church. The Eastern Orthodox view treats Scripture as one of nine interconnected sources of doctrine alongside Tradition, the Liturgy, the Councils, the Fathers, and the Saints, and reads Scripture within the Church rather than as self-interpreting to the lone individual. So the major divide is Protestant qualified yes versus Catholic and Orthodox no, with both sides agreeing that some passages are hard and that teaching helps. Cult and heterodox groups that require a single prophet or founder to unlock Scripture, such as Mormonism with Joseph Smith, Christian Science with Mary Baker Eddy, Iglesia ni Cristo with Felix Manalo, and Branham-following movements, deny the ordinary reader's access in a far more radical way and stand outside the historic Christian conversation on this point."
+    },
+    "scripture": [
+      {
+        "ref": "Deut.30.11",
+        "key_term": "נִפְלֵאת (nip'let) H6381 / רְחֹקָה (rechoqah) H7350",
+        "force": "the command is neither too marvelous (beyond grasp) nor too distant; it is accessible to the hearer",
+        "supports": "for",
+        "genre": "law",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Deut.30.14",
+        "key_term": "קָרוֹב (qarov) H7138 / פֶּה (peh) H6310 / לֵבָב (levav) H3824",
+        "force": "the word is very near you, in your mouth and in your heart, so that you may do it",
+        "supports": "for",
+        "genre": "law",
+        "figures": ["parallelism", "metonymy"]
+      },
+      {
+        "ref": "Ps.19.7",
+        "key_term": "מַחְכִּימַת פֶּתִי (machkimat peti) H2449/H6612",
+        "force": "the testimony of the LORD is sure, making the simple (peti) wise",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Ps.119.105",
+        "key_term": "נֵר (ner) H5216 / אוֹר (or) H216",
+        "force": "your word is a lamp to my feet and a light to my path; Scripture practically illuminates the reader's walk",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["metaphor", "parallelism"]
+      },
+      {
+        "ref": "Ps.119.130",
+        "key_term": "פֵּתַח דְּבָרֶיךָ (petach devarekha) H6608 / מֵבִין פְּתָיִים (mevin petayim) H995/H6612",
+        "force": "the unfolding / opening of your words gives light, giving understanding to the simple",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Deut.6.7",
+        "key_term": "שִׁנַּנְתָּם (shinnantam) H8150",
+        "force": "Piel: teach them incisively to your children; presupposes that parents can transmit and children can receive God's commands",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.3.15",
+        "key_term": "ἱερὰ γράμματα G2413/G1121 / σοφίσαι G4679 / εἰς σωτηρίαν G1519/G4991",
+        "force": "the sacred writings known from infancy are able to make one wise unto salvation through faith in Christ Jesus",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.11.25",
+        "key_term": "ἀπεκάλυψας νηπίοις (apekalypsas nepiois) G601/G3516",
+        "force": "the Father hides these things from the wise and reveals them to infants; saving knowledge runs through humility, not expertise",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["irony"]
+      },
+      {
+        "ref": "2Pet.3.16",
+        "key_term": "δυσνόητα G1425 / ἀμαθεῖς G261 / ἀστήρικτοι G793 / στρεβλοῦσιν G4761",
+        "force": "some things in Paul's letters are hard to understand, which the untaught and unstable twist to their own destruction",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.31",
+        "key_term": "πῶς...δυναίμην G4459/G1410 / ὁδηγήσει G3594",
+        "force": "the Ethiopian official: how can I understand unless someone guides me; teaching is part of how God brings Scripture home",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Neh.8.8",
+        "key_term": "מְפֹרָשׁ (meforash) H6567 / שׂוֹם שֶׂכֶל (som sekhel) H7760/H7922",
+        "force": "the Levites read from the Book of the Law clearly and gave the sense, so the people understood; reading plus teaching produces understanding",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Luke.24.45",
+        "key_term": "διήνοιξεν αὐτῶν τὸν νοῦν G1272/G3563",
+        "force": "Jesus opened the disciples' minds to understand the Scriptures; full understanding involves divine illumination",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "H6381",
+      "H7350",
+      "H7138",
+      "H6310",
+      "H3824",
+      "H2449",
+      "H6612",
+      "H5216",
+      "H216",
+      "H5410",
+      "H7272",
+      "H6608",
+      "H995",
+      "H215",
+      "H8150",
+      "H6567",
+      "H7760",
+      "H7922",
+      "H8451",
+      "H8549",
+      "G2413",
+      "G1121",
+      "G4679",
+      "G1519",
+      "G4991",
+      "G1025",
+      "G1425",
+      "G261",
+      "G793",
+      "G4761",
+      "G4459",
+      "G1410",
+      "G302",
+      "G3594",
+      "G601",
+      "G3516",
+      "G1272",
+      "G3563"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["sola_scriptura_protestant", "scripture_with_tradition_catholic", "scripture_within_holy_tradition_orthodox"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "sola_scriptura_protestant",
+          "verdict": "affirms",
+          "notes": "Scripture is clear in essentials for salvation; difficult passages exist but do not undermine the clarity of the saving message."
+        },
+        {
+          "lens": "scripture_with_tradition_catholic",
+          "verdict": "denies_in_protestant_form",
+          "notes": "Scripture is not separable from Sacred Tradition; authentic interpretation belongs to the Magisterium. Catholics affirm Scripture's saving sufficiency but reject the proposition that an ordinary reader has it without ecclesial mediation."
+        },
+        {
+          "lens": "scripture_within_holy_tradition_orthodox",
+          "verdict": "denies_in_protestant_form",
+          "notes": "Scripture is read within the Church and her tradition; private interpretation outside the Fathers and the liturgical life of the Church is rejected."
+        }
+      ],
+      "notes": "Stem is Reformation-confessional vocabulary. The canonical lexical pattern (Deut 30, Ps 19, Ps 119, 2 Tim 3:15, Matt 11:25) supports access for the ordinary reader to what is necessary for salvation; the canonical complicating pattern (2 Pet 3:16, Acts 8:30-31, Neh 8:8, Luke 24:45) honestly limits the scope to essentials and grants a real role to teaching and divine illumination. The qualified Protestant form is canonically supportable; the strong unqualified form is not."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Vatican II, Dei Verbum, Article 10 (vatican.va)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Sacred tradition and Sacred Scripture form one sacred deposit; authentic interpretation has been entrusted exclusively to the living teaching office of the Church."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith: Sources of Christian Doctrine (oca.org)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Scripture is one of nine interconnected sources of doctrine (Revelation, Tradition, Bible, Liturgy, Councils, Fathers, Saints, Canons, Church Art); read within the Church, not as self-interpreting."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration, Rule and Norm (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Prophetic and Apostolic Scriptures of the Old and New Testaments as the pure, clear fountain of Israel, the only true standard by which all teachers and doctrines are to be judged."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article VI (anglicansonline.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Holy Scripture containeth all things necessary to salvation, so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article V (umc.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Holy Scripture containeth all things necessary to salvation; whatsoever is not read therein, nor may be proved thereby, is not to be required of any man as an article of faith."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 1.7",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Things necessary to be known, believed, and observed for salvation are so clearly propounded in some place of Scripture that the unlearned may attain a sufficient understanding of them."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, De Doctrina Christiana 2.6.8 (paraphrase, full text not retrieved)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "In the plain teachings of Scripture are found all those things which contain faith, morals of living, hope and charity; obscure passages restate what plain ones already teach."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/deuteronomy/30-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "nip'let H6381 'too marvelous' and rechoqah H7350 'distant'; the command is neither too hard nor too far for the hearer."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/19-7.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "machkimat peti (H2449/H6612): the testimony of the LORD makes the simple wise."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/119-130.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "petach devarekha yair, mevin petayim (H6608/H215/H995/H6612): the opening of your words gives light and understanding to the simple."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/3-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hiera grammata sophisai eis soterian (G2413/G1121/G4679/G4991): the sacred writings able to make wise unto salvation."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_peter/3-16.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "dysnoeta G1425 'hard to understand'; amatheis G261 'untaught' and asteriktoi G793 'unstable' twist (streblousin G4761) the texts."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/8-31.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "pos...dynaimen ean me tis hodegesei (G4459/G1410/G3594): how can I unless someone guides me; the eunuch needs Philip's help."
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "The task of authentically interpreting the word of God, whether written or handed on, has been entrusted exclusively to the living teaching office of the Church."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Scripture stands among nine interconnected sources of doctrine: Revelation, Tradition, Bible, Liturgy, Councils, Fathers, Saints, Canons, Church Art; read within the Church."
+      },
+      {
+        "url": "https://bookofconcord.org/solid-declaration/rule-and-norm/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "The Prophetic and Apostolic Scriptures of the Old and New Testaments as the pure, clear fountain of Israel, the only true standard for all teachers and doctrines."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Holy Scripture containeth all things necessary to salvation, so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article V: The Holy Scripture containeth all things necessary to salvation; whatsoever is not read therein, nor may be proved thereby, is not to be required as an article of faith."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-vs-counter-witness-conflict",
+      "wcf-text-not-directly-retrieved",
+      "augustine-quote-paraphrase-not-directly-retrieved",
+      "ag-pentecostal-counter-witness-blocked-by-403",
+      "complicating-texts-honestly-narrow-claim-to-essentials"
+    ]
+  }
+}

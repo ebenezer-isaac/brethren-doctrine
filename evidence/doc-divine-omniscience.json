@@ -1,0 +1,399 @@
+{
+  "id": "doc-divine-omniscience",
+  "answer": {
+    "id": "doc-divine-omniscience",
+    "affirms": true,
+    "rationale": "Ps 139:1-6 (chaqar H2713 + yada' H3045) and Ps 147:5 (tabunah H8394 ein-mispar 'no number') predicate exhaustive divine knowing; Isa 46:9-10 (maggid acharit mereshit H5046+H319+H7225) predicates declarative foreknowledge of the end from the beginning; Heb 4:13 (panta gymna kai tetrachelismena, G3956+G1131+G5136) and 1 John 3:20 (ginoskei panta, G1097+G3956) extend it without remainder; the lemma network is pan-canonical.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Strict cult-marker positioning: outright denial of God's exhaustive knowledge (including future free human actions) collapses the OT covenant-lawsuit predication (Isa 41-48), the prophetic warrant (Deut 18:21-22), and the Heb 4:13 / 1 John 3:20 universal-quantifier predications. However, the cult-marker scope must be applied honestly: open theists within evangelicalism (Pinnock, Sanders, Boyd, since the 1990s) deny exhaustive foreknowledge of free creaturely futures while still confessing Christ, inerrancy, and Trinity; this is an in-house theological error to be publicly corrected, not a non-Christian boundary cross. Process theology (Whitehead, Hartshorne, Cobb) shrinks God's knowledge structurally and falls outside historic Christianity. Mormonism (LDS) denies classical omniscience by teaching a God who progresses and learns; this combined with their wider deviations (modalism-adjacent / polytheistic frame, denial of creatio ex nihilo, exalted-man doctrine) places them outside. The honest cult-marker carrier is denial in a frame that also denies the gospel's core; bare open theism is heterodox but not non-Christian. Mark 13:32 (the incarnate Son's professed not-knowing the day and hour, oiden G1492) is handled through the Chalcedonian two-natures and communicatio idiomatum / kenotic frames: the Son qua divine knows; qua incarnate-economy speaks from the Son's mediatorial veiling. The anthropopathic 'now I know' (Gen 22:12), 'to know what was in your heart' (Deut 8:2), and 'I will go down and see' (Gen 18:21) read as accommodation language (figures of speech describing God in human terms), parallel to the nacham/regret passages (Gen 6:6, 1 Sam 15:11) qualified by their own canonical correctives (1 Sam 15:29, Num 23:19)."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement is a positive canonical predication ('God knows all things... exhaustively and eternally, including all future free human actions'). It uses 'exhaustively' and 'including all future free human actions', which is the precise scope contested by open theism and Socinianism. The scope clause is what distinguishes mere omniscience-of-actuals from omniscience-of-future-contingents. This is a doctrinal precision, not a confessional preload; the lexical evidence in Isa 41-48 and Acts 2:23 supports the scope. No Reformed-specific vocabulary; no heretic-naming."
+    },
+    "lay_summary": {
+      "reasoning": "Yes, the Bible teaches that God knows everything, including everything that will happen, even our free choices. Psalm 139 says God has searched us and known us; he knows our words before they are on our tongue and has hemmed us in behind and before. Psalm 147:5 says God's understanding is beyond counting. Isaiah 46:9 to 10 makes this even sharper: God says he declares the end from the beginning, and the things not yet done from ancient times. That is not just knowledge of the present; that is knowledge of the future. Hebrews 4:13 says all things are naked and exposed before the eyes of him to whom we must give account, and 1 John 3:20 says God is greater than our heart and knows all things. The strongest complicating text is Mark 13:32, where Jesus says about the day and hour, 'no one knows, not even the angels in heaven, nor the Son, but only the Father.' Critics like open theists inside Christianity, and outside Christianity groups like Mormons, point to this and to passages like Genesis 22:12 where God says 'now I know that you fear God,' or Genesis 18:21 where God says he will go down and see if Sodom is as bad as the outcry. The historic Christian answer to Mark 13:32 is that the Son in his divine nature knows all things, but in his earthly mission he chose to speak from his human side, where the timing of his return was not given to him to disclose. The answer to 'now I know' is that the Bible regularly speaks of God in human terms (this is called accommodation language), the same way it speaks of God's arm or eyes; the same passage where God 'regrets' making Saul also says God is not a man that he should change his mind. The doctrine stands because dozens of passages across both testaments insist on it directly, and the complicating passages are local figures of speech, not denials of the universal predicate.",
+      "denominational_landscape": "Exhaustive divine omniscience, including future free actions, is held without dispute across the patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, and Eastern Orthodox lineages. Augustine in City of God argued explicitly that God's foreknowledge does not destroy human freedom and that denying foreknowledge is a more serious error than denying free will. Aquinas in Summa I question 14 grounds it in divine simplicity. The Catholic Catechism paragraph 302 says all things, even future free actions of creatures, are open and laid bare to God's eyes. Augsburg Confession Article I confesses God of infinite power, wisdom, and goodness. The Westminster Confession 2.2, the Anglican 39 Articles, Wesley's Methodist Articles of Religion, the Assemblies of God Statement of Fundamental Truths, and the Eastern Orthodox tradition all affirm it. The one in-house disagreement inside evangelicalism is open theism (Clark Pinnock, John Sanders, Greg Boyd from the 1990s on), which denies exhaustive foreknowledge of free creaturely futures while still confessing the gospel; the Evangelical Theological Society and most evangelical denominations have judged this heterodox but not a denial of Christianity itself. Outside historic Christianity, Mormonism teaches a God who progresses and learns, which combined with their wider deviations places them outside. Process theology (Whitehead, Hartshorne, Cobb) structurally limits God's knowledge and falls outside historic Christianity. Socinians historically denied foreknowledge of contingents. Unitarian Universalists do not affirm the classical attribute. The verdict tracks the universal historic consensus."
+    },
+    "scripture": [
+      {
+        "ref": "Ps.139.1-Ps.139.6",
+        "key_term": "חָקַר (chaqar) H2713 + יָדַע (yada') H3045",
+        "force": "Chaqar plus yada' as paired Qal perfects; God has searched and known the psalmist exhaustively; v.4 extends to words not yet on the tongue, predicating knowledge of future speech-acts.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Ps.147.5",
+        "key_term": "תְּבוּנָה (tabunah) H8394 + אֵין מִסְפָּר (ein mispar) H369+H4557",
+        "force": "God's understanding is without number, idiomatically 'infinite/uncountable'; predicates limitlessness of divine cognition.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Isa.46.9-Isa.46.10",
+        "key_term": "מַגִּיד (maggid) H5046 + אַחֲרִית (acharit) H319 + מֵרֵאשִׁית (mereshit) H7225",
+        "force": "Hifil participle of nagad with acharit-mereshit pair: God declaratively announces the end from the beginning; this is the OT covenant-lawsuit warrant for exhaustive foreknowledge of future events.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Isa.44.28-Isa.45.1",
+        "key_term": "כּוֹרֶשׁ (Koresh) H3566",
+        "force": "Cyrus named by personal name and royal commission roughly 150 years before his historical action; concrete demonstration of foreknowledge of a future free human agent's choices.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Jer.1.5",
+        "key_term": "יָדַע (yada') H3045 Qal perfect",
+        "force": "'Before I formed you in the womb I knew you'; predicates divine knowledge of an individual prior to that individual's existence; foreknowledge of personal identity.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "1Sam.23.11-1Sam.23.12",
+        "key_term": "יָדַע (yada') H3045",
+        "force": "David asks God whether the men of Keilah will deliver him to Saul if he stays; God answers affirmatively; David leaves and the betrayal never occurs. Predicates knowledge of contingent counterfactuals (middle knowledge / scientia media exemplar).",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Matt.26.34",
+        "key_term": "ἀπαρνέομαι (aparneomai) G533 + future indicative",
+        "force": "Jesus predicts Peter's threefold denial before the cock crows; predicates concrete foreknowledge of a free human moral failure within hours.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.23",
+        "key_term": "πρόγνωσις (prognosis) G4268 + ὁρίζω (horizō) G3724",
+        "force": "Peter at Pentecost: the cross occurred by the determined plan and foreknowledge of God, executed through lawless human hands; predicates foreknowledge of the worst free human action without making God its author.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.29",
+        "key_term": "προγινώσκω (proginōskō) G4267",
+        "force": "Those whom He foreknew He also predestined; pro-ginōskō predicates personal-relational foreknowledge prior to the temporal economy of salvation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.11",
+        "key_term": "προορίζω (proorizō) G4309 + βουλή (boulē) G1012",
+        "force": "Predestined according to the purpose of him who works all things according to the counsel of his will; predicates exhaustive providential scope grounded in divine knowledge.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.4.13",
+        "key_term": "πάντα γυμνὰ καὶ τετραχηλισμένα G3956+G1131+G5136",
+        "force": "All things naked and laid open before His eyes; the perfect passive participle of trachelizō ('bared at the neck') is exhaustive in scope; pas without qualifier.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.3.20",
+        "key_term": "γινώσκει πάντα (ginoskei panta) G1097+G3956",
+        "force": "Universal-quantifier predication: God knows all things; immediate pastoral application to interior states of the human heart.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Mark.13.32",
+        "key_term": "οἶδα (oida) G1492 + οὐδεὶς G3762 + εἰ μὴ",
+        "force": "The incarnate Son says of the day and hour 'no one knows, not even the Son, but only the Father'; perfect indicative active of oida; this is the strongest NT complicating text and requires Chalcedonian two-natures resolution (communicatio idiomatum, kenotic veiling in the economy).",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Gen.22.12",
+        "key_term": "יָדַע (yada') H3045 Qal perfect 1cs",
+        "force": "'Now I know that you fear God'; surface reading appears to predicate fresh divine knowledge gained through Abraham's act; classical reading is anthropomorphic accommodation, 'now I have made known' through the testing.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": [
+          "anthropomorphism",
+          "anthropopathism"
+        ]
+      },
+      {
+        "ref": "Deut.8.2",
+        "key_term": "יָדַע (yada') H3045 + לֵבָב lebab",
+        "force": "God led Israel in the wilderness 'to know what was in your heart'; surface reading suggests learning; classical reading is anthropomorphic, with the testing revealing rather than informing.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": [
+          "anthropomorphism"
+        ]
+      },
+      {
+        "ref": "Gen.18.21",
+        "key_term": "יָרַד (yarad) H3381 + רָאָה (ra'ah) H7200",
+        "force": "'I will go down now and see'; God descends to verify the outcry from Sodom; anthropomorphic descent-and-investigation language paralleled in Gen 11:5 (Babel), classically read as accommodation, not actual ignorance.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": [
+          "anthropomorphism"
+        ]
+      },
+      {
+        "ref": "Gen.6.6",
+        "key_term": "נָחַם (nacham) H5162 Niphal",
+        "force": "'And the LORD was sorry/regretted that He had made man'; Niphal of nacham; anthropopathic regret language; canonically qualified by Num 23:19 and 1 Sam 15:29 which deny that God is a man that He should change His mind.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": [
+          "anthropopathism"
+        ]
+      },
+      {
+        "ref": "1Sam.15.11",
+        "key_term": "נָחַם (nacham) H5162 Niphal + 1Sam.15.29",
+        "force": "v.11 'I regret that I have made Saul king'; v.29 in the same chapter 'the Glory of Israel will not lie or have regret, for He is not a man that He should have regret'; the chapter's own juxtaposition signals figure-of-speech in v.11.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": [
+          "anthropopathism"
+        ]
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "H3045",
+      "H2713",
+      "H8394",
+      "H369",
+      "H4557",
+      "H5046",
+      "H319",
+      "H7225",
+      "H6924",
+      "H3566",
+      "H3381",
+      "H7200",
+      "H5162",
+      "G1097",
+      "G1492",
+      "G3956",
+      "G1131",
+      "G5136",
+      "G4267",
+      "G4268",
+      "G3724",
+      "G4309",
+      "G1012",
+      "G533"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "classical-theism",
+        "open-theism",
+        "molinism",
+        "kenotic-christology",
+        "communicatio-idiomatum"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "classical-theism",
+          "verdict": "affirms exhaustive omniscience including future free actions; anthropomorphic regret/now-I-know passages are accommodation; Mark 13:32 resolved by communicatio idiomatum"
+        },
+        {
+          "lens": "molinism",
+          "verdict": "affirms exhaustive omniscience including middle knowledge of counterfactuals of creaturely freedom (1 Sam 23:11-12 exemplar); fully aligned with classical theism on the verdict"
+        },
+        {
+          "lens": "open-theism",
+          "verdict": "denies exhaustive foreknowledge of free creaturely futures; treats 'now I know' and 'regret' passages as literal updating; Mark 13:32 read as literal incarnate ignorance; treats Isa 46 as God's intent rather than exhaustive knowledge"
+        },
+        {
+          "lens": "kenotic-christology",
+          "verdict": "affirms full divine omniscience in the eternal Son; the incarnate Son in Mark 13:32 voluntarily veils or sets aside the use of divine knowledge in the economy of mission"
+        },
+        {
+          "lens": "process-theology",
+          "verdict": "denies classical omniscience structurally; God's knowledge co-evolves with the world; falls outside historic Christianity"
+        }
+      ],
+      "notes": "Default grammatico-historical reading carries the universal-quantifier predications (Heb 4:13, 1 John 3:20, Ps 147:5) and the declarative-foreknowledge predications (Isa 46:9-10, Isa 44:28-45:1, Acts 2:23, Matt 26:34). Anthropomorphism and anthropopathism are standard biblical figures (cf. God's arm, eyes, nostrils, regret), recognized canonically by Num 23:19 and 1 Sam 15:29. Mark 13:32 requires a christological frame: the Chalcedonian two-natures plus communicatio idiomatum holds that what is predicated of one nature is predicated of the person; the Son qua divine knows all things, the Son qua incarnate in the economy of mission speaks from the human nature's mediated knowing. Kenotic readings (Phil 2:7) intensify this by saying the eternal Son voluntarily declined the use of certain divine prerogatives during the incarnation. Open theism's lens reads the complicating passages literally and re-reads the universal-quantifier passages restrictively; the pan-canonical weight runs against this lens."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God Book V, Chapter 9 (cf. Book XI on God's foreknowledge of creation)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Denying God's foreknowledge of future things is more impious and intolerable than denying the freedom of the human will; God knows all things before they come to pass."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Aquinas, Summa Theologica I, Question 14, Article 1 (CCEL)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God occupies the highest place in knowledge; divine immateriality enables perfect cognition of all things through a single unified act."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 302",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "All are open and laid bare to his eyes, even those things which are yet to come into existence through the free action of creatures."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article I (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "There is one divine essence, eternal, without body, without parts, of infinite power, wisdom, and goodness, the Maker and Preserver of all things."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article I (Of Faith in the Holy Trinity)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There is but one living and true God, everlasting, without body, parts, or passions; of infinite power, wisdom, and goodness; the Maker and Preserver of all things."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 2 Section 2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "In His sight all things are open and manifest; His knowledge is infinite, infallible, and independent upon the creature, so as nothing is to Him contingent or uncertain."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion Article I (umc.org, Wesley's abridgement of the 39 Articles)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "There is but one living and true God, everlasting, without body or parts, of infinite power, wisdom, and goodness."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Faith (Dordrecht 1632) Article I",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "One eternal, almighty, and incomprehensible God, the Creator of all things, who knows all things and from whom nothing is hidden."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The One True God",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The one true God has revealed Himself as the eternally self-existent I AM, the Creator of heaven and earth and the Redeemer of mankind; classically omniscient."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, doctrine on God the Father (oca.org)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God the Father Almighty knows all things eternally; nothing in creation is hidden from His knowing, which is itself uncreated and infinite."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/psalms/139-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "chaqar H2713 Qal perfect plus yada' H3045 consecutive imperfect; chaqar denotes thorough investigative knowledge, yada' intimate relational knowing."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/147-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "tabunah H8394 'understanding' with ein-mispar H369+H4557 'no number'; idiomatically infinite, beyond counting."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/isaiah/46-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "maggid H5046 Hifil participle declaring acharit H319 'end' from mereshit H7225 'beginning'; predicates declarative foreknowledge of future events."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/4-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "panta G3956 gymna G1131 kai tetrachelismena G5136 perfect passive participle of trachelizo 'laid bare at the neck'; universal scope."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3-20.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ginoskei G1097 panta G3956; universal-quantifier predication of God's knowing; immediate pastoral application to interior heart states."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/13-32.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "oiden G1492 perfect indicative active; 'no one knows, not even the Son, but only the Father'; requires christological resolution."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/22-12.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "yadati H3045 Qal perfect 1cs 'now I know that you fear God'; classical reading: anthropomorphic accommodation through testing."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-29.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "proginosko G4267 'to know beforehand'; pro plus ginosko; divine personal-relational foreknowledge prior to temporal salvation economy."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P19.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "Catechism 302: All are open and laid bare to his eyes, even those things which are yet to come into existence through the free action of creatures."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg I: eternal, without body, without parts, of infinite power, wisdom, and goodness, the Maker and Preserver of all things."
+      },
+      {
+        "url": "https://ccel.org/ccel/aquinas/summa/summa.FP_Q14_A1.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Aquinas Summa I q.14 a.1: God occupies the highest place in knowledge; immateriality enables perfect cognition of all things in one simple act."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Articles of Religion I (Wesley's abridgement): of infinite power, wisdom, and goodness."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "apparatus-paywalled",
+      "westminster-anglican-orthodox-counter-witness-unverified"
+    ]
+  }
+}

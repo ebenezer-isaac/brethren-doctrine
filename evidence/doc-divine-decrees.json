@@ -1,0 +1,406 @@
+{
+  "id": "doc-divine-decrees",
+  "answer": {
+    "id": "doc-divine-decrees",
+    "affirms": true,
+    "rationale": "Apparatus and interlinear establish that God has an eternal purpose that He carries out: Eph 1:11 (prothesis G4286 and boulē G1012 of His thelēma G2307, energeō G1754 'works all things'), Isa 46:9-11 (etsah H6098 'My counsel shall stand'), Acts 2:23 (hōrismenē boulē G1012 + prognōsis G4268), Acts 4:27-28 (proorizō G4309 'predestined'), Ps 33:11, Prov 19:21. The soft form (God has an eternal purpose and accomplishes it) is canonical. The WCF-strong form (every single event including human choices is decreed) is in-house contested among Reformed, Arminian, Wesleyan, Orthodox, and open-theist Christians, partly because of anthropopathic relent texts (Gen 6:6, Ex 32:14, 1 Sam 15:11, Jonah 3:10).",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Scoping is decisive. Soft form (God has an eternal purpose He freely and unchangeably brings to pass, Eph 1:11) is pan-canonical and worth dying for. The WCF-strong form (whatsoever comes to pass is decreed, including every free choice) is one defensible reading among historic Christian options. Classical Arminians, Wesleyans, Eastern Orthodox synergists, and open theists all reduce the scope of decrees without denying that God purposes and accomplishes His will. Setting cult_marker_if_denied=true would classify Wesley, Arminius, the Orthodox communion, and most Pentecostals as cults; that violates condition 2 of the cult-marker bar (canonical demonstration of the WCF-strong form is contested at the lexical level). Public-record carriers of broader denial include open theism (Pinnock, Sanders, Boyd) and process theology; these are minority positions, not gospel-stake."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "God has eternally and freely purposed all that comes to pass.",
+      "notes": "The stem 'eternally decrees whatsoever comes to pass, in a way consistent with creaturely responsibility' is a near-direct quotation of Westminster Confession 3.1. 'Decree' is heavily Reformed-confessional vocabulary, and the 'consistent with creaturely responsibility' rider is the WCF's own harmonization clause for compatibilism. Working a neutralized form prevents importing Reformed compatibilism before the lexical work is complete."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible teaches that God has an eternal plan and that He carries it out. Ephesians 1:11 says God works all things according to the counsel of His will. Isaiah 46:9-11 says God declares the end from the beginning and that His counsel shall stand and He will accomplish all His purpose. Acts 2:23 says Jesus was handed over by the definite plan and foreknowledge of God. Acts 4:27-28 says Herod, Pilate, the Gentiles, and Israel did what God's hand and plan had predestined to take place. Proverbs 19:21 says many are the plans in a man's heart, but the purpose of the LORD will stand. The complicating texts that critics point to are passages where Scripture says God 'was sorry' or 'relented.' Genesis 6:6 says the LORD was sorry He had made man. Exodus 32:14 says the LORD relented from the disaster after Moses prayed. 1 Samuel 15:11 says God regretted making Saul king, but verse 29 in the same chapter says God is not a man that He should change His mind. Jonah 3:10 says God relented when Nineveh repented. These passages either describe God speaking in human terms about real relational responses, or, on a stronger reading, they show that some divine plans are conditional. The verdict that God has an eternal purpose and accomplishes it stands across the canon. The harder question of whether every single event, including every human choice, is decreed in advance is genuinely contested among Bible-believing Christians.",
+      "denominational_landscape": "Every historic Christian lineage affirms that God has an eternal purpose that He brings to pass. Patristic writers like Augustine taught that God foreordains and providentially governs all things. The Catholic Catechism teaches God as the sovereign master of His plan who works through secondary causes while granting creatures real dignity of action. Lutheran confessions teach election to salvation in Christ but resist speculation about a decree of reprobation. The Formula of Concord limits election language to the gospel offer in Christ. Anglican Article 17 teaches God's everlasting purpose to deliver from curse those chosen in Christ. Reformed confessions go furthest: the Westminster Confession 3.1 says God ordains whatsoever comes to pass. Methodist and Wesleyan-Arminian traditions affirm God's eternal plan but teach that election is based on God's foreknowledge of who will believe and that some divine decrees are conditional on human response. Eastern Orthodox theology emphasizes synergy between God's grace and human will and avoids the Western framing of meticulous decrees. Anabaptist confessions trust providence quietly without philosophical decree systems. Pentecostal-Arminian groups like the Assemblies of God affirm God's sovereign purpose but reject the WCF-strong reading. The honest disagreement is within historic Christianity, not at its boundary. Public-record carriers of broader denial include open theists like Clark Pinnock, John Sanders, and Greg Boyd, and process theologians who deny that God has comprehensive foreknowledge of free creaturely choices. These are minority academic positions, not cults."
+    },
+    "scripture": [
+      {
+        "ref": "Eph.1.11",
+        "key_term": "prothesis G4286 (purpose) + boulē G1012 (counsel) + thelēma G2307 (will) + energeō G1754 (work)",
+        "force": "In Him we were also chosen, having been predestined according to the prothesis of Him who works all things according to the boulē of His thelēma. Deliberative-decree vocabulary stacked.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Isa.46.9-11",
+        "key_term": "etsah H6098 (counsel) + chefetz H2656 (good pleasure) + amar H559 (declare)",
+        "force": "Declaring the end from the beginning and from ancient times things not yet done, saying 'My counsel shall stand, and I will accomplish all My purpose.' Programmatic statement of decree-and-fulfillment.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.23",
+        "key_term": "hōrizō G3724 perfect passive (definite/marked out) + boulē G1012 + prognōsis G4268 (foreknowledge)",
+        "force": "Jesus delivered up by the hōrismenē boulē and prognōsis of God. Cross is both divinely decreed and humanly perpetrated.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.4.27-28",
+        "key_term": "boulē G1012 + proorizō G4309 (predestine)",
+        "force": "Herod, Pilate, Gentiles, and Israel did whatever Your hand and Your boulē proōrisen to take place. Wicked human agency concurrent with divine predetermination at the crucifixion.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Ps.33.11",
+        "key_term": "etsah H6098 (counsel) + amad H5975 (stand) + machashavah H4284 (thoughts/plans)",
+        "force": "The counsel of the LORD stands forever, the plans of His heart to all generations. Pan-historical durability of divine plan.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Prov.19.21",
+        "key_term": "machashavah H4284 (plans) + etsah H6098 (counsel) + qum H6965 (stand/arise)",
+        "force": "Many are the plans in a man's heart, but the counsel of the LORD will stand. Human plans subordinated to divine etsah.",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Dan.4.35",
+        "key_term": "tsebah H6634 (will, Aramaic) + machah H4223 (restrain)",
+        "force": "He does according to His will in the army of heaven and among the inhabitants of earth; none can restrain His hand. No creaturely veto over divine purpose.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["anthropomorphism", "merism"]
+      },
+      {
+        "ref": "Rom.8.28-30",
+        "key_term": "prothesis G4286 + proginōskō G4267 + proorizō G4309 + kaleō G2564 + dikaioō G1344 + doxazō G1392",
+        "force": "Those called according to His prothesis; whom He foreknew He also predestined. Golden chain locking divine purpose into eschatological completion.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.3.11",
+        "key_term": "prothesis G4286 + aiōn G165 (ages) + poieō G4160 (made/carried out)",
+        "force": "According to the eternal prothesis which He carried out in Christ Jesus our Lord. Eternal purpose realized historically in Christ.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gen.6.6",
+        "key_term": "nacham H5162 (regret/be sorry, Niphal) + atsav H6087 (be grieved)",
+        "force": "The LORD was sorry He had made man on the earth, and it grieved Him to His heart. Anthropopathic relent at human wickedness; pressure on meticulous-decree reading.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Exod.32.14",
+        "key_term": "nacham H5162 (relent)",
+        "force": "The LORD relented from the disaster He had spoken of bringing on His people, after Moses' intercession. Conditional plan altered by intercession on the text's surface.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "1Sam.15.11",
+        "key_term": "nacham H5162 (regret)",
+        "force": "I regret that I have made Saul king. Same chapter (15:29) states the Glory of Israel will not lie or have regret. Canonical juxtaposition forces accommodation reading.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Jonah.3.10",
+        "key_term": "nacham H5162 (relented, Niphal) + raah H7451 (disaster)",
+        "force": "God saw their works that they turned from their evil way, and God relented of the disaster He had said He would do. Real divine response to repentance.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Jer.18.7-10",
+        "key_term": "nacham H5162 (relent) + shuv H7725 (turn) + chashav H2803 (intend)",
+        "force": "If that nation turns from its evil, I will relent of the disaster I intended; and if it does evil, I will relent of the good I intended. Programmatic conditional pattern stated by God Himself.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "1Sam.15.29",
+        "key_term": "netzach H5331 (Glory/Enduring One) + nacham H5162 negated",
+        "force": "The Glory of Israel will not lie or have regret, for He is not a man that He should change His mind. Set against 15:11; classic accommodation crux.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Num.23.19",
+        "key_term": "ish H376 (man) + kazav H3576 (lie) + nacham H5162 negated",
+        "force": "God is not a man that He should lie, nor a son of man that He should change His mind. Has He said, and will He not do it? Affirms reliability of divine word.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Heb.6.17",
+        "key_term": "boulē G1012 + ametathetos G276 (unchangeable)",
+        "force": "God, desiring to show the unchangeable character of His boulē, guaranteed it with an oath. Decree-language applied to the gospel promise.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G4286",
+      "G1012",
+      "G2307",
+      "G1754",
+      "G4309",
+      "G4267",
+      "G4268",
+      "G3724",
+      "G276",
+      "G2564",
+      "G1344",
+      "G1392",
+      "H6098",
+      "H2656",
+      "H4284",
+      "H5975",
+      "H6965",
+      "H5162",
+      "H6087",
+      "H7451",
+      "H7725",
+      "H2803",
+      "H5331",
+      "H6634",
+      "H4223",
+      "H3576",
+      "H376"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "Reformed_compatibilism",
+        "classical_Arminianism",
+        "Wesleyan_Arminianism",
+        "Eastern_Orthodox_synergy",
+        "Lutheran_election_in_Christ_alone",
+        "open_theism",
+        "Molinism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed compatibilism (WCF 3.1)",
+          "verdict": "God from eternity ordained whatsoever comes to pass, including every human choice. Human choices remain voluntary and culpable as secondary causes. Relent passages are accommodation language; God does not literally change His mind. Strongest reading of Eph 1:11 and Acts 4:27-28."
+        },
+        {
+          "lens": "Classical Arminianism",
+          "verdict": "God exhaustively foreknows and providentially governs all things, but grants libertarian freedom. Election is based on foreseen faith. Some decrees are conditional. Relent passages reveal real divine responsiveness within sovereign superintendence."
+        },
+        {
+          "lens": "Wesleyan-Arminian",
+          "verdict": "Affirms God's eternal purpose and prevenient grace; rejects unconditional individual election and meticulous decree of every event. Conditional election in Christ. Stress on real human moral agency."
+        },
+        {
+          "lens": "Lutheran (Formula of Concord Art XI)",
+          "verdict": "Election to salvation in Christ is taught; God does not decree damnation. Limits decree language to the gospel offer. Rejects both Calvinist double predestination and Arminian foreseen-faith framing."
+        },
+        {
+          "lens": "Eastern Orthodox synergy",
+          "verdict": "God providentially governs all; salvation is synergistic cooperation between divine grace and human will. Avoids Augustinian decree systems entirely. The mystery of foreknowledge does not collapse into meticulous decree."
+        },
+        {
+          "lens": "Molinism (middle knowledge)",
+          "verdict": "God knows all counterfactuals of creaturely freedom and decrees by selecting which possible world to actualize. Preserves both meticulous providence and libertarian freedom; criticized by both Calvinists and open theists."
+        },
+        {
+          "lens": "Open theism",
+          "verdict": "God has decreed His overarching plan and key events but the future free choices of creatures are genuinely open even to God. Relent passages read more literally. Minority view; rejects exhaustive divine foreknowledge of contingents."
+        }
+      ],
+      "notes": "This is a deeply contested in-house question. All seven lenses affirm that God has an eternal purpose that He brings to pass (the soft form of the proposition). They divide sharply on whether that purpose extends to every single event including every free choice (the WCF-strong form). The lexical pressure comes from the prothesis/boulē/proorizō cluster on one side and the nacham (relent) cluster on the other. Honest verdict: affirms the soft form canonically; the WCF-strong form is one defensible reading, not the only one."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God 5.9 and On the Predestination of the Saints",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God's foreknowledge does not destroy the will, for our wills also are in that order of causes which is certain to God and embraced by His foreknowledge."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 600, 306 (Catholic Catechism on God's eternal plan)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "To God, all moments of time are present in their immediacy. His eternal plan of predestination embraces every man's free response to His grace."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration XI (Election)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "God's eternal election in Christ is the cause of salvation; but God does not will sin, nor does He decree any to damnation. Limits decree language to the gospel."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles, Article 17 (Of Predestination and Election)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Predestination to Life is the everlasting purpose of God, whereby He hath constantly decreed by His counsel secret to us, to deliver from curse those whom He hath chosen in Christ."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 3.1-3.2",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God, from all eternity, did, by the most wise and holy counsel of His own will, freely, and unchangeably ordain whatsoever comes to pass."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion (Wesley's abridgement) and Wesley sermons on Predestination",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Wesley affirms God's eternal purpose and prevenient grace but rejects unconditional decree of reprobation. Election is conditional on foreseen faith in Christ."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527) and Mennonite quiet trust in providence",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Trust in God's providential ordering for the suffering church without speculative decree theology. Anabaptists declined Augustinian-Reformed decree frameworks."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 2 and 5",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "The eternally self-existent I AM; salvation through faith. AG holds Arminian doctrine of conditional election, not unconditional decree of every event."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA doctrine summary; John of Damascus, Exact Exposition of the Orthodox Faith 2.29",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "God foreknows all things but does not predetermine all things. He desires all to be saved; He does not impose His will on free creatures. Synergy not decree."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "prothesis G4286 (purpose) + boule G1012 (counsel) + thelema G2307 (will) + energeo G1754 (work): the One who works all things according to the counsel of His will."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/isaiah/46-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "etsah H6098 (counsel) + qum H6965 (stand): My counsel shall stand, and I will do all My pleasure (chefetz H2656)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-23.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "horismene boule G1012 + prognosei G4268: the definite plan and foreknowledge of God. Cross simultaneously decreed and humanly perpetrated."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/4-28.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "proorisen G4309 (predestined) genesthai: whatever Your hand and Your counsel predestined to come about. Concurrence of human evil and divine plan."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4286.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "prothesis G4286: setting forth, purpose; 12 NT occurrences; used of God's eternal purpose in Eph 1:11, Eph 3:11, Rom 8:28, 2 Tim 1:9."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4309.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "proorizo G4309: to predetermine, foreordain; 6 NT occurrences; Acts 4:28, Rom 8:29-30, 1 Cor 2:7, Eph 1:5, Eph 1:11. Concentrated NT decree vocabulary."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/5162.htm",
+        "category": "primary_repository",
+        "stance": "complicates",
+        "quote": "nacham H5162: be sorry, console oneself, relent; 108 OT occurrences; covers both God-relenting passages and Num 23:19 / 1 Sam 15:29 denial of regret."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/6-6.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "vayinachem YHWH ki asah: the LORD was sorry He had made man. Niphal of nacham H5162 with grief-of-heart accompaniment."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jonah/3-10.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "vayinachem ha-elohim al ha-raah: God relented of the disaster He had said He would do to them, after they turned from their evil way."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf102/npnf102.iv.V.9.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine, City of God 5.9: our wills also are in that order of causes which is certain to God and embraced by His foreknowledge; foreknowledge does not destroy will."
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 17: Predestination to Life is the everlasting purpose of God, whereby He hath constantly decreed to deliver from curse those whom He hath chosen in Christ."
+      },
+      {
+        "url": "https://bookofconcord.org/solid-declaration/election/",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Formula of Concord SD XI: God's election in Christ is the cause of salvation; God does not will sin nor decree any to damnation. Limits decree to gospel offer."
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "AG Statement Article 2 and 5: the eternally self-existent I AM and salvation through faith. AG holds Arminian conditional election, not unconditional decree of every event."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Orthodox doctrine teaches God's providence and foreknowledge but rejects Western decree systems; synergy between grace and will is central."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Methodist Article 1: One living and true God of infinite power, wisdom, and goodness. Wesleyan tradition rejects unconditional decree of reprobation in favor of conditional election."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

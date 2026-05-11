@@ -1,0 +1,271 @@
+{
+  "id": "doc-roman-seven-sacrament-system-denial",
+  "answer": {
+    "id": "doc-roman-seven-sacrament-system-denial",
+    "affirms": true,
+    "rationale": "Only two rites in the NT carry an explicit dominical institution with a perpetual command of observance for all believers: baptism (Matt 28:19 μαθητεύσατε mathēteusate G3100 aorist imperative plus βαπτίζοντες baptizontes G907 participle of means, the commission to all nations) and the Lord's Supper (Luke 22:19 and 1 Cor 11:24-25 τοῦτο ποιεῖτε touto poieite G3778 G4160 present imperative, with the perpetuity marker ὁσάκις hosakis G3740 as often as in 1 Cor 11:26). The other five rites (confirmation, penance, anointing of the sick, holy orders, matrimony) lack an analogous explicit dominical institution with a perpetual ordinance command; the practices behind them are biblical (laying on of hands, mutual confession James 5:16 ἐξομολογεῖσθε exomologeisthe G1843, anointing the sick James 5:14, appointing elders Acts 14:23 Titus 1:5, marriage Heb 13:4) but the elevation of all seven to dominically instituted sacraments was a medieval Western development (Peter Lombard c. 1150, dogmatized at Trent 1547 Session 7). The Catholic appeal to Eph 5:32 μυστήριον mystērion G3466 for matrimony rests on the Vulgate's translation of mystērion as sacramentum, which the Greek lexical record does not support: mystērion in its 28 NT occurrences denotes hidden plan now revealed, not a sacramental rite.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Stem audit flags this question as carrying Protestant-Reformation polemic vocabulary (denial of the Roman seven-sacrament system) framed against Catholic-Orthodox dogma. The neutralized form preserves the lexical-historical question: which rites in the NT carry an explicit dominical institution with a perpetual ordinance command, and on what basis are the others classified as sacraments. The lexical case for two as the perpetually commanded dominical ordinances is clean: baptism has the Great Commission imperative with a participle of means (Matt 28:19), and the Lord's Supper has the present imperative touto poieite with the perpetuity marker hosakis (1 Cor 11:24-26). The other five rites have biblical backing for the underlying practice but lack a parallel dominical institution-plus-perpetual-command pattern: confirmation's NT footprint is the apostolic laying on of hands in Acts 8:14-17 and 19:6, which is a descriptive narrative rather than a prescriptive rite of separate confirmation; penance's NT footprint is mutual confession in James 5:16 (exomologeisthe present imperative middle, reciprocal allelois G240, peer-to-peer) rather than priestly absolution; anointing of the sick has James 5:14 as its anchor (aleipho G218 anointing with oil for healing, prayer of faith) but does not match the medieval Western extreme-unction development extending to death-anointing; holy orders has Acts 14:23 and Titus 1:5 for appointing elders (cheirotoneo G5500, kathistemi G2525) without sacramental priesthood language (cf doc-elders-not-sacerdotal); matrimony has Heb 13:4 honoring marriage and Eph 5:32 calling marriage a mystērion, but mystērion across its 28 NT occurrences means revealed-hidden-plan, not a sacramental rite. The Catholic and Orthodox seven-sacrament count is a real historical development with theological coherence within sacramental ecclesiology; it is not a NT lexical demand. would_die_for is false because the gospel is not at stake. Whether the church recognizes two or seven sacraments is downstream of the gospel itself. cult_marker_if_denied is false because Catholics, Orthodox, and Oriental Orthodox who confess seven sacraments are inside historic Christianity, holding the same Nicene faith, the same Christ, the same gospel of grace through faith in Christ's once-for-all sacrifice. They are not cults for affirming seven. Protestants are not cults for affirming two. Carriers of two-only: Lutheran (Augsburg XIII and Apology XIII discuss the question with some flexibility but settle around two as proper sacraments of the gospel, with confession-absolution sometimes listed as a third in a loose sense), Reformed (Westminster Confession 27.4 explicitly says there are only two sacraments ordained by Christ in the gospel, Belgic 33, Heidelberg 68), Anglican (Article 25, the five commonly called sacraments are not to be counted as sacraments of the Gospel), Methodist (Wesley's abridgement of the 39 Articles, Article 16, retains the two-sacrament view), Anabaptist and Baptist (universal two-ordinance position), Pentecostal (Assemblies of God, two ordinances), Plymouth Brethren (Open and Exclusive, two ordinances called the breaking of bread and baptism). Carriers of seven: Roman Catholic (CCC 1113-1134, 1210-1212, Trent Session 7 Canon 1 dogmatized seven sacraments instituted by Christ), Eastern Orthodox (seven mysteries with the qualification that the broader Orthodox tradition sees the whole life of the church as sacramental, so the count of seven is not as numerically locked as in Rome), Oriental Orthodox (similar to Eastern Orthodox), some high-church Anglo-Catholics in the Anglican communion. Public-record cult or heterodox carriers are not the issue here; the seven-versus-two split is an internal Christian disagreement, not a cult marker. The deepest question the reader should hold: the Catholic claim is not just that the church recognizes seven sacraments but that Christ himself instituted seven. The NT records explicit institution language for two (Matt 28:19 and the institution narratives of the Lord's Supper) and apostolic practice for the underlying activities of the other five, without an analogous explicit dominical institution. Catholics respond by appealing to oral tradition and the church's apostolic authority to recognize sacraments in addition to those explicitly named in Scripture; that is a different theological framework (Scripture plus Tradition as joint authority versus Scripture alone as the rule of faith). Engagement booleans: would_visit and would_participate are true because attending and participating in a Catholic or Orthodox liturgy does not require believing all seven are dominically instituted in the strict sense. would_serve and would_be_member are false because formal membership and service in a Catholic or Orthodox communion require sacramental participation in rites the reader does not hold to be dominically instituted, including in some cases formal confession to a priest and confirmation. would_let_children_be_taught is true with the caveat that the reader would want the Scripture-based two-ordinance reading also taught. would_marry is true. would_publicly_correct is true because the lexical-historical case is worth defending in honest dialogue, not because the holders of seven are outside Christianity."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "How many rites does the NT explicitly identify as instituted by Christ with a perpetual command of observance for all believers, and on what lexical and historical basis have other rites been classified as sacraments?",
+      "notes": "The stem names the Roman seven-sacrament system as the thing to be denied, which pre-loads the Protestant-Reformation verdict against the Catholic-Orthodox dogma. The neutralized form asks the lexical-historical question without assuming the Protestant reading. Flag stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "The question is how many sacraments or ordinances the New Testament names as commanded by Jesus himself for the whole church to keep. The strongest reason for the answer two is what the New Testament actually says. Jesus gives an explicit command to baptize all nations at the end of Matthew (Matthew 28:19), and he gives an explicit command at the Last Supper to take bread and cup in remembrance of him (Luke 22:19 and 1 Corinthians 11:24-25, with Paul adding in 11:26 that this is to be done as often as you eat and drink, until he comes). Both of these rites have the same pattern: Jesus institutes them, gives a clear command in the imperative mood, and signals that the practice is to continue. No other rite in the New Testament has the same pattern of explicit institution by Jesus with a perpetual command for the whole church. The underlying practices of confirmation, confession, anointing the sick, ordaining leaders, and marriage all appear in the New Testament. Apostles lay hands on new believers in Acts 8 and Acts 19. James 5:16 tells believers to confess sins to one another. James 5:14 tells the sick to call for the elders to be anointed with oil and prayed over. Acts 14:23 and Titus 1:5 record the appointment of elders in the churches. Marriage is honored in Hebrews 13:4. But none of these practices receive the same kind of explicit dominical institution and perpetual command that baptism and the Lord's Supper receive. The strongest counterargument is that the Catholic and Orthodox traditions appeal to two things together: the church's apostolic authority to recognize what is sacramental, and a reading of Ephesians 5:32 where Paul calls marriage a mystery (in Greek, mysterion). The old Latin Bible translated mysterion as sacramentum, and the medieval Western theologians built on that translation to elevate marriage to a sacrament. But across all 28 places where the New Testament uses mysterion, it means a hidden plan of God now revealed, not a sacramental rite. So the lexical case for the Catholic appeal is weak. The honest verdict: the New Testament names two rites with explicit dominical institution and a perpetual command for the church. Beyond those two, the church can recognize the importance of the underlying practices and can debate whether to call them sacraments, but the New Testament itself does not make that move. This is an in-house Christian disagreement, not a gospel-level question. Catholics, Orthodox, and Protestants who hold different counts all confess the same Christ and the same gospel.",
+      "denominational_landscape": "Christians divide on this question along a deep historical line that runs through the Reformation. The seven-sacrament count is held by the Roman Catholic Church, by the Eastern Orthodox Church, and by the Oriental Orthodox churches. The Roman Catholic Catechism (paragraphs 1113 through 1134 and 1210 through 1212) lists seven sacraments instituted by Christ: baptism, confirmation, eucharist, penance and reconciliation, anointing of the sick, holy orders, and matrimony. The Council of Trent in 1547 (Session 7) dogmatized this count, declaring that anyone who says there are more or fewer than seven sacraments instituted by Christ is anathema. The Eastern Orthodox tradition also counts seven mysteries (baptism, chrismation, eucharist, penance, holy unction, matrimony, holy orders), though Orthodox theology adds that the whole life of the church is sacramental, so the count of seven is less rigidly locked than in Rome. The two-sacrament count is held universally across Protestantism. Lutheran confessions (Augsburg Article XIII and the Apology Article XIII) center on baptism and the Lord's Supper as proper sacraments of the gospel, with confession and absolution sometimes treated as a third in a loose sense. The Reformed tradition (Westminster Confession 27.4, Belgic Confession 33, Heidelberg Catechism 68) explicitly limits sacraments to two ordained by Christ. The Anglican Thirty-Nine Articles in Article 25 state that there are two sacraments of the gospel, namely baptism and the Lord's Supper, and that the five commonly called sacraments (confirmation, penance, orders, matrimony, extreme unction) are not to be counted as sacraments of the gospel in the same sense. Methodist teaching (Wesley's abridgement of the 39 Articles, Article 16) retains the two-sacrament view. Anabaptist and Baptist bodies universally hold two ordinances. Pentecostal bodies (Assemblies of God, others) hold two ordinances. Plymouth Brethren hold two, called the breaking of bread and baptism. The Catholic and Orthodox positions are inside historic Christianity, not heterodox. This is not a cult-marker question. The reader who is Brethren-formed lands on two ordinances by lexical reading; the reader's Catholic and Orthodox brothers and sisters land on seven by an ecclesial framework that combines Scripture and apostolic tradition. Both confess the same Christ and the same gospel."
+    },
+    "scripture": [
+      {
+        "ref": "Matt.28.19",
+        "key_term": "μαθητεύσατε mathēteusate G3100 (make disciples, aorist imperative active 2nd plural); βαπτίζοντες baptizontes G907 (baptizing, present participle active); ὄνομα onoma G3686 (name); πάντα τὰ ἔθνη panta ta ethne G3956 G1484 (all the nations)",
+        "force": "The Great Commission contains a single main imperative (make disciples) modified by two participles describing how disciples are made (baptizing them and teaching them). The baptizing participle is a participle of means and inherits the imperative force of the main verb. The scope is universal (all the nations), the institutional authority is the risen Christ's (all authority in heaven and earth), and the practice is built into the constitutive activity of disciple-making. This is the dominical institution of baptism as a perpetual ordinance for the church.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.26.26-28",
+        "key_term": "λάβετε labete G2983 (take, aorist imperative active 2nd plural); φάγετε phagete G5315 (eat, aorist imperative active 2nd plural); τοῦτό ἐστιν touto estin G3778 G1510 (this is); διαθήκης diathekes G1242 (covenant); ἁμαρτιῶν hamartion G266 (sins)",
+        "force": "Jesus institutes the Lord's Supper at the Passover meal with two explicit imperatives (take and eat) and the predication this is my body. The parallel for the cup adds the covenantal force (this is my blood of the covenant, for many, for forgiveness of sins). The dominical institution of the supper is direct, explicit, and tied to the new covenant.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Luke.22.19",
+        "key_term": "τοῦτο touto G3778 (this, accusative neuter singular); ποιεῖτε poieite G4160 (do, present imperative active 2nd plural); ἀνάμνησιν anamnesin G364 (remembrance, accusative feminine singular)",
+        "force": "Luke alone (in the synoptic institution narratives) and Paul together record the explicit perpetuity command: do this in remembrance of me. The present imperative poieite signals ongoing action, not a one-time act. The noun anamnesis (occurring four times in the NT: Luke 22:19, 1 Cor 11:24, 1 Cor 11:25, Heb 10:3) frames the action as a deliberate commemoration. This is the lexical hinge that turns the institution narrative into a perpetual ordinance for the church.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.23-26",
+        "key_term": "παρέδωκα paredoka G3860 (delivered, aorist active); τοῦτο ποιεῖτε touto poieite G3778 G4160 (do this, present imperative active); ἀνάμνησιν anamnesin G364 (remembrance); ὁσάκις hosakis G3740 (as often as); καταγγέλλετε katangellete G2605 (you proclaim, present indicative active); ἄχρι οὗ ἂν ἔλθῃ achri hou an elthe G891 G3739 G302 G2064 (until he comes)",
+        "force": "Paul records the institution as a tradition received from the Lord (paredoka, the same verb used for handing on apostolic tradition) and twice repeats the perpetuity command touto poieite (do this in remembrance of me). Verse 26 adds the temporal marker hosakis (as often as you eat this bread and drink the cup) and the eschatological terminus achri hou an elthe (until he comes). The combination locks the Lord's Supper as a perpetual ordinance of the church from institution to Christ's return.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.14-17",
+        "key_term": "ἐπετίθεσαν epetithesan G2007 (they were laying on, imperfect active); χεῖρας cheiras G5495 (hands); ἐλάμβανον elambanon G2983 (they were receiving); πνεῦμα ἅγιον pneuma hagion G4151 G40 (Holy Spirit)",
+        "force": "Peter and John lay hands on the Samaritan believers who had been baptized in the name of the Lord Jesus, and the Samaritans receive the Holy Spirit. This is the strongest NT proof-text for confirmation. The lexical evidence is narrative-descriptive: the imperfect tense describes apostolic practice in this specific situation, without an explicit dominical institution language or a perpetual command for the church to repeat a separate confirmation rite. Acts 19:6 (Paul and the Ephesian disciples) is the parallel narrative. The practice is biblical; the elevation of this apostolic laying-on-of-hands to a separate sacrament with its own dominical institution does not have the same lexical footprint as baptism or the supper.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Jas.5.14-16",
+        "key_term": "ἀσθενεῖ asthenei G770 (is sick); προσκαλεσάσθω proskalesastho G4341 (let him call, aorist imperative middle); πρεσβυτέρους presbyterous G4245 (elders); ἀλείψαντες aleipsantes G218 (anointing, aorist participle active); ἐλαίῳ elaio G1637 (with oil); ἐξομολογεῖσθε exomologeisthe G1843 (confess, present imperative middle); ἀλλήλοις allelois G240 (to one another); ἁμαρτίας hamartias G266 (sins)",
+        "force": "James gives clear instructions for two practices that became sacramentalized in the medieval Western church: anointing of the sick with oil by the elders accompanied by prayer (the underlying basis for what became extreme unction or anointing of the sick), and mutual confession of sins to one another (the underlying basis for what became sacramental penance and absolution). Two lexical observations are decisive. First, James 5:14 is anointing for healing (proseuxasthosan, let them pray, and verse 15 the prayer of faith will save the one who is sick), not anointing as preparation for death; the medieval extension to extreme unction is a post-apostolic development. Second, James 5:16 uses a reciprocal pronoun (allelois, to one another) with a middle-voice present imperative (exomologeisthe, confess), signaling mutual peer-to-peer confession in the congregation, not priestly absolution. The underlying practices are biblical; the sacramentalized forms with priestly mediation are a development beyond the lexical text.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.5.32",
+        "key_term": "μυστήριον mysterion G3466 (mystery, nominative neuter singular); μέγα mega G3173 (great); λέγω lego G3004 (I speak); εἰς Χριστὸν eis Christon G1519 G5547 (concerning Christ); καὶ εἰς τὴν ἐκκλησίαν kai eis ten ekklesian G2532 G1577 (and concerning the church)",
+        "force": "Paul calls the one-flesh union of husband and wife a great mysterion and applies the mystery to Christ and the church. The Latin Vulgate translated mysterion in this verse as sacramentum, and medieval Western theologians built on the Vulgate's rendering to elevate marriage to a sacrament. But the Greek lexical record is unambiguous: mysterion across its 28 NT occurrences denotes a hidden plan of God now revealed (Mark 4:11, Rom 16:25-26, 1 Cor 2:7, Eph 1:9, Eph 3:3-9, Col 1:26-27, 1 Tim 3:9, Rev 1:20, Rev 10:7), not a sacramental rite. The lexical case for elevating marriage to a sacrament from this verse does not stand on the Greek; it stands on the Latin translation.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor", "typology"]
+      },
+      {
+        "ref": "Heb.13.4",
+        "key_term": "τίμιος timios G5093 (honored, precious); γάμος gamos G1062 (marriage); κοίτη koite G2845 (bed)",
+        "force": "The author of Hebrews calls marriage timios (honored, precious) in all and the marriage bed undefiled. The text honors marriage as a creation-good (Gen 2:24 anchor) but does not elevate marriage to a sacrament conveying a special infusion of grace. The lexical force is ethical (honor marriage, keep it undefiled) rather than sacramental.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.14.23",
+        "key_term": "χειροτονήσαντες cheirotonesantes G5500 (having appointed by hand-stretching, aorist participle active); πρεσβυτέρους presbyterous G4245 (elders); κατ ἐκκλησίαν kat ekklesian G2596 G1577 (in every church)",
+        "force": "Paul and Barnabas appoint elders in every church on the return leg of the first missionary journey. The verb cheirotoneo (to appoint, to vote by raising hands) is the operative term. Titus 1:5 is the parallel command (kathistemi G2525, to appoint). The lexical pattern names a real apostolic ordering of the church but does not name a sacramental sacerdotal priesthood (cf doc-elders-not-sacerdotal). Holy orders as a sacrament rests on linking ordination of elders to the sacramental priesthood, which the NT lexical pattern does not authorize.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G907",
+      "G3100",
+      "G4160",
+      "G364",
+      "G3740",
+      "G3466",
+      "G218",
+      "G1843",
+      "G240",
+      "G2007",
+      "G5495",
+      "G5500",
+      "G2525",
+      "G4245",
+      "G1062",
+      "G2983",
+      "G5315",
+      "G3778"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "grammatico-historical with Scripture as sole rule of faith",
+          "verdict": "two ordinances: only baptism and the Lord's Supper carry explicit dominical institution with a perpetual command for the church"
+        },
+        {
+          "lens": "Catholic Scripture plus apostolic Tradition as joint authority",
+          "verdict": "seven sacraments: the church's apostolic teaching authority recognizes seven sacraments instituted by Christ, with the institution sometimes implicit (as for matrimony via Eph 5:32 mysterion) rather than explicit"
+        },
+        {
+          "lens": "Eastern Orthodox sacramental ecclesiology",
+          "verdict": "seven mysteries by conventional count, but the whole life of the church is sacramental, so the count itself is not rigidly numerical"
+        }
+      ],
+      "notes": "The verdict turns on the rule of faith question (Scripture alone versus Scripture plus Tradition) more than on a disputed lexical reading of a single passage. On Scripture alone, only two rites carry explicit dominical institution with perpetual command. On Scripture plus Tradition, the church's apostolic authority is sufficient to recognize seven. The lexical case against treating mysterion in Eph 5:32 as sacramentum is decisive within the NT Greek; the lexical case for two as the only explicitly dominically instituted ordinances is decisive within the NT institution narratives. Beyond those points, the question is about the rule of faith framework, not about disputed lexical readings."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 1113",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Among liturgical celebrations there are seven that are, in the strict sense of the term, sacraments instituted by the Lord."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Sacraments",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Usually seven sacraments are counted: baptism, chrismation, holy eucharist, penance, matrimony, holy orders and the unction of the sick."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XIII and Apology XIII",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Apology XIII discusses three loosely (baptism, supper, absolution) but settles around two as proper sacraments of the gospel; medieval seven is not retained."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles, Article 25 Of the Sacraments",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There are two Sacraments ordained of Christ our Lord in the Gospel, that is to say, Baptism, and the Supper of the Lord. Those five commonly called Sacraments are not to be counted for Sacraments of the Gospel."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 27.4",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There be only two sacraments ordained by Christ our Lord in the gospel, that is to say, baptism and the supper of the Lord."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Wesley abridgement of the 39 Articles, Article 16",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Two Sacraments ordained of Christ, baptism and the Lord's Supper; the five commonly called Sacraments are not to be counted for Sacraments of the Gospel."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527, Articles I and III",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Baptism and the breaking of bread are the two ordinances of the church; no seven-sacrament system."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Two ordinances of the church: water baptism by immersion and the Lord's Supper."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/matthew/28-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "matheteusate aorist imperative active 2nd plural; baptizontes present participle active functioning as participle of means; explicit dominical institution of baptism."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "poieite present imperative active commands ongoing action; anamnesin frames the action as commemorative; perpetuity of the Lord's Supper as ordinance is lexically explicit."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/luke/22-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "touto poieite eis ten emen anamnesin: do this in my remembrance; present imperative signals continuing practice for the church."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3466.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "mysterion appears 28 times in the NT consistently meaning hidden plan now revealed, not sacramental rite; Vulgate sacramentum was a translation choice, not the word's inherent meaning."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/5-32.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Greek lexical data does not support translating mysterion as sacrament; modern translations render as mystery or secret; sacramentum is a theological interpretation, not a translation."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/james/5-14.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "aleipho anointing with oil for healing in James 5:14; the passage uses imperative directives but contains no explicit claim of Christ's perpetual institution of a separate confirmation or extreme unction rite."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/james/5-16.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "exomologeisthe present imperative middle with reciprocal allelois indicates mutual peer-to-peer confession in the believing community, not hierarchical priestly absolution."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/8-17.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Acts 8:17 describes apostolic laying on of hands as a specific historical event; no prescriptive language commanding future generations to replicate this as a mandatory institution."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P31.HTM",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "CCC 1117: Among liturgical celebrations there are seven that are, in the strict sense of the term, sacraments instituted by the Lord."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/the-sacraments",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Usually seven sacraments are counted: baptism, chrismation, holy eucharist, penance, matrimony, holy orders and the unction of the sick; broader Orthodox view sees all of church life as sacramental."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-paywalled",
+      "apparatus-vs-counter-witness-conflict"
+    ]
+  }
+}

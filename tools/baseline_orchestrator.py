@@ -431,8 +431,12 @@ Write to: evidence/{qid}.json (relative to repo root).
 - Concise. No emoji. No filler.
 - Cite full URLs.
 - Counter-witness key_phrase / web quote ≤200 chars.
-- Final action: Write evidence/{qid}.json. Then return a one-sentence summary
-  of verdict + confidence to the orchestrator.
+- Final action: Write evidence/{qid}.json. Then run the PDF renderer with the
+  Bash tool: `uv run python tools/evidence_to_pdf.py evidence/{qid}.json` from
+  the project root. The script writes `evidence/{qid}.pdf` next to the JSON.
+  If the renderer exits non-zero, capture the stderr in your reply so the
+  orchestrator can fix and re-run. Then return a one-sentence summary of
+  verdict + confidence to the orchestrator.
 """
 
 
@@ -586,7 +590,7 @@ def validate(qid: str) -> tuple[bool, list[str]]:
         errs.append("evidence.concordance_lemmas_traversed-empty")
     else:
         for lem in lemmas:
-            if not (isinstance(lem, str) and (lem.startswith("G") or lem.startswith("H"))):
+            if not (isinstance(lem, str) and (lem.startswith("G") or lem.startswith("H") or lem.startswith("A"))):
                 errs.append(f"evidence.concordance_lemmas_traversed.{lem}-not-strongs")
 
     # complicating_texts_searched mandatory true

@@ -1,0 +1,464 @@
+{
+  "id": "doc-church-body-of-christ",
+  "answer": {
+    "id": "doc-church-body-of-christ",
+    "affirms": true,
+    "rationale": "Pan-canonical Pauline lexical demonstration: the church (ἐκκλησία ekklēsia G1577, etymologically the called-out assembly) IS the body (σῶμα sōma G4983) of Christ (Χριστός Christos G5547), with Christ as head (κεφαλή kephalē G2776) and believers as members (μέλη melē G3196) one of another (ἀλλήλων allēlōn G240). 1 Cor 12:12-13, 27 anchors the identification: 'just as the body is one and has many members, all the members of the body, though many, are one body, so it is with Christ; for in one Spirit (ἐν ἑνὶ Πνεύματι) we were all baptized (ἐβαπτίσθημεν G907) into one body (εἰς ἓν σῶμα)... now you are the body of Christ (σῶμα Χριστοῦ) and individually members of it (μέλη ἐκ μέρους).' Rom 12:4-5 'as in one body we have many members and the members do not all have the same function, so we, though many, are one body (ἓν σῶμα) in Christ and individually members one of another (ἀλλήλων μέλη).' Eph 1:22-23 places Christ as head over all things to the church (τῇ ἐκκλησίᾳ), 'which is his body (τὸ σῶμα αὐτοῦ), the fullness (τὸ πλήρωμα plērōma G4138) of him who fills all in all.' Eph 4:4-6 lists the seven unities anchored in one body: ἓν σῶμα, ἓν πνεῦμα, μία ἐλπίς, εἷς κύριος, μία πίστις, ἓν βάπτισμα, εἷς θεὸς καὶ πατήρ. Eph 4:15-16 develops the organic-growth pattern: 'speaking the truth in love, we are to grow up (αὐξήσωμεν G837) in every way into him who is the head, into Christ, from whom the whole body (πᾶν τὸ σῶμα), joined and held together by every joint with which it is equipped, when each part is working properly, makes the body grow.' Eph 5:23, 29-30 reinforces: Christ is the head of the church, the savior of the body (σωτὴρ τοῦ σώματος); 'we are members of his body (μέλη ἐσμὲν τοῦ σώματος αὐτοῦ).' Col 1:18 'and he is the head of the body, the church (ἡ κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας).' Col 1:24, 2:19 reinforce headship and growth. 1 Cor 10:17 grounds the body-identity in eucharistic participation: 'because there is one bread (εἷς ἄρτος G740), we who are many are one body (ἓν σῶμα), for we all partake (μετέχομεν G3348) of the one bread.' The σῶμα-of-Christ lemma-network occurs across Romans, 1 Corinthians, Ephesians, and Colossians in at least twelve ecclesiological occurrences (Rom 12:5; 1 Cor 10:16-17, 12:13, 12:27; Eph 1:23, 2:16, 4:12, 4:15-16, 5:23, 5:30; Col 1:18, 1:24, 2:19). The doctrine is pan-canonical at the lexical level in the Pauline corpus and undisputed in tracked Christian lineages.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "This is one of the most universally affirmed ecclesiological doctrines across every tracked Christian lineage. The patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, and Eastern Orthodox traditions all confess that the church is the body of Christ. Augustine's totus Christus (the whole Christ, head and members together) is the patristic framing; Pius XII's Mystici Corporis Christi (1943) is the most expansive Catholic magisterial development; CCC 787-796 systematizes the Catholic teaching; Augsburg VII frames the church as the assembly of believers where the gospel is rightly taught and the sacraments rightly administered; Article XIX of the 39 Articles and the parallel Methodist Article XIII define the visible church as a congregation of faithful men in which the pure Word of God is preached and the sacraments duly administered. Eastern Orthodox ecclesiology grounds the body of Christ in eucharistic communion: the eucharist makes the church. Public-record carriers of explicit denial of body-of-Christ ecclesiology are very rare; no major Christian or heterodox movement is on confessional record denying that believers form Christ's body. Radically individualist 'Christianity without church' movements implicitly deny corporate-body ecclesiology, but this is a fringe stance without institutional carriers. Cult-marker bar is set conservatively at false because no major denominational lineage or heterodox movement is on public record denying that the church is the body of Christ; cult and heterodox movements (Mormonism, Jehovah's Witnesses, Iglesia ni Cristo) typically AFFIRM their own version of the body of Christ while denying Trinity, Christ's full deity, or sola fide, so the dividing line falls elsewhere. would_die_for is true because the doctrine is gospel-implicated: the believer's union with Christ as a member of his body IS the relational shape of salvation in Eph 1:22-23, 1 Cor 12:27, Eph 5:30. To surrender the conviction that the church is Christ's body is to surrender Paul's central ecclesiological framing. Boolean pattern marks this as gospel-essential without cult-marker entailment. Note on scope: this evidence file affirms the lexical-Pauline doctrine that the church is the body of Christ. It does NOT adjudicate downstream questions about (a) the dispensational thesis that the body of Christ runs only from Pentecost to the rapture and is distinct from Israel, (b) the timing of the rapture, (c) sacramental theories of how communicants enter the body, (d) the visible-invisible distinction. Those are separate questions; this question concerns only the body-of-Christ identification itself, which is pan-canonical and uncontested. Fruit-vs-precision nuance: lay believers across all lineages know themselves as members of Christ's body when they partake of the one bread (1 Cor 10:17); the academic question of where the body of Christ begins and ends in salvation-history is downstream of the identification itself."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": "The Church is the body of Christ, the community of believers united to him as head and to one another as members.",
+      "notes": "The question.statement contains two layers. Layer 1 (the body-of-Christ identification) is pan-canonical Pauline doctrine: not preloaded, no Reformed-distinctive vocabulary; lexically settled. Layer 2 (the dispensational qualification 'composed of all true believers from Pentecost to the rapture, united to Christ by the indwelling Holy Spirit') imports a specific eschatological framework that is NOT pan-canonical in the way the body-of-Christ identification is. The orchestrator's anchor list focuses on the body-of-Christ identification itself; this evidence file works the neutralized form on layer 1 (the lexically settled identification) and notes in answer.notes that dispensational rapture-timing and Israel-Church distinction are downstream questions handled separately. No stem-pre-loaded-verdict flag because layer 1 IS what the apparatus + interlinear deliver."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: yes, the Bible teaches that the church is the body of Christ. Christ is the head, believers are the members, and the members are united to each other through their union with Christ. The strongest reason from Scripture is 1 Corinthians 12 verses 12 and 13 and 27. Paul writes, just as the body is one and has many members, and all the members of the body, though many, are one body, so it is with Christ. For in one Spirit we were all baptized into one body, Jews or Greeks, slaves or free, and all were made to drink of one Spirit. Then in verse 27, Now you are the body of Christ and individually members of it. The same teaching appears in Romans 12 verses 4 and 5: as in one body we have many members, and the members do not all have the same function, so we, though many, are one body in Christ, and individually members one of another. Ephesians 1 verses 22 and 23 says God put all things under his feet and gave him as head over all things to the church, which is his body, the fullness of him who fills all in all. Ephesians 4 verses 4 through 6 lists seven unities that anchor the church: one body, one Spirit, one hope, one Lord, one faith, one baptism, one God and Father of all. Ephesians 4 verses 15 and 16 describes the organic growth of the body: speaking the truth in love, we are to grow up in every way into him who is the head, into Christ, from whom the whole body, joined and held together by every joint with which it is equipped, makes the body grow so that it builds itself up in love. Ephesians 5 verses 29 and 30 says we are members of his body. Colossians 1 verse 18 says, and he is the head of the body, the church. 1 Corinthians 10 verse 17 says, because there is one bread, we who are many are one body, for we all partake of the one bread. There is no significant counterargument from inside the Bible. The complicating texture is downstream: when does this body of Christ begin and end in salvation history, and how does it relate to ethnic Israel? Those are separate questions. The identification itself, that the church IS the body of Christ, sits across Romans, 1 Corinthians, Ephesians, and Colossians in at least a dozen named passages. The teaching does not depend on any single text or any one interpretive lens; it is woven across Paul's letters as a settled framework.",
+      "denominational_landscape": "This doctrine is universally affirmed across every major Christian lineage with no significant institutional dissent. The early church fathers including Tertullian, Cyprian, and Augustine speak of the church as Christ's body. Augustine develops the totus Christus framework, which says Christ and his church together form one whole Christ, head and members in inseparable union. The Catholic Church teaches this doctrine extensively. Catechism of the Catholic Church paragraphs 787 through 796 systematize the body-of-Christ teaching, with paragraph 792 saying Christ is the head of the body, the church. Pope Pius XII's encyclical Mystici Corporis Christi from 1943 is the most expansive Catholic magisterial treatment, integrating the mystical body with the visible institutional church. Lutheran teaching in the Augsburg Confession Article VII defines the church as the assembly of all believers where the gospel is rightly taught and the sacraments rightly administered, and Lutheran tradition fully affirms the body-of-Christ identification. The Anglican 39 Articles, Article XIX, defines the visible church as a congregation of faithful men in which the pure word of God is preached and the sacraments duly ministered, and Anglican ecclesiology embraces body-of-Christ language. The Methodist Articles of Religion repeat this Anglican definition verbatim in Article XIII. The Reformed tradition through Westminster Confession Chapter 25 affirms the church catholic or universal as the whole number of the elect, the body of the spouse of Christ, and the fullness of him that fills all in all. Anabaptist and believers-church traditions affirm body-of-Christ ecclesiology while emphasizing the regenerate-membership criterion. Pentecostal traditions including the Assemblies of God affirm the church as the body of Christ. Eastern Orthodoxy grounds body-of-Christ ecclesiology in eucharistic communion: the eucharist makes the church, and the church is the body of Christ in the strongest mystical and sacramental sense. Public-record carriers of explicit denial are essentially absent from organized Christianity. No major heterodox or cult movement is on confessional record denying that the church is the body of Christ. Mormonism, Jehovah's Witnesses, and Iglesia ni Cristo all use body-of-Christ language while denying classical Trinity or Christ's full deity, so the dividing line on those groups falls on the underlying Trinitarian and Christological doctrines rather than on the body-of-Christ identification itself. Radically individualist Christianity-without-church movements implicitly deny corporate-body ecclesiology, but these are fringe stances without major institutional carriers. The bottom line: body-of-Christ ecclesiology is as close to universally confessed as any Christian doctrine outside of the Nicene-Chalcedonian core itself."
+    },
+    "scripture": [
+      {
+        "ref": "1Cor.12.12",
+        "key_term": "καθάπερ γὰρ τὸ σῶμα ἕν ἐστιν καὶ μέλη πολλὰ ἔχει; sōma G4983 nominative neuter singular; melē G3196 accusative neuter plural; hen G1520",
+        "force": "'For just as the body (sōma) is one and has many members (melē).' The grammar grounds the analogy: ONE body, MANY members, in single organic union. Paul's opening of the body-of-Christ analogy. The neuter singular sōma + accusative neuter plural melē establishes the unity-in-diversity that the rest of the chapter develops.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1Cor.12.13",
+        "key_term": "καὶ γὰρ ἐν ἑνὶ Πνεύματι ἡμεῖς πάντες εἰς ἓν σῶμα ἐβαπτίσθημεν; pneuma G4151 dative neuter singular; sōma G4983 accusative neuter singular; ebaptisthēmen G907 aorist passive indicative 1p",
+        "force": "'For in one Spirit we were all baptized into one body.' Aorist passive ebaptisthēmen places the action as already-accomplished and Spirit-as-agent (en heni Pneumati). The end-state is incorporation into the one sōma. The verse establishes the Spirit-mediated entry into the body of Christ as the constitutive act of Christian identity, transcending ethnic and social distinctions (Jews or Greeks, slaves or free).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.12.27",
+        "key_term": "ὑμεῖς δέ ἐστε σῶμα Χριστοῦ καὶ μέλη ἐκ μέρους; sōma G4983 nominative neuter singular; Christos G5547 genitive masculine singular; melē G3196 nominative neuter plural; este G1510 present indicative 2p",
+        "force": "'And you are the body of Christ (sōma Christou) and individually members of it.' The capstone identification: present indicative este declares the believers' identity as already-realized; the genitive Christou makes Christ the possessive head; the body IS Christ's. The single most direct ecclesiological identification in the NT. The phrase σῶμα Χριστοῦ becomes Paul's technical ecclesiological term.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.12.4",
+        "key_term": "καθάπερ γὰρ ἐν ἑνὶ σώματι πολλὰ μέλη ἔχομεν τὰ δὲ μέλη πάντα οὐ τὴν αὐτὴν ἔχει πρᾶξιν; sōma G4983 dative neuter singular; melē G3196 accusative neuter plural; praxis G4234",
+        "force": "'For as in one body (en heni sōmati) we have many members (polla melē), and the members do not all have the same function (praxin).' Paul restates the unity-in-diversity principle of 1 Cor 12 in shorter form. Different praxis (function) within shared body-membership; the diversity of gifts in Rom 12:6-8 is grounded in this organic frame.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Rom.12.5",
+        "key_term": "οὕτως οἱ πολλοὶ ἓν σῶμά ἐσμεν ἐν Χριστῷ τὸ δὲ καθ εἷς ἀλλήλων μέλη; sōma G4983; allēlōn G240; melē G3196",
+        "force": "'So we, though many, are one body in Christ (en heni sōma ... en Christō), and individually members one of another (allēlōn melē).' The mutual-membership clause allēlōn melē ('members of one another') runs the body analogy past Christ-head-of-body into mutual horizontal obligation. The believers' bond to one another is not free-associative; it is organic-bodily.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.22",
+        "key_term": "καὶ πάντα ὑπέταξεν ὑπὸ τοὺς πόδας αὐτοῦ καὶ αὐτὸν ἔδωκεν κεφαλὴν ὑπὲρ πάντα τῇ ἐκκλησίᾳ; kephalē G2776 accusative feminine singular; ekklēsia G1577 dative feminine singular; hypotassō G5293 aorist active indicative 3s",
+        "force": "'He put all things under his feet and gave him as head over all things to the church (kephalēn hyper panta tē ekklēsia).' Kephalē in Pauline-ecclesiological force = governing-head, integrating authority and source of the body's life. The dative tē ekklēsia marks the church as the beneficiary of the headship-gift; Christ is given AS head TO the church.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.23",
+        "key_term": "ἥτις ἐστὶν τὸ σῶμα αὐτοῦ τὸ πλήρωμα τοῦ τὰ πάντα ἐν πᾶσιν πληρουμένου; sōma G4983; plērōma G4138 nominative neuter singular; plēroō G4137 present middle participle",
+        "force": "'Which is his body (to sōma autou), the fullness (to plērōma) of him who fills all in all.' The relative pronoun hētis (referring to the church) is explicitly identified as Christ's body. Plērōma adds a further dimension: the church is the fullness of Christ. Together with v.22 this gives the densest body-of-Christ identification in the NT: church = body = fullness of him.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.4",
+        "key_term": "ἓν σῶμα καὶ ἓν πνεῦμα καθὼς καὶ ἐκλήθητε ἐν μιᾷ ἐλπίδι τῆς κλήσεως ὑμῶν; sōma G4983; pneuma G4151; elpis G1680; klēsis G2821",
+        "force": "'One body and one Spirit, just as you were called to one hope that belongs to your call.' Opens the seven-fold unity catalog of Eph 4:4-6. Hen sōma stands at the head of the list because it is the constitutive identity from which the other unities flow. The numeral hen (one) marks the body as singular, not plural local-bodies aggregated.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.5",
+        "key_term": "εἷς κύριος μία πίστις ἓν βάπτισμα; kyrios G2962; pistis G4102; baptisma G908",
+        "force": "'One Lord, one faith, one baptism.' Items 4 through 6 of the seven-fold unity catalog. The single baptisma into the single body of v.4 grounds the visible-unity claim; the single Lord and single faith ground the doctrinal-unity claim.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.6",
+        "key_term": "εἷς θεὸς καὶ πατὴρ πάντων ὁ ἐπὶ πάντων καὶ διὰ πάντων καὶ ἐν πᾶσιν; theos G2316; patēr G3962",
+        "force": "'One God and Father of all, who is over all and through all and in all.' Item 7 of the seven-fold unity catalog. The Trinitarian shape of the unity is laid out: one Spirit (v.4), one Lord (v.5), one God and Father (v.6); the one body sits within this Trinitarian frame.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.12",
+        "key_term": "πρὸς τὸν καταρτισμὸν τῶν ἁγίων εἰς ἔργον διακονίας εἰς οἰκοδομὴν τοῦ σώματος τοῦ Χριστοῦ; sōma G4983 genitive neuter singular; Christos G5547; katartismos G2677; oikodomē G3619",
+        "force": "'For the equipping of the saints for the work of ministry, for the building up (oikodomēn) of the body of Christ (tou sōmatos tou Christou).' Sets the body of Christ as the object of the ministerial-gifts of v.11. The body is something to be built up; the equipping ministries serve its growth.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.15",
+        "key_term": "ἀληθεύοντες δὲ ἐν ἀγάπῃ αὐξήσωμεν εἰς αὐτὸν τὰ πάντα ὅς ἐστιν ἡ κεφαλή Χριστός; alētheuō G226 present participle; auxanō G837 aorist active subjunctive 1p; kephalē G2776; Christos G5547",
+        "force": "'Speaking the truth in love, we are to grow up in every way into him who is the head, into Christ (eis Christon).' Auxanō ('to grow') of a body terminating in eis Christon ('into Christ'). Christ as kephalē is the goal-direction of bodily growth; the body matures by growing into its head.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.16",
+        "key_term": "ἐξ οὗ πᾶν τὸ σῶμα συναρμολογούμενον καὶ συμβιβαζόμενον διὰ πάσης ἁφῆς τῆς ἐπιχορηγίας; sōma G4983; synarmologeō G4883; symbibazō G4822; haphē G860",
+        "force": "'From whom the whole body (pan to sōma), joined and held together (synarmologoumenon kai symbibazomenon) by every joint with which it is equipped... makes the body grow so that it builds itself up in love.' The double compound participles paint the body as architecturally interlocked AND organically supplied. The growth is from Christ the head (ex hou) and through the joints; not external accretion but internal interconnection.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.5.23",
+        "key_term": "ὅτι ἀνήρ ἐστιν κεφαλὴ τῆς γυναικὸς ὡς καὶ ὁ Χριστὸς κεφαλὴ τῆς ἐκκλησίας αὐτὸς σωτὴρ τοῦ σώματος; kephalē G2776; ekklēsia G1577; sōtēr G4990; sōma G4983",
+        "force": "'For the husband is head of the wife as also Christ is head of the church (kephalē tēs ekklēsias), he himself being savior of the body (sōtēr tou sōmatos).' The kephalē-of-church / sōtēr-of-body pairing makes the church-body Christ's saving-object. Headship and salvation converge in the same relation. The marriage analogy uses the church-body identification as its given, not as something it has to argue.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Eph.5.30",
+        "key_term": "ὅτι μέλη ἐσμὲν τοῦ σώματος αὐτοῦ; melē G3196; sōma G4983; esmen G1510 present indicative 1p",
+        "force": "'For we are members of his body (melē esmen tou sōmatos autou).' Present indicative esmen declares the believers' current standing; the genitive autou makes the body Christ's; the believers are constituent members. Short, decisive identification.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Col.1.18",
+        "key_term": "καὶ αὐτός ἐστιν ἡ κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας ὅς ἐστιν ἀρχή πρωτότοκος ἐκ τῶν νεκρῶν; kephalē G2776; sōma G4983; ekklēsia G1577; archē G746; prōtotokos G4416",
+        "force": "'And he is the head of the body, the church (hē kephalē tou sōmatos tēs ekklēsias), who is the beginning, the firstborn from the dead.' The triple genitive chain head-of-body-which-is-church makes the identification explicit and grammatically unambiguous. Christ's headship of the church-body is grounded in his resurrection-firstborn status; the church-body is the post-resurrection community gathered around the risen head.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Col.1.24",
+        "key_term": "ἀνταναπληρῶ τὰ ὑστερήματα τῶν θλίψεων τοῦ Χριστοῦ ἐν τῇ σαρκί μου ὑπὲρ τοῦ σώματος αὐτοῦ ὅ ἐστιν ἡ ἐκκλησία; sōma G4983; ekklēsia G1577; thlipsis G2347",
+        "force": "'I fill up in my flesh what is lacking in Christ's afflictions for the sake of his body, which is the church (tou sōmatos autou ho estin hē ekklēsia).' The relative-clause identification ho estin hē ekklēsia (which is the church) makes the body=church identification unmistakable. The apostle's suffering is for the body which is the church.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Col.2.19",
+        "key_term": "καὶ οὐ κρατῶν τὴν κεφαλήν ἐξ οὗ πᾶν τὸ σῶμα διὰ τῶν ἁφῶν καὶ συνδέσμων ἐπιχορηγούμενον; kephalē G2776; sōma G4983; haphē G860; syndesmos G4886; epichorēgeō G2023",
+        "force": "'And not holding fast to the head, from whom the whole body, nourished and knit together through its joints and ligaments, grows with a growth that is from God.' Parallel to Eph 4:16 but compresses the architecture: the kephalē is the source (ex hou), the joints and ligaments are the conduits, the growth is theou (from God). Body-of-Christ ecclesiology grounds the Colossian polemic against unaccountable spiritual claims.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1Cor.10.17",
+        "key_term": "ὅτι εἷς ἄρτος ἓν σῶμα οἱ πολλοί ἐσμεν οἱ γὰρ πάντες ἐκ τοῦ ἑνὸς ἄρτου μετέχομεν; artos G740; sōma G4983; metechō G3348 present active indicative 1p",
+        "force": "'Because there is one bread (heis artos), we who are many are one body (hen sōma), for we all partake (metechomen) of the one bread.' The Lord's Supper is the participatory ground of body-unity: shared partaking of one loaf constitutes the partakers as one body. Eucharistic communion is the visible-and-tangible expression of body-of-Christ membership.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metonymy"
+        ]
+      },
+      {
+        "ref": "1Cor.10.16",
+        "key_term": "τὸ ποτήριον τῆς εὐλογίας ὃ εὐλογοῦμεν οὐχὶ κοινωνία ἐστὶν τοῦ αἵματος τοῦ Χριστοῦ τὸν ἄρτον ὃν κλῶμεν οὐχὶ κοινωνία τοῦ σώματος τοῦ Χριστοῦ ἐστιν; koinōnia G2842; sōma G4983; haima G129",
+        "force": "'The cup of blessing that we bless, is it not a participation (koinōnia) in the blood of Christ? The bread that we break, is it not a participation in the body of Christ (koinōnia tou sōmatos tou Christou)?' Two double-question rhetorical structures with implied affirmative answers. The breaking of the bread enacts koinōnia in the body of Christ. The double meaning of sōma (eucharistic body + ecclesial body) is exactly what Paul develops in v.17.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.16",
+        "key_term": "καὶ ἀποκαταλλάξῃ τοὺς ἀμφοτέρους ἐν ἑνὶ σώματι τῷ θεῷ διὰ τοῦ σταυροῦ; apokatallassō G604; sōma G4983; stauros G4716",
+        "force": "'And might reconcile both (Jew and Gentile) in one body to God through the cross.' En heni sōmati ('in one body') is the locus of reconciliation; the cross is the means. The body of Christ is the place where the dividing wall of hostility (v.14) is abolished. Body-of-Christ ecclesiology is here applied to ethnic-reconciliation theology.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.12.20",
+        "key_term": "νῦν δὲ πολλὰ μὲν μέλη ἓν δὲ σῶμα; melē G3196; sōma G4983",
+        "force": "'As it is, there are many parts, yet one body.' Mid-paragraph restatement that drives the metaphor: the diversity of melē never compromises the unity of the sōma. Verses 14-26 develop the function-differentiation argument (the foot vs the hand, the ear vs the eye, the head vs the feet); the conclusion in v.20 keeps the body singular.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "personification"
+        ]
+      },
+      {
+        "ref": "Matt.16.18",
+        "key_term": "οἰκοδομήσω μου τὴν ἐκκλησίαν καὶ πύλαι ᾅδου οὐ κατισχύσουσιν αὐτῆς; ekklēsia G1577 accusative feminine singular; oikodomeō G3618 future active indicative 1s",
+        "force": "'I will build my church (mou tēn ekklēsian), and the gates of hell shall not prevail against it.' The first NT occurrence of ekklēsia as a programmatic theological term, applied by Christ to the community he is building. The possessive pronoun mou makes the ekklēsia Christ's own. While Matt 16:18 does not use the sōma-Christou term, it grounds the body-of-Christ identification by establishing the ekklēsia as Christ's possession and project.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.20.28",
+        "key_term": "ποιμαίνειν τὴν ἐκκλησίαν τοῦ θεοῦ ἣν περιεποιήσατο διὰ τοῦ αἵματος τοῦ ἰδίου; ekklēsia G1577; peripoieō G4046; haima G129",
+        "force": "'To shepherd the church of God (tēn ekklēsian tou theou) which he obtained with his own blood.' Paul's Miletus address. The church-of-God / his-own-blood pairing closes the apostolic-canonical loop: the church belongs to God / Christ; its constituting price is his blood. Lexical-conceptual ground for the body identification, since the blood that purchased the church is the blood of the body that was given.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G4983",
+      "G3196",
+      "G2776",
+      "G1577",
+      "G5547",
+      "G4151",
+      "G907",
+      "G908",
+      "G740",
+      "G3348",
+      "G2842",
+      "G240",
+      "G4138",
+      "G4137",
+      "G837",
+      "G4883",
+      "G4822",
+      "G860",
+      "G4886",
+      "G2023",
+      "G2677",
+      "G3619",
+      "G4416",
+      "G746",
+      "G4990",
+      "G3618",
+      "G4046",
+      "G129",
+      "G604",
+      "G1520",
+      "G1680",
+      "G2962",
+      "G4102",
+      "G2316",
+      "G3962"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "dispensationalism",
+        "patristic_participation_framework"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed-confessional (Westminster, Belgic, Heidelberg)",
+          "verdict": "Affirms. The Westminster Confession Chapter 25 names the church catholic or universal as the whole number of the elect, the body of the spouse of Christ. The visible-invisible distinction operates within the body-of-Christ frame, not against it."
+        },
+        {
+          "lens": "Catholic magisterial (CCC 787-796, Mystici Corporis Christi 1943)",
+          "verdict": "Affirms in the most expansive form. The mystical body of Christ is integrated with the visible institutional church; the sacraments make the body. CCC 792: Christ is the head of the body, the church."
+        },
+        {
+          "lens": "Eastern Orthodox (eucharistic ecclesiology)",
+          "verdict": "Affirms. The body of Christ is constituted at the eucharist; the church IS the body of Christ as the gathered communion around the eucharist. Strongest mystical-sacramental reading."
+        },
+        {
+          "lens": "Dispensational",
+          "verdict": "Affirms the body-of-Christ identification BUT restricts it to a specific salvation-historical interval (Pentecost to rapture) and distinguishes it from ethnic Israel. The downstream Israel-Church distinction and rapture-timing question are separate from the lexical identification itself; the body-of-Christ doctrine does not depend on the dispensational frame."
+        },
+        {
+          "lens": "Patristic participation (Athanasius, Augustine totus Christus)",
+          "verdict": "Affirms. The Word became flesh so that we might become members of his body. Augustine's totus Christus (whole Christ) treats Christ and the church as one whole Christ, head and members in inseparable union."
+        }
+      ],
+      "notes": "The lexical-Pauline doctrine that the church is the body of Christ does not require any single hermeneutic lens; it sits at the surface of Paul's Greek across Romans, 1 Corinthians, Ephesians, and Colossians. Analogia scripturae is invoked because Paul uses the body-of-Christ frame in at least four letters and at least twelve named passages; the doctrine is multiply attested at the lexical level. Progressive revelation is in play because the ekklēsia category emerges with Christ's saying in Matt 16:18 and is theologized in the Pauline letters, where the body-of-Christ identification reaches full development. Frameworks differ on downstream questions (how the body relates to ethnic Israel, when the body begins and ends in salvation history, how the sacraments constitute the body) but converge on the lexical identification itself."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, In Iohannis Evangelium Tractatus 21 and Sermons; totus Christus framework",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ and the church together are one whole Christ (totus Christus), head and body inseparably. The body of Christ is the church and the church is the body of Christ. Direct CCEL fetch did not surface the specific Tractate text."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, De Baptismo and Apologeticum; CCEL ANF03",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Tertullian uses corpus Christi language for the church and grounds Christian baptism in incorporation into Christ's body. Where there are three baptized in the name, the body of Christ is constituted."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 787-796; Pius XII Mystici Corporis Christi 1943",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "CCC 792 paragraph 792: Christ is the head of the body, the church. Mystici Corporis Christi 1943 systematizes the mystical body doctrine integrating the visible institutional church with the mystical body."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article VII; bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Church is the congregation of saints in which the Gospel is rightly taught and the Sacraments are rightly administered. Lutheran teaching affirms the body-of-Christ identification within this gospel-and-sacrament frame."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles Article XIX Of the Church",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The visible Church of Christ is a congregation of faithful men in which the pure Word of God is preached and the Sacraments be duly ministered. Anglican ecclesiology embraces body-of-Christ language across the BCP."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 25 Of the Church",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The catholic or universal Church which is invisible consists of the whole number of the elect that have been, are, or shall be gathered into one, under Christ the head thereof; and is the spouse, the body, the fullness of him that fills all in all."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "UMC Articles of Religion Article XIII; umc.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The visible church of Christ is a congregation of faithful men in which the pure Word of God is preached, and the Sacraments duly administered. Methodist tradition is verbatim with the Anglican 39 Articles XIX."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 and Mennonite tradition",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Anabaptist tradition affirms the body-of-Christ identification within a regenerate-membership framework: the church as the body of Christ is composed of those who have personally trusted in Christ and submitted to believers' baptism."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths Article 10 (The Church and Its Mission)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Church is the Body of Christ, the habitation of God through the Spirit, with divine appointments for the fulfillment of her great commission. Direct ag.org fetch returned 403."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith: The Symbol of Faith - The Church",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God has put all things under the feet of Christ and has made Him the head over all things for the Church, which is His body. Eastern Orthodox ecclesiology grounds body-of-Christ in eucharistic communion: the eucharist makes the church."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 12:12-13, 27: sōma (G4983) hen (G1520); en heni Pneumati (G4151) eis hen sōma ebaptisthēmen (G907); sōma Christou (G5547) kai melē (G3196) ek merous."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 12:4-5: en heni sōmati (G4983) polla melē (G3196); hen sōma en Christō; allēlōn (G240) melē. Body-of-Christ frame with mutual-membership clause."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 1:22-23: kephalēn (G2776) hyper panta tē ekklēsia (G1577); hē estin to sōma autou (G4983), to plērōma (G4138) tou ta panta en pasin plēroumenou."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 4:4-6: hen sōma kai hen pneuma; mia elpis; heis kyrios, mia pistis, hen baptisma (G908); heis theos kai patēr panton. Seven-fold unity catalog anchored in one body."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 5:23, 30: Christos kephalē tēs ekklēsias, autos sōtēr tou sōmatos (G4990); melē esmen tou sōmatos autou. Husband-wife / Christ-church marriage analogy."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Col 1:18: kai autos estin hē kephalē tou sōmatos tēs ekklēsias, hos estin archē (G746) prōtotokos (G4416) ek tōn nekrōn. Head-body-church triple-genitive identification."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 10:16-17: ouchi koinōnia (G2842) tou sōmatos tou Christou; heis artos (G740), hen sōma, hoi polloi esmen; pantes ek tou henos artou metechomen (G3348)."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4983.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G4983 sōma: body. Ecclesiological occurrences: Rom 12:5; 1 Cor 10:16-17, 12:13, 12:27; Eph 1:23, 2:16, 4:12, 4:15-16, 5:23, 5:30; Col 1:18, 1:24, 2:19. Pan-Pauline lemma."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1577.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G1577 ekklēsia: from ek (G1537) + kaleō (G2564); called-out assembly. Universal-church usage: Matt 16:18, Eph 1:22, 5:23-29, Col 1:18, 24. Christ's mystical body."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P28.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 792: Christ is the head of the body, the Church. The Catholic Catechism affirms the body-of-Christ identification with paragraphs 787-796 systematizing the mystical body doctrine."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg VII: the Church is the congregation of saints in which the Gospel is rightly taught and the Sacraments are rightly administered. Lutheran affirmation of body-of-Christ ecclesiology."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article XIII: the visible church of Christ is a congregation of faithful men in which the pure Word of God is preached, and the Sacraments duly administered. Verbatim with Anglican Article XIX."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/the-church",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: God has put all things under the feet of Christ and has made Him the head over all things for the Church, which is His body. Eastern Orthodox eucharistic ecclesiology."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

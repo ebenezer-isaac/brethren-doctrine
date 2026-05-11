@@ -1,0 +1,305 @@
+{
+  "id": "doc-glorification",
+  "answer": {
+    "id": "doc-glorification",
+    "affirms": true,
+    "rationale": "Rom 8:30 places glorified (edoxasen, G1392, aorist indicative) as the terminal link in the predestined-called-justified-glorified chain; Phil 3:21 (metaschematisei G3345, symmorphon G4832 to soma doxes), 1 Cor 15:42-54 (sown phthora G5356, raised aphtharsia G861; sown atimia, raised doxa G1391; allagesometha G236), and 1 John 3:2 (homoioi auto esometha G3664) demonstrate pan-canonical bodily transformation into Christ's glorified image (eikon G1504, Rom 8:29).",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Glorification is universally affirmed across patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, and Eastern Orthodox lineages, though framed variously (Western glorification language, Eastern theosis language with Gregory Palamas synthesizing essence-energies distinction). The substantive disagreement is on the shape (theosis as deifying participation vs. forensic conformation to Christ), not on the underlying bodily-resurrection reality. Public-record carriers of denial are typically full-naturalistic systems (no afterlife at all) rather than internal Christian dissent; groups like Christadelphians and Jehovah's Witnesses affirm bodily resurrection but contest the nature of the resurrection body. Denial belongs to a cluster of resurrection denial that 1 Cor 15 itself addresses as faith-emptying, but the specific shape of glorification is not a Trinity-level boundary; hence cult_marker_if_denied=false while would_die_for=true on the underlying resurrection hope."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement describes the canonical pattern (raised, transformed, glorified, free from sin and decay) using Scripture's own vocabulary (resurrection bodies, consummation). It does not pre-load a contested verdict; it names the canonical hope as stated in 1 Cor 15 and Rom 8."
+    },
+    "lay_summary": {
+      "reasoning": "Yes. When Christ returns, believers will be raised with new bodies and made fully like Christ, finally free from sin and death. The strongest reason from Scripture is the chain in Romans 8:30 where Paul says God predestined, called, justified, and glorified believers, putting glorification as the certain final step. Paul fills out the picture in 1 Corinthians 15:42 to 54, saying the body is sown perishable and raised imperishable, sown in dishonor and raised in glory, and that we will all be changed at the last trumpet. Philippians 3:21 says Christ will transform our lowly body to be like his glorious body. 1 John 3:2 says when he appears we shall be like him, because we shall see him as he is. The strongest complicating texts are Romans 8:17 to 23, which insist this hope is for those who suffer with Christ and that creation itself groans waiting; and 1 Corinthians 15:50, which says flesh and blood cannot inherit the kingdom, meaning the resurrection body is genuinely new, not a return to the present body unchanged. The verdict handles the tension by reading the change as real bodily continuity plus genuine transformation, not a swap to a non-body. The honest open question is the precise shape (whether the change is best framed as participation in God's life or as conformation to Christ's risen body); Scripture supports the substance even if the precise mechanism is described differently across traditions."
+      ,
+      "denominational_landscape": "Glorification of believers at Christ's return is one of the most broadly affirmed Christian doctrines. Patristic writers like Athanasius framed it as deification, saying God became man so that man might be made godlike. The Catholic Catechism teaches bodily resurrection and the beatific vision of God. The Lutheran Augsburg Confession Article 17 teaches that Christ will raise up all the dead and give the elect eternal life. The Methodist Articles of Religion affirm Christ's bodily resurrection and his return to judge, with eternal life for the godly. The Reformed Westminster Confession chapters 32 and 33 teach the resurrection of the body and the final glorified state. Eastern Orthodoxy teaches theosis, that humans grow to participate by grace in everything God is by nature, with Gregory Palamas's essence-energies distinction guarding that God's essence remains beyond participation while his energies are shared. Pentecostal statements affirm the bodily resurrection of the saved to eternal life. Anabaptist confessions affirm the resurrection and final judgment. The disagreement across lineages is over the framework (deification language vs. conformation language) and the relative weight given to ongoing transformation now versus final transformation then, not over whether believers will be raised and glorified. Public-record denial of bodily resurrection altogether is associated with full-naturalist worldviews and a handful of liberal-Protestant theologians, not with any mainstream historic Christian lineage."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.8.30",
+        "key_term": "δοξάζω (doxazō) G1392",
+        "force": "Aorist indicative third singular places glorified as the completed terminal link in the chain predestined-called-justified-glorified; treats the future event as certain.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.29",
+        "key_term": "σύμμορφος (symmorphos) G4832, εἰκών (eikōn) G1504",
+        "force": "Jointly-formed conformation to the image of God's Son names the content of glorification: being shaped to the Son's likeness.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.8.17-23",
+        "key_term": "συνδοξάζω (syndoxazō) G4888, υἱοθεσία (huiothesia) G5206, ἀπολύτρωσις (apolytrōsis) G629",
+        "force": "Co-glorification is conditioned on co-suffering; redemption explicitly includes the body (apolytrosin tou somatos); creation itself awaits the unveiling of the children of God.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "1Cor.15.42-44",
+        "key_term": "φθορά (phthora) G5356, ἀφθαρσία (aphtharsia) G861, δόξα (doxa) G1391, πνευματικός (pneumatikos) G4152",
+        "force": "Four antithetical pairs (perishable/imperishable, dishonor/glory, weakness/power, natural/spiritual body) define the resurrection body as the same body genuinely transformed.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism", "metaphor"]
+      },
+      {
+        "ref": "1Cor.15.50-54",
+        "key_term": "ἀλλάσσω (allassō) G236, ἀθανασία (athanasia) G110",
+        "force": "Flesh and blood cannot inherit; we shall all be changed; the perishable puts on imperishable and the mortal puts on immortality. Names the necessity of bodily transformation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor", "apocalyptic-symbolism"]
+      },
+      {
+        "ref": "2Cor.3.18",
+        "key_term": "μεταμορφόω (metamorphoō) G3339, δόξα (doxa) G1391",
+        "force": "Present middle/passive indicates ongoing transformation now into the same image from one degree of glory to another; glorification has a present down-payment.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Phil.3.20-21",
+        "key_term": "μετασχηματίζω (metaschēmatizō) G3345, σύμμορφος (symmorphos) G4832",
+        "force": "Christ will refashion the body of our humiliation to be jointly-formed with the body of his glory; future indicative gives definite eschatological hope.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Col.3.4",
+        "key_term": "φανερόω (phaneroō) G5319, δόξα (doxa) G1391",
+        "force": "When Christ who is your life appears, then you also will appear with him in glory; ties believer's manifestation to Christ's parousia.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.3.2",
+        "key_term": "ὅμοιος (homoios) G3664, ὁράω (horaō) G3708",
+        "force": "We shall be like him because we shall see him as he is; vision of Christ effects conformity to Christ.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.21.1-4",
+        "key_term": "καινός (kainos) G2537",
+        "force": "New heaven and new earth, dwelling of God with humanity, no more death; situates bodily glorification within the renewed cosmos.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["apocalyptic-symbolism", "metaphor"]
+      },
+      {
+        "ref": "1John.3.2",
+        "key_term": "φανερόω (phaneroō) G5319",
+        "force": "It has not yet appeared what we shall be; honest acknowledgment that the precise shape of glorification is not exhaustively revealed.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1391",
+      "G1392",
+      "G1504",
+      "G4832",
+      "G4888",
+      "G3339",
+      "G3345",
+      "G5356",
+      "G861",
+      "G110",
+      "G236",
+      "G4152",
+      "G5591",
+      "G3664",
+      "G3708",
+      "G5206",
+      "G629",
+      "G5319",
+      "G2537",
+      "G3466"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "historic_premillennialism",
+        "eastern_orthodox_theosis"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "covenant_theology",
+          "verdict": "affirms; glorification is the consummation of the covenant of grace, one general resurrection at Christ's return."
+        },
+        {
+          "framework": "dispensationalism",
+          "verdict": "affirms; typically distinguishes resurrection of church-age saints (rapture) from later resurrections, but the bodily glorification of believers is shared."
+        },
+        {
+          "framework": "historic_premillennialism",
+          "verdict": "affirms; resurrection of the just at Christ's return precedes the millennium, with full new-creation glorification after."
+        },
+        {
+          "framework": "eastern_orthodox_theosis",
+          "verdict": "affirms; frames glorification as deification, participation in divine energies, with Gregory Palamas's essence-energies distinction preserving Creator-creature line."
+        }
+      ],
+      "notes": "All major Christian hermeneutical frameworks affirm bodily resurrection and glorification at Christ's parousia; the divergence is on the precise framing (deification vs conformation), not on the substance. The lexical network (doxazo, metamorphoo, metaschematizo, symmorphos, eikon, aphtharsia, athanasia, homoios) is dense and mutually reinforcing, satisfying analogia scripturae."
+    },
+    "counter_witness": [
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XVII (Of Christ's Return to Judgment)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ will appear for judgment, and will raise up all the dead; He will give to the godly and elect eternal life and everlasting joys."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article III (Of the Resurrection of Christ)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ did truly rise again from the dead, and took again his body, with all things appertaining to the perfection of man's nature."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, on theosis / deification",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "to become by divine grace all that God Himself is by nature; humans called to grow eternally Godlike, participating in God's nature while remaining distinct."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasius, On the Incarnation 54 (paraphrased; CCEL chapter access intermittent)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "He was made man that we might be made god (theosis as the goal of incarnation; widely attested in NPNF II.4)."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 988-1004, 1023-1029 (resurrection of the body, beatific vision)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Magisterium teaches bodily resurrection at the last day and the beatific vision; specific paragraphs not retrievable on this fetch, doctrine well-established."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion, Article IV (Of the Resurrection of Christ)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ did truly rise again from death, and took again his body, ascended into heaven, sitteth until he return to judge all men at the last day."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, on resurrection and final state",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Resurrection of the saved unto eternal life; AG public statement; this fetch returned 403, doctrine attested across Pentecostal statements of faith."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith XXXII (Of the State of Men after Death, and of the Resurrection of the Dead) and XXXIII (Of the Last Judgment)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Bodies of the just shall be raised in honor, made conformable to Christ's own glorious body; standard Reformed eschatology."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-30.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "edoxasen (aorist indicative active 3rd singular) terminates the chain proorisen, ekalesen, edikaiosen, edoxasen; sequential divine activity treated as certain."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-42.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "speiretai en phthora, egeiretai en aphtharsia: sown in corruption, raised in incorruption; defining the resurrection body."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "soma psychikon, soma pneumatikon: natural body raised as spiritual body, naming the transformation 1 Cor 15 affirms."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-51.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "mysterion: we shall all be changed (allagesometha, future passive); transformation universal for those in Christ at the last trumpet."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_corinthians/3-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "metamorphoumetha: present middle or passive, ongoing transformation into the same image from one degree of glory to another."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/philippians/3-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "metaschematisei to soma tes tapeinoseos hemon symmorphon to somati tes doxes autou: Christ will refashion our lowly body, conforming it to his glorious body."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "homoioi auto esometha hoti opsometha auton kathos estin: we shall be like him because we shall see him as he is."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-29.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "symmorphous tes eikonos tou huiou autou: predestined to be jointly-formed to the image of God's Son; content of glorification."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg XVII: Christ will raise up all the dead, give the elect eternal life and everlasting joys."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Articles III: Christ rose again with his body, with all things appertaining to the perfection of man's nature."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/man",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Theosis: to become by divine grace all that God Himself is by nature; humans grow eternally Godlike, participating while remaining distinct."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "apparatus-paywalled",
+      "counter-witness-partial-fetch"
+    ]
+  }
+}

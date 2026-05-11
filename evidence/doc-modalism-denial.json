@@ -1,0 +1,368 @@
+{
+  "id": "doc-modalism-denial",
+  "answer": {
+    "id": "doc-modalism-denial",
+    "affirms": true,
+    "rationale": "Scripture itself shows three personal actors at one moment in Matt 3:16-17 (Son in the water, Spirit descending, Father speaking from heaven), the Son addresses the Father in the vocative in John 17:1-5, the Father sends the Spirit in John 14:26, the Son sends the Spirit in John 16:7, and the Spirit is referenced by the masculine demonstrative ἐκεῖνος (ekeinos, G1565) over grammatically neuter πνεῦμα in John 16:13-14; Matt 28:19 binds three articular persons (τοῦ Πατρὸς, τοῦ Υἱοῦ, τοῦ Ἁγίου Πνεύματος) under one singular ὄνομα (onoma, G3686), and John 1:1 places the Logos πρὸς τὸν θεόν (pros ton theon, face-to-face with God).",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Modalism (Sabellianism, Patripassianism, Oneness Pentecostalism) collapses Father, Son, and Spirit into one person operating in successive modes. The denial of personal distinction is canonically demonstrable as false: the baptism scene in Matt 3:16-17 alone presents three simultaneous personal actors, which cannot be reduced to one person playing three roles. The Son's intercession before the Father (Heb 7:25, Rom 8:34) and the Father's sending of the Son out of love (1 John 4:9-10) require real personal distinction; if Father and Son are the same person, those acts become incoherent self-reference. Cult-marker bar therefore clears on both conditions: would_die_for (denial collapses the gospel's Father-sends-Son, Son-intercedes-before-Father structure) AND canonical demonstration (pan-canonical lexical pattern of Father, Son, Spirit acting toward each other). Public-record carriers of modalism: Oneness Pentecostalism, the United Pentecostal Church International (UPCI), T.D. Jakes who has expressed Oneness sympathies, some Christian Identity streams. Sabellius of Ptolemais (3rd century) is the historical founder of the modalist heresy. Notably the Assemblies of God explicitly rejects Oneness Pentecostalism in Article 2 of its Fundamental Truths, even though Oneness is itself a Pentecostal-derivative stream. The Trinity as three distinct coeternal persons sharing one essence is the unanimous teaching of historic Christianity (patristic, Catholic, Eastern Orthodox, Lutheran, Anglican, Reformed, Methodist, mainstream Pentecostal); denial places one outside the historic Christian confession."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Are Father, Son, and Holy Spirit three distinct persons sharing one divine essence, or are they three modes of one person?",
+      "notes": "The stem already states the conclusion and names the opposing view (modes). Working the neutralized form: does Scripture's own lexical pattern present three distinct personal actors who address, send, and glorify one another, or does it present one person who appears successively under three names? The canonical data answers the first."
+    },
+    "lay_summary": {
+      "reasoning": "Yes. The Father, the Son, and the Holy Spirit are three real persons who relate to each other, not three masks worn one at a time by one person. The strongest reason is the baptism of Jesus in Matthew 3:16-17. At one moment three different actors are doing different things: Jesus is standing in the water, the Spirit is descending on him like a dove, and the Father is speaking from heaven saying 'This is my beloved Son.' One person cannot baptize himself, descend on himself, and speak from heaven about himself all at the same time. John 17 adds force: Jesus prays to the Father, asking the Father to glorify him so that he may glorify the Father back. That is a real conversation between two persons, not a monologue. Critics who deny this, including Oneness Pentecostals and historic followers of Sabellius, point to Isaiah 9:6 where the Son is called 'Everlasting Father,' John 10:30 where Jesus says 'I and the Father are one,' and John 14:9 where Jesus says 'whoever has seen me has seen the Father.' They read these as saying Father and Son are the same person. The honest reading, however, is that 'Everlasting Father' is a title for the Son's eternal care, not a claim that he is personally the Father. In John 10:30 the word 'one' is neuter in Greek and means one in essence or purpose, not one in person; if Jesus meant 'I am the same person as the Father' the word would be masculine. And in John 14:9 Jesus says seeing him reveals the Father, not that he is the Father, because he immediately adds in the next verse 'the Father who dwells in me does his works.' Two persons, one essence, one shared work.",
+      "denominational_landscape": "Historic Christianity has been remarkably united on this question for nearly two thousand years. The early church condemned the modalist teaching of Sabellius in the third century. Tertullian wrote Against Praxeas as the first sustained defense of three distinct persons in one substance. The Nicene Creed (325, revised 381) and the Athanasian Creed both teach we worship one God in Trinity, neither confounding the persons nor dividing the substance. The Catholic Church, the Eastern Orthodox churches, the Lutheran, Anglican, Reformed, and Methodist confessions all affirm three persons of one substance, power, and eternity. Even the Assemblies of God, a mainstream Pentecostal body, explicitly rejects the Oneness Pentecostal modalist teaching in its Fundamental Truths. The clear carriers of denial today are Oneness Pentecostalism and the United Pentecostal Church International, which baptize 'in Jesus' name only' and teach that Father, Son, and Spirit are three roles of one person. T.D. Jakes has been associated with Oneness sympathies although his current position is debated. Some Christian Identity streams also carry modalist tendencies. Denial of three persons places one outside the historic Christian confession across every major lineage, which is why all the historic creeds treat it as a defining boundary."
+    },
+    "scripture": [
+      {
+        "ref": "Matt.3.16-17",
+        "key_term": "Πνεῦμα (pneuma) G4151 / καταβαῖνον (katabainon) G2597 / φωνὴ ἐκ τῶν οὐρανῶν (phone ek ton ouranon) G5456",
+        "force": "Three simultaneous personal actors at one moment: Son being baptized in the water, Spirit descending visibly upon him as a dove, Father speaking from heaven 'This is my beloved Son.' One person cannot occupy three positions and perform three distinct actions toward himself at the same moment.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.17.1-5",
+        "key_term": "Πάτερ (Pater, vocative) G3962 / δόξασόν (doxason) G1392 / Υἱός (Huios) G5207",
+        "force": "Son addresses Father in the vocative ('Father'), asks Father to glorify Son, so that Son may glorify Father back. Reciprocal mutual glorification between two distinct addressing-and-addressed persons. Cannot be self-prayer.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.14.26",
+        "key_term": "παράκλητος (parakletos) G3875 / πέμψει (pempsei) G3992 / ἐν τῷ ὀνόματί μου (en to onomati mou) G3686",
+        "force": "Father will send the Spirit (the Paraclete) in the Son's name. Three personal references in one sentence: the Father as sender, the Spirit as sent, the Son in whose name the sending occurs. Requires three distinct persons.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.16.13-14",
+        "key_term": "ἐκεῖνος (ekeinos) G1565 / πνεῦμα (pneuma) G4151 (neuter)",
+        "force": "Spirit referenced by masculine demonstrative ekeinos ('that one') despite grammatically neuter pneuma. Personal pronoun chosen over grammatical agreement, emphasizing the Spirit's personal identity. The Spirit glorifies the Son and takes from what is the Son's, distinct agency.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.28.19",
+        "key_term": "ὄνομα (onoma, singular) G3686 / τοῦ Πατρὸς καὶ τοῦ Υἱοῦ καὶ τοῦ Ἁγίου Πνεύματος",
+        "force": "One singular 'name' joined to three articular genitives, each with its own definite article. Grammatical construction binds one shared identity to three distinct named persons. Not 'names' plural (which would be tritheism) and not one name with one referent (which would be modalism).",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.1.1-2",
+        "key_term": "λόγος (logos) G3056 / πρὸς τὸν θεόν (pros ton theon) G4314 / θεὸς ἦν ὁ λόγος",
+        "force": "Logos was 'with' God (pros + accusative, face-to-face directional relation), and Logos was God. Two simultaneous claims: Logos is in personal relation to God (distinct), and Logos shares divine identity (one essence). Modalism collapses 'with God' into 'as God in another mode.'",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.10.30",
+        "key_term": "ἕν (hen, neuter) G1520 vs εἷς (heis, masculine)",
+        "force": "'I and the Father are one' uses neuter hen, not masculine heis. Neuter denotes oneness of essence, purpose, or action, not personal identity. If Jesus meant 'I am the same person as the Father' the masculine would be required. Complicates a modalist reading rather than supporting it.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.14.9-10",
+        "key_term": "ὁ ἑωρακὼς ἐμὲ ἑώρακεν τὸν πατέρα (ho heorakos eme heoraken ton patera) G3708",
+        "force": "'Whoever has seen me has seen the Father.' Verse 10 immediately distinguishes: 'the Father who dwells in me does his works.' The Son reveals the Father (revelational mediation), but Son and Father remain distinct, one indwells the other. Reading as personal identity contradicts the very next verse.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Isa.9.6",
+        "key_term": "אֲבִיעַד (avi-ad) H1 H5703 / 'Everlasting Father' / Father of Eternity",
+        "force": "Modalist proof-text. Title in a string of throne-titles (Wonderful Counselor, Mighty God, Father of Eternity, Prince of Peace). Hebrew avi-ad means 'father of perpetuity,' a titular epithet for the Son's eternal fatherly care over his people, not a claim that the Son is personally God the Father. Read as personal identity it contradicts the Son addressing the Father throughout the NT.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "Deut.6.4",
+        "key_term": "אֶחָד (echad) H259",
+        "force": "'The LORD our God, the LORD is one.' Echad is the same word used in Gen 2:24 ('they shall become one flesh' of husband and wife), allowing compound unity, not absolute mathematical singularity. The Shema affirms one God; it does not exclude plurality of persons within the one divine essence.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Phil.2.5-11",
+        "key_term": "μορφῇ θεοῦ (morphe theou) G3444 G2316 / ἁρπαγμόν (harpagmon) G725",
+        "force": "Son existed in the 'form of God' before incarnation, distinct from the Father, and did not consider equality with God something to be grasped. Pre-incarnate personal distinction: Son chose to empty himself and the Father exalted him. Modalism cannot accommodate one person exalting himself.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.4.9-10",
+        "key_term": "ἀπέσταλκεν (apestalken) G649 / τὸν υἱὸν αὐτοῦ (ton huion autou)",
+        "force": "'God sent his only Son.' Real sending requires real distinction between sender and sent. Modalism reduces this to the Father pretending to send himself, which empties the love-of-God claim of meaning.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.7.25",
+        "key_term": "ἐντυγχάνειν (entynchanein) G1793 / ὑπὲρ αὐτῶν (hyper auton)",
+        "force": "Son lives forever to intercede for believers before the Father. Intercession requires two real persons: one praying, one receiving the prayer. Modalism collapses intercession into self-talk.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.34",
+        "key_term": "ἐντυγχάνει ὑπὲρ ἡμῶν (entynchanei hyper hemon) G1793",
+        "force": "Christ is at the right hand of God interceding for us. Two locations, two persons: the Father on the throne, the Son at his right hand. Spatial-personal distinction.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gen.2.24",
+        "key_term": "אֶחָד (echad) H259 / לְבָשָׂר אֶחָד (basar echad)",
+        "force": "Husband and wife become 'one flesh' (echad). The same Hebrew word as Deut 6:4 Shema. Confirms echad permits compound unity. Decisive lexical refutation of the modalist appeal to Deut 6:4 as absolute mathematical singularity.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G3962",
+      "G5207",
+      "G4151",
+      "G3686",
+      "G3056",
+      "G4314",
+      "G1565",
+      "G1520",
+      "G3992",
+      "G649",
+      "G3875",
+      "G1392",
+      "G3708",
+      "G3444",
+      "G2316",
+      "G725",
+      "G1793",
+      "G2597",
+      "G5456",
+      "H259",
+      "H1",
+      "H5703"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "Nicene-Constantinopolitan Trinitarian orthodoxy",
+        "Sabellian / modalist monarchianism",
+        "Cappadocian three-hypostases-one-ousia formulation",
+        "Latin tres personae una substantia formulation",
+        "Oneness Pentecostal Jesus-Name theology"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Nicene Trinitarian (patristic, Catholic, Orthodox, magisterial Protestant)",
+          "verdict": "affirms three distinct coeternal persons of one substance"
+        },
+        {
+          "lens": "Modalism / Sabellianism / Oneness Pentecostalism",
+          "verdict": "denies; teaches one person manifest in three modes or roles"
+        },
+        {
+          "lens": "Cappadocian (Basil, Gregory of Nyssa, Gregory of Nazianzus)",
+          "verdict": "affirms three hypostases in one ousia"
+        }
+      ],
+      "notes": "Grammatico-historical reading of the apparatus and interlinear is sufficient and decisive. Matt 3:16-17 alone presents three simultaneous personal actors, which no modalist reading can accommodate. Analogia scripturae applies: the modalist proof-texts (Isa 9:6, John 10:30, John 14:9, Deut 6:4) must be read in light of the clearly personal-distinction texts (the baptism, John 17, John 14:26, Matt 28:19, 1 John 4:9-10), not the reverse. Progressive revelation factor: the OT presents one God; the NT progressively unveils the personal distinction within that one divine essence. Verdict does not require any non-default hermeneutic."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, Adversus Praxean (c. 213), ch. 3",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Unity which derives the Trinity out of its own self is so far from being destroyed, that it is actually supported by it. Father, Son, and Spirit distinct, of one substance."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasian Creed (Quicunque Vult), c. 5th century",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We worship one God in Trinity, and Trinity in Unity; neither confounding the Persons, nor dividing the Substance. Direct anti-modalist and anti-tritheist formula."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Hippolytus, Contra Noetum (c. 220)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Hippolytus refutes the modalist Noetus, arguing the Father and Son are two distinct persons (prosopa) yet one God in power and substance."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Cappadocian Fathers (Basil, Gregory of Nyssa, Gregory of Nazianzus), 4th century",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Three hypostases (persons) in one ousia (essence). The formula that became the standard Eastern articulation of Trinitarian orthodoxy against both Sabellianism and Arianism."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church, paragraphs 253-255 (1992)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Trinity is One. The divine persons are really distinct from one another. Father, Son, and Holy Spirit are not simply names designating modalities."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession, Article I 'Of God' (1530)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There is one Divine Essence, yet there are three Persons of the same essence, the Father, the Son, and the Holy Ghost. We condemn the Sabellians, who hold that Father, Son, and Spirit are one person."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles, Article I 'Of Faith in the Holy Trinity' (1571)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "In unity of this Godhead there be three Persons, of one substance, power, and eternity; the Father, the Son, and the Holy Ghost."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 2.3 (1647)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "In the unity of the Godhead there be three Persons of one substance, power, and eternity: God the Father, God the Son, and God the Holy Ghost."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article I (1784, abridged from 39 Articles)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "In unity of this Godhead there are three persons, of one substance, power, and eternity, the Father, the Son, and the Holy Ghost."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Article 2 (1916, revised)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The terms 'Trinity' and 'persons' as related to the Godhead express the truth that God is one. The AG explicitly rejects Oneness Pentecostal modalism in the Trinitarian statement."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, on the Holy Trinity",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God is three divine persons (hypostases) who share one essence (ousia). Father, Son, and Holy Spirit are not modes of one person but eternally distinct persons in communion."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession of Faith (1632), Article I",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We believe in one eternal, almighty, and incomprehensible God, the Father, Son, and Holy Spirit, three persons in one Divine Being."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/matthew/3-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Pneuma (G4151) descending (katabainon G2597) as a dove on the Son in the water, while the voice from heaven speaks. Three simultaneous personal actors at one moment."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/17-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Vocative Pater (G3962) addressing God directly; doxazo (G1392) used reciprocally between Son and Father. Mutual glorification between two distinct persons."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/14-26.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Father (G3962) will send (pempo G3992) the Paraclete in the Son's name (G3686). Spirit referenced by ekeinos (G1565), masculine demonstrative for personal agency."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/16-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ekeinos (G1565) for the Spirit despite neuter pneuma. Masculine pronoun choice over grammatical agreement marks personal identity and distinct agency."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/28-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Singular onoma (G3686) joined to three articular genitives: tou Patros, tou Huiou, tou Hagiou Pneumatos. One shared name, three grammatically distinct persons."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/1-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Logos (G3056) was pros ton theon (G4314), a directional preposition denoting face-to-face relation, while also being theos. Distinction and shared divinity together."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/10-30.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Hen (G1520) is neuter, not masculine heis. Denotes unity of essence or purpose, not personal identity. Modalist reading would require masculine, which is absent."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/isaiah/9-6.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Avi-ad (Father of Eternity) is a titular epithet for the Son's eternal care, parallel to Wonderful Counselor and Prince of Peace. Functional title, not personal identification."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/2-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Echad (H259) used of husband and wife becoming 'one flesh.' Same word as in Deut 6:4 Shema. Permits compound unity, not absolute mathematical singularity."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/philippians/2-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Morphe theou (G3444 G2316): Son existed in the form of God before incarnation, distinct from the Father, who later exalted him (v.9). Self-exaltation is incoherent."
+      },
+      {
+        "url": "https://ccel.org/ccel/tertullian/against_praxeas/anf03.v.ix.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Tertullian, Adversus Praxean: The Unity which derives the Trinity out of its own self is so far from being destroyed, that it is actually supported by it."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article I: In unity of this Godhead there are three persons, of one substance, power, and eternity, the Father, the Son, and the Holy Ghost."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-paywalled"
+    ]
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "id": "doc-effectual-calling",
+  "answer": {
+    "id": "doc-effectual-calling",
+    "affirms": true,
+    "rationale": "Scripture lexically attests two distinct senses of calling. (1) An outward general call extended to all who hear the gospel: Matt 22:14 πολλοὶ γάρ εἰσιν κλητοί ὀλίγοι δὲ ἐκλεκτοί ('many are called klētoi G2822 but few are chosen eklektoi G1588'), Matt 11:28 (Come to me all who labor), Isa 55:1, Acts 17:30. (2) An inward effective call by the Spirit that secures the response of faith: Rom 8:30 (predestined-called-justified-glorified chain, ἐκάλεσεν ekalesen aorist of καλέω kaleō G2564, where every called-one is also justified and glorified), 2 Tim 1:9 (καλέσαντος κλήσει ἁγίᾳ kalesantos klēsei hagia, called us with a holy calling, ού κατὰ τὰ ἔργα ἡμῶν ou kata ta erga hēmōn, not according to our works), 1 Cor 1:9 (πιστὸς ὁ θεός δι' οὗ ἐκλήθητε pistos ho theos di' hou eklēthēte, faithful is God by whom you were called into the fellowship of his Son), 1 Cor 1:24 (the called klētois are those for whom Christ is power and wisdom, the contrast against v.23 stumblers), 1 Pet 2:9 (καλέσαντος kalesantos, called you out of darkness into his marvelous light, addressed to the elect γένος ἐκλεκτόν genos eklekton G1085 G1588). The mechanism is named in John 6:44 (no one can come ἐὰν μὴ ἑλκύσῃ ean mē helkysē, G1670 helkyō 'drag, draw, pull', the same verb in 12:32 for the drawing of all to Christ), and Acts 16:14 (ὁ κύριος διήνοιξεν τὴν καρδίαν ho kyrios diēnoixen tēn kardian, the Lord opened Lydia's heart, dianoigō G1272, divine action preceding her attention to Paul's words). Concordance traversal confirms: κλῆσις klēsis G2821 in Pauline-Petrine usage (Rom 11:29, Eph 1:18, Eph 4:1, Eph 4:4, Phil 3:14, 2 Thess 1:11, 2 Tim 1:9, Heb 3:1, 2 Pet 1:10) consistently denotes the heavenly purpose-grounded calling that issues in salvation; the adjective κλητός klētos G2822 in Pauline opening salutations (Rom 1:6-7, 1 Cor 1:2, 1 Cor 1:24, Jude 1) names the addressees as those whose response defines them as 'called of Jesus Christ'. The verdict that the call comes through the outward Word and is made effective by the Spirit for those who believe is canonically demonstrated. The lexical distinction between general and effective calling is explicit in Matt 22:14 and operative in the Rom 8:30 chain. The disagreement among Christian lineages is real but in-house: it concerns whether the inward effective call is given only to the elect (Reformed monergism) or extended together with the outward call to all hearers with effectiveness contingent on non-resistance (Lutheran, Anglican via Spirit in due season), or extended through prevenient grace to all (Wesleyan-Methodist), or works synergistically with human cooperation (Eastern Orthodox, Catholic). The stem-statement of this question ('outwardly through preaching and inwardly so that the call is effective unto salvation in those who respond by faith') deliberately uses ecumenical language compatible with Lutheran, Anglican, Wesleyan, and Reformed readings; it does not require the Reformed-monergistic specification.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "The statement as written is a load-bearing soteriological conviction: God truly calls through the proclaimed Word and the Spirit, and the call accomplishes salvation in those who believe. Every major Christian lineage affirms this much. The contested questions are downstream: (a) Is the inward call given only to the elect (Reformed monergism), or extended universally with effectiveness contingent on the hearer's non-resistance (Lutheran, Anglican), or operative through prevenient grace enabling free response (Wesleyan, Methodist), or synergistic with human cooperation (Eastern Orthodox, Catholic)? (b) Is the call irresistible? Reformed tradition says yes for the elect; Lutheran Formula of Concord XI explicitly says God draws through the Word and rejects irresistibility, since the Lord himself wept 'How often would I have gathered you, and ye would not'. The Wesleyan and Eastern Orthodox positions explicitly reject monergistic-irresistible calling while affirming that all genuine response is grace-initiated. would_die_for is true on the ecumenical proposition that God calls through Word and Spirit and saves those who respond by faith; the Reformed-specific construction is not what the stem asserts. cult_marker_if_denied is false because the disagreement is in-house Christian: Lutherans, Anglicans, Wesleyans, Methodists, Eastern Orthodox, and Catholics all hold valid Christian positions that nuance or qualify the Reformed reading. The denial-vector for cult identification runs through Trinity, Christology, and Scripture-as-sufficient-authority, not through the inner mechanics of the call. The boolean pattern marks this as a doctrine the owner would die for and would publicly defend, but not one whose denial places a denier outside Christian fellowship. Carriers like classical Pentecostal-Arminian, Wesleyan, Anglican, Lutheran, and Eastern Orthodox congregations are legitimate Christian assemblies whose pulpits the owner could sit under, serve in, and let his children be taught in. The Reformed-distinctive 'effectual-calling-of-the-elect-only' belongs to the Reformed lens, not to the canonical text alone, which is why the stem was crafted ecumenically. Brethren-on-trial note: the Plymouth-Brethren tradition the owner was formed in is itself divided on this question. Open-Brethren teaching tends Calvinistic (J. N. Darby was strongly Calvinistic on effectual calling and election), but the wider Brethren movement contains a Reformed wing and a more Arminian wing. The seed answer here does not import the Brethren reading; it stays at the canonical-lexical and ecumenical ground."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "God calls people through the preaching of his Word and the work of his Spirit. There is an outward call extended through the gospel and an inward work of the Spirit by which the call becomes effective in those who come to faith. Christian traditions disagree about whether the inward call is given only to the elect, operates universally with effectiveness contingent on the hearer, or works alongside human cooperation.",
+      "notes": "The stem uses the technical Reformed-confessional phrase 'inwardly so that the call is effective' which is the precise vocabulary of Westminster Confession 10. The phrase 'in those who respond by faith' softens it toward Lutheran-Anglican territory but the underlying frame is still the Reformed effectual-calling distinction. Stem flagged as carrying confessional vocabulary as if neutral. Working the neutralized form: the verdict still affirms because the basic proposition (God calls outwardly through the Word and inwardly by the Spirit, and the call saves those who believe) is canonically demonstrated. The Reformed-specific specification (effective only in the elect, irresistibly) is NOT what the verdict commits to."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: Yes. God calls people in two ways that the Bible distinguishes. There is an outward call that goes out to everyone who hears the gospel, the way an invitation goes out. And there is an inward work of God's Spirit in the heart that makes the gospel hit home and produces real faith in those who actually come to Christ. The strongest reason from Scripture is the explicit pairing of these two senses in Jesus' words. In Matthew 22 verse 14 Jesus says, many are called but few are chosen. The same word called sits in both halves of the New Testament. The wide outward invitation is real, and so is the narrower group that actually ends up belonging to Christ. Romans 8 verse 30 puts this very plainly: those whom God predestined he also called, and those whom he called he also justified, and those whom he justified he also glorified. The calling in that chain saves everyone who receives it; nobody falls out of the chain. 2 Timothy 1 verse 9 says God saved us and called us with a holy calling, not because of our works but because of his own purpose and grace. Acts 16 verse 14 shows the inward side at work: the Lord opened the heart of Lydia to pay attention to what Paul was saying. The opening came first, the listening followed. The strongest counterargument from inside the Bible is that the gospel is also genuinely offered to people who do not come. Jesus says in Matthew 23 verse 37, how often would I have gathered your children together, and you were not willing. That tells us the calling, on its outward side, is real even to people who turn it down. The wide invitations in Matthew 11 verse 28, Come to me all who labor, and Isaiah 55 verse 1, Come, all who are thirsty, are real invitations. So Scripture holds these together: a wide outward call that is sincere, and an inward work of the Spirit that makes the gospel land savingly in those who come. The Bible does not settle every mechanical question about how those two relate. It does settle that God truly calls through the proclaimed Word, that the call saves those who believe, and that the believer can never take credit for the calling because it rests on God's own purpose and grace.",
+      "denominational_landscape": "Christians broadly agree that God calls through Word and Spirit and that genuine salvation requires divine grace and a human response of faith. The serious in-house disagreement is about the mechanics of the inward call. The Reformed tradition (Westminster Confession 10, Heidelberg, Belgic, Savoy) holds that God's inward effectual call is given only to the elect and that this call is monergistic and infallible: the Spirit so changes the heart that the elect person freely and willingly comes. The Lutheran tradition (Formula of Concord, Article XI) affirms that God draws through the Word and Sacraments, that grace precedes and produces faith, but explicitly rejects the strict Reformed teaching that the inward call cannot be resisted; Lutherans cite Jesus weeping over Jerusalem in Matthew 23 verse 37 as evidence that the call can be genuinely resisted. The Anglican 39 Articles, Article 17, affirms that the elect 'be called according to God's purpose by his Spirit working in due season', which sounds Reformed but Anglicans across the tradition have read this both more and less monergistically. The Wesleyan-Methodist tradition affirms prevenient grace given to all, which enables the universal call to be a real possibility for everyone; Wesley rejected unconditional election and the irresistible-effectual-calling-of-the-elect-only structure. The Catholic Catechism teaches that grace precedes every human movement toward God (paragraph 2010) but does not affirm the Reformed restriction of effectual calling to the elect alone; Catholic synergism allows for genuine cooperation. The Eastern Orthodox tradition holds synergy: divine grace and human will work together, and the call genuinely can be refused. The Pentecostal-Arminian Assemblies of God explicitly rejects the Reformed effectual-calling-of-elect-only doctrine, holding that salvation is offered to all and grace can be resisted. The Anabaptist believers-church tradition affirms God's initiative and genuine human response without the Reformed monergistic specification. The bottom line is that every major lineage affirms the broad proposition: God calls through Word and Spirit, and the call saves those who believe. The disagreement is over the mechanics. Public-record cult or heterodox carriers (Mormonism, Jehovah's Witnesses, Christian Science) typically frame calling within their own systems that already deny classical Trinity or Christ's full deity, so they fall outside Christianity on those prior grounds rather than on the question of effectual calling itself."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.8.30",
+        "key_term": "οὓς δὲ προώρισεν τούτους καὶ ἐκάλεσεν καὶ οὓς ἐκάλεσεν τούτους καὶ ἐδικαίωσεν; kaleō G2564 aorist active indicative 3p ekalesen; proorizō G4309 aorist active indicative 3s; dikaioō G1344 aorist active indicative 3s",
+        "force": "'Those whom he predestined, these he also called; and those whom he called, these he also justified; and those whom he justified, these he also glorified.' The Pauline golden chain. Every link is unbroken in this group: ekalesen (called) is set inside a chain whose terminus is glorification. The aorist-perfective verbs treat the redemptive sequence as a completed-divine action. The grammar does not yet tell you whether outward-only-called people are also in view; Paul's referent in Rom 8:28-30 is restricted to those who love God and are called according to purpose. Within that group, every called-one is justified and glorified.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.9",
+        "key_term": "πιστὸς ὁ θεός δι' οὗ ἐκλήθητε εἰς κοινωνίαν τοῦ υἱοῦ αὐτοῦ; kaleō G2564 aorist passive indicative 2p eklēthēte; pistos G4103; koinōnia G2842",
+        "force": "'Faithful is God, by whom you were called into the fellowship of his Son.' The passive eklēthēte names God as the agent. The destination of the calling is koinōnia (fellowship, participation) with the Son. The premise of the verse is pistos ho theos (God is faithful), which grounds the calling in God's own reliability, not in human contingency. The addressees in Corinth, including problematic ones, are those whom God has called into Christ's fellowship.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.24",
+        "key_term": "αὐτοῖς δὲ τοῖς κλητοῖς Ἰουδαίοις τε καὶ Ἕλλησιν Χριστὸν θεοῦ δύναμιν καὶ θεοῦ σοφίαν; klētos G2822 dative masculine plural; dynamis G1411; sophia G4678",
+        "force": "'To those who are called (tois klētois), both Jews and Greeks, Christ the power of God and the wisdom of God.' The klētoi are contrasted with v.23 (Jews who stumble, Greeks who count it folly). The same crucified-Christ message is folly to some and saving-power to others; the differentiating factor is the calling. The lexical force places effective recognition of Christ inside the kaleō category.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.2.9",
+        "key_term": "ὑμεῖς δὲ γένος ἐκλεκτόν βασίλειον ἱεράτευμα... τοῦ ἐκ σκότους ὑμᾶς καλέσαντος εἰς τὸ θαυμαστὸν αὐτοῦ φῶς; kaleō G2564 aorist active participle genitive masculine singular kalesantos; eklektos G1588; genos G1085",
+        "force": "'You are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light.' Peter's pastoral declaration to elect-pilgrim believers. The calling is the act that moves the believer from darkness to light; the participle kalesantos identifies God as the caller. The address eklekton genos pairs election and calling lexically.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.1.9",
+        "key_term": "τοῦ σώσαντος ἡμᾶς καὶ καλέσαντος κλήσει ἁγίᾳ οὐ κατὰ τὰ ἔργα ἡμῶν ἀλλὰ κατὰ ἰδίαν πρόθεσιν καὶ χάριν; kaleō G2564 aorist active participle kalesantos; klēsis G2821 dative feminine singular; prothesis G4286; charis G5485",
+        "force": "'Who saved us and called us with a holy calling, not according to our works but according to his own purpose and grace.' The double-participle construction (sōsantos kai kalesantos) places saving and calling in the same divine act. Klēsei hagia (holy calling) names the quality. The contrast ou kata ta erga hēmōn alla kata idian prothesin (not according to our works but according to his own purpose) excludes human merit from the ground of the calling.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.18",
+        "key_term": "πεφωτισμένους τοὺς ὀφθαλμοὺς τῆς καρδίας ὑμῶν εἰς τὸ εἰδέναι ὑμᾶς τίς ἐστιν ἡ ἐλπὶς τῆς κλήσεως αὐτοῦ; klēsis G2821 genitive feminine singular; phōtizō G5461 perfect passive participle; kardia G2588",
+        "force": "'Having the eyes of your heart enlightened, that you may know what is the hope of his calling.' Klēsis here is the heavenly purpose-grounded calling whose hope the Spirit reveals to the believer. The perfect-passive participle pephōtismenous treats the enlightening as already-accomplished divine work. The believer's knowledge of the calling is itself a fruit of Spirit-illumination.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "ἧς ὁ κύριος διήνοιξεν τὴν καρδίαν προσέχειν τοῖς λαλουμένοις ὑπὸ τοῦ Παύλου; dianoigō G1272 aorist active indicative 3s diēnoixen; kardia G2588; prosechō G4337 present active infinitive",
+        "force": "'The Lord opened her heart to pay attention to what was being said by Paul.' Lydia is the subject of the relative clause but the Lord is the subject of the opening. Diēnoixen (aorist active) names the divine action as the cause; prosechein (infinitive of purpose) names the resulting human response. Inward-call mechanism narratively displayed: divine opening of the heart precedes attentive listening, which leads to Lydia's belief and baptism (v.15).",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "John.6.44",
+        "key_term": "οὐδεὶς δύναται ἐλθεῖν πρός με ἐὰν μὴ ὁ πατὴρ ὁ πέμψας με ἑλκύσῃ αὐτόν; helkyō G1670 aorist active subjunctive 3s helkysē; pempō G3992 aorist active participle pempsas",
+        "force": "'No one is able to come to me unless the Father who sent me draws him.' The verb helkyō ('drag, draw, pull') is the same verb used in John 12:32 for Jesus drawing all to himself when lifted up and in John 21:11 for the dragging-net of fish. The condition ean mē (unless) makes the Father's drawing a necessary precondition for coming to Christ. The verse establishes divine drawing as upstream of human coming.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "John.6.45",
+        "key_term": "πᾶς ὁ ἀκούσας παρὰ τοῦ πατρὸς καὶ μαθὼν ἔρχεται πρός με; akouō G191 aorist active participle akousas; manthanō G3129 aorist active participle mathōn; erchomai G2064 present middle indicative 3s",
+        "force": "'Everyone who has heard from the Father and learned, comes to me.' Pas ho akousas... kai mathōn erchetai: the all-inclusive participle phrase paired with the present indicative erchetai. Everyone who has truly heard the Father's teaching and learned does come. Hearing-from-the-Father parallels the inward dimension of calling; coming-to-Christ is the unbroken result.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.22.14",
+        "key_term": "πολλοὶ γάρ εἰσιν κλητοί ὀλίγοι δὲ ἐκλεκτοί; klētos G2822 nominative masculine plural; eklektos G1588 nominative masculine plural; polloi G4183; oligoi G3641",
+        "force": "'For many are called but few are chosen.' Climactic statement of the wedding-feast parable. The two terms klētoi and eklektoi are placed in explicit contrast: a wider group is invited, a narrower group is chosen. The lexical distinction between general calling (klētoi as outward-invited) and the elect (eklektoi as the chosen-saved) is canonical. The Reformed tradition reads klētoi here as the merely-outwardly-called and reserves a distinct term for effective-call elsewhere; the Lutheran and Wesleyan readings read this as evidence that the call can be genuinely refused. Either way, two senses of calling are operative in the NT lexicon.",
+        "supports": "complicates",
+        "genre": "parable",
+        "figures": [
+          "parable"
+        ]
+      },
+      {
+        "ref": "Matt.11.28",
+        "key_term": "δεῦτε πρός με πάντες οἱ κοπιῶντες καὶ πεφορτισμένοι κἀγὼ ἀναπαύσω ὑμᾶς; pantes G3956; kopiaō G2872 present active participle; phortizō G5412 perfect passive participle; anapauō G373 future active indicative",
+        "force": "'Come to me, all who labor and are heavy laden, and I will give you rest.' Universal invitation issued by Jesus. Pantes ('all') reaches every weary hearer. The deute (come) is imperative; the kago anapausō hymas (and I will give you rest) is the promise. This is the general outward call in its purest gospel-utterance form. Establishes that the outward universal invitation is genuine.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Isa.55.1",
+        "key_term": "הוֹי כָּל־צָמֵא לְכוּ לַמַּיִם; hoy H1945; tsame H6771; halak H1980",
+        "force": "'Ho! Everyone who thirsts, come to the waters.' Universal prophetic call to come and receive. The interjection hoy and the all-inclusive kol-tsame ('every thirsty one') frame the offer to anyone willing. Old Testament foundation for the New Testament outward call. Demonstrates the canonical pattern of universal-genuine invitation alongside divine election.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "νῦν παραγγέλλει τοῖς ἀνθρώποις πάντας πανταχοῦ μετανοεῖν; parangellō G3853 present active indicative 3s; pantas G3956; pantachou G3837; metanoeō G3340 present active infinitive",
+        "force": "'God now commands all people everywhere to repent.' Pauline Areopagus speech. The universal scope (pantas pantachou, all everywhere) and the imperative force (parangellei, commands) make this a universal commanded-call to repentance. Demonstrates that the outward call carries divine command-status and reaches every hearer. The Wesleyan-Methodist reading underlines this verse as canonical resistance to monergistic-irresistible-call-of-elect-only.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Matt.23.37",
+        "key_term": "ποσάκις ἠθέλησα ἐπισυναγαγεῖν τὰ τέκνα σου... καὶ οὐκ ἠθελήσατε; thelō G2309 aorist active indicative ēthelēsa; episynagō G1996 aorist active infinitive; ouk ēthelēsate",
+        "force": "'How often would I have gathered your children together, as a hen gathers her brood under her wings, and you were not willing.' The Lord's own desire (ēthelēsa) to gather met by the people's refusal (ouk ēthelēsate). The Lutheran Formula of Concord XI cites this verse as canonical proof that the divine call can be genuinely resisted. The Reformed reading distinguishes the divine will of decree from the divine will of command, locating this in the latter. Either way, the verse is the strongest in-canon complicator against an unrestricted irresistibility-of-all-calling reading.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.7.51",
+        "key_term": "σκληροτράχηλοι καὶ ἀπερίτμητοι καρδίαις καὶ τοῖς ὠσίν ὑμεῖς ἀεὶ τῷ πνεύματι τῷ ἁγίῳ ἀντιπίπτετε; antipiptō G496 present active indicative 2p; sklērotrachēlos G4644",
+        "force": "'You stiff-necked people, uncircumcised in heart and ears, you always resist the Holy Spirit.' Stephen's indictment of the Sanhedrin. Antipiptō ('to fall against, resist') is used of the Spirit's action being resisted. This is the lexical foundation for the rejection of strict universal-irresistibility: the Spirit's gracious working can be canonically resisted by hardened hearts. Lutheran, Anglican, Wesleyan, Methodist, Pentecostal, and Eastern Orthodox traditions cite this verse against monergistic-irresistible-call-of-all-calling readings.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.11.29",
+        "key_term": "ἀμεταμέλητα γὰρ τὰ χαρίσματα καὶ ἡ κλῆσις τοῦ θεοῦ; ametamelētos G278; charisma G5486; klēsis G2821",
+        "force": "'For the gifts and the calling of God are irrevocable.' Ametamelētos ('not to be repented of, irrevocable') applied to klēsis tou theou. The calling of God carries divine constancy. In context, Paul applies this specifically to ethnic Israel's election. Underlines that klēsis in Pauline usage is a divinely-grounded, divinely-sustained reality, not a contingent invitation that God might withdraw.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Thess.2.14",
+        "key_term": "εἰς ὃ ἐκάλεσεν ὑμᾶς διὰ τοῦ εὐαγγελίου ἡμῶν εἰς περιποίησιν δόξης τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ; kaleō G2564 aorist active indicative 3s ekalesen; euangelion G2098; peripoiēsis G4047",
+        "force": "'To this he called you through our gospel, so that you may obtain the glory of our Lord Jesus Christ.' The instrumentality of the calling is explicitly named: dia tou euangeliou hēmōn (through our gospel). The outward proclamation is the means; the inward divine action is the cause; the goal is the obtaining of Christ's glory. Settles the through-the-Word means of the call and pairs it with the Spirit's enlivening work elsewhere in the same letter (2 Thess 2:13, chosen and called through sanctification of the Spirit and belief in the truth).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.10.14",
+        "key_term": "πῶς οὖν ἐπικαλέσωνται εἰς ὃν οὐκ ἐπίστευσαν πῶς δὲ πιστεύσωσιν οὗ οὐκ ἤκουσαν πῶς δὲ ἀκούσωσιν χωρὶς κηρύσσοντος; epikaleomai G1941 aorist middle subjunctive; pisteuō G4100 aorist active subjunctive; kēryssō G2784 present active participle",
+        "force": "'How shall they call on him in whom they have not believed? How shall they believe in him of whom they have not heard? How shall they hear without a preacher?' Paul's chain making the outward proclamation indispensable to the call. The lexical chain epikaleomai-pisteuō-akouō-kēryssō ties calling-upon-God-in-faith to hearing-the-preached-Word. The outward call through preaching is canonical and necessary.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.10.17",
+        "key_term": "ἄρα ἡ πίστις ἐξ ἀκοῆς ἡ δὲ ἀκοὴ διὰ ῥήματος Χριστοῦ; pistis G4102; akoē G189; rhēma G4487",
+        "force": "'So faith comes from hearing, and hearing through the word of Christ.' The lexical sequence: faith out of hearing, hearing through the word of Christ. The outward proclamation is the canonical means by which faith is produced. Settles that the Word is the instrument God uses; the Spirit's effective work operates through, not apart from, the proclaimed Word. Lutheran Word-and-Sacrament doctrine builds directly on this verse.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2564",
+      "G2821",
+      "G2822",
+      "G1588",
+      "G1670",
+      "G1272",
+      "G4309",
+      "G1344",
+      "G4286",
+      "G5485",
+      "G2842",
+      "G2098",
+      "G4047",
+      "G4100",
+      "G189",
+      "G4487",
+      "G2784",
+      "G1941",
+      "G278",
+      "G5486",
+      "G2588",
+      "G5461",
+      "G496",
+      "G2309",
+      "G3340",
+      "G4644",
+      "H1945",
+      "H6771",
+      "H1980"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "lutheran_word_and_sacrament",
+        "wesleyan_prevenient_grace",
+        "eastern_orthodox_synergy"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed-monergistic (Westminster Confession 10, Heidelberg, Belgic, Savoy, Dort)",
+          "verdict": "Yes, with monergistic specification. God's inward effectual call is given only to the elect and infallibly produces saving faith. The outward call goes to all hearers but does not save apart from the Spirit's effectual work. Rom 8:30 and 1 Cor 1:24 are the load-bearing texts. The chain in Rom 8:30 is unbreakable for the called; Matt 22:14 distinguishes the wide outward klētoi from the narrower elect eklektoi."
+        },
+        {
+          "lens": "Lutheran (Formula of Concord, Article XI; Augsburg)",
+          "verdict": "Yes, with Word-and-Sacrament specification. God draws through the proclaimed Word and Sacraments. The call genuinely produces faith in those who do not resist. The Lutheran tradition explicitly rejects the Reformed teaching that the call is irresistible: Matt 23:37 shows the call can be refused. Election is to salvation, not to reprobation; God earnestly desires the salvation of all who hear."
+        },
+        {
+          "lens": "Anglican (39 Articles, Article 17 on Predestination and Election)",
+          "verdict": "Yes, with 'Spirit working in due season' specification. The elect 'be called according to God's purpose by his Spirit working in due season'. Anglican readings have run both more Reformed (Puritan, Calvinistic Methodist) and less Reformed (Arminian, broad church); the Article allows both."
+        },
+        {
+          "lens": "Wesleyan-Methodist (UMC Articles, Wesley sermons on prevenient grace)",
+          "verdict": "Yes, with prevenient-grace specification. God gives prevenient grace to all that enables genuine response to the universal call. The Wesleyan tradition explicitly rejects monergistic-effectual-calling-of-elect-only. Acts 7:51 and Matt 23:37 are cited canonically; Acts 17:30 commands all to repent."
+        },
+        {
+          "lens": "Catholic magisterial (CCC 1996-2005, 2010; Trent on grace)",
+          "verdict": "Yes, with synergistic specification. Grace precedes and enables every movement toward God (CCC 2010); humans cooperate with prevenient grace. Catholic teaching rejects the Reformed restriction of effective calling to the elect alone; grace is given sufficiently to all who do not refuse."
+        },
+        {
+          "lens": "Eastern Orthodox (synergy)",
+          "verdict": "Yes, with synergy specification. Divine grace and human will cooperate; the call genuinely can be refused. The Orthodox tradition rejects monergistic election and irresistible grace as Western confessional innovations."
+        },
+        {
+          "lens": "Pentecostal-Arminian (Assemblies of God)",
+          "verdict": "Yes, with genuinely-resistible specification. The call goes to all, grace can be resisted, and the gospel is offered universally. The AG Statement of Fundamental Truths explicitly rejects the Reformed effectual-calling-of-elect-only doctrine."
+        }
+      ],
+      "notes": "The lexical distinction between general (outward) and effective (inward) calling is canonical: Matt 22:14 grammatically explicit, Rom 8:30 chain operates within the called-group, John 6:44 names the drawing as upstream of coming, Acts 16:14 narratively displays the inward opening. The disagreement is not over whether the inward work exists but over its scope and mechanics. Every tracked lineage affirms that genuine salvation requires both Word-proclamation and Spirit-work. The Reformed monergistic specification (effective only in the elect, irresistibly) is one valid reading of the texts but is not the only canonical reading. The stem of the question deliberately uses ecumenical-leaning language ('effective unto salvation in those who respond by faith') which preserves enough ambiguity for Lutheran, Anglican, and Wesleyan affirmation."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On Rebuke and Grace; On the Predestination of the Saints; ca. AD 426-429",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Augustine grounds the doctrine of effective calling and irresistible grace for the elect: the Father draws inwardly so that the called come freely and infallibly. The seedbed of all Western effectual-calling theology. Direct CCEL fetch did not return the specific passage."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 2010",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "No one can merit the initial grace of forgiveness and justification, at the beginning of conversion. Moved by the Holy Spirit and by charity, we can then merit for ourselves and for others the graces needed for our sanctification."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration, Article XI on Election; bookofconcord.org",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "God does not call without means, but through the Word. The Father draws through the Holy Spirit's power working with the Word, not apart from it. Rejection of God's offer stems from human resistance, not divine unwillingness: How often would I have gathered."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article 17 Of Predestination and Election; anglicansonline.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Those chosen by God are called according to God's purpose by his Spirit working in due season; through grace they obey the calling, and ultimately attain to eternal salvation through Christ."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith, Chapter 10, Of Effectual Calling, AD 1646",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "All those whom God hath predestinated unto life, and those only, he is pleased, in his appointed and accepted time, effectually to call, by his Word and Spirit, out of that state of sin and death, in which they are by nature, to grace and salvation."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "UMC Articles of Religion, Article VIII Of Free Will; Wesley sermons on prevenient grace",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The condition of man after the fall is such that he cannot turn and prepare himself by his own natural strength to faith and calling upon God; we have no power to do good works without the grace of God preventing us, that we may have a good will, and working with us when we have that good will."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527; Mennonite Confession of Faith",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Anabaptist believers-church tradition emphasizes the personal response of faith and discipleship; the call goes through preaching and is genuinely answered by those who repent and believe. Less monergistic specification than Reformed; less universal-prevenient than Wesleyan."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 5 Salvation of Man",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Salvation is received through repentance toward God and faith in the Lord Jesus Christ. Pentecostal-Arminian tradition explicitly rejects the Reformed effectual-calling-of-elect-only structure; grace is genuinely offered and genuinely resistible. Direct ag.org fetch returned 403."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Eastern Orthodox doctrine of synergy; oca.org doctrinal resources",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Orthodox tradition holds synergy: divine grace and human will cooperate; salvation is neither monergistic nor Pelagian. The call is real and the response is real; the Spirit enables but does not coerce. Direct oca.org synergy page fetch returned 404."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/strongs/greek/2564.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2564 kaleō: to call, summon, invite, name. 148 NT occurrences. Pauline usage of divine calling refers to God's invitation through gospel preaching to participate in heavenly blessings."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2821.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2821 klēsis: a calling, invitation. Pauline usage infuses it with effective power; the calling accomplishes what it announces through God's sovereign commitment. Rom 11:29 calls it irrevocable."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2822.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2822 klētos: called, invited. 11 NT occurrences. Range from general invitation through gospel to specific divine appointment. Matt 22:14 contrasts klētoi with eklektoi."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-30.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 8:30 chain: those whom he predestined he also called (ekalesen G2564), those whom he called he also justified, those whom he justified he also glorified. The relative-pronoun chain treats the group as continuous."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/22-14.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Matt 22:14: polloi klētoi (G2822) oligoi de eklektoi (G1588). Contrastive de strengthens the distinction between general invitation and ultimate election."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/6-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 6:44: oudeis dynatai elthein ean mē helkysē auton (G1670 helkyō: drag, draw, pull). Father's drawing established as necessary precondition for coming to Christ."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/16-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 16:14: ho kyrios diēnoixen tēn kardian (G1272 dianoigō: to open thoroughly). The Lord is the active agent; the heart-opening precedes attentive listening."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/1-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Tim 1:9: sōsantos kai kalesantos klēsei hagia, ou kata ta erga hēmōn alla kata idian prothesin kai charin. Saving and calling in the same divine act; not by works but by purpose and grace."
+      },
+      {
+        "url": "https://bookofconcord.org/solid-declaration/election/",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Formula of Concord XI: God does not call without means, but through the Word. The Father draws through the Holy Spirit working with the Word; rejection of God's offer stems from human resistance."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 17: those chosen by God are called according to God's purpose by his Spirit working in due season; through grace they obey the calling, and ultimately attain to eternal salvation through Christ."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "UMC Article VIII: we have no power to do good works without the grace of God preventing us, that we may have a good will, and working with us when we have that good will. Prevenient grace rejects Reformed monergism."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P70.HTM",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "CCC 2010: No one can merit the initial grace of forgiveness and justification. Moved by the Holy Spirit and by charity, we can then merit for ourselves and others the graces needed for sanctification."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

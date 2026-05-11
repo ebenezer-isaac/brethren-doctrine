@@ -1,0 +1,383 @@
+{
+  "id": "doc-mark-word-preached",
+  "answer": {
+    "id": "doc-mark-word-preached",
+    "affirms": true,
+    "rationale": "The canonical lexical pattern is unambiguous on the centrality of preaching/teaching the Word to the identity and life of a true church. 2 Tim 4:1-5 commands κήρυξον τὸν λόγον (kēryxon ton logon, G2784/G3056) as the standing charge to the pastoral office; Titus 1:9 makes ἀντέχομαι (G472) of the πιστὸς λόγος (G4103/G3056) and τῇ διδασκαλίᾳ τῇ ὑγιαινούσῃ (hugiainousē didaskalia, G5198/G1319) a qualifying mark of an elder; Acts 6:4 names διακονίᾳ τοῦ λόγου (G1248/G3056) as the apostolic priority alongside prayer; Acts 2:42 places ἡ διδαχὴ τῶν ἀποστόλων (G1322/G652) at the head of the earliest church's constitutive practices; Rom 10:14-15 makes κηρύσσοντος (G2784) the necessary condition of saving faith; 1 Cor 1:21 grounds salvation in τὸ κήρυγμα (G2782); Matt 28:19-20 binds disciple-making to διδάσκοντες (G1321). The pan-canonical Greek lexical chain κηρύσσω / εὐαγγελίζω / διδάσκω / λόγος / διδαχή / διδασκαλία demonstrates that no New Testament local assembly is conceivable apart from the proclamation and teaching of the apostolic word.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Cult-marker bar requires (1) would_die_for=true and (2) canonical demonstration that denial constitutes denial of the gospel or a core Trinitarian or Christological boundary. The proposition is canonically demonstrated, but denial of the church-mark formulation as such is not denial of the gospel. A congregation that radically neglects preaching is not thereby a non-Christian sect; it is a defective Christian congregation. Distinguish (a) the apostolic mandate to preach and teach the Word, which is canonical and binding, from (b) the specific Reformation enumeration of preaching as one of two or three marks of the visible church, which is a confessional summary. The lexical data establishes (a) unambiguously and supports (b) as a faithful summary, but the confessional-mark framework itself is theological summary rather than a Scripture-named test. would_die_for is false because the doctrine is not at the core gospel boundary, but would_publicly_correct_if_otherwise is true and would_be_member_if_otherwise is false because a church that has abandoned the ministry of the Word has abandoned Acts 6:4 and 2 Tim 4:1-5 at the office level. would_marry_if_held_otherwise is true because a spouse who undervalues the preaching-mark framing while still loving Scripture is not denying a gospel boundary. The pre-loaded stem ('Right preaching of the Word is a mark of a true visible church') is Reformation-confessional vocabulary; the neutralized form is worked. Universally affirmed across all tracked Christian lineages with disagreement only on the relation of Word to sacrament and discipline."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Does the New Testament identify the faithful proclamation and teaching of the apostolic Word as constitutive of a local Christian assembly?",
+      "notes": "Original stem uses Reformation-confessional vocabulary ('mark of a true visible church'); the three-marks (Word, Sacrament, Discipline) and two-marks (Word, Sacrament) formulations come from Calvin, the Belgic Confession 1561 Art 29, the Scots Confession 1560, and the 39 Articles Art XIX. The neutralized question asks the prior canonical question without importing the later confessional summary as if it were apostolic vocabulary. The lexical answer to the neutralized question is yes and the confessional summary follows as a faithful gloss."
+    },
+    "lay_summary": {
+      "reasoning": "Yes. A real Christian church preaches and teaches the Bible faithfully. That is not optional; it is part of what makes a gathering a church at all. The strongest reasons from Scripture are simple. In 2 Timothy 4 Paul charges Timothy to preach the word, in season and out of season, with patience and teaching. In Titus 1:9 the qualification for an elder is that he must hold firmly to the trustworthy message as it has been taught, so that he can encourage others by sound teaching and refute those who oppose it. In Acts 6:4 the apostles say their priority is prayer and the ministry of the word, even when other good work has to be delegated. In Acts 2:42 the very first picture of the church begins with devotion to the apostles' teaching. In Romans 10 Paul says people cannot believe in someone they have not heard of, and they cannot hear without someone preaching, so preaching is the appointed means of saving faith. Matthew 28 ends the Gospel with the command to make disciples and teach them everything Jesus commanded. So a church without faithful preaching has dropped one of the things the New Testament treats as foundational. The strongest complication is that the New Testament does not literally list 'preaching' as one of two or three named 'marks' of the church. That specific list comes from the Reformation, not from a single verse. Critics sometimes say the early church was held together more by the Eucharist, by apostolic succession, or by communal life than by the sermon. They can point to Acts 2:42 where breaking of bread, fellowship, and prayer stand alongside teaching, and to 1 Corinthians 11 where the Lord's Supper is central. The verdict handles this honestly. The Bible never makes preaching the only mark; it does treat preaching and teaching the Word as inseparable from being the church. Where Scripture itself names many practices together, the careful answer is that preaching the Word is necessary but not by itself sufficient. A real church preaches the Word and gathers around the Lord's Supper and lives in shared life and is willing to correct error. The Reformation list of two or three marks is a faithful summary of all that, not an extra rule added on top of Scripture. Where a church has dropped preaching entirely, it has dropped Acts 6:4 and 2 Timothy 4 at the level of office, and that is a serious failure even if the building is still standing.",
+      "denominational_landscape": "On the centrality of preaching the Word, all tracked Christian lineages agree. The disagreement is over how preaching relates to the other practices of the church, not over whether preaching is essential. Catholic teaching, in the Catechism of the Catholic Church paragraphs 875 to 892, calls bishops heralds of the faith whose first office is to preach the gospel of God, and Dei Verbum and Sacrosanctum Concilium place the homily as integral to the eucharistic liturgy. Eastern Orthodoxy holds that the Word is proclaimed in the readings and the homily within the Divine Liturgy, with the sermon understood as part of the liturgical movement toward the Eucharist rather than a stand-alone event. Lutheran teaching, in Augsburg Confession Article VII, defines the church as the assembly of saints in which the gospel is rightly taught and the sacraments rightly administered, making the right teaching of the gospel one of the two named marks. Anglican teaching, in Article XIX of the 39 Articles, gives the same two-mark formulation: the visible church is a congregation of faithful men in which the pure word of God is preached and the sacraments are duly ministered. Reformed teaching, following Calvin and the Belgic Confession Article 29 and the Scots Confession, names three marks: the pure preaching of the word, the right administration of the sacraments, and the exercise of church discipline. Anabaptist and Mennonite traditions hold the same emphasis on the preached Word and add a strong stress on discipleship and discipline. Methodist Articles of Religion, following Wesley's abridgement of the 39 Articles, retain the same definition of the church around the preached Word and the sacraments. Classical Pentecostal traditions, including the Assemblies of God, place strong emphasis on Spirit-empowered preaching of the gospel as central to the church's mission. No tracked Christian lineage denies that preaching the Word is essential to the church; the variations are over enumeration of marks and over the relation of preaching to sacrament and discipline. This is therefore not a fault line between Christian lineages but a shared apostolic inheritance worded differently across confessional families."
+    },
+    "scripture": [
+      {
+        "ref": "2Tim.4.1-5",
+        "key_term": "κήρυξον τὸν λόγον (kēryxon ton logon) G2784/G3056; ἐπίστηθι εὐκαίρως ἀκαίρως (epistēthi eukairōs akairōs) G2186/G2122/G171; ἐν πάσῃ μακροθυμίᾳ καὶ διδαχῇ (en pasē makrothymia kai didachē) G3115/G1322",
+        "force": "κήρυξον is a single command in the active voice, second person singular, given as a standing charge to the pastoral office before God and Christ Jesus; the object τὸν λόγον is anarthrous in the sense of being the apostolic word entrusted by Paul; εὐκαίρως ἀκαίρως pairs opposites to mean 'whether the situation seems favorable or not'; the charge climaxes Paul's final letter and is bound to the warning that people will not endure ὑγιαινούσης διδασκαλίας (hugiainousēs didaskalias, G5198/G1319, 'sound teaching')",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.1.9",
+        "key_term": "ἀντεχόμενον τοῦ κατὰ τὴν διδαχὴν πιστοῦ λόγου (antechomenon tou kata tēn didachēn pistou logou) G472/G1322/G4103/G3056; ἐν τῇ διδασκαλίᾳ τῇ ὑγιαινούσῃ (en tē didaskalia tē hugiainousē) G1319/G5198",
+        "force": "ἀντέχομαι ('to hold firmly to, cleave to') in the present middle participle governs τοῦ πιστοῦ λόγου ('the trustworthy word'); the result clauses use δυνατὸς ᾖ καὶ παρακαλεῖν ('that he may be able both to exhort') and τοὺς ἀντιλέγοντας ἐλέγχειν ('to refute those who contradict'); the qualification for elder is built around the ability to teach and defend sound teaching, making the ministry of the Word constitutive of the eldership office",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.6.4",
+        "key_term": "τῇ προσευχῇ καὶ τῇ διακονίᾳ τοῦ λόγου προσκαρτερήσομεν (tē proseuchē kai tē diakonia tou logou proskarterēsomen) G4335/G1248/G3056/G4342",
+        "force": "διακονία τοῦ λόγου ('ministry of the word') names the apostolic priority paired only with prayer; the verb προσκαρτερήσομεν (future active indicative of προσκαρτερέω, 'we will devote ourselves steadfastly') marks this as a non-delegable apostolic charge; even when administrative service must be delegated to qualified men, the ministry of the Word remains constitutive of apostolic office",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.42",
+        "key_term": "ἦσαν δὲ προσκαρτεροῦντες τῇ διδαχῇ τῶν ἀποστόλων (ēsan de proskarterountes tē didachē tōn apostolōn) G4342/G1322/G652",
+        "force": "ἡ διδαχὴ τῶν ἀποστόλων ('the apostles' teaching') stands at the head of the four constitutive practices of the earliest church alongside fellowship, breaking of bread, and prayers; προσκαρτεροῦντες (present active participle, 'persisting in, devoted to') marks ongoing devotion; the apostolic teaching is the first-named mark of the church's identity in its earliest narrative description",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.10.14-15",
+        "key_term": "πῶς δὲ ἀκούσωσιν χωρὶς κηρύσσοντος; πῶς δὲ κηρύξωσιν ἐὰν μὴ ἀποσταλῶσιν (pōs de akousōsin chōris kēryssontos? pōs de kēryxōsin ean mē apostalōsin) G2784/G191/G649",
+        "force": "the four-step chain calling-believing-hearing-preaching makes κηρύσσοντος ('one preaching', present active participle) a necessary condition for the saving sequence; without a sent preacher there is no hearing, no faith, no calling on the Lord; the lemma κηρύσσω is thereby positioned as the appointed means by which God's saving address reaches sinners",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.21",
+        "key_term": "διὰ τῆς μωρίας τοῦ κηρύγματος (dia tēs mōrias tou kērygmatos) G3472/G2782",
+        "force": "τὸ κήρυγμα (the substantive 'that which is preached, the proclamation') is the divinely chosen means by which God saves believers; the genitive construction τῆς μωρίας τοῦ κηρύγματος names this as 'the folly of the preaching' from the world's perspective but the wisdom and power of God in saving those who believe; salvation is bound to the preached message",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.4.5",
+        "key_term": "οὐ γὰρ ἑαυτοὺς κηρύσσομεν ἀλλὰ Ἰησοῦν Χριστὸν Κύριον (ou gar heautous kēryssomen alla Iēsoun Christon Kyrion) G2784/G2424/G5547/G2962",
+        "force": "κηρύσσομεν (present active indicative, 'we proclaim') has Jesus Christ as Lord as the content; the contrast with ἑαυτοὺς ('ourselves') guards the proclamation against self-promotion; the apostolic ministry is defined by the object of proclamation, not by personality, programs, or political utility",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Mark.16.15",
+        "key_term": "κηρύξατε τὸ εὐαγγέλιον πάσῃ τῇ κτίσει (kēryxate to euangelion pasē tē ktisei) G2784/G2098/G2937",
+        "force": "the aorist active imperative κηρύξατε ('preach') with the object τὸ εὐαγγέλιον ('the gospel') and the universal scope πάσῃ τῇ κτίσει ('to every creature') makes worldwide gospel proclamation the standing post-resurrection charge; even setting aside the textual question on Mark's longer ending, the Matthean parallel preserves the same charge",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.28.19-20",
+        "key_term": "μαθητεύσατε πάντα τὰ ἔθνη… διδάσκοντες αὐτοὺς τηρεῖν πάντα ὅσα ἐνετειλάμην ὑμῖν (mathēteusate panta ta ethnē… didaskontes autous tērein) G3100/G1484/G1321/G5083",
+        "force": "μαθητεύσατε (aorist active imperative of μαθητεύω, 'make disciples') governs the post-resurrection commission; the participle διδάσκοντες (present active, 'teaching') names teaching as one of the constitutive means of disciple-making alongside baptizing; the universal scope (πάντα τὰ ἔθνη) and universal content (πάντα ὅσα ἐνετειλάμην) bind teaching to the very task of forming the church",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.4.13",
+        "key_term": "πρόσεχε τῇ ἀναγνώσει, τῇ παρακλήσει, τῇ διδασκαλίᾳ (proseche tē anagnōsei, tē paraklēsei, tē didaskalia) G4337/G320/G3874/G1319",
+        "force": "πρόσεχε (present active imperative, 'give attention to') governs three articular nouns: ἡ ἀνάγνωσις (the public reading of Scripture), ἡ παράκλησις (exhortation), and ἡ διδασκαλία (teaching); the triad describes the pastoral ministry of the Word in its public liturgical and didactic forms; the public reading of Scripture and its exposition stand together as constitutive of pastoral office",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.23-26",
+        "key_term": "παρέλαβον ἀπὸ τοῦ Κυρίου ὃ καὶ παρέδωκα ὑμῖν… τὸν θάνατον τοῦ Κυρίου καταγγέλλετε (parelabon… paredōka… katangellete) G3880/G3860/G2605",
+        "force": "παραλαμβάνω and παραδίδωμι ('to receive' and 'to hand on') name the tradition-transmission idiom for the Lord's Supper; καταγγέλλετε (present active indicative, 'you proclaim') makes the Supper itself a form of proclamation of the Lord's death; complicates any reading that pits Word against sacrament as marks of the church because the sacrament is itself a proclaimed gospel act, and supports the broader pattern that the apostolic word constitutes the assembly",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.3.15",
+        "key_term": "οἶκος Θεοῦ… ἐκκλησία Θεοῦ ζῶντος, στῦλος καὶ ἑδραίωμα τῆς ἀληθείας (oikos Theou… ekklēsia Theou zōntos, stylos kai hedraiōma tēs alētheias) G3624/G1577/G4769/G1477/G225",
+        "force": "the church is described as στῦλος καὶ ἑδραίωμα τῆς ἀληθείας ('pillar and bulwark of the truth'); the metaphor places the church in a custodial relation to the apostolic truth, which presupposes the proclamation and defense of that truth as essential to ecclesial identity; complicates an account that detaches the church from the ministry of the Word but supports the centrality of the Word",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.20.27-32",
+        "key_term": "οὐ γὰρ ὑπεστειλάμην τοῦ μὴ ἀναγγεῖλαι… πᾶσαν τὴν βουλὴν τοῦ Θεοῦ (ou gar hypesteilamēn… pasan tēn boulēn tou Theou) G5288/G312/G1012; παρατίθεμαι ὑμᾶς τῷ Θεῷ καὶ τῷ λόγῳ τῆς χάριτος αὐτοῦ (paratithemai hymas tō Theō kai tō logō tēs charitos autou) G3908/G3056",
+        "force": "Paul's pastoral farewell at Miletus describes his ministry as 'not shrinking from declaring the whole counsel of God' and entrusts the Ephesian elders 'to God and to the word of his grace'; ὁ λόγος τῆς χάριτος ('the word of his grace') is named as the means of building up and giving the inheritance; the local-church oversight is defined by the ministry of the Word",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2784",
+      "G2097",
+      "G1321",
+      "G1322",
+      "G1319",
+      "G2782",
+      "G3056",
+      "G652",
+      "G472",
+      "G4103",
+      "G5198",
+      "G1248",
+      "G4342",
+      "G191",
+      "G649",
+      "G3100",
+      "G2098",
+      "G320",
+      "G3874",
+      "G4337",
+      "G2605",
+      "G3908",
+      "G4769"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenantal",
+          "verdict": "affirms",
+          "note": "Reads the ministry of the Word as the central ordinance of the new-covenant assembly; the Reformed three-marks formulation (Word, Sacrament, Discipline) is the classic confessional summary of the lexical pattern in 2 Tim 4, Titus 1, Acts 6, Acts 2:42"
+        },
+        {
+          "lens": "dispensational",
+          "verdict": "affirms",
+          "note": "Reads κηρύσσω, διδάσκω, εὐαγγελίζω in the apostolic letters as church-age church-defining practices; the Brethren-adjacent reading agrees fully on the centrality of the ministry of the Word while typically resisting the precise Reformation two-marks or three-marks enumeration as a confessional formula"
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Same verdict; the ministry of the apostolic Word is constitutive of the new-covenant assembly under any orthodox covenantal scheme"
+        },
+        {
+          "lens": "patristic-typological / Catholic-Orthodox",
+          "verdict": "affirms",
+          "note": "Reads the ministry of the Word as integral to the eucharistic liturgy rather than as a separable mark; the homily-within-liturgy structure (CCC 1346, 1349) and the Orthodox liturgy-of-the-word position preaching as inseparable from the eucharistic celebration; lineage difference is in enumeration, not in whether preaching is central"
+        }
+      ],
+      "notes": "Verdict converges across all orthodox interpretive lenses because the lexical pattern κηρύσσω / διδάσκω / εὐαγγελίζω / διδαχή / λόγος is pan-canonical and not lens-dependent. The Reformation enumeration of preaching as one of two or three marks of the visible church (Augsburg VII, 39 Articles XIX, Belgic 29, Scots 18, WCF 25.4) is a confessional summary of this lexical pattern. The lay verdict affirms the underlying canonical proposition while flagging that the precise mark-formula is post-canonical theological summary. analogia scripturae is invoked because the pattern is pan-canonical; progressive revelation is not strongly in play because both Testaments name proclamation as constitutive of God's gathered people (Neh 8 in the OT, Acts 2:42 in the NT)."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies 3.2.2 (c. 180 AD), ccel.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "That tradition which originates from the apostles, which is preserved by means of the succession of presbyters in the Churches."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "John Chrysostom, Homilies on Acts and the Pauline corpus (4th c.)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Chrysostom's homiletic corpus (commentaries on Acts, Romans, Corinthians, Pastorals) functions as patristic testimony that exposition of the apostolic word was the central pastoral act of the church."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 888",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Bishops, with priests as co-workers, have as their first task to preach the Gospel of God to all men, in keeping with the Lord's command."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Lumen Gentium 25; CCC 888-892",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Bishops are heralds of faith, who draw new disciples to Christ; they are authentic teachers endowed with the authority of Christ."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article VII (1530)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Church is the congregation of saints, in which the Gospel is rightly taught and the Sacraments are rightly administered."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article V (1530)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "That we may obtain this faith, the Ministry of Teaching the Gospel and administering the Sacraments was instituted."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article XIX 'Of the Church' (1571)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The visible Church of Christ is a congregation of faithful men, in the which the pure Word of God is preached, and the Sacraments be duly ministered."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Belgic Confession Article 29 (1561)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The marks by which the true Church is known are these: if the pure doctrine of the gospel is preached therein; if it maintains the pure administration of the sacraments; if church discipline is exercised."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Scots Confession Chapter 18 (1560); Westminster Confession 25.4 (1647)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The notes of the true Kirk of God we believe, confess, and avow to be: first, the true preaching of the Word of God; next, the right administration of the sacraments; last, ecclesiastical discipline uprightly ministered."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article XIII (Wesley's abridgement of the 39 Articles)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The visible Church of Christ is a congregation of faithful men in which the pure Word of God is preached, and the Sacraments duly administered according to Christ's ordinance."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527); Mennonite Confession of Dordrecht (1632)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The visible church is the assembly of those who have heard and received the Word of God in faith, exercised in teaching and discipline among the brethren."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 10 'The Church and Its Mission'",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Church is the Body of Christ… called to be a corporate body in which man may worship God and evangelize the world in Spirit-empowered preaching of the gospel."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, Volume II: Worship — The Divine Liturgy of the Word",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The Liturgy of the Word, with Epistle, Gospel, and homily, stands as the first major movement of the Divine Liturgy, inseparable from but ordered toward the Eucharistic offering."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/4-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "κήρυξον τὸν λόγον, ἐπίστηθι εὐκαίρως ἀκαίρως, ἔλεγξον, ἐπιτίμησον, παρακάλεσον, ἐν πάσῃ μακροθυμίᾳ καὶ διδαχῇ - 'preach the word, be ready in season out of season'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/1-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἀντεχόμενον τοῦ κατὰ τὴν διδαχὴν πιστοῦ λόγου - 'holding firmly to the trustworthy word as taught'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/6-4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "τῇ προσευχῇ καὶ τῇ διακονίᾳ τοῦ λόγου προσκαρτερήσομεν - 'we will devote ourselves to prayer and the ministry of the word'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-42.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ἦσαν προσκαρτεροῦντες τῇ διδαχῇ τῶν ἀποστόλων - 'they were devoting themselves to the apostles' teaching'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/10-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "πῶς δὲ ἀκούσωσιν χωρὶς κηρύσσοντος - 'and how shall they hear without one preaching'"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/1-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "διὰ τῆς μωρίας τοῦ κηρύγματος σῶσαι τοὺς πιστεύοντας - 'through the folly of the preaching to save those believing'"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2784.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "κηρύσσω G2784: to herald as a public crier, especially of divine truth (the gospel); 61 NT occurrences; binding authoritative proclamation."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2097.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "εὐαγγελίζω G2097: to announce good news, to proclaim the gospel of redemption through Jesus; 54 NT occurrences, concentrated in Luke-Acts."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1321.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "διδάσκω G1321: to teach by discourse; nearly always refers to teaching the Scriptures, the written Word of God; 97 NT occurrences."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1322.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "διδαχή G1322: teaching, doctrine, what is taught; named at the head of the four constitutive practices of the church in Acts 2:42."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P2A.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 888: Bishops have as their first task to preach the Gospel of God to all men, heralds of faith who draw new disciples to Christ."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article VII: the Church is the congregation of saints in which the Gospel is rightly taught and the Sacraments rightly administered."
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles XIX: The visible Church of Christ is a congregation of faithful men in the which the pure Word of God is preached, and the Sacraments be duly ministered."
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "AG Statement: the Church is called to evangelize the world in Spirit-empowered preaching of the gospel; preaching is constitutive of the Church's mission."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf01/anf01.ix.iv.iii.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Irenaeus, Against Heresies 3.2.2: the apostolic tradition is preserved through the succession of presbyters who proclaim the same apostolic word."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict"
+    ]
+  }
+}

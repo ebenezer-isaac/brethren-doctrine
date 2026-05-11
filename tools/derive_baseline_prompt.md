@@ -218,16 +218,14 @@ The project produces a baseline referenced indefinitely; "cannot afford to
 re-run" tilts toward Opus on the first pass even at the cost of more rate-limit
 windows.
 
-**Execution model: Claude Max subscription, Opus 4.7.** Opus has tighter 5-hour
-rolling-window rate limits than Sonnet. Plan for the full 231-question run to
-span **multiple days** rather than hours. The resume gate makes interruptions
-safe; just re-invoke the orchestrator and it skips already-completed evidence
-files.
+**Execution model: Claude Max subscription, Opus 4.7.** Measured load shows
+~10 parallel Opus subagents consume ~1% of the weekly limit, so the entire
+231-question bank fits inside ~20% of one week's quota. **No concurrency cap.**
+Spawn aggressively in parallel. The resume gate makes interruptions safe; just
+re-invoke the orchestrator and it skips already-completed evidence files.
 
-Concurrency cap on Opus: **2-3 active subagents at a time** (NOT 5). Idle
-10-15 minutes between every ~15 completions to let the rate-limit bucket
-recover. If a rate-limit error fires, back off **30 minutes** before retrying
-that single id (longer than Sonnet's 15).
+If a rate-limit error does fire on a specific id, back off **30 minutes**
+before retrying that single id, but do NOT throttle the rest of the pool.
 
 ### Subagent task prompt
 
@@ -708,7 +706,11 @@ the file using your Write tool.
 - Cite full URLs.
 - Source-doc / counter-witness excerpts ≤400 chars (counter-witness key_phrase
   ≤200), names redacted except Ebenezer.
-- Final action: Write evidence/<qid>.json. Then return a one-sentence summary
+- Final action: Write evidence/<qid>.json. Then run the PDF renderer with the
+  Bash tool: `uv run python tools/evidence_to_pdf.py evidence/<qid>.json`
+  from the project root. The script writes `evidence/<qid>.pdf` next to the
+  JSON. If the renderer exits non-zero, capture the stderr in your reply so
+  the orchestrator can fix and re-run. Then return a one-sentence summary
   of verdict + confidence to the orchestrator.
 ```
 
@@ -723,20 +725,17 @@ the file using your Write tool.
    `evidence.concordance_lemmas_traversed` + `evidence.hermeneutics` fields,
    drop from worklist. (Greenfield invariant: `evidence/` is empty at start of
    any new run; resume only applies to mid-run interruption recovery.)
-3. **Throttling for the Claude Max subscription on Opus 4.7.** Use a TIGHT
-   concurrent pool (**2-3 active subagents at a time**, NOT 5). Opus rate
-   limits on Max are stricter than Sonnet. Spawn the next batch only when
-   active pool drops below the cap. Between every ~15 completions, take a
-   10-15 minute idle pause to let the rate-limit bucket recover. Plan for the
-   run to span **multiple 5-hour windows across multiple days**. The resume
-   gate makes interruptions safe; the orchestrator can be killed and
-   re-invoked at any point.
-4. **Spawn (paced).** Each Agent call:
+3. **No concurrency cap.** Measured load: ~10 parallel Opus 4.7 subagents
+   consume ~1% of the weekly Claude Max limit, so the entire 231-question
+   bank fits inside ~20% of one week's quota. Spawn aggressively in parallel,
+   no idle pauses, no throttling. The resume gate makes interruptions safe;
+   the orchestrator can be killed and re-invoked at any point.
+4. **Spawn (parallel).** Each Agent call:
    `subagent_type=general-purpose`, `model=opus`,
    `run_in_background=true`. Each call uses the template above with that
-   question's data interpolated. If a subagent returns a rate-limit error,
-   back off **30 minutes** before retrying that single id (Opus rate-limit
-   recovery is slower than Sonnet's).
+   question's data interpolated. If a single subagent returns a rate-limit
+   error, back off **30 minutes** before retrying that one id; do NOT
+   throttle the rest of the pool.
 5. **Wait and validate.** Walk `evidence/`, json-load each file. Any parse
    failure or missing required field: re-spawn the agent (paced). Validate:
    - The moral entailment: cult_marker_if_denied=true requires

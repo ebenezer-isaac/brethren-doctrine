@@ -1,0 +1,322 @@
+{
+  "id": "doc-solus-christus",
+  "answer": {
+    "id": "doc-solus-christus",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration. 1 Tim 2:5 (εἷς γὰρ θεός εἷς καὶ μεσίτης θεοῦ καὶ ἀνθρώπων ἄνθρωπος Χριστὸς Ἰησοῦς heis gar theos heis kai mesitēs theou kai anthrōpōn anthrōpos Christos Iēsous, 'for there is one God and one mediator between God and men, the man Christ Jesus') employs the cardinal heis G1520 twice in tight parallel, locking the singularity of God to the singularity of the mediator; mesitēs G3316 ('go-between, reconciler') is governed by heis. John 14:6 (ἐγώ εἰμι ἡ ὁδὸς καὶ ἡ ἀλήθεια καὶ ἡ ζωή οὐδεὶς ἔρχεται πρὸς τὸν πατέρα εἰ μὴ δι' ἐμοῦ egō eimi hē hodos kai hē alētheia kai hē zōē oudeis erchetai pros ton patera ei mē di' emou, 'no one comes to the Father except through me') uses the universal negation oudeis G3762 plus the exclusive ei mē construction with dia G1223 plus genitive to fix Christ as the sole channel of access. Acts 4:12 (οὐκ ἔστιν ἐν ἄλλῳ οὐδενὶ ἡ σωτηρία οὐδὲ γὰρ ὄνομά ἐστιν ἕτερον 'there is salvation in no one else, for there is no other name') stacks two universal negations (en allō oudeni and oude heteron onoma) around sōzō G4982 and onoma G3686. Heb 7:25 (πάντοτε ζῶν εἰς τὸ ἐντυγχάνειν ὑπὲρ αὐτῶν, 'he always lives to make intercession for them') uses entynchanō G1793 with the temporal pantote and eis to panteles G3838 ('to the uttermost') to ground a permanent priestly intercession in Christ's indestructible life. 1 John 2:1 (παράκλητον ἔχομεν πρὸς τὸν πατέρα Ἰησοῦν Χριστὸν δίκαιον, 'we have an advocate with the Father, Jesus Christ the righteous') names paraklētos G3875 of Jesus only. Heb 9:11-12 with ephapax G2178 ('once for all') and aiōnian lytrōsin G3084 ('eternal redemption') close the priestly-mediatorial circuit through Christ's own blood, not goats and calves. The five NT uses of mesitēs that name Christ (1 Tim 2:5, Heb 8:6, Heb 9:15, Heb 12:24, and inferentially the 'better' mediator implied across Hebrews) form a pan-canonical pattern; Moses as mesitēs of the old covenant at Gal 3:19-20 functions typologically and is superseded by the singular Christ-mediator of the new covenant."
+  ,
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Solus Christus, that salvation is through Christ alone and that no other mediator is given, is a strict gospel boundary. Cult-marker-if-denied is canonically defensible in its strict form: denial that Christ is the sole sufficient mediator and denial that there is salvation in his name alone collapses the gospel as canonically presented. Public-record carriers of denial in the strict sense include religious pluralism (all religions lead to God), inclusivism in its strong form, syncretistic ancestor veneration where ancestors are treated as functionally salvific mediators, and groups that elevate a human founder to a co-equal or supplementary saving role (Iglesia ni Cristo's Felix Manalo treated as the angel of Revelation 7 and the necessary channel of salvation; The Unification Church's Sun Myung Moon claimed as the true parent and second messiah; William Branham's Branhamism elevating Branham as the prophet without whom one cannot reach Christ; Christian Science treating Mary Baker Eddy's interpretation as the necessary key). Important scope flag: the Catholic and Eastern Orthodox practice of invoking the intercession of saints and of Mary is in-house Christian and does not, in the official magisterial formulation, deny Christ's unique mediation. CCC 970 explicitly subordinates Mary's role to Christ's unique mediation as participation rather than competition. Protestants polemically critique the practice and judge it dangerous, but historic Christian classification does not place Catholic or Orthodox believers outside the gospel for this reason alone; that would require treating the canonical Apostles' Creed and Nicene Creed traditions as cults, which no responsible historian or theologian does. Fruit-vs-precision nuance: many Catholic and Orthodox believers functionally trust Christ alone for salvation while honoring the saints as fellow worshippers in the heavenly assembly. The cult-marker line falls on outright denial of Christ's sole sufficiency, not on differences over the practice of invocation. Pope John Paul II's Marian titles 'co-redemptrix' and 'mediatrix of all graces' have been used in Catholic devotional theology, but Vatican II's Lumen Gentium 60-62 explicitly states that these are understood as 'in no way obscuring or diminishing this unique mediation of Christ.' Lay summary captures the same nuance in plain English."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "The statement 'Salvation is through Christ; no other name under heaven and no other mediator between God and humanity is given for salvation' uses canonical phrasing drawn directly from Acts 4:12 and 1 Tim 2:5. The phrase 'no other name under heaven' is a literal quotation of Acts 4:12. The phrase 'no other mediator between God and humanity' is a literal restatement of 1 Tim 2:5. The vocabulary is biblical, not confessional. The term 'solus Christus' in the question id is the Latin Reformation slogan, but the proposition itself sits inside the canonical lexical pattern rather than depending on confessional vocabulary. No flag required."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: salvation comes through Jesus Christ alone, and Scripture names no other mediator and no other saving name. The strongest reasons from Scripture stack tightly. 1 Timothy 2:5 says, 'For there is one God, and there is one mediator between God and men, the man Christ Jesus.' The word 'one' is used twice in the same sentence, locking the singularity of God to the singularity of the mediator. John 14:6 has Jesus say, 'I am the way, and the truth, and the life. No one comes to the Father except through me.' The universal 'no one' is paired with the exclusive 'except through me.' Acts 4:12 says of Jesus, 'There is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.' Two universal negations stack. Hebrews 7:25 says Jesus 'always lives to make intercession' for those who draw near to God through him, and that he saves 'to the uttermost.' 1 John 2:1 calls Jesus our 'advocate with the Father.' The strongest counterargument inside the Bible is the question of intercessory prayer by living believers and the intercession of departed saints. Paul asks the Romans, the Ephesians, and the Thessalonians to pray for him (Romans 15:30, Ephesians 6:18-19, 1 Thessalonians 5:25). James 5:16 says, 'The prayer of a righteous person has great power as it is working.' Revelation 5:8 and 8:3-4 picture the prayers of the saints rising before God's throne like incense. Critics who practice invocation of saints argue that asking saints in heaven to pray for them is the same kind of asking-for-prayer that Paul asks of the living, and that the New Testament's category of intercession is not limited to Christ. The verdict handles this by distinguishing two different things. Christ's mediation in 1 Timothy 2:5 and Hebrews 7:25 is unique because only his sacrifice atones, only his blood opens access to the Father, and only his name saves. Intercessory prayer by living believers, and any prayer of saints in heaven, is not redemptive mediation. It does not atone, it does not open access, and it does not save. The strict gospel boundary is denial that Christ alone atones and that his name alone saves. Differences over the practice of asking saints to pray are an in-house Christian disagreement, not a cult boundary in themselves. Outright pluralism that says all religions save, and any system that requires a human founder as an additional saving channel alongside Christ, falls outside the canonical pattern.",
+      "denominational_landscape": "Every historic Christian lineage confesses that Christ is the unique mediator who alone atones and that his name alone saves. The disagreement runs along a single line: whether the intercession of departed saints and of Mary is a permissible participation in Christ's unique mediation, or whether it competes with it. Patristic authors uniformly affirm Christ's unique mediatorship in the strict gospel sense. The Catholic Catechism teaches Christ as the sole mediator of redemption, and at CCC 970 explicitly states that Mary's maternal mediation is understood as participation in Christ's unique mediation rather than competition with it. Lutheran Augsburg Confession Article XXI rejects the invocation of saints with the words, 'the Scripture teaches not the invocation of saints or to ask help of saints, since it sets before us the one Christ as the Mediator, Propitiation, High Priest, and Intercessor.' The Anglican 39 Articles, Article XXII, calls the Romish doctrine concerning invocation of saints 'a fond thing, vainly invented, and grounded upon no warrant of Scripture, but repugnant to the Word of God.' Methodist Articles of Religion, Article XIV, repeats the Anglican language. Methodist Article XX says, 'The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world.' Reformed confessions (Westminster Confession chapter 8, Heidelberg Catechism Q29-Q31, Belgic Confession Article 26) confess Christ as the only mediator. Anabaptist Schleitheim, Mennonite Dordrecht, and Pentecostal Assemblies of God all teach salvation through Christ alone. Eastern Orthodoxy keeps the intercession of the Theotokos and the saints in its liturgy and teaches this as participation in Christ's mediation. Public-record carriers of denial in the strict sense are uniformly classified as outside historic Christianity. Religious pluralism that says all religions save denies Acts 4:12. Iglesia ni Cristo treats Felix Manalo as the angel of Revelation 7 and as the necessary human channel for salvation, which adds a human mediator alongside Christ. The Unification Church teaches Sun Myung Moon as the second messiah and true parent. William Branham's Branhamism teaches Branham as the prophet of the age without whom one cannot rightly come to Christ. Christian Science treats Mary Baker Eddy's interpretation as the necessary key to true Christianity. Mormonism teaches that salvation requires temple ordinances mediated through the Latter-day Saints priesthood, in addition to Christ. These groups are treated as outside historic Christianity by every tracked lineage. Catholic and Orthodox practice of invoking the intercession of saints is an in-house Christian disagreement; the strict gospel boundary falls on outright denial of Christ's sole sufficiency in atonement and saving name."
+    },
+    "scripture": [
+      {
+        "ref": "1Tim.2.5",
+        "key_term": "εἷς γὰρ θεός εἷς καὶ μεσίτης θεοῦ καὶ ἀνθρώπων ἄνθρωπος Χριστὸς Ἰησοῦς; heis G1520; mesitēs G3316; theos G2316; anthrōpos G444; Christos G5547",
+        "force": "'For there is one God, and there is one mediator between God and men, the man Christ Jesus.' The cardinal heis ('one') is used twice in tight parallel, locking the singularity of the mediator to the singularity of God. Mesitēs G3316 means 'go-between, reconciler', a legal-covenantal term. The qualifier anthrōpos Christos Iēsous keeps the incarnational ground of the mediation (a human mediator for humans), while the heis bar excludes any additional mediator at the same level.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.14.6",
+        "key_term": "ἐγώ εἰμι ἡ ὁδὸς καὶ ἡ ἀλήθεια καὶ ἡ ζωή οὐδεὶς ἔρχεται πρὸς τὸν πατέρα εἰ μὴ δι' ἐμοῦ; hodos G3598; alētheia G225; zōē G2222; oudeis G3762; erchomai G2064; dia G1223",
+        "force": "'I am the way, and the truth, and the life. No one comes to the Father except through me.' The triple articular predicate (the way, the truth, the life) is exclusive. The universal negation oudeis ('no one') paired with the exclusive ei mē ('except') and dia plus genitive ('through me') fixes Christ as the singular channel of access to the Father. No room for a secondary or alternate path.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.4.12",
+        "key_term": "οὐκ ἔστιν ἐν ἄλλῳ οὐδενὶ ἡ σωτηρία οὐδὲ γὰρ ὄνομά ἐστιν ἕτερον ὑπὸ τὸν οὐρανὸν; sōzō G4982; sōtēria G4991; onoma G3686; heteros G2087; allos G243; oudeis G3762",
+        "force": "'There is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.' Two stacked universal negations: en allō oudeni ('in no one else') and oude heteron onoma ('no other name'). Sōtēria G4991 is the noun for deliverance, salvation. The construction is maximally exclusive: not merely a preferred name, but the only name under the whole of heaven.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1John.2.1",
+        "key_term": "παράκλητον ἔχομεν πρὸς τὸν πατέρα Ἰησοῦν Χριστὸν δίκαιον; paraklētos G3875; dikaios G1342; pater G3962",
+        "force": "'We have an advocate with the Father, Jesus Christ the righteous.' Paraklētos G3875 ('one called alongside to help', advocate, legal helper) is named only of Jesus here and of the Holy Spirit in John's gospel. The construction pros ton patera ('with the Father') locates the advocacy in the heavenly court. Jesus Christ the righteous is the lone advocate named.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.7.25",
+        "key_term": "πάντοτε ζῶν εἰς τὸ ἐντυγχάνειν ὑπὲρ αὐτῶν; sōzō G4982; entynchanō G1793; pantote G3842; eis to panteles G3838",
+        "force": "'Consequently he is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.' Entynchanō G1793 ('intercede, plead with') paired with pantote ('always') and the prepositional eis to panteles ('to the uttermost, completely') grounds Christ's intercession in his indestructible priestly life. The construction proserchomenous di' autou ('approaching through him') makes him the access-channel.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.12",
+        "key_term": "διὰ δὲ τοῦ ἰδίου αἵματος εἰσῆλθεν ἐφάπαξ εἰς τὰ ἅγια αἰωνίαν λύτρωσιν εὑράμενος; haima G129; ephapax G2178; lytrōsis G3085; hagios G40",
+        "force": "'He entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood, thus securing an eternal redemption.' Ephapax G2178 ('once for all') is the temporal seal of the sacrifice; aiōnian lytrōsin ('eternal redemption') names the result. Christ's own blood, contrasted with the blood of goats and calves, is the sole basis of access into the holy places.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Heb.10.12",
+        "key_term": "μίαν ὑπὲρ ἁμαρτιῶν προσενέγκας θυσίαν εἰς τὸ διηνεκὲς ἐκάθισεν ἐν δεξιᾷ τοῦ θεοῦ; thysia G2378; mia G1520; dienekēs G1336",
+        "force": "'When Christ had offered for all time a single sacrifice for sins, he sat down at the right hand of God.' Mian thysian ('a single sacrifice') paired with eis to diēnekes ('for all time, continually') fixes the unrepeatable sufficiency of Christ's atoning offering. The sitting at the right hand contrasts with the standing levitical priests who could never sit because their work was never finished.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.12.24",
+        "key_term": "διαθήκης νέας μεσίτῃ Ἰησοῦ; mesitēs G3316; diathēkē G1242; neos G3501",
+        "force": "'Jesus, the mediator of a new covenant.' Mesitēs G3316 used a fifth time in the NT to identify Jesus as the singular covenant-mediator. Diathēkē neas ('a new covenant') is contrasted in Hebrews with the old Mosaic covenant whose mediator was Moses (Gal 3:19-20). The new-covenant mediator stands alone in the apostolic teaching.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Heb.8.6",
+        "key_term": "κρείττονός ἐστιν διαθήκης μεσίτης; mesitēs G3316; kreittōn G2909; diathēkē G1242",
+        "force": "'He is the mediator of a better covenant, which has been enacted on better promises.' Kreittōn ('better') applied to the covenant of which Christ is mesitēs raises Christ's mediation categorically above any prior mediation. The lexical chain mesitēs of a kreittōn diathēkē repeats at Heb 9:15.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.15",
+        "key_term": "διαθήκης καινῆς μεσίτης; mesitēs G3316; diathēkē kainē; thanatos G2288",
+        "force": "'Therefore he is the mediator of a new covenant, so that those who are called may receive the promised eternal inheritance, since a death has occurred that redeems them from the transgressions committed under the first covenant.' Christ's death is the basis of the mediation. The eternal inheritance flows through the one mediator. Diathēkē kainē echoes Jer 31:31.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.3.19",
+        "key_term": "διαταγεὶς δι' ἀγγέλων ἐν χειρὶ μεσίτου; mesitēs G3316; angelos G32; diatassō G1299",
+        "force": "'It was put in place through angels by an intermediary,' i.e., Moses as the mesitēs of the law-covenant. Surfaces a complicating use of the same lemma: in the old-covenant context, mesitēs can name a human mediator (Moses). The NT pattern is to subordinate Moses-mediation typologically to Christ-mediation as the greater fulfillment (Heb 3:1-6).",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.8.34",
+        "key_term": "Χριστὸς Ἰησοῦς ὁ ἀποθανών ὃς καί ἐστιν ἐν δεξιᾷ τοῦ θεοῦ ὃς καὶ ἐντυγχάνει ὑπὲρ ἡμῶν; entynchanō G1793",
+        "force": "'Christ Jesus is the one who died, more than that, who was raised, who is at the right hand of God, who indeed is interceding for us.' Same verb entynchanō as Heb 7:25, naming Christ alone as the heavenly intercessor at the right hand. Stacked clauses tie his death, resurrection, session, and intercession into a single saving work.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.10.9",
+        "key_term": "ἐγώ εἰμι ἡ θύρα δι' ἐμοῦ ἐάν τις εἰσέλθῃ σωθήσεται; thyra G2374; sōzō G4982",
+        "force": "'I am the door. If anyone enters by me, he will be saved.' The articular predicate hē thyra ('the door') is exclusive. Salvation is conditioned on entering through Christ (di' emou), parallel to John 14:6.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "John.3.36",
+        "key_term": "ὁ πιστεύων εἰς τὸν υἱὸν ἔχει ζωὴν αἰώνιον ὁ δὲ ἀπειθῶν τῷ υἱῷ οὐκ ὄψεται ζωήν; pisteuō G4100; zōē aiōnios G2222 G166",
+        "force": "'Whoever believes in the Son has eternal life; whoever does not obey the Son shall not see life, but the wrath of God remains on him.' Salvation tied to Son alone; refusal of the Son fixes wrath. The exclusive linkage of zōē aiōnios to the Son is the same pattern as 1 John 5:11-12.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1John.5.11",
+        "key_term": "ἡ ζωὴ ἐν τῷ υἱῷ αὐτοῦ ἐστιν; zōē G2222; huios G5207",
+        "force": "'God gave us eternal life, and this life is in his Son. Whoever has the Son has life; whoever does not have the Son of God does not have life.' Life is located ontologically en tō huiō ('in the Son'). Exclusive locative construction.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.5.9",
+        "key_term": "ἠγόρασας τῷ θεῷ ἐν τῷ αἵματί σου; agorazō G59; haima G129",
+        "force": "'Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation.' Christ's blood is the sole purchase-price of redemption named in the heavenly worship-scene. Universal scope, singular agent.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G3316", "G3875", "G1793", "G4982", "G4991", "G3686", "G2087", "G243", "G3762", "G1520", "G1242", "G3598", "G2178", "G3085", "G3084", "G129", "G2378", "G4100", "G2222"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {"lens": "covenant_theology", "verdict": "affirms", "note": "Reads Moses-mediation at Sinai as typological shadow superseded by Christ-mediation of the new covenant per Hebrews 8-10."},
+        {"lens": "dispensationalism", "verdict": "affirms", "note": "Distinct dispensations, but Christ as sole mediator of salvation is constant across all dispensations; the church-age mediation is the same Christ."},
+        {"lens": "new_covenant_theology", "verdict": "affirms", "note": "New covenant in Christ supersedes Mosaic covenant; Christ-mediation is the sole saving mediation in the new covenant era."}
+      ],
+      "notes": "All three Protestant frameworks converge on affirms. The Catholic and Orthodox lenses also affirm Christ's unique mediation at the magisterial level (CCC 618, 970; Orthodox liturgical theology) while permitting the intercession of saints as participation, not competition. The strict gospel boundary on Christ's sole atonement and sole saving name is held across every historic Christian lineage."
+    },
+    "counter_witness": [
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XXI (1530), bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the Scripture teaches not the invocation of saints or to ask help of saints, since it sets before us the one Christ as the Mediator, Propitiation, High Priest, and Intercessor"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion XIV (Wesley's abridgement), umc.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Romish doctrine concerning purgatory, pardon, worshiping, and adoration of images, relics, and invocation of saints, is a fond thing, vainly invented, and grounded upon no warrant of Scripture"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion XX, umc.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world; and there is none other satisfaction for sin but that alone"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 970; Lumen Gentium 60-62, vatican.va",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Mary's function as mother of men in no way obscures or diminishes this unique mediation of Christ, but rather shows its power; her saving influence flows from the superabundance of the merits of Christ"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox liturgical theology, intercession of the Theotokos and the saints, oca.org",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Orthodox practice invokes the intercession of the Theotokos and the saints as participation in the prayers of the Church, understood as inside Christ's unique mediation, not competition with it"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article XXII and Article XXXI (1571), churchofengland.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Article XXII rejects the Romish doctrine on invocation of saints; Article XXXI confesses Christ's one oblation of himself once made as the perfect redemption for all sins"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths 5, ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation is received through repentance toward God and faith in the Lord Jesus Christ; salvation is solely through the blood of Jesus Christ"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith chapter 8; Heidelberg Catechism Q29-Q31",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ as the only mediator between God and man, prophet, priest, and king of the Church; Heidelberg Q29-Q31 ties his saving offices to his exclusive name Jesus"
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Patristic consensus per Schaff NPNF; Augustine City of God IX.15-17; Athanasius On the Incarnation",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Patristic authors uniformly affirm Christ as the one mediator between God and humanity in the strict gospel sense; veneration practices vary but do not deny Christ's sole atoning mediation"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Dordrecht 1632 Article VI; Schleitheim 1527",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ alone as the only Savior, redeemer, mediator; rejection of any human mediator alongside Christ"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "heis G1520 used twice in 1 Tim 2:5; mesitēs G3316 'a go-between, an internunciator, or a reconciler' identifies Christ as the singular mediator between God and humanity"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/4-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "double negative structure ouk en allo oudeni and oude heteron onoma; absolute exclusivity, salvation exists in no alternative name"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/14-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "exclusive conditional ei me with dia plus genitive; access to the Father through a singular necessary channel, Jesus alone"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/7-25.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "entynchano G1793 present infinitive with pantote and eis to panteles G3838 grounds Christ's perpetual priestly intercession in his indestructible life"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/2-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "parakletos G3875 'an intercessor, consoler, one called to one's aid' applied to Jesus Christ the righteous as advocate with the Father"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3316.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G3316 mesites occurs six times in the NT; five identify Christ as mediator of the new covenant or between God and humans; one identifies Moses as mediator of the law"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/9-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ephapax 'once for all', aionian lytrosin 'eternal redemption' through Christ's own blood, not the blood of goats and calves"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/9-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "diatheke kaine G1242 with mesites G3316 'a go-between, reconciler'; Christ as mediator of the new covenant by means of his death"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/12-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Jesus identified as mesites of a new covenant (diatheke neas), contrasted with the blood of Abel; fifth NT use of mesites of Christ"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/3-20.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "mesites in Gal 3:19-20 names Moses as mediator of the law; a mediator involves more than one party; complicating same-lemma context, resolved typologically by Hebrews"
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg XXI: Scripture sets before us the one Christ as the Mediator, Propitiation, High Priest, and Intercessor; rejects invocation of saints"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article XX: The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction; there is none other satisfaction for sin but that alone"
+      }
+    ],
+    "confidence": "high",
+    "flags": ["counter-witness-partial-fetch-failures", "cult-marker-scope-flag"]
+  }
+}

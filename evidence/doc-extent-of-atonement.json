@@ -1,0 +1,397 @@
+{
+  "id": "doc-extent-of-atonement",
+  "answer": {
+    "id": "doc-extent-of-atonement",
+    "affirms": true,
+    "rationale": "The Greek text supports a verdict of universal extent of provision with particular efficacious application to believers, and this is the broader Christian consensus. Universal-extent passages use the broadest lexical quantifiers Greek possesses: John 3:16 has ἠγάπησεν ὁ θεὸς τὸν κόσμον ēgapēsen ho theos ton kosmon G2889, 'God loved the world', with the purpose clause πᾶς ὁ πιστεύων pas ho pisteuōn G3956 ('everyone who believes'). John 1:29 has ὁ ἀμνὸς τοῦ θεοῦ ὁ αἴρων τὴν ἁμαρτίαν τοῦ κόσμου ho amnos tou theou ho airōn tēn hamartian tou kosmou G286/G142/G266/G2889, singular 'sin of the world'. John 6:51 has ὑπὲρ τῆς τοῦ κόσμου ζωῆς hyper tēs tou kosmou zōēs ('for the life of the world'). 1 John 2:2 names Christ ἱλασμός hilasmos G2434 ('propitiation') περὶ ὅλου τοῦ κόσμου peri holou tou kosmou ('concerning the whole world'), explicitly contrasted with believers ('not for ours only'). 1 Tim 2:6 has ἀντίλυτρον ὑπὲρ πάντων antilytron hyper pantōn G3956 ('ransom for all'). Heb 2:9 has ὑπὲρ παντὸς γεύσηται θανάτου hyper pantos geusētai thanatou ('that he might taste death for everyone'). 2 Peter 2:1 has τὸν ἀγοράσαντα αὐτοὺς δεσπότην ἀρνούμενοι ton agorasanta autous despotēn arnoumenoi G59/G1203 ('denying the Master who bought them'), where Christ is said to have bought false teachers who deny him. 1 Tim 4:10 has σωτὴρ πάντων ἀνθρώπων μάλιστα πιστῶν sōtēr pantōn anthrōpōn malista pistōn G4990/G3956/G3122 ('Saviour of all people, especially of believers'), with μάλιστα marking intensified application within a universal class. 2 Cor 5:14-15 has εἷς ὑπὲρ πάντων ἀπέθανεν heis hyper pantōn apethanen ('one died for all'). 2 Pet 3:9 has μὴ βουλόμενός τινας ἀπολέσθαι ἀλλὰ πάντας εἰς μετάνοιαν χωρῆσαι G3956 ('not wishing any to perish but all to come to repentance'). The particular-language passages (John 10:11 ὑπὲρ τῶν προβάτων hyper tōn probatōn G4263 'for the sheep', John 17:9 'I am not praying for the world but for those you have given me' using ἐρωτάω erōtaō G2065 of intercessory request, Eph 5:25 'Christ loved the church and gave himself up for her' using παρέδωκεν paredōken G3860 ὑπὲρ αὐτῆς, Acts 20:28 'the church which he obtained with his own blood') affirm a particular love and particular effectual application to the elect church, but they do not lexically deny the universal-provision passages. The phrase pattern is positive-particular (he did die for the sheep / the church), not negative-exclusive (he did NOT die for any others). Lexically, universal kosmos and pas terms cannot be reduced to 'world of the elect' or 'all classes of people' without doing violence to the contrast structure in 1 John 2:2 and the apostasy-context in 2 Pet 2:1. The classic Augustinian and post-Dortian formulation 'sufficient for all, efficient for the elect' preserves both witness-streams without collapsing either. The straightforward universal-extent reading is preserved more cleanly by Lutheran, Anglican, Methodist, Catholic, Eastern Orthodox, Pentecostal, and Brethren readings; the strict limited-atonement view is an in-house Reformed-Particular-Baptist minority position within global Christianity.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "This is a contested in-house Christian doctrine. The strict limited-atonement view (TULIP 'L', Canons of Dort Second Head Articles 3 and 8, Westminster Confession 3.6 and 8.5, 1689 London Baptist Confession 8.8) is the public position of confessional Reformed, Particular Baptist, and the broader Calvinist-confessional bloc. The universal-extent view with particular-application is the public position of Lutheran (Formula of Concord XI), Anglican (39 Articles Article 31), Methodist and Wesleyan (Articles of Religion II), Catholic (CCC 605 citing Mt 20:28 'this last term is not restrictive'), Eastern Orthodox (universal redemption applied through synergistic cooperation with grace), Pentecostal (Assemblies of God Statement of Fundamental Truths), Anabaptist, classical Arminian, and Brethren traditions. The latter group is the global Christian majority. Cult-marker bar requires the strict Reformed verdict be canonically demonstrable; the apparatus-plus-interlinear weight tips the other way (toward universal extent), so cult_marker_if_denied on the universal-extent verdict is false because the contrary position is held in good faith by serious confessional traditions. would_die_for is false because while the universal scope of the gospel offer is essential, the precise metaphysical mechanism of how Christ's death relates to the elect versus the non-elect is below the line of gospel-essentials and within the scope of legitimate Christian disagreement. Hyper-Calvinist denial of the free offer of the gospel (the view that the gospel should NOT be offered to all sinners because Christ did not die for all) DOES approach a cult-marker boundary because it denies the apostolic universal-call pattern, but mainstream Reformed limited-atonement does not deny the free offer. Fruit-vs-precision nuance: a church that holds strict limited atonement but preaches the free offer of the gospel to all sinners, like a confessional Reformed Baptist church, is functionally indistinguishable in evangelism from a universal-extent Brethren church; the disagreement is theological-systematic, not pastoral-evangelistic. would_be_member_if_otherwise is false because formal membership requires alignment with the universal-extent position, which the user holds; this is an honest disagreement, not a separation issue. Public-record carriers of strict limited atonement: Westminster Standards (1646-1647), Synod of Dort (1618-1619), 1689 London Baptist Confession, Hyper-Calvinist tradition (Gill, Brine, Hoeksema and Protestant Reformed Churches). Public-record carriers of universal extent: Council of Trent (Catholic), CCC, Formula of Concord, 39 Articles, Wesleyan Articles, Five Articles of Remonstrance, AG Statement, OCA doctrinal teaching. Cult-marker on this question attaches not to limited-versus-universal extent but to universalist denials of judgment (which deny eschatological accountability), or to Pelagian denials that Christ's atonement is necessary at all."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Christ's atoning death is sufficient and intended for all humanity in its provision and offer, and efficaciously applied to those who believe; Christian traditions disagree about whether Christ's atoning intent itself extended only to the elect (limited atonement) or to all humanity (universal extent with particular application).",
+      "notes": "The original stem is heavily loaded with Reformed-confessional vocabulary: 'sufficient for all but applied/efficient for the elect' is the Dortian formulation, presented as if it were neutral. The stem also names 'Brethren tradition' as holding 'general atonement, with sincere universal gospel offer', which biases toward that position. Working the neutralized form: does the Greek text demonstrate universal extent of provision or only-elect extent? Flag stem-pre-loaded-verdict raised."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: Christ's death was a real provision for the whole world, not only for those who will end up believing. The salvation he won is offered to every person and is sufficient to cover anyone's sin. At the same time, that provision is actually applied only to those who trust him; the rest perish in their sins despite a real and serious offer being made. The strongest reason from Scripture is the pattern of the broadest words in the New Testament being attached to the atonement. John 3:16 says God loved the world and gave his only Son so that whoever believes in him should not perish. John 1:29 calls Jesus the Lamb of God who takes away the sin of the world. 1 John 2:2 says Jesus is the propitiation for our sins, and not for ours only but also for the sins of the whole world. That last verse is decisive because the writer deliberately contrasts believers with everyone else and says the propitiation covers both groups. 1 Timothy 2:6 says Christ gave himself as a ransom for all. Hebrews 2:9 says he tasted death for everyone. 2 Peter 2:1 says false teachers deny the Master who bought them; if Christ bought even those who finally deny him, his purchase reached beyond the elect. 1 Timothy 4:10 calls God the Saviour of all people, especially of those who believe; the word especially marks an intensified application of a universal claim. The strongest counterargument from Scripture itself uses particular language: in John 10:11 Jesus says the good shepherd lays down his life for the sheep. In John 17:9 he says he is not praying for the world but for those his Father has given him. In Ephesians 5:25 Paul says Christ loved the church and gave himself up for her. In Acts 20:28 Paul says God obtained the church with his own blood. Critics use these to argue that Christ died only for the elect and that the broad words like world and all mean world of the elect or all kinds of people. The verdict handles this tension by reading the particular passages as saying what they say without saying what they do not say. Christ did die for the sheep. He did love the church. But the text never says he did not also die for those who reject him. The contrast in 1 John 2:2 between us and the whole world cannot be flattened, and the apostasy context of 2 Peter 2:1 cannot be reinterpreted away. So both witnesses stand: a universal provision, and a particular and effectual application. The result is a real offer of salvation to every person and a real accomplishment of salvation for those who believe.",
+      "denominational_landscape": "Christians disagree on this question. The strict limited-atonement view, that Christ died only for the elect and not for those who finally perish, is the public confessional position of the Reformed tradition through the Canons of Dort, the Westminster Confession, and the 1689 London Baptist Confession. It is held today by confessional Presbyterian churches, Reformed Baptist churches, the Dutch Reformed family, and the broader Calvinist-confessional bloc. Within this camp the standard formula is that Christ's death was sufficient for all but efficient or intended only for the elect; the harder version held by hyper-Calvinists denies the free offer of the gospel to all sinners. The universal-extent view, that Christ died for all humanity in his atoning intent and provision while the benefit is applied to those who believe, is the public confessional position of the Lutheran tradition in the Formula of Concord Article XI, the Anglican tradition in Article 31 of the 39 Articles, the Methodist and Wesleyan tradition in Article II of the Articles of Religion, the Catholic Church in the Catechism, the Eastern Orthodox tradition with its accent on synergistic cooperation, the Pentecostal tradition in the Assemblies of God Statement of Fundamental Truths, the classical Arminian Remonstrants, the Anabaptist tradition, and Brethren and Plymouth Brethren circles. By raw lineage count and by historical longevity, the universal-extent view is the majority position across global Christianity. The patristic witness, including Augustine in his mature anti-Pelagian writings, is mixed and reads most naturally as universal provision with particular efficacious application. Public-record heterodox denials of the question fall on different lines than the limited-versus-universal debate. Universalist movements deny that anyone is finally lost, which removes the question by collapsing the distinction. Pelagian and modernist movements deny that Christ's atonement is necessary at all. Mormonism teaches an idiosyncratic doctrine in which Christ atones for original sin universally but personal salvation requires temple ordinances; this is not classical universal extent. Jehovah's Witnesses teach Christ as a ransom but deny his deity, which crosses other doctrinal lines first. The disagreement between limited atonement and universal extent is a real and serious in-house Christian disagreement, not a Christian-versus-cult line."
+    },
+    "scripture": [
+      {
+        "ref": "John.3.16",
+        "key_term": "ἠγάπησεν ὁ θεὸς τὸν κόσμον ēgapēsen ho theos ton kosmon G2889; πᾶς ὁ πιστεύων pas ho pisteuōn G3956 G4100; ἔδωκεν edōken G1325",
+        "force": "'God so loved the world that he gave his only Son, that whoever believes in him should not perish but have eternal life.' Kosmos here is the inhabited fallen humanity for whom God's love is the cause of the sending. The purpose clause uses pas ho pisteuōn ('everyone who believes'), an open class. No lexical hint of restriction to the elect; the universal scope of the love and the open scope of the believing class are parallel.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.1.29",
+        "key_term": "ὁ ἀμνὸς τοῦ θεοῦ ὁ αἴρων τὴν ἁμαρτίαν τοῦ κόσμου ho amnos tou theou ho airōn tēn hamartian tou kosmou G286 G142 G266 G2889",
+        "force": "'Behold the Lamb of God who takes away the sin of the world.' The verb airō is present active participle 'takes away, removes'; hamartia is singular ('sin'), kosmos is genitive object of the removal. The Baptist's identification names Jesus' work in universal-sin terms, not elect-sin terms. The figure is sacrificial-typology drawing on Passover and Isaiah 53.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "John.6.51",
+        "key_term": "ὁ ἄρτος δὲ ὃν ἐγὼ δώσω ἡ σάρξ μού ἐστιν ὑπὲρ τῆς τοῦ κόσμου ζωῆς G2889 G5228",
+        "force": "'And the bread that I will give for the life of the world is my flesh.' Preposition hyper ('for, on behalf of, for the benefit of') with kosmos as the beneficiary of the flesh-giving. The conditional offer that follows ('if anyone eats') makes the provision broad and the application individual.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1John.2.2",
+        "key_term": "αὐτὸς ἱλασμός ἐστιν περὶ τῶν ἁμαρτιῶν ἡμῶν, οὐ περὶ τῶν ἡμετέρων δὲ μόνον ἀλλὰ καὶ περὶ ὅλου τοῦ κόσμου hilasmos G2434 holou tou kosmou G3650 G2889",
+        "force": "'He is the propitiation for our sins, and not for ours only but also for the sins of the whole world.' This is the strongest single anchor for universal extent. The author explicitly contrasts hēmōn ('us', believers) with holou tou kosmou ('whole world'). To flatten 'world' to 'world of the elect' here would erase the contrast and make the sentence say 'not for ours only but also for ours', which is incoherent. Hilasmos is the technical sacrificial term for propitiatory covering.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.2.6",
+        "key_term": "ὁ δοὺς ἑαυτὸν ἀντίλυτρον ὑπὲρ πάντων antilytron hyper pantōn G3956 G5228",
+        "force": "'Who gave himself a ransom for all, the testimony given at the proper time.' Antilytron is a hapax intensified form of lytron ('ransom-price'), with anti- prefix marking substitution. Hyper pantōn is the broadest possible scope ('for all'). Context is verses 1-4 commanding prayer for all people because God desires all people to be saved; the lexical 'all' in verse 6 must match the 'all' of verses 1 and 4.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.4.10",
+        "key_term": "σωτὴρ πάντων ἀνθρώπων μάλιστα πιστῶν sōtēr pantōn anthrōpōn malista pistōn G4990 G3956 G3122 G4103",
+        "force": "'God is the Saviour of all people, especially of those who believe.' Malista ('especially, most of all') marks intensified application of a category, not a different category. The construction requires God to be Saviour of pantōn anthrōpōn ('all people') in some real sense, with that saviourhood intensified for believers. Reading 'all' as 'all the elect' makes malista pistōn ('especially believers') a tautology, which is grammatically untenable.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.2.9",
+        "key_term": "ὅπως χάριτι θεοῦ ὑπὲρ παντὸς γεύσηται θανάτου hyper pantos geusētai thanatou G3956 G1089",
+        "force": "'So that by the grace of God he might taste death for everyone.' Pantos is genitive singular of pas, 'everyone' or 'every one'. The grace-motivation parallels John 3:16. The aorist subjunctive geusētai ('might taste') marks the purposive scope of the death.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.2.1",
+        "key_term": "τὸν ἀγοράσαντα αὐτοὺς δεσπότην ἀρνούμενοι ton agorasanta autous despotēn arnoumenoi G59 G1203 G720",
+        "force": "'Even denying the Master who bought them, bringing on themselves swift destruction.' Agorazō ('to buy, to purchase') is the commercial-redemption verb. The phrase says false teachers were bought by Christ and yet deny him and perish. If only the elect were 'bought', this verse is incoherent because the bought-ones here are explicitly the destroyed-ones. The straightforward reading: Christ's purchase has a real reach beyond those who finally believe.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.5.14",
+        "key_term": "εἷς ὑπὲρ πάντων ἀπέθανεν ἄρα οἱ πάντες ἀπέθανον heis hyper pantōn apethanen ara hoi pantes apethanon G3956 G599",
+        "force": "'One died for all, therefore all died.' Two pas-clauses in parallel. If the first pantōn is restricted to the elect, the second hoi pantes is also restricted; if the first is universal, the second is universal. Either reading is internally consistent but most natural reading is that hyper pantōn matches the cosmic-reconciliation scope of verses 18-19.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.3.9",
+        "key_term": "μὴ βουλόμενός τινας ἀπολέσθαι ἀλλὰ πάντας εἰς μετάνοιαν χωρῆσαι boulomenos pantas G1014 G3956 G3340",
+        "force": "'Not wishing that any should perish, but that all should reach repentance.' Boulomai is the volitional 'will, wish'; pantas is accusative plural pas. Lexically reads as universal divine wish for repentance, which makes most sense if the atoning provision matches the scope of the wish.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.10.11",
+        "key_term": "ὁ ποιμὴν ὁ καλὸς τὴν ψυχὴν αὐτοῦ τίθησιν ὑπὲρ τῶν προβάτων ho poimēn ho kalos hyper tōn probatōn G4263 G5228",
+        "force": "'The good shepherd lays down his life for the sheep.' Hyper tōn probatōn is positive-particular: Christ does die for the sheep. The verse does not say 'and not for any others'; the exclusivity has to be supplied from outside the verse. The sheep-shepherd metaphor in Ezekiel 34 background is about Yahweh's care for his flock, which does not exclude broader divine concern for the nations.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "John.17.9",
+        "key_term": "ἐγὼ περὶ αὐτῶν ἐρωτῶ, οὐ περὶ τοῦ κόσμου ἐρωτῶ ἀλλὰ περὶ ὧν δέδωκάς μοι erōtō G2065 kosmos G2889",
+        "force": "'I am asking on their behalf; I am not asking on behalf of the world but of those whom you have given me.' The verb erōtaō is the intercessory-petition verb, distinct from atoning-death language. Jesus restricts his immediate high-priestly intercession to his disciples; this does not restrict the scope of his atoning death. Context verse 21 'that the world may believe' shows the world remains in view for evangelistic purpose. Complicates the universal-extent reading at the prayer level but does not refute it at the atonement level.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Eph.5.25",
+        "key_term": "ὁ Χριστὸς ἠγάπησεν τὴν ἐκκλησίαν καὶ ἑαυτὸν παρέδωκεν ὑπὲρ αὐτῆς paradidōmi G3860 ekklēsia G1577 hyper G5228",
+        "force": "'Christ loved the church and gave himself up for her.' Paradidōmi ('handed over, gave up') is the standard atoning-self-giving verb. Hyper autēs ('for her') is positive-particular: Christ did give himself for his church. The verse establishes the church as the actual beneficiary of Christ's self-giving, with the marital metaphor driving the application. It does not say 'and not for anyone else'.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.20.28",
+        "key_term": "τὴν ἐκκλησίαν τοῦ θεοῦ ἣν περιεποιήσατο διὰ τοῦ αἵματος τοῦ ἰδίου peripoieō G4046 haima G129 idios G2398 ekklēsia G1577",
+        "force": "'The church of God which he obtained with his own blood.' Peripoieō ('to acquire, to obtain') with the church as object and Christ's blood as the means. Particular language: the church is what Christ acquired. Does not state that nothing else was reached by his blood.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Matt.1.21",
+        "key_term": "σώσει τὸν λαὸν αὐτοῦ ἀπὸ τῶν ἁμαρτιῶν αὐτῶν sōzō G4982 laos G2992 hamartia G266",
+        "force": "'He will save his people from their sins.' Laos ('people') points to the covenant-people, both Israel and the eschatological people gathered from the nations. The angel's announcement of the mission scope is particular-application language. Does not restrict the universal-provision passages.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.12.32",
+        "key_term": "κἀγὼ ἐὰν ὑψωθῶ ἐκ τῆς γῆς, πάντας ἑλκύσω πρὸς ἐμαυτόν hypsoō G5312 helkō G1670 pantas G3956",
+        "force": "'And I, when I am lifted up from the earth, will draw all people to myself.' From the concordance traversal: pantas in soteriological-magnetic context. The lifting up is the crucifixion; the drawing scope is pantas ('all'). Whether this means 'all without exception' or 'all kinds of people', the crucifixion-extent and the drawing-extent are made to match.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.18",
+        "key_term": "εἰς πάντας ἀνθρώπους εἰς κατάκριμα ... εἰς πάντας ἀνθρώπους εἰς δικαίωσιν ζωῆς eis pantas anthrōpous G3956 G444",
+        "force": "'As one trespass led to condemnation for all men, so one act of righteousness leads to justification and life for all men.' Two parallel pas-clauses: the scope of Adam's condemnation and the scope of Christ's justifying-act are stated in the same universal terms. The verse pushes universal-provision rhetorically; the actual application of justification still requires faith per verses 17 and 11:20.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.2.11",
+        "key_term": "ἐπεφάνη γὰρ ἡ χάρις τοῦ θεοῦ σωτήριος πᾶσιν ἀνθρώποις epephanē G2014 charis G5485 sōtērios G4992 pasin anthrōpois G3956 G444",
+        "force": "'For the grace of God has appeared, bringing salvation for all people.' Sōtērios ('salvation-bringing') with pasin anthrōpois ('for all people'). Universal scope of the saving-grace's appearance.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2889",
+      "G3956",
+      "G5228",
+      "G2434",
+      "G286",
+      "G142",
+      "G266",
+      "G59",
+      "G1203",
+      "G4990",
+      "G3122",
+      "G4103",
+      "G1089",
+      "G599",
+      "G3860",
+      "G1577",
+      "G4046",
+      "G129",
+      "G2398",
+      "G4982",
+      "G2992",
+      "G5312",
+      "G1670",
+      "G444",
+      "G2014",
+      "G5485",
+      "G4992",
+      "G4263",
+      "G2065",
+      "G1014",
+      "G3340",
+      "G3650",
+      "G1325",
+      "G4100",
+      "G720"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "progressive_covenantalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology_strict_Reformed",
+          "verdict": "limited_atonement",
+          "summary": "Universal-extent passages refer to 'world of the elect' or 'all kinds of people'; particular-language passages (John 10:11, John 17:9, Eph 5:25, Acts 20:28) reveal the atoning intent. Covenant of redemption between Father and Son establishes the elect as the determinate object of Christ's atoning work; universal scope is the well-meant offer and the sufficiency, not the intent."
+        },
+        {
+          "lens": "covenant_theology_classical_Lutheran",
+          "verdict": "universal_extent_particular_application",
+          "summary": "Christ's atoning death is for all humanity in its provision and intent; the application is restricted to those who receive the gospel by faith. Limited atonement is explicitly rejected in Formula of Concord XI. Universal-call passages and particular-application passages are both honored without collapsing either."
+        },
+        {
+          "lens": "dispensationalism_classical_and_progressive",
+          "verdict": "universal_extent_particular_application",
+          "summary": "Christ died provisionally for all; the elect receive the benefit by faith. Universal-extent texts (1 John 2:2, 1 Tim 2:6) are read at face value. This is the standard Brethren and dispensational position."
+        },
+        {
+          "lens": "wesleyan_arminian",
+          "verdict": "universal_extent_universal_provision_conditional_application",
+          "summary": "Christ died for all without exception; prevenient grace makes faith genuinely possible for all. Application is conditional on faith. Stronger universalist accent than Lutheran while preserving the distinction between provision and final salvation."
+        }
+      ],
+      "notes": "The grammatico-historical reading of the broadest universal-quantifier vocabulary (kosmos, pas, pantes, pantōn anthrōpōn) at face value in soteriological contexts favors the universal-extent reading. The competing Reformed lens requires reading these terms as restricted ('world of the elect', 'all kinds of people') in soteriological contexts while reading them at face value elsewhere; this hermeneutical move requires extra-textual confessional commitment to motivate. The particular-language passages are real and important but are positive-particular rather than negative-exclusive; they say Christ DID die for the sheep, not that he did NOT die for any beyond the sheep. Reading them as exclusive requires importing the exclusivity from a systematic-theological premise. Verdict held with medium confidence: lexical evidence is real but the hermeneutical question is contested by serious confessional traditions."
+    },
+    "counter_witness": [
+      {
+        "tradition": "reformed",
+        "anchor": "Canons of Dort, Second Head of Doctrine, Articles 3 and 8",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Article 3: 'of infinite worth and value, abundantly sufficient to expiate the sins of the whole world'. Article 8: Christ should 'effectually redeem all those, and only those, who were from eternity chosen to salvation'."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration, Article XI on Election",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "'God loved the world and gave His Son. Christ bore the sins of the world. His blood is the propitiation for the sins of the whole world.' Limited atonement explicitly rejected; salvation offered universally via gospel proclamation."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 31 'Of the one Oblation of Christ finished upon the Cross'",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "'The Offering of Christ once made is that perfect redemption, propitiation, and satisfaction, for all the sins of the whole world, both original and actual.'"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article II",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ suffered, was crucified, dead, and buried, 'a sacrifice, not only for original guilt, but also for actual sins of men'. Universal extent across all humanity."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church, paragraph 605, citing Matthew 20:28",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "'Jesus affirms that he came to give his life as a ransom for many; this last term is not restrictive, but contrasts the whole of humanity with the unique person of the redeemer who hands himself over to save us.' (CCC 605; source page returned errors during direct fetch.)"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, doctrine of salvation",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation is received through repentance toward God and faith in the Lord Jesus Christ; the Gospel is the power of God unto salvation to everyone who believes. Universal offer entailing universal provision. (Direct fetch returned 403 during run; doctrine well attested elsewhere.)"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, doctrinal teaching on Christ's atoning work",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ's redemptive work extends to all humanity, applied through faith and synergistic cooperation with grace; limited atonement is not part of the Orthodox doctrinal tradition. (Direct OCA fetch returned only navigation content during run.)"
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, anti-Pelagian writings (mature position, mixed)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Augustine's mature reading is mixed: God's redemptive love is presented universally yet effectual grace is given particularly to the elect; the later 'sufficient for all, efficient for the elect' formula is read back into him by both sides. (Direct CCEL Augustine fetch returned only nav content during run.)"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/3-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'God so loved the world (ton kosmon, G2889) ... that everyone (pas) believing in him should not perish.' Universal scope of love and open class of believing."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/2-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'He is the propitiation (hilasmos G2434) for our sins, and not for ours only but also for the whole world (holou tou kosmou).' Explicit believer-vs-world contrast."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/2-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'antilytron hyper pantōn, a ransom for all.' Genitive pantōn denotes universal scope of the ransom; preposition hyper marks substitutionary 'on behalf of'."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/4-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'Saviour of all people (pantōn anthrōpōn G3956 G444), especially (malista G3122) of those who believe.' Malista intensifies within universal class."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/2-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'By the grace of God he might taste death for everyone (hyper pantos, G3956).' Universal language pattern for Christ's death."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_peter/2-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "'Denying the Master who bought them (ton agorasanta autous despotēn, G59 G1203).' Christ's purchase reaches beyond those who finally believe."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/10-11.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "'The good shepherd lays down his life for the sheep (hyper tōn probatōn, G4263 G5228).' Particular-positive language; not lexically exclusive."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/17-9.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "'I am not asking (erōtō G2065) on behalf of the world but of those whom you have given me.' Intercessory-petition scope, not atonement scope."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/5-25.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "'Christ loved the church and gave himself up (paredōken G3860) for her (hyper autēs).' Particular-positive; marital metaphor."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2889.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Kosmos G2889 in Johannine soteriology: 'inhabitants of the world, the human race', also 'whole mass of men alienated from God'. 186 NT occurrences; John heaviest user."
+      },
+      {
+        "url": "https://bookofconcord.org/formula-of-concord-solid-declaration/election/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord XI affirms Christ bore the sins of the whole world and his blood is propitiation for the sins of the whole world; rejects limiting redemption to the elect only."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles Article 31: Christ's offering is 'that perfect redemption, propitiation, and satisfaction, for all the sins of the whole world, both original and actual'."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UMC Articles of Religion II: Christ 'a sacrifice, not only for original guilt, but also for actual sins of men'. Universal extent."
+      },
+      {
+        "url": "https://www.ccel.org/creeds/canons-of-dort.html",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Canons of Dort II.3: 'sufficient to expiate the sins of the whole world'. II.8: Christ 'should effectually redeem ... all those, and those only, who were from eternity chosen to salvation'."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

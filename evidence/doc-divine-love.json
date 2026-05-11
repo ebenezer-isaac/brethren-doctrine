@@ -1,0 +1,346 @@
+{
+  "id": "doc-divine-love",
+  "answer": {
+    "id": "doc-divine-love",
+    "affirms": true,
+    "rationale": "1 John 4:8,16 (ho theos agapē estin, G26) predicates love of God's essence, not merely His action; the chesed (H2617) network across Torah and Prophets (Ex 34:6-7, Deut 7:7-8, Hos 11:1-4, Ps 136) plus the Pauline demonstration in Rom 5:8 give pan-canonical lexical force.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Outright denial that God is loving in His essence is heterodox and crosses a gospel boundary (1 John 4:8 makes love essential, not accidental, to God). However, this does NOT extend to sentimentalized presentations that oppose love to holiness, justice, or wrath; Scripture integrates these (Ex 34:6-7 pairs chesed with not-clearing-the-guilty; Rom 9:13/Mal 1:2-3 keeps love and hatred-of-evil in tension; Rev 19 keeps the Lamb wrathful against unrepentant sin). Marcion, sentimental liberal theology, and process theology err by amputating wrath; some hyper-Calvinist popular preaching errs by amputating universal benevolent love. Cult denials in scope: Christian Science depersonalizes 'Love' into an abstract principle (Mary Baker Eddy); some Gnostic streams (ancient and reconstructed) deify a lower demiurge stripped of love."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement uses the canonical 1 John 4:8 predicate ('God is love') and adds 'in His very essence' plus intra-Trinitarian and creature-directed scope. The essence claim is lexically defensible from ho theos agapē estin (anarthrous predicate noun construction is qualitative, not merely descriptive of an act). Not pre-loaded with confessional jargon."
+    },
+    "lay_summary": {
+      "reasoning": "Yes, the Bible teaches that God is love in who He is, not just in what He sometimes does. The strongest reason is 1 John 4:8 and 4:16, which say plainly, 'God is love,' and link this directly to the cross: God sent His Son so we might live through Him. Romans 5:8 makes it concrete: God showed His love by Christ dying for us while we were still sinners. The Old Testament uses a special covenant word, often translated 'steadfast love' or 'loyal love,' which runs through Exodus 34:6 to 7, Deuteronomy 7:7 to 8, Hosea 11, and Psalm 136 (where 'his steadfast love endures forever' is repeated 26 times). The strongest complicating texts are the wrath passages and the imprecatory psalms. Psalm 137 prays for the dashing of Babylon's children. Malachi 1:2 to 3 and Romans 9:13 say, 'Jacob I loved, Esau I hated.' Revelation pictures Christ wrathful against unrepentant evil. These do not undo the doctrine; they refine it. God's love is not sentimental tolerance of evil. The very Exodus 34:6 to 7 passage that calls God 'merciful and gracious, abounding in steadfast love' also says He 'will by no means clear the guilty.' Love and holiness, love and justice, love and wrath against persistent evil are joined in the same God. Denying that God is loving in His essence contradicts the heart of the gospel and the explicit predicate of 1 John 4:8.",
+      "denominational_landscape": "All historic Christian lineages affirm this doctrine without dispute. The patristic writers (Augustine especially, in 'On the Trinity,' grounds intra-Trinitarian love as Father loving Son in the Spirit) treat divine love as essential, not contingent. The Catholic Catechism states that God is love in His inmost being and that this love is freely communicated. Lutheran, Reformed, Anglican, Methodist, Anabaptist, Pentecostal, and Eastern Orthodox confessions and teachings all affirm it. The Orthodox tradition emphasizes love within the eternal communion of the three persons. Where lineages quietly differ is in emphasis and integration. Reformed teaching tends to anchor love within sovereignty and election; Methodist and Arminian teaching tends to emphasize universal benevolent love toward all. Catholic and Orthodox spirituality emphasizes participation in divine love. None of these denies the doctrine; they weight it differently. Public-record denials live outside historic Christianity. Christian Science (founded by Mary Baker Eddy) depersonalizes 'Love' into an abstract principle rather than a personal God who loves. Some streams of process theology so reshape God that the biblical predicate is hollowed out. Ancient Marcionism amputated the Old Testament God of wrath, which paradoxically deformed the doctrine of love by separating love from holiness. Outright denial that the personal God of Scripture is loving in His essence places a group outside historic Christianity."
+    },
+    "scripture": [
+      {
+        "ref": "1John.4.8",
+        "key_term": "ἀγάπη (agapē) G26 + ὁ θεὸς ἀγάπη ἐστίν",
+        "force": "Predicate-nominative construction; love is essential to God, qualitative force, not merely activity.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.4.16",
+        "key_term": "ἀγάπη (agapē) G26",
+        "force": "Repeats ho theos agapē estin with abiding/dwelling language, reinforcing essence not act.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.3.16",
+        "key_term": "ἀγαπάω (agapaō) G25",
+        "force": "Verbal: God so loved the world that He gave His only Son; love demonstrated in self-giving sacrifice.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.8",
+        "key_term": "ἀγάπη (agapē) G26 + συνίστησιν (sunistēsin)",
+        "force": "God demonstrates His own love toward us in that while we were still sinners Christ died for us; love proven in cross.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Deut.7.7-Deut.7.8",
+        "key_term": "אַהֲבָה (ahavah) H160 + verbal אהב",
+        "force": "Yahweh's love for Israel is unmotivated by Israel's size or merit; rooted in His own choosing love and covenant oath.",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Exod.34.6-Exod.34.7",
+        "key_term": "חֶסֶד (chesed) H2617 + רַחוּם (rachum) H7349",
+        "force": "Self-revelation: merciful, gracious, abounding in chesed and truth, keeping chesed for thousands, forgiving iniquity, yet not clearing the guilty. Love integrated with holiness.",
+        "supports": "for",
+        "genre": "law",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Hos.11.1-Hos.11.4",
+        "key_term": "אהב (ahab) H157 + חֶסֶד H2617",
+        "force": "Yahweh's love for Israel framed as a father loving a son; cords of human kindness, bands of love.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "metaphor",
+          "anthropomorphism"
+        ]
+      },
+      {
+        "ref": "Ps.136.1-Ps.136.26",
+        "key_term": "חֶסֶד (chesed) H2617",
+        "force": "26-fold antiphonal refrain 'for his chesed endures forever' grounding creation, exodus, and providence in steadfast love.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": [
+          "parallelism"
+        ]
+      },
+      {
+        "ref": "John.17.24",
+        "key_term": "ἀγαπάω (agapaō) G25",
+        "force": "Father loved Son before the foundation of the world; intra-Trinitarian eternal love.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.4-Eph.2.5",
+        "key_term": "ἀγάπη G26 + πλούσιος ἐν ἐλέει",
+        "force": "Rich in mercy, on account of His great love with which He loved us; love precedes salvific action.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Mal.1.2-Mal.1.3",
+        "key_term": "אהב H157 + שׂנא (sane) H8130",
+        "force": "Jacob I loved, Esau I hated. Complicates sentimental presentations; love operates within elective covenant and stands against persistent evil.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": [
+          "idiom"
+        ]
+      },
+      {
+        "ref": "Rom.9.13",
+        "key_term": "ἀγαπάω G25 + μισέω (miseō) G3404",
+        "force": "Paul's citation of Mal 1:2-3 within his argument on election; love and hatred (corporate/elective) are not mutually exclusive in God.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ps.137.8-Ps.137.9",
+        "key_term": "imprecatory",
+        "force": "Imprecatory prayer for the destruction of Babylon's children; complicates sentimental readings, refines love as not opposed to justice against evil.",
+        "supports": "complicates",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Rom.1.18",
+        "key_term": "ὀργὴ θεοῦ (orgē theou) G3709",
+        "force": "Wrath of God revealed against all ungodliness; love does not abolish wrath against persistent rebellion.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.6.16-Rev.6.17",
+        "key_term": "ὀργὴ τοῦ ἀρνίου",
+        "force": "Wrath of the Lamb; the same Christ who is love embodied is also the one whose final wrath against unrepentant evil is canonical.",
+        "supports": "complicates",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Jer.31.3",
+        "key_term": "אהב H157 + חֶסֶד H2617",
+        "force": "I have loved you with an everlasting love; therefore with chesed I have drawn you. Eternal scope of divine love.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "1John.4.9-1John.4.10",
+        "key_term": "ἀγάπη G26 + ἱλασμός (hilasmos) G2434",
+        "force": "Love manifested in propitiation; defines love by the cross, not by sentiment, integrating love with atonement for sin.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G26",
+      "G25",
+      "G3404",
+      "G2434",
+      "G3709",
+      "H2617",
+      "H160",
+      "H157",
+      "H7349",
+      "H8130"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "dispensationalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "affirms",
+          "note": "Chesed-network reads as covenant loyalty, climaxing in Christ."
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "affirms",
+          "note": "Same essential love across dispensations though administered differently."
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Love essential to God, fully revealed in the new covenant in Christ."
+        },
+        {
+          "lens": "progressive_covenantalism",
+          "verdict": "affirms",
+          "note": "Identical conclusion via canonical typology."
+        }
+      ],
+      "notes": "All standard evangelical hermeneutical frameworks converge. The doctrine does not depend on a contested lens; it rests on direct predication in 1 John 4:8,16 plus a pan-canonical chesed and agapē network. Progressive revelation matters for understanding HOW divine love climactically reveals itself at the cross (Rom 5:8, 1 John 4:9-10), not WHETHER God is loving."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, De Trinitate, Book 8.10 and Book 15 (CCEL NPNF1-03)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Love is of God, and God is love. The Father is the lover, the Son the beloved, the Spirit the love uniting them."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 218-221, 'God is Love'",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God's very being is love. By sending his only Son and the Spirit of Love in the fullness of time, God has revealed his innermost secret: God himself is an eternal exchange of love."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Luther, Large Catechism, First Article of the Creed; Formula of Concord on the gospel",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God has given us body and soul out of pure fatherly, divine goodness and mercy, without any merit or worthiness on our part."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 1 (Of Faith in the Holy Trinity); BCP collects",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There is but one living and true God, everlasting, without body, parts, or passions, of infinite power, wisdom, and goodness."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 2.1; Heidelberg Catechism Q26",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God is most loving, gracious, merciful, longsuffering, abundant in goodness and truth."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Wesley, Sermon 'God's Love to Fallen Man'; UMC Articles of Religion Art. 1",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God is love, and he willeth that all men should be saved; his mercy is over all his works."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession 1632, Article 1; Schleitheim background",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "One eternal, almighty, and incomprehensible God, who is a Spirit, perfect in love, mercy, and faithfulness."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Art. 2 'The One True God'",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The one true God has revealed Himself as the eternally self-existent 'I AM,' the Creator of heaven and earth and the Redeemer of mankind."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, 'The Orthodox Faith' Vol. 1, Doctrine: God; Gregory of Nyssa, On the Soul and the Resurrection",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God in His essence is love, and the eternal communion of the three divine Persons is the very life of love."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/greek/26.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G26 agapē: love. From G25 agapaō; love, i.e. affection or benevolence; specially (plural) a love-feast."
+      },
+      {
+        "url": "https://biblehub.com/hebrew/2617.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "H2617 chesed: goodness, kindness, faithfulness. Loyal covenant love; the steadfast love by which God binds Himself to His people."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/4-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ho mē agapōn ouk egnō ton theon, hoti ho theos agapē estin. The one not loving has not known God, because God is love."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/exodus/34-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "YHWH YHWH El rachum we-chanun erek appayim we-rab chesed we-emet. The LORD, merciful and gracious, abounding in steadfast love and truth."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ccc_css/archive/catechism/p1s2c1p2.htm",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "By revealing his name God at the same time reveals his faithfulness which is from everlasting to everlasting, valid for the past as for the future. God is Love."
+      },
+      {
+        "url": "https://ccel.org/ccel/augustine/trinity",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine, De Trinitate: love is of God, and every one that loveth is born of God, and knoweth God. He that loveth not, knoweth not God; for God is love."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/god",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "The Orthodox Church confesses God as Trinity, an eternal communion of love between Father, Son, and Holy Spirit, who is in His very essence love."
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "The one true God has revealed Himself as the eternally self-existent 'I AM,' the Creator of heaven and earth and the Redeemer of mankind."
+      },
+      {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 1: There is but one living and true God, everlasting, without body, parts, or passions; of infinite power, wisdom, and goodness; the Maker, and Preserver of all things."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

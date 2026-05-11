@@ -1,0 +1,333 @@
+{
+  "id": "doc-conscience-witness",
+  "answer": {
+    "id": "doc-conscience-witness",
+    "affirms": true,
+    "rationale": "Scripture's pan-canonical lexical pattern affirms an internal moral witness: Rom 2:14-15 names syneidesis G4893 'bearing joint-witness' (symmartyreo G4828) with the work of the law graptos G1123 on the kardia G2588 of Gentiles who lack the written Torah; the same syneidesis lemma carries forward 30 times across the NT (Acts 23:1; 24:16; Rom 9:1; 13:5; 1 Cor 8:7-12; 10:25-29; 2 Cor 1:12; 4:2; 5:11; 1 Tim 1:5, 1:19, 3:9, 4:2; 2 Tim 1:3; Titus 1:15; Heb 9:9, 9:14, 10:2, 10:22, 13:18; 1 Pet 2:19, 3:16, 3:21) and is presupposed (not founded) by Paul, with Rom 1:18-20 grounding its knowledge-content in God's manifest (phaneros G5318) self-disclosure that the unrighteous suppress (katecho G2722), and 1 Tim 4:2 (cauterized, kauteriazo G2743) presupposing the faculty's existence even when it is damaged.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Universally affirmed across historic Christianity (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox). In-house disagreement is not over the doctrine but over post-fall reliability of conscience: Augustinian and classical Reformed traditions stress that fallen conscience is darkened, defiled, and needs Spirit-renewal (Heb 9:14, Titus 1:15); Catholic and Eastern Orthodox traditions stress conscience as the sanctuary where the human person is alone with God and must be formed by truth (CCC 1776-1802); Aquinas treats conscience as practical reason's judgment that binds the will even when erring. Public-record carriers of denial are not denominations but secular schools: B. F. Skinner's behaviourism and naturalistic-evolutionary ethics that reduce conscience to conditioning or evolved adaptation. Doctrine is not a gospel boundary or Trinitarian or Christological core, so cult_marker_if_denied=false even though no historic Christian tradition denies the doctrine. Would not let children be taught otherwise because a teacher who denies conscience as God-given typically holds a wider naturalistic anthropology incompatible with Christian discipleship."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement is descriptive (conscience as internal witness, damaged by sin, accuses or excuses, renders without excuse). Echoes Rom 2:14-15 language directly. No heretics named. No Reformed-confessional vocabulary used as if neutral; 'damaged by sin' is fair to the lexicon of 1 Tim 4:2 (cauterized) and Titus 1:15 (defiled conscience). 'Renders all without excuse' echoes Rom 1:20 (anapologetos) and is the apostolic conclusion, not a tradition-loaded gloss."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict: yes, the Bible teaches that every human being has a conscience, an inner moral witness given by God, that holds them accountable to a moral law they did not invent. The strongest reason for it is Romans 2:14-15. Paul says that when people who never had the written law of Moses still do by nature what the law requires, they show that the work of the law is written on their hearts, while their conscience also bears witness and their thoughts accuse or excuse them. The word Paul uses for conscience here, syneidesis, means a joint-knowing, an inner co-perception that watches what we do and pronounces a verdict on it. Paul uses this same word about 30 times in the New Testament, in many different letters and situations, which shows he is not making up a one-off idea but pointing to something he assumes every person has. Romans 1:18-20 reinforces this. Paul says God has made plain to people what can be known about him, so that they are without excuse, but the unrighteous suppress this truth. The strongest complicating text comes from 1 Timothy 4:2, where Paul speaks of liars whose consciences have been cauterized, branded with a hot iron until they no longer feel. Titus 1:15 says the conscience of the corrupted is itself defiled. Hebrews 9:14 says we need the blood of Christ to purify our conscience from dead works. So the Bible itself teaches that conscience can be damaged, scarred, silenced, or polluted by sin. The verdict handles this tension simply: a faculty that can be damaged is still a real faculty. The fact that Scripture warns about searing the conscience proves that conscience exists in the first place. The conscience accuses or excuses, but it is not infallible and can be trained, mis-trained, or hardened. Where Christians disagree is on how reliable the fallen conscience is without the Holy Spirit's renewing work, not on whether the conscience itself exists as God's witness within.",
+      "denominational_landscape": "This doctrine is one of the broadest points of agreement in Christian history. The early church fathers spoke of conscience as the inward voice of God in the soul. Roman Catholic teaching, in the Catechism paragraphs 1776 through 1802, calls conscience 'man's most secret core and his sanctuary' where he is alone with God whose voice echoes in his depths, and treats the well-formed conscience as binding. Thomas Aquinas, in the Summa Theologica part I-II question 19, argues that to act against one's conscience is sin even when the conscience is mistaken, because conscience is reason applying knowledge of right and wrong to action. The Eastern Orthodox tradition treats conscience as a natural gift implanted in every soul that must be cleansed and illuminated by participation in the divine life. Lutheran teaching, in the Augsburg Confession and throughout the Book of Concord, stresses that the conscience can only find rest in Christ and must not be bound by human traditions beyond the Word of God. Anglican and Methodist confessions speak of consciences not to be wounded by human ceremonies and assume conscience as a real moral faculty. Reformed confessions including Westminster 20.2 affirm that God alone is Lord of the conscience. Pentecostal and Anabaptist traditions assume conscience throughout their statements on the new birth and moral life. There is no historic Christian denomination that denies the doctrine. The public-record carriers of denial sit outside Christianity entirely: strict behaviourist psychology in the school of B. F. Skinner, which treats moral feelings as conditioning rather than as the voice of any real moral law, and reductive evolutionary-naturalist ethics, which treats conscience as a survival adaptation with no transcendent reference. Inside the church, the live disagreement is not whether conscience exists but how reliable a fallen conscience is, with classical Reformed and Augustinian voices emphasising that the unregenerate conscience is darkened and needs Spirit-renewal, and Catholic and Orthodox voices emphasising that conscience even in unbelievers retains its function as a witness and must be respected."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.2.14-15",
+        "key_term": "συνείδησις (syneidesis) G4893; συμμαρτυρέω (symmartyreo) G4828; γραπτός (graptos) G1123; καρδία (kardia) G2588",
+        "force": "Gentiles without the Mosaic law 'by nature' (physei G5449) do what the law requires, demonstrating the work of the law graptos G1123 on the kardia G2588 of their hearts, while their syneidesis G4893 symmartyrouses G4828 (bears joint-witness) and their thoughts accuse (kategorouton G2723) or excuse (apologoumenon G626). The cluster of legal and witness vocabulary places conscience in the role of an internal courtroom witness whose existence Paul presupposes universally.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["personification", "metaphor"]
+      },
+      {
+        "ref": "Rom.1.18-20",
+        "key_term": "φανερόω (phaneroo) G5319; κατέχω (katecho) G2722; ἀναπολόγητος (anapologetos) G379",
+        "force": "What is knowable of God is manifest (phaneron G5318) within them because God has shown (ephanerosen G5319) it; the unrighteous hold down (katechonton G2722) the truth in unrighteousness, leaving them without defence (anapologetous G379). The text grounds conscience's knowledge-content in God's universal self-disclosure rather than special revelation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.24.16",
+        "key_term": "συνείδησις (syneidesis) G4893; ἀπρόσκοπος (aproskopos) G677",
+        "force": "Paul testifies that he 'practises' (asko G778) to have a syneidesis G4893 aproskopon G677 (blameless conscience) toward God and men. Conscience here is a faculty that can be cultivated and toward which one bears active responsibility.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.1.5",
+        "key_term": "συνείδησις (syneidesis) G4893; ἀγαθή (agathe) G18",
+        "force": "The goal (telos G5056) of apostolic teaching is love from a clean (katharas G2513) heart, a good (agathes G18) syneidesis G4893, and unfeigned faith. Conscience appears here as a normative component of Christian formation, ranked alongside heart and faith.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.1.19",
+        "key_term": "συνείδησις (syneidesis) G4893; ναυαγέω (nauageo) G3489",
+        "force": "Holding 'faith and good syneidesis G4893,' which some have rejected (apothesamenoi G683) and so 'shipwrecked' (enauagesan G3489) regarding the faith. Conscience can be cast aside; the metaphor presupposes it as a real possession that can be wilfully lost.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Tim.4.2",
+        "key_term": "συνείδησις (syneidesis) G4893; καυστηριάζω (kauteriazo) G2743",
+        "force": "Liars whose own syneidesis G4893 has been kekausteriasmenon G2743 (branded as with a hot iron, perfect passive: a settled scar). The figure of cauterising presupposes a living organ that has been deadened; conscience can be damaged but is not annihilated.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Heb.10.22",
+        "key_term": "συνείδησις (syneidesis) G4893; ῥαντίζω (rhantizo) G4472; πονηρός (poneros) G4190",
+        "force": "Believers are to draw near with hearts rerhantismenoi G4472 (sprinkled) from a poneras G4190 syneideseos G4893 (evil conscience). Conscience can be defiled and needs cleansing through Christ's sacrifice; complicates a naive view that conscience is reliable on its own.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor", "typology"]
+      },
+      {
+        "ref": "Heb.9.14",
+        "key_term": "συνείδησις (syneidesis) G4893; καθαρίζω (katharizo) G2511",
+        "force": "The blood of Christ shall katharisei G2511 (cleanse) the syneidesis G4893 from nekron ergon (dead works) to serve the living God. Conscience here is the place where guilt is registered and where atonement applies.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "1John.3.20-21",
+        "key_term": "καρδία (kardia) G2588; καταγινώσκω (kataginosko) G2607",
+        "force": "If our kardia G2588 kataginoskei G2607 (condemns, finds fault against) us, God is greater (meizon G3187) than our heart and knows all things. The text presupposes an internal accusatory voice (functional equivalent of syneidesis) and locates final judgment beyond it in God.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.1.15",
+        "key_term": "συνείδησις (syneidesis) G4893; μιαίνω (miaino) G3392",
+        "force": "To the defiled (memiasmenois G3392) and unbelieving nothing is clean; both their nous (mind) and syneidesis G4893 are memiantai G3392 (defiled). Conscience can be polluted such that its judgments cease to function rightly; reinforces that conscience exists and can be corrupted.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.9.1",
+        "key_term": "συνείδησις (syneidesis) G4893; συμμαρτυρέω (symmartyreo) G4828",
+        "force": "Paul: 'my syneidesis G4893 symmartyrouses G4828 with me in the Holy Spirit.' Conscience functions as a co-witness alongside the Spirit; spider-map link to Rom 2:15 same compound verb.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.13.5",
+        "key_term": "συνείδησις (syneidesis) G4893",
+        "force": "Submit to governing authorities not only because of wrath but also dia ten syneidesin G4893. Conscience is treated as a sufficient moral motive distinct from external coercion.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.8.7",
+        "key_term": "συνείδησις (syneidesis) G4893; ἀσθενής (asthenes) G772",
+        "force": "Some, asthenes G772 ousa (being weak) in their syneidesis G4893, are defiled when eating idol food. Conscience varies in maturity person to person; ethical decisions must respect a weak brother's syneidesis.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gen.3.7-10",
+        "key_term": "יָדַע (yada) H3045; יָרֵא (yare) H3372",
+        "force": "After eating the fruit Adam and Eve knew (yada H3045) they were naked and feared (yare H3372) the voice of YHWH; the narrative depicts the first activation of moral self-awareness and dread of judgment, the proto-experience of conscience.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "2Sam.24.10",
+        "key_term": "לֵב (leb) H3820; נכה (nakah) H5221",
+        "force": "David's leb H3820 (heart) struck (yak H5221) him after he numbered Israel; in Hebrew idiom the 'heart smiting' is the functional Old Testament equivalent of conscience accusing, paralleled in 1 Sam 24:5.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["idiom", "metonymy"]
+      },
+      {
+        "ref": "John.8.9",
+        "key_term": "συνείδησις (syneidesis) G4893",
+        "force": "In some manuscript traditions of the pericope adulterae, accusers depart 'convicted by their own syneidesis G4893.' Textual-critical issue: the pericope is bracketed in NA28; counted here as illustrative of the lemma's range, not as load-bearing.",
+        "supports": "neutral",
+        "genre": "gospel",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G4893", "G4828", "G1123", "G2588", "G3551", "G5319", "G5318", "G2722", "G379", "G2743", "G4472", "G4190", "G2511", "G2607", "G3392", "G18", "G3489", "G2513", "G677", "G2723", "G626", "H3820", "H3045", "H3372", "H5221"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "framework": "classical Reformed / Augustinian",
+          "verdict": "Affirms conscience as universal divine witness but stresses post-fall darkening: conscience accuses but cannot reliably guide to truth without Word and Spirit. Total depravity includes the noetic effects on conscience."
+        },
+        {
+          "framework": "Roman Catholic moral theology (Thomistic)",
+          "verdict": "Affirms conscience as the inmost sanctuary where the person stands alone with God; well-formed conscience is binding even when erring (Aquinas, Summa I-II q19); requires formation by Scripture, Tradition, and Magisterium."
+        },
+        {
+          "framework": "Eastern Orthodox",
+          "verdict": "Affirms conscience as a natural gift of God in every soul, retained even after the fall, capable of being purified by participation in the divine energies (theosis)."
+        },
+        {
+          "framework": "Wesleyan / Arminian",
+          "verdict": "Affirms conscience as evidence of prevenient grace operative in every person, drawing them toward truth even before regeneration."
+        },
+        {
+          "framework": "behaviourist / naturalist (rejected lens)",
+          "verdict": "Denies conscience as a divinely-given faculty; reduces moral feelings to conditioning or evolved adaptation. Not a Christian position; this is the lens the verdict rejects."
+        }
+      ],
+      "notes": "All historic Christian frameworks converge on the doctrine; they differ only on the reliability of post-fall conscience. The verdict therefore holds across the entire Christian spectrum. Denial requires stepping outside Christian anthropology altogether."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Confessions and various sermons (CCEL NPNF Series 1)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Augustine treats conscience as the inward voice of God in the soul, accusing and convicting the sinner. CCEL page returned navigation only; citation from standard Augustine reference."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Aquinas, Summa Theologica I-II q19 a5 (CCEL)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "All that is not of faith, that is, all that is against conscience, is sin. Conscience is a dictate of reason that binds the will even when erring."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 1795",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Conscience is man's most secret core, and his sanctuary. There he is alone with God whose voice echoes in his depths."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 1776-1782 (on conscience as moral judgment)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Conscience is a judgment of reason whereby the human person recognises the moral quality of a concrete act; it must be formed by truth and obeyed."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XX (Of Good Works)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Consciences cannot be set at rest through any works, but only by faith, when they take the sure ground that for Christ's sake they have a reconciled God."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles Article XXXII and Article XX (on church authority and conscience)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The church may not so expound one place of Scripture that it be repugnant to another; consciences not to be bound by what God has not commanded. Standard Anglican formulation; CofE pages did not render article text live."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 20.2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God alone is Lord of the conscience, and hath left it free from the doctrines and commandments of men, which are, in any thing, contrary to His Word."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article XXII (Of the Rites and Ceremonies of Churches)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Rites and ceremonies ordained against the Word of God woundeth the consciences of weak brethren; conscience assumed throughout."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 (on the sword and the oath, conscience implied)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Anabaptist tradition grounds nonresistance and refusal of oaths in the bound conscience of the disciple before Christ. Cited from standard Schleitheim text."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "AG Statement of Fundamental Truths, Article 5 (The Salvation of Man)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation implies a conscience renewed by the Spirit; AG anthropology presupposes a fallen conscience needing regeneration. URL returned 403; standard AG formulation cited."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Standard Orthodox teaching on conscience as gift of God in every soul",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Orthodox patristic tradition (John Chrysostom, Maximus the Confessor) treats conscience as the natural law written by God in the human soul, retained even after the fall."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/2-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "syneidesis G4893 (conscience) symmartyreo G4828 (bear joint-witness); the work of nomos G3551 graptos G1123 on the kardia G2588 of Gentiles."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/4-2.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "syneidesis G4893 kekauteriasmenon G2743 (cauterised, branded with hot iron); presupposes the faculty's existence even when scarred."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/1-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "What is knowable of God is phaneron G5318 within them; God ephanerosen G5319 it. Grounds conscience's content in universal self-disclosure."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-22.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "kardia G2588 rerhantismenoi G4472 (sprinkled) from poneras G4190 syneideseos G4893; conscience can be evil and needs cleansing through Christ."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3-20.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "kardia G2588 kataginosko G2607 (condemns) us; God meizon G3187 (greater) than our heart. Functional equivalent of conscience accusing."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4893.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "G4893 syneidesis: joint-knowing, moral consciousness as part of being created in the divine image; ~30 NT occurrences across Acts, Pauline corpus, Hebrews, 1 Peter."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P63.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 1795: Conscience is man's most secret core, and his sanctuary. There he is alone with God whose voice echoes in his depths."
+      },
+      {
+        "url": "https://ccel.org/ccel/aquinas/summa/summa.FS_Q19_A5.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Aquinas Summa I-II q19 a5: all that is against conscience is sin; conscience is reason's dictate that binds the will even when erring."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Art XX: consciences cannot be set at rest through any works, but only by faith for Christ's sake."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article XXII warns against rites that 'woundeth the consciences of weak brethren'; conscience assumed as a real moral faculty."
+      }
+    ],
+    "confidence": "high",
+    "flags": ["confession-tradition-divergence"]
+  }
+}

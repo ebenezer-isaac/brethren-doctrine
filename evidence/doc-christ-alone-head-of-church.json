@@ -1,0 +1,465 @@
+{
+  "id": "doc-christ-alone-head-of-church",
+  "answer": {
+    "id": "doc-christ-alone-head-of-church",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration. κεφαλή kephalē G2776 in the ecclesial-headship sense is reserved for Christ throughout the NT epistles. Eph 1:22-23 pairs ὑπέταξεν hypetaxen G5293 ('put under his feet') with κεφαλὴν ὑπὲρ πάντα τῇ ἐκκλησίᾳ ('head over all things to the church') and identifies the ἐκκλησία G1577 as σῶμα G4983, his body. Eph 5:23 makes Christ κεφαλὴ τῆς ἐκκλησίας in apposition to his salvific work (αὐτὸς σωτὴρ τοῦ σώματος). Col 1:18 stacks κεφαλή with ἀρχή archē G746, πρωτότοκος prōtotokos G4416 ἐκ τῶν νεκρῶν, and πρωτεύων prōteuōn G4409 ('preeminent') in a chain whose grammatical force is exclusive preeminence. Col 2:10 places Christ as κεφαλὴ πάσης ἀρχῆς καὶ ἐξουσίας ('head of all rule and authority'); Col 2:19 commands holding fast (κρατῶν G2902) to THE head, from whom (ἐξ οὗ) the whole body grows. Eph 4:15-16 makes growth into Christ as κεφαλή the organic principle of the body. The κεφαλή-of-the-church language never names a human successor or vicar. Matt 23:8-10 supplies the parallel pattern: μὴ κληθῆτε ('do not be called') doubled, with εἷς heis G1520 ('one') applied successively to διδάσκαλος G1320, πατήρ G3962, and καθηγητής G2519, terminating at εἷς γάρ ἐστιν ὑμῶν ὁ καθηγητὴς ὁ Χριστός. The lexical structure is numeric-exclusive single-supreme-authority over the disciple community. 1 Cor 11:3 distinguishes κεφαλή-relations (every man's head is Christ, the man is the head of the woman, God is the head of Christ) but does NOT insert any human mediator into the ecclesial head-of-the-church position which Col 1:18 and Eph 5:23 reserve for Christ alone.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Verdict-scope. The proposition has two layers that must be kept distinct. Layer 1 (Christ is the head of the church, no creature shares that universal headship in Christ's place) is universally affirmed across historic Christianity. Patristic, Catholic, Eastern Orthodox, Lutheran, Anglican, Reformed, Methodist, Anabaptist, and Pentecostal lineages all confess Christ as κεφαλή of the universal church. Even the strongest claims of Roman papal supremacy frame the pope as VICAR of Christ, that is, as a visible representative on earth of an absent head, not as the head himself. Layer 2 (whether any earthly human holds an office that participates in or visibly represents Christ's universal headship over the church) is the Catholic-vs-everyone-else dispute. Catholic Roman magisterial teaching (Lumen Gentium 22, CCC 880-887, Vatican I Pastor Aeternus 1870) holds that the bishop of Rome, as successor of Peter, is head of the College of Bishops and Vicar of Christ on earth, exercising supreme, full, immediate, universal jurisdiction. Eastern Orthodox affirms primacy of honor of the ancient sees (including Rome before the 1054 schism) but rejects universal jurisdiction. All Protestant lineages reject the Roman papal office; the Lutheran Smalcald Articles 1537 went further to identify the papacy as antichristian, though Lutheran-Catholic ecumenical dialogue has softened that polemic significantly in the modern period. Public-record carriers of Roman papal supremacy: the Roman Catholic Church and Eastern Catholic churches in communion with Rome (the latter accept Roman papal supremacy as a condition of communion while retaining their own liturgical traditions). Public-record rejectors: Anglicans, Lutherans, Reformed, Methodists, Pentecostals, Anabaptists, Eastern Orthodox, and the Brethren. Cult-marker assessment: rejection of papal supremacy is universal among non-Catholics. Catholics are not classified as a cult by any responsible classification; the Catholic confession of Christ as the universal head of the church is preserved alongside the disputed teaching about a visible vicarial office. cult_marker_if_denied=false. would_die_for=false on the strict Catholic-vs-Protestant disagreement, because the disagreement is about church polity and the locus of visible authority, not about the gospel itself. would_die_for would be true on Layer 1 (denial that Christ is in any sense the head of the church) because that touches Christological honor and the church's identity. The proposition as stated in the question runs Layer 1 and Layer 2 together; the answer disambiguates. Fruit-vs-precision: practicing Catholics confess Christ as their Lord and Savior; the dispute is on the office of the pope, not on whether Christ is preeminent. Public-record carriers that confuse the layers (Iglesia ni Cristo founded by Felix Manalo claims Felix Manalo as God's messenger to whom the church must submit; Mormonism teaches a living prophet through whom church government runs; Unification Church under Sun Myung Moon claimed Moon as a continuing messianic figure; William Branham's followers treat Branham as the end-times prophet-messenger) put a creature in the universal-supreme-authority slot that the Eph and Col texts reserve for Christ alone; THESE positions cross into cult territory. The Catholic position does not cross that line because it formally subordinates the vicar to Christ as the head."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Is Christ the head of the church, and if so, does any earthly human being hold an office that participates in or visibly represents that universal headship?",
+      "notes": "The statement 'Christ alone is the Head of the Church; no human being holds that office or shares that authority' asserts the Protestant-Reformed verdict against the Catholic claim of a papal Vicar of Christ. The word 'alone' is Reformation-polemical vocabulary. The asserted verdict is structurally identical to what every Protestant tradition formally confesses against Rome. Working the neutralized form yields a two-layer answer (Layer 1 universally affirmed; Layer 2 contested between Rome and the rest). Flag: stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: Christ is the head of the church. No creature stands in his place as the universal head. Whether any human being on earth holds an office that visibly represents that headship is the question that divides Christians, and the Bible's own language is what we have to weigh. The strongest reason from Scripture is the sheer concentration of language naming Christ as 'head' of the church and naming nobody else. Ephesians 1:22 says God put all things under Christ's feet and gave him as head over all things to the church, which is his body. Ephesians 5:23 says Christ is the head of the church, his body, and is himself its Savior. Colossians 1:18 says he is the head of the body, the church; he is the beginning, the firstborn from the dead, that in everything he might be preeminent. Colossians 2:19 commands believers to hold fast to the head, from whom the whole body grows. Matthew 23:8-10 supplies the pattern of speech: Jesus tells the disciples not to call any man on earth 'rabbi,' 'father,' or 'teacher,' because there is only one teacher and one Father, and they are all brothers. The pattern repeats: universal supreme authority belongs to Christ alone, and his disciples are siblings under that authority. The strongest counterargument inside the Bible is Matthew 16:18-19 where Jesus says to Peter, 'You are Peter, and on this rock I will build my church,' and gives him the keys of the kingdom. John 21:15-17 records Jesus telling Peter three times to feed his sheep. Acts shows Peter taking a leading role in Acts 1-2, 10-11, and 15. Critics ask: doesn't this set up Peter as a unique head, and wouldn't a successor naturally continue that role. The verdict handles this tension in two ways. First, every passage that names Christ as 'head' of the church names nobody else; the title is consistently restricted. Second, Peter's leading role in Acts is one of being a first witness and apostle, not of being a sovereign over the other apostles; Acts 15 shows the Jerusalem council deciding by consensus with James voicing the conclusion, and Galatians 2:11 shows Paul publicly correcting Peter to his face, a posture inconsistent with treating Peter as supreme head. Christians disagree about this. Roman Catholic teaching holds that the bishop of Rome is the visible Vicar of Christ on earth, successor of Peter, and head of the worldwide college of bishops, while still confessing Christ as the invisible head. Eastern Orthodox confesses Christ as head and grants honor to ancient sees, but rejects any universal earthly authority over all bishops.",
+      "denominational_landscape": "Every major historic Christian lineage formally affirms that Christ is the head of the church. The dispute is about whether an earthly office (the papacy) participates in or visibly represents that headship. Patristic witness: Cyprian of Carthage taught that the episcopate is one and that each bishop holds part of it for the whole, and he honored the chair of Peter as a symbol of unity, but he also resisted Roman bishop Stephen on the question of rebaptism, showing that he did not treat Rome as a final tribunal. Wider patristic literature universally confesses Christ as head of the universal church. Catholic magisterial teaching: the Catechism of the Catholic Church paragraphs 880-887 and Lumen Gentium paragraph 22 teach that the pope, as successor of Peter, is the visible head of the College of Bishops, the Vicar of Christ on earth, and exercises supreme, full, immediate, and universal jurisdiction over the church. Vatican Council I in 1870 defined papal infallibility when teaching ex cathedra on matters of faith and morals. Lutheran: the Smalcald Articles of 1537 reject the pope as head of the church 'according to divine law or according to the Word of God,' and historically called the papacy antichristian, though modern Lutheran-Catholic ecumenical dialogue has tempered that polemic. The Augsburg Confession confesses Christ as head and rejects parallel mediators. Anglican: Article 37 of the 39 Articles of Religion declares 'The Bishop of Rome hath no jurisdiction in this Realm of England,' a foundational Anglican rejection of Roman papal supremacy while keeping a high view of the episcopate. Reformed: the Westminster Confession of Faith 25.6 confesses 'There is no other head of the Church but the Lord Jesus Christ; nor can the Pope of Rome in any sense be head thereof.' The Belgic Confession Article 31 and the Second Helvetic Confession Article 17 say the same. Methodist: the United Methodist Articles of Religion (drawn from the 39 Articles) reject distinctly Roman doctrines; Article 14 calls Romish doctrines on purgatory and invocation of saints 'repugnant to the Word of God.' Anabaptist: the Schleitheim Confession and the Dordrecht Confession affirm Christ as the sole head of the congregation; Anabaptist ecclesiology rejects any earthly supreme office. Pentecostal: the Assemblies of God Statement of Fundamental Truths confesses the church as the body of Christ with Christ as head; no provision for an earthly papal office. Eastern Orthodox: the Orthodox Church of America teaches Christ as the head of the church and grants primacy of honor to ancient sees (Constantinople holding that primacy after the 1054 schism), but rejects universal jurisdiction of the bishop of Rome as a Latin innovation. Eastern Catholic churches (Ukrainian Greek Catholic, Maronite, Melkite, and others) are in communion with Rome and accept papal supremacy as a condition of that communion."
+    },
+    "scripture": [
+      {
+        "ref": "Eph.1.22",
+        "key_term": "ὑπέταξεν ὑπὸ τοὺς πόδας αὐτοῦ καὶ αὐτὸν ἔδωκεν κεφαλὴν ὑπὲρ πάντα τῇ ἐκκλησίᾳ; hypotassō G5293 aorist active 3s; didōmi G1325 aorist active 3s; kephalē G2776 N-AFS; ekklēsia G1577 N-DFS",
+        "force": "Compound construction: God 'put under his feet' (Psalm 8:6 echo) and 'gave him as head over all things to the church.' The dative ἐκκλησίᾳ marks the church as the beneficiary of Christ's cosmic headship. ὑπὲρ πάντα ('over all things') makes the headship universal in scope; no human office is named",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.1.23",
+        "key_term": "ἥτις ἐστὶν τὸ σῶμα αὐτοῦ τὸ πλήρωμα τοῦ τὰ πάντα ἐν πᾶσιν πληρουμένου; sōma G4983 N-NNS; plērōma G4138 N-NNS",
+        "force": "The church is identified as Christ's σῶμα and as the πλήρωμα ('fullness') of him who fills all in all. The body-head metaphor unites Christ to the church organically; the church derives its life and direction from him directly, with no intervening visible head named",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.4.15",
+        "key_term": "αὐξήσωμεν εἰς αὐτὸν τὰ πάντα ὅς ἐστιν ἡ κεφαλή Χριστός; auxanō G837 aorist active subjunctive 1p; kephalē G2776 N-NFS",
+        "force": "Believers are to 'grow up in every way into him who is the head, into Christ.' The growth-into-the-head construction makes Christ as κεφαλή the organic destination and principle of ecclesial maturation. No human head intervenes",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.5.23",
+        "key_term": "Χριστὸς κεφαλὴ τῆς ἐκκλησίας αὐτὸς σωτὴρ τοῦ σώματος; kephalē G2776 N-NFS; ekklēsia G1577 N-GFS; sōtēr G4990 N-NMS",
+        "force": "Apposition: 'Christ is the head of the church, his body, and is himself its Savior.' The κεφαλή role is grounded in the σωτήρ role; the head of the church is the one who saves the body. No creature has done what saves the body, so no creature stands in this κεφαλή role",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Col.1.18",
+        "key_term": "αὐτός ἐστιν ἡ κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας ὅς ἐστιν ἀρχή πρωτότοκος ἐκ τῶν νεκρῶν ἵνα γένηται ἐν πᾶσιν αὐτὸς πρωτεύων; kephalē G2776; archē G746; prōtotokos G4416; prōteuō G4409",
+        "force": "Four-fold preeminence chain: head, beginning, firstborn from the dead, holding first place. πρωτεύων G4409 is a New Testament hapax; with πρωτότοκος and ἀρχή it stacks unique-supreme-rank vocabulary on Christ exclusively. ἵνα γένηται ἐν πᾶσιν αὐτὸς πρωτεύων ('that in everything HE might hold first place') uses the emphatic αὐτὸς to bar substitution",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Col.2.10",
+        "key_term": "ἐστὲ ἐν αὐτῷ πεπληρωμένοι ὅς ἐστιν ἡ κεφαλὴ πάσης ἀρχῆς καὶ ἐξουσίας; kephalē G2776; archē G746; exousia G1849",
+        "force": "Christ is identified as κεφαλὴ πάσης ἀρχῆς καὶ ἐξουσίας ('head of all rule and authority'). The universal scope (πάσης ἀρχῆς) places every conceivable governing authority, ecclesial and cosmic, under Christ as head. No subordinate vicarial head is named",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Col.2.19",
+        "key_term": "κρατῶν τὴν κεφαλήν ἐξ οὗ πᾶν τὸ σῶμα διὰ τῶν ἁφῶν καὶ συνδέσμων ἐπιχορηγούμενον αὔξει τὴν αὔξησιν τοῦ θεοῦ; krateō G2902; kephalē G2776; epichorēgeō G2023",
+        "force": "Imperative-equivalent participle: 'holding fast to the head, from whom the whole body... grows the growth of God.' The body's nourishment and growth come ἐξ οὗ ('from whom'), the head, by direct connection. Severing the connection (the rival teachers' false humility and angel-worship of v.18) is the danger. No human head mediates the supply",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Matt.23.8",
+        "key_term": "μὴ κληθῆτε Ῥαββί εἷς γάρ ἐστιν ὑμῶν ὁ διδάσκαλος πάντες δὲ ὑμεῖς ἀδελφοί ἐστε; heis G1520; didaskalos G1320; adelphos G80",
+        "force": "Negative aorist subjunctive prohibition with εἷς exclusivity. 'Do not be called rabbi, for one is your teacher, and you all are brothers.' The pattern is universal-supreme-authority-belongs-to-one-person paired with horizontal-fraternity-among-disciples. No human supreme teacher",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.23.9",
+        "key_term": "πατέρα μὴ καλέσητε ὑμῶν ἐπὶ τῆς γῆς εἷς γάρ ἐστιν ὑμῶν ὁ Πατὴρ ὁ οὐράνιος; patēr G3962; epi tēs gēs",
+        "force": "'And do not call anyone on earth your father, for one is your Father, the heavenly one.' The qualifier ἐπὶ τῆς γῆς ('on earth') sharpens the contrast: the universal-supreme-Father title is restricted to the heavenly Father. The pattern is title-restriction-by-singularity",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.23.10",
+        "key_term": "μηδὲ κληθῆτε καθηγηταί ὅτι καθηγητὴς ὑμῶν ἐστιν εἷς ὁ Χριστός; kathēgētēs G2519; Christos G5547",
+        "force": "Third repetition: 'do not be called instructors, for one is your instructor, the Christ.' καθηγητής G2519 is a New Testament hapax meaning leader-instructor-guide. The verse closes the universal-supreme-authority pattern by identifying the one supreme guide of the disciple community as Christ. By concordance, this lexical pattern excludes any subsequent vicarial-supreme-authority claim",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.16.18",
+        "key_term": "σὺ εἶ Πέτρος καὶ ἐπὶ ταύτῃ τῇ πέτρᾳ οἰκοδομήσω μου τὴν ἐκκλησίαν; Petros G4074 N-NMS; petra G4073 N-DFS; ekklēsia G1577",
+        "force": "The lexical move from Πέτρος (masculine, stone) to πέτρᾳ (feminine, rock-mass) is the much-debated crux. Catholic reading: the rock is Peter and the office continues in his successors. Protestant reading: the rock is Peter's confession of Christ (v.16) or Christ himself; the gender shift signals that Peter's confession or Christ is the rock. The verse names Peter uniquely but never names a successor; subsequent papal-succession claims are extra-canonical inferences",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.16.19",
+        "key_term": "δώσω σοι τὰς κλεῖδας τῆς βασιλείας τῶν οὐρανῶν; kleis G2807 N-AFP; basileia G932",
+        "force": "Keys-of-the-kingdom granted to Peter. Catholic reading: papal supremacy. Protestant reading: the same keys-language is repeated in Matt 18:18 to all the disciples and in John 20:23 to all the apostles, distributing the authority. Concordance pattern shows the keys are not Peter-exclusive in the canon",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Matt.18.18",
+        "key_term": "ὅσα ἐὰν δήσητε ἐπὶ τῆς γῆς ἔσται δεδεμένα ἐν οὐρανῷ; deō G1210 second person plural; lyō G3089",
+        "force": "Binding-and-loosing repeated, this time to the disciples corporately (second-person plural). The lexical evidence is that the keys-binding-loosing authority of Matt 16:19 is exercised by the disciple community, not by Peter alone. Disambiguates the Catholic reading of Matt 16",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.21.17",
+        "key_term": "βόσκε τὰ πρόβατά μου; boskō G1006 present active imperative; probaton G4263",
+        "force": "Jesus three times commissions Peter to feed his sheep. The verbs are pastoral (boskō, poimainō G4165). The commission is a restoration of Peter after his three denials, and it is pastoral-shepherd language, not supreme-headship language. 1 Pet 5:1-4 has Peter himself calling Christ the ἀρχιποίμην archipoimēn G750 ('chief shepherd') and presenting himself as a fellow elder",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.5.4",
+        "key_term": "φανερωθέντος τοῦ ἀρχιποίμενος κομιεῖσθε τὸν ἀμαράντινον τῆς δόξης στέφανον; archipoimēn G750 N-GMS",
+        "force": "Peter himself, the supposed first pope, calls Christ the ἀρχιποίμην ('chief shepherd') and presents himself in v.1 as συμπρεσβύτερος sympresbyteros G4850 ('fellow elder'). The lexical evidence from Peter's own pen sets the supreme shepherd role on Christ and Peter's role on a peer-elder plane",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.2.11",
+        "key_term": "κατὰ πρόσωπον αὐτῷ ἀντέστην ὅτι κατεγνωσμένος ἦν; anthistēmi G436 aorist active 1s; kataginōskō G2607 perfect passive",
+        "force": "Paul says he opposed Peter (Cephas) to his face because Peter stood condemned over the table-fellowship issue at Antioch. The lexical force of κατὰ πρόσωπον ('face to face') and ἀντέστην ('I withstood, opposed') is incompatible with treating Peter as a supreme-authority head of the church whose teaching is unchallengeable",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.15.13",
+        "key_term": "ἀπεκρίθη Ἰάκωβος λέγων ἄνδρες ἀδελφοί ἀκούσατέ μου; krinō G2919 (cf. v.19 κρίνω 'I judge')",
+        "force": "At the Jerusalem Council, after Peter speaks (vv.7-11), James voices the concluding judgment ('therefore my judgment is...'). The lexical structure of the council has Peter as one voice and James as the one who articulates the conclusion. This is consensus among apostle-elders, not unilateral Petrine supremacy. Concordance-counter to a strong papal reading",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.3",
+        "key_term": "παντὸς ἀνδρὸς ἡ κεφαλὴ ὁ Χριστός ἐστιν κεφαλὴ δὲ γυναικὸς ὁ ἀνήρ κεφαλὴ δὲ τοῦ Χριστοῦ ὁ θεός; kephalē G2776 three occurrences",
+        "force": "Three κεφαλή relations: Christ-of-every-man, man-of-woman, God-of-Christ. The verse does NOT insert any earthly mediator into the head-of-the-church-universal slot of Col 1:18 and Eph 5:23. Marriage and creation-order κεφαλή relations operate alongside, not in competition with, Christ's ecclesial headship",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.4.11",
+        "key_term": "αὐτὸς ἔδωκεν τοὺς μὲν ἀποστόλους τοὺς δὲ προφήτας τοὺς δὲ εὐαγγελιστάς τοὺς δὲ ποιμένας καὶ διδασκάλους; didōmi G1325 aorist active 3s",
+        "force": "Christ gives gifts to the church: apostles, prophets, evangelists, shepherds, teachers. These are functional offices within the body, granted by Christ the head, serving for the equipping of the saints. None of them is called κεφαλή of the church. The verse establishes ecclesial structure under Christ as head; it does not establish a vicarial head",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.2.25",
+        "key_term": "ἐπεστράφητε νῦν ἐπὶ τὸν ποιμένα καὶ ἐπίσκοπον τῶν ψυχῶν ὑμῶν; poimēn G4166 N-AMS; episkopos G1985 N-AMS",
+        "force": "Peter calls Christ ποιμὴν καὶ ἐπίσκοπος τῶν ψυχῶν ('shepherd and overseer of your souls'). The episkopos title which became the bishop-office of later church history is here applied to Christ over the church. Peter himself names Christ as the universal overseer of souls",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.1.5",
+        "key_term": "ὁ ἄρχων τῶν βασιλέων τῆς γῆς; archōn G758 N-NMS",
+        "force": "Christ identified as 'the ruler of the kings of the earth' (apocalyptic-symbolic). The lexical evidence places ALL earthly rulers under Christ. The book of Revelation names no earthly vicarial figure between Christ and the kings of the earth; Christ rules directly through his prophetic word and the witness of the church",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": [
+          "apocalyptic-symbolism"
+        ]
+      },
+      {
+        "ref": "Heb.13.20",
+        "key_term": "τὸν ποιμένα τῶν προβάτων τὸν μέγαν ἐν αἵματι διαθήκης αἰωνίου τὸν Κύριον ἡμῶν Ἰησοῦν; poimēn G4166 N-AMS; megas G3173",
+        "force": "Christ is 'the great shepherd of the sheep.' Combined with 1 Pet 5:4 (archipoimēn) and 1 Pet 2:25 (poimēn kai episkopos), the canonical pattern reserves the great-shepherd / chief-shepherd / overseer-of-souls titles for Christ. Concordance-pattern excludes any earthly supreme shepherd",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2776",
+      "G1577",
+      "G4983",
+      "G4138",
+      "G5293",
+      "G1325",
+      "G4990",
+      "G746",
+      "G4416",
+      "G4409",
+      "G1849",
+      "G2902",
+      "G2023",
+      "G1320",
+      "G3962",
+      "G2519",
+      "G1520",
+      "G80",
+      "G5547",
+      "G4074",
+      "G4073",
+      "G2807",
+      "G932",
+      "G1210",
+      "G3089",
+      "G1006",
+      "G4165",
+      "G4263",
+      "G750",
+      "G4850",
+      "G436",
+      "G2607",
+      "G2919",
+      "G4166",
+      "G1985",
+      "G758",
+      "G3173",
+      "G837"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "protestant_sola_christi_ecclesiology",
+        "catholic_papal_supremacy",
+        "eastern_orthodox_conciliarism",
+        "anabaptist_congregationalism",
+        "restorationist_supreme_prophet_movements"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "framework": "protestant_sola_christi_ecclesiology",
+          "verdict": "affirms",
+          "notes": "All magisterial Protestant traditions (Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal) read the κεφαλή-of-the-church passages as restricting universal headship to Christ. The Westminster Confession 25.6 confesses 'There is no other head of the Church but the Lord Jesus Christ; nor can the Pope of Rome in any sense be head thereof.' The verdict is unambiguous in this framework. Matt 16:18 is read either as the rock being Peter's confession or Christ himself, neutralizing the Catholic papal-succession inference"
+        },
+        {
+          "framework": "catholic_papal_supremacy",
+          "verdict": "complicates",
+          "notes": "Catholic teaching (CCC 880-887, Lumen Gentium 22, Vatican I Pastor Aeternus 1870) affirms Christ as the head of the church and teaches that the pope, as successor of Peter and Vicar of Christ on earth, is the visible head of the College of Bishops with supreme, full, immediate, universal jurisdiction. The vicar formally derives from Christ and does not replace him. Catholics affirm Layer 1 (Christ is head) and add Layer 2 (a visible vicar exercises Christ's authority on earth). The Protestant reading rejects Layer 2 as having no canonical warrant"
+        },
+        {
+          "framework": "eastern_orthodox_conciliarism",
+          "verdict": "affirms",
+          "notes": "Eastern Orthodox teaching confesses Christ as the head of the universal church and grants primacy of honor to ancient sees (historically Rome before 1054, now Constantinople), but rejects universal jurisdiction of any earthly bishop. Ecclesial governance is conciliar, expressed through ecumenical councils. The Orthodox verdict on the proposition as stated (Christ alone is head, no earthly vicar) aligns with Protestant verdict, against Catholic supremacy"
+        },
+        {
+          "framework": "anabaptist_congregationalism",
+          "verdict": "affirms",
+          "notes": "Schleitheim and Dordrecht confessions treat each gathered congregation as directly under Christ as head, governed by elected leaders and disciplined by the ban. No hierarchy of supreme authority. Strong affirmation of the proposition"
+        },
+        {
+          "framework": "restorationist_supreme_prophet_movements",
+          "verdict": "denies",
+          "notes": "Movements that place a creature in the supreme-authority position of the church on earth (Mormonism's living prophet, Iglesia ni Cristo's Felix Manalo, the Unification Church's Sun Myung Moon, the William Branham movement) deny the proposition functionally even when they verbally honor Christ. The canonical κεφαλή-language excludes these claims; these movements are widely classified as outside historic Christianity"
+        }
+      ],
+      "notes": "The verdict on the proposition's Layer 1 (Christ is the head of the church and no creature stands in his place as universal head) is canonically unambiguous and unanimous across historic Christian lineages. The verdict on Layer 2 (whether any earthly office visibly represents that headship) divides Catholics from everyone else and is the substantive dispute. The grammatico-historical method on the kephalē-of-the-church passages restricts the title to Christ. The Catholic appeal to Matt 16:18-19 requires reading a perpetually-succeeded office out of language that names Peter once and never names a successor; the Protestant and Orthodox responses read the same text as either confessing-Christ-as-rock or as Peter-as-uniquely-first-witness without successor-implication. Analogia scripturae is invoked to harmonize Matt 16 with Matt 18:18, John 20:23, Acts 15:13, Gal 2:11, and 1 Pet 5:1-4."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Cyprian of Carthage, On the Unity of the Church Chapter 4-5 (ANF Vol 5); https://ccel.org/ccel/cyprian/unity_church",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Cyprian: 'The episcopate is one, each part of which is held by each one for the whole.' Honors the chair of Peter as a symbol of unity. Yet Cyprian resisted Roman bishop Stephen on rebaptism, treating Rome as a brother see, not a tribunal of supreme jurisdiction"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Lumen Gentium paragraph 22, Second Vatican Council 1964; https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Lumen Gentium 22: 'The college or body of bishops has no authority unless it is understood together with the Roman Pontiff, the successor of Peter as its head.' Pope as visible head of the College of Bishops; vicar of Christ on earth"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Smalcald Articles 1537 Part II Article IV, Of the Papacy (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Smalcald II.IV: 'the Pope is not, according to divine law or according to the Word of God the head of all Christendom.' Lutheran rejection of Roman papal supremacy. Original 1537 polemic identified the papacy as antichristian; modern dialogue has tempered the tone"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion Article 37, Of the Civil Magistrates (churchofengland.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Article 37: 'The Bishop of Rome hath no jurisdiction in this Realm of England.' Foundational Anglican rejection of Roman papal supremacy while maintaining a high view of the episcopate"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 25.6; Belgic Confession Article 31; Second Helvetic Confession Article 17",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "WCF 25.6: 'There is no other head of the Church but the Lord Jesus Christ; nor can the Pope of Rome in any sense be head thereof.' Belgic 31 names Christ as the only universal bishop; Second Helvetic 17 confesses Christ as the only head of the church"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article 14, Of Purgatory (umc.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "UM Article 14: 'The Romish doctrine concerning purgatory, pardon, worshiping, and adoration... is a fond thing, vainly invented, and grounded upon no warrant of Scripture, but repugnant to the Word of God.' Methodist rejection of distinctively Roman doctrines including papal authority"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527; Dordrecht Confession 1632",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Schleitheim and Dordrecht treat each gathered congregation as directly under Christ as head, governed by elected elders and the discipline of the ban. No earthly supreme office of the church"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Truth 10 (The Church and Its Mission); ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "AG Statement: the church is the body of Christ, the habitation of God through the Spirit, with divine appointments for the fulfillment of her great commission. Christ is head; no provision for a papal office"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on Christ as Head of the Church (oca.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "OCA: 'God has put all things under the feet of Christ and has made Him the head over all things for the Church, which is His body.' Orthodox affirms Christ as head; rejects universal jurisdiction of the bishop of Rome as a Latin innovation"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-22.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 1:22 kephalē G2776 accusative feminine singular; God 'gave him as head over all things to the church.' The dative ekklesia marks the church as beneficiary of Christ's cosmic headship"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/4-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 4:15 kephalē G2776 NFS; believers 'grow up in every way into him who is the head, into Christ.' Christ as ecclesial-organic destination of growth"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/5-23.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 5:23 kephalē G2776; Christ as head of the church grounded in his role as savior of the body. Headship and salvific work joined; no creature shares either"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/1-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Col 1:18 four-fold preeminence chain: kephalē G2776, archē G746, prōtotokos G4416, prōteuōn G4409. Stacked unique-supreme-rank vocabulary on Christ exclusively"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/2-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Col 2:10 Christ as kephalē pasēs archēs kai exousias (head of all rule and authority). Universal scope; every ecclesial and cosmic governing authority under Christ as head"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/2-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Col 2:19 krateō G2902 imperative-participle: holding fast to THE head, from whom the whole body grows. Direct connection; no human supply-mediator"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2776.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "kephalē G2776: church-headship sense reserved for Christ in Eph 1:22, Eph 4:15, Eph 5:23, Col 1:18, Col 2:10, Col 2:19. Husband-wife headship in 1 Cor 11:3 and Eph 5:23 is distinct from universal-church headship"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/23-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Matt 23:8-10 heis G1520 ('one') applied three times to didaskalos, patēr, kathēgētēs. Universal-supreme-authority pattern terminates at Christ. Disciples are brothers"
+      },
+      {
+        "url": "https://ccel.org/ccel/cyprian/unity_church",
+        "category": "patristic_archive",
+        "stance": "complicates",
+        "quote": "Cyprian, Unity of the Church Chapter 4-5: 'I will build my Church upon this rock... the episcopate is one, each part of which is held by each one for the whole.' Used by Catholics for papal supremacy; resisted by Cyprian himself in practice"
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "Lumen Gentium 22: 'The college or body of bishops has no authority unless it is understood together with the Roman Pontiff, the successor of Peter as its head.' Catholic vicarial-head doctrine"
+      },
+      {
+        "url": "https://bookofconcord.org/smalcald-articles/ii/of-the-papacy/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Smalcald II.IV: 'the Pope is not, according to divine law or according to the Word of God the head of all Christendom.' Lutheran rejection"
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles, Article 37: 'The Bishop of Rome hath no jurisdiction in this Realm of England.' Anglican rejection of Roman papal jurisdiction"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "United Methodist Article 14: 'The Romish doctrine... is a fond thing, vainly invented, and grounded upon no warrant of Scripture, but repugnant to the Word of God.' Methodist rejection of distinctively Roman doctrines"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/the-church",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: 'God has put all things under the feet of Christ and has made Him the head over all things for the Church, which is His body.' Orthodox affirms Christ as sole head; rejects Latin papal supremacy"
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

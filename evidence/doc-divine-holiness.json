@@ -1,0 +1,292 @@
+{
+  "id": "doc-divine-holiness",
+  "answer": {
+    "id": "doc-divine-holiness",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical network: Hebrew קָדוֹשׁ qadosh H6918 (118 occurrences, dominant in Isa, Lev, Pss) and Greek ἅγιος hagios G40 (235 NT occurrences) both encode set-apartness and moral otherness. Anchored in Lev 11:44 ('I am holy'), the Trisagion of Isa 6:3 and Rev 4:8 ('Holy, holy, holy'), the moral-purity statement of Hab 1:13 (טָהוֹר tahor H2890, 'too pure to behold evil'), and the direct apostolic citation of Lev in 1 Pet 1:15-16. Ex 34:6-7 and Rom 3:25-26 show holiness and mercy meeting at the cross without contradiction.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "God's holiness is the doctrinal floor on which the gospel itself stands: atonement is for sin against a holy God (Rom 3:25-26, Heb 9:14, Heb 10:29). Deny God's holiness and the cross becomes incoherent. The qadosh / hagios lemma network is one of the most pan-canonical attribute-networks in Scripture, dominating Isaiah ('Holy One of Israel') and Leviticus (priestly code) and binding the Old and New Testaments at 1 Pet 1:15-16 by direct quotation. Public-record carriers of denial: Mormonism (which teaches God was once a man working out exaltation, collapsing the Creator / creature distinction that holiness encodes), process-theology movements (which deny God's moral otherness and impassibility), and any movement that re-reads God's holiness as merely cultic-ceremonial rather than morally constitutive (some hyper-liberal academic positions). Fruit-vs-precision nuance: many believers cannot articulate the qadosh / hagios distinction, but functional reverence for God's holiness is broadly carried across historic Christian liturgy. The lexical-pan-canonical bar is met; cult-marker status holds."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement uses 'utterly holy', 'set apart in moral purity', 'majestic transcendence'. These are direct glosses of the qadosh / hagios lexical force, not Reformed-confessional vocabulary smuggling a verdict. The proposition asserts the verdict, but that is unavoidable for any attribute question and the assertion matches the lexical evidence exactly."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: God is holy. The Bible says this constantly, in both Old and New Testaments, in matching vocabulary. The Hebrew word for holy means set apart, totally other, morally pure. The Greek word for holy in the New Testament means the same thing. The strongest reason from Scripture is the threefold cry 'Holy, holy, holy' in Isaiah 6:3, where the prophet Isaiah sees God on his throne and the seraphim never stop calling him holy. The same cry returns in Revelation 4:8 around God's throne. Leviticus 11:44 has God himself saying 'I am holy,' and 1 Peter 1:15 quotes that same verse and applies it to Christians. Habakkuk 1:13 says God's eyes are too pure to look at evil. The strongest counterargument inside the Bible is that the same holy God shows mercy to sinners and forgives the wicked. Exodus 34:6 to 7 says he is merciful and gracious and forgiving, then in the same breath says he will by no means clear the guilty. Habakkuk himself complains that God seems to tolerate evil silently. These look like tension with God's holiness. The verdict handles this tension by pointing to the cross. Romans 3:25 to 26 says God set Jesus forward as a propitiation so that God could be both just and the one who justifies the sinner. The cross is where God's holiness and mercy meet without either being compromised. God does not lower his holiness to save sinners. He absorbs the cost of it in his Son. The doctrine stands on the strongest possible canonical footing.",
+      "denominational_landscape": "Every major historic Christian lineage confesses God's holiness, and this is one of the least contested doctrines in church history. The patristic fathers (Athanasius, Basil, Chrysostom) embedded the Trisagion of Isaiah 6:3 in the liturgy of the church, where it is still sung weekly. The Catholic Church teaches God's holiness as his most fundamental attribute, the 'thrice-holy' God, and the Catechism treats holiness as God's transcendent otherness. Lutherans confess God in the Augsburg Confession as the one Divine Essence of infinite power, wisdom, and goodness. Anglicans in the 39 Articles confess one living and true God 'without body, parts, or passions'. The Reformed confessions (Westminster Confession 2.1, Belgic, Heidelberg) describe God as 'most holy'. Methodists in the Articles of Religion describe God as everlasting, of infinite power, wisdom, and goodness. Anabaptists at Schleitheim and Dordrecht confess the same God of Scripture. Pentecostals in the Assemblies of God Statement of Fundamental Truths confess God's holiness directly. Eastern Orthodoxy teaches that God 'is absolutely different and unlike anything or anyone else that exists', which is the very meaning of holiness. Carriers of functional denial or distortion place themselves outside historic Christianity on this point. Mormonism teaches that God was once a man and that humans can become gods, which collapses the Creator and creature distinction that holiness encodes. Some hyper-liberal academic positions reduce God's holiness to a cultural construct of ritual purity rather than a moral and ontological reality. Process theology denies God's moral otherness and impassibility. On the bare proposition that God is holy, set apart, and morally pure, historic Christianity speaks with one voice."
+    },
+    "scripture": [
+      {
+        "ref": "Lev.11.44",
+        "key_term": "קָדוֹשׁ (qadosh) H6918; כִּי קָדוֹשׁ אָנִי",
+        "force": "qadosh = sacred, holy, set apart. First-person divine self-predication: 'for I am holy'. Adjective masculine singular. Provides the Levitical foundation that 1 Pet 1:16 quotes directly",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Isa.6.3",
+        "key_term": "קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת; qadosh qadosh qadosh YHWH tsebaoth",
+        "force": "Threefold qadosh H6918. The Hebrew superlative construction (repetition for intensification) takes God's holiness to its maximum possible expression. Seraphim acclamation in Isaiah's throne-room vision. Source of the church's Trisagion",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "parallelism",
+          "hyperbole"
+        ]
+      },
+      {
+        "ref": "Hab.1.13",
+        "key_term": "טְהוֹר עֵינַיִם מֵרְאוֹת רָע; tahor H2890",
+        "force": "tahor = pure, clean (morally and ethically). 'Pure of eyes from looking on evil'. Predicates moral purity, not merely ceremonial separation. Ties holiness to ethical incompatibility with evil",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "anthropomorphism"
+        ]
+      },
+      {
+        "ref": "1Pet.1.15",
+        "key_term": "ἅγιος (hagios) G40; κατὰ τὸν καλέσαντα ὑμᾶς ἅγιον",
+        "force": "hagios = set apart by or for God, holy, sacred. Peter quotes Lev 11:44 explicitly ('be holy, for I am holy'), binding Old and New Testament lexical networks at one verse. Adjective accusative masculine singular for God's nature, nominative masculine plural imperative for believers",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.4.8",
+        "key_term": "ἅγιος ἅγιος ἅγιος κύριος ὁ θεός ὁ παντοκράτωρ",
+        "force": "Threefold hagios G40 in the heavenly throne room, mirroring Isa 6:3. Continuous acclamation 'they do not rest day or night'. The Trisagion is canonical at both ends of the canon",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": [
+          "parallelism"
+        ]
+      },
+      {
+        "ref": "Exod.15.11",
+        "key_term": "נֶאְדָּר בַּקֹּדֶשׁ; qodesh H6944",
+        "force": "qodesh = holiness, apartness, sacredness (noun form of qadosh root). 'Who is like you, majestic in holiness'. Concordance reinforcement at the Song of the Sea, ties holiness to majestic transcendence",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Sam.2.2",
+        "key_term": "אֵין־קָדוֹשׁ כַּיהוָה; qadosh H6918",
+        "force": "'There is none holy like YHWH'. Hannah's prayer asserts the uniqueness of God's holiness: no rival in the category. Concordance reinforcement from the narrative books",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Ps.99.9",
+        "key_term": "כִּי־קָדוֹשׁ יְהוָה אֱלֹהֵינוּ; qadosh H6918",
+        "force": "Refrain of Ps 99 ('Holy is he', 'the LORD our God is holy'). Three-times repetition across the psalm parallels the Trisagion structure. Concordance reinforcement from the psalms",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": [
+          "parallelism"
+        ]
+      },
+      {
+        "ref": "Isa.57.15",
+        "key_term": "קָדוֹשׁ שְׁמוֹ; qadosh H6918",
+        "force": "'High and lofty One who inhabits eternity, whose name is Holy'. Ties qadosh directly to transcendence ('high and lofty', 'inhabits eternity'). Confirms the 'majestic transcendence' clause of the proposition lexically",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Exod.34.6",
+        "key_term": "רַחוּם וְחַנּוּן... וְנַקֵּה לֹא יְנַקֶּה; rachum, channun, naqah H5352",
+        "force": "Self-revelation of God's name: merciful, gracious, slow to anger, abounding in steadfast love, forgiving iniquity, yet 'who will by no means clear the guilty'. The same God is morally pure and yet forgives. Complicates a naive holiness-only reading by holding mercy and justice together",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.25",
+        "key_term": "ἱλαστήριον (hilasterion) G2435; εἰς ἔνδειξιν τῆς δικαιοσύνης αὐτοῦ",
+        "force": "hilasterion = propitiation, place of atonement. Paul resolves the Ex 34 tension at the cross: God set Christ forward as propitiation 'to show his righteousness... so that he might be just and the justifier'. Holiness and mercy meet without compromise. Closes the apparent complication",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.12.14",
+        "key_term": "ἁγιασμός (hagiasmos); χωρὶς οὗ οὐδεὶς ὄψεται τὸν κύριον",
+        "force": "hagiasmos = sanctification, holiness (cognate of hagios G40). 'Pursue... the holiness without which no one will see the Lord'. The ethical entailment of God's holiness for believers; concordance reinforcement of the lemma family",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Lev.10.3",
+        "key_term": "בִּקְרֹבַי אֶקָּדֵשׁ; qadash H6942 (Niphal cohortative)",
+        "force": "After Nadab and Abihu offered strange fire, God says 'Among those who are near me I will be sanctified'. Holiness is not negotiable in worship and is enforced at the cost of life. Concordance link from qadosh adjective to qadash verb",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "H6918",
+      "H6944",
+      "H6942",
+      "H2890",
+      "H5352",
+      "G40",
+      "G2435",
+      "G37"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [],
+      "notes": "Verdict rests on a pan-canonical lemma network: Hebrew qadosh / qodesh / qadash (H6918, H6944, H6942) plus tahor (H2890) for moral purity, and Greek hagios / hagiasmos / hagiazo (G40, G37). The proposition is settled at the lexical level and requires no exotic framework. Covenant, dispensational, new-covenant, and progressive-covenantalism hermeneutics all confess God's holiness identically; this is not a framework-divergent question. The Ex 34:6-7 and Hab 1:13 complications are resolved by the cross (Rom 3:25-26, Heb 9:14), where holiness and mercy meet. Analogia scripturae is invoked at exactly this point: 1 Pet 1:15-16 quotes Lev 11:44, binding the testaments, and Rev 4:8 quotes Isa 6:3."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "The Trisagion in the liturgy of the early church, attested in the Apostolic Constitutions and the Liturgy of St. John Chrysostom",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Holy God, Holy Mighty, Holy Immortal, have mercy on us. The Trisagion is sung weekly in every patristic-tradition liturgy as a direct confession of God's holiness from Isa 6:3"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church, on God's holiness (the thrice-holy God)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Catechism treats holiness as God's transcendent otherness and uses 'thrice-holy' language drawn from Isa 6:3 and Rev 4:8 throughout its treatment of God's nature"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article I, Of God",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "One Divine Essence, eternal, without body, of infinite power, wisdom, and goodness, Maker and Preserver of all things. Lutheran confession of God's nature including holiness"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article I, Of Faith in the Holy Trinity",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "There is but one living and true God, everlasting, without body, parts, or passions; of infinite power, wisdom, and goodness. Anglican confession of God's holy nature"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 2.1",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God is most holy, most free, most absolute. Standard Reformed confessional statement on God's holiness as foundational divine attribute"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article I",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "There is but one living and true God, everlasting, without body or parts, of infinite power, wisdom, and goodness. Methodist confession of God's eternal holy nature"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession Article 1, Of God and the Creation of All Things",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We believe in one eternal, almighty, and incomprehensible God, the Father, Son, and Holy Ghost. Anabaptist confession of one holy God"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, on the One True God",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Pentecostal confessions treat God's holiness as a foundational attribute, particularly emphasized in their distinctive doctrine of sanctification by the Holy Spirit"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on God's nature",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He is absolutely different and unlike anything or anyone else that exists. Orthodox formulation of holiness as God's total otherness from creation"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/isaiah/6-3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Threefold qadosh H6918 (occurrences 20, 21, 22 of 27 in Hebrew Bible); adjective masculine singular; Hebrew superlative by repetition"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/leviticus/11-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Lev 11:44 uses qedoshim and qadosh (H6918 adjective forms) plus the verb qadash H6942; 'for I am holy' is direct divine self-predication"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/1-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Pet 1:15-16 uses hagios G40 twice and quotes Lev 11:44 directly, binding Old and New Testament lexical networks at one verse"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/4-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rev 4:8 threefold hagios G40 in continuous acclamation around the heavenly throne, canonical mirror of Isa 6:3"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/habakkuk/1-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Hab 1:13 tahor H2890 'pure of eyes from looking on evil'; ties God's holiness to moral purity, not merely ceremonial apartness"
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/6918.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "qadosh H6918, 118 occurrences in Hebrew Bible; dominant in Isaiah, Leviticus, Psalms; core meaning set apart, sacred, morally distinct"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/40.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hagios G40, 235 NT occurrences; meaning different, unlike, set apart, distinguished because special to the Lord; pan-canonical reach"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/god",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: God's holiness means 'He is absolutely different and unlike anything or anyone else that exists', the Orthodox formulation of total otherness"
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article I: 'One Divine Essence, eternal, without body, of infinite power, wisdom, and goodness, Maker and Preserver of all things'"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UMC Articles of Religion Article I: 'There is but one living and true God, everlasting, without body or parts, of infinite power, wisdom, and goodness'"
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

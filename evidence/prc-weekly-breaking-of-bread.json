@@ -1,0 +1,286 @@
+{
+  "id": "prc-weekly-breaking-of-bread",
+  "answer": {
+    "id": "prc-weekly-breaking-of-bread",
+    "affirms": true,
+    "rationale": "Acts 20:7 names the gathered church on the first day of the week with the express purpose of breaking bread, and Acts 2:42 lists the breaking of bread among the four constitutive devotions of the first church alongside the apostles' teaching, fellowship, and the prayers. The lemma kyriakos G2960 occurs only twice in the New Testament and links the same descriptor to the Lord's Day (Rev 1:10) and the Lord's Supper (1 Cor 11:20), and 1 Cor 11:18-26 uses the verb synerchomai G4905 four times for the Corinthian gathering structured around that meal, so weekly Lord's-Day breaking of bread is the most natural reading of the apostolic pattern.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "Stem-pre-loaded-verdict. The statement asserts both frequency (weekly) and centrality (central act of corporate worship); the lexical record supports weekly observance more clearly than it supports the centrality claim. The frequency claim is well grounded: Acts 20:7 expressly names the first day of the week as the breaking-of-bread gathering, 1 Cor 16:2 names the first day of every week (mia sabbatou kata) as the regular collection day implying regular Lord's-Day assembly, and 1 Cor 11:18-26 presupposes a recurring corporate meal. The centrality claim (the central act) is interpretive layer added by Brethren-Restoration-Anglican-Catholic-Orthodox traditions; the apostolic pattern names breaking of bread alongside teaching, fellowship, and prayer (Acts 2:42) without ranking. Carriers of weekly practice: Plymouth Brethren (Open and Exclusive, foundational distinctive, every Lord's Day), Restoration Movement Churches of Christ and Disciples of Christ (weekly communion is a defining distinctive), Anglican high church (weekly to daily eucharist), Roman Catholic Church (Sunday Mass obligation plus daily mass available), Eastern Orthodox communions (weekly Divine Liturgy is the standard), historic Lutheran practice (Augsburg Confession Article 24 names every holy-day communion). Carriers of less-than-weekly: most Baptist bodies (monthly or quarterly), most Pentecostal-evangelical (monthly or quarterly), much of Reformed-Presbyterian practice (often quarterly in Scottish tradition), most modern Methodist practice (varies, often monthly). This is in-house Christian disagreement about frequency, not a gospel boundary or cult-marker. A Baptist who communes monthly out of high reverence for the Supper is not a cult; a Methodist whose congregation observes quarterly is not denying the gospel. The cult-marker bar requires gospel-implicating denial plus pan-canonical lexical demonstration; the frequency question lacks any explicit canonical command (the Acts 20:7 narrative shows the pattern but does not command it as universal frequency), so condition 2 fails honestly. Defended would_publicly_correct_if_otherwise=false because the practice is sub-gospel and a less-frequent observance can be reverent. Defended would_marry_if_held_otherwise=true because frequency of the Supper is not a marriage-grade ecclesial divider."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "What frequency and place in corporate worship does the New Testament name for the breaking of bread (the Lord's Supper), and is any one frequency (weekly, monthly, quarterly) lexically mandated to the exclusion of the others?",
+      "notes": "The stem asserts both weekly frequency AND centrality (the central act of corporate worship). The frequency portion has reasonable canonical support (Acts 20:7, 1 Cor 16:2, 1 Cor 11:18-26). The centrality portion is interpretive overlay characteristic of Brethren, Restoration, Anglican high-church, Catholic, and Orthodox readings; Acts 2:42 names breaking of bread as one of four devotions alongside teaching, fellowship, and prayer without lexically ranking them. Flag stem-pre-loaded-verdict and work the neutralized form. Verdict on the frequency claim is affirms=true at medium confidence; verdict on the centrality claim is honestly contested and not pan-canonically demonstrated."
+    },
+    "lay_summary": {
+      "reasoning": "The question is whether the Bible's pattern is to break bread (the Lord's Supper) weekly on Sunday and to make it the main act of the church's gathering. The strongest reason in favor is the plain pattern in Acts. Acts 20:7 says that on the first day of the week, when we were gathered together to break bread, Paul spoke to them. The first day of the week (Sunday) and the breaking of bread are named together as the reason the church assembled. Acts 2:42 lists four things the first believers devoted themselves to: the apostles' teaching, fellowship, the breaking of bread, and the prayers. Paul in 1 Corinthians 16:2 tells the Corinthians that on the first day of every week each of them is to set aside money, which assumes a weekly Sunday gathering. In 1 Corinthians 11 Paul uses the phrase when you come together as a church four times in one chapter to describe a recurring meeting that is structured around the Lord's Supper. There is also a striking small detail. The Greek word translated belonging to the Lord appears only twice in the whole New Testament. Once in Revelation 1:10 it names the Lord's Day. Once in 1 Corinthians 11:20 it names the Lord's Supper. The same word links the day and the meal. The strongest counterargument is that no verse commands weekly observance as a binding rule, and Acts 2:46 actually shows daily breaking of bread house to house in the very earliest weeks of the Jerusalem church. The pattern of weekly assembly to break bread is clearly there, but a hard rule of exactly once a week and no more and no less is not stated anywhere. Jesus' words at the institution say as often as you do this, not weekly do this. So the honest reading is that weekly Sunday breaking of bread is the most natural reading of the apostolic example, but the second half of the question (that it is the central act of corporate worship, above teaching and prayer and fellowship) is harder to settle from the words alone. Acts 2:42 names four devotions side by side without ranking. A church that gathers weekly to hear the apostles' teaching, share fellowship, break bread, and pray together is following the pattern even if its members would not say one of those four is the central one above the others.",
+      "denominational_landscape": "Christians have read the same New Testament texts and reached different practices on frequency. Weekly observance is the historic norm for the patristic church (the Didache chapter 14 directs gathering on the Lord's Day to break bread and give thanks, and Justin Martyr around the year 150 describes a Sunday assembly where bread and wine are brought after Scripture is read), for the Roman Catholic Church (Sunday Mass is the weekly obligation and daily Mass is available in most parishes), for the Eastern Orthodox communions (the eucharistic liturgy is celebrated every Sunday and on feast days), for the Anglican high church (weekly eucharist is normative), for historic Lutheran practice (the Augsburg Confession Article 24 names communion on every holy day), for the Plymouth Brethren movement (both Open and Exclusive, where weekly Lord's Day breaking of bread is a foundational distinctive that is not optional), and for the Stone-Campbell Restoration Movement bodies including the Churches of Christ and the Disciples of Christ (weekly communion is a defining mark of their identity). Less-than-weekly observance is the practice of most Baptist bodies (often monthly), of much of the Reformed and Presbyterian world (often quarterly in the Scottish-Presbyterian heritage), of most Pentecostal and non-denominational evangelical churches (often monthly or quarterly), and of most modern Methodist congregations (often monthly, though John Wesley himself urged frequent and even weekly communion). John Wesley's sermon on the duty of constant communion explicitly argued for frequent observance, so the modern Methodist quarterly pattern is a drift from the founder's stated position. Cult or heterodox groups are not particularly identified by this question; most cult movements either retain weekly or near-weekly forms (the Latter-day Saints take the sacrament weekly in their Sunday services, Jehovah's Witnesses observe only one annual Memorial of Christ's death) so the practice does not function as a cult-versus-orthodox sorting line. The frequency disagreement is in-house Christian disagreement over how to apply the apostolic example, not a gospel boundary."
+    },
+    "scripture": [
+      {
+        "ref": "Acts.20.7",
+        "key_term": "ἐν δὲ τῇ μιᾷ τῶν σαββάτων en de te mia ton sabbaton G1520 G4521 (on the first day of the week); συνηγμένων synegmenon G4863 (having been gathered together, perfect passive participle); κλάσαι ἄρτον klasai arton G2806 G740 (to break bread, aorist infinitive of purpose)",
+        "force": "The clearest single-verse anchor for weekly Lord's Day breaking of bread. The temporal marker mia ton sabbaton (first day of the week) is the Christian designation for Sunday established by the resurrection narratives (Matt 28:1, Mark 16:2, Luke 24:1, John 20:1, John 20:19). The aorist infinitive klasai arton expresses the purpose of the gathering. The text does not command weekly frequency but presents it as the apostolic pattern at Troas while Luke is present as eyewitness narrator (the we-section).",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.42",
+        "key_term": "προσκαρτεροῦντες proskarterountes G4342 (devoted themselves, present active participle, persisting steadfastly); τῇ διδαχῇ τῶν ἀποστόλων te didache ton apostolon G1322 (the apostles' teaching); τῇ κοινωνίᾳ te koinonia G2842 (fellowship); τῇ κλάσει τοῦ ἄρτου te klasei tou artou G2800 G740 (the breaking of the bread); ταῖς προσευχαῖς tais proseuchais G4335 (the prayers)",
+        "force": "Four datives joined by te-kai construction describe the constitutive devotions of the Jerusalem church. The article on each item (the teaching, the fellowship, the breaking of the bread, the prayers) marks each as a definite and recurring practice, not occasional. The noun klasis G2800 appears only here and at Luke 24:35 (the breaking of the bread at Emmaus). The verse supports a recurring breaking of bread but does not lexically rank it above the other three devotions, so the centrality claim of the stem is not lexically demonstrated.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.46",
+        "key_term": "καθ ἡμέραν kath hemeran G2596 G2250 (day by day); κλῶντές τε κατ οἶκον ἄρτον klontes te kat oikon arton G2806 G3624 G740 (breaking bread in their homes)",
+        "force": "Complicates the weekly-only frequency reading. In the earliest Jerusalem days the breaking of bread was happening daily, house to house, with gladness and simplicity of heart. The lexical pattern here is even more frequent than weekly. This text shows that the apostolic practice in its earliest form was not bound to a single weekly observance, although the subsequent pattern at Troas (Acts 20:7) and the Corinthian gathering (1 Cor 11) settles into the Lord's Day rhythm.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.20",
+        "key_term": "συνερχομένων οὖν ὑμῶν ἐπὶ τὸ αὐτό synerchomenon oun hymon epi to auto G4905 (when you come together in one place); οὐκ ἔστιν κυριακὸν δεῖπνον φαγεῖν ouk estin kyriakon deipnon phagein G2960 G1173 G5315 (it is not to eat the Lord's Supper)",
+        "force": "The adjective kyriakos G2960 occurs only twice in the entire New Testament. Here it qualifies deipnon (the supper). The only other occurrence is Rev 1:10 where it qualifies hemera (the day, ten kyriaken hemeran, the Lord's Day). The same lexical descriptor links the day and the meal at the lemma-network level, which is one of the strongest concordance arguments for connecting Lord's-Day-gathering with Lord's-Supper-observance. The chapter as a whole uses synerchomai four times (v17, v18, v20, v33) to describe the recurring corporate meeting structured around the meal.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.25-26",
+        "key_term": "ὁσάκις ἂν πίνητε hosakis an pinete G3740 (as often as you drink); ὁσάκις γὰρ ἐὰν ἐσθίητε τὸν ἄρτον τοῦτον hosakis gar ean esthiete ton arton touton G3740 G740 (for as often as you eat this bread); καταγγέλλετε katangellete G2605 (you proclaim)",
+        "force": "Complicates the binding-weekly-frequency claim. The phrase hosakis an (as often as) is open-ended; it presupposes ongoing repeated observance but does not specify weekly. The frequency is left to the discretion of the church under the binding command to do this in remembrance. A Baptist who observes monthly with hosakis an in mind is not denying the text. A Brethren assembly that observes weekly with Acts 20:7 in mind is also not denying the text. The frequency-specifying command is absent at the lexical level.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.16.2",
+        "key_term": "κατὰ μίαν σαββάτου kata mian sabbatou G2596 G1520 G4521 (on the first day of every week); ἕκαστος ὑμῶν παρ ἑαυτῷ τιθέτω hekastos hymon par heauto titheto G5087 (each of you is to set aside)",
+        "force": "Confirms the Lord's-Day-weekly-gathering pattern. The distributive kata + mian sabbatou yields the gloss on every first day of the week. Paul instructs the Corinthians to set aside money at the regular weekly assembly. The collection presupposes that the assembly is in fact weekly and on Sunday. This is the strongest indirect evidence that the first-day gathering of Acts 20:7 was not a one-off but a regular weekly rhythm in Pauline churches.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.1.10",
+        "key_term": "ἐν τῇ κυριακῇ ἡμέρᾳ en te kyriake hemera G2960 G2250 (on the Lord's Day)",
+        "force": "Concordance hit on G2960 kyriakos. Of only two NT occurrences of this adjective, one (here) names the Lord's Day and the other (1 Cor 11:20) names the Lord's Supper. The lemma-network link is short and direct. By the time Revelation is written (late first century) the kyriake hemera is a recognized designation for the first day of the week (so the patristic record confirms: Didache 14, Ignatius to the Magnesians 9). This is the canonical seed of the patristic practice of weekly Lord's-Day eucharist.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Luke.24.30-35",
+        "key_term": "κλάσας klasas G2806 (having broken, aorist active participle); ἐν τῇ κλάσει τοῦ ἄρτου en te klasei tou artou G2800 G740 (in the breaking of the bread)",
+        "force": "Concordance hit on G2800 klasis: the only other NT occurrence outside Acts 2:42. The risen Christ is recognized at Emmaus in the breaking of bread. The narrative establishes the post-resurrection breaking-of-bread as a recognition act and forms the bridge between the Last Supper of Luke 22 and the recurring breaking of bread in Acts 2 and Acts 20. Supports the recurring-practice reading by establishing the act's significance after the resurrection.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.10.16-17",
+        "key_term": "τὸ ποτήριον τῆς εὐλογίας to poterion tes eulogias G4221 G2129 (the cup of blessing); κοινωνία τοῦ αἵματος τοῦ Χριστοῦ koinonia tou haimatos tou Christou G2842 G129 (participation in the blood of Christ); τὸν ἄρτον ὃν κλῶμεν ton arton hon klomen G740 G2806 (the bread that we break); ἓν σῶμα οἱ πολλοί ἐσμεν hen soma hoi polloi esmen G1520 G4983 (we many are one body)",
+        "force": "Strengthens the centrality-of-the-meal layer of the stem. Paul's rhetorical question presupposes that breaking the bread is the standard ongoing practice of the Corinthian church (the bread that we break, present indicative, customary action). The verse ties the meal to christological participation (koinonia in body and blood) and to ecclesial unity (we many are one body). Supports the proposition that breaking bread is a constitutive and not peripheral practice, though it does not directly speak to frequency.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "Acts.20.11",
+        "key_term": "κλάσας τὸν ἄρτον klasas ton arton G2806 G740 (having broken the bread)",
+        "force": "Continuation of the Troas narrative. After Eutychus is restored, Paul goes back upstairs, breaks the bread, eats, and continues conversing until daybreak. Confirms that the breaking of bread named in 20:7 was actually carried out in that gathering. Supports the weekly-Lord's-Day-breaking-of-bread reading at the level of narrative completion.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.25",
+        "key_term": "μὴ ἐγκαταλείποντες τὴν ἐπισυναγωγὴν ἑαυτῶν me egkataleipontes ten episynagogen heauton G1459 G1997 (not forsaking the assembling of ourselves together)",
+        "force": "Complicating-text search hit. The author of Hebrews names the corporate assembly as a non-negotiable practice but does not specify frequency or content. Supports the broader pattern of regular Christian corporate gathering without specifying the Supper as the central act or weekly as the binding frequency. Diagnostic for the question because it shows that what the canon presses is the fact of gathering, not its sacramental shape.",
+        "supports": "neutral",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G2806", "G2800", "G740", "G2960", "G4521", "G1520", "G4905", "G2842", "G1173", "G4221", "G2129", "G4342", "G2596"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "patristic-typological"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "patristic-typological",
+          "verdict": "for",
+          "note": "Reads Acts 20:7, 1 Cor 11:20, Rev 1:10 as instituting the kyriake hemera (Lord's Day) eucharist as the universal Christian pattern. The patristic record (Didache 14, Justin Apology 67) treats this as settled apostolic tradition. This lens drives the Catholic, Orthodox, Anglican, and Brethren weekly position."
+        },
+        {
+          "lens": "covenant_theology",
+          "verdict": "complicates",
+          "note": "Covenantal Reformed tradition reads the same texts but historically practiced quarterly (especially in Scottish Presbyterian heritage), arguing that weekly observance can dull reverence and that frequency is adiaphora under the Westminster pattern. The Westminster Directory for Public Worship does not bind frequency."
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "for",
+          "note": "Dispensational Brethren read 1 Cor 11 as the church-age standing instruction with Acts 20:7 as the apostolic implementation, yielding mandatory weekly observance as the central church-age ordinance. Plymouth Brethren weekly Lord's Day breaking of bread is the load-bearing distinctive of the movement."
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "for",
+          "note": "Reads the apostolic example as descriptive but normative, favoring weekly observance without binding it as inviolable command. The hosakis an of 1 Cor 11:25-26 leaves discretion within the apostolic pattern."
+        }
+      ],
+      "notes": "Verdict turns on whether apostolic narrative example (Acts 20:7) plus regular Pauline practice (1 Cor 16:2, 1 Cor 11) plus the kyriakos lemma-network (Rev 1:10 + 1 Cor 11:20) constitute a normative pattern or merely a permissive precedent. The hosakis an of 1 Cor 11:25-26 prevents the verdict from rising to canonical command, but the apostolic example is sufficiently uniform that weekly observance is the most natural reading. The centrality-of-corporate-worship layer of the stem is interpretive overlay not lexically demonstrated."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Didache 14 (Teaching of the Twelve Apostles, c. AD 90-110)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "On the Lord's own day gather yourselves together and break bread and give thanks, first confessing your transgressions, that your sacrifice may be pure (standard translation; CCEL fetch returned interface only)"
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Justin Martyr, First Apology 67 (c. AD 150), CCEL ANF Vol 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "all who live in cities or in the country gather together to one place, and the memoirs of the apostles or the writings of the prophets are read"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, Holy Eucharist (oca.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The eucharistic liturgy is celebrated in the Church every Sunday, the Day of the Lord, as well as on feast days."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article 24, Of the Mass (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Now, forasmuch as the Mass is such a giving of the Sacrament, we hold one communion every holy-day, and, if any desire the Sacrament, also on other days"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 2174-2188 (Sunday Mass obligation) and 1389 (daily Mass commended)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Sunday Eucharist is the foundation and confirmation of all Christian practice; the Church obliges the faithful to participate in the Eucharist on Sundays and feast days (standard CCC summary; vatican.va deep links returned 404)"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Book of Common Prayer 1662 and Articles of Religion 28; modern Anglican Communion practice",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "39 Articles affirm the Lord's Supper as a sacrament; frequency varies by churchmanship (weekly high church, monthly broad and low church); churchofengland.org fetch returned interface only"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "John Wesley, Sermon 101, The Duty of Constant Communion",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "It is the duty of every Christian to receive the Lord's Supper as often as he can (Wesley argued for frequent and weekly observance; umc.org fetch returned 404)"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Directory for the Public Worship of God (1645); Scottish Presbyterian practice",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "The communion or supper of the Lord is frequently to be celebrated; how often is left to the wisdom of the minister and other church officers (frequency not bound; historic Scottish Presbyterian practice quarterly)"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 Article 3",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Concerning the breaking of bread we have agreed that all those who wish to break the one bread for remembrance must beforehand be united in the one body of Christ (frequency unspecified; Anabaptist Mennonite practice often monthly)"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God position on the Lord's Supper (ag.org)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Holy Communion is observed as commanded by Christ; frequency is left to the local congregation (typical Pentecostal practice monthly or quarterly; ag.org fetch returned 403)"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/acts/20-7.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "klasai G2806 arton G740 (to break bread) infinitive of purpose; mia G1520 ton sabbaton G4521 (first day of the week); synegmenon G4863 (having gathered)"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-42.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "proskarterountes G4342 (devoted); te didache G1322 (the teaching); te koinonia G2842 (the fellowship); te klasei G2800 tou artou G740 (the breaking of the bread); tais proseuchais G4335 (the prayers)"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-20.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "synerchomenon G4905 (coming together); kyriakon G2960 deipnon G1173 (Lord's Supper); only two NT occurrences of kyriakos: here and Rev 1:10"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/16-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "kata G2596 mian G1520 sabbatou G4521 (on every first day of the week); presupposes regular weekly Lord's Day assembly"
+      },
+      {
+        "url": "https://biblehub.com/greek/2960.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2960 kyriakos: only two NT occurrences. Rev 1:10 (Lord's Day) and 1 Cor 11:20 (Lord's Supper). Lemma-network ties the day and the meal."
+      },
+      {
+        "url": "https://biblehub.com/greek/2806.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2806 klao (break): feeding miracles, Last Supper (Matt 26:26, Mark 14:22, Luke 22:19, 1 Cor 11:24), Emmaus (Luke 24:30), Acts 2:46, 20:7, 20:11, 27:35, 1 Cor 10:16"
+      },
+      {
+        "url": "https://biblehub.com/greek/2800.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2800 klasis: only two NT occurrences. Luke 24:35 (Emmaus, the breaking of the bread) and Acts 2:42 (the breaking of the bread). Technical term for the practice."
+      },
+      {
+        "url": "https://www.ccel.org/ccel/schaff/anf01.viii.ii.lxvii.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Justin First Apology 67: all who live in cities or in the country gather together to one place, and the memoirs of the apostles or the writings of the prophets are read on the day called Sunday"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/holy-eucharist",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "The eucharistic liturgy is celebrated in the Church every Sunday, the Day of the Lord, as well as on feast days."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-the-mass/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "we hold one communion every holy-day, and, if any desire the Sacrament, also on other days (Augsburg Confession Article 24)"
+      }
+    ],
+    "confidence": "medium",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence", "apparatus-paywalled"]
+  }
+}

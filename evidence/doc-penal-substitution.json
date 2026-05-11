@@ -1,0 +1,409 @@
+{
+  "id": "doc-penal-substitution",
+  "answer": {
+    "id": "doc-penal-substitution",
+    "affirms": true,
+    "rationale": "The canonical lexical pattern supports penal-substitutionary force as one true dimension of the atonement: Isa 53:5-6, 10 fuses suffering for transgression (the chastisement of our peace was upon him), divine causation of guilt-transfer (paga H6293 hiphil), and guilt-offering language (asham H817); Rom 3:25 names Christ as hilasterion G2435 in his blood to display God's righteousness (so that he might be just and the justifier); Gal 3:13 says Christ became a curse (katara G2671) for us, taking the law's penalty under Deut 21:23; 2 Cor 5:21 has the just one made sin for us; 1 Pet 3:18 has the righteous suffering for the unrighteous; 1 John 2:2 and 4:10 use hilasmos G2434 (propitiation). The penalty-bearing aspect is part of the canonical pattern, though the precise mechanism (penal vs satisfaction vs Christus Victor vs governmental) remains an in-house debate among orthodox Christians.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "This question is K2_explicitly_excluded as theory-specific. The simpliciter doctrine (Christ died for us, in our place) is handled by doc-vicarious-atonement and there it is a gospel-stake matter. The penal-specific framework here addresses the MECHANISM by which substitution operates, and the in-house Christian debate on mechanism is real and irreducible. The Reformed-confessional articulation (Christ bore the divine penalty in the sinner's place to satisfy retributive justice) has strong canonical support in the Isa 53 / Rom 3 / Gal 3:13 lexical cluster but is not the only orthodox reading. Anselm framed it as satisfaction of divine honor (not strict penal-retribution). Eastern Orthodoxy traditionally rejects strict penal-satisfaction language as too juridical and emphasizes Christus Victor and theosis-restoration, while still affirming that Christ suffered for our salvation. Catholic teaching (CCC 599-618) speaks of redemption, sacrifice, satisfaction, and substitution without commiting to the precise Reformed penal mechanism. Lutheran (Augsburg III, IV) and classical Methodist (Article XX) language uses sacrifice, propitiation, satisfaction; the Reformed confessions push the penal framing furthest (WCF 8.4-8.5). Public-record critics of strict penal-substitution within historic Christianity: Eastern Orthodox theologians, Christus Victor proponents (Gustaf Aulen, 1931, Christus Victor), governmental-theory advocates (Hugo Grotius), some Wesleyan-Arminian scholars, J. Denny Weaver's nonviolent atonement, certain contemporary Anabaptist and feminist theologians. Public-record outright deniers of vicarious atonement altogether (which would touch the simpliciter and is the gospel-stake matter): Socinians, classical Abelardian moral-exemplar reductionism, Unitarian Universalists, modern liberal-mainline reductionism, Jehovah's Witnesses reframe ransom in non-Trinitarian terms. Brethren tradition affirms penal substitution strongly. The fruit-vs-precision nuance: a believer who affirms vicarious atonement but prefers Christus Victor or satisfaction framing over strict penal-retribution remains within historic Christian orthodoxy, so cult_marker_if_denied=false and would_die_for=false for the penal-specific question. The gospel stake is the simpliciter."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Christ's atoning death includes a dimension in which he bears, in the place of sinners, the judicial consequence of sin against God.",
+      "notes": "The original statement uses 'bearing God's judgment against sin in the place of sinners (penal-substitutionary aspect)' which is Reformed-confessional theory-of-atonement vocabulary appearing as if neutral. The phrase 'penal-substitutionary aspect' is the parenthetical hint that the Reformed mechanism is being asserted. The neutralized form preserves the substitutionary-judicial dimension that Isa 53, Rom 3:25, Gal 3:13 lexically carry, while not committing to the full Reformed satisfaction-of-retributive-justice metaphysic. Flag stem-pre-loaded-verdict raised."
+    },
+    "lay_summary": {
+      "reasoning": "Yes, the Bible teaches that Jesus, in dying for us, also took on himself the judgment our sins deserved. The strongest reason is Isaiah 53. The prophet says the servant was wounded for our transgressions and crushed for our iniquities, that the punishment that brought us peace was on him, and that the LORD himself laid the guilt of us all on the servant. Verse 10 even calls his life a guilt offering. Romans 3:25 says God put Jesus forward as the one through whose blood we are made right with God, and this was done to show that God himself is both just and the one who declares sinners righteous. Galatians 3:13 says Christ became a curse for us by hanging on the tree, citing Deuteronomy 21:23, which is the law's penalty against the condemned. 2 Corinthians 5:21 says he was made sin for us. 1 Peter 3:18 says the righteous suffered for the unrighteous. 1 John 2:2 and 4:10 call Jesus the propitiation for our sins, meaning the sacrifice that turns aside wrath. The strongest counterargument is that the cross is also portrayed as victory and example. Colossians 2:15 says Jesus disarmed the powers and triumphed over them. Hebrews 2:14 says he destroyed the devil through death. 1 Peter 2:21 says he left us an example. Some readers, especially in the Christus Victor tradition, argue that the dominant frame is triumph over death and evil, not bearing a penalty. The honest reading holds these together. The cross is one act with several dimensions. Christ wins, Christ atones, Christ shows the way, and Christ takes the penalty. None of these displaces the others. The lexical pattern across Isaiah 53, Romans, Galatians, Peter, and John specifically supports the penalty-bearing dimension. What remains contested is not whether Scripture says these things but how to weight them.",
+      "denominational_landscape": "All major historic Christian lineages affirm that Christ died for us, in our place, in some substitutionary sense. They disagree about the precise mechanism of substitution. The Reformed lineage (Westminster Confession 8.4-8.5, Heidelberg Catechism, Three Forms of Unity) and the broader evangelical-confessional tradition place penal substitution at the center: Christ bore the punishment our sin deserved, satisfying divine justice. The Lutheran tradition (Augsburg Confession III, IV) uses sacrifice, propitiation, and satisfaction language closely aligned with the penal framing. Anglican teaching (39 Articles, Article 2 and Article 31) speaks of Christ as a sacrifice for original guilt and actual sins, language compatible with penal substitution. Classical Methodist teaching (UMC Articles of Religion, Article XX) repeats this Anglican formulation closely, calling Christ's offering perfect redemption, propitiation, and satisfaction for the sins of the whole world; modern Methodist scholarship has moved in places toward governmental atonement or Christus Victor. Anabaptist confessions (Dordrecht 1632) affirm Christ's atoning sacrifice without insisting on the specific Reformed mechanism. Pentecostal teaching (Assemblies of God Statement of Fundamental Truths) affirms vicarious atonement. Catholic teaching (CCC 599-618) uses substitution, satisfaction, and sacrifice language: Christ assumed us in the state of our waywardness of sin and made satisfaction for our transgressions; the Anselmian satisfaction view is rooted here and forms the medieval foundation that the Reformers later sharpened into penal substitution. Eastern Orthodoxy traditionally rejects strict penal-satisfaction language as overly juridical and Western, preferring to frame the atonement as Christus Victor (triumph over death, devil, and corruption) and as healing-restoration (theosis), while still affirming that Christ died for us, suffered for our salvation, and offered himself in our place. Athanasius De Incarnatione contains substitutionary elements that some see as proto-penal. Within historic Christianity, several streams qualify or reject the strict penal-substitutionary framework while affirming vicarious atonement: Christus Victor proponents (Gustaf Aulen 1931), governmental-theory advocates following Hugo Grotius, some Wesleyan-Arminian theologians, and contemporary nonviolent-atonement theologians (J. Denny Weaver) and certain Anabaptist and feminist writers. These represent legitimate in-house disagreement on mechanism. Outright deniers of vicarious atonement altogether (which is the gospel-stake matter handled in doc-vicarious-atonement) include the Socinians, classical Abelardian moral-exemplar reductionism, Unitarian Universalists, modern liberal-mainline theology in its reductive form, and the Jehovah's Witnesses who reframe ransom in non-Trinitarian terms. Brethren tradition affirms penal substitution strongly and in continuity with the Reformed-evangelical stream."
+    },
+    "scripture": [
+      {
+        "ref": "Isa.53.4-Isa.53.6",
+        "key_term": "נָשָׂא (nasa) H5375 + סָבַל (sabal) H5445 + פָּגַע (paga) H6293 + עָוֹן (avon) H5771 + מוּסָר (musar) H4148",
+        "force": "He has borne (nasa) our griefs, carried (sabal) our sorrows, was wounded for our transgressions, crushed for our iniquities; the chastisement (musar) of our peace was upon him; YHWH caused to fall upon him (causative form of paga) the iniquity of us all. Musar denotes punitive discipline; paga in causative voice means divine action of placing guilt on the servant. Direct lexical support for penalty-bearing substitution.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "typology",
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Isa.53.10",
+        "key_term": "אָשָׁם (asham) H817 + חָפֵץ (chaphets) H2654 + דָּכָא (daka) H1792",
+        "force": "It pleased (chaphets) YHWH to crush (daka) him; he has put him to grief; when his soul makes an asham (guilt offering). Asham is the Levitical reparation-offering term carrying the sense of legal-guilt satisfaction. The divine-pleasure language joined to the crushing carries judicial-penal weight.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Isa.53.11-Isa.53.12",
+        "key_term": "סָבַל (sabal) H5445 + עָוֹן (avon) H5771 + פָּגַע (paga) H6293",
+        "force": "He shall bear (sabal) their iniquities; he bore the sin (chet) of many and made intercession (paga) for the transgressors. The servant carries the iniquities of others; the causative force on transferring guilt is paired with priestly intercession.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Rom.3.24-Rom.3.26",
+        "key_term": "ἱλαστήριον (hilasterion) G2435 + δικαιοσύνη (dikaiosune) G1343 + δίκαιος καὶ δικαιοῦντα",
+        "force": "Justified freely by his grace through the redemption that is in Christ Jesus, whom God put forward as a hilasterion in his blood, to show God's righteousness, so that he might be just and the justifier of the one who has faith in Jesus. Hilasterion is the LXX kapporet (mercy-seat) term carrying both expiation and propitiation. The clause that he might be just and the justifier requires God's justice to be satisfied in the act of justification, which is the canonical anchor of the penal-substitutionary mechanism.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology",
+          "metonymy"
+        ]
+      },
+      {
+        "ref": "Rom.5.9",
+        "key_term": "ὀργή (orge) G3709 + δικαιόω (dikaioo) G1344",
+        "force": "Having now been justified by his blood, much more shall we be saved through him from the wrath (orge). Direct lexical link between Christ's blood and divine wrath being averted.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.3.10-Gal.3.13",
+        "key_term": "κατάρα (katara) G2671 + ὑπέρ (hyper) G5228 + ἐξαγοράζω (exagorazo) G1805",
+        "force": "Christ redeemed us out of the curse (katara) of the law by becoming a curse for us (hyper hemon); citing Deut 21:23, cursed is everyone who hangs on a tree. The curse is the law's judicial penalty; Christ absorbs the legal-penal curse owed by the lawbreaker.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metonymy",
+          "typology"
+        ]
+      },
+      {
+        "ref": "2Cor.5.21",
+        "key_term": "ἁμαρτία (hamartia) G266 + ὑπέρ (hyper) G5228 + δικαιοσύνη G1343",
+        "force": "He made him who knew no sin to be sin for us, so that in him we might become the righteousness of God. The direct exchange formula: Christ gets the sin-status, the believer gets the righteousness-status. Penal-substitutionary structure at the lexical level.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metonymy"
+        ]
+      },
+      {
+        "ref": "1Pet.2.24",
+        "key_term": "ἀναφέρω (anaphero) G399 + ἁμαρτίας G266 + ξύλον (xulon) G3586",
+        "force": "He himself bore our sins in his body on the tree (xulon, echoing Deut 21:23 LXX), that we, having died to sins, might live to righteousness. Anaphero is the LXX sacrificial verb of bringing offerings up to the altar. The tree-reference signals the curse-penalty of Deut 21:23.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "1Pet.3.18",
+        "key_term": "δίκαιος ὑπὲρ ἀδίκων + πάσχω (pascho) G3958 + περὶ ἁμαρτιῶν",
+        "force": "Christ also suffered once for sins (peri hamartion), the righteous (dikaios) for (hyper) the unrighteous (adikon), to bring us to God. Maximally explicit substitution: the just one in place of the unjust ones, suffering for sins.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.2.2",
+        "key_term": "ἱλασμός (hilasmos) G2434",
+        "force": "He himself is the hilasmos (propitiating sacrifice) for our sins, and not for ours only but also for those of the whole world. Hilasmos carries sacrificial-atonement force; in Hellenistic and LXX usage propitiation has Godward (wrath-averting) reference.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.4.10",
+        "key_term": "ἱλασμός G2434 + ἀγάπη (agape) G26",
+        "force": "Herein is love, not that we loved God, but that he loved us and sent his Son to be the hilasmos for our sins. Divine love and propitiating sacrifice are joined in one act; love does not eliminate the propitiation language, it grounds it.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.2.17",
+        "key_term": "ἱλάσκομαι (hilaskomai) G2433 + ἀρχιερεύς (archiereus) G749",
+        "force": "He had to be made like his brothers in every respect so that he might become a merciful and faithful high priest in the service of God, to make propitiation (hilaskesthai) for the sins of the people. High-priestly propitiation in the sacrificial-atonement key.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Heb.9.28",
+        "key_term": "ἀναφέρω G399 + ἁμαρτίας G266",
+        "force": "Christ was offered once to bear (anaphero) the sins of many. Echoes Isa 53:12 LXX; LXX sacrificial vocabulary applied to Christ.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Lev.16.21-Lev.16.22",
+        "key_term": "סָמַךְ (samakh) H5564 + עָוֹן H5771 + נָשָׂא H5375",
+        "force": "Aaron lays both hands on the scapegoat, confesses over it all the iniquities of Israel, and the goat bears (nasa) all their iniquities upon him to a remote land. The Day-of-Atonement type that the New Testament writers explicitly draw on for the substitutionary structure of Christ's death.",
+        "supports": "for",
+        "genre": "law",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Col.2.15",
+        "key_term": "ἀπεκδύομαι (apekduomai) G554 + θριαμβεύω (thriambeuo) G2358",
+        "force": "He disarmed the rulers and authorities and put them to open shame, triumphing over them in him. The Christus Victor strand at the cross. Complicates a penal-only frame because it portrays the cross as cosmic-victory, but it does not deny penalty-bearing. Col 2:14 says he cancelled the legal certificate against us by nailing it to the cross, which is judicial-debt language.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor",
+          "personification"
+        ]
+      },
+      {
+        "ref": "Heb.2.14-Heb.2.15",
+        "key_term": "καταργέω (katargeo) G2673",
+        "force": "Through death he destroyed the one who has the power of death, that is, the devil, and delivered all those who through fear of death were subject to lifelong slavery. Christus Victor framing; sits alongside the penal aspect rather than displacing it (Heb 2:17 in the very next breath uses hilaskomai).",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.2.21",
+        "key_term": "ὑπογραμμός (hypogrammos) G5261",
+        "force": "Christ suffered for you, leaving you an example to follow in his steps. Moral-influence readings emphasize this. But 1 Pet 2:24 in the very next breath uses sin-bearing language, joining example to substitution.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2435",
+      "G2434",
+      "G2433",
+      "G3709",
+      "G2671",
+      "G1805",
+      "G5228",
+      "G266",
+      "G399",
+      "G3586",
+      "G3958",
+      "G554",
+      "G2358",
+      "G2673",
+      "G5261",
+      "G1343",
+      "G1344",
+      "G749",
+      "H5375",
+      "H5445",
+      "H6293",
+      "H5771",
+      "H817",
+      "H2654",
+      "H1792",
+      "H4148",
+      "H5564"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "patristic_christus_victor",
+        "anselmian_satisfaction"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "affirms",
+          "note": "Penal substitution is the dominant Reformed-covenantal articulation of Christ's atoning work: Christ as the second Adam takes the covenantal curse and satisfies divine justice."
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "affirms",
+          "note": "Classical dispensationalism affirms penal substitution as part of the gospel core, though it ties it to dispensational soteriology and the future-for-Israel framework."
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Affirms penal substitution as the heart of the new covenant inauguration; Christ's bearing of judgment fulfills the Jer 31 promise."
+        },
+        {
+          "lens": "progressive_covenantalism",
+          "verdict": "affirms",
+          "note": "Affirms penal substitution as the antitypical climax of Levitical sin-offering and Day-of-Atonement typology."
+        },
+        {
+          "lens": "patristic_christus_victor",
+          "verdict": "complicates",
+          "note": "Affirms substitution simpliciter (Christ dies on our behalf) but emphasizes the dominant mechanism as triumph over death, devil, and corruption rather than penalty-bearing for divine justice. Eastern Orthodoxy follows this stream and traditionally rejects strict penal-satisfaction language as juridical-Western."
+        },
+        {
+          "lens": "anselmian_satisfaction",
+          "verdict": "complicates",
+          "note": "Anselm Cur Deus Homo 1097: Christ pays the debt humanity owes to divine honor. Honor-satisfaction is adjacent to penal but not identical. The Reformers sharpened satisfaction into strict penal-retribution; Anselm did not go that far."
+        }
+      ],
+      "notes": "The simpliciter substitution is canonically demanded by hyper, anti, paga, anaphero, hilasmos, lytron. The penal-specific dimension (Christ bearing the law's curse and divine wrath for sin) has strong canonical support in Isa 53 chastisement-language, Rom 3:25 just-and-justifier, Rom 5:9 wrath-aversion, Gal 3:13 curse-bearing, 1 Pet 3:18 righteous-for-unrighteous. The mechanism debate (penal-retribution vs honor-satisfaction vs Christus Victor vs governmental vs recapitulation) is in-house among orthodox traditions. K2 marks this as theory-specific and the cult-marker bar does not apply at the mechanism level; it applies at the simpliciter level handled by doc-vicarious-atonement."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasius, On the Incarnation, ch. 8-9, 20",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He surrendered His body to death instead of all, and offered it to the Father. Substitutionary elements present though the framing is more recapitulative-victorious than strictly penal."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 599-618, Christ's redemptive death in God's plan of salvation",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "By his obedience unto death, Jesus replaced human disobedience; he assumed us in the state of our waywardness of sin and made satisfaction for our transgressions."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Anselm, Cur Deus Homo 1097, Book I-II",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Christ pays the debt humanity owes to divine honor. Foundational satisfaction view; adjacent to but distinct from strict penal-retribution. Reformers sharpened this into penal substitution."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession, Article III (Of the Son of God) and Article IV (Of Justification)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "That He might reconcile the Father unto us and be a sacrifice not only for original guilt but also for all actual sins of men. Christ by His death has made satisfaction for our sins."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 2 and Article 31",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ truly suffered to reconcile his Father to us and to be a sacrifice not only for original guilt but also for all actual sins of men. The offering once made is a perfect redemption, propitiation, and satisfaction."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 8.4-8.5; Heidelberg Catechism Q37-Q40",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Lord Jesus by his perfect obedience and sacrifice of himself fully satisfied the justice of his Father, purchased reconciliation, and an everlasting inheritance for those whom the Father had given him."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "UMC Articles of Religion, Article II and Article XX",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world. Sacrificial-propitiation language continuous with Anglican Article 31."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession 1632, Article 4",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ has through his precious blood and death on the cross atoned for the sins of the whole human race; affirms atoning sacrifice without committing to the precise Reformed penal mechanism."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Art. 5 (Salvation of Man)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man's only hope of redemption is through the shed blood of Jesus Christ the Son of God; his vicarious and atoning death is the only sufficient ground of justification."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, Volume I, Doctrine: The Crucifixion",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Christ died for us and conquered death by death. Orthodox tradition rejects strict penal-satisfaction language as juridical-Western and frames the atonement as triumph over death and as healing-restoration (theosis)."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/greek/2435.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2435 hilasterion: an expiatory atoning victim or the lid of the Ark. The term encompasses both mercy-seat imagery and propitiatory force; integrates turning aside of divine wrath and removal of sin."
+      },
+      {
+        "url": "https://biblehub.com/greek/2434.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2434 hilasmos: propitiation, atoning sacrifice. The divinely-provided means by which God's righteous wrath against sin is averted. Two NT occurrences (1 John 2:2; 4:10)."
+      },
+      {
+        "url": "https://biblehub.com/greek/2671.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2671 katara: curse. Gal 3:13 has Christ becoming a curse for us, taking the law's penalty (Deut 21:23) on himself."
+      },
+      {
+        "url": "https://biblehub.com/hebrew/6293.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "H6293 paga causative form: YHWH caused the iniquity of us all to fall upon the servant. Direct lexical-divine action of transferring guilt onto the Servant in Isaiah 53:6."
+      },
+      {
+        "url": "https://biblehub.com/hebrew/817.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "H817 asham: guilt offering, reparation-offering. In Isa 53:10 the Servant's life is the asham; bridges objective culpability with sacrificial mechanism for removing it."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/3-25.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Whom God put forward as hilasterion in his blood, to show God's righteousness, so that he might be just and the justifier of the one who has faith."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/3-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "genomenos hyper hemon katara: having become for us a curse. Christ takes the legal penalty (Deut 21:23 cited) on himself."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1O.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 599-618: By his obedience unto death, Jesus replaced human disobedience; he assumed us in the state of our waywardness of sin and made satisfaction for our transgressions."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Article III: that He might reconcile the Father unto us and be a sacrifice not only for original guilt but also for all actual sins of men."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UMC Article XX: The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "K2-theory-specific-mechanism",
+      "apparatus-paywalled"
+    ]
+  }
+}

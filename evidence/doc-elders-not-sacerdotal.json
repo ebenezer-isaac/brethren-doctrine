@@ -1,0 +1,413 @@
+{
+  "id": "doc-elders-not-sacerdotal",
+  "answer": {
+    "id": "doc-elders-not-sacerdotal",
+    "affirms": true,
+    "rationale": "The New Testament lexical record systematically reserves ἱερεύς hiereus G2409 (priest, one who offers sacrifice) for the Old Testament priesthood, for Christ as singular High Priest in Hebrews, and for the corporate body of believers (1 Pet 2:5,9 ἱεράτευμα hierateuma G2406; Rev 1:6, 5:10 ἱερεῖς hiereis G2409). The NT terms for church leaders (πρεσβύτερος presbyteros G4245, ἐπίσκοπος episkopos G1985, ποιμήν poimen G4166, ἡγούμενος hegoumenos G2233) are never lexically equated with hiereus, and the ministry-gift catalogue in Eph 4:11 contains no priestly office. Hebrews argues at length that Christ's priesthood is ἀπαράβατος aparabatos G531 (permanent, non-transferable, Heb 7:24) and that he offered himself ἐφάπαξ ephapax G2178 (once for all, Heb 7:27, 9:12, 10:10-14), ending the daily-recurrent sacrificial system. The lexical pattern is pan-canonical and unambiguous; the proposition that NT elders are servant-shepherds rather than sacerdotal sacrificing priests is canonically demonstrable.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Stem audit flags this question as carrying Protestant-Brethren-Baptist polemic vocabulary (sacerdotal priesthood offering sacrifice) framed against Catholic-Orthodox-Anglican sacerdotal eucharistic theology. The neutralized form preserves the lexical question. The lexical case is strong: the NT chooses hiereus deliberately for OT-priesthood, for Christ, and for the corporate body, and just as deliberately uses presbyteros, episkopos, poimen, and hegoumenos for church leaders. The pattern is too consistent to be accidental. Hebrews 7-10 is an extended argument that Christ's single priestly self-offering closes the levitical sacrificial order. 1 Tim 2:5 names Christ as the one mesites G3316 (mediator) between God and men. Yet would_die_for is false because the proposition is one step downstream of the gospel. The gospel is that Christ's sacrifice saves; the question of whether the church's ordained ministers reapply that sacrifice in eucharistic offering or merely proclaim it is a sub-gospel ecclesiological dispute. Catholic and Orthodox theology hold that the ministerial priesthood acts in persona Christi to make present (not repeat) the one sacrifice; Protestant theology holds that this language drifts beyond the NT lexical pattern and risks obscuring the once-for-all character of Christ's work. Both readings affirm the unique high-priesthood of Christ. cult_marker_if_denied=false. Catholic and Orthodox Christians who hold the ministerial-priesthood view are not denying the gospel; the major historic communions that hold sacerdotal priesthood (Roman Catholic, Eastern Orthodox, Oriental Orthodox, classical Anglican high-church) are inside historic Christianity, not outside it. Carriers of the non-sacerdotal reading on church leaders: Lutheran (regular call to Word and Sacrament, not sacrificing priesthood, Augsburg XXIV), Reformed (Westminster, Heidelberg, Belgic), Anglican Low Church and Evangelical (Articles 25 and 31), Methodist (ordained elders called pastors, mostly non-sacerdotal in self-understanding), Baptist (universal Baptist consensus, no priestly class), Anabaptist (Schleitheim Article V, pastor in the church of God), Plymouth Brethren (Open and Exclusive, no clergy at all), Pentecostal (Assemblies of God, no sacerdotal priesthood), most non-denominational evangelical. Carriers of sacerdotal-priesthood reading: Roman Catholic (CCC 1547-1548, ministerial priesthood differs in essence from common priesthood, priest acts in persona Christi), Eastern Orthodox (the priest offers the eucharistic sacrifice), Oriental Orthodox, Anglo-Catholic and high-church Anglican (some, contested within Anglicanism), some Old Catholic. Public-record cult or heterodox carriers exist that build authoritarian sacerdotal-style structures: Mormonism (Aaronic and Melchizedek priesthoods conferred on male members; Latter-day-Saint priesthood teaching contradicts Heb 7:24 directly), Iglesia ni Cristo (Felix Manalo's exclusive ministerial structure as the only true church), William Branham's Branhamite movement (prophetic authority claims). The Mormon priesthood teaching is the most lexically problematic because it directly contradicts Heb 7:24 aparabatos (Christ's priesthood is non-transferable). would_serve_if_otherwise=false and would_be_member_if_otherwise=false because joining a sacerdotal communion would require participating in a sacramental system that, on the user's lexical reading, obscures the once-for-all character of Christ's sacrifice. would_publicly_correct_if_otherwise=true because the lexical pattern is canonical and worth defending. Honest verdict: the proposition is lexically affirmed; the denial of the proposition is not gospel-denial; it is an in-house Christian disagreement over how to read the same NT lexical evidence."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Does the New Testament use a distinct word for sacrificing priest (hiereus) for its named church officers (elders, overseers, shepherds), and does it teach that Christ's once-for-all self-offering ends a continuing sacrificial priesthood among church officers?",
+      "notes": "The stem carries Protestant-Brethren-Baptist polemic vocabulary (sacerdotal priesthood offering sacrifice) framed against Catholic-Orthodox-Anglican eucharistic theology. The neutralized form preserves the lexical question without assuming the Protestant reading. Flag stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "The question is whether the people the New Testament names as church leaders (elders, overseers, shepherds) are the same kind of office as the Old Testament priests who offered sacrifices in the temple. The strongest reason for the answer no is the words the New Testament itself chooses. The Greek word for a sacrificing priest is hiereus. The New Testament uses that word for the Old Testament priests, for pagan priests, for Jesus Christ as the one great High Priest, and for the whole body of believers together (1 Peter 2:5 and 2:9 call all Christians a holy priesthood and a royal priesthood; Revelation 1:6 and 5:10 say Christ made us priests to his God and Father). But the New Testament never uses hiereus for any church officer. Church leaders are called elders, overseers, shepherds, and teachers. The five gifts in Ephesians 4:11 (apostles, prophets, evangelists, shepherds, teachers) contain no priest-word. Hebrews 7 through 10 then argues at length that Christ holds his priesthood permanently and offered himself once for all time, ending the daily repeated sacrifices of the old system. Hebrews 7:24 says his priesthood does not pass on to anyone else. Hebrews 7:27 says he offered up himself once for all. Hebrews 10:11-14 contrasts daily priests who stand offering many sacrifices with Christ who sat down after one sacrifice for sins forever. 1 Timothy 2:5 names Christ as the one mediator between God and men. The strongest counterargument comes from how the long history of the church developed after the apostles. By the second and third centuries, Christian writers were already using priestly language for bishops and presbyters who led the eucharist. Cyprian wrote about the priesthood of bishops. The Roman Catholic Church teaches that the ministerial priesthood is a true participation in Christ's own priesthood, that the priest acts in the person of Christ at the eucharist, and that the mass makes present (without repeating) Christ's one sacrifice. The Eastern Orthodox Church teaches similarly. So the question is not whether the New Testament words distinguish priests from elders (they clearly do), but whether the church's later development of priestly language for ministers is a faithful unfolding of the apostolic deposit or a drift away from it. On the words alone, the New Testament is clear: church officers are shepherds, not sacrificing priests. The Bible does not name a continuing priesthood beyond Christ and the corporate body of believers. The verdict the New Testament's own vocabulary supports is yes, elders are servant-shepherds rather than sacerdotal sacrificing priests. The disagreement is real, ancient, and inside Christianity, not outside it.",
+      "denominational_landscape": "Christians divide on this question along a clear historical line. The Roman Catholic Church teaches that the ordained ministerial priesthood differs in essence from the common priesthood of the faithful, that the priest acts in the person of Christ (in persona Christi Capitis) at the eucharist, and that the mass makes present the one sacrifice of Christ without repeating it (Catechism of the Catholic Church paragraphs 1546 through 1553). The Eastern Orthodox Church teaches that priests, ordained through apostolic succession, offer the eucharistic sacrifice on behalf of the people, with the priest understood as participating in Christ's unique priesthood. The Oriental Orthodox communions teach similarly. Classical Anglicanism retains the title priest for its ordained ministers, with internal debate between high-church and evangelical readings of what that title means; the Thirty-Nine Articles in Article 31 reject the sacrifices of masses as blasphemous fables and dangerous deceits in their classical Reformed sense. Lutheran teaching (Augsburg Confession Article XXIV) rejects the medieval mass as a propitiatory sacrifice and teaches that ordained ministers are regularly called to preach the gospel and administer the sacraments rather than to offer sacrifices. Reformed teaching (Westminster, Heidelberg, Belgic, Second London Baptist) rejects sacerdotal priesthood and teaches the priesthood of all believers with ordained ministers as preachers and shepherds. Methodist teaching, while retaining episcopal structure in some bodies, calls its ordained leaders pastors or elders rather than priests in any sacerdotal sense. Anabaptist confessions such as Schleitheim Article V describe the pastor in the church of God in shepherding rather than sacrificing terms. Baptist bodies universally reject sacerdotal priesthood and affirm the priesthood of all believers. Pentecostal bodies such as the Assemblies of God hold the priesthood of all believers with ordained ministers as preachers and pastors. Plymouth Brethren reject any ordained clergy class at all. Public-record cult or heterodox movements have built priesthood structures that lexically contradict Hebrews 7:24: Mormonism confers Aaronic and Melchizedek priesthoods on male members through Latter-day-Saint authority claims, directly contradicting the New Testament teaching that Christ's priesthood is permanent and non-transferable. Iglesia ni Cristo built an exclusive ministerial structure around Felix Manalo's authority. The split between sacerdotal communions (Roman Catholic, Eastern Orthodox, Oriental Orthodox, some high-church Anglicans) and non-sacerdotal communions (Lutheran, Reformed, Anglican evangelical, Methodist, Baptist, Anabaptist, Pentecostal, Brethren, non-denominational) is one of the deepest fault lines of post-Reformation Christianity. Both sides confess Christ as unique High Priest; they disagree over whether the church's ordained ministers participate in that priesthood in a sacerdotal way."
+    },
+    "scripture": [
+      {
+        "ref": "Heb.7.24",
+        "key_term": "ἀπαράβατον aparabaton G531 (permanent, non-transferable); ἱερωσύνην hierosynen G2420 (priesthood)",
+        "force": "Because Christ continues forever, he holds his priesthood aparabatos, a term meaning non-transferable, non-passing-to-another, permanent. The lexical force is decisive: Christ's priesthood does not transfer to any other person or office. This is the central anchor against any view that a continuing sacerdotal priesthood among church ministers participates in or extends Christ's priesthood in the same essential sense.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.7.27",
+        "key_term": "ἐφάπαξ ephapax G2178 (once for all); ἀνενέγκας anenenkas G399 (having offered up, aorist); ἑαυτὸν heauton G1438 (himself); θυσίας thysias G2378 (sacrifices)",
+        "force": "Christ did this (offered sacrifice) ephapax, once for all, by offering up himself. The contrast is explicit with archiereis G749 (high priests) who had to offer daily (kath hemeran G2596 G2250). The lexical pattern is once-for-all self-offering versus daily-recurrent levitical sacrifice. This is the foundational text against any continuing sacrificial priestly action.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.11-12",
+        "key_term": "ἀρχιερεὺς archiereus G749 (High Priest); ἐφάπαξ ephapax G2178 (once for all); αἰωνίαν λύτρωσιν aionian lytrosin G166 G3085 (eternal redemption)",
+        "force": "Christ as archiereus of the good things to come entered ephapax into the holy places, having obtained eternal redemption. The combination of ephapax with aionios lytrosis closes the levitical pattern of repeated entries into the holy of holies. The atoning work is finished, singular, and eternally effective.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.11-14",
+        "key_term": "ἱερεὺς hiereus G2409 (priest, levitical); καθ ἡμέραν kath hemeran G2596 G2250 (daily); μίαν θυσίαν mian thysian G1520 G2378 (one sacrifice); εἰς τὸ διηνεκὲς eis to dienekes G1519 G1336 (perpetually, in perpetuity)",
+        "force": "Every priest (hiereus) stands daily ministering and offering the same sacrifices, which can never take away sins. But Christ, having offered one sacrifice for sins, sat down forever. The standing-versus-sitting contrast is deliberate: the levitical work is never finished (standing); Christ's work is finished (sitting). The combination of mia thysia and eis to dienekes locks the door against any continuing sacrificial priesthood that would re-offer or extend the one sacrifice.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.2.5",
+        "key_term": "ἱεράτευμα ἅγιον hierateuma hagion G2406 G40 (holy priesthood); οἶκος πνευματικὸς oikos pneumatikos G3624 G4152 (spiritual house); πνευματικὰς θυσίας pneumatikas thysias G4152 G2378 (spiritual sacrifices)",
+        "force": "All believers together are being built as a holy priesthood (hierateuma, the corporate/collective noun for a body of priests) to offer spiritual sacrifices. The corporate priesthood of all believers is here, not a separate class of sacerdotal officers within the body. The qualifier pneumatikas (spiritual) defines the kind of sacrifice: prayer, praise, lives offered as living sacrifice (Rom 12:1), not levitical bloody sacrifice nor eucharistic re-presentation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Pet.2.9",
+        "key_term": "βασίλειον ἱεράτευμα basileion hierateuma G934 G2406 (royal priesthood); γένος ἐκλεκτὸν genos eklekton G1085 G1588 (chosen race); ἔθνος ἅγιον ethnos hagion G1484 G40 (holy nation)",
+        "force": "The whole believing community is named a royal priesthood. The lexical move applies the Sinai covenant identity (Ex 19:6 mamleket kohanim, kingdom of priests) to the entire church without remainder. There is no second priesthood named alongside this corporate one. The text supports the priesthood-of-all-believers reading directly.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.1.6",
+        "key_term": "ἱερεῖς hiereis G2409 (priests); βασιλείαν basileian G932 (kingdom); τῷ θεῷ καὶ πατρὶ αὐτοῦ to theo kai patri autou G2316 G3962 (to his God and Father)",
+        "force": "Christ made us (the believing community to whom John writes) a kingdom, priests (hiereis, plural) to his God and Father. The corporate noun hiereis is applied to all believers without remainder, paralleling 1 Pet 2:5 and 2:9. The lexical pattern is consistent: every NT use of hiereus for Christians is corporate, not ministerial.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Rev.5.10",
+        "key_term": "ἱερεῖς hiereis G2409 (priests); βασιλείαν basileian G932 (kingdom); βασιλεύσουσιν basileusousin G936 (they will reign)",
+        "force": "The new song of the redeemed: you made them a kingdom and priests to our God, and they will reign on the earth. Again corporate priesthood applied to the whole redeemed community. The pattern of hiereus used corporately for believers, never for any ministerial sub-class, holds throughout the NT.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Acts.20.28",
+        "key_term": "ἐπισκόπους episkopous G1985 (overseers); ποιμαίνειν poimainein G4165 (to shepherd); ἐκκλησίαν τοῦ θεοῦ ekklesian tou theou G1577 G2316 (church of God)",
+        "force": "The named NT term for the work of church leaders is poimaino (to shepherd), with the office described as episkopoi (overseers). The verbs of priestly sacrificing action (anaphero, prosphero in sacrificial sense) are absent from the description of the elders' work. Lexically the office is shepherding, not sacrificing.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.5.1-4",
+        "key_term": "πρεσβυτέρους presbyterous G4245 (elders); ποιμάνατε poimanate G4165 (shepherd, aorist imperative); ἐπισκοποῦντες episkopountes G1983 (exercising oversight); ἀρχιποίμενος archipoimenos G750 (Chief Shepherd)",
+        "force": "Peter, calling himself a fellow elder, commands elders to shepherd the flock of God, exercising oversight. The named title is presbyteros (elder), the verb is poimaino (shepherd), the function is episkopeo (oversee). Christ is named archipoimen (Chief Shepherd, verse 4). The vocabulary is consistently shepherding, with no hiereus or sacrificial-action verb anywhere in the passage.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.4.11-12",
+        "key_term": "ἀποστόλους apostolous G652 (apostles); προφήτας prophetas G4396 (prophets); εὐαγγελιστάς euangelistas G2099 (evangelists); ποιμένας kai διδασκάλους poimenas kai didaskalous G4166 G1320 (shepherds and teachers); καταρτισμὸν τῶν ἁγίων katartismon ton hagion G2677 G40 (equipping of the saints)",
+        "force": "The catalogue of ministry gifts given by the ascended Christ to the church names five offices. Hiereus is conspicuously absent. The named function of these gifts is the equipping (katartismos) of all the saints for the work of ministry, not the offering of sacrifice on behalf of the saints. The text supports the non-sacerdotal reading of NT church leadership directly.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.2.5",
+        "key_term": "εἷς μεσίτης heis mesites G1520 G3316 (one mediator); θεοῦ καὶ ἀνθρώπων theou kai anthropon G2316 G444 (of God and men); ἄνθρωπος Χριστὸς Ἰησοῦς anthropos Christos Iesous G444 G5547 G2424 (the man Christ Jesus)",
+        "force": "There is one mediator between God and men, the man Christ Jesus. The numeral heis (one) is exclusive: the mediating office between God and humanity belongs to Christ alone. Any sacerdotal-ministerial reading that places ordained priests in a mediating position between God and the people stands in lexical tension with this verse. Catholic and Orthodox theology distinguishes between Christ as unique mediator of redemption and ministerial priests as participating in his one mediation; Protestant theology reads the heis more strictly.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.23.8-10",
+        "key_term": "Ῥαββί rhabbi G4461 (rabbi); καθηγηταί kathegetai G2519 (teachers, masters); πατέρα patera G3962 (father); εἷς γάρ ἐστιν ὑμῶν ὁ διδάσκαλος heis gar estin hymon ho didaskalos G1520 G1320 (you have one teacher)",
+        "force": "Jesus forbids his disciples from accepting titles of Rabbi, Father, or Teacher as religious-hierarchical positions, because they have one Teacher (Christ) and one Father (God). The text is regularly cited against the title Father for priests. Force is moderate: Jesus is addressing pretension of position, not the use of any term in any context. The text supports the leveling of religious hierarchy that the non-sacerdotal reading takes seriously.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "Heb.13.10-16",
+        "key_term": "θυσιαστήριον thysiasterion G2379 (altar); θυσίαν αἰνέσεως thysian aineseos G2378 G133 (sacrifice of praise); καρπὸν χειλέων karpon cheileon G2590 G5491 (fruit of lips); εὐποιΐας καὶ κοινωνίας eupoiias kai koinonias G2140 G2842 (doing good and sharing)",
+        "force": "We have an altar from which those who serve the tent have no right to eat. The sacrifices the church offers continually are praise (verbal, the fruit of lips) and doing good and sharing, not levitical sacrifices and not eucharistic-priestly offerings. Catholic readers cite the altar reference for eucharistic sacrifice; the immediate context defines the offerings as praise and good works. Complicates because the altar language gives the sacerdotal reading a foothold even as the defined offerings are non-sacerdotal.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Cor.11.23-26",
+        "key_term": "τοῦτο ποιεῖτε touto poieite G4160 (do this); ἀνάμνησιν anamnesin G364 (remembrance); καταγγέλλετε katangellete G2605 (you proclaim); θάνατον τοῦ κυρίου thanaton tou kyriou G2288 G2962 (the death of the Lord)",
+        "force": "The Lord's Supper is named as remembrance (anamnesis) and proclamation (katangello) of the Lord's death until he comes. The Catholic reading takes anamnesis in the sense of making-present (zikkaron from the Hebrew background); the Protestant reading takes it as commemorative remembrance and proclamation. The lexical evidence permits both readings of anamnesis; the wider Hebrews argument (Heb 10:11-14) constrains the eucharistic action away from re-sacrifice. Complicates honestly.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.15.16",
+        "key_term": "λειτουργὸν leitourgon G3011 (minister, public-service worker); ἱερουργοῦντα τὸ εὐαγγέλιον hierourgounta to euangelion G2418 G2098 (priestly-serving the gospel); προσφορὰ τῶν ἐθνῶν prosphora ton ethnon G4376 G1484 (offering of the Gentiles)",
+        "force": "Paul names himself a leitourgos of Christ Jesus to the Gentiles, hierourgon (priest-serving) the gospel, so that the offering of the Gentiles might be acceptable. The verb hierourgeo is the closest NT lexical bridge between apostolic gospel ministry and priestly imagery, but Paul's priestly action is preaching the gospel, not offering eucharistic sacrifice; the offering (prosphora) is the converted Gentiles, not bread and wine. Catholic readers cite this as priestly action in apostolic ministry; the lexical force is metaphorical and tied to gospel proclamation. Complicates honestly.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Tim.3.1-7",
+        "key_term": "ἐπίσκοπος episkopos G1985 (overseer); διδακτικόν didaktikon G1317 (able to teach); μὴ πάροινον me paroinon G3361 G3943 (not given to wine)",
+        "force": "The qualifications for the office of episkopos are character qualifications and teaching capacity. There is no qualification language pointing to ritual purity, sacrificial competence, or sacerdotal function. Lexically the office is shepherd-teacher, not sacrificing priest. The fitness criteria align with shepherd-teacher work, not levitical-priestly work.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2409",
+      "G2406",
+      "G749",
+      "G531",
+      "G2178",
+      "G2420",
+      "G2378",
+      "G2379",
+      "G4245",
+      "G1985",
+      "G1983",
+      "G4166",
+      "G4165",
+      "G4168",
+      "G750",
+      "G2233",
+      "G3011",
+      "G2418",
+      "G4376",
+      "G3316",
+      "G652",
+      "G4396",
+      "G2099",
+      "G1320",
+      "G2677",
+      "G932",
+      "G934",
+      "G1085",
+      "G1484",
+      "G3624",
+      "G4152",
+      "G364",
+      "G2605",
+      "G4160",
+      "G1336",
+      "G3085",
+      "G166",
+      "G399",
+      "G266",
+      "G1520",
+      "G1438",
+      "G2596",
+      "G2250",
+      "G1577",
+      "G2316",
+      "G3962",
+      "G444",
+      "G5547",
+      "G2424",
+      "G4461",
+      "G2519"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "protestant-priesthood-of-all-believers",
+        "catholic-orthodox-ministerial-priesthood",
+        "anglican-via-media"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "protestant-priesthood-of-all-believers",
+          "verdict": "affirms",
+          "reasoning": "NT systematically reserves hiereus for OT priesthood, Christ, and the corporate body; uses presbyteros, episkopos, poimen, hegoumenos for church leaders; Hebrews argues the once-for-all character of Christ's self-offering ends a continuing sacrificial priesthood; Eph 4:11 ministry-gift list contains no priestly office; 1 Pet 2:5,9 and Rev 1:6 / 5:10 apply hierateuma and hiereis corporately to all believers."
+        },
+        {
+          "lens": "catholic-orthodox-ministerial-priesthood",
+          "verdict": "denies",
+          "reasoning": "Christ as unique High Priest is participated in by the ministerial priesthood through ordination; the priest acts in persona Christi at the eucharist; Rom 15:16 hierourgeo for apostolic ministry, Heb 13:10 altar language, and the patristic record (Ignatius, Cyprian) show priestly language for ministers already in the post-apostolic period; the NT vocabulary develops within the apostolic tradition without contradicting it; 1 Pet 2:5,9 corporate priesthood and a ministerial priesthood differ in essence and not merely in degree (CCC 1547)."
+        },
+        {
+          "lens": "anglican-via-media",
+          "verdict": "complicates",
+          "reasoning": "Retains priest as title for ordained ministers while Article 31 of the Thirty-Nine Articles rejects propitiatory sacrifices of masses as blasphemous fables. Internal Anglican debate ranges from Anglo-Catholic sacerdotal readings to evangelical non-sacerdotal readings. The title priest in the Book of Common Prayer is understood diversely within the same communion."
+        }
+      ],
+      "notes": "The lexical pattern in the NT is unambiguous on the words themselves: hiereus is reserved for OT priesthood, Christ, and the corporate body of believers, and is never applied to NT church officers. The hermeneutical disagreement is over what to do with this lexical pattern. The Protestant reading takes the deliberate NT word choice as normative and rejects the later sacerdotal development as drift. The Catholic-Orthodox reading takes the patristic development as faithful unfolding of the apostolic deposit, with the lexical pattern preserved at one level (Christ is the unique High Priest) while ministerial priesthood is understood as participation rather than rival. The Brethren-on-trial discipline notes: the Protestant non-sacerdotal reading is the user's inherited position; the canonical lexical evidence does support it at the word level, but the verdict that this lexical pattern excludes all sacerdotal development requires a further hermeneutical step that Catholic and Orthodox readers do not grant. The lay summary surfaces the disagreement honestly."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Ignatius of Antioch, Epistle to the Smyrnaeans 8 (c. 110), ccel.org Schaff ANF Vol 1",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Let that be deemed a proper eucharist which is administered either by the bishop or by one to whom he has entrusted it. Bishop-centered eucharist within decades of the apostles."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Cyprian of Carthage, Epistle 63 to Caecilius On the Sacrament of the Cup (c. 253), ccel.org Schaff ANF Vol 5",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "The priest truly discharges the office of Christ, and offers a true and full sacrifice in the Church to God the Father. First explicit sacerdotal language for the bishop-presbyter."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 1547-1548, vatican.va",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "The ministerial priesthood differs in essence from the common priesthood of the faithful. The ordained priest acts in persona Christi Capitis at the eucharist."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XXIV Of the Mass, bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ's passion was an oblation and satisfaction not for original guilt only but also for all other sins. Mass is not a propitiatory sacrifice; ministers are called to Word and Sacrament."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion Article XXXI Of the One Oblation of Christ Finished upon the Cross (1571), churchofengland.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The sacrifices of Masses, in the which it was commonly said that the Priest did offer Christ for the quick and the dead, were blasphemous fables and dangerous deceits."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 29 Of the Lord's Supper, paragraph 2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The popish sacrifice of the mass is most abominably injurious to Christ's one only sacrifice, the alone propitiation for all the sins of his elect."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Wesley's abridgement of the Thirty-Nine Articles, Article XX Of the One Oblation of Christ, umc.org/en/content/articles-of-religion",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The offering of Christ once made is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world. The sacrifices of the masses are blasphemous fables."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession Article V Of Pastors in the Church of God (1527)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The pastor in the Church of God shall be one who is wholly according to the rule of Paul, that he might be supported by the Church which has chosen him. Shepherding, not sacrificing."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, doctrine of the priesthood of all believers, ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Believers form the priesthood of all believers under the High Priesthood of Christ; ordained ministers are called to preach the gospel, not to offer sacerdotal sacrifice."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, teaching on Holy Orders and the eucharistic priesthood, oca.org",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Through His chosen ministers Christ exercises and realizes His unique and exclusive function as priest, perpetually offering Himself as the perfect sacrifice to the Father."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/7-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "aparabaton G531 non-transferable; hierosynen G2420 priesthood. Christ holds his priesthood permanently and it does not pass to another."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/7-27.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ephapax G2178 once for all; anenenkas G399 having offered up; heauton G1438 himself. He did this once for all when he offered up himself."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/9-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ephapax G2178 once for all; aionian lytrosin G166 G3085 eternal redemption. Christ entered the holy places once for all, securing eternal redemption."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hiereus G2409 every priest stands daily ministering and offering the same sacrifices which can never take away sins. Standing-vs-sitting contrast (10:12)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hierateuma hagion G2406 G40 holy priesthood; pneumatikas thysias G4152 G2378 spiritual sacrifices. Corporate priesthood of all believers."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/2-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "basileion hierateuma G934 G2406 royal priesthood. Sinai-covenant identity (Ex 19:6) applied to the entire believing community without remainder."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/1-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hiereis G2409 priests, plural. Christ made us a kingdom, priests to his God and Father. Corporate priesthood of all believers."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2409.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hiereus G2409: used for OT priests, pagan priests, Christ as High Priest, and corporate believers. Never applied to individual NT church officers."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4245.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "presbyteros G4245 66 NT occurrences. Christian elders described as overseeing and shepherding, never identified with hiereus."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/4-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "apostolous G652; prophetas G4396; euangelistas G2099; poimenas G4166 kai didaskalous G1320. Five ministry gifts; hiereus conspicuously absent."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "heis mesites G1520 G3316 one mediator between God and men, the man Christ Jesus. The mediating office is exclusively Christ's."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf01",
+        "category": "patristic_archive",
+        "stance": "complicates",
+        "quote": "Ignatius c. 110 places eucharist under bishop. Post-apostolic development of sacerdotal language for bishops/presbyters is real (Cyprian c. 253)."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-the-mass/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg XXIV rejects mass as propitiatory sacrifice. Ministers are called to Word and Sacrament, not to offer Christ as sacrificing priests."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/holy-orders",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Through His chosen ministers Christ exercises His unique function as priest, perpetually offering Himself as the perfect sacrifice. Orthodox sacerdotal priesthood."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-vs-counter-witness-conflict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

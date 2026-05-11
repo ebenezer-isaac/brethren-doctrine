@@ -1,0 +1,440 @@
+{
+  "id": "doc-spirit-indwelling",
+  "answer": {
+    "id": "doc-spirit-indwelling",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration. Rom 8:9 (εἰ δέ τις πνεῦμα Χριστοῦ οὐκ ἔχει οὗτος οὐκ ἔστιν αὐτοῦ ei de tis pneuma Christou ouk echei houtos ouk estin autou, 'if anyone does not have the Spirit of Christ, this one is not his') makes possession of the Spirit the diagnostic of belonging to Christ; pneuma G4151 plus echō G2192 (present active indicative). Rom 8:11 (τοῦ ἐνοικοῦντος αὐτοῦ πνεύματος ἐν ὑμῖν tou enoikountos autou pneumatos en hymin, 'his Spirit who dwells in you') uses enoikeō G1774 (present active participle), the technical verb for indwelling. 1 Cor 3:16 (οὐκ οἴδατε ὅτι ναὸς θεοῦ ἐστε καὶ τὸ πνεῦμα τοῦ θεοῦ οἰκεῖ ἐν ὑμῖν ouk oidate hoti naos theou este kai to pneuma tou theou oikei en hymin, 'do you not know that you are God's temple and God's Spirit dwells in you') joins naos G3485 (the inner sanctuary) with oikeō G3611 (present active indicative). 1 Cor 6:19 reapplies naos to the believer's body. 2 Cor 1:22 (ὁ καὶ σφραγισάμενος ἡμᾶς καὶ δοὺς τὸν ἀρραβῶνα τοῦ πνεύματος ho kai sphragisamenos hēmas kai dous ton arrabōna tou pneumatos, 'who sealed us and gave the down-payment of the Spirit') combines sphragizō G4972 (legal sealing of ownership) with arrabōn G728 (commercial down-payment). Eph 1:13 repeats the sealing language at the moment of believing (πιστεύσαντες ἐσφραγίσθητε pisteusantes esphragisthēte, aorist passive). Gal 4:6 (ἐξαπέστειλεν ὁ θεὸς τὸ πνεῦμα τοῦ υἱοῦ αὐτοῦ εἰς τὰς καρδίας ἡμῶν exapesteilen ho theos to pneuma tou huiou autou eis tas kardias hēmōn, 'God sent the Spirit of his Son into our hearts') grounds the Spirit's presence in adoptive sonship. 2 Tim 1:14 again uses enoikeō G1774 (διὰ πνεύματος ἁγίου τοῦ ἐνοικοῦντος ἐν ἡμῖν dia pneumatos hagiou tou enoikountos en hēmin). 1 John 3:24 and 4:13 use menō G3306 ('abide') for the same reality, joined with the gift-language ek tou pneumatos hou hēmin edōken. The lemma network (G1774 enoikeō, G3611 oikeō, G3306 menō, G4972 sphragizō, G728 arrabōn) builds an unambiguous canonical pattern: the Spirit is given to those who believe and dwells in them.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Two related but distinguishable propositions sit under this question. (1) The CORE claim: the Holy Spirit indwells every regenerate believer from the moment of new birth. This is universally affirmed across every historic Christian lineage (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox) and rests on a tight pan-canonical lemma network (enoikeō G1774 in Rom 8:11 and 2 Tim 1:14, oikeō G3611 in Rom 8:9 and 1 Cor 3:16, the sealing language at Eph 1:13 explicitly tied to the moment of believing, the diagnostic statement of Rom 8:9 making Spirit-possession the very mark of belonging to Christ). Denial of this core is incompatible with the lexical evidence. (2) The IN-HOUSE dispute: whether there is a second distinct experience of Spirit-baptism subsequent to conversion-indwelling, typically with tongues as initial evidence. This is the Pentecostal and charismatic distinctive (Assemblies of God Fundamental Truths point 7; Foursquare; classical Pentecostal lineage from Topeka 1901 and Azusa Street 1906). Cessationist Reformed and Baptist traditions, and most of the historic confessional churches, treat Spirit-baptism as coextensive with conversion-indwelling and read 1 Cor 12:13 (en heni pneumati hēmeis pantes eis hen sōma ebaptisthēmen, 'in one Spirit we were all baptized into one body') as describing initiation, not a second crisis experience. This in-house debate sits on top of the shared core; it is not cult-grade. Cult-marker carriers of denial of the core would include any sect that denies the Spirit's personal indwelling outright, but no major historic lineage does this. Mormonism and Jehovah's Witnesses reduce the Holy Spirit to an impersonal force or active energy, which is a denial of the Spirit's personhood and deity (a separate doctrinal question already covered elsewhere in this baseline) rather than a denial of indwelling per se. Fruit-vs-precision nuance: most ordinary believers cannot articulate the lexical force of enoikeō, but they confess that 'the Spirit lives in me', which is functional confession of the doctrine. Cult-marker line is therefore NOT crossed by this question; would_die_for stays true because the diagnostic at Rom 8:9 ('if anyone does not have the Spirit of Christ, this one is not his') ties Spirit-indwelling directly to belonging to Christ."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "The statement 'The Holy Spirit indwells every true believer permanently from the moment of regeneration' uses three calibrated claims: indwelling (lexically supported by enoikeō G1774 and oikeō G3611), permanence (supported by the sealing language sphragizō G4972 plus the down-payment arrabōn G728 at Eph 1:13-14 and 2 Cor 1:22), and the moment of regeneration (supported by the aorist pisteusantes esphragisthēte at Eph 1:13). The Reformed-confessional gloss in the confessional anchors (WCF 13.1, 1689 BC 13.1) is not load-bearing for the verdict because the lexical text carries the claim independently. The 'true believer' qualifier is the only stem element that could be questioned, but Rom 8:9's diagnostic ties Spirit-possession directly to belonging to Christ, which is the canonical definition of a believer. No stem-pre-loaded flag required."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: yes. The Holy Spirit lives inside every person who genuinely belongs to Jesus Christ, from the moment they are made new. This is not a feeling or a metaphor. The Bible says the Spirit really takes up residence in the believer. The strongest reason from Scripture is Romans 8:9, where Paul writes 'if anyone does not have the Spirit of Christ, that person does not belong to him.' Paul makes having the Spirit the actual test of whether someone is a Christian at all. He continues in Romans 8:11 by saying 'his Spirit dwells in you.' First Corinthians 3:16 says 'you are God's temple and God's Spirit dwells in you,' and 1 Corinthians 6:19 calls the believer's body 'a temple of the Holy Spirit who is in you.' Ephesians 1:13 says that when you believed, you were sealed with the promised Holy Spirit, and 2 Corinthians 1:22 calls the Spirit a down payment guaranteeing the rest of God's promise. Galatians 4:6 says God sent the Spirit of his Son into our hearts. 1 John 3:24 says we know God lives in us by the Spirit he gave us. The picture is consistent across the whole New Testament. The strongest counterargument is from passages where some people seem to be Christians and yet need to receive the Spirit afterward, especially Acts 8 with the Samaritans and Acts 19 with the disciples at Ephesus who had not heard there was a Holy Spirit. Some Christians read these as proof that the Spirit comes in a separate second experience after conversion. Others read them as unusual events in the unique transition period as the gospel first crossed from Jews to Samaritans and Gentiles. The wider New Testament pattern, especially Romans 8:9 making Spirit-possession the definition of belonging to Christ, supports the verdict that the Spirit comes at the start of real Christian life. There is room inside that core for honest disagreement about whether the Spirit also gives later experiences of empowerment.",
+      "denominational_landscape": "The core teaching that the Holy Spirit indwells every true believer from the moment of new birth is one of the most widely agreed doctrines in all of Christianity. Patristic writers like Irenaeus quote 1 Corinthians 3:16 directly and teach that the Spirit dwells in believers and sanctifies even their bodies. The Catholic Church teaches that the baptized receive the Holy Spirit who indwells the faithful. Eastern Orthodoxy teaches that the grace of the Holy Spirit conferred at baptism and chrismation continues to shine in the hearts of believers. The Lutheran Augsburg Confession says the Holy Spirit is given through Word and Sacraments and works faith in the hearer. The Anglican 39 Articles confess the deity and indwelling work of the Spirit. The Reformed confessions (Westminster, Belgic, Heidelberg) teach that the Spirit indwells and sanctifies the elect from regeneration. Methodists in their Articles of Religion teach the same Trinitarian indwelling. Anabaptists at Dordrecht teach the Spirit's renewal of the believer. Pentecostals in the Assemblies of God teach that every believer receives the Spirit at conversion. So on the core, Christians of every tradition agree. The in-house disagreement is whether there is a second distinct experience of Spirit-baptism after conversion, usually evidenced by speaking in tongues. Pentecostals, charismatics, and the Assemblies of God teach yes, this is a distinct subsequent experience available to all believers. Cessationist Reformed, Baptist, and most historic Lutheran and Anglican churches teach no, Spirit-baptism is the same event as conversion-indwelling, and what the New Testament calls being filled with the Spirit is an ongoing dimension of normal Christian life, not a second crisis. This is a real and serious in-house debate, but it is a family debate. It is not a cult marker. Groups that fall outside historic Christianity on this topic do so for different reasons. Mormonism and Jehovah's Witnesses reduce the Holy Spirit to an impersonal force or active energy, which is a denial of the Spirit's personhood and deity rather than of his indwelling. Christian Science teaches a metaphysical mind-presence that is not the personal Holy Spirit of Scripture. These positions are treated by historic Christianity as outside the fold for separate reasons, not for the specific question of indwelling."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.8.9",
+        "key_term": "εἰ δέ τις πνεῦμα Χριστοῦ οὐκ ἔχει οὗτος οὐκ ἔστιν αὐτοῦ; pneuma G4151; Christos G5547; echō G2192 present active indicative 3s; oikeō G3611 present active indicative 3s",
+        "force": "'If anyone does not have the Spirit of Christ, this one is not his.' Paul makes possession of the Spirit the actual diagnostic of belonging to Christ. The opening clause of v.9 (εἴπερ πνεῦμα θεοῦ οἰκεῖ ἐν ὑμῖν eiper pneuma theou oikei en hymin) uses oikeō G3611 in the present active indicative for the ongoing dwelling. The conditional construction with eiper assumes the condition is true of believers in Rome. Spirit-possession and being in Christ are coextensive",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.11",
+        "key_term": "τοῦ ἐνοικοῦντος αὐτοῦ πνεύματος ἐν ὑμῖν; enoikeō G1774 present active participle; pneuma G4151",
+        "force": "'Through his Spirit who dwells in you.' Enoikeō G1774, the technical compound verb for indwelling (en + oikeō, 'to dwell in'). Present active participle marks ongoing indwelling. The Spirit who raised Jesus is the same Spirit who indwells the believer and is the basis of future bodily resurrection. The same lemma recurs at 2 Tim 1:14, Col 3:16, 2 Cor 6:16, 2 Tim 1:5",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.3.16",
+        "key_term": "οὐκ οἴδατε ὅτι ναὸς θεοῦ ἐστε καὶ τὸ πνεῦμα τοῦ θεοῦ οἰκεῖ ἐν ὑμῖν; naos G3485; oikeō G3611 present active indicative 3s; pneuma G4151",
+        "force": "'Do you not know that you are God's temple and God's Spirit dwells in you?' Naos G3485 is the inner sanctuary, not the broader hieron complex, the very place YHWH was understood to indwell in the Jerusalem temple. The same indwelling presence now resides in the believing community. Oikeō present indicative marks settled ongoing residence. This verse is what Irenaeus directly quotes in Adversus Haereses 5.6 as proof that the Spirit dwells in believers",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1Cor.6.19",
+        "key_term": "τὸ σῶμα ὑμῶν ναὸς τοῦ ἐν ὑμῖν ἁγίου πνεύματός ἐστιν; naos G3485; sōma G4983; hagios G40; pneuma G4151",
+        "force": "'Your body is a temple of the Holy Spirit who is in you.' Paul reapplies the temple metaphor (1 Cor 3:16) to the individual physical body. Same naos G3485. The Holy Spirit is the one residing in the believer's body. The argument from indwelling grounds the ethical claim against sexual immorality (the body, as the Spirit's temple, is not the believer's to use as they please)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "2Cor.1.22",
+        "key_term": "ὁ καὶ σφραγισάμενος ἡμᾶς καὶ δοὺς τὸν ἀρραβῶνα τοῦ πνεύματος ἐν ταῖς καρδίαις ἡμῶν; sphragizō G4972 aorist middle participle; arrabōn G728; kardia G2588",
+        "force": "'He sealed us and gave the down-payment of the Spirit in our hearts.' Sphragizō G4972 is the legal-commercial act of marking ownership with a seal. Arrabōn G728 (Semitic loan into Greek) is the partial payment given in advance that legally guarantees the rest. Together: God marks the believer as his own by giving the Spirit as the legal guarantee of full inheritance to come. Same combination of seal and down-payment at Eph 1:13-14",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.1.13",
+        "key_term": "ἐν ᾧ καὶ πιστεύσαντες ἐσφραγίσθητε τῷ πνεύματι τῆς ἐπαγγελίας τῷ ἁγίῳ; pisteuō G4100 aorist active participle; sphragizō G4972 aorist passive indicative 2p; epangelia G1860",
+        "force": "'In whom also, having believed, you were sealed with the Holy Spirit of promise.' The aorist participle pisteusantes ('having believed') is contemporaneous with the main aorist passive verb esphragisthēte ('you were sealed'). The sealing happens at the moment of believing. This is the lexical foundation for 'indwelt from the moment of regeneration'. The Spirit himself IS the seal, not merely the agent of sealing (instrumental dative)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.1.14",
+        "key_term": "ὅς ἐστιν ἀρραβὼν τῆς κληρονομίας ἡμῶν εἰς ἀπολύτρωσιν τῆς περιποιήσεως; arrabōn G728; klēronomia G2817; apolytrōsis G629",
+        "force": "'Who is the down-payment of our inheritance, until the redemption of the possession.' The Spirit is the arrabōn G728 of the inheritance, legally guaranteeing the full redemption to come. The temporal scope is from the moment of believing (v.13) until the eschaton (eis apolytrōsin). This grounds the 'permanently' qualifier in the question stem",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Gal.4.6",
+        "key_term": "ἐξαπέστειλεν ὁ θεὸς τὸ πνεῦμα τοῦ υἱοῦ αὐτοῦ εἰς τὰς καρδίας ἡμῶν; exapostellō G1821 aorist active indicative 3s; kardia G2588",
+        "force": "'God sent the Spirit of his Son into our hearts.' Exapostellō G1821 (aorist of completed sending) parallels the earlier 'God sent his Son' at v.4. The Spirit's sending into the heart is the basis of crying 'Abba, Father' and is grounded in adoptive sonship (huiothesia G5206 at v.5). The locus is the kardia G2588, the seat of the person",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.1.14",
+        "key_term": "διὰ πνεύματος ἁγίου τοῦ ἐνοικοῦντος ἐν ἡμῖν; enoikeō G1774 present active participle; parathēkē G3866",
+        "force": "'Guard the good deposit through the Holy Spirit who dwells in us.' Enoikeō G1774 present active participle, the same technical indwelling verb as Rom 8:11. The shared 'in us' (en hēmin) shows Paul includes himself, Timothy, and the broader believing community. The Spirit's indwelling is the means of guarding the apostolic deposit (parathēkē G3866)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.3.24",
+        "key_term": "ἐν τούτῳ γινώσκομεν ὅτι μένει ἐν ἡμῖν ἐκ τοῦ πνεύματος οὗ ἡμῖν ἔδωκεν; menō G3306 present active indicative 3s; didōmi G1325 aorist active indicative 3s",
+        "force": "'By this we know that he abides in us, by the Spirit which he gave us.' Menō G3306 is John's preferred verb for the same reality Paul calls indwelling. The aorist didōmi G1325 marks the giving of the Spirit as a completed past gift; the present menei marks the ongoing abiding. Same construction at 1 John 4:13. The Spirit's gifted presence is the diagnostic of the believer-Christ mutual abiding",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.4.13",
+        "key_term": "ἐν τούτῳ γινώσκομεν ὅτι ἐν αὐτῷ μένομεν καὶ αὐτὸς ἐν ἡμῖν ὅτι ἐκ τοῦ πνεύματος αὐτοῦ δέδωκεν ἡμῖν; menō G3306; didōmi G1325 perfect active indicative 3s",
+        "force": "'By this we know that we abide in him and he in us, because he has given us of his Spirit.' Perfect didōmi (dedōken) marks the giving of the Spirit as a completed past act with abiding present result. The Spirit is the empirical evidence of mutual abiding between believer and Christ. Same theology as 1 John 3:24",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.14.17",
+        "key_term": "τὸ πνεῦμα τῆς ἀληθείας... παρ' ὑμῖν μένει καὶ ἐν ὑμῖν ἔσται; pneuma G4151; alētheia G225; menō G3306 present active indicative 3s; eimi G1510 future indicative 3s",
+        "force": "'The Spirit of truth... abides with you and will be in you.' Pre-Pentecost, Jesus describes the Spirit's relationship with the disciples as menei par' hymin (present, 'abides with you') and shifts to estai en hymin (future, 'will be in you'). The shift from para ('alongside') to en ('within') marks the transition from Old Covenant Spirit-with-but-not-in to New Covenant indwelling. Textual variant: some witnesses read present estin instead of future estai, but the future is the majority reading and fits the redemptive-historical shift",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.16",
+        "key_term": "αὐτὸ τὸ πνεῦμα συμμαρτυρεῖ τῷ πνεύματι ἡμῶν ὅτι ἐσμὲν τέκνα θεοῦ; symmartyreō G4828 present active indicative 3s; teknon G5043",
+        "force": "'The Spirit himself bears witness with our spirit that we are children of God.' The Spirit's ongoing internal witness to the believer's adoption presupposes his indwelling. The compound symmartyreō ('co-witness with') requires the Spirit be within reach of the believer's own spirit, which the indwelling supplies",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.36.27",
+        "key_term": "וְאֶת רוּחִי אֶתֵּן בְּקִרְבְּכֶם; ruach H7307; nathan H5414 qal imperfect 1s; qereb H7130",
+        "force": "'I will put my Spirit within you.' The New Covenant promise. Ruach H7307 (Spirit) plus nathan H5414 (give, set) plus qereb H7130 (inward parts, the inside of a person). Old Testament prophetic anchor for the indwelling Spirit that the New Testament cashes in as the universal reality for every believer in the Messiah",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.38",
+        "key_term": "λήμψεσθε τὴν δωρεὰν τοῦ ἁγίου πνεύματος; lambanō G2983 future middle indicative 2p; dōrea G1431",
+        "force": "'You will receive the gift of the Holy Spirit.' Peter at Pentecost ties repentance and baptism in Jesus's name to receiving the Spirit as gift (dōrea G1431). The promise is 'for you and your children and all who are far off' (v.39), generalizing the indwelling Spirit to the whole new covenant people",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.16",
+        "key_term": "οὐδέπω γὰρ ἦν ἐπ' οὐδενὶ αὐτῶν ἐπιπεπτωκός; epipiptō G1968 pluperfect active participle",
+        "force": "'For he had not yet fallen on any of them.' The Samaritan believers had believed and been baptized but had not yet received the Spirit until Peter and John came and laid hands on them. Pentecostal exegesis reads this as a paradigm of Spirit-baptism subsequent to conversion. Cessationist exegesis reads this as a unique transitional event marking the gospel's authorized extension from Jews to Samaritans, requiring apostolic confirmation. The verse complicates the question of timing but does not deny the Spirit indwells every believer (which is what Acts 2:38-39 and Rom 8:9 establish as the norm)",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.19.2",
+        "key_term": "εἰ πνεῦμα ἅγιον ἐλάβετε πιστεύσαντες; lambanō G2983 aorist active indicative 2p; pisteuō G4100 aorist active participle",
+        "force": "'Did you receive the Holy Spirit when you believed?' The aorist participle pisteusantes is most naturally contemporaneous with the aorist verb elabete, meaning 'when you believed' rather than 'after you believed'. Paul's question to the Ephesian disciples assumes that receiving the Spirit is part of believing. The men in v.3 turn out to have only John's baptism, not Christian baptism; once Paul preaches Jesus and baptizes them, they receive the Spirit. Read by cessationists as confirming Spirit-reception at conversion; read by Pentecostals as a model of subsequent Spirit-baptism with tongues",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.12.13",
+        "key_term": "ἐν ἑνὶ πνεύματι ἡμεῖς πάντες εἰς ἓν σῶμα ἐβαπτίσθημεν; baptizō G907 aorist passive indicative 1p; sōma G4983",
+        "force": "'In one Spirit we were all baptized into one body.' Paul applies Spirit-baptism universally to all believers ('we all') as the initiation into the body of Christ. The aorist passive locates this at a single past event, naturally read as conversion-initiation. Cessationist Reformed read this as establishing that Spirit-baptism is coextensive with conversion-indwelling. Pentecostals distinguish this 'baptism into the body' from a separate later 'baptism in the Spirit' for power. Lexically, the simpler reading is that all believers share the same Spirit-baptism at conversion",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Tit.3.5",
+        "key_term": "διὰ λουτροῦ παλιγγενεσίας καὶ ἀνακαινώσεως πνεύματος ἁγίου; loutron G3067; palingenesia G3824; anakainōsis G342",
+        "force": "'By the washing of regeneration and renewal of the Holy Spirit.' Palingenesia G3824 ('new birth') and the renewal worked by the Holy Spirit are coordinated as the means of salvation. The Spirit is the agent of regeneration and the continuing renewer. Supports the 'from the moment of regeneration' clause in the question stem",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.7.39",
+        "key_term": "οὔπω γὰρ ἦν πνεῦμα ὅτι Ἰησοῦς οὐδέπω ἐδοξάσθη; pneuma G4151; doxazō G1392 aorist passive indicative 3s",
+        "force": "'For the Spirit was not yet, because Jesus was not yet glorified.' John's parenthetical: the universal indwelling of the Spirit awaits Christ's glorification (death-resurrection-ascension). Establishes the redemptive-historical sequence: Pentecost (Acts 2) is the inauguration of the indwelling Spirit for all believers, fulfilling Ezek 36:27 and Joel 2:28-29",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1774",
+      "G3611",
+      "G3306",
+      "G4972",
+      "G728",
+      "G4151",
+      "G3485",
+      "G4983",
+      "G2192",
+      "G2588",
+      "G1821",
+      "G3866",
+      "G5442",
+      "G4100",
+      "G1860",
+      "G2817",
+      "G629",
+      "G40",
+      "G225",
+      "G1510",
+      "G5547",
+      "G2983",
+      "G1431",
+      "G1968",
+      "G907",
+      "G3067",
+      "G3824",
+      "G342",
+      "G1392",
+      "G5206",
+      "G5043",
+      "G4828",
+      "H7307",
+      "H5414",
+      "H7130"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "cessationist_reformed",
+        "continuationist_pentecostal",
+        "sacramental_catholic_orthodox",
+        "wesleyan_holiness"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "cessationist_reformed",
+          "verdict": "affirms",
+          "notes": "Reformed and Reformed-Baptist tradition (Westminster, 1689 Baptist, Belgic, Heidelberg) affirms the indwelling of the Spirit from regeneration and treats Spirit-baptism (1 Cor 12:13) as coextensive with conversion. Reads Acts 8 and Acts 19 as transitional unique events tied to the unique salvation-historical shift to Samaritans and Gentiles, not as paradigms for normal Christian experience. Subsequent fillings (Eph 5:18) are real but are not a second Spirit-baptism"
+        },
+        {
+          "framework": "continuationist_pentecostal",
+          "verdict": "affirms",
+          "notes": "Assemblies of God Fundamental Truths 7 and 8 and Pentecostal tradition affirm that every believer receives the Spirit at conversion (indwelling) AND teaches a distinct subsequent baptism in the Holy Spirit, with tongues as initial physical evidence, available to all believers and patterned on Acts 2, 8, 10, 19. On the core proposition under examination (indwelling from regeneration), Pentecostals fully agree. The disagreement is whether a second distinct experience is normative"
+        },
+        {
+          "framework": "sacramental_catholic_orthodox",
+          "verdict": "affirms",
+          "notes": "Catholic and Orthodox traditions tie the indwelling of the Spirit to baptism and (in Orthodox practice) chrismation immediately following. The Spirit is given through these sacramental means and continues to indwell the faithful. CCC and OCA sources affirm the indwelling. The disagreement with Protestant traditions is about the means (sacraments versus faith alone) and not about the reality of the indwelling itself"
+        },
+        {
+          "framework": "wesleyan_holiness",
+          "verdict": "affirms",
+          "notes": "Wesleyan-Methodist and Holiness traditions affirm Spirit-indwelling at regeneration and add a doctrine of entire sanctification or second blessing in which the Spirit cleanses and empowers further. On the core proposition that the Spirit indwells from regeneration, full agreement. The disagreement is about subsequent works of the Spirit"
+        }
+      ],
+      "notes": "The core proposition (Spirit indwells every believer from regeneration) is universally affirmed across every tracked framework. The lemma network (enoikeō G1774 in Rom 8:11 and 2 Tim 1:14, oikeō G3611 in Rom 8:9 and 1 Cor 3:16, menō G3306 in John 14:17 and 1 John 3:24 and 4:13, sphragizō G4972 in Eph 1:13 and 2 Cor 1:22, arrabōn G728 in 2 Cor 1:22 and Eph 1:14) is pan-canonical and unambiguous. Analogia scripturae operates at the complicating texts (Acts 8 with the Samaritans, Acts 19 with the Ephesian disciples), where the canonical pattern of Rom 8:9 plus 1 Cor 12:13 fixes the normative reading and the Acts narratives function as transitional records. Progressive revelation operates clearly: Ezek 36:27 promises 'I will put my Spirit within you'; John 7:39 marks the not-yet of universal indwelling pending Christ's glorification; Acts 2 inaugurates it. The in-house dispute about a distinct subsequent Spirit-baptism is a frameworks-disagree-on-something-else case, not a disagreement on indwelling itself"
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Adversus Haereses Book 5 Chapter 6 (CCEL ANF Volume 1)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Irenaeus directly quotes 1 Cor 3:16 'Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?' to teach the Spirit's indwelling of believers including their bodies"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 733 to 741 on the gift of the Holy Spirit; CCC 813 on the Spirit indwelling those who believe (vatican.va)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "CCC 813: 'It is the Holy Spirit, dwelling in those who believe and pervading and ruling over the entire Church, who brings about that wonderful communion of the faithful.' Indwelling is sacramentally tied to baptism and confirmation"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article V, Of the Ministry of the Church (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Augsburg V: 'The Holy Ghost is given, who works faith; where and when it pleases God, in them that hear the Gospel.' The Spirit is given to believers and works faith in them through Word and Sacraments"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article V Of the Holy Ghost (churchofengland.org)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Article V affirms the Spirit as 'of one Substance, Majesty, and Glory, with the Father and the Son, very and eternal God.' The Anglican homilies and Prayer Book liturgy explicitly teach the Spirit's indwelling work in the baptized"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 13.1 on sanctification; 1689 Baptist Confession 13.1; Heidelberg Catechism Q&A 53 on the Holy Spirit",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "WCF 13.1: 'They who are effectually called and regenerated... are further sanctified, really and personally, through the virtue of Christ's death and resurrection, by His Word and Spirit dwelling in them.' Spirit dwells in the regenerate"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion Article IV Of the Holy Ghost; Article on Sanctification (umc.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Article IV: 'The Holy Ghost, proceeding from the Father and the Son, is of one substance, majesty, and glory with the Father and the Son, very and eternal God.' Sanctification article: renewal by the Holy Ghost received through faith in Christ"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession 1632 Article 7 on the New Covenant and the indwelling Spirit",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Dordrecht teaches that those who believe and are regenerated receive the Holy Spirit, who comforts, sanctifies, and seals them as God's children. The indwelling is taught as the universal experience of true believers"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths point 7 on the Baptism in the Holy Spirit, and point 8 on initial physical evidence (ag.org)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "AG teaches the Spirit is received at conversion but ALSO teaches a distinct subsequent Baptism in the Holy Spirit available to all believers, with speaking in tongues as the initial physical evidence. The core indwelling is affirmed; a second experience is added"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on the Holy Spirit (oca.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "OCA: 'Grace of the Holy Spirit, conferred by baptism in the name of the Father and the Son and the Holy Spirit, still shines in our hearts.' Indwelling is sacramentally tied to baptism and chrismation, with continuing presence"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 8:9 pneuma G4151 plus oikeō G3611 present active indicative 3s. 'If anyone does not have the Spirit of Christ, this one is not his.' Spirit-possession is the diagnostic of belonging to Christ"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 8:11 enoikeō G1774 present active participle. 'His Spirit who dwells in you.' Technical compound verb for indwelling, recurring at 2 Tim 1:14, Col 3:16, 2 Cor 6:16"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/3-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 3:16 naos G3485 plus oikeō G3611 present indicative. 'You are God's temple and God's Spirit dwells in you.' Inner sanctuary plus settled ongoing residence"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/6-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 6:19 naos G3485 of the Holy Spirit who is in you (en hymin). Temple metaphor reapplied to the individual believer's body"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 1:13 sphragizō G4972 aorist passive 2p plus pisteuō G4100 aorist participle. 'Having believed, you were sealed with the Holy Spirit of promise.' Sealing at the moment of believing"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_corinthians/1-22.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Cor 1:22 sphragizō G4972 plus arrabōn G728. God sealed us and gave the Spirit as the down-payment in our hearts. Legal seal of ownership plus commercial guarantee of full inheritance"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1774.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "enoikeō G1774 occurs 5 times in NT: Rom 8:11 (Spirit), 2 Cor 6:16 (God in his people), Col 3:16 (word of Christ), 2 Tim 1:5 (faith in Lois and Eunice), 2 Tim 1:14 (Holy Spirit in us)"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/1-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Tim 1:14 enoikeō G1774 present active participle. 'Through the Holy Spirit who dwells in us.' Same technical indwelling verb as Rom 8:11, same in-us scope"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/4-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Gal 4:6 exapostellō G1821 aorist active 3s. 'God sent the Spirit of his Son into our hearts (kardia G2588).' The Spirit's sending into the heart parallels the sending of the Son"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 John 3:24 menō G3306 present indicative. 'He abides in us, by the Spirit which he gave us (didōmi G1325 aorist).' Same theology as Rom 8:11 in Johannine vocabulary"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/14-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 14:17 menei par' hymin (present, alongside you) shifts to estai en hymin (future, in you). The shift from para to en marks the New Covenant transition to universal indwelling"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf01.ix.vii.vii.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Irenaeus Against Heresies 5.6 quotes 1 Cor 3:16 to teach that believers are God's temple and the Spirit dwells in them, sanctifying even their bodies"
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article V: 'The Holy Ghost is given, who works faith; where and when it pleases God, in them that hear the Gospel.' The Spirit is given to believers"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Articles of Religion Article IV affirms the Holy Ghost as 'very and eternal God.' Sanctification article: 'Sanctification is that renewal of our fallen nature by the Holy Ghost, received through faith in Jesus Christ'"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-holy-trinity/the-holy-spirit",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: 'Grace of the Holy Spirit, conferred by baptism in the name of the Father and the Son and the Holy Spirit, still shines in our hearts.' Indwelling tied to baptism and chrismation"
+      },
+      {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "AG affirms Spirit-indwelling at conversion AND teaches a distinct subsequent Baptism in the Holy Spirit with tongues as initial physical evidence. Core indwelling shared; subsequent experience disputed by cessationist traditions"
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "in-house-pentecostal-cessationist-divergence"
+    ]
+  }
+}

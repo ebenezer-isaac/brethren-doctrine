@@ -1,0 +1,382 @@
+{
+  "id": "doc-transubstantiation-denial",
+  "answer": {
+    "id": "doc-transubstantiation-denial",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical pattern: 1 Cor 11:26-28 Paul calls the consecrated element bread (artos G740) three consecutive times AFTER the words of institution (as often as you eat this bread (ton arton touton) and drink this cup; whoever eats this bread (ton arton) unworthily; let a person examine himself and so eat of the bread (tou artou)). The lexical category bread is not retired after consecration; Paul reinstates it. Luke 22:19 touto estin to soma mou uses the demonstrative pronoun touto (houtos G3778) with the copula estin (eimi G1510); estin functions as a predicative copula whose force (literal identity vs figurative representation) is determined by context, not by the verb itself; Jesus uses the same construction figuratively elsewhere (John 10:7 ego eimi he thura; John 15:1 ego eimi he ampelos he alethine; John 15:5 ego eimi he ampelos). Hebrews 7:27, 9:12, 10:10, 10:12-14 use ephapax (G2178, once-for-all) and eis to dienekes (G1336, in perpetuity) of Christ's one offering, refusing any continuing or re-presented sacrifice; the medieval claim that the eucharist re-presents the same sacrifice is challenged at the lexical-grammatical level. John 6:63 Jesus's own clarifier of John 6:53-58: it is the Spirit (pneuma G4151) that gives life, the flesh (sarx G4561) profits (opheleo G5623) nothing; the words I have spoken to you are spirit and life (rhema G4487). Jesus himself defines the eating as spiritual, not crassly carnal. The Catholic doctrine that the substance of bread is converted into the substance of Christ's body with only accidents remaining requires Aristotelian metaphysics imported into the text and contradicts Paul's continued use of artos for the consecrated element. The verdict is denial of transubstantiation specifically as the medieval Latin scholastic specification of a substance-change.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Disagreement over transubstantiation is in-house Christian, not a cult-marker line. Roman Catholics confess the Nicene faith, the Trinity, the bodily resurrection, the deity of Christ. The eucharistic disagreement runs deep but does not deny the gospel. Therefore would_die_for=false and cult_marker_if_denied=false. The wider question (Christ's real presence in the supper) is contested among confessing Christians: Roman Catholic transubstantiation, Eastern Orthodox real-presence-as-mystery without Latin scholastic specification, Lutheran sacramental union (in, with, and under the elements which remain bread and wine), Reformed pneumatic presence (Calvin, Westminster), Zwinglian memorial (most Baptists, Brethren, evangelicals). The narrow verdict here is denial of transubstantiation specifically. The wider question of real presence is handled in its own question. Would not participate in a Roman Catholic mass because the worship act treats the consecrated host as Christ himself and includes adoration of the host, which on the Protestant reading is a category error. Would not be a member or serve because the Roman Catholic understanding of the mass as a propitiatory sacrifice re-presented to the Father conflicts with Heb 10:10-14 ephapax. Would visit and would marry a Roman Catholic spouse holding the doctrine because the doctrine is held by a Trinitarian-confessing communion. Public-record dispute: this is the dividing line of the Western Reformation. The Eastern Orthodox dispute with Rome on this is older (real-presence-as-mystery vs Aristotelian-scholastic specification) and pre-dates the Reformation."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Are the bread and wine of the Lord's Supper, at the words of institution, converted in substance into the body and blood of Christ as Rome teaches in the doctrine of transubstantiation, or do the elements remain bread and wine?",
+      "notes": "The question statement asserts the verdict (not changed in substance) using Reformation-confessional vocabulary (signifying, communicating spiritually). The neutralized form puts the Catholic claim and the alternative on equal footing and lets the apparatus + interlinear adjudicate. The work proceeds on the neutralized form."
+    },
+    "lay_summary": {
+      "reasoning": "Transubstantiation is the Catholic teaching that at the words this is my body and this is my blood, the bread and wine in the Lord's Supper actually become the body and blood of Christ in substance, with only the appearances of bread and wine remaining. The verdict here is that this specific medieval Latin teaching is not supported by Scripture. The strongest reason is 1 Corinthians 11:26-28, where Paul, writing after Jesus's words of institution, still calls the consecrated element bread three times. He says as often as you eat this bread and drink this cup you proclaim the Lord's death. Then whoever eats this bread or drinks the cup of the Lord in an unworthy manner. Then let a person examine himself and so eat of the bread and drink of the cup. If the bread were no longer bread after consecration, Paul could not call it bread three times in three verses. The strongest counterargument is the words of institution themselves. In Luke 22:19 Jesus says this is my body, and the Catholic reading is that is should be taken literally. The answer is that the same Jesus says I am the door and I am the true vine and I am the bread of life. In Greek the linking verb is can carry literal identity or figurative representation depending on context; the verb itself does not settle the question. The other strong counter is John 6 where Jesus says unless you eat my flesh and drink my blood you have no life in you. Jesus himself clarifies in John 6:63: it is the Spirit who gives life, the flesh profits nothing; the words I have spoken to you are spirit and life. Jesus tells the hearers the eating is spiritual, not crass cannibalism. A third support comes from Hebrews 7:27, 9:12, 10:10, and 10:12-14, which say Christ offered himself once for all and by one offering has perfected for all time those who are being sanctified. The medieval claim that the Mass re-presents the same sacrifice over and over runs against this once-for-all language. The verdict handles the tension by reading Scripture against Scripture: Paul's bread, Jesus's John 6 clarifier, and Hebrews's once-for-all all push together against a literal substance-change.",
+      "denominational_landscape": "Christian lineages divide on this. Roman Catholicism affirms transubstantiation as defined at the Fourth Lateran Council in 1215 and dogmatically reaffirmed at the Council of Trent in 1551, with the Catechism stating that the consecration brings about a change of the whole substance of the bread into the substance of the body of Christ. Eastern Orthodoxy affirms a real change of the bread and wine into the body and blood of Christ but refuses the Latin scholastic substance-and-accidents framework, calling the eucharist a mystery that defies analysis in purely rational and logical terms. The patristic writers used strong real-presence language but pre-dated the medieval Aristotelian specification; the first major Western dispute over the mode of presence was the Berengar of Tours controversy in the 11th century. The Reformation broke into three positions. Lutherans (Formula of Concord article VII) reject transubstantiation explicitly while affirming the true body and blood of Christ given in, with, and under the bread and wine, which remain bread and wine; this is called sacramental union. Anglicans in the Thirty-Nine Articles, Article 28, say transubstantiation in the supper of the Lord cannot be proved by Holy Writ, but is repugnant to the plain words of Scripture. The Reformed tradition (Westminster Confession 29.6, Belgic 35) calls transubstantiation an idolatry while affirming a real spiritual feeding on Christ by faith. Methodists (Article 18, Wesley's abridgement) carry the Anglican rejection forward verbatim. Anabaptists, Baptists (1689 Confession 30.6), Pentecostals (Assemblies of God), Plymouth Brethren, and most evangelical traditions hold a memorial view that the bread and wine remain bread and wine and signify Christ's body and blood. The denial of transubstantiation specifically (not the denial of real presence in general) is the broad non-Roman-Catholic Christian consensus. The disagreement is not a cult-marker line; Roman Catholics confess the Trinity, the deity of Christ, and the bodily resurrection, and the dispute is in-house Christian."
+    },
+    "scripture": [
+      {
+        "ref": "1Cor.11.26",
+        "key_term": "ἄρτος artos G740 (bread, accusative ton arton touton); ἐσθίω esthio G2068 (eat, present subjunctive esthiete); ποτήριον poterion G4221 (cup)",
+        "force": "Paul names the consecrated element bread AFTER the words of institution. As often as you eat this bread (ton arton touton) and drink this cup. The accusative ton arton touton with the demonstrative touton means this specific bread, identifying the very thing on the table as bread. Direct lexical challenge to no longer bread.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.27",
+        "key_term": "ἄρτος artos G740 (bread); ἀναξίως anaxios G371 (in an unworthy manner); ἔνοχος enochos G1777 (guilty)",
+        "force": "Whoever eats this bread (ton arton) or drinks the cup of the Lord in an unworthy manner. The element is still called bread when the worshipper eats it. The guilt clause is about the manner of eating, not about converting the lexical category of the element.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.28",
+        "key_term": "ἄρτος artos G740 (bread, genitive tou artou); δοκιμάζω dokimazo G1381 (examine, test)",
+        "force": "Let a person examine himself and so eat of the bread (esthieto tou artou). Third consecutive verse calling the consecrated element bread. The cumulative force is decisive: Paul does not have a vocabulary in which bread becomes non-bread upon consecration.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.10.16",
+        "key_term": "ποτήριον poterion G4221 (cup); εὐλογία eulogia G2129 (blessing); κοινωνία koinonia G2842 (participation, communion); ἄρτος artos G740 (bread)",
+        "force": "The cup of blessing which we bless, is it not a participation (koinonia) in the blood of Christ? The bread which we break, is it not a participation in the body of Christ? Koinonia means partnership and sharing, not substantial conversion. Paul still calls it bread (ton arton hon klomen, the bread which we break) while saying it is participation in Christ's body. The lexical category bread is preserved.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Luke.22.19",
+        "key_term": "οὗτος houtos G3778 (this, neuter touto); εἰμί eimi G1510 (is, estin); σῶμα soma G4983 (body); ἀνάμνησις anamnesis G364 (remembrance)",
+        "force": "This (touto) is (estin) my body (to soma mou) which is given for you; do this in remembrance (anamnesis) of me. The copula estin is the same verb Jesus uses figuratively in John 10:7 (I am the door), John 15:1 (I am the true vine), John 15:5 (I am the vine). The verb itself does not decide between literal identity and figurative representation; context decides. The closing clause names the act as anamnesis (remembrance), which is a memorial-frame word, not a substance-conversion word.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "John.6.63",
+        "key_term": "πνεῦμα pneuma G4151 (Spirit); σάρξ sarx G4561 (flesh); ὠφελέω opheleo G5623 (profit, benefit); ῥῆμα rhema G4487 (word, utterance)",
+        "force": "It is the Spirit who gives life; the flesh profits nothing (he sarx ouk ophelei ouden). The words (rhemata) I have spoken to you are spirit and life. Jesus's own interpretive key to his John 6:53-58 saying about eating his flesh and drinking his blood. He explicitly denies a fleshly-physical reading and identifies the eating as a spirit-and-words reception. Direct lexical challenge to a literal-consumption framework.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "John.6.53-58",
+        "key_term": "φάγω phago G5315 / τρώγω trogo G5176 (eat); σάρξ sarx G4561 (flesh); αἷμα haima G129 (blood); ζωή zoe G2222 (life)",
+        "force": "Catholic exegesis cites this as the strongest text for real corporeal eating. The verb shifts from phago (general eat) to trogo (chew, gnaw) in 6:54-58. However: (1) verse 35 frames the entire discourse with I am the bread of life; whoever comes to me shall not hunger and whoever believes in me shall never thirst, equating eating with coming/believing; (2) verse 63 supplies Jesus's own clarifier (the flesh profits nothing); (3) the discourse occurs about a year before the institution of the Lord's Supper, so it cannot be a direct teaching on transubstantiation of consecrated elements. Complicates but is answered by Jesus's own interpretive frame.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Heb.7.27",
+        "key_term": "ἐφάπαξ ephapax G2178 (once for all); προσφέρω prosphero G4374 (offer); θυσία thysia G2378 (sacrifice)",
+        "force": "Christ has no need, like those high priests, to offer sacrifices daily, because he did this once for all (ephapax) when he offered up himself. The author refuses any continuing or repeated sacrificial offering by Christ. The medieval claim that the Mass is a re-presentation of the same sacrifice runs against ephapax as a lexical category.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.12",
+        "key_term": "ἐφάπαξ ephapax G2178; αἰώνιος aionios G166 (eternal); λύτρωσις lutrosis G3085 (redemption)",
+        "force": "He entered once for all (ephapax) into the holy places, not by means of the blood of goats and calves but by means of his own blood, having secured an eternal redemption (aionian lutrosin). The eternal redemption is already secured by one entry, not perpetually re-secured at every altar.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.10",
+        "key_term": "ἐφάπαξ ephapax G2178; ἁγιάζω hagiazo G37 (sanctify, perfect passive participle hegiasmenoi); σῶμα soma G4983 (body); προσφορά prosphora G4376 (offering)",
+        "force": "We have been sanctified (hegiasmenoi, perfect passive participle: a completed past action with abiding present effect) through the offering of the body of Jesus Christ once for all (ephapax). The sanctification stands as a finished and abiding fact on the basis of one offering.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.12-14",
+        "key_term": "μία θυσία mia thysia G1520+G2378 (one sacrifice); εἰς τὸ διηνεκές eis to dienekes G1336 (in perpetuity, for all time); τελειόω teleioo G5048 (perfect, complete)",
+        "force": "When Christ had offered for all time (eis to dienekes) a single sacrifice (mian thysian) for sins. For by a single offering (mia prosphora) he has perfected (teteleioken, perfect tense) for all time (eis to dienekes) those who are being sanctified. The grammar bracketed twice with eis to dienekes (perpetually) makes the single sacrifice exhaustively sufficient and unrepeatable.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.18",
+        "key_term": "ἄφεσις aphesis G859 (forgiveness); προσφορά prosphora G4376 (offering); ἁμαρτία hamartia G266 (sin)",
+        "force": "Where there is forgiveness of these (sins), there is no longer any offering for sin. The author's logical close: once forgiveness is secured, the category of further sin-offerings is closed. Lexical-grammatical exclusion of any continuing propitiatory sacrifice.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.10.7",
+        "key_term": "εἰμί eimi G1510 (am, ego eimi); θύρα thura G2374 (door)",
+        "force": "I am (ego eimi) the door (he thura) of the sheep. Same construction as touto estin to soma mou. Jesus identifies himself as a door without anyone supposing he became literally wooden. Demonstrates that the copula estin with a predicate noun can carry figurative force.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "John.15.1",
+        "key_term": "εἰμί eimi G1510 (am); ἄμπελος ampelos G288 (vine)",
+        "force": "I am (ego eimi) the true vine (he ampelos he alethine). Same copula construction. Jesus is not converted into wood and tendrils. Confirms that estin with a predicate noun does not lexically force literal substantial identity.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.1.9-11",
+        "key_term": "ἐπαίρω epairo G1869 (lifted up); οὐρανός ouranos G3772 (heaven); δέχομαι dechomai G1209 (receive)",
+        "force": "Jesus was lifted up and a cloud took him out of their sight, and he must remain in heaven until the times of the restoration of all things (Acts 3:21). The bodily-localized resurrected Christ is in heaven until the parousia. The claim that his body is also substantially present on every altar in every Mass concurrently is in tension with the lexical-narrative pattern of one body in one place at one time (subject to the qualification that Lutherans address this via ubiquity and Catholics via a unique sacramental mode of presence).",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G740",
+      "G2068",
+      "G4221",
+      "G3778",
+      "G1510",
+      "G4983",
+      "G4151",
+      "G4561",
+      "G5623",
+      "G4487",
+      "G2178",
+      "G1336",
+      "G2378",
+      "G4376",
+      "G37",
+      "G364",
+      "G2842",
+      "G5315",
+      "G5176",
+      "G129",
+      "G2222",
+      "G166",
+      "G3085",
+      "G5048",
+      "G859",
+      "G2374",
+      "G288"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "catholic-sacramental-scholasticism",
+        "lutheran-sacramental-union",
+        "reformed-pneumatic-presence",
+        "zwinglian-memorial",
+        "eastern-orthodox-mystery"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "catholic-sacramental-scholasticism",
+          "verdict": "affirms transubstantiation, treating touto estin to soma mou as literal substance-identity and reading John 6:53-58 as a teaching on the eucharist; Paul's continued use of artos is handled by saying Scripture uses concomitant naming (the appearances remain)"
+        },
+        {
+          "lens": "lutheran-sacramental-union",
+          "verdict": "rejects transubstantiation, affirms real presence of Christ's body and blood in, with, and under the bread and wine, which remain bread and wine; sacramental union is a mystery that does not require Aristotelian metaphysics"
+        },
+        {
+          "lens": "reformed-pneumatic-presence",
+          "verdict": "rejects transubstantiation, affirms that believers truly feed on Christ's body and blood spiritually by the Holy Spirit, while the elements remain bread and wine and Christ's body is in heaven"
+        },
+        {
+          "lens": "zwinglian-memorial",
+          "verdict": "rejects transubstantiation and any substantial real presence; the bread and wine signify and commemorate the body and blood; the eating is the act of faithful remembrance"
+        },
+        {
+          "lens": "eastern-orthodox-mystery",
+          "verdict": "affirms a real change of the elements into the body and blood of Christ but refuses to specify the mode in Latin scholastic substance/accident terms; the eucharist is a mystery"
+        }
+      ],
+      "notes": "The Catholic lens is the only major lens that affirms transubstantiation specifically (as a substance/accident conversion in Aristotelian metaphysics). Four out of five lenses reject the medieval Latin specification. The Orthodox lens affirms a change but refuses the Latin specification (so on the narrow question of transubstantiation as defined at Trent, Orthodoxy declines the term). The non-Catholic Christian consensus rejects transubstantiation specifically. The wider question of real presence remains contested among confessing Christians."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 1376 (citing Council of Trent, Session XIII, 1551)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "By the consecration of the bread and wine there takes place a change of the whole substance of the bread into the substance of the body of Christ and of the whole substance of the wine into the substance of his blood."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Justin Martyr, First Apology 66 (c. 155 AD); Irenaeus, Against Heresies 4.18.5; Augustine, Tractates on John 26.15 (sign and thing signified)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Patristic writers use strong real-presence language but pre-date the Aristotelian substance/accident specification. The medieval scholastic doctrine of transubstantiation is a later development."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration VII, Of the Holy Supper, paragraph 22 (1577); bookofconcord.org",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "We reject the papistic transubstantiation, when it is taught that the bread and wine lose their substance and natural essence, and are thus annihilated, that they are changed into the body of Christ."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion (1571), Article 28 Of the Lord's Supper",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Transubstantiation (or the change of the substance of Bread and Wine) in the Supper of the Lord, cannot be proved by Holy Writ; but is repugnant to the plain words of Scripture."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith (1646), Chapter 29 Of the Lord's Supper, paragraph 6",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "That doctrine which maintains a change of the substance of bread and wine, into the substance of Christ's body and blood (commonly called transubstantiation) by consecration of a priest, is repugnant, not to Scripture alone, but even to common sense and reason."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article 18 Of the Lord's Supper (Wesley's abridgement of the 39 Articles)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Transubstantiation, or the change of the substance of bread and wine in the Supper of our Lord, cannot be proved by Holy Writ, but is repugnant to the plain words of Scripture."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527), Article 3 On Breaking of Bread; Dordrecht Confession (1632), Article 10",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "The bread is broken in remembrance of the broken body of Christ. The Anabaptist tradition holds a memorial view; the elements remain bread and wine."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Article 6 The Ordinances of the Church (Holy Communion)",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "The Lord's Supper, consisting of the elements (bread and the fruit of the vine), is the symbol expressing our sharing the divine nature of our Lord Jesus Christ, a memorial of his suffering and death."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith Volume II, Worship: The Sacraments: Holy Eucharist",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The mystery of the holy eucharist defies analysis and explanation in purely rational and logical terms. Orthodoxy affirms a real change but refuses the Latin scholastic substance and accidents framework."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-26.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 11:26: hosakis ean esthiete ton arton touton kai to poterion pinete. Paul calls the consecrated element bread (artos G740) AFTER the words of institution."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-27.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 11:27: whoever eats this bread (ton arton) or drinks the cup of the Lord in an unworthy manner. The element is called bread when the worshipper consumes it."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/11-28.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 11:28: let a person examine himself and so eat of the bread (tou artou). Third consecutive verse calling the consecrated element bread (artos G740)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/6-63.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 6:63: it is the Spirit (pneuma G4151) who gives life; the flesh (sarx G4561) profits (opheleo G5623) nothing; the words (rhemata G4487) I have spoken to you are spirit and life."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 10:10: we have been sanctified (hegiasmenoi, perfect passive participle) through the offering of the body of Jesus Christ once for all (ephapax G2178)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 10:12: Christ offered for all time (eis to dienekes G1336) a single sacrifice (mian thysian) for sins. The grammar excludes a perpetually re-presented sacrifice."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/7-27.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 7:27: Christ has no need to offer sacrifices daily; he did this once for all (ephapax G2178) when he offered up himself."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/740.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Artos G740: bread, a loaf. 97 NT occurrences. Used by Paul in 1 Cor 11:26-28 for the consecrated element. The lexical category bread is preserved in Lord's Supper passages."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2178.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ephapax G2178: once, once for all. 5 NT occurrences. Four of five describe Christ's offering as unrepeatable: Rom 6:10, Heb 7:27, Heb 9:12, Heb 10:10."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "CCC 1376: by the consecration of the bread and wine there takes place a change of the whole substance of the bread into the substance of the body of Christ. (The doctrine this verdict denies.)"
+      },
+      {
+        "url": "https://bookofconcord.org/epitome/the-lords-supper/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord Epitome VII: we reject the papistic transubstantiation, when the bread and wine lose their substance and natural essence and are changed into the body of Christ."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 28: Transubstantiation in the Supper of the Lord cannot be proved by Holy Writ; but is repugnant to the plain words of Scripture, overthroweth the nature of a Sacrament."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article 18: Transubstantiation, or the change of the substance of bread and wine in the Supper of our Lord, cannot be proved by Holy Writ, but is repugnant to the plain words of Scripture."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/holy-eucharist",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "OCA: the mystery of the holy eucharist defies analysis and explanation in purely rational and logical terms. Orthodoxy affirms real change but refuses Latin scholastic specification."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-vs-counter-witness-conflict"
+    ]
+  }
+}

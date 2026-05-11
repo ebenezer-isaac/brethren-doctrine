@@ -1,0 +1,358 @@
+{
+  "id": "doc-pelagianism-denial",
+  "answer": {
+    "id": "doc-pelagianism-denial",
+    "affirms": true,
+    "rationale": "Pelagianism is denied by canonical lexical pattern. Rom 5:12 says sin entered (eiselthen G1525) through one man and death spread (dielthen G1330) to all; Eph 2:1-3 calls all dead (nekrous G3498) in trespasses, by nature children of wrath (phusei tekna orges G5449 G5043 G3709); and salvation in Eph 2:8-9 and Titus 3:5 is grace (charis G5485), not works (erga G2041). The denial that humans are born morally neutral and can earn God by natural ability stands on the pan-canonical lexical reading.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Pelagianism teaches three things: humans are born morally neutral with no inherited Adamic fault, natural will is sufficient to obey God's law, and grace is only example or assistance. Each is contradicted by the canonical lexical pattern in Rom 3, Rom 5, Eph 2, Titus 3, John 6, Jer 13:23, Jer 17:9, and Ps 51:5. Galatians 1:8-9 places a different gospel under anathema (G331), which is why this doctrine is K2 cult-marker eligible. The doctrine was formally condemned at Carthage 418, Ephesus 431, and Orange 529, and is rejected unanimously across patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, and Eastern Orthodox lineages. Public-record carriers of explicit Pelagian or quasi-Pelagian denial include the historical Pelagius and Coelestius, and in modern form certain Unitarian Universalist, Christadelphian, and Mormon teachings that frame humans as essentially good or self-saving."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement asserts the proposition (humans not born morally neutral, unable to choose God by natural ability prior to grace). It does not name Pelagius and does not use party-confessional jargon. Working form retained."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict in plain words. Humans are not born as blank moral slates who can earn their way to God by trying hard. We enter the world already bent toward sin and unable to please God until God himself moves first. The strongest reason from Scripture. Romans 5 says sin and death came into the world through one man and reached every person after him. Romans 3 says no one is righteous, no one understands, no one seeks God. Ephesians 2 says we were dead in trespasses and by nature children of wrath, and that salvation is the gift of God, not by works, so that no one can boast. Titus 3 says he saved us not because of works we did but according to his mercy. John 6 says no one can come to Jesus unless the Father draws him. Jeremiah asks whether the Ethiopian can change his skin or the leopard his spots, then says no more can we who are accustomed to doing evil suddenly start doing good. The strongest counterargument from Scripture. Verses that command obedience like Deuteronomy 30:19 choose life, or Joshua 24:15 choose this day whom you will serve, sound as if the choice is in unaided human reach. Acts 17:30 commands all people everywhere to repent, and James 1:14-15 traces sin to personal desire rather than inherited corruption. How the verdict handles the tension. Scripture commands what humans cannot do apart from grace, then supplies the grace that enables the command. The same Paul who says no one seeks God also begs his hearers to be reconciled to God. The call goes out to all; the power to respond is given by God. Choice and dependence are not rivals in Scripture. They coexist because the new heart is itself promised as a gift in Ezekiel 36:26-27.",
+      "denominational_landscape": "Agreement here is as broad as historic Christianity gets. The patristic church condemned Pelagius at Carthage in 418, reaffirmed at Ephesus in 431, and sealed against semi-Pelagianism at Orange in 529. Augustine's anti-Pelagian writings became the standard reference for East and West. The Roman Catholic Church carries the condemnation in the Catechism paragraph 406, which names Pelagius and rejects his claim that natural free will without divine grace can lead to a morally good life. Lutherans repeat the same rejection in the Augsburg Confession Article II on original sin. Anglicans codify it in Article IX of the 39 Articles, which explicitly names Pelagians and rejects their account of original sin as mere imitation. Methodists, following Wesley, retain Article VII of their Articles of Religion, again naming Pelagians. Reformed confessions, Westminster Chapter 6 and Canons of Dort 3 and 4, teach total inability and the necessity of regenerating grace. Anabaptist confessions affirm fallen nature requiring grace. Pentecostal Assemblies of God teach that humans fell from an upright condition and require regenerating grace, not natural effort. Eastern Orthodoxy, while preferring the language of ancestral sin over inherited guilt, still rejects Pelagian self-salvation and teaches that fallen humanity needs the grace of Christ to be healed. Public-record carriers of denial include the historical Pelagius and Coelestius, and modern movements that approach a Pelagian shape, such as some strands of Unitarian Universalism, Christadelphian moral self-improvement frames, and Mormon eternal progression. Their denial places them outside the historic Christian definition of the gospel itself, which is why Galatians 1:8-9 is repeatedly invoked. This is one of the few doctrines where every major Christian lineage agrees and where early ecumenical and regional councils explicitly used the word heresy."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.5.12",
+        "key_term": "εἰσῆλθεν (eiselthen) G1525, διῆλθεν (dielthen) G1330, ἥμαρτον (hemarton) G264",
+        "force": "Sin entered through one man, death passed through to all, and all sinned. The aorist verbs locate a historical entrance of sin with universal effect.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.18-19",
+        "key_term": "παράπτωμα (paraptoma) G3900, κατάστασις through καθίστημι (kathistemi) G2525",
+        "force": "Through one trespass condemnation came to all; through one man's disobedience the many were constituted sinners. Federal-representational logic of Adamic inheritance.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "Rom.3.10-12",
+        "key_term": "δίκαιος (dikaios) G1342, ἐξέκλιναν (exeklinan) G1578, ἠχρεώθησαν (echreothesan) G889",
+        "force": "None righteous, none understands, none seeks God, all turned aside, all became worthless, none does good. Universal moral incapacity stated five ways in three verses.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism", "merism"]
+      },
+      {
+        "ref": "Eph.2.1-3",
+        "key_term": "νεκρούς (nekrous) G3498, παραπτώμασιν (paraptomasin) G3900, φύσει τέκνα ὀργῆς (phusei tekna orges) G5449 G5043 G3709",
+        "force": "Humans are dead in trespasses, by nature children of wrath. Phusei locates the wrath-bearing condition in nature itself, not chosen acts only.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Eph.2.8-9",
+        "key_term": "χάριτι (chariti) G5485, σεσῳσμένοι (sesosmenoi) G4982, ἔργων (ergon) G2041, δῶρον (doron) G1435",
+        "force": "By grace you have been saved through faith, and this not of yourselves; it is the gift of God, not of works, so that no one may boast.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.3.5",
+        "key_term": "ἔργων ἐν δικαιοσύνῃ (ergon en dikaiosune) G2041 G1343, ἔλεος (eleos) G1656, παλιγγενεσίας (paliggenesias) G3824",
+        "force": "He saved us not by works in righteousness which we did, but according to his mercy, through the washing of regeneration and renewing of the Holy Spirit.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.6.44",
+        "key_term": "ἕλκυσε (helkuse) G1670, δύναται (dunatai) G1410",
+        "force": "No one is able to come to Jesus unless the Father draws him. The verb helkuo is the same one used of dragging nets in John 21:6 and 11; it denotes effective draw, not mere invitation.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.6.65",
+        "key_term": "δεδομένον (dedomenon) G1325",
+        "force": "No one can come to me unless it has been granted him by the Father. Perfect passive participle locates the granting as a standing divine gift.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Ps.51.5",
+        "key_term": "עָוֹן (avon) H5771, חֵטְא (chet) H2399, חוֹלָלְתִּי (cholalti) H2342",
+        "force": "In iniquity I was brought forth, in sin my mother conceived me. David traces sin to conception, not to learned imitation.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "Jer.13.23",
+        "key_term": "הָפַךְ (haphak) H2015, יָכוֹל (yakol) H3201, לִמּוּד לְהָרֵעַ (limmud le-harea) H3928 H7489",
+        "force": "Can the Ethiopian change his skin or the leopard his spots? Then also can you do good who are accustomed to do evil. Rhetorical impossibility of self-reform.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": ["simile", "idiom"]
+      },
+      {
+        "ref": "Jer.17.9",
+        "key_term": "עָקֹב (aqob) H6121, אָנֻשׁ (anush) H605, לֵב (lev) H3820",
+        "force": "The heart is deceitful above all things and incurably sick; who can know it? Locates corruption at the inner-man level, not merely at action level.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "Gal.1.8-9",
+        "key_term": "ἀνάθεμα (anathema) G331, ἕτερον εὐαγγέλιον (heteron euaggelion) G2087 G2098",
+        "force": "If anyone, even an angel, preaches a gospel contrary to the one delivered, let him be anathema. The doubled imperative makes this the strongest apostolic boundary marker.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Deut.30.19",
+        "key_term": "בָּחַר (bachar) H977",
+        "force": "Choose life. A complicating-text candidate: command framed as if choice is in unaided reach. Resolved canonically because the same covenant promises a circumcised heart in Deut 30:6.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "μετανοεῖν (metanoein) G3340",
+        "force": "God commands all people everywhere to repent. Universal command does not entail unaided natural ability; the command and the enabling grace are distinguished in Acts 11:18 and 2 Tim 2:25.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.36.26-27",
+        "key_term": "לֵב חָדָשׁ (lev chadash) H3820 H2319, רוּחַ (ruach) H7307",
+        "force": "I will give you a new heart and put a new spirit within you, and cause you to walk in my statutes. Regenerating grace promised as gift, not earned.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1525",
+      "G1330",
+      "G264",
+      "G3900",
+      "G2525",
+      "G1342",
+      "G1578",
+      "G889",
+      "G3498",
+      "G5449",
+      "G5043",
+      "G3709",
+      "G5485",
+      "G4982",
+      "G2041",
+      "G1435",
+      "G1343",
+      "G1656",
+      "G3824",
+      "G342",
+      "G1670",
+      "G1410",
+      "G1325",
+      "G331",
+      "G2087",
+      "G2098",
+      "G3340",
+      "H5771",
+      "H2399",
+      "H2342",
+      "H6121",
+      "H605",
+      "H3820",
+      "H2015",
+      "H3201",
+      "H3928",
+      "H7489",
+      "H2319",
+      "H7307",
+      "H977"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "dispensationalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "covenant_theology",
+          "verdict": "Affirms Pelagianism denial. Federal headship of Adam reads Rom 5:12-19 as constitutive imputation of guilt and corruption."
+        },
+        {
+          "framework": "dispensationalism",
+          "verdict": "Affirms Pelagianism denial. Classic and progressive dispensationalists alike teach total inability and the necessity of grace; no dispensational distinctive overturns Rom 3, Rom 5, Eph 2."
+        },
+        {
+          "framework": "new_covenant_theology",
+          "verdict": "Affirms Pelagianism denial. Reads the same Pauline pattern, often with stronger discontinuity between old and new covenants but identical anthropology."
+        },
+        {
+          "framework": "progressive_covenantalism",
+          "verdict": "Affirms Pelagianism denial. Same anthropology. No covenantal-structural reading flips the verdict."
+        }
+      ],
+      "notes": "Every major evangelical hermeneutical framework lands on denial of Pelagianism. The lexical pattern across Rom 3, Rom 5, Eph 2, Titus 3, John 6 is not framework-sensitive. Eastern Orthodox accent on ancestral sin rather than inherited guilt still rejects Pelagian self-salvation."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 406",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Pelagius held that man could, by the natural power of free will and without the necessary help of God's grace, lead a morally good life."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II on Original Sin",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "All men begotten in the natural way are born with sin, without the fear of God, without trust in God, and with concupiscence."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VII Of Original or Birth Sin",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin standeth not in the following of Adam (as the Pelagians do vainly talk), but it is the corruption of the nature of every man, naturally engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, Doctrine and Scripture, on sin and salvation",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Man and the world need to be saved. Fallen humanity is thrown into a deathbound universe and cannot save itself; salvation is the work of Christ."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article IX Of Original or Birth-Sin",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original Sin standeth not in the following of Adam (as the Pelagians do vainly talk), but it is the fault and corruption of the Nature of every man."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith chapter 6, Of the Fall of Man, Of Sin, and of the Punishment Thereof",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "By this sin they fell from their original righteousness and communion with God, and so became dead in sin, and wholly defiled in all the faculties and parts of soul and body."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On Nature and Grace, NPNF Series 1 Volume 5",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Nature wounded by Adam requires the inward gift of grace; Pelagius's confidence in unaided nature empties the cross of Christ of its necessity."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 3 The Fall of Man and Article 5 The Salvation of Man",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man was created good and upright, but by voluntary transgression fell, and salvation is received through repentance toward God and faith in Jesus Christ, by grace through faith."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "eiselthen G1525 sin entered; dielthen G1330 passed through to all; hemarton G264 all sinned. Aorist verbs locate a historic entrance with universal reach."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "nekrous G3498 dead in paraptomasin G3900 trespasses; phusei tekna orges G5449 G5043 G3709 by nature children of wrath; chariti G5485 not ergon G2041."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ouk estin dikaios G1342, ouk estin ho ekzeton ton Theon G1567 G2316; exeklinan G1578, echreothesan G889. Universal moral incapacity stated five ways."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ouk ex ergon G2041 en dikaiosune G1343, kata to eleos G1656; esosen hemas G4982 through loutrou paliggenesias G3824."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "oudeis dunatai G1410 elthein ean me ho pater helkuse G1670 auton. No one is able to come unless the Father draws."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/51.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ba-awon H5771 cholalti H2342, u-ve-chet H2399 yechemathni immi. In iniquity I was brought forth, in sin my mother conceived me."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jeremiah/13-23.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "haphak H2015 skin, yakol H3201 be able, limmud H3928 le-harea H7489. Rhetorical impossibility of self-reform for those accustomed to evil."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "heteron euaggelion G2087 G2098 a different gospel; anathema esto G331 G1510 let him be accursed. Doubled apostolic boundary marker."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1C.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 406 names Pelagius and rejects his claim that natural free will, without the necessary help of God's grace, can lead to a morally good life."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession II teaches all are born with sin, without fear of God or trust in God, condemning those who deny that original depravity is sin."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VII names Pelagians by name and defines original sin as the corruption of the nature of every man, not mere imitation of Adam."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/sin",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Orthodox teaching says man and the world need to be saved; fallen humanity cannot redeem itself; salvation is the work of Christ, not natural effort."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

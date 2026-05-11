@@ -1,0 +1,421 @@
+{
+  "id": "doc-bodily-resurrection-of-christ",
+  "answer": {
+    "id": "doc-bodily-resurrection-of-christ",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical pattern: 1 Cor 15:3-4 names the gospel content as Christ died, was buried (etaphe G2290), and was raised (egegertai G1453, perfect indicative passive: completed event with abiding state). 1 Cor 15:14 makes the bodily resurrection the gospel-stake: if Christ has not been raised our preaching (kerygma G2782) is empty (kenos G2756) and so is the believers' faith (pistis G4102). Luke 24:39 names the raised body as having flesh (sarx G4561) and bones (osteon G3747) explicitly distinct from a spirit (pneuma G4151), with the verb pselaphao G5584 (touch and handle to verify). John 20:27 names hand (cheir G5495), side (pleura G4125), and finger (daktylos G1147) as physically inspectable wound-locations. Acts 2:31 says David foresaw the resurrection (anastasis G386, lit. standing up again from anistemi G450) of the Messiah, that his flesh (sarx G4561) did not see corruption (diaphthora G1312). The canonical lexical chain is closed: the same body that died is the same body that was raised, now glorified.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "1 Cor 15:14 ties the bodily resurrection directly to the gospel itself: deny it and the kerygma collapses and faith is empty. This is the highest-confidence cult-marker call in the entire question bank because the canon names it that way internally. Public-record carriers of denial: Jehovah's Witnesses teach a spirit-only resurrection (Christ's body was either dissolved into gases or preserved by God but the risen Christ is a spirit creature, not the same physical body). Christian Science (Mary Baker Eddy) denies the literal bodily resurrection as a material event. Christadelphians teach a form of bodily resurrection but deny the prior deity of Christ, which collapses the meaning. Liberal demythologizers (Bultmann school) explicitly recast the resurrection as a faith-event or rise-of-the-Easter-faith in the disciples rather than a bodily fact about Jesus. The New Testament itself names internal opponents: 2 Tim 2:17-18 names Hymenaeus and Philetus saying the resurrection has already happened and overturning the faith of some. Gnostic-historical streams (Cerinthus, Valentinians) categorically denied bodily resurrection because they treated matter as evil. Mormonism affirms a physical resurrection but inside a non-orthodox Christology. The line stands on canonical lexical demonstration, not on lineage count."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "The statement names the verdict (rose bodily, same physical body, now glorified, not merely spiritual). However the verdict is the lexical content of the canonical witness itself; the question is testable directly against the apparatus, and the alternative reading (spirit-only resurrection) is explicitly named and refuted inside the canon (Luke 24:39 a spirit does not have flesh and bones as you see that I have). No neutralization required; the question is asking about what Scripture itself asserts."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible teaches that Jesus rose from the dead in the same physical body that was crucified, now transformed and glorified, not as a ghost or as a spirit only. The strongest reason is what the risen Jesus says in Luke 24:39. He shows the disciples his hands and feet and says touch me and see, a spirit does not have flesh and bones as you see that I have. He then asks for food and eats broiled fish in front of them, which a non-physical being cannot do. In John 20:27 the risen Jesus tells Thomas to put his finger into the wounds in his hands and his hand into the spear wound in his side. The wounds are still there. In 1 Corinthians 15 Paul says the gospel itself is that Christ died, was buried, and was raised on the third day, and verse 14 says if Christ has not been raised, our preaching is useless and your faith is useless. Paul makes the bodily resurrection the gospel itself. The strongest complicating text is 1 Corinthians 15:50, where Paul says flesh and blood cannot inherit the kingdom of God. Critics use this to argue Paul taught a spirit-only resurrection. But the verse goes on to say the perishable cannot inherit the imperishable, and the rest of the chapter contrasts a perishable body with an imperishable one. Paul is saying the same body is changed, not replaced. The body that is sown is the body that is raised, only now without decay or weakness. Acts 2:31 makes the same point: David foresaw that Christ's flesh would not see corruption. The body did not decay because it was raised. The verdict handles the tension by reading the chapter whole: the body is real, physical, and continuous with what was buried, and it is also glorified beyond its previous mortal condition. Every historic Christian tradition affirms this. The denials come from groups that historic Christianity has identified as outside its boundary.",
+      "denominational_landscape": "Christian lineages are unanimous on the bodily resurrection of Christ as a real, physical event on the third day. The Apostles' Creed and the Nicene Creed both confess it directly. Patristic writers (Athanasius, Tertullian, Augustine), Roman Catholics, Eastern Orthodox, Lutherans (Augsburg Confession III), Anglicans (Article 4), Reformed traditions, Methodists (Wesley's Articles of Religion), Anabaptists, and Pentecostals all affirm it without qualification. The Oriental Orthodox miaphysite churches also affirm bodily resurrection; their disagreement with Chalcedon concerns how the two natures of Christ relate, not whether his body really rose. Public-record carriers of denial fall outside historic Christianity. Jehovah's Witnesses teach a spirit-only resurrection in which the risen Christ is a spirit creature, not the same physical body. Christian Science (Mary Baker Eddy) denies the literal bodily resurrection as a material event. Christadelphians affirm a form of bodily resurrection but deny the prior deity of Christ, which collapses the meaning. Liberal demythologizers in the Bultmann tradition recast the resurrection as a faith-event in the disciples rather than a bodily fact about Jesus. The New Testament itself names two internal opponents in 2 Tim 2:17-18, Hymenaeus and Philetus, who said the resurrection had already happened and overturned the faith of some. Ancient gnostic streams like Cerinthus and the Valentinians categorically rejected bodily resurrection because they treated matter as evil. Mormonism affirms a physical resurrection but inside a non-orthodox Christology and a polytheistic frame."
+    },
+    "scripture": [
+      {
+        "ref": "1Cor.15.3-4",
+        "key_term": "ἀποθνῄσκω apothnesko G599 (died); θάπτω thapto G2290 (was buried, etaphe aorist passive); ἐγείρω egeiro G1453 (was raised, egegertai perfect indicative passive)",
+        "force": "Paul defines the gospel itself as Christ died for our sins, was buried, was raised on the third day. The perfect-tense egegertai is the decisive grammatical feature: completed action with abiding state. Burial and raising are bracketed together, naming the same subject (the body that was placed in the tomb is the body that was raised).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.14",
+        "key_term": "ἐγείρω egeiro G1453 (egegertai); κήρυγμα kerygma G2782 (preaching); πίστις pistis G4102 (faith); κενός kenos G2756 (empty, in vain)",
+        "force": "If Christ has not been raised, our preaching is empty and your faith is empty. Paul makes the bodily resurrection the gospel-stake. Deny it and the entire Christian message collapses by Paul's own grammar. This is why bodily resurrection is a cult-marker line: the canon itself names it that way.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.17",
+        "key_term": "ἐγείρω egeiro G1453; μάταιος mataios G3152 (futile); ἁμαρτία hamartia G266 (sin)",
+        "force": "If Christ has not been raised, your faith is futile and you are still in your sins. Paul ties salvation itself to the resurrection as a historical fact about Jesus's body. No raised body means no completed atonement.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.42-44",
+        "key_term": "σῶμα soma G4983 (body); φθορά phthora G5356 (perishable); ἀφθαρσία aphtharsia G861 (imperishable); ψυχικός psychikos G5591 (natural); πνευματικός pneumatikos G4152 (spiritual)",
+        "force": "Sown perishable, raised imperishable; sown a natural body, raised a spiritual body. Pneumatikos here means animated by the Spirit, not made of spirit-stuff (parallel to psychikos meaning animated by the soul, not made of soul-stuff). The same body is sown and raised; it is the body's mode that changes, not its substance. Rules out a spirit-only interpretation while preserving glorification.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.50",
+        "key_term": "σάρξ καὶ αἷμα sarx kai haima G4561 G129 (flesh and blood); φθορά phthora G5356 (the perishable); ἀφθαρσία aphtharsia G861 (the imperishable)",
+        "force": "Flesh and blood cannot inherit the kingdom of God; the perishable cannot inherit the imperishable. Used by JWs to argue spirit-only resurrection. Lexical answer: Paul's own parallel clause defines flesh and blood as the perishable mortal condition, not as physical material. The same chapter (15:39-42) explicitly names different kinds of flesh (human, animal, fish, birds) and treats the raised body as still a body, only imperishable. Complicates only if read against Paul's own definition in the next clause.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Luke.24.39",
+        "key_term": "σάρξ sarx G4561 (flesh); ὀστέον osteon G3747 (bone); πνεῦμα pneuma G4151 (spirit); ψηλαφάω pselaphao G5584 (touch, handle to verify)",
+        "force": "See my hands and my feet, that it is I myself; touch me and see, for a spirit does not have flesh and bones as you see that I have. The risen Jesus directly contrasts his risen body with a disembodied spirit and names flesh and bones as the discriminating evidence. The verb pselaphao is tactile verification, not visual only. The next verses (24:41-43) record him eating broiled fish in front of them, which a non-physical being cannot do. Lexically closes spirit-only readings.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.20.27",
+        "key_term": "χείρ cheir G5495 (hand); πλευρά pleura G4125 (side); δάκτυλος daktylos G1147 (finger); πιστός pistos G4103 (believing)",
+        "force": "To Thomas: put your finger here and see my hands; reach out your hand and put it into my side; do not disbelieve but believe. The wounds in the risen body are still locatable and touchable. Continuity of the crucified body with the risen body is lexically explicit (the same wounds, in the same locations).",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.2.19-21",
+        "key_term": "ναός naos G3485 (temple); ἐγείρω egeiro G1453 (raise up); σῶμα soma G4983 (body)",
+        "force": "Destroy this temple and in three days I will raise it up. John 2:21 the narrator says he was speaking about the temple of his body (soma). Jesus's own prediction makes the resurrection a bodily event. The same body that is destroyed is the body that is raised.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.2.24-32",
+        "key_term": "ἀνίστημι anistemi G450 (raised up); ἀνάστασις anastasis G386 (resurrection); σάρξ sarx G4561 (flesh); διαφθορά diaphthora G1312 (corruption, decay)",
+        "force": "Peter at Pentecost: God raised him up (anestesen aorist active of anistemi), loosing the pains of death. Quoting Ps 16:10 David foresaw the resurrection (anastasis G386) of the Messiah, that his soul was not abandoned to Hades and his flesh (sarx) did not see corruption (diaphthora). The body did not decay. The very meaning of anastasis (a standing-up-again) presupposes the body that fell rises.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.1.4",
+        "key_term": "ὁρίζω horizo G3724 (declared, marked out); ἀνάστασις anastasis G386; νεκρός nekros G3498 (dead)",
+        "force": "Declared the Son of God in power according to the Spirit of holiness by his resurrection from the dead. Paul opens Romans with the bodily resurrection as the public divine declaration about Jesus. Anastasis ek nekron (resurrection out of dead ones) presupposes the body coming up from among corpses.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.11",
+        "key_term": "ἐγείρω egeiro G1453; θνητός thnetos G2349 (mortal); σῶμα soma G4983 (body); πνεῦμα pneuma G4151",
+        "force": "The Spirit of him who raised Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you. Paul makes Jesus's bodily resurrection the template for the believer's future bodily resurrection. Both are bodies (soma), both are physical, both are the same body that died, now made alive.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.28.5-9",
+        "key_term": "ἐγείρω egeiro G1453; μνημεῖον mnemeion G3419 (tomb); κρατέω krateo G2902 (took hold of)",
+        "force": "He is not here; for he is risen, as he said. Come, see the place where he lay. The empty tomb is treated as evidential. v.9 the women take hold of his feet and worship him (ekratesan autou tous podas). Physical contact with the risen Jesus is the first eyewitness verification.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Mark.16.6",
+        "key_term": "ἐγείρω egeiro G1453; σταυρόω stauroo G4717 (crucified); τόπος topos G5117 (place)",
+        "force": "Jesus the Nazarene who was crucified, he has risen, he is not here; see the place where they laid him. The same Jesus who was crucified is the Jesus who has risen. Subject continuity is explicit. Empty tomb is shown as evidence.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Phil.3.21",
+        "key_term": "μετασχηματίζω metaschematizo G3345 (transform); σῶμα soma G4983 (body); ταπείνωσις tapeinosis G5014 (lowly); δόξα doxa G1391 (glory)",
+        "force": "He will transform our lowly body to be like his glorious body. Paul names Christ's risen body as the pattern (soma tes doxes autou) and ours as the same thing transformed (metaschematizo, change of form not substance). The risen body of Jesus is a body.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.1.3",
+        "key_term": "ἀναγεννάω anagennao G313 (begotten again); ἀνάστασις anastasis G386; νεκρός nekros G3498",
+        "force": "He has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead. Bodily resurrection is named as the historical event that grounds Christian regeneration. Not a metaphor; an event.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.2.17-18",
+        "key_term": "ἀνάστασις anastasis G386; γίνομαι ginomai G1096 (has already happened)",
+        "force": "Hymenaeus and Philetus have swerved from the truth, saying the resurrection has already happened, and they are upsetting the faith of some. Paul names denial or distortion of bodily resurrection as a faith-overturning error. Internal canonical witness that this doctrine is a fence around the gospel itself.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.32",
+        "key_term": "ἀνάστασις anastasis G386; νεκρός nekros G3498",
+        "force": "When they heard of the resurrection of the dead, some mocked. The Athenian Greek-philosophical reaction to a literal bodily resurrection was mockery, confirming Paul preached an actual physical event, not a metaphor. If Paul had meant a spirit-only afterlife, the Areopagus would not have mocked; they already believed in immortal souls.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Ps.16.10",
+        "key_term": "שְׁאוֹל sheol H7585 (the grave); שַׁחַת shachat H7845 (the pit, corruption); נֶפֶשׁ nephesh H5315 (soul)",
+        "force": "You will not abandon my soul to Sheol or let your holy one see the pit. Quoted by Peter (Acts 2:27) and Paul (Acts 13:35) as the OT prediction that the Messiah's body would not undergo physical decay. Bodily resurrection is rooted in OT prophecy.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": []
+      },
+      {
+        "ref": "Job.19.25-26",
+        "key_term": "גָּאַל gaal H1350 (redeemer); קוּם qum H6965 (will stand); בָּשָׂר basar H1320 (flesh)",
+        "force": "I know that my Redeemer lives, and at the last he will stand upon the earth; and after my skin has been thus destroyed, yet in my flesh I shall see God. Earliest OT witness to bodily resurrection hope; in my flesh (mibbesari) makes the hope physical, not spirit-only.",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": []
+      },
+      {
+        "ref": "Dan.12.2",
+        "key_term": "יָקַץ yaqatz H6974 (awake); עָפָר aphar H6083 (dust); עוֹלָם olam H5769 (everlasting)",
+        "force": "Many of those who sleep in the dust of the earth shall awake, some to everlasting life and some to shame. The OT general resurrection hope is bodily; those in the dust come up from the dust. Pattern for the Messiah's resurrection: same body, raised from where it was buried.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1453",
+      "G450",
+      "G386",
+      "G2290",
+      "G599",
+      "G3498",
+      "G4561",
+      "G3747",
+      "G4151",
+      "G4983",
+      "G5584",
+      "G5495",
+      "G4125",
+      "G1147",
+      "G4103",
+      "G2782",
+      "G4102",
+      "G2756",
+      "G3152",
+      "G266",
+      "G5356",
+      "G861",
+      "G5591",
+      "G4152",
+      "G129",
+      "G1312",
+      "G3485",
+      "G3419",
+      "G2902",
+      "G4717",
+      "G5117",
+      "G3345",
+      "G5014",
+      "G1391",
+      "G313",
+      "G1096",
+      "G2349",
+      "G3724",
+      "H7585",
+      "H7845",
+      "H5315",
+      "H1350",
+      "H6965",
+      "H1320",
+      "H6974",
+      "H6083",
+      "H5769"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [],
+      "notes": "Grammatico-historical reading of the canonical lexical pattern is sufficient and decisive. No interpretive framework (covenantal, dispensational, new-covenant, progressive-covenantalism) produces a different verdict; the bodily resurrection sits prior to and underneath every framework as part of the gospel itself (1 Cor 15:1-4). Analogia scripturae is heavily invoked: the verdict rests on a pan-canonical chain (1 Cor 15, Luke 24, John 20, Acts 2, Acts 17, Rom 1, Rom 8, Matt 28, Mark 16, Phil 3, 1 Pet 1, plus OT roots in Ps 16, Job 19, Dan 12) rather than any single passage. Progressive revelation is a factor: the OT seeds bodily resurrection hope (Job 19:26 in my flesh, Dan 12:2 awake from dust, Ps 16:10 not see corruption), and the NT discloses the historical realization in Jesus. The seeming complication at 1 Cor 15:50 (flesh and blood cannot inherit the kingdom) resolves inside Paul's own grammar: he defines flesh and blood as the perishable, not as physicality, in the very next clause. No competing-lens verdict survives the canon as a whole."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Apostles' Creed and Nicene Creed (325/381), confessed universally in the early church",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "On the third day he rose again according to the Scriptures; we look for the resurrection of the dead and the life of the world to come."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasius, On the Incarnation, chapters 22-32, CCEL https://ccel.org/ccel/athanasius/incarnation",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The body, by enduing itself with life, might cast corruption off; the Word assumed a body that the body itself might be transformed from mortality to immortality."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, On the Resurrection of the Flesh (De Resurrectione Carnis), CCEL ANF Vol 3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The resurrection of the dead is the Christian's trust. By it we are believers. The flesh shall rise again, all flesh; the very same; the entire flesh."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God Book XXII chapters 4-21, CCEL NPNF Series 1 Vol 2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The bodies of the saints shall rise again, free from all blemish and deformity, with all members entire, in the full vigor and beauty of their youth."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church, paragraphs 638-658 (The Resurrection of Jesus Christ)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Resurrection of Jesus is the crowning truth of our faith in Christ. It is at once an historical event verified by witnesses and a transcendent event involving Christ's body."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession (1530), Article III (On the Son of God), bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He also descended into hell, and truly rose again the third day; afterward he ascended into heaven that he might sit on the right hand of the Father."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion (1571), Article IV Of the Resurrection of Christ",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ did truly rise again from death, and took again his body, with flesh, bones, and all things appertaining to the perfection of Man's nature."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith (1646), Chapter 8, paragraph 4",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "On the third day He arose from the dead, with the same body in which He suffered, with which also he ascended into heaven, and there sitteth at the right hand of His Father."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion (Wesley's abridgement of the 39 Articles), Article III",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ did truly rise again from the dead, and took again his body, with all things appertaining to the perfection of man's nature, wherewith he ascended into heaven."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Dordrecht Confession of Faith (1632), Article IV (On the Coming of Christ)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "He was buried, rose again from the dead on the third day, ascended to heaven, and sits at the right hand of God the Father."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Article 2.B and Article 7 (The Deity of the Lord Jesus Christ; The Salvation of Man)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We believe in his physical resurrection from the dead, his ascension to the right hand of the Father, and his personal return in power and glory."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith Volume I, Doctrine: The Resurrection",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "What is sown is perishable, what is raised is imperishable; it is sown in dishonor, it is raised in glory. The risen Christ exists in a new and glorious form."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 15:4: egegertai (perfect indicative passive of egeiro G1453) the third day according to the Scriptures. Completed event with abiding state; not undone."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 15:14: if Christ has not been raised (egegertai G1453), our kerygma (G2782) is empty (kenos G2756) and your pistis (G4102) is empty. Bodily resurrection is the gospel-stake by Paul's own grammar."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/luke/24-39.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Luke 24:39: a spirit (pneuma G4151) does not have flesh (sarx G4561) and bones (osteon G3747) as you see that I have. Touch (pselaphao G5584) me and see. Tactile verification commanded."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/20-27.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 20:27: put your finger (daktylos G1147) here and see my hands (cheir G5495); put your hand into my side (pleura G4125). The crucifixion wounds remain locatable on the risen body."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-31.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 2:31: David foresaw the resurrection (anastasis G386) of the Christ, that his flesh (sarx G4561) did not see corruption (diaphthora G1312). The body did not decay."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1453.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Egeiro G1453: to raise, awaken from sleep or death. Used 144x in NT, predominantly of bodily resurrection. The perfect tense egegertai applied to Christ is the standard apostolic formula."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/386.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Anastasis G386: a standing up again, from anistemi G450. 42x in NT. The very word presupposes the body that fell rises. Acts 17:32 the Greek philosophers mock precisely because Paul means a physical event."
+      },
+      {
+        "url": "https://ccel.org/ccel/athanasius/incarnation",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Athanasius On the Incarnation: the body, by enduing itself with Life, might cast corruption off. The Word assumed a body so the body itself could be transformed from mortality to immortality."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-the-son-of-god/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article III: He also descended into hell, and truly rose again the third day; afterward he ascended into heaven that he might sit on the right hand of the Father."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article III: Christ did truly rise again from the dead, and took again his body, with all things appertaining to the perfection of man's nature, wherewith he ascended into heaven."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/resurrection",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: what is sown is perishable, what is raised is imperishable; it is sown in dishonor, it is raised in glory. The risen Christ exists in a new and glorious form within the eternal life of God's Kingdom."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-50.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "1 Cor 15:50: sarx kai haima (G4561 G129) cannot inherit the kingdom; phthora (G5356) cannot inherit aphtharsia (G861). Paul's parallel defines flesh and blood as the perishable, not as physicality."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 15:44: sown a psychikos (G5591, soul-animated) body, raised a pneumatikos (G4152, Spirit-animated) body. Both are soma G4983 (body). Pneumatikos here is not made-of-spirit but Spirit-energized."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "apparatus-paywalled"
+    ]
+  }
+}

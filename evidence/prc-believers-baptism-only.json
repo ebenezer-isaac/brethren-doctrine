@@ -1,0 +1,553 @@
+{
+  "id": "prc-believers-baptism-only",
+  "answer": {
+    "id": "prc-believers-baptism-only",
+    "affirms": true,
+    "rationale": "Every New Testament conversion narrative where the order is grammatically specifiable places conscious belief or reception of the word before baptism, and the apostolic baptismal practice is described in those terms: Acts 2:38 metanoesate (G3340 aorist active imperative 2p) precedes baptistheto (G907 aorist passive imperative 3s); Acts 2:41 hoi apodexamenoi (G588 aorist middle participle) ton logon ebaptisthesan (G907); Acts 8:12 episteusan (G4100 aorist) tois euangelizomenois then ebaptizonto (G907 imperfect) andres te kai gunaikes; Acts 8:36-38 the Ethiopian eunuch's question ti koluei me baptisthenai (G2967 G907) follows Philip's preaching of Iesous (Acts 8:35); Acts 16:31-33 the gospel was spoken to the jailer kai pasin tois en te oikia autou (G3614) and the household was baptized after hearing, with Acts 16:34 stating pepisteukos panoikei (G4100 perfect participle plus G3832 'with the whole household'); Mark 16:16 ho pisteusas kai baptistheis sothesetai pairs matched aorist participles in the canonical order. 1 Peter 3:21 defines baptisma (G908) as syneideseos agathes eperotema (G4893 G1906, an appeal of a good conscience toward God), which presupposes conscience-engagement that an infant cannot make. The Reformed paedobaptist case rests on covenantal-continuity inference from Genesis 17 circumcision through Colossians 2:11-12 and on the household-baptism narratives where infants are nowhere named; this inference is hermeneutically defensible but the lexical-narrative pattern of believer-baptism is the only practice the New Testament narrates or commands directly. The practice statement (baptize only those who have made a credible profession of faith) is the church-practice corollary of the doctrinal pattern affirmed in doc-baptism-faith-precedes and doc-paedobaptism-not-warranted.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "This is the church-practice implication of the doctrinal question handled in doc-baptism-faith-precedes (narrative pattern of faith preceding baptism) and doc-paedobaptism-not-warranted (paedobaptism as an inference not a New Testament command). The two doctrinal questions arrived at affirms=true with would_die_for=false and cult_marker_if_denied=false; the same lexical evidence carries this practice question by direct entailment. Carriers of the credobaptist practice as a confessional norm include the Anabaptist tradition (Schleitheim Confession 1527 Article 1, Mennonite, Amish, Hutterite, Brethren in Christ), the Baptist tradition (Particular Baptists in the 1689 London Baptist Confession chapter 29, General Baptists, Southern Baptists, modern Baptist denominations globally), the Plymouth Brethren, classical Pentecostal bodies including the Assemblies of God, the Churches of Christ, and most non-denominational evangelical and charismatic bodies. Carriers of the paedobaptist practice as confessional norm include the Roman Catholic Church (Catechism 1250-1252), the Eastern Orthodox communions (infant baptism plus chrismation), the Lutheran tradition (Augsburg Confession Article 9, Luther's Large Catechism Part Four), the Anglican tradition (Article 27 of the 39 Articles), the Reformed tradition (Westminster Confession chapter 28, Heidelberg Catechism question 74, Belgic Confession Article 34, Three Forms of Unity), and the United Methodist tradition (which practices both infant baptism and believer's baptism in the same body). The would_die_for and cult_marker booleans are both false because the practice disagreement does not constitute denial of the gospel, the Trinity, or two-natures Christology; major paedobaptist bodies confess the Nicene-Chalcedonian gospel cleanly. The engagement-ladder booleans reflect that I can visit and participate in a paedobaptist worship service, but membership and especially the catechesis of my own children would not sit comfortably under a tradition that teaches infants are incorporated into the visible church and into Christ by water baptism apart from personal repentance and faith, because that teaching can obstruct a later personal reckoning with conversion. would_marry_if_held_otherwise is true; would_publicly_correct_if_otherwise is false because the position is held by the majority of historic Christianity in good faith. Public-record cult or heterodox bodies also practice credobaptism (Mormonism at age eight, Jehovah's Witnesses, Iglesia ni Cristo), but their Trinitarian and Christological denials, not their baptismal subjects, place them outside historic Christianity; the credobaptist practice itself is squarely within historic Christianity."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Which church-baptismal practice is warranted by the New Testament: baptizing only those who have made a credible profession of faith, or baptizing both professing believers and infants of believing parents on the covenant-sign principle?",
+      "notes": "The original practice statement asserts the credobaptist verdict directly in its own stem ('Baptism is for professing believers only, not for infants'). The neutralized form poses the practice question without preloading the verdict. The lexical-narrative evidence still favors the credobaptist practice as the direct apostolic pattern, but the paedobaptist practice is grounded in a covenantal-continuity inference that the New Testament does not lexically refute. Flag stem-pre-loaded-verdict raised. Working the neutralized form, the practice question is answered by the same canonical evidence that settled doc-baptism-faith-precedes and doc-paedobaptism-not-warranted: the New Testament narrates and commands the baptism of professing believers; the New Testament neither narrates nor commands the baptism of infants of believing parents; therefore the practice statement holds at the apostolic-pattern level, with the honest acknowledgment that the paedobaptist case rests on a hermeneutically defensible covenantal inference."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: the church should baptize those who have personally received the message of Jesus and made a credible profession of faith. The Bible nowhere shows an infant being baptized and nowhere commands it. Every recorded baptism scene shows a person hearing, believing or repenting, and then being baptized. The strongest reasons for this come from the conversion stories in Acts and from the way the New Testament defines what baptism is. In Acts 2 verse 38 Peter tells the crowd at Pentecost to repent and then be baptized, with repentance addressed to the same people who are then commanded to be baptized. In Acts 2 verse 41 only those who received Peter's word were baptized. In Acts 8 verse 12 men and women believed Philip preaching the good news and then were baptized; the text notably does not say children or babies. In Acts 8 verses 36 to 38 the Ethiopian eunuch hears Philip preach Jesus from Isaiah 53, sees water, and asks what hinders him from being baptized; only after his profession does Philip baptize him. In Acts 16 verses 31 to 34 Paul tells the Philippian jailer to believe in the Lord Jesus, then Paul and Silas speak the word of the Lord to the jailer and to all who were in his house, then they are baptized, and the text says the jailer rejoiced together with his whole household having believed in God. Mark 16 verse 16 places believing before being baptized in the word order. 1 Peter 3 verse 21 describes baptism as an appeal of a good conscience toward God, which is something an unconscious infant cannot offer. The strongest counterargument from Scripture itself runs through the covenant-continuity texts. Genesis 17 records God commanding Abraham to circumcise infant males at eight days as the sign of the covenant. Colossians 2 verses 11 and 12 calls baptism the circumcision of Christ, suggesting that the new covenant sign replaces the old one. Acts 2 verse 39 says the promise is for you and for your children. The book of Acts describes several whole households being baptized, including Lydia, the jailer, and the household of Stephanas, without ever stopping to say only the adults among them. Some Christians read this as evidence that the apostles routinely baptized the children of believers along with the believing head of the household. The verdict handles the tension this way. The household narratives describe households where belief is either named of all members (the jailer rejoiced with all his household having believed; the Corinthians heard, believed, and were baptized) or where the household is described elsewhere as adults devoted to ministry (Stephanas's household in 1 Corinthians 16 verse 15). Acts 2 verse 39 in context conditions the promise on the call of the Lord and on the repentance commanded in verse 38. Colossians 2 verse 12 explicitly ties baptismal efficacy to faith in the working of God. The tension does not vanish. The covenantal-continuity inference from Genesis 17 to infant baptism is a real reading of the canon, just not commanded or modeled anywhere in the New Testament. Both readings are honest engagements with the same passages.",
+      "denominational_landscape": "This is the largest visible in-house Christian disagreement on church practice. The credobaptist practice (baptize only those who have made a credible profession of faith) is the universal norm in the Anabaptist tradition (Mennonite, Amish, Hutterite, Bruderhof, Brethren in Christ, from the Schleitheim Confession of 1527), the Baptist tradition (Particular Baptists in the 1689 London Baptist Confession chapter 29, General Baptists, Southern Baptists, modern Baptist denominations globally), the Plymouth Brethren from the early 1800s, the Churches of Christ stemming from the 19th century Restoration Movement, classical Pentecostal bodies including the Assemblies of God, and most independent evangelical and non-denominational churches. The paedobaptist practice (baptize both professing converts and infants of believing parents) is the universal norm in the Roman Catholic Church (Catechism paragraphs 1250 to 1252), the Eastern Orthodox communions (infant baptism by triple immersion plus chrismation as one initiation), the Lutheran tradition (Augsburg Confession Article 9, Luther's Large Catechism), the Anglican tradition (Article 27 of the 39 Articles), and the Reformed tradition (Westminster Confession chapter 28, Heidelberg Catechism question 74, Belgic Confession Article 34). The United Methodist tradition holds a hybrid position: it retains the baptism of young children per Wesley's abridgement of the 39 Articles (Article 17) and also baptizes professing adult converts, treating baptism as a means of grace that does not require repetition. The historical numbers favor the paedobaptist practice: from approximately AD 200 through AD 1525 (roughly thirteen centuries), infant baptism was the universal practice of the visible church East and West, broken only by the Radical Reformation Anabaptists in the 1520s and the English Baptists from the early 1600s. Tertullian in the early third century (On Baptism chapter 18) counseled deferral of infant baptism until a child could know Christ; this is the earliest significant patristic credobaptist voice, but Tertullian's own counsel presupposes that infant baptism was already a contested practice in his day. Globally today the credobaptist practice is a minority though significant in Anglo-American evangelicalism and in growing Pentecostal and charismatic movements in the Global South. Cult or heterodox bodies that share the credobaptist practice are not vindicated by the practice itself: Mormonism baptizes at age eight under restored-priesthood claims that fall outside historic Christianity, Jehovah's Witnesses baptize professing converts under a Christology that denies the deity of Christ, and Iglesia ni Cristo baptizes professing converts under a Christology that similarly denies the deity of Christ. The credobaptist practice itself is squarely within historic Christianity; the cult-marker attaches to underlying Trinitarian and Christological commitments, not to baptismal subjects."
+    },
+    "scripture": [
+      {
+        "ref": "Acts.2.38",
+        "key_term": "μετανοήσατε καὶ βαπτισθήτω ἕκαστος ὑμῶν ἐπὶ τῷ ὀνόματι Ἰησοῦ Χριστοῦ εἰς ἄφεσιν τῶν ἁμαρτιῶν ὑμῶν; metanoeo G3340 aorist active imperative 2p; baptizo G907 aorist passive imperative 3s; hekastos G1538 each one; aphesis G859 forgiveness",
+        "force": "'Repent, and let each of you be baptized in the name of Jesus Christ for the forgiveness of your sins.' Repentance is the antecedent imperative addressed to the assembled hearers; baptism follows, with each one (hekastos) as the unit. The two imperatives are joined but ordered, and repentance presupposes conscious moral capacity. The apostolic command for baptismal practice on the day the church was inaugurated is given as repent-then-be-baptized.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.41",
+        "key_term": "οἱ μὲν οὖν ἀποδεξάμενοι τὸν λόγον αὐτοῦ ἐβαπτίσθησαν; apodechomai G588 aorist middle participle nominative masculine plural; logos G3056; baptizo G907 aorist passive indicative 3p",
+        "force": "'So those who received his word were baptized.' The participle apodexamenoi establishes the temporal-logical antecedent: only those who had received the word are the ones who were then baptized. This is the canonical Lukan template for apostolic baptismal practice and the immediate Pentecost-day model the church followed.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.12",
+        "key_term": "ὅτε δὲ ἐπίστευσαν τῷ Φιλίππῳ εὐαγγελιζομένῳ περὶ τῆς βασιλείας τοῦ θεοῦ καὶ τοῦ ὀνόματος Ἰησοῦ Χριστοῦ ἐβαπτίζοντο ἄνδρες τε καὶ γυναῖκες; pisteuo G4100; euangelizo G2097; baptizo G907; aner G435; gyne G1135",
+        "force": "'When they believed Philip preaching the good news of the kingdom of God and the name of Jesus Christ, they were baptized, both men and women.' The temporal clause sets believing as prior; the text names the baptized recipients as men and women (andres te kai gunaikes), with no mention of paidia (children) or brephe (infants). Where Luke could have specified families-with-infants if that had been the practice, the absence is exegetically significant.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.36",
+        "key_term": "ἰδοὺ ὕδωρ τί κωλύει με βαπτισθῆναι; idou G2400; hydor G5204; koluo G2967 present active indicative 3s; baptizo G907 aorist passive infinitive",
+        "force": "'Look, water. What hinders me from being baptized?' The eunuch's question follows Philip's preaching of Iesous from Isaiah 53 (Acts 8:35). The verb koluei (hinders) presupposes a condition that must be met before baptism; the implicit condition is faith, which Philip elsewhere requires (cf. Acts 8:12 episteusan). v.37 (the eunuch's explicit profession) is text-critically disputed in NA28 and UBS5 as a Western expansion, but the surrounding lexical pattern preserves the same condition.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.37",
+        "key_term": "εἰ πιστεύεις ἐξ ὅλης τῆς καρδίας ἔξεστιν... πιστεύω τὸν Ἰησοῦν Χριστὸν εἶναι τὸν υἱὸν τοῦ θεοῦ; pisteuo G4100; kardia G2588; huios G5207",
+        "force": "'If you believe with all your heart, you may... I believe Jesus Christ to be the Son of God.' The explicit profession demanded as the condition for baptism. NOTE: this verse is absent from the earliest critical-text manuscripts (Vaticanus, Sinaiticus) and is bracketed or footnoted in NA28 and UBS5 as a Western interpolation. Its evidential weight as direct apostolic text is reduced; however, it preserves an early-second-century pattern of pre-baptismal confession that aligns with the practice patterns visible in Acts 2:41, 8:12, 16:31-33, and 18:8.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.31",
+        "key_term": "πίστευσον ἐπὶ τὸν κύριον Ἰησοῦν καὶ σωθήσῃ σὺ καὶ ὁ οἶκός σου; pisteuo G4100 aorist active imperative 2s; sozo G4982 future passive indicative 2s; oikos G3624",
+        "force": "'Believe upon the Lord Jesus and you will be saved, you and your household.' The imperative pisteuson is addressed to the jailer as the head; the consequent salvation extends to his household. Paedobaptists read this as covenant-household promise; credobaptists read it as the offer extending to each member who would believe, which v.34 confirms by stating panoikei pepisteukos (the whole household having believed).",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.32",
+        "key_term": "ἐλάλησαν αὐτῷ τὸν λόγον τοῦ κυρίου σὺν πᾶσιν τοῖς ἐν τῇ οἰκίᾳ αὐτοῦ; laleo G2980; logos G3056; oikia G3614; pas G3956",
+        "force": "'And they spoke the word of the Lord to him and to all who were in his house.' Before any baptism, Paul and Silas preached the word (ton logon tou kyriou) to the jailer and to ALL those in his house (sun pasin tois en te oikia autou). The text records a household-wide hearing of the word as the antecedent to the household-wide baptism in v.33. This lexical detail is the load-bearing answer to the paedobaptist reading of the household narratives: the household members heard the word before they were baptized.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.33",
+        "key_term": "παραλαβὼν αὐτοὺς ἐν ἐκείνῃ τῇ ὥρᾳ τῆς νυκτὸς ἔλουσεν ἀπὸ τῶν πληγῶν καὶ ἐβαπτίσθη αὐτὸς καὶ οἱ αὐτοῦ πάντες παραχρῆμα; baptizo G907 aorist passive indicative 3s; paralambano G3880; pas G3956",
+        "force": "'Taking them at that hour of the night, he washed their wounds, and he was baptized, he and all his, immediately.' The household baptism is recorded; v.32 supplies that the word was preached to all in the house first, and v.34 supplies the qualifier that the jailer rejoiced together with the whole household having believed. The collective baptism follows a collective hearing-and-believing event.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.34",
+        "key_term": "ἠγαλλιάσατο πανοικεὶ πεπιστευκὼς τῷ θεῷ; agalliao G21 aorist middle indicative 3s; panoikei G3832 adverb; pisteuo G4100 perfect active participle nominative masculine singular",
+        "force": "'He rejoiced with the whole household, having believed in God.' The perfect participle pepisteukos agrees grammatically with the jailer; the adverb panoikei ('in a whole-household manner') modifies the rejoicing and most naturally extends to the believing as well. The credobaptist reading takes panoikei to qualify both rejoicing and believing, yielding a whole-household-believing antecedent to the whole-household baptism in v.33.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.18.8",
+        "key_term": "Κρίσπος δὲ ὁ ἀρχισυνάγωγος ἐπίστευσεν τῷ κυρίῳ σὺν ὅλῳ τῷ οἴκῳ αὐτοῦ καὶ πολλοὶ τῶν Κορινθίων ἀκούοντες ἐπίστευον καὶ ἐβαπτίζοντο; pisteuo G4100; akouo G191; baptizo G907",
+        "force": "'And Crispus, the ruler of the synagogue, believed in the Lord with his entire household, and many of the Corinthians, hearing, believed and were baptized.' Belief is predicated of Crispus together with his whole household BEFORE baptism is mentioned. The wider Corinthian crowd is described in three sequential verb-actions: hearing (akouontes, present participle), believing (episteuon, imperfect indicative), being baptized (ebaptizonto, imperfect indicative). The triple-verb sequence lays the canonical apostolic practice: hear, believe, be baptized.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Mark.16.16",
+        "key_term": "ὁ πιστεύσας καὶ βαπτισθεὶς σωθήσεται; pisteuo G4100 aorist active participle nominative masculine singular; baptizo G907 aorist passive participle nominative masculine singular; sozo G4982 future passive indicative 3s",
+        "force": "'The one who has believed and has been baptized will be saved.' Both participles are aorist, matched in form, placed in canonical order with believing first. The condemnation clause in the second half names unbelief (apistos) as the disqualifier, not unbaptism, presupposing that baptism follows belief. NOTE: Mark 16:9-20 is the long ending and is absent from the earliest manuscripts; modern critical editions bracket it. The lexical force is preserved across the variants where the ending is read.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.10.44",
+        "key_term": "ἔτι λαλοῦντος τοῦ Πέτρου τὰ ῥήματα ταῦτα ἐπέπεσεν τὸ πνεῦμα τὸ ἅγιον ἐπὶ πάντας τοὺς ἀκούοντας τὸν λόγον; epipipto G1968 aorist active indicative 3s; pneuma G4151; akouo G191",
+        "force": "'While Peter was still speaking these words, the Holy Spirit fell upon all who were hearing the word.' Cornelius's household received the Spirit during Peter's preaching, before any water baptism. The reception of the Spirit (which presupposes faith, Eph 1:13) is the prior event; water baptism in v.48 follows.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.10.47",
+        "key_term": "μήτι τὸ ὕδωρ δύναται κωλῦσαί τις τοῦ μὴ βαπτισθῆναι τούτους οἵτινες τὸ πνεῦμα τὸ ἅγιον ἔλαβον; lambano G2983; pneuma G4151; baptizo G907; koluo G2967",
+        "force": "'Can anyone withhold the water for these not to be baptized, who received the Holy Spirit as we also did?' Peter grounds the propriety of water baptism on the prior reception of the Spirit. The lexical sequence is hearing, Spirit-reception, then water baptism. This is the apostolic warrant for baptizing those whose Spirit-reception (faith) is already evident, which the practice statement encodes.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "ἧς ὁ κύριος διήνοιξεν τὴν καρδίαν προσέχειν τοῖς λαλουμένοις ὑπὸ τοῦ Παύλου; dianoigo G1272 aorist active indicative 3s; kardia G2588; prosecho G4337 present active infinitive",
+        "force": "'Whose heart the Lord opened to attend to what was spoken by Paul.' Lydia's conversion is described by an aorist of dianoigo (to open thoroughly); the opening is divine, the attending is human-personal. The text records HER opened heart and attentive hearing; HER household baptism follows in v.15 without further description of their state. The credobaptist reading takes the same opening-of-heart pattern as the implicit antecedent for the household members.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.15",
+        "key_term": "ὡς δὲ ἐβαπτίσθη καὶ ὁ οἶκος αὐτῆς; baptizo G907 aorist passive indicative 3s; oikos G3624 nominative masculine singular",
+        "force": "'When she was baptized and her household.' The household baptism is recorded with no enumeration of members and no statement about their ages or faith. Paedobaptists treat this as silent licensure of household-inclusion; credobaptists note that oikos in Greco-Roman usage routinely includes adult relatives, dependents, and slaves who could themselves believe consciously, and that Lydia's household is described as receiving Paul and Silas as house-guests in the same verse, which presupposes adult agency.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.16",
+        "key_term": "ἐβάπτισα δὲ καὶ τὸν Στεφανᾶ οἶκον; baptizo G907 aorist active indicative 1s; oikos G3624 accusative masculine singular",
+        "force": "'I baptized also the household of Stephanas.' Paul's incidental remark records the baptism of a whole household. The lexical witness gives no detail of ages, but 1 Cor 16:15 describes the same household of Stephanas as 'the firstfruits of Achaia' who 'devoted themselves to the service of the saints', which presupposes adult capacity for ministry.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.16.15",
+        "key_term": "οἶκος Στεφανᾶ... εἰς διακονίαν τοῖς ἁγίοις ἔταξαν ἑαυτούς; oikos G3624; tasso G5021 aorist active indicative 3p; diakonia G1248; hagios G40",
+        "force": "'The household of Stephanas devoted themselves to the service of the saints.' Paul describes the same oikos that 1 Cor 1:16 says he baptized. They etaxan heautous (deliberately devoted themselves) to ministry, an action of conscious intentional commitment that infants cannot make. The lexical force points to the household being composed of adults capable of conscious service, and therefore the baptism in 1 Cor 1:16 of believing adults.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.28.19",
+        "key_term": "μαθητεύσατε πάντα τὰ ἔθνη βαπτίζοντες αὐτοὺς εἰς τὸ ὄνομα τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος; matheteuo G3100 aorist active imperative 2p; baptizo G907 present active participle; ethnos G1484",
+        "force": "'Make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.' The main verb is matheteusate (make disciples, command); baptizontes (baptizing) is a participle expressing the manner-or-means of disciple-making. Grammatically discipling is the encompassing command and baptism is attached to it as the participial action. Disciple-making presupposes catechesis and personal response. The practice that follows the dominical commission is therefore: disciple-making with baptism as the marker of those being made disciples.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.6.3",
+        "key_term": "ὅσοι ἐβαπτίσθημεν εἰς Χριστὸν Ἰησοῦν εἰς τὸν θάνατον αὐτοῦ ἐβαπτίσθημεν; baptizo G907 aorist passive indicative 1p (twice); Christos G5547; thanatos G2288",
+        "force": "'As many of us as were baptized into Christ Jesus were baptized into his death.' Paul addresses the baptized at Rome as those who consciously know what their baptism signifies; the rhetorical question 'do you not know' presupposes that the baptized adults at Rome can examine the meaning of their own baptism. The text presupposes a self-conscious recipient of the rite.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.3.21",
+        "key_term": "ὃ καὶ ἡμᾶς ἀντίτυπον νῦν σῴζει βάπτισμα οὐ σαρκὸς ἀπόθεσις ῥύπου ἀλλὰ συνειδήσεως ἀγαθῆς ἐπερώτημα εἰς θεόν; baptisma G908 nominative neuter singular; syneidesis G4893 genitive feminine singular; eperotema G1906; sozo G4982",
+        "force": "'Baptism, which now also saves us as the antitype, not the putting off of bodily filth, but the appeal of a good conscience toward God.' Peter defines baptism as syneideseos agathes eperotema, an appeal of a good conscience toward God. The conscience-appeal is a conscious-personal act, presupposing the recipient's moral self-awareness. This is the strongest single epistolary text against the practice of baptizing infants: the very thing baptism is defined as (an appeal of a good conscience) is something an infant cannot offer.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Acts.2.39",
+        "key_term": "ὑμῖν γάρ ἐστιν ἡ ἐπαγγελία καὶ τοῖς τέκνοις ὑμῶν καὶ πᾶσιν τοῖς εἰς μακρὰν ὅσους ἂν προσκαλέσηται κύριος ὁ θεὸς ἡμῶν; epangelia G1860; teknon G5043; proskaleomai G4341 aorist middle subjunctive 3s",
+        "force": "'For the promise is for you and for your children and for all who are far off, as many as the Lord our God shall call.' The clause is the paedobaptist's strongest single line. Context: v.38 conditions the promise on repent-and-be-baptized, and v.39's parallel 'for those far off' (the gentiles) is universally read as those-who-when-called-respond, not as automatic-recipients. The teknon clause extends the promise to descendants in the same conditional way it extends to gentiles; the qualifier 'as many as the Lord shall call' is load-bearing.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Col.2.11",
+        "key_term": "ἐν ᾧ καὶ περιετμήθητε περιτομῇ ἀχειροποιήτῳ ἐν τῇ ἀπεκδύσει τοῦ σώματος τῆς σαρκὸς ἐν τῇ περιτομῇ τοῦ Χριστοῦ; peritome G4061 dative feminine singular; acheiropoietos G886",
+        "force": "'In him you were also circumcised with a circumcision not made with hands, in the putting off of the body of flesh, in the circumcision of Christ.' Paul ties Christian initiation typologically to circumcision. Paedobaptists conclude: since old-covenant circumcision was applied to infant sons by divine command (Gen 17:12, eighth day), the new-covenant counterpart (baptism, per v.12) is similarly applied to infants of believers. The verse is the load-bearing paedobaptist proof-text.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Col.2.12",
+        "key_term": "συνταφέντες αὐτῷ ἐν τῷ βαπτισμῷ ἐν ᾧ καὶ συνηγέρθητε διὰ τῆς πίστεως τῆς ἐνεργείας τοῦ θεοῦ; synthapto G4916 aorist passive participle nominative masculine plural; baptismos G909; pistis G4102; energeia G1753",
+        "force": "'Buried with him in baptism, in which you were also raised with him through faith in the powerful working of God.' Critically, dia tes pisteos (through faith) modifies the raising-up that happens in baptism. Credobaptists read this as making conscious faith intrinsic to baptismal efficacy: the resurrection-effect of baptism comes through the recipient's faith. This is the same verse that links baptism to circumcision; the verse itself ties baptismal efficacy to personal faith, complicating a clean paedobaptist reading of v.11.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Gen.17.10",
+        "key_term": "זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ הִמּוֹל לָכֶם כָּל זָכָר; berit H1285; mul H4135; zakar H2145",
+        "force": "'This is my covenant which you shall keep, between me and you and your seed after you: every male among you shall be circumcised.' The Abrahamic covenant sign was administered to infant males of believers by divine command (v.12 specifies the eighth day). Paedobaptists ground their household-baptism theology on this covenant-sign principle paired with Col 2:11-12. Credobaptists distinguish the ethnic-national old-covenant sign from the believing-individual new-covenant sign on the basis of Jer 31:31-34.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Jer.31.33",
+        "key_term": "כִּי זֹאת הַבְּרִית אֲשֶׁר אֶכְרֹת אֶת בֵּית יִשְׂרָאֵל... וְכָתַבְתִּי עַל לִבָּם; berit H1285; chadash H2319; torah H8451; yada H3045",
+        "force": "'This is the covenant I will make with the house of Israel... I will write it on their hearts; they shall all know me, from the least to the greatest.' The new covenant inaugurates the reality that all who are in it know YHWH directly. The strongest Old Testament basis for credobaptist new-covenant ecclesiology: membership in the new covenant is regenerate-only, not natal-and-natural, which grounds the practice of administering the new-covenant sign to those whose faith is evident.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Matt.19.14",
+        "key_term": "ἄφετε τὰ παιδία καὶ μὴ κωλύετε αὐτὰ ἐλθεῖν πρός με τῶν γὰρ τοιούτων ἐστὶν ἡ βασιλεία τῶν οὐρανῶν; paidion G3813 accusative neuter plural; koluo G2967 present active imperative 2p; basileia G932",
+        "force": "'Let the little children come to me and do not forbid them, for of such is the kingdom of heaven.' Jesus blesses and welcomes paidia. The text records blessing and laying-on of hands, NOT baptism. Paedobaptists cite this for the kingdom-inclusion of children; credobaptists note that the action recorded is blessing, not baptism, and that the kingdom-inclusion grounds covenantal welcome (Jesus blesses them), not sacramental application of the rite of initiation.",
+        "supports": "neutral",
+        "genre": "gospel",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G907",
+      "G908",
+      "G909",
+      "G4100",
+      "G4102",
+      "G588",
+      "G3340",
+      "G3624",
+      "G3614",
+      "G3832",
+      "G5043",
+      "G3813",
+      "G2588",
+      "G1272",
+      "G4337",
+      "G2983",
+      "G4151",
+      "G859",
+      "G4916",
+      "G3100",
+      "G2967",
+      "G4893",
+      "G1906",
+      "G1860",
+      "G4341",
+      "G2980",
+      "G3056",
+      "G2097",
+      "G435",
+      "G1135",
+      "G1538",
+      "G4982",
+      "G2400",
+      "G5204",
+      "G5207",
+      "G3880",
+      "G3956",
+      "G1968",
+      "G2064",
+      "G191",
+      "G21",
+      "G5021",
+      "G1248",
+      "G40",
+      "G1484",
+      "G4061",
+      "G886",
+      "G1223",
+      "G1753",
+      "G932",
+      "H1285",
+      "H4135",
+      "H2145",
+      "H2319",
+      "H8451",
+      "H3045"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "dispensationalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "reformed-covenantal",
+          "verdict": "against",
+          "note": "Reads the covenant of grace as one administration across both Testaments, with circumcision (Gen 17:12, infants at eight days) typologically continuous with baptism (Col 2:11-12). The New Testament does not need to command infant baptism on this lens because Old Testament practice carries forward unless explicitly revoked. Household-baptism narratives (Lydia, jailer, Stephanas, Cornelius) are read as natural evidence of the continuity. Verdict on the practice question: the credobaptist-only practice is wrong because it withholds the covenant sign from infants of believing parents. This is the Westminster, Belgic, Heidelberg, and Three Forms position."
+        },
+        {
+          "lens": "catholic-sacramental",
+          "verdict": "against",
+          "note": "Reads baptism as the sacrament of regeneration that washes original sin and incorporates the recipient into the church and into Christ ex opere operato. Since infants too are bound under original sin (CCC 1250), they need the sacrament; deferring it without grave cause is illicit. The apostolic tradition of baptizing households is read as confirming the practice. Verdict on the practice question: infant baptism is required for the salvation of children of believers; the credobaptist-only practice deprives children of the grace of baptism."
+        },
+        {
+          "lens": "lutheran-sacramental",
+          "verdict": "against",
+          "note": "Augsburg Confession Article 9 teaches that baptism is necessary to salvation and that children are to be baptized and received into God's grace. Luther's Large Catechism Part Four defends infant baptism on the ground that the Word of God in baptism creates faith in the infant. Verdict on the practice question: the credobaptist-only practice errs by making baptismal efficacy depend on prior conscious faith rather than on the Word of God under water creating faith."
+        },
+        {
+          "lens": "anglican",
+          "verdict": "against",
+          "note": "Article 27 of the 39 Articles retains the baptism of young children as in any wise to be retained in the church, as most agreeable with the institution of Christ. Internal credobaptist Anglican voices exist (notably some evangelical Anglicans) but the formal Anglican position is paedobaptist. Verdict on the practice question: the credobaptist-only practice departs from the institution of Christ as the formularies of the Church of England read it."
+        },
+        {
+          "lens": "methodist",
+          "verdict": "complicates",
+          "note": "Methodist tradition (Wesley's abridgement of the 39 Articles, Article 17) retains the baptism of young children but the United Methodist Church and other Methodist bodies practice both infant baptism and believer's baptism in the same body, treating baptism as a means of grace that does not require repetition. The choice of mode is pastoral. Verdict on the practice question: a credobaptist-only policy would be too narrow, but Methodist tradition does not condemn believer's baptism."
+        },
+        {
+          "lens": "anabaptist-baptist-brethren-pentecostal-credobaptist",
+          "verdict": "for",
+          "note": "Reads the new covenant as qualitatively new (Jer 31:31-34, all shall know me from the least to the greatest), inaugurating regenerate-only church membership. Reads every explicit New Testament baptism narrative as showing belief preceding baptism (Acts 2:38, 41; 8:12; 8:36-38; 16:31-33; 18:8; Mark 16:16). Reads household baptisms as describing households where the word was preached first (Acts 16:32) and belief is explicit (Acts 18:8, Acts 16:34) or where the household members are described elsewhere as adults capable of devotion to ministry (1 Cor 16:15). Reads 1 Pet 3:21's eperotema (appeal of a good conscience) as presupposing conscience-engagement. Verdict on the practice question: the credobaptist-only practice is the apostolic norm; infant baptism is not warranted by the New Testament. This is the Schleitheim, 1689 London Baptist Confession, Brethren, and classical Pentecostal position."
+        },
+        {
+          "lens": "eastern-orthodox-sacramental",
+          "verdict": "against",
+          "note": "Reads baptism and chrismation together as the application of Pascha and Pentecost to the individual. Infants are baptized by triple immersion and immediately chrismated; the parents and godparents proclaim the Creed on behalf of the infant. Verdict on the practice question: the credobaptist-only practice departs from the apostolic and patristic tradition of household initiation."
+        }
+      ],
+      "notes": "The dispute on church practice is irreducibly hermeneutical. The paedobaptist case rests on covenantal-continuity inference from Old Testament practice paired with New Testament household-baptism narratives that do not pause to specify only adults; on this method, silence about infants is read as inclusion. The credobaptist case rests on the explicit New Testament lexical pattern of belief-then-baptism in every named scene and on the lexical definition of baptism in 1 Pet 3:21 as an appeal of a good conscience; on this method, silence about infant-baptism is read as absence. The credobaptist case has the stronger direct-lexical claim on apparatus and interlinear evidence; the paedobaptist case has the stronger covenantal-continuity inference across Testaments. Confidence is medium because the lexical-narrative pattern is clear but the inferential bridge from Genesis 17 forward is a genuine hermeneutical option not lexically refuted by any New Testament command. The practice question pivots on which hermeneutic method governs the canon's baptismal data: the New Testament narrative pattern (credobaptist-only) or the cross-Testament covenant-sign continuity (paedobaptist or mixed)."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, On Baptism chapter 18, ca. AD 203, ANF Volume 3",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Why does the innocent period of life hasten to the remission of sins? Let them come while they are learning, while they are being taught whither to come; let them become Christians when they have become able to know Christ."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Cyprian of Carthage, Letter 64 to Fidus, ca. AD 253, ANF Volume 5",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Cyprian and a council of African bishops rule that infants should be baptized as soon as possible, not waiting until the eighth day, as the earliest explicit conciliar affirmation of infant baptism."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 1250 to 1252, Promulgated 1992, vatican.va",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Born with a fallen human nature and tainted by original sin, children also have need of the new birth in Baptism. The Church and the parents would deny a child the priceless grace of becoming a child of God were they not to confer Baptism shortly after birth."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession 1530, Article 9 Of Baptism, bookofconcord.org",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Of Baptism they teach that it is necessary to salvation and that through Baptism is offered the grace of God, and that children are to be baptized who, being offered to God through Baptism, are received into God's grace."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion 1571, Article 27 Of Baptism, churchofengland.org",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "The Baptism of young Children is in any wise to be retained in the Church, as most agreeable with the institution of Christ."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 1646, chapter 28 Of Baptism, sections 4-5",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion (Wesley's abridgement of the 39 Articles), Article 17 Of Baptism, umc.org",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The Baptism of young children is to be retained in the Church. Methodist tradition practices both infant baptism and believer's baptism in the same body."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527, Article 1 Concerning Baptism, courses.washington.edu",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ. This excludes all infant baptism."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Article 6 Ordinance of Baptism in Water, ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The ordinance of baptism by a burial with Christ should be observed as commanded in the Scriptures, by all who have really repented and in their hearts have truly believed on Christ as Savior and Lord."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, Sacrament of Baptism, oca.org",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "The Orthodox Church baptizes infants of believing parents. Before being baptized, a person or his sponsors or godparents for him officially proclaims the symbol of Christian faith, the Creed."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-38.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 2:38: metanoesate (G3340 aorist imperative 2p) kai baptistheto (G907 aorist imperative 3s) hekastos hymon. Repent first, then each one be baptized."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-41.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 2:41: hoi men oun apodexamenoi (G588 aorist participle) ton logon autou ebaptisthesan (G907). Only those-who-received-the-word were baptized."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/8-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 8:12: episteusan (G4100) then ebaptizonto (G907) andres te kai gunaikes. Men and women are the named baptized; no paidia or brephe."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/8-36.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 8:36: ti koluei me baptisthenai. Verified the eunuch's question after Philip's preaching of Jesus from Isaiah 53."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/16-32.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 16:32: elalesan auto ton logon tou kyriou sun pasin tois en te oikia (G3614) autou. Word preached to the jailer AND to all in his house before any baptism."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/16-34.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 16:34: egalliasato panoikei (G3832) pepisteukos (G4100 perfect participle) to Theo. The jailer rejoiced with the whole household, having believed."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/18-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 18:8: Krispos episteusen to Kurio sun holo to oiko autou. Belief is predicated of Crispus together with his whole household before baptism is mentioned."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/16-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Mark 16:16: ho pisteusas kai baptistheis sothesetai. Aorist participle of pisteuo precedes aorist participle of baptizo; condemnation is for unbelief, not unbaptism."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/3-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Pet 3:21: baptisma syneideseos agathes eperotema eis Theon. Baptism defined as an appeal of a good conscience toward God."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/16-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 16:15: oikia Stephana eis diakonian tois hagiois etaxan heautous. Stephanas's household devoted themselves to ministry, presupposing adult capacity."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/2-12.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Col 2:12: suntaphentes auto en to baptismo en ho kai sunegerthete dia tes pisteos tes energeias tou Theou. Baptism explicitly tied to faith on the recipient side."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/17-12.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Gen 17:12: u-ven-shmonat yamim yimol lakem kol-zakar. At eight days old every male shall be circumcised. Old covenant sign on infant males by household membership."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jeremiah/31-34.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Jer 31:34: kullam yede'u oti lemiqtannam ve'ad gedolam. They shall all know me, from the least to the greatest. New covenant regenerate-only membership."
+      },
+      {
+        "url": "https://courses.washington.edu/hist112/SCHLEITHEIM%20CONFESSION%20OF%20FAITH.htm",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Schleitheim Article 1: Baptism shall be given to all those who have learned repentance and amendment of life. This excludes all infant baptism."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Augsburg Confession Article 9: children are to be baptized who, being offered to God through Baptism, are received into God's grace."
+      },
+      {
+        "url": "https://bookofconcord.org/large-catechism/holy-baptism/",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Luther Large Catechism on Holy Baptism: God sanctifies many of them who have been thus baptized, and has given them the Holy Ghost. Defends infant baptism."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3O.HTM",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "CCC 1250: Born with a fallen human nature and tainted by original sin, children also have need of the new birth in Baptism."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Methodist Articles of Religion Article 17: The Baptism of young children is to be retained in the Church. Methodist tradition practices both infant and believer's baptism."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/baptism",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Orthodox Church in America: The Orthodox Church baptizes infants of believing parents. Before baptism, a person or his sponsors proclaim the Creed."
+      },
+      {
+        "url": "https://www.tertullian.org/anf/anf03/anf03-49.htm",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Tertullian On Baptism 18: Let them become Christians when they have become able to know Christ. Earliest patristic counsel against routine infant baptism."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-vs-counter-witness-conflict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

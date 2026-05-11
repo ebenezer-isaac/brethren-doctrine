@@ -1,0 +1,296 @@
+{
+  "id": "doc-adam-historical",
+  "answer": {
+    "id": "doc-adam-historical",
+    "affirms": true,
+    "rationale": "Scripture treats Adam as a named individual at the head of named genealogies (Gen 5:1-5; 1 Chron 1:1; Luke 3:38) and Paul's argument in Rom 5:12-21 and 1 Cor 15:21-22, 45-49 structurally depends on Adam's historical individuality as the federal first man parallel to the historical Christ; the Hebrew H120 adam shifts from common noun to proper name (without article) in the Genesis 5 genealogy, and Greek G76 Adam is used 9 times in the New Testament as a personal name.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Affirmed under historic Christian reading and the Pauline typological argument. An in-house evangelical disagreement exists (theistic-evolution / BioLogos reads Adam as federal head of an existing population rather than sole genetic progenitor); this is a real intra-Christian debate, not a cult marker. Outright mythic dismissal (Bultmann, Tillich, hard demythologizing) places one closer to liberal mainline rather than gospel-denying heresy; Mormonism affirms Adam but with non-orthodox additions (Adam-God doctrine historically taught by Brigham Young, repudiated by later LDS leadership). Pius XII Humani Generis 1950 cautioned Catholic faithful that polygenism is not reconcilable with original sin doctrine; CCC 390 retains figurative language but affirms primeval event. Roman Catholicism, Eastern Orthodoxy, Lutheranism, Anglicanism, Methodism, Reformed, and Pentecostalism all retain a historical Adam in their confessional standards; figurative-only readings are mainline liberal positions, not gospel-denying."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement is descriptive (historical persons, first pair, common descent). It names no heretics and uses no Reformed-confessional vocabulary as if neutral. The phrase 'first human pair' does encode one of the disputed sub-claims (sole-pair monogenism vs federal-head-of-population), so evaluate honestly: monogenism is the historic reading, but evangelical theistic-evolution alternatives exist."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict: yes, the Bible treats Adam as a real person who actually lived, the first human, from whom the rest of humanity descends. The strongest reason for it is that the New Testament writers do not treat Adam as a symbol. Luke 3:38 ends Jesus's family tree at 'the son of Adam, the son of God,' giving Adam the same grammatical treatment as every other named ancestor in the list. Paul builds his entire argument in Romans 5:12-21 on a parallel: just as one real man (Adam) brought sin and death into the world, one real man (Jesus) brought righteousness and life. If Adam is only a symbol, the parallel breaks and Paul's logic collapses. The same is true in 1 Corinthians 15:21-22 and 15:45, where Paul calls Christ 'the last Adam,' which only makes sense if there was a first Adam. 1 Timothy 2:13 also appeals to the chronological order, that Adam was formed first, then Eve, treating them as actual persons in a sequence. The strongest complicating texts come from inside Genesis itself. Genesis 1 and Genesis 2 give two different orderings of creation, and Genesis 2:7 plays on a word-pun: God forms 'the man' (adam) from 'the ground' (adamah), which signals that the narrative is doing literary and theological work, not just dry chronicle. Some readers conclude from this that the early Genesis chapters are figurative origin-story rather than journalistic history. The verdict handles this tension by holding that figurative language and historical reference are not opposed. The narrative can use word-play, symbolism, and theological framing while still pointing to a real first human. The New Testament writers seem to read it exactly that way: they preserve the typology and the lessons without treating Adam as fiction. If a person held that Adam is purely symbolic with no historical reference at all, the Pauline argument about sin entering through one man and salvation coming through one man would lose its structural anchor.",
+      "denominational_landscape": "Almost every historic Christian tradition has confessed Adam as a real person. The Roman Catholic Catechism (paragraphs 390, 416, 417) affirms a 'primeval event' even while saying Genesis 3 uses figurative language; Pope Pius XII in 1950 warned that the idea of multiple original parents is hard to square with original sin doctrine. Lutheran, Anglican, Methodist, Reformed, and Pentecostal confessions all reference Adam by name as the historical first parent through whom sin entered the world. The Eastern Orthodox tradition reads Adam historically, with patristic figures like Irenaeus making Christ's role as 'second Adam' depend on the first Adam being a real person whose history Christ recapitulates. Augustine in City of God Book 12 argued explicitly for one historical Adam as father of all humanity. The genuine in-house disagreement today sits inside evangelicalism: classical creationists and intelligent-design proponents hold to Adam as the sole genetic ancestor of humanity, while organizations like BioLogos argue for Adam as the federal head or representative of an existing population, not the only biological progenitor. Both groups still affirm a real historical Adam. Outside historic Christianity, fully figurative or mythical readings of Adam appear in liberal-mainline Protestant theology (Friedrich Schleiermacher, Rudolf Bultmann, Paul Tillich, and the demythologizing project), and Origen's older allegorical reading is sometimes cited as a precedent, though Origen himself does not deny Adam's existence outright. Mormonism affirms Adam but adds non-historic-Christian teachings (Brigham Young's Adam-God doctrine, later repudiated by mainstream LDS). Christadelphians and Jehovah's Witnesses affirm a historical Adam. The boundary that matters for cult-marker purposes is not whether Adam is read with literary depth, but whether Adam is so completely dissolved that Paul's Romans 5 argument no longer has a referent."
+    },
+    "scripture": [
+      {
+        "ref": "Gen.2.7",
+        "key_term": "אָדָם (adam) H120; אֲדָמָה (adamah) H127",
+        "force": "God forms ha-adam (the man) from the dust of ha-adamah (the ground); the word-pair signals literary craft but the verb yatsar (form, shape) treats this as an actual creative act on an actual being.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["idiom"]
+      },
+      {
+        "ref": "Gen.5.1",
+        "key_term": "אָדָם (adam) H120",
+        "force": "Shift from common noun to personal name without the article: 'This is the book of the generations of Adam.' Adam now functions as a named individual heading a genealogy with specific lifespan figures.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Gen.5.5",
+        "key_term": "אָדָם (adam) H120",
+        "force": "Adam lived 930 years and died. A lifespan figure tied to a named individual; not a literary symbol.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Chr.1.1",
+        "key_term": "אָדָם (adam) H120",
+        "force": "The Chronicler begins the genealogy of all Israel with 'Adam, Seth, Enosh,' placing Adam at the head of a continuous human descent line stretching to the post-exilic community.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Luke.3.38",
+        "key_term": "Ἀδάμ (Adam) G76",
+        "force": "The genitive-chain genealogy of Jesus ends 'tou Adam, tou Theou' (of Adam, of God). Adam receives identical grammatical treatment to every other named ancestor in Luke's list.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.12",
+        "key_term": "εἷς ἄνθρωπος (heis anthropos) G1520+G444",
+        "force": "'Through one man sin entered the world.' Paul's argument depends on a single historical referent who actually did the transgressing.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.5.14",
+        "key_term": "Ἀδάμ (Adam) G76",
+        "force": "Adam named twice; Paul calls Adam 'a type (typos) of the one to come.' The typology structurally requires both terms (Adam and Christ) to be historical persons.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "1Cor.15.22",
+        "key_term": "Ἀδάμ (Adam) G76",
+        "force": "'As in Adam all die, so also in Christ shall all be made alive.' Parallel construction between Adam and Christ; if Adam is non-historical, the universal scope of death loses its anchor.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "1Cor.15.45",
+        "key_term": "ὁ πρῶτος ἄνθρωπος Ἀδάμ; ὁ ἔσχατος Ἀδάμ G76",
+        "force": "'The first man Adam became a living being; the last Adam became a life-giving spirit.' Paul explicitly numbers Adam as 'first man,' which presupposes individual personhood.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "1Tim.2.13",
+        "key_term": "Ἀδάμ ... Εὕα; ἐπλάσθη G76+G2096+G4111",
+        "force": "'Adam was formed first, then Eve.' The verb plasso (was formed) and the chronological sequence prota / eita treat the two as real persons in a real order.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jude.1.14",
+        "key_term": "Ἀδάμ (Adam) G76",
+        "force": "'Enoch, the seventh from Adam.' Jude counts generations from Adam as a real ancestor, matching Genesis 5's enumeration.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gen.1.27",
+        "key_term": "אָדָם (adam) H120",
+        "force": "'God created ha-adam in his image, male and female he created them.' The plural 'them' alongside the singular 'ha-adam' is a complicating feature: some readers see a corporate humanity here, others a single pair. The text supports a historical pair but the lexicon does not by itself rule out a corporate reading.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Hos.6.7",
+        "key_term": "אָדָם (adam) H120",
+        "force": "'Like Adam they transgressed the covenant.' Some translations render this as 'like men' (generic). If 'Adam' is the right reading, Hosea treats Adam as a known historical covenant-breaker; if 'men,' the verse drops out of the case. Honest complication for the verdict.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["H120", "H127", "G76", "G444", "G1520", "G4111", "G2096", "G4413", "G2078"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "framework": "young-earth creationism",
+          "verdict": "Adam is sole biological ancestor of all humans; literal-historical reading of Gen 1-2 chronology."
+        },
+        {
+          "framework": "old-earth / day-age creationism",
+          "verdict": "Adam is historical individual; Gen 1 days are extended ages, but Adam himself remains a real first human pair."
+        },
+        {
+          "framework": "evolutionary creationism / BioLogos",
+          "verdict": "Adam is historical federal head of an existing population (genealogical Adam), not the sole genetic ancestor; affirms historicity without sole-pair monogenism."
+        },
+        {
+          "framework": "framework / literary hypothesis",
+          "verdict": "Gen 1 is literary structure; some literary-framework readers still affirm a historical Adam in Gen 2-3, others move toward archetypal."
+        },
+        {
+          "framework": "demythologizing / mainline liberal",
+          "verdict": "Adam is purely symbolic; this is the position the verdict ultimately rejects because it dissolves the Pauline typology."
+        }
+      ],
+      "notes": "Multiple frameworks land at 'affirms historicity' even when they disagree on biology and timeline. The verdict therefore holds across the in-house evangelical spectrum; only the demythologizing lens denies it outright."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies 3.22 (CCEL Schaff ANF01)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Christ born of the Virgin 'after the likeness of Adam' keeps watch for the head of the serpent; recapitulation requires Adam as real person."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God Book 12 (CCEL)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Argues for the unity of the human race descending from one historical Adam; one of the foundational patristic arguments for monogenism. CCEL page returned table of contents only."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 390",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The account of the fall in Genesis 3 uses figurative language, but affirms a primeval event, a deed that took place at the beginning of the history of man."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 416-417",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "By his sin Adam, as the first man, lost the original holiness and justice he had received from God, not only for himself but for all human beings."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome, Article I (Original Sin)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the corruption inherited from Adam through natural descent; presupposes Adam as historical first parent. URL returned 502 Bad Gateway, citation from standard Lutheran reference."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article IX (Of Original or Birth Sin)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the fault and corruption of the nature of every man, that naturally is engendered of the offspring of Adam. Quoted from standard text; Church of England page did not render article content."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VII (Of Original or Birth Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 4.2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "After God had made all other creatures, He created man, male and female, with reasonable and immortal souls. Adam is treated as the federal head of humanity."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA doctrine on Genesis (URL returned 404; standard Orthodox reading)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Orthodox tradition affirms Adam as the first man and historical ancestor of humanity, central to the patristic recapitulation theology of Athanasius and Irenaeus."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "AG Statement of Fundamental Truths, The Fall of Man (URL returned 403)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man was originally created in goodness and uprightness; by voluntary transgression Adam fell, bringing the human race under condemnation. Standard AG text not retrieved live."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/genesis/2-7.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "adam H120 formed from adamah H127; wordplay between man and ground, both share the same Hebrew root, emphasizes material origin."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/5-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "heis G1520 anthropos G444 in Rom 5:12: one man, singular and concrete, through whom sin entered the world."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-45.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ho protos anthropos Adam G76 ... ho eschatos Adam: 'first man Adam ... last Adam.' Numerical labeling presupposes individuality."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/luke/3-38.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "tou Adam, tou Theou: Adam receives identical grammatical treatment to every other ancestor in Luke's genealogy."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/76.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "G76 Adam: nine NT occurrences: Luke 3:38; Rom 5:14 (x2); 1 Cor 15:22; 15:45 (x2); 1 Tim 2:13; 2:14; Jude 1:14."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/120.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "H120 adam: 552 occurrences; functions as proper name in Gen 4:25; 5:1, 5:3-5; 1 Chron 1:1 without article."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1C.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 390: 'The account of the fall in Genesis 3 uses figurative language, but affirms a primeval event, a deed that took place at the beginning of the history of man.'"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf01.ix.vii.xxii.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Irenaeus: Christ 'after the likeness of Adam' keeps watch for the serpent's head; recapitulation requires Adam's real personhood."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VII: original sin is the corruption of the nature of every man that is engendered of the offspring of Adam."
+      }
+    ],
+    "confidence": "high",
+    "flags": ["apparatus-paywalled", "confession-tradition-divergence"]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "id": "doc-sin-as-transgression",
+  "answer": {
+    "id": "doc-sin-as-transgression",
+    "affirms": true,
+    "rationale": "1 John 3:4 defines sin lexically as anomia (G458, lawlessness), establishing sin as violation of God's law; Rom 3:23 (hamartanō G264, missing the mark) and Rom 5:14 (parabasis G3847, deliberate overstepping) plus Hebrew chata (H2398), pesha (H6588), and awon (H5771) pan-canonically constitute sin as legal/moral offense against God's holy character, not mere deficiency or developmental immaturity.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Verdict is pan-canonically clear: 1 John 3:4 supplies an equational definition (sin = lawlessness) and the cluster of Hebrew (chata, pesha, awon, ma'al) and Greek (hamartia, parabasis, paraptoma, anomia, adikia) terms collectively frame sin as offense against a holy God whose law is the standard. Ps 51:4 anchors the Godward dimension. James 4:17 extends sin to known omission, refuting any purely external act-based account. Cult marker is set false because public-record denial mostly takes the form of liberal-mainline therapeutic reductionism (sin as illness, social pathology, oppression structure) which is heterodox but not a denial of the Trinity or the gospel itself in the same canonical-pattern sense the cult-marker bar requires; nonetheless full naturalistic redefinition guts the gospel logic (Christ as Saviour from sin) and warrants 'would not be member' and 'would not let children be taught otherwise'. Carriers: liberal-mainline Protestant strands, some psychological-only or sociological-only redefinitions; classical liberalism critiqued by H. Richard Niebuhr's own famous summary of its drift."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement uses Westminster Shorter Catechism Q14 wording ('want of conformity to, or transgression of, the law of God') which is Reformed-confessional vocabulary, but the substantive claim (sin = offense against God's holy character, defined by his law) is recoverable directly from the lexical pattern of anomia, hamartia, parabasis, chata, pesha, and awon without requiring confessional scaffolding. Worked as written."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict is YES: sin is fundamentally breaking God's law and offending God himself, not merely a weakness, an illness, or a developmental stage. The strongest reason from Scripture is 1 John 3:4, which gives an almost dictionary-style definition: sin IS lawlessness. The two words are equated. Romans 3:23 reinforces this by saying all have sinned and fall short of the glory of God, where the verb for sinning literally pictures missing a target. Psalm 51:4 shows David, who had wronged Uriah and Bathsheba in the most obvious horizontal way, still saying 'Against you, you only, have I sinned and done what is evil in your sight.' That tells us sin is Godward at its root, not merely social harm. James 4:17 closes the door on a purely act-based view: knowing the right thing and failing to do it is also sin. The strongest counterargument from Scripture's own complicating texts is that some passages speak of sin as weakness, ignorance, or being deceived (Heb 5:2, Acts 3:17, 1 Tim 1:13), which can be read to soften sin into mere immaturity. But these passages distinguish degrees of culpability without ever redefining what sin IS. They still call it sin requiring atonement. The verdict handles the tension by holding both: sin's essence is violation of God's law and offense against his character; sin's instances vary in awareness, deliberateness, and gravity (compare deliberate transgression in Romans 5:14 with unintentional sin in Leviticus 4). That distinction is biblical and does not collapse the definition.",
+      "denominational_landscape": "Agreement on this proposition is essentially unanimous across historic Christianity. Patristic writers (Augustine in particular) defined sin as 'a word, deed, or desire against the eternal law,' a formula Aquinas later adopts. Catholic teaching frames sin as an offense against reason, truth, and right conscience, and ultimately against God. Lutheran confessions describe original sin as being 'without the fear of God, without trust in God, and with concupiscence,' which presupposes sin as Godward offense. Anglican Article 9 and Methodist Article VII both describe sin as the corruption of human nature inclining away from God. Reformed catechisms (Westminster, Heidelberg) define sin as any want of conformity to or transgression of God's law. Eastern Orthodoxy describes sin as 'missing the mark,' the failure to be and do what one should before God. Anabaptist and Pentecostal statements treat sin similarly as offense against God requiring atonement. The public-record carriers of denial are not classic cults but liberal-mainline strands that have at times reduced sin to social pathology, psychological dysfunction, or oppression structures to be cured therapeutically rather than repented of. That move is heterodox because it removes the gospel basis (Christ as Saviour from sin), but it does not by itself place a community outside the Trinitarian boundary the way classical cult markers do."
+    },
+    "scripture": [
+      {
+        "ref": "1John.3.4",
+        "key_term": "ἀνομία (anomia) G458; ἁμαρτία (hamartia) G266",
+        "force": "Equational definition: sin IS lawlessness; both nouns nominative, articular, mutually predicated.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.23",
+        "key_term": "ἥμαρτον (hamartanō) G264; ὑστεροῦνται (hystereō) G5302",
+        "force": "Universal indicative: all sinned and continually fall short of God's glory; sin as missing the divine standard.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Rom.5.14",
+        "key_term": "παράβασις (parabasis) G3847",
+        "force": "Adam's transgression as deliberate stepping over a known divine boundary; archetype of law violation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Ps.51.4",
+        "key_term": "חָטָא (chata) H2398; רַע (ra) H7451",
+        "force": "Davidic confession orients sin Godward even when horizontal victims exist; sin as offense against God's sight.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "Jas.4.17",
+        "key_term": "ἁμαρτία (hamartia) G266",
+        "force": "Sin of omission: knowing the good and failing to do it is sin; refutes purely external/act-only definition.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.5.17",
+        "key_term": "ἀδικία (adikia) G93; ἁμαρτία (hamartia) G266",
+        "force": "All unrighteousness is sin; broadens definition to include any deviation from divine righteousness.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.7.7",
+        "key_term": "ἁμαρτία (hamartia) G266; ἐπιθυμία (epithumia) G1939",
+        "force": "Law defines sin: 'I would not have known sin except through the law'; sin is what the law identifies and forbids.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "Jas.2.10",
+        "key_term": "νόμος (nomos) G3551; παραβάτης (parabatēs) G3848",
+        "force": "Whoever keeps the whole law yet stumbles in one point becomes guilty of all; sin as legal-categorical offense.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Lev.4.2",
+        "key_term": "חָטָא (chata) H2398; שְׁגָגָה (shegagah) H7684",
+        "force": "Even unintentional violation of God's commands constitutes sin requiring atonement; degree varies, definition does not.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.1.13",
+        "key_term": "ἀγνοέω (agnoeō) G50; ἁμαρτία (hamartia) G266",
+        "force": "Paul's pre-conversion blasphemy done 'in ignorance' yet still called sin requiring mercy; ignorance reduces culpability not category.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Isa.53.6",
+        "key_term": "תָּעָה (taah) H8582; עָוֹן (awon) H5771",
+        "force": "All like sheep have gone astray; YHWH laid on him the iniquity of us all. Sin as turning aside borne vicariously.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": ["simile", "metaphor"]
+      },
+      {
+        "ref": "Gen.2.17",
+        "key_term": "מוּת (muth) H4191",
+        "force": "Original prohibition with death penalty establishes sin's structure as violation of a stated divine command.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G266", "G264", "G458", "G3847", "G3848", "G3900", "G93", "G3551", "G5302", "G50", "G1939", "H2398", "H6588", "H5771", "H4603", "H7451", "H7684", "H8582", "H4191"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {"lens": "covenant_theology", "verdict": "affirms"},
+        {"lens": "dispensationalism", "verdict": "affirms"},
+        {"lens": "new_covenant_theology", "verdict": "affirms"},
+        {"lens": "progressive_covenantalism", "verdict": "affirms"}
+      ],
+      "notes": "Definition of sin as transgression of God's law is hermeneutically uncontested across major evangelical frameworks. Dispensationalists and covenantalists differ on which laws bind which audience but agree on the definitional structure: sin is offense against God's revealed will. Liberal-mainline reductionism is a hermeneutical move (often historical-critical with sociological overlay) rather than a competing evangelical lens."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Contra Faustum 22 (cited by Aquinas Summa I-II Q71)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Sin is a word, deed, or desire against the eternal law."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 1849-1853 (vatican.va)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Sin originates in the heart and free will; sin wounds charity and is an offense against reason, truth, and right conscience, ultimately against God."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin is being without the fear of God, without trust in God, and with concupiscence."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 9 Of Original or Birth Sin (churchofengland.org)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the fault and corruption of the nature of every man, whereby man is inclined to evil."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Shorter Catechism Q14",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Sin is any want of conformity unto, or transgression of, the law of God."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article VII (umc.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on sin (oca.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Sin means literally missing the mark; the failure to be what one should be and to do what one should do."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Faith Article 7 (1995)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Sin is rebellion against God and a disruption of God's good creation; all have sinned and fall short."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The Fall of Man (ag.org)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man was created good and upright but by voluntary transgression fell, incurring physical and spiritual death."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3-4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hamartia G266 = anomia G458; equational, sin is lawlessness; both nominative feminine singular."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/458.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Anomia: utter disregard for God's law; 15 NT occurrences; 1 John 3:4 supplies the definitional equation."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3847.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Parabasis: deliberate going over the line, willful disregard of God's drawn boundaries; 7 NT occurrences."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/2398.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Chata: to miss the mark, sin, incur guilt; 238 OT occurrences; central to confession language 'I have sinned'."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/6588.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Pesha: revolt, rebellion, transgression; 93 OT occurrences; emphasizes willful defiance against God."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/5771.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Awon: iniquity, guilt, punishment; 231 OT occurrences; root means to bend, moral perversity from righteousness."
+      },
+      {
+        "url": "https://ccel.org/ccel/aquinas/summa/summa.FS_Q71.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Aquinas cites Augustine: Sin is a word, deed, or desire against the eternal law."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/sin",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Sin means literally missing the mark; the failure to be and do what one should before God."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Original sin is the corruption of the nature of every man, inclined to evil and continually."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Original sin: without fear of God, without trust in God, with concupiscence; inherited since Adam's fall."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "id": "prc-baptism-by-immersion",
+  "answer": {
+    "id": "prc-baptism-by-immersion",
+    "affirms": true,
+    "rationale": "The Greek verb baptizō G907 derives from baptō G911 and carries the primary lexical sense 'to dip, to plunge, to immerse'; LXX 2 Kgs 5:14 renders Hebrew tabal H2881 ('to dip') with ebaptisato G907 for Naaman's seven immersions in the Jordan; Mark 1:10 says Jesus came up out of the water (anabainōn ek tou hydatos G305 + G1537 + G5204); Acts 8:38-39 says Philip and the eunuch went down into the water (katebēsan eis to hydōr G2597 + G1519) and came up out of the water (anebēsan ek tou hydatos G305 + G1537); Rom 6:3-4 with syntaphentes G4916 ('buried with') and Col 2:12 with syntaphentes G4916 plus synēgerthēte G4891 ('raised with') depict baptism as burial-and-resurrection imagery most naturally fitting immersion. The proposition holds as the primary and most expressive canonical mode. However, Heb 9:10 calls OT priestly washings baptismois G909 ('various washings') and Heb 9:19 describes those washings as sprinkling with hyssop, which shows the word group has a broader cultic-washing range; Didache 7 (ca. AD 100) explicitly permits pouring three times on the head when sufficient water for immersion is unavailable, demonstrating that the earliest post-NT community did not treat immersion as the only valid mode. Pan-canonical lexical evidence affirms immersion as the dominant and most fitting mode but does not require strict exclusivity.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "Mode-of-baptism is an in-house Christian practice disagreement, not a gospel boundary. The immersionist-exclusive position (Baptist, Plymouth Brethren, Anabaptist, Pentecostal) reads the lexical force of baptizō plus the burial-resurrection symbolism plus the go-down-into-and-come-up-out-of geography as binding the mode. The multi-mode position (Catholic, Lutheran, Anglican, Reformed, Methodist) reads the broader cultic-washing range of the baptismos word group plus the early permissive Didache 7 ruling plus the practical impossibility of immersion in some settings (Acts 16 jailer in a prison at midnight, the three thousand at Pentecost in Jerusalem's water-scarce urban setting) as licensing pouring or sprinkling. The Eastern Orthodox practice is triple immersion as the historic and most expressive mode but Orthodoxy does not unchurch those baptized otherwise. The cult-marker bar is not met: denial of immersion-as-the-only-valid-mode does not deny the gospel itself nor any Trinitarian or Christological boundary. The engagement-ladder reflects this: I would visit, participate, serve, and accept teaching for my children in a sprinkling or pouring church that holds the gospel rightly, but I would not be a member in such a body because the practice of believer's baptism by immersion is intrinsic to my own confession and rebaptism on entering would be required in most credobaptist bodies. Would not publicly correct because the practice is held in good faith by the majority of historic Christianity. Public-record affirmers of immersion-only include all Baptist bodies, Plymouth Brethren, Anabaptists (Mennonite, Amish, Hutterite, Bruderhof), Pentecostals (Assemblies of God, Foursquare), Churches of Christ, and most independent evangelical free-church bodies. Public-record multi-mode practitioners include Roman Catholic, Eastern Orthodox (immersion preferred, others valid), Lutheran, Anglican, Reformed, and United Methodist. Cult or heterodox bodies that practice immersion (Mormons, Jehovah's Witnesses, Iglesia ni Cristo, Oneness Pentecostals) do so on heterodox Christological or restorationist grounds; the mode coincides but the underlying gospel does not."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Christian baptism is canonically depicted as full bodily immersion in water, the lexical force of baptizō and the burial-resurrection imagery of Rom 6 and Col 2 fitting immersion as the primary and most expressive mode; whether immersion is the ONLY valid mode or whether pouring and sprinkling are also licit is the contested sub-question.",
+      "notes": "The original statement combines three claims: (a) the mode is full immersion, (b) baptism is a public confession of faith, (c) baptism identifies the recipient with Christ's death, burial, and resurrection. Claims (b) and (c) are uncontested across credobaptist traditions; claim (a) is the Baptist-Brethren-Anabaptist immersionist position. The statement frames immersion as the mode of baptism in a way that pre-loads the verdict for the credobaptist-immersionist reading. Neutralized: the lexical and symbolic evidence supports immersion as the primary canonical mode, while leaving open whether other modes are also valid. Flag stem-pre-loaded-verdict raised."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: the Greek word for baptize in the New Testament primarily means to dip or plunge under water, and the events described in the New Testament fit full immersion best. The strongest reasons for this come from the word itself and from how the baptisms are described. In Mark 1 verse 10 Jesus comes up out of the water after his baptism, which presupposes he was in the water. In Acts 8 verses 38 and 39 Philip and the Ethiopian eunuch both go down into the water and both come up out of the water. In Romans 6 verses 3 and 4 Paul says we were buried with Christ through baptism into death, and the picture of being buried and then raised fits being put under water and then lifted up. Colossians 2 verse 12 says the same thing, buried with him in baptism and raised with him through faith. In the Old Testament Greek translation of 2 Kings 5 verse 14 the very same word for baptize describes Naaman dipping himself seven times in the Jordan, which was clearly full submersion. The strongest counterargument from Scripture itself runs through Hebrews 9 verse 10, where the same word group is used for various Old Testament washings, and Hebrews 9 verse 19 describes those washings as sprinkling with blood and water using hyssop. Hebrews 10 verse 22 also speaks of hearts sprinkled clean and bodies washed with pure water, which mixes sprinkling and washing imagery for cleansing. So the word group in the Bible is wider than just dipping; it covers a range of ceremonial cleansings including sprinkling. The historical witness of the earliest post-New Testament document on baptism, the Didache from around AD 100, says baptize in flowing water, but if you do not have flowing water then in still water, and if you cannot in cold water then in warm, and if you have neither flowing nor still water then pour water on the head three times. So the earliest church already permitted pouring as a fallback when immersion was not possible. The verdict handles the tension this way: immersion is the primary, most fitting, and most expressive mode because the word, the events, and the burial-resurrection imagery all point to it. But Scripture does not absolutely forbid other modes when immersion is impossible, and the earliest church understood it that way too. So immersion is the right normal practice; sprinkling or pouring as an exclusive practice loses the picture of burial and resurrection that the New Testament shows.",
+      "denominational_landscape": "The major Christian lineages divide visibly on this question. The immersionist-exclusive position, which holds that only full immersion is valid baptism, includes the Baptist tradition from the 1689 London Baptist Confession chapter 29, the Plymouth Brethren tradition, the Anabaptist tradition (Mennonite, Amish, Hutterite, Bruderhof) from the Schleitheim Confession of 1527, the Pentecostal tradition (Assemblies of God, Foursquare), the Churches of Christ, and most independent evangelical free-church bodies. The multi-mode position, which holds that immersion, pouring, and sprinkling are all valid modes, includes the Roman Catholic Church (Catechism paragraph 1239 says triple immersion is the most expressive way but pouring three times has also been able to be conferred since ancient times), the Lutheran tradition (Luther's Large Catechism describes the symbolism of being sunk under the water but does not specify mode), the Anglican tradition (39 Articles Article 27 retains the practice without specifying mode, and the Book of Common Prayer permits dipping or affusion), the Reformed tradition (Westminster Confession chapter 28 paragraph 3 says dipping of the person is not necessary, baptism is rightly administered by pouring or sprinkling), and the United Methodist Church (Wesley said the candidate may choose immersion, pouring, or sprinkling; modern UMC permits all three). The Eastern Orthodox practice is triple immersion as the historic and normative mode but Orthodoxy does not declare other baptisms invalid in absolute terms. Historically immersion was the dominant mode in the first three centuries, sprinkling and pouring became more common in the Western medieval church especially for infant baptism, and the Reformation split largely on infant-baptism subjects rather than mode. The cult or heterodox carriers that practice immersion (Mormons, Jehovah's Witnesses, Iglesia ni Cristo, Oneness Pentecostals) coincide with the immersionist position on mode but differ on Christology and gospel, so the mode-coincidence is not a marker of orthodoxy. The cult-marker bar attaches to gospel and Trinitarian boundaries, not to the practical mode of water application."
+    },
+    "scripture": [
+      {
+        "ref": "Mark.1.10",
+        "key_term": "καὶ εὐθὺς ἀναβαίνων ἐκ τοῦ ὕδατος εἶδεν σχιζομένους τοὺς οὐρανούς; anabainōn G305 present active participle nominative masculine singular; ek G1537 preposition with genitive 'out of'; hydōr G5204 genitive neuter singular",
+        "force": "'And immediately coming up out of the water he saw the heavens being torn open.' Anabainōn ek tou hydatos ('going up out of the water') presupposes Jesus was IN the water, not standing on the bank receiving sprinkled water. The directional preposition ek with the genitive expresses emergence from inside.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.38",
+        "key_term": "κατέβησαν ἀμφότεροι εἰς τὸ ὕδωρ ὅ τε Φίλιππος καὶ ὁ εὐνοῦχος καὶ ἐβάπτισεν αὐτόν; katebēsan G2597 aorist active indicative 3p 'they went down'; eis G1519 preposition with accusative 'into'; amphoteroi G297 'both'; ebaptisen G907 aorist active indicative 3s",
+        "force": "'They both went down into the water, both Philip and the eunuch, and he baptized him.' Katabainō eis to hydōr ('go down into the water') is a movement-into-the-water verb plus directional preposition. Both descend together to the water-location where baptism is performed. The sequence presupposes a body of water deep enough for both to enter.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.8.39",
+        "key_term": "ὅτε δὲ ἀνέβησαν ἐκ τοῦ ὕδατος πνεῦμα κυρίου ἥρπασεν τὸν Φίλιππον; anebēsan G305 aorist active indicative 3p 'they came up'; ek G1537 'out of'; hydōr G5204 genitive neuter singular",
+        "force": "'When they came up out of the water, the Spirit of the Lord caught Philip away.' The matched pair katebēsan eis to hydōr (v.38) and anebēsan ek tou hydatos (v.39) is the strongest narrative-geographical evidence for immersion in the canon: both enter the water and both emerge from it.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.6.3",
+        "key_term": "ὅσοι ἐβαπτίσθημεν εἰς Χριστὸν Ἰησοῦν εἰς τὸν θάνατον αὐτοῦ ἐβαπτίσθημεν; baptizō G907 aorist passive indicative 1p (twice); eis G1519 'into'",
+        "force": "'As many of us as were baptized into Christ Jesus were baptized into his death.' The directional preposition eis ('into') with thanatos ('death') sets up the burial-resurrection imagery that v.4 develops. Being baptized 'into death' parallels being submerged under water.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Rom.6.4",
+        "key_term": "συνετάφημεν οὖν αὐτῷ διὰ τοῦ βαπτίσματος εἰς τὸν θάνατον; synetaphēmen G4916 aorist passive indicative 1p 'were buried with'; baptisma G908 genitive neuter singular; thanatos G2288",
+        "force": "'We were buried with him through baptism into death, so that just as Christ was raised from the dead through the glory of the Father, we too might walk in newness of life.' Synetaphēmen ('buried-with') plus the subsequent raising-imagery is the load-bearing burial-and-resurrection picture; immersion physically enacts the burial (going under) and resurrection (coming up).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor",
+          "typology"
+        ]
+      },
+      {
+        "ref": "Col.2.12",
+        "key_term": "συνταφέντες αὐτῷ ἐν τῷ βαπτισμῷ ἐν ᾧ καὶ συνηγέρθητε; syntaphentes G4916 aorist passive participle nominative masculine plural; baptismos G909 dative masculine singular; synēgerthēte G4891 aorist passive indicative 2p 'were raised with'",
+        "force": "'Buried with him in baptism, in which you were also raised with him through faith in the powerful working of God.' Parallel to Rom 6:4: buried-with plus raised-with imagery, with baptism as the locus of both moments. The two-part picture (down then up) fits immersion physically.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor",
+          "typology"
+        ]
+      },
+      {
+        "ref": "Matt.3.16",
+        "key_term": "βαπτισθεὶς δὲ ὁ Ἰησοῦς εὐθὺς ἀνέβη ἀπὸ τοῦ ὕδατος; baptistheis G907 aorist passive participle nominative masculine singular; anebē G305 aorist active indicative 3s; apo G575 preposition with genitive 'from'",
+        "force": "'Having been baptized Jesus immediately came up from the water.' Anebē apo tou hydatos ('came up from the water') describes emerging from the location of the water. The detail is incidental but presupposes Jesus was at or in the water-location.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.3.23",
+        "key_term": "ἦν δὲ καὶ ὁ Ἰωάννης βαπτίζων ἐν Αἰνὼν ἐγγὺς τοῦ Σαλίμ ὅτι ὕδατα πολλὰ ἦν ἐκεῖ; baptizō G907 present active participle nominative masculine singular; hydata G5204 nominative neuter plural; polla G4183 'many'",
+        "force": "'And John also was baptizing in Aenon near Salim, because much water (hydata polla, literally many waters) was there.' The narrative detail of selecting a location for the abundance of water presupposes baptismal mode required substantial water, fitting immersion rather than sprinkling.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "2Kgs.5.14",
+        "key_term": "וַיֵּרֶד וַיִּטְבֹּל בַּיַּרְדֵּן שֶׁבַע פְּעָמִים; tabal H2881 'to dip, plunge'; yarad H3381 'to go down'; LXX ebaptisato G907 aorist middle indicative 3s",
+        "force": "'And he went down (yarad) and dipped himself (tabal) seven times in the Jordan.' The Hebrew tabal carries the unambiguous sense of full immersion; the LXX renders it ebaptisato (the middle of baptizō G907), establishing the Greek term's primary lexical force as full bodily immersion. This is the most important pre-Christian LXX usage for the mode question.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.10",
+        "key_term": "μόνον ἐπὶ βρώμασιν καὶ πόμασιν καὶ διαφόροις βαπτισμοῖς; baptismos G909 dative masculine plural; diaphoros G1313 'various'",
+        "force": "'Only in foods and drinks and various washings (baptismois).' The OT priestly cleansings, including sprinklings, are called baptismois. This shows the word-group extends beyond strict immersion to a range of cultic-washing modes. Complicates the immersion-only reading lexically.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.9.19",
+        "key_term": "λαβὼν τὸ αἷμα τῶν μόσχων καὶ τῶν τράγων μετὰ ὕδατος καὶ ἐρίου κοκκίνου καὶ ὑσσώπου αὐτό τε τὸ βιβλίον καὶ πάντα τὸν λαὸν ἐράντισεν; rhantizō G4472 aorist active indicative 3s 'sprinkled'; hyssōpos G5301; haima G129",
+        "force": "'Taking the blood of calves and goats with water and scarlet wool and hyssop he sprinkled (erantisen) both the book and all the people.' The cleansing modeled here is by sprinkling (rhantizō G4472), and v.10 just above called these cleansings baptismois (G909). The word group thus includes sprinkling-cleansing, which complicates strict-immersion exclusivity.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.22",
+        "key_term": "ῥεραντισμένοι τὰς καρδίας ἀπὸ συνειδήσεως πονηρᾶς καὶ λελουσμένοι τὸ σῶμα ὕδατι καθαρῷ; rhantizō G4472 perfect passive participle; louō G3068 perfect passive participle 'washed/bathed'; kardia G2588; syneidēsis G4893",
+        "force": "'Having had our hearts sprinkled (rerantismenoi) clean from an evil conscience and our bodies washed (lelousmenoi) with pure water.' The text places sprinkling and washing in parallel for new-covenant cleansing imagery. Sprinkling-as-cleansing has canonical-imagery support in the NT itself.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Ezek.36.25",
+        "key_term": "וְזָרַקְתִּי עֲלֵיכֶם מַיִם טְהוֹרִים וּטְהַרְתֶּם; zaraq H2236 'to sprinkle, scatter'; mayim H4325 'water'; tahor H2889 'clean'",
+        "force": "'I will sprinkle (zaraq) clean water on you and you shall be clean.' The new-covenant cleansing oracle uses sprinkling-imagery for inward purification. Paedobaptist and sprinkling traditions cite this as the OT type that licenses sprinkling-mode in NT baptism.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.16.33",
+        "key_term": "παραλαβὼν αὐτοὺς ἐν ἐκείνῃ τῇ ὥρᾳ τῆς νυκτὸς ἔλουσεν ἀπὸ τῶν πληγῶν καὶ ἐβαπτίσθη αὐτὸς καὶ οἱ αὐτοῦ πάντες παραχρῆμα; baptizō G907 aorist passive indicative 3s; nyx G3571 'night'; hōra G5610 'hour'",
+        "force": "'Taking them at that hour of the night he washed their wounds, and he was baptized, he and all his, immediately.' The Philippian jailer's baptism happens at midnight in a prison setting. The text does not describe the mode; multi-mode traditions argue that immersion was practically difficult in this setting, while immersionists note prisons often had water-supply pools and the silence does not foreclose immersion.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.10.2",
+        "key_term": "καὶ πάντες εἰς τὸν Μωϋσῆν ἐβαπτίσαντο ἐν τῇ νεφέλῃ καὶ ἐν τῇ θαλάσσῃ; baptizō G907 aorist middle indicative 3p; nephelē G3507 'cloud'; thalassa G2281 'sea'",
+        "force": "'And all were baptized into Moses in the cloud and in the sea.' Paul uses baptizō figuratively for Israel's passage through the Red Sea with the cloud overhead. The figurative use does not directly settle mode but the imagery is of being surrounded by water and cloud, fitting an enclosure-immersion picture.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology",
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Mark.7.4",
+        "key_term": "καὶ ἀπὸ ἀγορᾶς ἐὰν μὴ βαπτίσωνται οὐκ ἐσθίουσιν καὶ ἄλλα πολλά ἐστιν ἃ παρέλαβον κρατεῖν βαπτισμοὺς ποτηρίων καὶ ξεστῶν καὶ χαλκίων; baptizō G907 aorist middle subjunctive 3p; baptismos G909 accusative masculine plural; potērion G4221 'cup'",
+        "force": "'And from the marketplace unless they wash (baptisōntai) themselves they do not eat, and many other things they have received to keep, washings (baptismous) of cups and pots and bronze vessels.' Pharisaic ritual washing of hands and household vessels is called baptizō/baptismos. The word-group covers ritual washings beyond strict immersion (you do not immerse a bronze pot by burial-and-resurrection; you rinse it). Complicates exclusivity.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G907",
+      "G908",
+      "G909",
+      "G911",
+      "G305",
+      "G1519",
+      "G1537",
+      "G2597",
+      "G3068",
+      "G4472",
+      "G4916",
+      "G4891",
+      "G5204",
+      "G2288",
+      "G297",
+      "G4221",
+      "H2881",
+      "H3381",
+      "H2236",
+      "H4325",
+      "H2889"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "dispensationalism",
+        "progressive_covenantalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Baptist / Brethren / Anabaptist credobaptist immersionist",
+          "verdict": "Affirms the proposition strictly: full immersion is the only valid mode. The lexical force of baptizō, the geographical detail of going down into and coming up out of the water in Acts 8 and Mark 1, the burial-and-resurrection imagery of Rom 6 and Col 2, and the LXX usage in 2 Kgs 5:14 for Naaman's dipping all converge on immersion. Pouring or sprinkling loses the canonical picture and is not what the New Testament practiced."
+        },
+        {
+          "lens": "Pentecostal / Holiness immersionist",
+          "verdict": "Affirms immersion as the normal and biblical mode; Assemblies of God Statement of Fundamental Truths makes baptism by immersion the ordinance. Most Pentecostal bodies practice immersion exclusively but treat the question with somewhat less polemical force than Baptist confessions."
+        },
+        {
+          "lens": "Eastern Orthodox triple-immersion",
+          "verdict": "Affirms triple immersion as the historic and most expressive mode but does not unchurch Western Christians baptized by pouring. The trine immersion enacts the Trinitarian formula and the three-day burial of Christ. Orthodoxy aligns with immersion on the historic-practice question but not with Baptist exclusivism on the validity question."
+        },
+        {
+          "lens": "Catholic / Lutheran / Anglican / Reformed multi-mode",
+          "verdict": "Denies that immersion is the only valid mode. Reads the broader baptismos word-group (Heb 9:10, 19, Mark 7:4) as canonical support for ritual washing in a range of modes; cites Didache 7 as the earliest post-NT permission for pouring when immersion is impractical; cites Acts 16:33 (jailer baptized at midnight in prison), Acts 2:41 (three thousand in water-scarce Jerusalem) as practical evidence the apostolic church did not require immersion in all settings. Westminster Confession 28.3: 'Dipping of the person is not necessary; baptism is rightly administered by pouring or sprinkling.'"
+        },
+        {
+          "lens": "United Methodist (Wesleyan permissive)",
+          "verdict": "Denies the exclusivity claim. Wesley taught that the candidate may choose immersion, pouring, or sprinkling; modern UMC practice retains all three modes as valid. The Methodist position is the most explicitly mode-permissive."
+        }
+      ],
+      "notes": "The lexical evidence strongly favors immersion as the primary and most expressive mode: the verb baptizō derives from baptō ('to dip'), the LXX uses it for tabal ('to dip'), and the NT geographical and symbolic data (going into and coming out of the water, burial-and-resurrection imagery) all fit immersion best. The complicating texts are also lexical: the same word group is used in Heb 9 for OT sprinkling-washings and in Mark 7 for the ritual washing of cups and pots, showing the lemma is broader than strict full-body immersion. The Brethren-distinctive reading is immersion-only; this is hermeneutically defensible but treats the dominant pattern as the exclusive pattern, a step the lexical data permits but does not force. Confidence is medium because the primary-mode question is canonically clear but the exclusivity question is canonically contested. The hermeneutic frameworks divide on how much weight to give to the symbolic-mode argument (Rom 6, Col 2) versus the practical-permission argument (Didache 7, Acts 16:33, the broader baptismos word-group). All competing-lens verdicts share grammatico-historical method; the difference is in weighting symbolic versus lexical-range data."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Didache 7, ca. AD 100, ccel.org Richardson edition verified",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Baptize in running water, in the name of the Father, Son, and Holy Spirit. If you do not have running water, baptize in some other. If you cannot in cold, then in warm. If you have neither, then pour water on the head three times."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, On Baptism chapter 7, ca. AD 203, ANF Volume 3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Tertullian describes baptism as immersion (mergitamur in aquam) and the Roman practice in his era as largely immersion-based; the immersion-mode is the standard Western patristic practice."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 1239, Promulgated 1992, vatican.va archive verified",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Baptism is performed in the most expressive way by triple immersion in the baptismal water. However, from ancient times it has also been able to be conferred by pouring the water three times over the candidate's head."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Luther's Large Catechism, Part Four on Holy Baptism, ca. 1529, bookofconcord.org",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Luther describes the ceremony as being sunk under the water which passes over us and afterwards drawn out again, but does not require any specific mode; Lutheran practice is typically pouring."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Book of Common Prayer 1662, public baptism rubric; 39 Articles Article 27",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Article 27 retains the practice without specifying mode; BCP rubric directs the priest to dip the child in the water discreetly and warily or, if the child be weak, to pour water upon it."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith chapter 28 paragraph 3, AD 1646",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Dipping of the person into the water is not necessary, but Baptism is rightly administered by pouring or sprinkling water upon the person. Explicit Reformed denial of immersion-exclusivity."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "John Wesley, abridgement of the 39 Articles for the Methodist Episcopal Church 1784; UMC Discipline on baptism",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Wesley taught the candidate may choose immersion, pouring, or sprinkling; United Methodist Church retains all three modes as valid. Direct umc.org fetch returned 404."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 Article 1; Mennonite Confession of Faith 1632 (Dordrecht) Article 7",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Believer's baptism by immersion or pouring upon confession of faith. Schleitheim does not specify mode strictly; Anabaptist practice has historically varied between pouring (Mennonite) and immersion (Hutterite Brethren in Christ)."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths Article 6 The Ordinances of the Church",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The ordinance of baptism by immersion is commanded in the Scriptures. All who repent and believe on Christ as Saviour and Lord are to be baptized. Direct ag.org fetch returned 403."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, doctrine of baptism, oca.org verified",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The person is immersed three times in the water in the name of the Father, the Son and the Holy Spirit. Trine immersion is the historic Orthodox practice; Orthodoxy does not condemn Western pouring in absolute terms but practices immersion."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/greek/907.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Baptizō G907: to immerse, submerge, to make whelmed. From baptō (G911 to dip). Implies submersion in contrast to sprinkling or pouring methods."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/1-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Mark 1:10 anabainōn (G305 present participle) ek (G1537) tou hydatos. Coming up out of the water; the directional preposition presupposes Jesus was in the water."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/8-38.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 8:38 katebēsan (G2597) amphoteroi (G297) eis (G1519) to hydōr. They both went down into the water; both Philip and the eunuch enter the water."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_kings/5-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Kgs 5:14 yarad H3381 tabal H2881 seven times in Jordan; LXX ebaptisato G907. Hebrew tabal means dip or plunge; LXX uses baptizō for full immersion."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/6-3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 6:3 ebaptisthēmen (G907 aorist passive 1p) eis (G1519) Christon Iēsoun eis ton thanaton autou ebaptisthēmen. Baptized into Christ, into his death; directional immersion-imagery."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/2-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Col 2:12 syntaphentes (G4916 buried-with) autō en tō baptismō en hō kai synēgerthēte (G4891 raised-with). Burial-and-resurrection imagery fits immersion physically."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/9-10.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Heb 9:10 diaphorois baptismois (G909 various washings). The baptismos word group covers OT priestly cleansings including sprinkling, not just immersion."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-22.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Heb 10:22 rerantismenoi (G4472 sprinkled) tas kardias kai lelousmenoi (G3068 washed) to sōma hydati katharō. Sprinkling and washing imagery for new-covenant cleansing."
+      },
+      {
+        "url": "https://www.ccel.org/ccel/richardson/fathers.viii.i.iii.html",
+        "category": "patristic_archive",
+        "stance": "complicates",
+        "quote": "Didache 7: Baptize in running water. If you do not have running water, baptize in some other. If you have neither, pour water on the head three times. Earliest post-NT permission for pouring."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3J.HTM",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "CCC 1239: Baptism is performed in the most expressive way by triple immersion. However, from ancient times it has also been able to be conferred by pouring three times over the candidate's head."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/baptism",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: The person is immersed three times in the water in the name of the Father, the Son and the Holy Spirit. Trine immersion is the historic Orthodox mode."
+      },
+      {
+        "url": "https://courses.washington.edu/hist112/SCHLEITHEIM%20CONFESSION%20OF%20FAITH.htm",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Schleitheim Article 1: Baptism shall be given to those who have learned repentance and who believe truly; symbolic burial-with-Christ language supports immersion practice."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/7-4.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Mark 7:4 baptismous (G909) potēriōn kai xestōn kai chalkiōn. Washings of cups, pots, bronze vessels: the word group covers ritual rinsing of household items, not only full-body immersion."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ezekiel/36-25.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Ezek 36:25 zaraq (H2236) mayim tahorim. I will sprinkle clean water on you; new-covenant cleansing oracle uses sprinkling imagery."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-vs-counter-witness-conflict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

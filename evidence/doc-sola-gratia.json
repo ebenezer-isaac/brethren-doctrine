@@ -1,0 +1,289 @@
+{
+  "id": "doc-sola-gratia",
+  "answer": {
+    "id": "doc-sola-gratia",
+    "affirms": true,
+    "rationale": "Eph 2:8-9 names salvation by charis (G5485) through pistis as God's doron (G1435) not ex ergon (G2041); Rom 3:24 binds dikaioo (G1344) to dorean (G1432) tei autou chariti; Rom 11:6 mounts a closed contrast in which charis and ergon are mutually exclusive principles of salvation; Titus 3:5-7 and 2 Tim 1:9 attribute salvation to mercy and purpose given before time, not to works of righteousness we performed.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The core proposition (salvation is God's unmerited favor, not earned by human merit) is one of the most consensus-affirmed of the Reformation Solas across patristic, Catholic magisterial, Lutheran, Anglican, Reformed, Methodist, Pentecostal, and Eastern Orthodox lineages. The in-house disagreement is over whether enabled human cooperation with grace compromises grace-alone (the Reformed worry, against Catholic/Orthodox/Wesleyan synergism) or simply expresses grace working through restored response. Pelagianism is the carrier of denial that crosses into cult-marker territory; properly applied sola gratia catches Pelagianism. The doctrine is canonically pan-pauline and reinforced by the OT chesed (H2617) pattern of covenant loyalty given before merit. Cult-marker is not asserted at the sola-gratia stem because in-house cooperation debates do not deny grace itself; the actual cult-marker boundary is pelagianism-denial, handled in its own question."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Is salvation wholly God's unmerited favor, or does human effort or merit contribute to it?",
+      "notes": "The label sola gratia and the phrasing 'wholly God's unmerited favor; it is not earned or contributed to' are Reformed-confessional vocabulary. The proposition itself, salvation rests on God's grace and not human merit, is canonically supported and ecumenically affirmed, so the pre-loading does not bend the verdict, but the stem must be worked in neutralized form to avoid begging the question against synergistic traditions that also reject merit-based salvation."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict is that salvation is God's gift, not something humans earn or contribute. Ephesians 2:8-9 says plainly that we are saved by grace through faith, that this is not from ourselves, that it is the gift of God, and that it is not from works so no one can boast. Romans 3:24 says we are justified freely by his grace through the redemption that is in Christ Jesus. The word translated freely there literally means without cost, as a gift. Romans 11:6 takes this further with an either or argument: if salvation is by grace, then it is no longer on the basis of works, otherwise grace would no longer be grace. Titus 3:5 says God saved us, not because of works of righteousness which we had done, but according to his own mercy. 2 Timothy 1:9 says God saved us and called us with a holy calling, not because of our works but because of his own purpose and grace, given to us in Christ Jesus before time began. The strongest complicating texts that critics raise are James 2:24 (a person is justified by works and not by faith alone) and passages calling for obedience, perseverance, and good fruit. The honest answer is that James is addressing dead faith that produces no fruit, and his works refer to the evidence that real faith exists, not to a contribution that earns salvation. Paul and James are answering different questions. The deeper canonical pattern, including the Old Testament word for God's covenant loyalty (which God gives before Israel earns it), is that grace is God's free initiative, and any obedience that follows is the response that grace itself enables. The remaining tension is real but it is in-house: how does enabled human response relate to grace. Scripture rejects salvation by merit clearly. It does not hand a tidy formula for the cooperation question.",
+      "denominational_landscape": "Christian traditions agree on the core almost universally. The patristic witness, especially Augustine in his anti-Pelagian writings, defends grace as wholly God's gift; the Council of Orange in 529 codified the rejection of Pelagius and even of semi-Pelagianism. The Catholic Catechism 1996 to 2005 calls grace favor, the free and undeserved help God gives, and Trent anathematized any view that says natural works without grace earn justification. The Lutheran Augsburg Confession Article IV says men cannot be justified by their own strength, merits, or works, but are freely justified for Christ's sake through faith. The Anglican Articles of Religion (Article XI) and the Methodist Articles of Religion (Article IX) affirm the same. Reformed confessions (Westminster, Heidelberg, Canons of Dort) are emphatic. Pentecostal and Anabaptist statements affirm grace through faith. Eastern Orthodoxy affirms grace as gift and condemns merit-based salvation, but insists on synergy, that the human will, enabled by grace, must freely cooperate. Catholic and Wesleyan traditions also affirm enabled cooperation. The in-house dispute is whether monergism (Reformed) or synergism (Catholic, Orthodox, Wesleyan, classical Arminian) better expresses grace alone. Public-record carriers of denial that cross the line into heterodoxy include strict Pelagianism (condemned at Ephesus 431 and Orange 529), Mormonism (which teaches salvation by grace after all we can do, blending merit with grace), and any system teaching ritual or moral attainment as the basis of justification. Sola gratia in the broad sense is one of the most ecumenically affirmed of the Reformation Solas."
+    },
+    "scripture": [
+      {
+        "ref": "Eph.2.8-9",
+        "key_term": "χάρις (charis) G5485; δῶρον (doron) G1435; ἔργον (ergon) G2041; καυχάομαι (kauchaomai) G2744",
+        "force": "Salvation is by charis through pistis; this not ex hymon, God's doron, not ex ergon, hina me tis kauchesetai. Closed grammatical structure excludes human merit as ground.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.24",
+        "key_term": "δικαιόω (dikaioo) G1344; δωρεάν (dorean) G1432; χάρις (charis) G5485; ἀπολύτρωσις (apolutrosis) G629",
+        "force": "Believers are dikaioumenoi dorean tei autou chariti dia tes apolutroseos en Christo Iesou. Dorean intensifies charis: justification is gratis, without cause in the recipient.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.11.6",
+        "key_term": "χάρις (charis) G5485; ἔργον (ergon) G2041",
+        "force": "Ei de chariti, ouketi ex ergon, epei he charis ouketi ginetai charis. Paul mounts a logical mutual-exclusion: grace and works as competing grounds of salvation cannot coexist; grace would cease to be grace.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.3.5-7",
+        "key_term": "ἔλεος (eleos) G1656; ἔργον (ergon) G2041; παλιγγενεσία (palingenesia) G3824; δικαιόω (dikaioo) G1344; χάρις (charis) G5485",
+        "force": "Ouk ex ergon ton en dikaiosune ha epoiesamen hemeis, alla kata to autou eleos esosen hemas. Salvation is grounded in God's mercy and regeneration by the Spirit, leading to being justified by his grace as heirs.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.1.9",
+        "key_term": "σῴζω (sozo) G4982; καλέω (kaleo) G2564; ἔργον (ergon) G2041; πρόθεσις (prothesis) G4286; χάρις (charis) G5485",
+        "force": "God saved us and called us, ou kata ta erga hemon, alla kata idian prothesin kai charin, given pro chronon aionion. Salvation grounded in pre-temporal divine purpose and grace, explicitly not in human works.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.15.11",
+        "key_term": "χάρις (charis) G5485; σῴζω (sozo) G4982",
+        "force": "Peter at Jerusalem council: dia tes charitos tou kuriou Iesou pisteuomen sothenai. Jew and Gentile alike are saved through grace, not law-observance. Apostolic settlement.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.15.10",
+        "key_term": "χάρις (charis) G5485",
+        "force": "Chariti de theou eimi ho eimi, kai he charis autou he eis eme ou kene egenethe. Paul attributes both identity and labor to grace, with grace itself as the agent operating in him.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.4.4-5",
+        "key_term": "μισθός (misthos) G3408; χάρις (charis) G5485; ὀφείλημα (opheilema) G3783; δικαιόω (dikaioo) G1344",
+        "force": "To one working, the wage is reckoned not kata charin but kata opheilema; to one not working but believing on him who justifies the ungodly, faith is reckoned for righteousness. Sharpens grace-or-debt antithesis.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.2.21",
+        "key_term": "ἀθετέω (atheteo) G114; χάρις (charis) G5485; δικαιοσύνη (dikaiosune) G1343; δωρεάν (dorean) G1432",
+        "force": "Ouk atheto ten charin tou theou: ei gar dia nomou dikaiosune, ara Christos dorean apethanen. Paul argues that righteousness by law-works would make Christ's death pointless, defending grace as exclusive ground.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.1.16-17",
+        "key_term": "χάρις (charis) G5485; νόμος (nomos) G3551",
+        "force": "Charin anti charitos and grace and truth came through Jesus Christ, contrasted with law given through Moses. Johannine framing of the new-covenant economy as grace-on-grace through Christ.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Jas.2.24",
+        "key_term": "δικαιόω (dikaioo) G1344; ἔργον (ergon) G2041; πίστις (pistis) G4102",
+        "force": "James: a person is justified by works and not by faith alone. Complicates if read as efficient cause; coheres if read as the evidential demonstration that living faith exists. Addresses dead faith without fruit, not merit-based salvation.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Phil.2.12-13",
+        "key_term": "κατεργάζομαι (katergazomai) G2716; ἐνεργέω (energeo) G1754",
+        "force": "Work out your own salvation, for God is the one working in you both to will and to do for his good pleasure. Affirms human exertion as effect not ground; God's prior working is the source.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Deut.7.7-8",
+        "key_term": "חֶסֶד (chesed) H2617; אָהֵב (aheb) H157; בָּחַר (bachar) H977",
+        "force": "YHWH set his love on Israel not because of numerical or moral merit, but because he loved them and kept the oath sworn to the fathers. OT pattern: covenant chosen by God's prior chesed, not earned.",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Eze.36.26-27",
+        "key_term": "רוּחַ (ruach) H7307; לֵב (leb) H3820",
+        "force": "I will give you a new heart and put a new spirit within you; I will cause you to walk in my statutes. New-covenant promise grounds even covenant obedience in God's prior gift, not human achievement.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G5485", "G1435", "G2041", "G2744", "G1344", "G1432", "G629", "G1656", "G3824", "G4982", "G2564", "G4286", "G166", "G5550", "G3408", "G3783", "G114", "G1343", "G3551", "G2716", "G1754", "G4102", "H2617", "H7307", "H3820", "H157", "H977"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "new_covenant_theology", "progressive_covenantalism", "dispensationalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "monergism (Reformed reading)",
+          "verdict": "affirms; grace-alone entails that the human will does not contribute to salvation; effectual call and regeneration are unilateral acts of God."
+        },
+        {
+          "lens": "synergism (Catholic, Orthodox, Wesleyan-Arminian reading)",
+          "verdict": "affirms; grace is wholly God's gift and merit is excluded, but enabled human cooperation freely receives grace; sola gratia is preserved because the cooperation itself is grace-enabled, not autonomous merit."
+        },
+        {
+          "lens": "Pelagian / strict-merit reading",
+          "verdict": "denies; affirms human natural ability to earn or contribute to salvation. Condemned by Council of Ephesus 431 and Council of Orange 529 as outside catholic Christianity."
+        }
+      ],
+      "notes": "The lexical bar (salvation rests on grace, not on works of righteousness done by us) is met under every non-Pelagian framework. The monergism-versus-synergism dispute is in-house; both sides confess that no human merit grounds salvation. Pelagianism is the genuine outside boundary."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Anti-Pelagian writings (NPNF1-05); Council of Orange (529) canons against semi-Pelagianism",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Augustine: merits do not precede grace; a good will comes from God. Orange 529 anathematized any claim that grace follows on human initiative."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 1996-2005; Council of Trent, Decree on Justification, canon 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Grace is favor, the free and undeserved help that God gives us to respond to his call. Trent anathematizes any claim that natural works without divine grace can earn justification."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article IV (Of Justification); Article XVIII (Of Free Will)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith. Condemns Pelagians."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Articles of Religion (39 Articles), Article XI (Of the Justification of Man); Article X (Of Free Will)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Article XI: we are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ by faith, not for our own works or deservings."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 11; Heidelberg Catechism Q60; Canons of Dort II.7",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "WCF 11: justification flows not from anything wrought in or done by them, but for Christ's sake alone, by imputing Christ's righteousness received by faith, itself the gift of God."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article IX (Justification of Man); Article VIII (Free Will)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Faith; Dordrecht Confession (1632)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation comes through God's grace in Christ received by faith; works follow as fruit of faith, not as ground of acceptance."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Salvation of Man",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation is received through faith in Jesus Christ; man's only hope of redemption is through the shed blood of Christ, not through human works."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox teaching on grace and synergy (OCA); Cappadocian and Chrysostom tradition",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Orthodoxy affirms salvation as gift of God's grace and rejects merit, but insists on synergy: the will, enabled by grace, must cooperate. Rejects Reformed strong monergism."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "By grace (chariti G5485) you have been saved (sesosmenoi G4982) through faith (pisteos G4102); this not of yourselves, the gift (doron G1435) of God."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/3-24.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Justified (dikaioumenoi G1344) freely (dorean G1432) by his grace (chariti G5485) through the redemption (apolutroseos G629) that is in Christ Jesus."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/11-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "If by grace, no longer of works; otherwise grace would no longer be grace. Closed disjunction between charis and ergon as grounds of salvation."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1432.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Dorean G1432: freely, without cost, gratuitously; unearned, undeserved. Used in Rom 3:24 to intensify grace as the manner of justification."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/2617.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Chesed H2617: covenant loyalty, steadfast love, given prior to and beyond merit; OT pattern of God's self-binding favor to undeserving covenant partners."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P6Z.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 1996: Grace is favor, the free and undeserved help God gives us to respond to his call. 2002: God's free initiative demands man's free response."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg IV: Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake through faith."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UMC Article IX: We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, not for our own works."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf105.toc.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine Anti-Pelagian writings: merits do not precede grace; a good will comes from God. Foundational Western defense of grace alone."
+      }
+    ],
+    "confidence": "high",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence"]
+  }
+}

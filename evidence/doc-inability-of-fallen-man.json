@@ -1,0 +1,303 @@
+{
+  "id": "doc-inability-of-fallen-man",
+  "answer": {
+    "id": "doc-inability-of-fallen-man",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration that fallen humans, apart from prior divine work, cannot of themselves come to God in saving faith. John 6:44 (οὐδεὶς δύναται ἐλθεῖν πρός με ἐὰν μὴ ὁ πατὴρ ὁ πέμψας με ἑλκύσῃ αὐτόν, 'no one is able to come to me unless the Father who sent me draws him'): dynamai G1410 in present indicative with the categorical negator oudeis G3762, paired with the strong verb helkyō G1670 (to drag, draw) in aorist subjunctive after ean mē. John 6:65 restates the same restriction and explains it: ean mē ē dedomenon autō ek tou patros (didomi G1325 perfect passive participle), 'unless it has been granted him from the Father'. Rom 8:7-8 (τὸ φρόνημα τῆς σαρκὸς ἔχθρα εἰς θεόν, τῷ γὰρ νόμῳ τοῦ θεοῦ οὐχ ὑποτάσσεται, οὐδὲ γὰρ δύναται, 'the mind of the flesh is hostility toward God; for it does not submit to God's law, nor indeed is it able'): echthra G2189 (hostility) plus dynamai G1410 negated, the same verb of capacity used in John 6. The flesh is not merely unwilling, it is incapable. 1 Cor 2:14 (ψυχικὸς δὲ ἄνθρωπος οὐ δέχεται τὰ τοῦ πνεύματος τοῦ θεοῦ, μωρία γὰρ αὐτῷ ἐστιν, καὶ οὐ δύναται γνῶναι): psychikos G5591 anthrōpos (the natural, soul-only person) ou dechetai G1209 (does not receive) plus ou dynatai gnōnai G1097 (cannot know). Eph 2:1-3 (ὄντας νεκροὺς τοῖς παραπτώμασιν καὶ ταῖς ἁμαρτίαις, 'being dead in the trespasses and sins'): nekros G3498 (dead, corpse) governs the natural state; dead persons do not raise themselves. Eph 2:8 (τῇ γὰρ χάριτι ἐστε σεσῳσμένοι διὰ πίστεως, καὶ τοῦτο οὐκ ἐξ ὑμῶν, θεοῦ τὸ δῶρον, 'by grace you have been saved through faith, and this is not from yourselves; it is God's gift'): chairs G5485 and dōron G1435 frame salvation including the faith that receives it as gift, not native production. Rom 3:11 (οὐκ ἔστιν ὁ συνίων, οὐκ ἔστιν ὁ ἐκζητῶν τὸν θεόν, 'there is none who understands, none who seeks God'): syniēmi G4920 and ekzēteō G1567 negated universally. Jer 13:23 (Hebrew haphak H2015 the skin, limmud H3928 to evil): the rhetorical impossibility of self-reform. John 8:34 (πᾶς ὁ ποιῶν τὴν ἁμαρτίαν δοῦλός ἐστιν τῆς ἁμαρτίας, 'everyone practicing sin is a slave of sin'): doulos G1401 of hamartia G266. The doctrine is canonically demonstrated by the convergence of dynamai-negated language across John, Romans, and 1 Corinthians, paired with nekros language in Ephesians and doulos language in John.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The doctrine of the inability of fallen man, that humans apart from sovereign grace cannot come to God in saving faith, has pan-canonical lexical support. The cult-marker-if-denied bar is set deliberately at false here for one reason: the in-house Christian debate is between three positions that all affirm SOME form of inability after the fall, and disagree on degree and on how grace operates. Reformed-monergistic position: fallen man is totally unable to respond apart from regenerating grace that effectually causes saving faith (Westminster Confession 9.3, Canons of Dort 3/4.3, Calvin). Catholic and Lutheran position: the will is bound and cannot do spiritual good without grace, but grace once given enables cooperation (Augsburg Article XVIII, Council of Trent Session VI, CCC 405). Wesleyan-Arminian position: through prevenient grace given to all, the deadness of the fall is partially restored so that humans can freely respond to or resist the gospel (Methodist Article VIII, Arminius). Eastern Orthodox position: synergism, in which divine grace and human freedom cooperate, with original sin understood as inherited consequences (mortality, weakness) rather than inherited guilt or total inability. The clear cult-marker line is Pelagianism, which denies the fall entirely and teaches that humans can come to God by unaided natural will. Pelagius was condemned at the Council of Carthage in AD 418, and semi-Pelagianism was condemned at Orange in AD 529. Modern Pelagianism appears in liberal-mainline reductions that deny the need for grace, in certain forms of moralistic therapeutic deism, and in some New Age and Christian Science teachings that deny sin altogether. But the specific question 'fallen humans cannot please God apart from the Spirit's prior work' is broad enough that Catholics, Lutherans, Anglicans, Reformed, Methodists, Pentecostals, and Eastern Orthodox all affirm it under various theological framings. That cross-lineage agreement, combined with the in-house Christian debate over the precise mechanism and degree, justifies setting cult_marker_if_denied=false honestly. Public-record carriers of full denial are Pelagianism (condemned), modern secular humanism that denies the fall, Christian Science (Mary Baker Eddy taught that sin and the fall are illusions of mortal mind), and various New Age movements. The Brethren formation reads this question through a broadly Reformed lens of total inability and effectual grace, though without the formal label of TULIP."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "What is the post-fall condition of human moral and spiritual capacity, and can fallen humans of themselves come to God in saving faith without prior divine work?",
+      "notes": "The statement uses Reformed-confessional vocabulary as if neutral: 'unable to please God, repent, or believe savingly' and 'apart from the Spirit's prior work' are direct paraphrases of Canons of Dort 3/4.3 and Westminster Confession 9.3. The neutralized form asks the bare question of post-fall human capacity. Working the neutralized form, the verdict still affirms canonically: dynamai G1410 is negated of the natural person in John 6:44, John 6:65, Rom 8:7-8, and 1 Cor 2:14, and Eph 2:1 uses nekros G3498 (dead) of the natural condition. The verdict is not invented by the confessional vocabulary; it is read out of the lexical pattern."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: fallen human beings, apart from God's prior gracious work, cannot come to God in saving faith on their own. They are not just weak or confused. They are unable. The strongest reason from Scripture is the cluster of passages where Jesus and Paul use the word 'cannot' or 'is not able' about fallen people. In John 6:44, Jesus says, 'No one can come to me unless the Father who sent me draws him.' The word 'draws' is a strong verb, often used for dragging something that resists. In John 6:65, Jesus repeats the point: no one can come unless it has been granted to him by the Father. In Romans 8:7 to 8, Paul writes that the mind set on the flesh is hostile to God, does not submit to God's law, and indeed cannot. In 1 Corinthians 2:14, Paul says the natural person does not accept the things of the Spirit and cannot understand them. In Ephesians 2:1, Paul says people apart from Christ are dead in their trespasses and sins. Dead people do not raise themselves. The strongest counterargument from Scripture is the set of passages where God commands all people to repent and believe, and where Jesus invites everyone to come to him. Acts 17:30 says God commands all people everywhere to repent. Matthew 11:28 says, 'Come to me, all who labor and are heavy laden.' Critics ask, why would God command something humans cannot do, and why would Jesus invite all if only some can come. The verdict handles this tension by distinguishing between moral inability and physical compulsion. Fallen humans are unable because they are unwilling, hostile to God, and dead in sin. The command to repent reveals what people ought to do and shows them their need. The gospel invitation is sincere, and the inability is moral, rooted in a heart that does not want God. Grace is what changes the heart so that the will, which was bound, becomes free to come. Some Christians believe this grace is given to all in some measure and can be resisted. Others believe this grace is given effectually to those God draws and cannot finally fail. Both views affirm that without divine help no one would come.",
+      "denominational_landscape": "Major Christian lineages broadly agree that fallen humans cannot come to God in saving faith without divine grace, but they disagree on the degree of inability and on how grace operates. Patristic authors set the foundation. Augustine in his Anti-Pelagian writings defended the doctrine that the will after the fall is bound and cannot do spiritual good without grace. The Council of Carthage in AD 418 condemned Pelagius, who taught that humans can come to God by unaided natural will, and the Second Council of Orange in AD 529 condemned semi-Pelagianism, which taught that humans can take the first step toward God on their own. The Catholic Catechism teaches that original sin wounded human nature, leaving it inclined to evil and weakened, but did not totally corrupt it; grace is necessary for salvation but cooperates with the will. The Lutheran Book of Concord, Augsburg Confession Article XVIII, says the human will has no power to work the righteousness of God without the Holy Spirit. The Lutheran Formula of Concord II on the bound will affirms that fallen man is spiritually dead and can only be made alive by the Spirit. The Anglican 39 Articles, Article X 'Of Free-Will,' confesses that we have no power of ourselves to do good works pleasing to God without the grace of God by Christ preventing us. The Reformed confessions (Westminster 9.3, Canons of Dort 3/4.3, Belgic 14, Heidelberg) teach total inability: fallen man is wholly incapable of any saving good without regenerating grace, and that grace is effectual. The Methodist Articles of Religion, Article VIII, follows the Anglican wording but is paired with the Wesleyan doctrine of prevenient grace given to all, which partially restores the ability to respond. The Anabaptist Schleitheim Confession focuses on discipleship; later Anabaptist confessions tend toward a position that affirms human depravity but with significant freedom under grace. The Pentecostal Assemblies of God Statement of Fundamental Truths affirms that man's only hope of redemption is through the shed blood of Christ. Eastern Orthodoxy teaches synergism: divine grace and human freedom cooperate, and original sin transmits the consequences of Adam's sin (mortality, weakness) rather than inherited guilt; fallen humans retain freedom but cannot be saved without grace. Public-record carriers of denial: Pelagianism, condemned in the fifth century, taught that humans can please God by natural will. Christian Science, founded by Mary Baker Eddy, denies that sin and the fall are real, treating them as illusions of mortal mind. Various New Age movements deny the fall. Modern secular humanism denies the doctrine altogether. The disagreement among historic Christian traditions is in-house and concerns the degree of inability and how grace operates, not whether grace is necessary."
+    },
+    "scripture": [
+      {
+        "ref": "John.6.44",
+        "key_term": "οὐδεὶς δύναται ἐλθεῖν πρός με ἐὰν μὴ ὁ πατὴρ ἑλκύσῃ αὐτόν; oudeis G3762; dynamai G1410 present indicative middle/passive 3s; erchomai G2064 aorist infinitive active; helkyō G1670 aorist subjunctive active 3s",
+        "force": "'No one is able to come to me unless the Father who sent me draws him.' The categorical negator oudeis governs dynamai (to be able, to have power), creating an absolute statement about capacity. The condition ean mē ('unless') with helkyō in aorist subjunctive: this verb means to drag or pull, used elsewhere of dragging a net full of fish (John 21:6, 11), drawing a sword (John 18:10), and dragging Paul and Silas (Acts 16:19). The verb is strong, not gentle persuasion. The Father's drawing is presented as the necessary condition for coming",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.6.65",
+        "key_term": "οὐδεὶς δύναται ἐλθεῖν πρός με ἐὰν μὴ ᾖ δεδομένον αὐτῷ ἐκ τοῦ πατρός; oudeis G3762; dynamai G1410 present indicative 3s; didomi G1325 perfect passive participle",
+        "force": "'No one is able to come to me unless it has been granted him from the Father.' Restates v.44 with explanatory force. Didomi in perfect passive participle (dedomenon) indicates a completed prior grant whose effect remains. The ability to come is a prior gift, not a native human power. The repetition of v.44's language with this gloss makes v.65 the inspired interpretation of v.44",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.7",
+        "key_term": "τὸ φρόνημα τῆς σαρκὸς ἔχθρα εἰς θεόν τῷ γὰρ νόμῳ τοῦ θεοῦ οὐχ ὑποτάσσεται οὐδὲ γὰρ δύναται; echthra G2189; hypotassō G5293 present indicative middle/passive 3s; dynamai G1410 present indicative 3s",
+        "force": "'The mind of the flesh is hostility toward God, for it does not submit to God's law, indeed it is not even able.' Two negations of increasing force: ouch hypotassetai ('does not submit') and oude gar dynatai ('nor indeed is it able'). Paul moves from observed non-submission to underlying incapacity. Echthra (hostility, enmity) is the same word Paul uses of the dividing wall between Jew and Gentile in Eph 2:14, 16. The mind set on flesh is not merely indifferent; it is actively hostile and structurally incapable",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.8",
+        "key_term": "οἱ δὲ ἐν σαρκὶ ὄντες θεῷ ἀρέσαι οὐ δύνανται; dynamai G1410 present indicative 3p; areskō G700 aorist infinitive active",
+        "force": "'Those who are in the flesh are not able to please God.' The third use of dynamai-negated in two verses, now with areskō (to please). Those characterized by sarx (flesh, the unregenerate condition) are categorically incapable of pleasing God. The verdict on natural human capacity could hardly be more direct",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.2.14",
+        "key_term": "ψυχικὸς δὲ ἄνθρωπος οὐ δέχεται τὰ τοῦ πνεύματος τοῦ θεοῦ, μωρία γὰρ αὐτῷ ἐστιν, καὶ οὐ δύναται γνῶναι; psychikos G5591; dechomai G1209 present indicative middle 3s; dynamai G1410 present indicative 3s; ginōskō G1097 aorist infinitive active",
+        "force": "'The natural person does not receive the things of the Spirit of God, for they are folly to him, and he is not able to know them.' Psychikos describes the human governed only by soul-life apart from the Spirit. Two parallel negations: ou dechetai (does not receive, active refusal) and ou dynatai gnōnai (is not able to know, structural incapacity). Paul lays inability at the level of cognition itself, not just will",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.1",
+        "key_term": "καὶ ὑμᾶς ὄντας νεκροὺς τοῖς παραπτώμασιν καὶ ταῖς ἁμαρτίαις; nekros G3498; paraptōma G3900; hamartia G266",
+        "force": "'And you, being dead in the trespasses and the sins.' Nekros is the ordinary Greek word for a corpse. Paul does not say 'sick' or 'wounded' but 'dead'. The dative tois paraptōmasin kai tais hamartiais marks the sphere of death: trespasses (slips, lapses, deliberate transgressions) and sins (failures, missing the mark). Dead persons do not raise themselves; the rescue is described in vv.4-5 as God making them alive together with Christ. The picture is resurrection, not rehabilitation",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Eph.2.8",
+        "key_term": "τῇ γὰρ χάριτι ἐστε σεσῳσμένοι διὰ πίστεως καὶ τοῦτο οὐκ ἐξ ὑμῶν θεοῦ τὸ δῶρον; charis G5485; sōzō G4982 perfect passive participle; pistis G4102; dōron G1435",
+        "force": "'For by grace you have been saved through faith, and this is not from yourselves; it is the gift of God.' Charis (unmerited favor) is the instrumental cause, pistis (faith) the means of reception. The clause kai touto ouk ex hymōn ('and this not from you') with dōron (gift) places the whole salvation event including the faith that receives it outside native human production. The grammatical antecedent of touto is debated, but the practical effect is the same: salvation including its reception is gift, not achievement",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.11",
+        "key_term": "οὐκ ἔστιν ὁ συνίων οὐκ ἔστιν ὁ ἐκζητῶν τὸν θεόν; syniēmi G4920 present participle active; ekzēteō G1567 present participle active",
+        "force": "'There is none who understands, none who seeks God.' Quoting Ps 14:2-3 / 53:2-3. Two universal negations: ouk estin ho syniōn (none understanding) and ouk estin ho ekzētōn (none seeking out). Syniēmi is comprehension; ekzēteō is intensified zēteō, to seek out thoroughly. Paul applies this to all under sin (vv.9, 19), Jew and Gentile alike. The natural state is not neutral search but absent search",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.8.34",
+        "key_term": "πᾶς ὁ ποιῶν τὴν ἁμαρτίαν δοῦλός ἐστιν τῆς ἁμαρτίας; poieō G4160 present participle active; hamartia G266; doulos G1401",
+        "force": "'Everyone who is practicing the sin is a slave of the sin.' Pas ho poiōn ('everyone who is doing') with present participle indicates habitual action. Doulos (slave) of hamartia governs the metaphor: the sinner is owned by sin, not free with respect to it. Jesus continues at v.36 that 'if the Son sets you free, you will be free indeed', presupposing prior bondage",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Jer.13.23",
+        "key_term": "haphak H2015; kushi H3569; owr H5785; limmud H3928; ra'a H7489",
+        "force": "'Can the Cushite change his skin or the leopard his spots? Then also you can do good who are accustomed to evil.' Rhetorical question presupposing the answer 'no'. The Hebrew haphak (to turn, transform) is negated by the figure: skin color and spots are unchangeable. The application is limmud lehare'a, 'taught/accustomed to evil', portraying habituation to evil as a kind of nature. Self-reform is impossible",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": ["simile"]
+      },
+      {
+        "ref": "Eph.2.5",
+        "key_term": "καὶ ὄντας ἡμᾶς νεκροὺς τοῖς παραπτώμασιν συνεζωοποίησεν τῷ Χριστῷ; nekros G3498; syzōopoieō G4806 aorist indicative active 3s",
+        "force": "'Even when we were dead in trespasses, made us alive together with Christ.' The verb syzōopoieō (to make alive together) is aorist active with God as subject and 'us, being dead' as object. The metaphor of resurrection is sustained: spiritual life is God's monergistic gift to those who are nekros. Eph 2:1, 5 form an inclusio around the helpless condition and the divine rescue",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Matt.11.28",
+        "key_term": "δεῦτε πρός με πάντες οἱ κοπιῶντες καὶ πεφορτισμένοι κἀγὼ ἀναπαύσω ὑμᾶς; deute (adverb 'come!'); pas G3956; kopiaō G2872; phortizō G5412",
+        "force": "'Come to me, all who labor and are heavy laden, and I will give you rest.' Universal invitation with imperative deute and pas ('all'). The complicating force: if all are invited, in what sense are all unable to come. Standard harmonization: the invitation is sincere and addresses moral inability, which is rooted in unwillingness; the inability of John 6:44 is removed by the very drawing that produces the response to Matt 11:28. Both stand: the invitation reveals the duty and the need; the drawing produces the response",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "τὰ μὲν οὖν χρόνους τῆς ἀγνοίας ὑπεριδὼν ὁ θεὸς τὰ νῦν παραγγέλλει τοῖς ἀνθρώποις πάντας πανταχοῦ μετανοεῖν; paraggellō G3853 present indicative active 3s; metanoeō G3340 present infinitive active",
+        "force": "'The times of ignorance God overlooked, but now commands all people everywhere to repent.' Universal command (pantas pantachou) to repent (metanoeō, to change the mind). Complicating force: God commands what fallen people allegedly cannot do. Harmonization: the command does not measure capacity; it measures obligation. The command also functions as the means through which God grants repentance to those he draws (2 Tim 2:25 'God may grant them repentance')",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G1410", "G1670", "G1325", "G2189", "G5293", "G700", "G5591", "G1209", "G1097", "G3498", "G3900", "G266", "G5485", "G4982", "G4102", "G1435", "G4920", "G1567", "G1401", "G4160", "G3340", "G3853", "G4806", "G3762", "H2015", "H3569", "H5785", "H3928", "H7489"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed-monergistic",
+          "verdict": "Total inability after the fall: regenerating grace precedes and effectually produces saving faith. John 6:44 plus Eph 2:1-5 plus Rom 8:7-8 read as describing dead-not-sick condition rescued by sovereign resurrection."
+        },
+        {
+          "lens": "Catholic-Lutheran-bondage-of-will",
+          "verdict": "The will is bound and cannot do saving good without grace; grace is necessary and primary, and once given it cooperates with the will. CCC 405-407 and Augsburg XVIII / Formula of Concord II affirm spiritual inability while preserving sacramental and grace-cooperative categories."
+        },
+        {
+          "lens": "Wesleyan-Arminian-prevenient-grace",
+          "verdict": "Through prevenient grace given to all, the deadness of the fall is sufficiently restored that humans can freely respond to or resist the gospel; the inability is real but universally remedied by prevenient grace. Methodist Article VIII paired with the Wesleyan doctrine."
+        },
+        {
+          "lens": "Eastern-Orthodox-synergism",
+          "verdict": "Original sin transmits consequences (mortality, weakness) not inherited guilt; the image of God is darkened but not erased; grace and human freedom cooperate in salvation. Fallen humans cannot be saved without grace, but the freedom that responds is not annihilated."
+        }
+      ],
+      "notes": "All four lenses affirm that fallen humans cannot please God or come to saving faith apart from divine grace. They differ on the degree of inability and the mode of grace. The neutralized question (apart from God's prior work, can fallen humans come to God) is answered 'no' by every major historic lineage. The lexical verdict from dynamai-negated language is unambiguous on the bare proposition."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Anti-Pelagian writings, On Nature and Grace; Second Council of Orange AD 529",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Augustine defended that the will after the fall cannot do spiritual good without prevenient grace; Orange 529 condemned semi-Pelagianism affirming that grace must precede every salutary movement of the will."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 405-407; Council of Trent Session VI, Decree on Justification, Canon 3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin wounded human nature, leaving it inclined to evil; grace is necessary for salvation; without God's grace no one can move toward conversion."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XVIII, Of Free Will; Formula of Concord II, On Free Will",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "the will has no power, without the Holy Ghost, to work the righteousness of God, that is, spiritual righteousness."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Articles of Religion (1571), Article X, Of Free-Will",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We have no power to do good works pleasant and acceptable to God, without the grace of God by Christ preventing us, that we may have a good will."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 9.3; Canons of Dort 3/4.3; Belgic Confession Art. 14",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man by his fall into a state of sin has wholly lost all ability of will to any spiritual good accompanying salvation; therefore unable, by his own strength, to convert himself or prepare himself thereunto."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Articles of Religion of the Methodist Church, Article VIII, Of Free Will",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "he cannot turn and prepare himself, by his own natural strength and works, to faith and calling upon God; we have no power to do good works without the grace of God by Christ preventing us."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Dordrecht Confession of Faith 1632, Article II on the Fall of Man",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "By disobedience man fell from the grace of God; was thereby so far separated from God that he could not console himself, nor draw nigh unto God, except through the promise of grace."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Articles 3-5 on the Fall and Salvation",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man's only hope of redemption is through the shed blood of Jesus Christ; salvation is received through repentance toward God and faith toward our Lord Jesus Christ."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America teaching on original sin and synergism",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Everyone bears the consequences of the first sin, the foremost of which is death; only Adam and Eve are guilty of that sin. Original sin transmits consequences not inherited guilt; salvation involves synergy of grace and human freedom."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/6-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "dynatai G1410 'to be able' negated by oudeis G3762; helkysē G1670 aorist subjunctive of helkyō, to drag or draw, used elsewhere of dragging a net or sword."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-7.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "echthra G2189 'hostility, enmity' plus ouch hypotassetai G5293 'does not submit' plus oude gar dynatai G1410 'nor indeed is it able' — three layered negations."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/2-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "psychikos G5591 'natural, soul-only' anthrōpos; ou dechetai G1209 'does not receive'; ou dynatai gnōnai G1410+G1097 'is not able to know'."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "nekros G3498 'dead, lifeless, a corpse'; paraptōma G3900 'a falling away, slip, trespass'; hamartia G266 'sin, failure'."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "chariti G5485 'grace, graciousness'; sesōsmenoi G4982 'having been saved' perfect passive; pisteōs G4102 'faith'; dōron G1435 'gift, present'."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/6-65.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "oudeis dynatai elthein 'no one is able to come'; ean mē ē dedomenon G1325 perfect passive participle, 'unless it has been granted from the Father'."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/3-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "syniōn G4920 'understanding' and ekzētōn G1567 'seeking out' both negated by ouk estin ho, universal negation."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/8-34.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "doulos G1401 'slave' of hamartia G266; pas ho poiōn G4160 present participle 'everyone practicing' — bondage to sin is the natural state."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jeremiah/13-23.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "haphak H2015 'to turn, transform' applied to kushi H3569 'Cushite' and owr H5785 'skin'; limmud H3928 'accustomed' to ra'a H7489 'evil'."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-free-will/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Of Free Will they teach that man's will has some liberty to choose civil righteousness, but it has no power, without the Holy Ghost, to work the righteousness of God."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VIII: he cannot turn and prepare himself, by his own natural strength and works, to faith, and calling upon God; we have no power to do good works without the grace of God by Christ preventing us."
+      },
+      {
+        "url": "https://www.oca.org/questions/teaching/original-sin",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Everyone bears the consequences of the first sin, the foremost of which is death; only Adam and Eve are guilty of that sin. Orthodoxy teaches consequences are inherited not culpability."
+      }
+    ],
+    "confidence": "high",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence"]
+  }
+}

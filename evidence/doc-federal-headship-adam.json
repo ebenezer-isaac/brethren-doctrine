@@ -1,0 +1,318 @@
+{
+  "id": "doc-federal-headship-adam",
+  "answer": {
+    "id": "doc-federal-headship-adam",
+    "affirms": true,
+    "rationale": "Paul's argument in Rom 5:12-19 and 1 Cor 15:21-22 makes Adam's one act of disobedience the operative cause of death and condemnation for all (di' henos anthropou, G1520+G444; kathistēmi G2525 in the passive 'were constituted sinners'), paralleled by Christ's one act of obedience for the many; Heb 7:9-10 extends the same corporate-solidarity logic to Levi paying tithes 'in the loins' of Abraham. The underlying reality (corporate solidarity in Adam with imputable consequences) is canonically demonstrated. The specific Reformed-scholastic 'federal covenant' framework (Cocceius, Westminster) is one in-house systematic theory of how that solidarity is structured; the Augustinian biological-realist theory and the Eastern Orthodox ancestral-consequences theory are competing in-house theories of the same canonical phenomenon.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "The proposition as stated conflates two layers. Layer one (canonical): Adam's one transgression has imputable corporate consequences for his posterity (Rom 5:12-19, 1 Cor 15:22). Layer two (systematic): the specific Reformed federal-covenant framework articulated by Cocceius and the Westminster Divines in the 17th century, with a pre-fall 'covenant of works' as the legal instrument of imputation. Layer one clears canonical demonstration; layer two is one in-house theological model among at least three (Reformed federal, Augustinian biological-realist, Orthodox ancestral-consequences/no-guilt-imputation). Catholic CCC 404 uses propagation-of-fallen-nature language, not federal-representative; Lutheran Augsburg II focuses on inherited concupiscence; Anglican Article IX and Methodist Article VII speak of corruption of nature engendered of Adam's offspring; Eastern Orthodoxy explicitly rejects imputed personal guilt while affirming inherited mortality. Wesleyan-Arminian theology generally rejects the Reformed federal framework as scholasticism. Therefore: cult_marker_if_denied=false honestly; would_die_for=false because the specific framework is not the gospel boundary, though the underlying corporate-solidarity reality is. A church holding the Augustinian or Orthodox or Lutheran framing remains within historic Christianity. A church denying that Adam's sin has any objective consequence for his posterity (pure Pelagianism) would be a different and more serious matter, but that is a different question from this one."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Did Adam act as covenant representative of all humanity such that his sin is reckoned to all?",
+      "notes": "The phrase 'covenant/federal head' is Reformed-confessional vocabulary (Cocceius, Westminster Confession 6.3, Westminster Larger Catechism Q22) presented as if neutral. The statement also presupposes the imputation framework. Neutralized form asks the underlying canonical question without pre-committing to one of the three competing in-house frameworks (Reformed federal, Augustinian biological-realist, Eastern Orthodox ancestral-consequences). The Pauline parallel of Adam-Christ representativity (Rom 5:12-21, 1 Cor 15:21-22) is itself canonical and not a Reformed distinctive; the systematic-theological packaging into a pre-fall covenant of works is."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict: yes, the Bible teaches that Adam's one act of disobedience had real consequences for all his descendants, not just himself. Paul makes this case in Romans 5:12-19. He says sin entered the world through one man, and death spread to everyone because of him. In verse 19 he says that through the disobedience of the one man, the many were made sinners, using a word that means appointed or constituted in a particular status. He then sets up a strict parallel: just as Adam's one wrong act brought condemnation, Christ's one right act brought righteousness. The same logic appears in 1 Corinthians 15:22, in Adam all die, in Christ all shall be made alive. Hebrews 7:9-10 extends the same corporate-solidarity reasoning to a non-Adam case: it says Levi paid tithes through Abraham because he was still in the loins of his father, treating the descendant as participating in the ancestor's action. The strongest complicating texts come from passages that emphasize individual responsibility, like Ezekiel 18:20 where the son does not bear the iniquity of the father, and Galatians 6:5 where each will bear his own load. The verdict handles this tension by distinguishing two layers. There is a canonical layer that Scripture clearly teaches: Adam's sin really does have consequences for his descendants, and Christ's obedience really does benefit those joined to him. Then there is a systematic-theology layer where Christians have proposed different frameworks for explaining how that works. The Reformed framework called federal headship says Adam stood as a legal covenant representative whose guilt is imputed to his descendants. The older Augustinian framework says all humanity was biologically present in Adam and so sinned in him. The Eastern Orthodox framework says humans inherit the consequences of Adam's sin, like death and a tendency to sin, but not Adam's personal guilt. All three frameworks try to explain the same canonical reality. The specific Reformed scholastic framework appeared in the 17th century with Cocceius and the Westminster Divines, so it is not the only historic Christian way to read the biblical material.",
+      "denominational_landscape": "The underlying claim that Adam's sin has objective consequences for his descendants is held by virtually all historic Christian traditions. The specific Reformed framework of federal headship as a legal covenant of works is held primarily by Reformed and Presbyterian churches that follow the Westminster Confession, Heidelberg Catechism, and similar documents. Catholic teaching in the Catechism paragraphs 402-405 uses propagation language: Adam transmitted to his descendants a fallen human nature, not a personal fault, but a deprivation of original holiness. Lutheran teaching in the Augsburg Confession Article II emphasizes inherited concupiscence and corruption from natural birth rather than legal representation. Anglican Article IX of the 39 Articles and Methodist Article VII speak of corruption of nature engendered of the offspring of Adam, not of covenant headship. Eastern Orthodoxy explicitly rejects the Western legal-imputation reading: humans inherit mortality and corruption from Adam, but each person answers for his own actual sins, not for Adam's personal guilt. Wesleyan-Arminian theology generally treats Reformed federal headship as scholastic over-reach. Patristic theology, especially Augustine in City of God, leans biological-realist, that all humanity was seminally in Adam and sinned in him, not covenantal-federal. The cult-boundary line lies not at framework choice but at denial that Adam's sin has any consequence for humanity at all, the Pelagian position the early church rejected. A church holding the Augustinian, Eastern Orthodox, Lutheran, or Wesleyan framing of inherited corruption is well inside historic Christianity even though it does not use the Reformed federal-headship vocabulary."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.5.12",
+        "key_term": "δι' ἑνὸς ἀνθρώπου G1223+G1520+G444",
+        "force": "Through one man sin entered into the world, and death through sin, and so death spread to all men. The preposition dia plus genitive marks Adam as the channel through which sin and its consequence reach the whole human race.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.5.15",
+        "key_term": "παράπτωμα (paraptōma) G3900",
+        "force": "By the trespass of the one, the many died. Paraptōma denotes a specific transgression; the contrast many died because of one is the structural anchor of corporate-solidarity reasoning.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "Rom.5.18",
+        "key_term": "ἑνὸς παραπτώματος ... ἑνὸς δικαιώματος G1520+G3900+G1345",
+        "force": "Through one transgression to all men unto condemnation, through one righteous act to all men unto justification. The parallel one-to-all on both sides is the explicit imputation logic.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism", "chiasm"]
+      },
+      {
+        "ref": "Rom.5.19",
+        "key_term": "κατεστάθησαν (katestathēsan) G2525",
+        "force": "Through the disobedience of the one man the many were constituted sinners. Kathistēmi passive carries both declarative and resultative force in Greek lexica; Paul does not adjudicate the metaphysics but states the resultant status.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "1Cor.15.21",
+        "key_term": "δι' ἀνθρώπου θάνατος ... δι' ἀνθρώπου ἀνάστασις G1223+G444",
+        "force": "Since by a man came death, by a man also came the resurrection of the dead. The same dia-plus-genitive structure as Rom 5; corporate consequences traced to representative individuals.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism", "typology"]
+      },
+      {
+        "ref": "1Cor.15.22",
+        "key_term": "ἐν τῷ Ἀδάμ ... ἐν τῷ Χριστῷ G1722+G76+G5547",
+        "force": "As in Adam all die, so also in Christ shall all be made alive. The locative en plus dative articulates corporate inclusion in the representative person.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "1Cor.15.45",
+        "key_term": "ὁ ἔσχατος Ἀδάμ G76",
+        "force": "The first man Adam became a living being; the last Adam became a life-giving spirit. Christ as eschatos Adam presupposes Adam as protos Adam in a numbered representative pair.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Heb.7.9",
+        "key_term": "διὰ Ἀβραάμ ... δεδεκάτωται G1223+G11+G1183",
+        "force": "Through Abraham even Levi who receives tithes paid tithes. The author applies corporate-solidarity logic to a non-Adam case; descendant participates in ancestor's action.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["idiom"]
+      },
+      {
+        "ref": "Heb.7.10",
+        "key_term": "ἐν τῇ ὀσφύι τοῦ πατρός G1722+G3751+G3962",
+        "force": "He was still in the loins of his father when Melchizedek met him. The 'in-the-loins' idiom is the canonical pattern for corporate solidarity between ancestor and descendant.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["idiom", "synecdoche"]
+      },
+      {
+        "ref": "Ezek.18.20",
+        "key_term": "נֶפֶשׁ הַחֹטֵאת H5315+H2398",
+        "force": "The soul that sins shall die. The son shall not bear the iniquity of the father, nor the father bear the iniquity of the son. Often cited against any imputation framework; complicates the strong federal reading.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Gal.6.5",
+        "key_term": "ἴδιον φορτίον G2398+G5413",
+        "force": "Each one will bear his own load. Paul's own emphasis on individual moral accountability in the present age; complicates a purely-representative reading without harmonization.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.3",
+        "key_term": "τέκνα φύσει ὀργῆς G5043+G5449+G3709",
+        "force": "We were by nature children of wrath, as the rest. Phusei (by nature) supports inherited fallen condition; consistent with several frameworks of original sin transmission, does not by itself settle which.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ps.51.5",
+        "key_term": "בְּעָוֹן חוֹלָלְתִּי H5771+H2342",
+        "force": "Behold, I was brought forth in iniquity, and in sin did my mother conceive me. David's confession of pre-natal sinful condition; supports inherited-sinfulness but does not articulate a specific federal mechanism.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "1Tim.2.13",
+        "key_term": "Ἀδάμ ... πρῶτος ἐπλάσθη G76+G4413+G4111",
+        "force": "Adam was formed first, then Eve. Paul ranks Adam as protos in a representative ordering that parallels the federal-head logic of Rom 5.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G76", "G444", "G1520", "G1223", "G3900", "G3876", "G2525", "G1722", "G5547", "G2227", "G5590", "G2198", "G5517", "G2032", "G1345", "G11", "G1183", "G3751", "G3962", "G2398", "G5413", "G5043", "G5449", "G3709", "H120", "H5315", "H2398", "H5771", "H2342"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "Reformed federal headship (Cocceius / Westminster)",
+          "verdict": "Adam stood in a pre-fall covenant of works as legal representative; his guilt is immediately imputed to all his natural descendants; the parallel with Christ's imputed righteousness is exact."
+        },
+        {
+          "framework": "Augustinian biological-realist",
+          "verdict": "All humanity was seminally / biologically present in Adam and so sinned in him; transmission is by propagation of corrupted nature, not by legal representation."
+        },
+        {
+          "framework": "Roman Catholic propagation model",
+          "verdict": "Adam transmitted a fallen human nature deprived of original holiness; original sin is not a personal fault in descendants but a deprivation transmitted by generation. CCC 404-405."
+        },
+        {
+          "framework": "Lutheran inherited-concupiscence",
+          "verdict": "Original sin is the inherited corruption of nature transmitted by natural generation; the focus is the actual sinful condition, not legal-federal imputation. Augsburg Confession Article II."
+        },
+        {
+          "framework": "Wesleyan-Arminian",
+          "verdict": "Affirms inherited corruption and depravity from Adam but rejects Reformed federal-headship scholasticism; original guilt removed by prevenient grace. Methodist Article VII."
+        },
+        {
+          "framework": "Eastern Orthodox ancestral-sin",
+          "verdict": "Humans inherit mortality, corruption, and disordered desires from Adam, but not Adam's personal guilt; each person bears his own actual sins. Rejects Western legal-imputation framing as juridical distortion."
+        },
+        {
+          "framework": "Pelagian (rejected historically)",
+          "verdict": "Adam's sin affects only himself; humans are born innocent and sin only by individual choice. Rejected by Council of Carthage 418 and historic Christianity as denial of the canonical pattern."
+        }
+      ],
+      "notes": "All non-Pelagian frameworks affirm the canonical reality that Adam's sin has objective consequences for his posterity. They disagree on the mechanism. The specific Reformed federal-covenant framework is one in-house systematic model; it is not the only historic Christian reading. Brethren tradition has generally affirmed the Reformed federal framing in conservative streams but with less covenantal-systematic packaging."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God Book 13.14 (CCEL Schaff NPNF1-02)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "All sinned in Adam by virtue of seminal presence in him; biological-realist transmission rather than covenantal-federal representation. CCEL page returned header only."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 402-405",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Sin which will be transmitted by propagation to all mankind, that is, by the transmission of a human nature deprived of original holiness and justice. Propagation, not federal representation."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 405",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Original sin does not have the character of a personal fault in any of Adam's descendants. It is a deprivation of original holiness and justice. Explicitly denies personal-guilt imputation."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II (Of Original Sin)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "All men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence. Inherited corruption framing, not federal."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article IX (Of Original or Birth-Sin)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Original sin is the fault and corruption of the nature of every man, that naturally is engendered of the offspring of Adam. No federal-covenant language. Page did not render article text."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 6.3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "They being the root of all mankind, the guilt of this sin was imputed, and the same death in sin, and corrupted nature, conveyed to all their posterity descending from them by ordinary generation."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Larger Catechism Q22",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The covenant being made with Adam as a public person, not for himself only, but for his posterity, all mankind descending from him by ordinary generation, sinned in him, and fell with him."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VII (Of Original or Birth Sin)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Original sin is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam, whereby man is very far gone from original righteousness."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith: Sin (oca.org)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "All the children of Adam share in this tragic fate. Inherited mortality and a deathbound universe, not inherited personal guilt; rejects the Western juridical imputation framework."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "AG Statement of Fundamental Truths, The Fall of Man (URL returned 403)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Adam's transgression brought the human race under condemnation. Generic-evangelical formulation; does not specify federal-headship covenantal mechanism."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 5:19 katestathēsan G2525 passive: the many were constituted sinners. Lexical force carries both declarative and resultative senses."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2525.htm",
+        "category": "primary_repository",
+        "stance": "nuance",
+        "quote": "Thayer on kathistēmi passive: to set down as, constitute, equivalent to to declare, show to be. The verb does not by itself force the federal-vs-realist choice."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3900.htm",
+        "category": "primary_repository",
+        "stance": "nuance",
+        "quote": "Paraptōma G3900 appears 21 times in NT. Rom 5:15-20 uses it for Adam's representative trespass; Gal 6:1 and Eph 2:1 apply it to individual believers. Dual application."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 15:22 en tō Adam ... en tō Christō: locative inclusion in the representative person. Same construction for both Adam and Christ."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/7.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 7:9-10 dia Abraham ... en tē osphui tou patros: Levi paid tithes through Abraham while in the loins of his father. Corporate-solidarity idiom."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1C.HTM",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "CCC 404: sin will be transmitted by propagation to all mankind, by the transmission of a human nature deprived of original holiness and justice. Not federal-representative."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Augsburg II: all men begotten in the natural way are born with sin, without the fear of God, without trust in God, and with concupiscence. Inherited-corruption framing."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "complicates",
+        "quote": "Methodist Article VII: the corruption of the nature of every man, that naturally is engendered of the offspring of Adam, whereby man is very far gone. Not federal."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/sin",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "OCA: all the children of Adam share in this tragic fate. Orthodox teaching: inherited mortality and corruption, not imputed personal guilt; rejects Western juridical model."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/76.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "G76 Adam: nine NT occurrences across Luke 3:38; Rom 5:14; 1 Cor 15:22, 45; 1 Tim 2:13-14; Jude 14. Always treated as named individual."
+      }
+    ],
+    "confidence": "medium",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence", "apparatus-paywalled"]
+  }
+}

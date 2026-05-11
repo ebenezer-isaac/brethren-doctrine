@@ -1,0 +1,493 @@
+{
+  "id": "doc-election",
+  "answer": {
+    "id": "doc-election",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration that God, before the foundation of the world, chose a people for salvation in Christ. The technical verb is ἐκλέγομαι eklegomai G1586 (aorist middle, 'chose for himself'), used of God or Christ as subject in Luke 6:13, John 6:70, John 13:18, John 15:16 (οὐχ ὑμεῖς με ἐξελέξασθε ἀλλ ἐγὼ ἐξελεξάμην ὑμᾶς, 'you did not choose me but I chose you'), John 15:19, Acts 1:2, Acts 13:17 (God chose Israel's fathers), Acts 15:7, 1 Cor 1:27-28, Eph 1:4 (ἐξελέξατο ἡμᾶς ἐν αὐτῷ πρὸ καταβολῆς κόσμου, 'he chose us in him before the foundation of the world'), Jas 2:5. The cognate noun ἐκλεκτός eklektos G1588 ('chosen, elect') is applied to Israel (Isa 65:9 LXX bachir H977), to Christ (Luke 9:35, Luke 23:35, 1 Pet 2:4-6), to angels (1 Tim 5:21), and to Christian believers (Rom 8:33, Col 3:12, 1 Pet 2:9, Tit 1:1, 2 Tim 2:10). The verb προορίζω proorizo G4309 ('to mark out boundaries beforehand') occurs six times: Acts 4:28, Rom 8:29 (those whom he foreknew he also predestined to be conformed to the image of his Son), Rom 8:30, 1 Cor 2:7, Eph 1:5 (προορίσας ἡμᾶς εἰς υἱοθεσίαν, 'having predestined us for adoption'), Eph 1:11 (προορισθέντες κατὰ πρόθεσιν, 'predestined according to the purpose'). The verb προγινώσκω proginosko G4267 ('to know beforehand') in Rom 8:29 and 1 Pet 1:1-2 stands alongside πρόθεσις prothesis G4286 ('settled purpose') in Rom 8:28, 9:11, Eph 1:11, 3:11, 2 Tim 1:9. Acts 13:48 uses τάσσω tassō G5021 (τεταγμένοι, perfect passive participle, 'having been appointed') of those who believed for eternal life. The OT background is bachar H977 ('to choose') and bachir H972 ('chosen one'), used of Israel (Deut 7:6-8, Isa 41:8-9, Ps 105:6, 105:43), of the Servant (Isa 42:1, 49:7), and of David. Deut 7:7-8 grounds the choice not in Israel's merit or numbers but in God's love and oath to the fathers, ruling out merit-based election within the canonical pattern. The proposition 'God elects a people for salvation in Christ' is therefore pan-canonical at the lexical level. What is contested in-house is the BASIS of election. Reformed-Calvinist reading: unconditional, grounded in God's sovereign good pleasure (Rom 9:11-18 explicitly says 'not because of works but because of him who calls'; vessels of mercy prepared beforehand for glory). Arminian-Wesleyan, classical-Lutheran-qualified, Catholic, and Eastern Orthodox readings: God's foreknowledge (prognosis) sees who will respond in faith, and election is grounded in that foreseen-faith response or in synergistic cooperation with prevenient grace. The verb proginosko itself is lexically ambiguous between cognitive foreknowledge ('know beforehand') and covenantal acknowledgment ('set love on beforehand, designate'). Romans 9 pushes hard toward the unconditional reading: God's choice of Jacob over Esau came 'though they were not yet born and had done nothing either good or bad, in order that God's purpose of election might continue, not because of works but because of him who calls' (Rom 9:11-12). The complicating texts are 1 Tim 2:4, 2 Pet 3:9, John 3:16, 1 John 2:2, and the warning passages, which Calvinists harmonize through the well-meant-offer-of-the-gospel and Arminians through conditional-election-grounded-in-foreseen-faith. The lexical evidence settles the WHETHER (God elects, pan-canonical) but does not univocally settle the HOW (conditional vs unconditional); the canonical-statement question affirms; the divided-question reading on basis remains.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "The stem as written is heavily Reformed-confessional-loaded: 'unconditional (Calvinist) or based on foreseen faith (classical Arminian/Brethren) is a divided question' frames the in-house debate as the question itself. Stem-audit flags this as a stem with embedded verdict structure. The neutralized question is 'Did God, before the foundation of the world, choose a people for salvation in Christ' to which the pan-canonical lexical pattern says yes. The would_die_for is true because the proposition 'God elected a people in Christ before the foundation of the world' is straight Eph 1:4 and is a load-bearing apostolic doctrine; to deny that God elects is to deny the apostolic gospel. cult_marker_if_denied is false because (a) the proposition has multiple legitimate Christian readings on its BASIS (unconditional, conditional, synergistic-cooperative), all of which AFFIRM that God elects, and (b) the in-house disagreement is between historic Christian lineages (Reformed, Lutheran, Anglican, Methodist, Eastern Orthodox, Catholic), none of which are heterodox carriers. Public-record denial of any divine election whatsoever is rare in Christianity. Open-theist positions (e.g., Clark Pinnock, Greg Boyd) qualify the OMNIscience side of foreknowledge but still affirm some form of God's choice of a people; they are intra-evangelical and contested but not cult-markers. The verdict is: AFFIRM the proposition that God elects a people in Christ; ABSTAIN on the unconditional-vs-conditional in-house debate as a divided question between historic Christian lineages. Plymouth Brethren-adjacent formation has historically held a moderate Calvinist position (J.N. Darby was sometimes called a four-and-a-half-point Calvinist; election affirmed, double predestination typically resisted). Within the Brethren orbit the question 'unconditional vs foreseen-faith' is genuinely divided, mirroring the wider Protestant landscape. Fruit-vs-precision: a believer praying 'Father, you chose me in Christ before the world began' is praying Eph 1:4 with apostolic warrant regardless of which side of the in-house debate they sit on; the would_X_if_otherwise booleans are set permissive because the in-house disagreement on the BASIS is not church-dividing across the wider Christian tradition. The bar set for publicly_correct is false because correction is not warranted between historic-orthodox lineages on a contested in-house question; correction would be warranted only if someone denies that God elects at all, which is not the typical denial-pattern."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Before the foundation of the world, God chose a people for salvation in Christ.",
+      "notes": "The stem embeds the in-house Reformed-Arminian debate as the question itself, presenting unconditional-vs-foreseen-faith as a coordinate clause. This loads the question with Reformed-confessional vocabulary (unconditional, foreseen faith) as if neutral. The clean canonical proposition is 'God chose a people for salvation in Christ before the foundation of the world' which is Eph 1:4 verbatim. The basis-question is a legitimate in-house contested question between historic Christian lineages and is set aside in the affirms-verdict; it is treated under hermeneutics.competing_lens_verdicts. Flag stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: yes. Before God made the world, God chose a people who would belong to him through Jesus Christ. The Bible says this in plain words. The strongest reason for this from Scripture is Ephesians 1 verses 4 and 5: he chose us in him before the foundation of the world, that we should be holy and blameless before him; in love he predestined us for adoption to himself as sons through Jesus Christ. The same idea appears in Romans 8 verse 29, those whom he foreknew he also predestined to be conformed to the image of his Son; in John 15 verse 16, Jesus says, you did not choose me, but I chose you; in 1 Peter 1 verse 2, elect according to the foreknowledge of God the Father; and in 2 Thessalonians 2 verse 13, God chose you as the firstfruits to be saved through sanctification by the Spirit and belief in the truth. The Old Testament background is Deuteronomy 7 verses 7 and 8 where God says he chose Israel not because they were many or worthy but because he loved them and kept his oath to the fathers. The strongest counterargument from inside the Bible is not really an argument against election itself but a tension on how it works. 1 Timothy 2 verse 4 says God desires all people to be saved and to come to the knowledge of the truth. 2 Peter 3 verse 9 says the Lord is patient toward you, not wishing that any should perish, but that all should reach repentance. John 3 verse 16 says, for God so loved the world that whoever believes. The warning passages in Hebrews 6 and Hebrews 10 say people can fall away. Both sides of the historic debate agree that God elects; they disagree on the basis. One side says God's choice is unconditional, grounded only in his own good pleasure (Romans 9:11-13: though the twins were not yet born and had done nothing good or bad, in order that God's purpose of election might continue, Jacob I loved but Esau I hated). The other side says God foreknew who would freely believe and chose those, so the election is conditional on foreseen faith. The Bible's vocabulary on this point is genuinely contested at the word level. The word translated foreknew can mean simply knowing beforehand or it can mean setting love on beforehand. Different Christian traditions read the same words differently and have done so for two thousand years. The honest verdict is: yes God elects a people in Christ before the foundation of the world, and the question of conditional versus unconditional remains a divided question between historic Christian traditions.",
+      "denominational_landscape": "Every major historic Christian lineage affirms some form of God's election of a people for salvation in Christ. The disagreement is on the basis of election, not on whether election happens. Patristic writers are mixed. Augustine in the late period (On the Predestination of the Saints, On the Gift of Perseverance) defended an unconditional reading where God's election is the cause of faith rather than the response to foreseen faith; some earlier Greek fathers (notably John Chrysostom, John of Damascus) leaned toward a foreknowledge-based reading. Catholic teaching in the Catechism affirms God's eternal plan and predestination while insisting that God predestines no one to hell and that human free will cooperates with grace; the Thomist and Molinist schools inside Catholicism continue the in-house debate. Lutheran teaching in the Formula of Concord Article XI affirms God's eternal election to salvation but explicitly rejects strict double predestination; the Lutheran middle position is that God's election is the cause of salvation for the saved while damnation is the result of human unbelief, not divine reprobation. Anglican teaching in Article XVII of the 39 Articles defines predestination to life as the everlasting purpose of God whereby he hath decreed by his counsel secret to us to deliver from curse and damnation those whom he hath chosen in Christ out of mankind; the article is famously open to both Reformed and non-Reformed readings. The Reformed tradition in the Canons of Dort and the Westminster Confession holds unconditional election: God's choice is grounded in his sovereign good pleasure, not in foreseen faith or merit. The Wesleyan and Methodist tradition holds conditional election: God's foreknowledge sees who will freely respond to prevenient grace, and election is grounded in that response. The Anabaptist tradition emphasizes free response to the gospel and tends toward a foreknowledge-based reading. Pentecostal and Charismatic traditions (Assemblies of God, Foursquare) typically hold a classical Arminian view of conditional election. Eastern Orthodoxy holds a synergistic view: God's foreknowledge encompasses all paths, salvation involves cooperation of divine grace and human freedom, and the strict unconditional-predestination reading is rejected. Plymouth Brethren teaching has historically held a moderate Calvinist position with strong election affirmation and resistance to strict double predestination. Public-record denial that God elects at all is rare; even open-theist evangelicals (Pinnock, Boyd) affirm some form of divine choosing while qualifying foreknowledge. The Christian tradition is unanimous that God elects; the Christian tradition is genuinely divided on the basis of election."
+    },
+    "scripture": [
+      {
+        "ref": "Eph.1.4",
+        "key_term": "ἐξελέξατο ἡμᾶς ἐν αὐτῷ πρὸ καταβολῆς κόσμου; eklegomai G1586 aorist middle indicative 3s; katabolē G2602; kosmos G2889",
+        "force": "'He chose us in him before the foundation of the world.' The verb is aorist middle of eklegomai ('to pick out for oneself'), a deliberate, settled, completed choice. The middle voice signals the choice is for God's own purpose. The temporal marker pro katabolēs kosmou ('before the foundation of the world') places the choice in eternity past, before creation. The instrumental en autō ('in him', i.e. in Christ) makes Christ the sphere of election. This verse alone establishes the central proposition: God elects a people in Christ before creation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.5",
+        "key_term": "προορίσας ἡμᾶς εἰς υἱοθεσίαν διὰ Ἰησοῦ Χριστοῦ εἰς αὐτόν κατὰ τὴν εὐδοκίαν τοῦ θελήματος αὐτοῦ; proorizo G4309 aorist active participle; huiothesia G5206; eudokia G2107; thelēma G2307",
+        "force": "'Having predestined us for adoption as sons through Jesus Christ to himself, according to the good pleasure of his will.' Proorisas ('marked out beforehand') sets the boundary in eternity past. The goal is huiothesia (adoption as sons). The agent is Christ. The motive is the eudokia tou thelēmatos (good pleasure of his will). The 'good pleasure' clause grounds the predestination in God's own will, not in any creature's foreseen response.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.11",
+        "key_term": "προορισθέντες κατὰ πρόθεσιν τοῦ τὰ πάντα ἐνεργοῦντος κατὰ τὴν βουλὴν τοῦ θελήματος αὐτοῦ; proorizo G4309 aorist passive participle; prothesis G4286; energeō G1754; boulē G1012; thelēma G2307",
+        "force": "'Predestined according to the purpose of him who works all things according to the counsel of his will.' Stack of synonyms for divine intentionality: prothesis (settled purpose), boulē (deliberative counsel), thelēma (will). Energeō for God's all-things-working activity. The predestination is grounded in God's settled purpose and counseled will, not in creaturely contingency.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.29",
+        "key_term": "οὓς προέγνω καὶ προώρισεν συμμόρφους τῆς εἰκόνος τοῦ υἱοῦ αὐτοῦ; proginosko G4267 aorist active indicative 3s; proorizo G4309 aorist active indicative 3s; symmorphos G4832; eikōn G1504",
+        "force": "'Those whom he foreknew he also predestined to be conformed to the image of his Son.' Two verbs in sequence, both aorist active. Proginosko can mean either cognitive foreknowledge or covenantal acknowledgment / setting-love-upon-beforehand (cf. Hebrew yada usage). The Calvinist reading takes proginosko as relational foreknowledge equivalent to election; the Arminian reading takes it as cognitive foresight of who will believe. The verb is genuinely contested at the lexical level. The goal of predestination is conformity to the image of the Son, not a bare assignment to heaven.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.30",
+        "key_term": "οὓς δὲ προώρισεν τούτους καὶ ἐκάλεσεν καὶ οὓς ἐκάλεσεν τούτους καὶ ἐδικαίωσεν οὓς δὲ ἐδικαίωσεν τούτους καὶ ἐδόξασεν; proorizo G4309; kaleō G2564; dikaioō G1344; doxazō G1392 all aorist active indicative 3s",
+        "force": "'Those whom he predestined he also called, those whom he called he also justified, those whom he justified he also glorified.' Chain of four aorists creates the unbreakable golden-chain of salvation. The aorist 'glorified' of a future event treats glorification as already-as-good-as-accomplished from God's perspective. Each link is co-extensive with the next: the predestined set and the glorified set are the same set.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.9.11",
+        "key_term": "μήπω γὰρ γεννηθέντων μηδὲ πραξάντων τι ἀγαθὸν ἢ φαῦλον ἵνα ἡ κατ ἐκλογὴν πρόθεσις τοῦ θεοῦ μένῃ; ekloge G1589 accusative feminine singular; prothesis G4286",
+        "force": "'Though they were not yet born and had done nothing either good or bad, in order that God's purpose of election (kat eklogēn prothesis) might continue, not because of works but because of him who calls.' Paul deliberately removes works as the basis: the twins had not yet acted. The purpose-clause hina marks the divine intent: God's election-purpose stands grounded in calling, not in foreseen merit. This is the strongest single text against a merit-based or works-foreseen election; it pushes hard toward the unconditional reading.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.9.13",
+        "key_term": "τὸν Ἰακὼβ ἠγάπησα τὸν δὲ Ἠσαῦ ἐμίσησα; agapaō G25 aorist active indicative 1s; miseō G3404 aorist active indicative 1s",
+        "force": "'Jacob I loved but Esau I hated.' Quoting Mal 1:2-3 of the nations of Jacob and Esau, applied by Paul to the individuals as illustrating God's elective principle. The Hebrew idiom love / hate is comparative-preference language (cf. Luke 14:26), not affective hatred. Still the contrast is sharp: God's preferential choice of Jacob is the substance of election in this passage.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "idiom",
+          "metonymy"
+        ]
+      },
+      {
+        "ref": "Rom.9.16",
+        "key_term": "ἄρα οὖν οὐ τοῦ θέλοντος οὐδὲ τοῦ τρέχοντος ἀλλὰ τοῦ ἐλεῶντος θεοῦ; thelō G2309 present active participle; trechō G5143 present active participle; eleeō G1653 present active participle",
+        "force": "'So then it depends not on human will or exertion, but on God who has mercy.' Two negations rule out human willing (thelontos) and human running / striving (trechontos); the positive is God's mercy (eleōntos). The grammatical structure leaves no room for a human-side contribution as the basis. Calvinist reading: election grounded in mercy, not in foreseen response. Arminian reading: distinguishes election from individual salvation; this passage addresses Israel-as-corporate election, not individual salvation mechanics.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.11.5",
+        "key_term": "λεῖμμα κατ ἐκλογὴν χάριτος γέγονεν; leimma G3005; ekloge G1589; charis G5485",
+        "force": "'There is at the present time a remnant chosen by grace (kat eklogēn charitos).' The remnant motif: God elects a portion of Israel by grace, not by works. The phrase kat eklogēn charitos grounds election explicitly in grace.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.11.7",
+        "key_term": "ἡ ἐκλογὴ ἐπέτυχεν οἱ δὲ λοιποὶ ἐπωρώθησαν; ekloge G1589; epitygchanō G2013 aorist active indicative 3s; pōroō G4456 aorist passive indicative 3p",
+        "force": "'The elect (hē ekloge, abstract noun used concretely for the elect group) obtained it, but the rest were hardened.' Two destinies in one verse: the elect obtained, the rest were hardened. The passive pōroō ('were hardened') has God as the implied agent (cf. v.8 'God gave them a spirit of stupor'). Goes the furthest toward an unconditional-and-double reading.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.6.37",
+        "key_term": "πᾶν ὃ δίδωσίν μοι ὁ πατὴρ πρὸς ἐμὲ ἥξει; didōmi G1325 present active indicative 3s; hēkō G2240 future active indicative 3s",
+        "force": "'All that the Father gives me will come to me.' The Father-given group is the subject; the certain coming is the predicate. The neuter pan ho ('every-thing that') collects the elect as a group-totality. The Father's giving is the cause; coming-to-Christ is the effect.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.6.44",
+        "key_term": "οὐδεὶς δύναται ἐλθεῖν πρός με ἐὰν μὴ ὁ πατὴρ ὁ πέμψας με ἑλκύσῃ αὐτόν; dynamai G1410 present middle indicative 3s; helkō G1670 aorist active subjunctive 3s",
+        "force": "'No one can come to me unless the Father who sent me draws him.' Universal negation (oudeis, no one) plus conditional (ean mē, unless) plus drawing (helkō, to draw / drag with force; same verb of dragging a net in John 21:11). The drawing of the Father is the necessary condition of coming to Christ.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.15.16",
+        "key_term": "οὐχ ὑμεῖς με ἐξελέξασθε ἀλλ ἐγὼ ἐξελεξάμην ὑμᾶς; eklegomai G1586 aorist middle indicative 2p / 1s",
+        "force": "'You did not choose me, but I chose you, and appointed you that you should go and bear fruit.' Negation of human-initiative choice; positive of Christ's choice. The aorist middle eklegomai is the same verb as Eph 1:4. The reversal of subject-object highlights divine priority in election.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.13.48",
+        "key_term": "ἐπίστευσαν ὅσοι ἦσαν τεταγμένοι εἰς ζωὴν αἰώνιον; pisteuō G4100 aorist active indicative 3p; tassō G5021 perfect passive participle nominative masculine plural",
+        "force": "'As many as were appointed (tetagmenoi, perfect passive participle of tassō) to eternal life believed.' Perfect tense indicates a completed prior arrangement with abiding effect; passive voice indicates God as the unnamed agent. The appointed-to-eternal-life set is the same set as the believing set. Strong unconditional-election reading. Arminian reading: tassō can mean self-disposing ('as many as had disposed themselves'), middle-voice possible morphologically; this rendering is grammatically defensible but lexically minority.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.1.1",
+        "key_term": "ἐκλεκτοῖς παρεπιδήμοις διασπορᾶς; eklektos G1588 dative masculine plural; parepidēmos G3927; diaspora G1290",
+        "force": "'To the elect exiles of the dispersion.' The recipients are addressed as eklektois (chosen / elect). Categorical identification of Christians as the elect group; standard NT vocabulary of identity.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.1.2",
+        "key_term": "κατὰ πρόγνωσιν θεοῦ πατρός ἐν ἁγιασμῷ πνεύματος εἰς ὑπακοὴν καὶ ῥαντισμὸν αἵματος Ἰησοῦ Χριστοῦ; prognosis G4268; hagiasmos G38",
+        "force": "'According to the foreknowledge of God the Father, in the sanctification of the Spirit, for obedience and sprinkling with the blood of Jesus Christ.' The election in v.1 is grounded kata prognosin (according to foreknowledge) of the Father. Prognosis is the noun-form of proginosko; the same lexical ambiguity (cognitive vs covenantal-relational) applies. Calvinist: foreknowledge means God's eternal setting-of-love-upon. Arminian: foreknowledge means God's foreseeing-who-will-believe.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Thess.2.13",
+        "key_term": "εἵλατο ὑμᾶς ὁ θεὸς ἀπαρχὴν εἰς σωτηρίαν ἐν ἁγιασμῷ πνεύματος καὶ πίστει ἀληθείας; haireomai G138 aorist middle indicative 3s; aparchē G536; sōtēria G4991",
+        "force": "'God chose you as firstfruits for salvation, through sanctification by the Spirit and belief in the truth.' The verb haireomai ('to choose for oneself') is a different verb from eklegomai but functions equivalently in soteriological contexts. The goal eis sōtērian (for salvation) makes the choice salvifically directed. The means are en hagiasmō pneumatos kai pistei alētheias (through Spirit-sanctification and faith in truth).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Deut.7.7",
+        "key_term": "לֹא מֵרֻבְּכֶם מִכָּל הָעַמִּים חָשַׁק יְהוָה בָּכֶם וַיִּבְחַר בָּכֶם; chashaq H2836 perfect 3ms; bachar H977 imperfect consecutive 3ms",
+        "force": "'It was not because you were more in number than any other people that the LORD set his love on you and chose you, for you were the fewest of all peoples.' Negation of merit-based or numbers-based grounds for the choice. The two verbs chashaq ('set love upon, become attached to') and bachar ('choose, elect') establish the OT-canonical vocabulary of divine election. The choice precedes Israel's worthiness and is grounded in God's love.",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Deut.7.8",
+        "key_term": "מֵאַהֲבַת יְהוָה אֶתְכֶם וּמִשָּׁמְרוֹ אֶת הַשְּׁבֻעָה אֲשֶׁר נִשְׁבַּע לַאֲבֹתֵיכֶם; ahabah H160 noun feminine singular; shamar H8104 infinitive construct; shebuah H7621",
+        "force": "'It is because the LORD loved you and is keeping the oath that he swore to your fathers.' Positive grounds of the choice: God's love and God's oath-keeping to the patriarchs. The election is grounded in God's prior-self-binding love-and-promise, not in Israel's response.",
+        "supports": "for",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.2.4",
+        "key_term": "ὃς πάντας ἀνθρώπους θέλει σωθῆναι καὶ εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν; thelō G2309 present active indicative 3s; sōzō G4982 aorist passive infinitive; epignosis G1922",
+        "force": "'Who desires all people (pantas anthrōpous) to be saved and to come to the knowledge of the truth.' God's revealed-will (thelēma in this volitional sense) reaches all people. Complicating text against the strict unconditional reading: if God elects only some unconditionally, in what sense does he desire all to be saved? Calvinist harmonization: distinguishes God's decretive will (efficacious, electing only some) from his preceptive / revealed will (offers salvation to all). Arminian reading: takes thelei at face value as God's universal salvific will, conditional on free human response.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.3.9",
+        "key_term": "μὴ βουλόμενός τινας ἀπολέσθαι ἀλλὰ πάντας εἰς μετάνοιαν χωρῆσαι; boulomai G1014 present middle participle; apollymi G622 aorist middle infinitive; metanoia G3341",
+        "force": "'Not wishing that any (tinas) should perish, but that all (pantas) should reach repentance.' Boulomai is the deliberative-will verb. Complicating text against the strict unconditional reading: if some are reprobate by divine decree, why is the Lord not wishing any to perish? Calvinist harmonization: 'any' and 'all' refer to the elect specifically (hymas earlier in the verse is the antecedent). Arminian reading: takes the universals at face value.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.3.16",
+        "key_term": "οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον; agapaō G25 aorist active indicative 3s; kosmos G2889",
+        "force": "'For God so loved the world (ton kosmon) that he gave his only Son, that whoever believes (pas ho pisteuōn) in him should not perish but have eternal life.' Universal-scope language: ton kosmon (the world) and pas ho pisteuōn (everyone-believing). Complicating against strict double-predestination. Calvinist harmonization: ton kosmon means the world-of-all-kinds (Jew and Gentile alike) not literally every individual; pas ho pisteuōn is the elect-believing-set. Arminian reading: takes the universals at face value.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1John.2.2",
+        "key_term": "αὐτὸς ἱλασμός ἐστιν περὶ τῶν ἁμαρτιῶν ἡμῶν οὐ περὶ τῶν ἡμετέρων δὲ μόνον ἀλλὰ καὶ περὶ ὅλου τοῦ κόσμου; hilasmos G2434; kosmos G2889",
+        "force": "'He is the propitiation (hilasmos) for our sins, and not for ours only but also for the sins of the whole world (holou tou kosmou).' Complicating text against strict particular-redemption. Calvinist harmonization: 'whole world' means people from all nations / people-groups, not every individual without exception. Arminian / Amyraldian reading: takes 'whole world' at face value as universal sufficient atonement.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.6.4",
+        "key_term": "ἀδύνατον γὰρ τοὺς ἅπαξ φωτισθέντας; adynaton G102; hapax G530; phōtizō G5461 aorist passive participle accusative masculine plural",
+        "force": "'It is impossible for those who have once been enlightened, and have tasted the heavenly gift, and have shared in the Holy Spirit, and have tasted the goodness of the word of God and the powers of the age to come, and then have fallen away, to be restored again to repentance.' Warning-passage complicating any view of election that excludes the possibility of conscious apostasy from a real participation in grace. Calvinist reading: the enlightened-and-fallen group never had real saving grace; the language describes proximity, not regeneration. Arminian reading: real participation in grace can be forfeited; election is conditional and resistible.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.4.28",
+        "key_term": "ποιῆσαι ὅσα ἡ χείρ σου καὶ ἡ βουλή σου προώρισεν γενέσθαι; proorizo G4309 aorist active indicative 3s; boulē G1012",
+        "force": "'To do whatever your hand and your plan (boulē) predestined (proorisen) to take place.' The crucifixion itself is the object of God's predestining act. Establishes that the lexicon of predestination is not limited to soteriology; it reaches into the most central redemptive-historical event. The pairing of God's hand and counsel with predestination shows that predestination operates through human responsible agency (Herod, Pilate, the people) without removing it.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Isa.42.1",
+        "key_term": "הֵן עַבְדִּי אֶתְמָךְ בּוֹ בְּחִירִי רָצְתָה נַפְשִׁי; ebed H5650; tamak H8551 imperfect 1cs; bachir H972 masculine singular suffix; ratsah H7521 perfect 3fs",
+        "force": "'Behold my Servant whom I uphold, my Chosen (bachiri) in whom my soul delights.' OT-canonical application of bachir (chosen one, elect) to the Messianic Servant. The Servant Songs ground the NT-Greek eklektos applied to Christ (Luke 9:35 'this is my Son, my Chosen').",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Luke.9.35",
+        "key_term": "οὗτός ἐστιν ὁ υἱός μου ὁ ἐκλελεγμένος; eklegomai G1586 perfect passive participle nominative masculine singular",
+        "force": "'This is my Son, my Chosen One (ho eklelegmenos).' The transfiguration declaration. Perfect passive participle of eklegomai applied to Christ as the Father's chosen Son. Christ himself is the prime eklektos; believers are eklektoi by union with him (Eph 1:4 'in him').",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.27",
+        "key_term": "τὰ μωρὰ τοῦ κόσμου ἐξελέξατο ὁ θεὸς ἵνα καταισχύνῃ τοὺς σοφούς; eklegomai G1586 aorist middle indicative 3s; mōros G3474; kataischynō G2617",
+        "force": "'God chose (exelexato) what is foolish in the world to shame the wise.' Repeated three times in 1 Cor 1:27-28: God chose the foolish, the weak, the low-and-despised. Pattern of divine election as anti-meritorious: God chooses what the world counts as nothing in order to nullify the things that are.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1586",
+      "G1588",
+      "G1589",
+      "G4309",
+      "G4267",
+      "G4268",
+      "G4286",
+      "G5021",
+      "G2564",
+      "G1670",
+      "G2240",
+      "G1325",
+      "G138",
+      "G4456",
+      "G2013",
+      "G3005",
+      "G2107",
+      "G2307",
+      "G1012",
+      "G1754",
+      "G2434",
+      "G2889",
+      "G25",
+      "G2309",
+      "G1014",
+      "G102",
+      "G5461",
+      "G1392",
+      "G1344",
+      "H977",
+      "H972",
+      "H2836",
+      "H160",
+      "H7621",
+      "H7521",
+      "H8551",
+      "H5650"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "synergism_eastern_orthodox",
+        "molinism",
+        "thomism",
+        "open_theism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed-confessional (Canons of Dort, Westminster, Belgic, Heidelberg, Savoy)",
+          "verdict": "Unconditional election: God's choice is grounded in his sovereign good pleasure, before and independent of any foreseen faith or merit in the creature. Foreknowledge (proginosko) in Rom 8:29 and 1 Pet 1:2 means God's eternal setting-of-love-upon, not cognitive foresight of human response. Rom 9:11-13, 9:16, John 6:37-44, Acts 13:48 settle the question decisively. The well-meant-offer-of-the-gospel to all reconciles 1 Tim 2:4, 2 Pet 3:9, John 3:16 with the particular-electing decree."
+        },
+        {
+          "lens": "Classical Arminian (Five Articles of Remonstrance, Wesleyan-Methodist)",
+          "verdict": "Conditional election: God's foreknowledge (prognosis) sees who will freely respond to prevenient grace, and God's election is grounded in that foreseen-faith response. Rom 8:29 reads naturally as cognitive foreknowledge. 1 Pet 1:2 reads naturally as election according to foreseen faith. 1 Tim 2:4, 2 Pet 3:9, John 3:16 and the warning passages are taken at face-value. Election is real but cooperative; resistible grace preserves human responsibility."
+        },
+        {
+          "lens": "Lutheran (Formula of Concord XI)",
+          "verdict": "Election to salvation is grounded in God's eternal counsel and is the cause of the salvation of the saved; but damnation is not the parallel result of divine reprobation, it is the result of human unbelief. Lutheran middle position rejects strict double predestination. Foreseen-faith view is also rejected because it would ground election in the creature; the Lutheran resolution is paradox accepted rather than logical harmonization. Concordance Article XI offers comfort, not speculation."
+        },
+        {
+          "lens": "Catholic magisterial (Trent, CCC, Thomist and Molinist schools)",
+          "verdict": "God's eternal plan of predestination is affirmed; God predestines no one to hell; human free will cooperates with grace. Thomist school: predestination is logically prior to merit and is the cause of grace. Molinist school: God's middle knowledge sees what every free creature would do in every possible circumstance and elects accordingly, preserving both efficacious grace and libertarian freedom. The Catholic Church does not bind the conscience to either school within the magisterium."
+        },
+        {
+          "lens": "Eastern Orthodox (synergism)",
+          "verdict": "Salvation is the cooperation of divine grace and human freedom; God's foreknowledge encompasses all paths and outcomes; strict unconditional predestination is rejected as alien to the patristic tradition. Election is real but understood within a relational-personalist frame rather than a juridical-decretal frame. The Greek fathers (especially Chrysostom, John of Damascus, Maximus the Confessor) are read as the touchstone."
+        },
+        {
+          "lens": "Plymouth Brethren (Darby, Kelly, Mackintosh)",
+          "verdict": "Election is affirmed with strong emphasis (Eph 1:4 is foundational); double predestination is typically resisted; the focus is on the believer's pre-temporal choice in Christ for adoption and inheritance. The dispensational frame distinguishes election of the church (heavenly) from election of Israel (earthly). Position is moderate-Calvinist in soteriology with a distinctive eschatological reading."
+        }
+      ],
+      "notes": "The lexical evidence (eklegomai, eklektos, proorizo, prothesis, prognosis, tassō, bachar, bachir) is unambiguous on the WHETHER: God elects a people in Christ before the foundation of the world. The lexical evidence on the HOW is genuinely contested. The verb proginosko (Rom 8:29, 1 Pet 1:2) is the central lexical pivot: Calvinists take it relationally (set-love-upon-beforehand), Arminians take it cognitively (foresee-the-believing-response). Both readings are lexically defensible; Thayer and standard lexicons acknowledge both senses. Romans 9:11-13 pushes the Calvinist direction (election precedes works); 1 Tim 2:4, 2 Pet 3:9, 1 John 2:2 push the Arminian direction (universal divine-salvific desire). The analogia-scripturae principle does not yield a univocal verdict on the basis-question; it yields a univocal verdict on the whether-question. Progressive revelation is in play in the move from Israel's corporate-national election (Deut 7:6-8) to the personal-faith election in Christ (Eph 1:4); the same vocabulary (bachar / eklegomai) carries through with shifted referent."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On the Predestination of the Saints; On the Gift of Perseverance; ca. AD 428-429",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Faith itself is the gift of God, and election is not the response to foreseen faith but rather the cause of faith. Augustine's late anti-Pelagian position grounds election in God's sovereign grace, not in foreseen response. CCEL fetch did not return the specific chapter."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "John Chrysostom, Homilies on Romans (especially on Rom 8:28-30); John of Damascus, Exact Exposition of the Orthodox Faith 2.30",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Earlier Greek fathers tend toward a foreknowledge-of-response reading: God foresees who will freely accept the gospel and elects accordingly. Synergistic frame; rejects the later Augustinian unconditional-decretal reading."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 600-602, 1996-2002, 2022; Council of Trent Session VI on justification",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God's eternal plan of predestination includes each person's free response. God predestines no one to go to hell; for this, a willful turning away from God is necessary, and persistence in it until the end. Both grace and free will are affirmed. Direct vatican.va fetch returned 404."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Solid Declaration, Article XI on Election; bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God in His purpose and counsel ordained that He Himself, by the power of His Holy Ghost, would produce and work in us, through the Word, everything that pertains to our conversion. Lutheran rejects strict double predestination; election to salvation affirmed."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article XVII Of Predestination and Election, AD 1571",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Predestination to Life is the everlasting purpose of God, whereby (before the foundations of the world were laid) he hath constantly decreed by his counsel secret to us, to deliver from curse and damnation those whom he hath chosen in Christ out of mankind."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Canons of Dort, First Head of Doctrine, Articles 7-10, AD 1619; Westminster Confession of Faith Chapter 3 Of God's Eternal Decree",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Election is the unchangeable purpose of God, by which, before the foundation of the world, he hath out of mere grace, according to the sovereign good pleasure of his own will, chosen, from the whole human race, a certain number of persons to redemption in Christ. Unconditional election explicitly defined."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Five Articles of Remonstrance, Article 1, AD 1610; Wesley, Predestination Calmly Considered, 1752",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "God, by an eternal and unchangeable purpose in Jesus Christ his Son, before the foundation of the world, hath determined to save out of the fallen sinful race of men those who through the grace of the Holy Ghost shall believe on this his Son Jesus. Conditional election on foreseen faith. UMC Articles of Religion direct text on this point not in returned excerpt."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527; Dordrecht Confession 1632; believers-church free-response tradition",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Anabaptist tradition emphasizes free conscious response to the gospel and believers-church baptism; tends toward a foreknowledge-based reading of election without engaging the Reformed-Arminian technical debate. Election affirmed but framed within voluntary discipleship."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths; Foursquare Declaration of Faith",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Classical Arminian frame in most Pentecostal denominations; election grounded in foreseen faith and free-response to prevenient grace. AG direct fetch returned 403; position widely documented in Pentecostal systematic theology."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America doctrinal teaching; Greek patristic synergism; Maximus the Confessor, Gregory Palamas",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Eastern Orthodoxy holds synergism: salvation involves the cooperation of divine grace and human freedom. God's foreknowledge encompasses all paths and outcomes; strict unconditional predestination is rejected as alien to the patristic tradition. OCA direct fetch returned 404."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 1:4 exelexato G1586 aorist middle indicative 3s of eklegomai, 'he chose us for himself'. Pro katabolēs kosmou, before the foundation of the world. The deliberate completed pre-creation choice in Christ."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1586.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G1586 eklegomai: to pick out for oneself, choose, elect, select. 22 NT occurrences; God or Christ as subject in Luke 6:13, John 6:70, 13:18, 15:16, 15:19, Acts 1:2, 13:17, 15:7, 1 Cor 1:27-28, Eph 1:4, Jas 2:5."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4309.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G4309 proorizo: to pre-establish boundaries, predetermine, foreordain. Six NT occurrences: Acts 4:28, Rom 8:29, 8:30, 1 Cor 2:7, Eph 1:5, Eph 1:11. Sovereign advance determination of outcomes."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1588.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G1588 eklektos: chosen, elect, picked out. Applied to Israel, to Christ (Luke 9:35, 23:35), to Christian believers (Rom 8:33, Col 3:12, 1 Pet 2:9, Tit 1:1), and to angels (1 Tim 5:21)."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4267.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "G4267 proginosko: to know beforehand. Lexical ambiguity between cognitive foreknowledge and relational-covenantal acknowledgment beforehand. Thayer notes scholarly debate; the verb is the lexical pivot of the in-house debate."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-29.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 8:29 proegnō (G4267) kai proōrisen (G4309): those whom he foreknew he also predestined to be conformed to the image of his Son. Two pro-prefixed verbs locating the act in eternity past."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/9-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 9:11 kat eklogēn prothesis tou theou: God's purpose of election (ekloge G1589 + prothesis G4286), grounded in him who calls, not in works of the twins not yet born."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/13-48.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 13:48 tetagmenoi (G5021): perfect passive participle of tassō, 'having been appointed' to eternal life. The appointed set is the believing set; pluperfect-like sense of completed prior divine arrangement."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/1-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Pet 1:1-2 eklektois (G1588) kata prognosin theou patros (G4268): elect according to the foreknowledge of God the Father. Election grounded in the Father's prognosis."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/15-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 15:16 ouch hymeis me exelexasthe all egō exelexamēn hymas: you did not choose me but I chose you. Aorist middle eklegomai twice; reversal of subject-object highlights divine priority in election."
+      },
+      {
+        "url": "https://bookofconcord.org/solid-declaration/election/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Formula of Concord SD XI: God in His purpose and counsel ordained that He Himself, by the power of His Holy Ghost, would work in us through the Word everything that pertains to our conversion. Rejects double predestination."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles XVII: Predestination to Life is the everlasting purpose of God, whereby before the foundations of the world were laid he hath decreed to deliver from curse and damnation those whom he hath chosen in Christ."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

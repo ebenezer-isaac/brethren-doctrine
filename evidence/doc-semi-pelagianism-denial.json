@@ -1,0 +1,341 @@
+{
+  "id": "doc-semi-pelagianism-denial",
+  "answer": {
+    "id": "doc-semi-pelagianism-denial",
+    "affirms": true,
+    "rationale": "Semi-Pelagianism is denied by the canonical lexical pattern. John 6:44 and 6:65 use dunatai (G1410) to assert ontological inability and helkuo (G1670, draw) plus dedomenon (G1325, granted) to locate the first move in the Father; Rom 9:16 places mercy not on him who wills (thelontos G2309) or runs (trechontos G5143) but on God who shows mercy; Phil 2:13 has God energon (G1754) both the willing (thelein) and the working; Acts 16:14 has the Lord dianoigo (G1272) Lydia's heart before she heeded. The first step toward God is God's, not the natural will's.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Semi-Pelagianism is the more refined error condemned at the Second Council of Orange in 529 after the broader Pelagianism had already been rejected at Carthage 418 and Ephesus 431. It teaches that the initium fidei, the beginning of faith, lies in the unaided natural will and that God's grace then assists and completes what the human has begun. Historic carriers include John Cassian in Conferences XIII and Faustus of Riez. The error collapses sola gratia because it makes God's grace responsive to autonomous human initiative. Scripture's lexical pattern in John 6, Rom 9, Phil 2, and Acts 16 locates the first move in God. The doctrine is denied unanimously by patristic, Catholic, Lutheran, Anglican, Reformed, and Wesleyan magisterial confessions; Wesleyans distinguish their position from semi-Pelagianism through prevenient grace, which is itself the divine first move that restores enough capacity for the human response. Eastern Orthodoxy holds a synergistic position; some Western theologians label this semi-Pelagian, but Eastern theologians reject that framing, holding that grace always precedes and enables the human cooperation, and the matter is contested. Cult-marker status is set to false because (a) the doctrine of grace prevenience over human initiative, while pan-canonical, is one step further refined than the gospel core itself, (b) sincere Wesleyans and Eastern Orthodox who would die for the gospel hold the rejected initiative-talk under careful nuance, and (c) the canonical demonstration, though robust, requires reading the inability verbs together with the divine-initiative verbs as a single pattern, which is more inferential than the bare denial of Pelagianism. would_die_for remains true because the matter touches sola gratia; serve, member, teaching, and public-correction tighten because the practical pastoral effect on assurance, sanctification, and gospel proclamation is serious."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement asserts the proposition (the prior gracious work of God enables any movement of the will toward Him; the sinner does not initiate by natural ability). It does not name Cassian or use Reformed-confessional jargon as if neutral. Working form retained."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict in plain words. The first step toward God in salvation is God's step, not the natural will's. People do not start the journey on their own and then ask God to help them finish. Strongest reason from Scripture. In John 6:44 Jesus says no one is able to come to him unless the Father draws him, and in John 6:65 he repeats that no one can come unless it has been granted by the Father. The Greek behind able to come carries inherent capacity, not just permission, and the Greek behind draws is the same word used elsewhere of hauling in a heavy net. Romans 9:16 says it does not depend on the one who wills or the one who runs but on God who shows mercy. Philippians 2:13 says it is God who works in you both the willing and the working for his good pleasure. Acts 16:14 says the Lord opened Lydia's heart and only then did she pay attention to Paul. Strongest counterargument from Scripture. Verses that command repentance and choice can sound like the choice is in unaided human reach. Joshua 24:15 says choose this day whom you will serve. Acts 17:30 commands all people everywhere to repent. Revelation 3:20 has Jesus standing at the door and knocking, sounding like the human opens first. How the verdict handles the tension. Scripture commands what humans cannot do apart from grace, then supplies the grace that enables the command. The same Acts that records the command to repent also records that God granted repentance to the Gentiles in Acts 11:18 and that God opened Lydia's heart in Acts 16:14. The two are not rivals. The command goes out to all; the power to obey is given by God. Faith and repentance themselves are described as gifts in Eph 2:8, Phil 1:29, and 2 Tim 2:25. Honest acknowledgment of remaining tension. Genuine human response is real; it is not a puppet show. Scripture also speaks of the heart being hardened by refusal, so people are accountable for their resistance. The mystery is how divine initiative and human responsibility coexist without one cancelling the other; Scripture asserts both without resolving how.",
+      "denominational_landscape": "Agreement here is broad but not as universal as on bare Pelagianism. The patristic church condemned semi-Pelagianism at the Second Council of Orange in 529 after a decades-long dispute touched off by John Cassian in southern Gaul. The canons of Orange were drafted by Caesarius of Arles and ratified by Rome. The Catholic Church holds the Orange canons and the Catechism paragraph 406 frames grace as necessary, then adds at the Council of Trent that human freedom is genuine, producing a synergistic-cooperation account in which prevenient grace remains the first move. Lutherans in the Formula of Concord Article II reject any role for natural will in beginning faith, and the Augsburg Confession Article XVIII follows the same line. Anglicans codify the position in Article X Of Free Will, which says we have no power to do good works pleasant and acceptable to God without the grace of God by Christ preventing us. Methodists in Article VIII Of Free Will use almost identical language and Wesley defends prevenient grace as the gift that restores enough freedom for the human response, so Wesleyans are technically not semi-Pelagian. Reformed confessions, Westminster Chapter 9 and Canons of Dort 3 and 4, teach total inability and that regeneration precedes the first act of saving faith. Anabaptist and historic Pentecostal confessions affirm the necessity of grace for any movement toward God. Eastern Orthodoxy holds synergism, in which human cooperation is real and meaningful, and some Western theologians label this semi-Pelagian; Eastern theologians dispute that label and hold that grace always precedes and enables the cooperation. Public-record carriers of explicit semi-Pelagian language include John Cassian in Conferences XIII and Faustus of Riez, both pre-Orange. Modern movements that frame humans as taking the first step include some popular revivalist preaching and certain decisional-regeneration frameworks that, while not formally heretical, can drift toward the rejected pattern. This is a doctrine where the magisterial lineages agree against the rejected position but with notable nuance about how divine initiative and human response cohere."
+    },
+    "scripture": [
+      {
+        "ref": "John.6.44",
+        "key_term": "δύναται (dunatai) G1410, ἑλκύσῃ (helkuse) G1670",
+        "force": "No one is able to come to me unless the Father who sent me draws him. The verb of ability denotes inherent capacity, not mere permission; the verb of drawing denotes effective pull, the same word used for dragging a heavy net to shore in John 21:11.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.6.65",
+        "key_term": "δεδομένον (dedomenon) G1325, δύναται (dunatai) G1410",
+        "force": "No one can come to me unless it has been granted him by the Father. The perfect passive participle of didomi locates the granting as a standing divine gift that precedes any human coming.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.15.16",
+        "key_term": "ἐξελεξάμην (exelexamen) G1586",
+        "force": "You did not choose me, but I chose you and appointed you. The verb of choosing places the divine initiative ahead of the human response in the most explicit reversal-of-agency statement in the Fourth Gospel.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.9.16",
+        "key_term": "θέλοντος (thelontos) G2309, τρέχοντος (trechontos) G5143, ἐλεῶντος (eleontos) G1653",
+        "force": "So then it depends not on the one who wills or the one who runs but on God who shows mercy. The three participles place willing and running on one side and divine mercy on the other; mercy is the controlling factor.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Phil.2.13",
+        "key_term": "ἐνεργῶν (energon) G1754, θέλειν (thelein) G2309, ἐνεργεῖν (energein) G1754",
+        "force": "It is God who works in you both to will and to work for his good pleasure. The same energetic verb governs both the willing and the working; the willing itself is sourced in divine action.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.8-9",
+        "key_term": "χάριτι (chariti) G5485, σεσῳσμένοι (sesosmenoi) G4982, πίστεως (pisteos) G4102, δῶρον (doron) G1435",
+        "force": "By grace you have been saved through faith, and this not of yourselves; it is the gift of God, not of works. The perfect passive of sozo and the noun doron together frame salvation as an accomplished divine gift.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "διήνοιξεν (dienoixen) G1272",
+        "force": "The Lord opened her heart to pay attention to what was said by Paul. The verb means to open thoroughly; the divine opening of the heart precedes Lydia's attention, attention precedes belief.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.11.18",
+        "key_term": "μετάνοιαν (metanoian) G3341, ἔδωκεν (edoken) G1325",
+        "force": "Then to the Gentiles also God has granted repentance that leads to life. Repentance itself is described as something God gives, not something the natural will produces and presents to God.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Phil.1.29",
+        "key_term": "ἐχαρίσθη (echaristhe) G5483, πιστεύειν (pisteuein) G4100",
+        "force": "It has been granted to you that for the sake of Christ you should not only believe in him but also suffer for his sake. Believing itself is framed as a granted gift, parallel in form to suffering.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.2.25",
+        "key_term": "δώῃ (doe) G1325, μετάνοιαν (metanoian) G3341",
+        "force": "God may perhaps grant them repentance leading to a knowledge of the truth. The aorist subjunctive of didomi keeps repentance in the divine giving column, even where human teachers patiently instruct.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.36.26-27",
+        "key_term": "לֵב חָדָשׁ (lev chadash) H3820 H2319, רוּחַ (ruach) H7307, נָתַן (natan) H5414",
+        "force": "I will give you a new heart and put a new spirit within you, and I will cause you to walk in my statutes. The new heart is given before the walking; the enablement precedes the obedience.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Jer.31.33",
+        "key_term": "נָתַן (natan) H5414, תּוֹרָה (torah) H8451, לֵב (lev) H3820",
+        "force": "I will put my law within them, and I will write it on their hearts. The new-covenant promise places the writing on the heart in God's hands; the responsive obedience follows the divine inscription.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Josh.24.15",
+        "key_term": "בָּחַר (bachar) H977",
+        "force": "Choose this day whom you will serve. A complicating-text candidate framing choice as if in unaided reach. Resolved canonically because the same covenant promises a circumcised heart in Deut 30:6 and a new heart in Ezek 36, the very enablement of the choice.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rev.3.20",
+        "key_term": "ἀνοίξῃ (anoixe) G455, εἰσελεύσομαι (eiseleusomai) G1525",
+        "force": "If anyone hears my voice and opens the door, I will come in. A complicating-text candidate framing the opening as the human's first move. Resolved canonically because Acts 16:14 says the Lord opens the heart and the hearing here is itself granted.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "μετανοεῖν (metanoein) G3340",
+        "force": "God commands all people everywhere to repent. A complicating-text candidate framing universal command. Resolved canonically because Acts 11:18 and 2 Tim 2:25 describe repentance itself as granted; the command and the enabling grace are distinguished, not identified.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1410",
+      "G1670",
+      "G1325",
+      "G1586",
+      "G2309",
+      "G5143",
+      "G1653",
+      "G1754",
+      "G5485",
+      "G4982",
+      "G4102",
+      "G1435",
+      "G1272",
+      "G3341",
+      "G5483",
+      "G4100",
+      "G455",
+      "G1525",
+      "G3340",
+      "G450",
+      "H3820",
+      "H2319",
+      "H7307",
+      "H5414",
+      "H8451",
+      "H977"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "progressive_covenantalism",
+        "dispensationalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "covenant_theology",
+          "verdict": "Affirms denial of semi-Pelagianism. Federal headship plus monergistic regeneration read Rom 9:16, John 6:44, and Phil 2:13 as locating the first move in God."
+        },
+        {
+          "framework": "dispensationalism",
+          "verdict": "Affirms denial of semi-Pelagianism with most dispensational systematicians (Chafer, Ryrie, Walvoord) teaching divine initiative in regeneration. A minority free-grace stream tilts toward unaided human decision but does not formally defend the semi-Pelagian initium fidei."
+        },
+        {
+          "framework": "new_covenant_theology",
+          "verdict": "Affirms denial of semi-Pelagianism. New-covenant anthropology and the Ezek 36 promise emphasize divine writing on the heart before responsive obedience."
+        },
+        {
+          "framework": "progressive_covenantalism",
+          "verdict": "Affirms denial of semi-Pelagianism. Same anthropology and same reading of John 6 and Rom 9; covenantal structure does not flip the verdict."
+        }
+      ],
+      "notes": "All major evangelical hermeneutical frameworks deny semi-Pelagianism. The verdict is framework-stable. The Wesleyan-Arminian framework affirms prevenient grace as the divine first move, which preserves the denial of semi-Pelagianism even though it differs from Reformed monergism on the mechanics."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Second Council of Orange 529, canons drafted by Caesarius of Arles, ratified by Pope Boniface II",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "If anyone says that the beginning of faith and the very desire of faith are present in us naturally and not by a gift of grace, he contradicts the apostolic doctrine."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On the Predestination of the Saints and On the Gift of Perseverance",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Even the beginning of faith is the gift of God; Pelagius and his disciples err who hold the initium fidei is from the natural will and that grace is given according to merit."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 406 and the canons of Orange held as binding",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Pelagius held that man could, by the natural power of free will and without the necessary help of God's grace, lead a morally good life; the Church responded at Orange."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord Solid Declaration Article II On Free Will",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The human will after the fall is unable to begin spiritual things or to cooperate with grace before regeneration; God works the willing and the running before any movement of the natural will."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article X Of Free-Will",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We have no power to do good works pleasant and acceptable to God, without the grace of God by Christ preventing us, that we may have a good will, and working with us when we have that good will."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VIII Of Free Will, and Wesley on prevenient grace",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The condition of man after the fall is such that he cannot turn and prepare himself, by his own natural strength and works, to faith without the grace of God by Christ preventing us."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Canons of Dort, Third and Fourth Heads, Articles 3, 4, 11, 12, on conversion and the inability of the natural will",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "All men are conceived in sin and born children of wrath, incapable of saving good, prone to evil, and unable of themselves to return to God; conversion is the work of God."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 4 The Salvation of Man",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Salvation is received through repentance toward God and faith in Jesus Christ; by grace through faith man becomes a child of God, not by works or natural ability."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, on sin and synergism",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Man and the world need to be saved; fallen humanity cannot save itself. Orthodox synergism holds grace precedes and enables the human cooperation, though some Western theologians label this differently."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/6-44.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "oudeis dunatai G1410 elthein ean me ho pater helkuse G1670 auton. Inability verb plus effective-draw verb places the first move with the Father."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/6-65.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "oudeis dunatai elthein pros me ean me e dedomenon G1325 auto ek tou patros. Perfect passive participle locates the granting as standing divine gift."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/15-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ouch humeis me exelexasthe G1586 all ego exelexamen humas. Reversal-of-agency: I chose you, not you me."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/9-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ou tou thelontos G2309 oude tou trechontos G5143 alla tou eleontos G1653 Theou. Not of him who wills or runs but of God who shows mercy."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/philippians/2-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Theos gar estin ho energon G1754 en humin kai to thelein kai to energein. God works both the willing and the working."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/16-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hes ho Kurios dienoixen G1272 ten kardian prosechein tois laloumenois hupo tou Paulou. The Lord opened her heart before she heeded."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1670.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "helkuo G1670 to drag, draw by inward power, lead, impel. Same verb used for hauling in a full net in John 21:11."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/1325.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "didomi G1325 with nouns of faculty or power means to furnish, endue one with a thing. Repentance and faith are described as given."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1C.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 406 names Pelagius; the Church responded at Orange in 529 against the Pelagian and semi-Pelagian denial of the necessity of grace for the beginning of faith."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VIII says the condition of man after the fall is such that he cannot turn and prepare himself to faith without the grace of God preventing us."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "confession-tradition-divergence"
+    ]
+  }
+}

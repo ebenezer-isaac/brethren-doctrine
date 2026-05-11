@@ -1,0 +1,412 @@
+{
+  "id": "doc-antinomianism-denial",
+  "answer": {
+    "id": "doc-antinomianism-denial",
+    "affirms": true,
+    "rationale": "Antinomianism is denied by the canonical lexical pattern. Rom 6:1-2 and 6:15 answer the question whether grace licenses sin with the strongest apostolic negation me genoito G3361 G1096 (may it never be). 1 John 3:4 defines hamartia G266 itself as anomia G458 (lawlessness), and Rom 3:31 says faith does not katargeo G2673 (nullify) the nomos G3551 but histemi G2476 (upholds) it. Titus 2:11-12 says grace paideuo G3811 (trains) believers to renounce ungodliness and live righteously, and Eph 2:10 says they are ktizo G2936 (created) in Christ for good works prepared beforehand to peripateo G4043 (walk) in.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The cult-marker line is drawn at outright libertine antinomianism, the teaching that the redeemed are exempt from moral obligation and may sin without spiritual peril. That position is what Jude 4 names: men who pervert the charis G5485 of God into aselgeia G766 (licentiousness). It contradicts the pan-canonical pattern: 1 John 3:4 (hamartia is anomia), 1 John 2:3-6 (whoever says I know him and does not tereo G5083 his entole G1785 is a pseustes G5583, a liar), Rom 6, Heb 12:14 (without hagiasmos G38 no one will see the Lord), Matt 7:21-23 (workers of anomia G458 cast out by Christ). Public-record carriers include the 17th-century English antinomian controversy (Tobias Crisp, John Saltmarsh, John Eaton; condemned by the Westminster Assembly), the strong-form hyper-grace stream associated with Joseph Prince's New Covenant Theology, and the carnal-Christian doctrine of Zane Hodges and some Free Grace Theology advocates that severs justification from any necessary fruit. Distinguish carefully: this verdict denies libertine antinomianism. It does not require the Reformed third-use formulation, nor the Mosaic civil and ceremonial code, nor reject the Pauline gospel of justification by faith apart from works of the law. Liberty in Christ is liberty TO obey God (Gal 5:13), not liberty FROM moral obligation."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "The statement asserts a positive proposition (grace empowers holiness; moral law functions as rule of life, not as ground of justification). It does not name antinomian heretics and does not assert the verdict in heresy-naming form. The confessional_anchors field lists Westminster 19 and Heidelberg's third use, but the question itself is worked from apparatus and interlinear, not from those confessions. Working form retained."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict in plain words. Grace does not give Christians permission to sin. Grace is the power that teaches and trains them to stop sinning. The moral commandments of God remain the shape of the life God's people are called to live. The strongest reason from Scripture. In Romans 6 Paul asks the exact question the antinomian asks: shall we keep on sinning so that grace can abound? His answer is the strongest no in the Greek New Testament, may it never be. He repeats the same answer in verse 15 when someone presses the point a second time. In Romans 3:31 Paul asks whether faith nullifies the law, and answers no, faith upholds the law. In 1 John 3:4 sin itself is defined as lawlessness. In 1 John 2:4 anyone who says he knows God but does not keep his commandments is called a liar. In Hebrews 12:14 the pursuit of holiness is the condition for seeing the Lord. In Titus 2:11-12 grace is described as a trainer that teaches believers to say no to ungodliness. In Ephesians 2:10 believers are created in Christ Jesus for good works God prepared in advance for them to walk in. In James 2:17 faith without works is called dead. The strongest counterargument from Scripture. Romans 6:14 says believers are not under law but under grace. Romans 7:6 says they are released from the law. Galatians 5:18 says those led by the Spirit are not under the law. 2 Corinthians 3 calls the old letter a ministry of death. A surface reading of these texts can sound as if the moral law has been abolished altogether. How the verdict handles the tension. Scripture distinguishes between law as a system of justification, which can never save sinners, and law as the moral contour of a life lived in covenant with God. Believers are not under the law as a path to righteousness or as a death sentence over their failures, because Christ has fulfilled it and borne its curse. They are still bound by what the law expresses about God's character and about how love for God and neighbor looks in practice. The same Paul who says you are not under law writes that the just requirement of the law is fulfilled in those who walk by the Spirit. Galatians 5:13 names this directly: liberty is not an opportunity for the flesh, but freedom to serve one another in love. Liberty in Christ is liberty to obey, not liberty from obedience.",
+      "denominational_landscape": "Agreement here is uniform across historic Christianity. The ante-Nicene and Nicene fathers teach that the moral commandments are not abolished by Christ but extended and intensified. Irenaeus writes that the Lord increased and widened those laws which are natural, noble, and common to all. Augustine teaches that grace is given so that the law may be fulfilled in us, not so that the law may be set aside. The Roman Catholic Catechism, in the section on the New Law, teaches that the precepts of the Decalogue lay the foundation for the human vocation and that the New Law fulfils rather than abolishes the moral demands of the Old. Lutherans confess the Third Use of the Law in the Formula of Concord Article VI: the regenerate are still preached the Law as a fixed rule of life. Anglicans codify the same point in Article XII of the 39 Articles, which says good works spring out necessarily of a true and lively faith, and Article VII, which holds Christians bound by the moral commandments. The Methodist Articles of Religion repeat the same in Article VI, that no Christian whatsoever is free from the obedience of the commandments which are called moral, and in Article X on good works. Reformed confessions teach the third use explicitly: Westminster Confession 19, Heidelberg Catechism Question 115, Belgic 24. Anabaptist Schleitheim and later Mennonite confessions ground discipleship in obedience to Christ's commands. Eastern Orthodoxy reads keeping Christ's commandments as the very content of loving God and quotes John 14:21 to that effect. Pentecostal Assemblies of God teach sanctification as separation from evil and dedication to God, with the call to holy living. Public-record carriers of denial sit outside this consensus: the 17th-century English antinomian controversy (Tobias Crisp, John Saltmarsh, John Eaton, condemned by the Westminster Assembly), modern strong-form hyper-grace teaching (Joseph Prince's New Covenant Theology in its absolutist version), and the carnal-Christian doctrine associated with Zane Hodges and some Free Grace Theology proponents that severs justification from any necessary moral fruit. Their position is rejected across every tracked lineage."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.6.1-2",
+        "key_term": "ἐπιμένωμεν (epimenomen) G1961, ἁμαρτία (hamartia) G266, χάρις (charis) G5485, μὴ γένοιτο (me genoito) G3361 G1096",
+        "force": "Shall we continue in sin that grace may abound? May it never be. The optative me genoito is Paul's strongest apostolic negation, reserved for false inferences that destroy the gospel.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.6.14-15",
+        "key_term": "κυριεύσει (kurieusei) G2961, ὑπὸ νόμον (hypo nomon) G5259 G3551, ὑπὸ χάριν (hypo charin) G5259 G5485, μὴ γένοιτο (me genoito) G3361 G1096",
+        "force": "Sin shall not have dominion since you are not under law but under grace. Are we to sin because we are under grace? May it never be. The repeated me genoito explicitly forecloses the antinomian inference from grace.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.31",
+        "key_term": "καταργοῦμεν (katargoumen) G2673, νόμον (nomon) G3551, ἱστάνομεν (histanomen) G2476",
+        "force": "Do we then nullify the law by this faith? May it never be. On the contrary, we uphold the law. Faith does not katargeo the law but histemi (establish, make stand) it.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.5.17-19",
+        "key_term": "καταλῦσαι (katalysai) G2647, πληρῶσαι (plerosai) G4137, νόμον (nomon) G3551, ἰῶτα (iota) G2503, κεραία (keraia) G2762",
+        "force": "Christ did not come to katalyo (demolish) the Law but to pleroo (fulfill) it; not one iota or keraia will pass until all is accomplished. Antithesis between abolish and fulfill rules out antinomian abolition.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Jn.3.4",
+        "key_term": "ἁμαρτία (hamartia) G266, ἀνομία (anomia) G458",
+        "force": "Whoever practices sin practices lawlessness; sin is lawlessness. The two are identified by definition. To say sin no longer matters is to say lawlessness no longer matters.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Jn.2.3-6",
+        "key_term": "γινώσκομεν (ginoskomen) G1097, τηρέω (tereo) G5083, ἐντολή (entole) G1785, ψεύστης (pseustes) G5583, περιπατέω (peripateo) G4043",
+        "force": "By this we know we have known him, if we tereo (keep) his commandments. Whoever says I know him and does not keep his commandments is a pseustes (liar). The conditional ean structure makes obedience the diagnostic of saving knowledge.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Jn.5.3",
+        "key_term": "ἀγάπη τοῦ θεοῦ (agape tou theou) G26 G2316, τηρέω (tereo) G5083, ἐντολή (entole) G1785, βαρεῖαι (bareiai) G926",
+        "force": "This is the love of God, that we keep his commandments, and his commandments are not burdensome. Love and commandment-keeping are coextensive, not opposed.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jas.2.14-17",
+        "key_term": "πίστις (pistis) G4102, ἔργα (erga) G2041, νεκρά (nekra) G3498, σῴζω (sozo) G4982",
+        "force": "If a man says he has faith but has no works, can pistis sozo him? Faith without works is nekra (dead). James names exactly the antinomian profile and calls its faith a corpse.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Heb.12.14",
+        "key_term": "διώκετε (diokete) G1377, εἰρήνη (eirene) G1515, ἁγιασμός (hagiasmos) G38, ὁράω (horao) G3708",
+        "force": "Pursue peace with all and the hagiasmos without which no one will see the Lord. The negated relative clause makes holiness a non-optional condition for the beatific vision.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.5.13",
+        "key_term": "ἐλευθερία (eleutheria) G1657, ἀφορμή (aphorme) G874, σάρξ (sarx) G4561, δουλεύω (douleuo) G1398",
+        "force": "You were called to eleutheria, brothers; only do not use freedom as an aphorme (occasion, base of operations) for the sarx, but through love serve (douleuo) one another. Liberty is defined as freedom TO serve, not from obligation.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Eph.2.10",
+        "key_term": "ποίημα (poiema) G4161, κτισθέντες (ktisthentes) G2936, ἔργα ἀγαθά (erga agatha) G2041 G18, προητοίμασεν (proetoimasen) G4282, περιπατήσωμεν (peripatesomen) G4043",
+        "force": "We are his poiema (workmanship), ktizo (created) in Christ Jesus for good works which God proetoimazo (prepared beforehand) that we should peripateo (walk) in them. Good works are the purpose of the new creation, not optional add-ons.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Titus.2.11-12",
+        "key_term": "χάρις (charis) G5485, παιδεύουσα (paideuousa) G3811, ἀρνησάμενοι (arnesamenoi) G720, ἀσέβεια (asebeia) G763, σωφρόνως δικαίως εὐσεβῶς (sophronos dikaios eusebos) G4996 G1346 G2153",
+        "force": "The charis of God appeared, paideuo (training, disciplining as a child) us that we renounce asebeia and worldly desires and live sophronos, dikaios, eusebos in this age. Grace is described as a disciplinarian, not a license.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "Jude.1.4",
+        "key_term": "χάρις (charis) G5485, μετατίθημι (metatithemi) G3346, ἀσέλγεια (aselgeia) G766",
+        "force": "Certain men have crept in, who metatithemi (change, pervert) the charis of our God into aselgeia (licentiousness). Jude names the antinomian move by lexical equation and calls it apostasy.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.7.21-23",
+        "key_term": "ἀνομία (anomia) G458, ἀποχωρεῖτε (apochoreite) G672",
+        "force": "Not everyone who says Lord, Lord will enter the kingdom, but he who does the will of my Father. Christ says to those who claim him: depart from me, you workers of anomia. Lawlessness disqualifies, even with confession.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.6.14",
+        "key_term": "ὑπὸ νόμον (hypo nomon) G5259 G3551, ὑπὸ χάριν (hypo charin) G5259 G5485",
+        "force": "You are not under law but under grace. Complicating text in its surface form: read in isolation, it can sound antinomian. Read with v.15 it is the apostle himself foreclosing that misreading.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.7.6",
+        "key_term": "κατηργήθημεν (katergethemen) G2673, νόμος (nomos) G3551, πνεῦμα (pneuma) G4151",
+        "force": "We are released from the law, having died to what held us captive, so that we serve in the new way of the Spirit. Complicates the surface reading; the same Paul writes Rom 3:31 (faith upholds law) and Rom 8:4 (the just requirement of the law fulfilled in us).",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.5.18",
+        "key_term": "πνεύματι ἄγεσθε (pneumati agesthe) G4151 G71, ὑπὸ νόμον (hypo nomon) G5259 G3551",
+        "force": "If you are led by the Spirit, you are not under the law. Complicates if read as abolition; the same chapter lists the works of the flesh (5:19-21) and warns those who do such things will not inherit the kingdom.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.3-4",
+        "key_term": "δικαίωμα τοῦ νόμου (dikaioma tou nomou) G1345 G3551, πληρωθῇ (plerothe) G4137, περιπατοῦσιν (peripatousin) G4043",
+        "force": "What the law could not do God did, in order that the just requirement (dikaioma) of the law might be pleroo (fulfilled) in us who walk by the Spirit. Resolves Rom 6:14 and 7:6: not abolition of moral content, but fulfilled obedience by the Spirit.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1961",
+      "G266",
+      "G5485",
+      "G3361",
+      "G1096",
+      "G2961",
+      "G5259",
+      "G3551",
+      "G2673",
+      "G2476",
+      "G2647",
+      "G4137",
+      "G2503",
+      "G2762",
+      "G458",
+      "G1097",
+      "G5083",
+      "G1785",
+      "G5583",
+      "G4043",
+      "G26",
+      "G2316",
+      "G926",
+      "G4102",
+      "G2041",
+      "G3498",
+      "G4982",
+      "G1377",
+      "G1515",
+      "G38",
+      "G3708",
+      "G1657",
+      "G874",
+      "G4561",
+      "G1398",
+      "G4161",
+      "G2936",
+      "G18",
+      "G4282",
+      "G3811",
+      "G720",
+      "G763",
+      "G4996",
+      "G1346",
+      "G2153",
+      "G3346",
+      "G766",
+      "G672",
+      "G4151",
+      "G71",
+      "G1345"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "progressive_covenantalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "covenant_theology",
+          "verdict": "Affirms antinomianism denial. Reads the moral law (Decalogue) as continuing across covenants and grounds the third use of the law in the believer's life. Westminster 19 is the paradigmatic articulation."
+        },
+        {
+          "framework": "dispensationalism",
+          "verdict": "Affirms antinomianism denial in mainstream form. Classical dispensationalism distinguishes the Mosaic Law from the law of Christ but still binds believers to the moral commandments restated in the New Testament. The risk of antinomian drift in some Free Grace and hyper-grace circles is internal to certain dispensational strands, not entailed by the framework."
+        },
+        {
+          "framework": "new_covenant_theology",
+          "verdict": "Affirms antinomianism denial. NCT rejects the threefold division of the Mosaic Law but holds the law of Christ (the moral teaching of Christ and the apostles, including the Decalogue principles) as binding on believers. NCT explicitly rejects antinomianism while denying the Reformed third-use framing."
+        },
+        {
+          "framework": "progressive_covenantalism",
+          "verdict": "Affirms antinomianism denial. Same canonical lexical reading: Christ fulfils and transforms the Mosaic Law; the moral content carries forward through Christ's law for the church."
+        }
+      ],
+      "notes": "Every major evangelical hermeneutical framework affirms denial of antinomianism. The frameworks differ on the precise relationship between Mosaic Law and law of Christ, on the threefold division of the Law, and on the third-use language, but none holds that the redeemed have no moral obligation. The lexical anchors (me genoito of Rom 6, hamartia is anomia of 1 John 3:4, charis paideuo of Titus 2, faith without works is dead of James 2) are not framework-sensitive."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies IV.16, NPNF Series 1 / ANF Volume 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He has increased and widened those laws which are natural, and noble, and common to all. The Lord did not abolish the natural precepts of the law but extended them."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 1962-1963 on the Old Law and the moral precepts of the Decalogue",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The precepts of the Decalogue lay the foundations for the vocation of man fashioned in the image of God; they prohibit what is contrary to the love of God and neighbor."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Formula of Concord, Epitome and Solid Declaration Article VI, Of the Third Use of the Law of God",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Law of God is preached to the regenerate as a fixed rule of life by which to direct their works. Lutherans reject the antinomian claim that the regenerate need no Law."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Articles of Religion XII Of Good Works (Church of England, 1571)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Good works do spring out necessarily of a true and lively faith; insomuch that by them a lively faith may be as evidently known as a tree discerned by the fruit."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 19 Of the Law of God, sections 5-7; Council of Dort 1618-1619 against antinomian readings",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The moral law doth forever bind all, as well justified persons as others, to the obedience thereof; Christ in the gospel any way dissolves but much strengthens this obligation."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VI Of the Old Testament and Article X Of Good Works (Wesley's abridgement)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "No Christian whatsoever is free from the obedience of the commandments which are called moral. Good works, fruits of faith, are pleasing and acceptable to God in Christ."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527; Mennonite Confession of Dordrecht 1632 on discipleship and obedience to Christ",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Disciples of Christ are bound to follow him in obedience, walking in newness of life and observing all that he has commanded. Sin and lawlessness have no place in the body of Christ."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 9 The Sanctification of the Believer",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Sanctification is an act of separation from that which is evil and of dedication unto God; the believer is called to walk in holiness, presenting his body a living sacrifice."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, on obedience and the commandments of Christ, quoting John 14:21",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "He who has My commandments and keeps them, he it is who loves Me. Keeping Christ's commandments is the fundamental sign of authentic devotion to God."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 6:1-2 epimenomen G1961 te hamartia G266; me genoito G3361 G1096. Rom 6:14-15 hypo nomon G5259 G3551, hypo charin G5259 G5485; me genoito G3361 G1096."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 John 3:4 he hamartia G266 estin he anomia G458. Sin and lawlessness equated by definition."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/3-31.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "katargoumen G2673 nomon G3551; me genoito G3361 G1096, alla nomon histanomen G2476. Faith does not nullify law; it establishes law."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/5-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ouk elthon katalysai G2647 ton nomon G3551 alla plerosai G4137. Christ came not to demolish the Law but to fulfill it."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/2-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "charis G5485 paideuousa G3811 hemas, hina arnesamenoi G720 asebeian G763 sophronos G4996 kai dikaios G1346 kai eusebos G2153 zesomen. Grace trains believers to renounce ungodliness."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/5-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ep eleutheria G1657 eklethete; monon me ten eleutherian eis aphormen G874 te sarki G4561, alla dia tes agapes douleuete G1398 allelois."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "autou gar esmen poiema G4161, ktisthentes G2936 en Christo Iesou epi ergois agathois G2041 G18, hois proetoimasen G4282 ho Theos hina peripatesomen G4043."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/12-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "diokete G1377 eirenen G1515 meta panton kai ton hagiasmon G38, hou choris oudeis opsetai G3708 ton Kyrion. Holiness as non-optional condition for seeing the Lord."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/458.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "anomia G458 across NT: Matt 7:23, 13:41, 23:28, 24:12; Rom 4:7, 6:19; 2 Cor 6:14; 2 Thess 2:3-8; Titus 2:14; Heb 1:9, 8:12, 10:17; 1 John 3:4."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/5485.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "charis G5485 in Titus 2:11-12 paired with paideuo G3811; Jude 4 warns of those who metatithemi G3346 charis into aselgeia G766. Grace is empowerment to obedience, not license."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P6V.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 1962: The precepts of the Decalogue lay the foundations for the vocation of man fashioned in the image of God; they prohibit what is contrary to the love of God and neighbor."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VI: no Christian whatsoever is free from the obedience of the commandments which are called moral. Article X: good works, fruits of faith, are pleasing to God in Christ."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/spirituality/the-virtues/obedience",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "He who has My commandments and keeps them, he it is who loves Me (John 14:21). Keeping Christ's commandments is the fundamental sign of authentic devotion."
+      },
+      {
+        "url": "https://www.newadvent.org/fathers/0103416.htm",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Irenaeus, Against Heresies IV.16: He has increased and widened those laws which are natural, and noble, and common to all."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

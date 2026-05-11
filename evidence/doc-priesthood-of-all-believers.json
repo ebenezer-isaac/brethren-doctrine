@@ -1,0 +1,470 @@
+{
+  "id": "doc-priesthood-of-all-believers",
+  "answer": {
+    "id": "doc-priesthood-of-all-believers",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration of a corporate-baptismal priesthood of every believer in Christ. ἱεράτευμα hierateuma G2406 (priesthood, priestly fraternity) appears twice in the NT, both in 1 Peter 2:5 (hierateuma hagion, 'holy priesthood, to offer spiritual sacrifices acceptable to God through Jesus Christ') and 1 Peter 2:9 (basileion hierateuma, 'royal priesthood'). Both descriptors are applied collectively to the church as a body and grammatically include every believer addressed (vv.4-5 'you yourselves, as living stones'). The terms are a direct LXX echo of Ex 19:6 mamleket kohanim (H4467 + H3548) ve-goy qadosh (H1471 + H6918), Israel's covenant-prototype priesthood; Peter reapplies the prototype to the multi-ethnic church. ἱερεύς hiereus G2409 is applied to believers three times: Rev 1:6, 5:10, 20:6, in each case in apposition to βασιλεία basileia G932 (kingdom). The pattern 'kingdom and priests' is structurally identical to the Exodus prototype. Heb 10:19-22 grants every believer παρρησίαν parresia G3954 ('boldness, frank-confident access') εἰς τὴν εἴσοδον τῶν ἁγίων ('for entrance into the holy places, ta hagia G40') by Jesus' blood, with the cohortative προσερχώμεθα ('let us draw near'), a cultic-priestly verb of approach used in Heb 4:16, 7:25, 10:22, 11:6; the addressees are the whole community, not a ministerial subset. Heb 4:14-16 places every believer under one ἀρχιερέα μέγαν archierea megan G749 (Christ the great high priest) and grants them direct approach to the throne of grace. Rom 12:1 names the entire offering of the believer's body as θυσίαν ζῶσαν thusian zosan, a ritual-sacrificial term (G2378) recast as the priestly-self-offering of every Christian. 1 Tim 2:5 (heis mesites G3316, one mediator between God and men, the man Christ Jesus) excludes any additional mediator-class between the believer and God. Concordance pattern: the head priest is Christ alone; the priestly people is the whole body; no NT text names an intermediate sacerdotal mediator between Christ and the believer beyond Christ himself.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Verdict-scope. The proposition has two layers that must be kept distinct. Layer 1 (every believer is a priest before God in Christ; the gathered church is a royal priesthood) is universally affirmed across historic Christianity. Patristic (Augustine in City of God 20.10 names all believers as priests because they are members of the one Priest), Catholic (CCC 1546-1547 names the common priesthood of the faithful as one of two participations in the one priesthood of Christ), Eastern Orthodox (chrismation after baptism seals every Christian into the royal priesthood), Lutheran, Anglican, Reformed, Methodist, Anabaptist, and Pentecostal lineages all confess this. The 1520 Reformation rallying cry of Luther's 'priesthood of all believers' was directed against a medieval sacerdotal-only ecclesiology that had functionally eclipsed the baptismal priesthood, not against the patristic-Catholic doctrine that the baptismal priesthood exists. Layer 2 (whether the church also has a distinct ministerial priesthood ordained for sacramental ministry) is the substantive dispute between the Reformation and Rome/Orthodoxy. Catholic teaching (CCC 1546-1547, Lumen Gentium 10) holds that the common priesthood and the ministerial priesthood differ essentially, not just in degree; both participate in the one priesthood of Christ. Eastern Orthodox holds an analogous two-tier teaching. The Reformation rejected the ministerial-priesthood category as a class of mediator distinct from the baptismal priesthood, retaining instead an office of ministry of Word and sacrament (Augsburg V) without sacerdotal vocabulary. The proposition as stated in the question is about direct mediator-free access (Layer 1), which is unanimous, not about polity (Layer 2), which divides. Cult-marker assessment: denial of Layer 1 (denying that any believer can come to God directly through Christ, requiring an additional human mediator-class as a condition of access) is gospel-implicating because it directly contradicts 1 Tim 2:5 (one mediator) and Heb 4:16 / 10:19-22 (every believer has boldness to enter). Public-record carriers of this kind of denial: Mormonism's Aaronic and Melchizedek priesthood system places ordained Mormon men as required mediators of saving ordinances, structurally denying that an unordained believer has priestly standing before God; this contributes to Mormonism's classification outside historic Christianity, though other doctrines (modalism-adjacent Godhead teaching, polytheism, denial of justification by faith alone, exalted-man theology) are the primary cult markers. The Catholic and Orthodox two-tier teaching is NOT denial of the proposition because both formally confess the common priesthood of every baptized believer; the dispute is over the additional category, not over the baptismal priesthood. Catholic and Orthodox Christians have direct access to Christ in prayer and confess so explicitly. cult_marker_if_denied=false because the Catholic-Protestant disagreement is over polity-and-office layering, not over whether the believer's access to God is direct in Christ. would_die_for=false on the strict scope-of-the-question reading because the disagreement among historic Christian lineages is about additional ministerial structure, not about whether every believer is a priest. would_die_for would shift to true if the question were neutralized to 'every believer has direct mediator-free access to God in Christ' and a body denied that absolutely (e.g., requiring confession to a priest as a non-negotiable condition of forgiveness, denying Heb 4:16 lay-access). Engagement ladder: would visit and would participate in a Catholic or Orthodox parish that retains a ministerial priesthood while confessing the common priesthood; would not serve, be a member, let children be catechized in, or marry into a body that denied Layer 1. would_publicly_correct=true on any teaching that denies a lay believer's direct access to Christ. Fruit-vs-precision: many practicing Catholics and Orthodox confess Christ as their direct intercessor and pray to him without functional mediation by a priest; the dispute is on the sacramental-office layer, not on whether Christ is heard."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Through Christ, what is the priestly standing of an ordinary believer before God, and is there any human mediator-class besides Christ that stands between the believer and God?",
+      "notes": "The statement 'Every believer is a priest before God through Christ; there is no mediatorial priesthood between Christ and the believer beyond Christ Himself' uses Reformation-Protestant vocabulary. Luther's 1520 To the Christian Nobility tract made 'priesthood of all believers' a Reformation rallying cry over against medieval sacerdotal-only ecclesiology. The phrase 'no mediatorial priesthood beyond Christ' is the Protestant verdict against the Catholic and Orthodox ministerial-priesthood category. Working the neutralized form yields a two-layer answer (Layer 1 universally affirmed across all historic lineages including Catholic and Orthodox; Layer 2 contested between the Reformation and Rome/Orthodoxy). The Reformation distinctive is its strong emphasis on Layer 1 to the exclusion of Layer 2. Flag: stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: every Christian is a priest before God in Christ. The whole church is a royal priesthood. No human go-between is required to bring a believer to God beyond Jesus himself. The strongest reason from Scripture is the direct, sustained language naming all believers as priests. 1 Peter 2:5 says Christians are being built up as a spiritual house, to be a holy priesthood, to offer spiritual sacrifices acceptable to God through Jesus Christ. 1 Peter 2:9 says, 'You are a chosen race, a royal priesthood, a holy nation, a people for his own possession.' This language is taken directly from Exodus 19:6 where God says of Israel, 'You shall be to me a kingdom of priests and a holy nation.' Revelation 1:6 says Jesus 'made us a kingdom, priests to his God and Father.' Revelation 5:10 and Revelation 20:6 repeat the same pairing. Hebrews 4:14-16 names Jesus as the great high priest and then invites every believer to draw near with confidence to the throne of grace. Hebrews 10:19-22 says, since we have confidence to enter the holy places by the blood of Jesus, by the new and living way that he opened for us, let us draw near with a true heart in full assurance of faith. The text addresses every Christian, not a ministerial subset. 1 Timothy 2:5 says there is one God and one mediator between God and men, the man Christ Jesus. The strongest counterargument from Scripture's own complicating texts is the role of the apostles, elders, overseers, and shepherds in the New Testament. Christ gives apostles, prophets, evangelists, shepherds, and teachers to the church in Ephesians 4:11. Elders and overseers govern local congregations (1 Timothy 3, Titus 1, 1 Peter 5). James 5:14 has the sick call for the elders of the church to pray over them and anoint with oil. Critics ask: doesn't this establish a special priestly class that mediates between believers and God? The verdict handles this tension in two ways. First, none of these offices is ever called a priesthood in the New Testament. The word 'priest' applied to believers is always applied to the whole body, never to a sub-class of officers. Elders, overseers, and shepherds are functional ministry roles within the priestly body, not a sacerdotal layer above it. Second, every passage that describes a believer drawing near to God names Christ as the one mediator and the believer as having direct access. The Hebrews 10 invitation is to every Christian. So the offices serve and equip the priestly body without standing between it and God. There is also an honest acknowledgment: the New Testament does name a distinct ministerial leadership for the church even though it does not use sacerdotal vocabulary for it. How that leadership is shaped is a separate question from whether every believer is a priest.",
+      "denominational_landscape": "Every major historic Christian lineage formally affirms that every baptized believer is a priest before God in Christ. The dispute is about whether the church ALSO has a distinct ministerial priesthood. Patristic witness: Augustine in City of God Book 20 Chapter 10 says, 'as we call all believers Christians on account of the mystical chrism, so we call all priests because they are members of the one Priest.' He grounds this in 1 Peter's royal-priesthood language. Wider patristic literature affirms the baptismal priesthood while a parallel office of bishop and presbyter developed for sacramental ministry. Catholic magisterial teaching: the Catechism of the Catholic Church paragraphs 1546 and 1547 teaches two participations in the one priesthood of Christ. The common priesthood of all the faithful is exercised through baptismal grace lived in faith, hope, and charity. The ministerial or hierarchical priesthood of bishops and priests is at the service of the common priesthood. The two differ essentially, not just in degree, but both participate in Christ's one priesthood. Lumen Gentium 10 of Vatican II confirms this. Lutheran: Luther's 1520 To the Christian Nobility of the German Nation made the priesthood of all believers a Reformation rallying cry, against the medieval sacerdotal-only ecclesiology. The Augsburg Confession Article V teaches an office of ministry of teaching the gospel and administering the sacraments, but does not retain sacerdotal vocabulary. Anglican: Article 31 of the 39 Articles of Religion confesses that 'The Offering of Christ once made is that perfect redemption, propitiation, and satisfaction, for all the sins of the whole world,' rejecting the sacrifice of the Mass as a fresh propitiation. Anglicans retain a presbyteral office that some Anglo-Catholic strands describe with priestly vocabulary in a representative-not-mediatorial sense. Reformed: the Westminster Confession 30 names church officers as ministers of Word and sacrament. Reformed confessions universally affirm Christ as sole mediator and the priesthood of all believers. Methodist: the United Methodist Articles of Religion drawn from the 39 Articles affirm Christ as sole mediator. The Methodist office of ministry is not called a priesthood. Anabaptist: the Schleitheim Confession and the Dordrecht Confession affirm a congregation gathered under Christ as priestly community, with elected leaders serving without sacerdotal status. Pentecostal: the Assemblies of God Statement of Fundamental Truths confesses every believer as a Spirit-baptized priest with direct access to God. Eastern Orthodox: the baptized are sealed in chrismation into the royal priesthood while the ordained ministry of bishop, priest, and deacon is retained as a distinct sacerdotal order, analogous to the Catholic two-tier teaching. Public-record carriers of denial of Layer 1 (denying lay direct access): Mormonism's Aaronic and Melchizedek priesthood system places ordained Mormon men as required mediators of saving ordinances, which structurally denies the unordained believer's priestly standing; this is one of several markers placing Mormonism outside historic Christianity, alongside its modalism-adjacent Godhead teaching and exalted-man theology. The Catholic and Orthodox two-tier teaching is NOT denial of Layer 1 because both formally confess the common priesthood of all the baptized."
+    },
+    "scripture": [
+      {
+        "ref": "Exod.19.6",
+        "key_term": "mamleket H4467 (kingdom) + kohanim H3548 (priests) + goy H1471 (nation) + qadosh H6918 (holy); 'a kingdom of priests and a holy nation'",
+        "force": "OT prototype. God names redeemed Israel collectively as a 'kingdom of priests' before he gives the Aaronic ordination instructions of Ex 28. The corporate-priestly identity of the covenant people precedes and grounds the specialized Aaronic order. 1 Peter 2:9 and Rev 1:6 / 5:10 / 20:6 reapply this exact phrasing to the multi-ethnic church",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "1Pet.2.5",
+        "key_term": "οἰκοδομεῖσθε οἶκος πνευματικὸς εἰς ἱεράτευμα ἅγιον ἀνενέγκαι πνευματικὰς θυσίας; hierateuma G2406 N-ANS; hagios G40 Adj-ANS; thusia G2378 N-AFP; pneumatikos G4152",
+        "force": "The whole company addressed in vv.4-5 ('you yourselves, as living stones') is being built into a 'holy priesthood' to offer 'spiritual sacrifices acceptable to God through Jesus Christ.' The construction εἰς ἱεράτευμα ἅγιον makes the priestly identity the telos of the building-up, and the offering of spiritual sacrifices is the activity of every member, not of a sub-class",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor",
+          "typology"
+        ]
+      },
+      {
+        "ref": "1Pet.2.9",
+        "key_term": "ὑμεῖς δὲ γένος ἐκλεκτόν βασίλειον ἱεράτευμα ἔθνος ἅγιον λαὸς εἰς περιποίησιν; eklektos G1588; genos G1085; basileios G934; hierateuma G2406; ethnos G1484; hagios G40; laos G2992",
+        "force": "Direct LXX echo of Ex 19:6 (basileion hierateuma kai ethnos hagion). The four titles (chosen race, royal priesthood, holy nation, people for his own possession) are applied corporately to all addressees. The royal-priesthood title is the church's identity as such, not the prerogative of a class within it",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Rev.1.6",
+        "key_term": "ἐποίησεν ἡμᾶς βασιλείαν ἱερεῖς τῷ θεῷ καὶ πατρὶ αὐτοῦ; basileia G932; hiereus G2409",
+        "force": "'He made us a kingdom, priests to his God and Father.' The first-person plural 'us' refers to all who are loved and freed from sins by Christ's blood (v.5). hiereus G2409 in the church-applied sense is reserved for the whole redeemed community. No subset is named",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": [
+          "apocalyptic-symbolism"
+        ]
+      },
+      {
+        "ref": "Rev.5.10",
+        "key_term": "ἐποίησας αὐτοὺς τῷ θεῷ ἡμῶν βασιλείαν καὶ ἱερεῖς καὶ βασιλεύσουσιν ἐπὶ τῆς γῆς; basileia G932; hiereus G2409",
+        "force": "The new song of the four living creatures and elders: Christ by his blood ransomed people from every tribe and tongue and 'made them a kingdom and priests to our God.' Multi-ethnic universal scope, not a clerical subset. Concordance-parallel to Rev 1:6 and 20:6",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": [
+          "apocalyptic-symbolism"
+        ]
+      },
+      {
+        "ref": "Rev.20.6",
+        "key_term": "ἔσονται ἱερεῖς τοῦ θεοῦ καὶ τοῦ Χριστοῦ καὶ βασιλεύσουσιν μετ’ αὐτοῦ; hiereus G2409 N-NMP",
+        "force": "All who share in the first resurrection 'will be priests of God and of Christ and will reign with him.' The priesthood is eschatological and universal among the redeemed, paired with co-reign with Christ. No sacerdotal mediator-class is named",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": [
+          "apocalyptic-symbolism"
+        ]
+      },
+      {
+        "ref": "Heb.4.14",
+        "key_term": "ἔχοντες ἀρχιερέα μέγαν διεληλυθότα τοὺς οὐρανούς Ἰησοῦν τὸν Υἱὸν τοῦ Θεοῦ; archiereus G749; megas G3173",
+        "force": "Christ is named the great high priest who has passed through the heavens. The grammatical force of ἔχοντες ('having') makes Christ the singular high priest possessed by every believer addressed. He is the high-priest mediator; the believer has him directly. Concordance: archiereus G749 in the ecclesial sense is reserved for Christ throughout Hebrews (4:14, 5:5, 6:20, 7:26, 8:1, 9:11, 10:21)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.4.16",
+        "key_term": "προσερχώμεθα οὖν μετὰ παρρησίας τῷ θρόνῳ τῆς χάριτος; proserchomai G4334 present middle subjunctive 1p; parresia G3954",
+        "force": "Hortatory subjunctive: 'let us draw near with boldness to the throne of grace.' The first-person plural includes every addressee. proserchomai G4334 is a cultic-priestly verb of approach in Hebrews (7:25, 10:1, 10:22, 11:6). The throne-of-grace is approached directly by every believer; no human mediator stands at the door",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.19",
+        "key_term": "ἔχοντες οὖν παρρησίαν εἰς τὴν εἴσοδον τῶν ἁγίων ἐν τῷ αἵματι Ἰησοῦ; parresia G3954; eisodos G1529; ta hagia G40",
+        "force": "Every believer has παρρησία ('frank-confident boldness') for entrance into 'the holy places' by the blood of Jesus. ta hagia is OT sanctuary vocabulary; the access previously restricted to Aaronic priests is now granted to every Christian. The torn-curtain image of v.20 makes the priestly-access barrier removed for all",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Heb.10.22",
+        "key_term": "προσερχώμεθα μετὰ ἀληθινῆς καρδίας ἐν πληροφορίᾳ πίστεως; proserchomai G4334",
+        "force": "Three-fold cohortative chain (10:22 'let us draw near,' 10:23 'let us hold fast,' 10:24 'let us consider') addressed to all readers. The drawing-near is direct, by the blood of Christ alone, with no human mediator named. The sprinkled-heart and washed-body language echoes priestly consecration (Ex 29) reapplied to every believer",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "1Tim.2.5",
+        "key_term": "εἷς γὰρ θεός εἷς καὶ μεσίτης θεοῦ καὶ ἀνθρώπων ἄνθρωπος Χριστὸς Ἰησοῦς; heis G1520; mesites G3316",
+        "force": "Numeric exclusivity. εἷς ('one') is repeated: one God, one mediator between God and men, the man Christ Jesus. mesites G3316 elsewhere in the NT names Christ as mediator of the new covenant (Heb 8:6, 9:15, 12:24). The verse bars any additional mediator-class between God and the believer. Concordance excludes a sacerdotal mediator beyond Christ",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.12.1",
+        "key_term": "παραστῆσαι τὰ σώματα ὑμῶν θυσίαν ζῶσαν ἁγίαν εὐάρεστον τῷ θεῷ τὴν λογικὴν λατρείαν ὑμῶν; paristemi G3936; thusia G2378; logikos G3050; latreia G2999",
+        "force": "Every believer is exhorted to present his own body as a 'living sacrifice, holy and acceptable to God,' their 'reasonable worship.' paristemi G3936 is a priestly-offering verb. thusia G2378 is the OT cultic sacrifice term. latreia G2999 is priestly-cultic service. The whole vocabulary is sacerdotal, applied to every Christian's own life and body. This is the active operation of the priesthood of all believers",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Eph.4.11",
+        "key_term": "αὐτὸς ἔδωκεν τοὺς μὲν ἀποστόλους τοὺς δὲ προφήτας τοὺς δὲ εὐαγγελιστάς τοὺς δὲ ποιμένας καὶ διδασκάλους; didomi G1325 aorist; apostolos G652; prophetes G4396; euaggelistes G2099; poimen G4166; didaskalos G1320",
+        "force": "Christ gives apostles, prophets, evangelists, shepherds, and teachers for the equipping of the saints. None of these office-words is hiereus G2409. The list establishes functional ministry within the priestly body, not a sacerdotal layer above it. The complicating force is real: the church has ordained leadership, but its leadership vocabulary is non-sacerdotal",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.3.2",
+        "key_term": "δεῖ οὖν τὸν ἐπίσκοπον ἀνεπίλημπτον εἶναι; episkopos G1985",
+        "force": "Qualifications for the office of episkopos (overseer/bishop). The vocabulary is non-sacerdotal (overseer, not priest). The office exists; the office is not called hiereus. Complicates a flat-egalitarian reading without licensing a sacerdotal mediator-class between Christ and the believer",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Pet.5.1",
+        "key_term": "πρεσβυτέρους τοὺς ἐν ὑμῖν παρακαλῶ ὁ συμπρεσβύτερος; presbyteros G4245; sympresbyteros G4850",
+        "force": "Peter addresses elders as συμπρεσβύτερος ('fellow elder'), placing himself peer-to-peer. The non-sacerdotal vocabulary (presbyteros, not hiereus) is consistent. The shepherding office in v.2 is poimainō (G4165), not priestly-offering. Concordance-confirms that NT church leadership is non-sacerdotal",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jas.5.14",
+        "key_term": "προσκαλεσάσθω τοὺς πρεσβυτέρους τῆς ἐκκλησίας καὶ προσευξάσθωσαν ἐπ’ αὐτὸν ἀλείψαντες αὐτὸν ἐλαίῳ; presbyteros G4245; proseuchomai G4336; aleiphō G218",
+        "force": "The sick call for the πρεσβυτέρους of the church for prayer and anointing. Elders, not 'priests,' and the activity is prayer and anointing in the name of the Lord, not sacerdotal mediation of forgiveness. v.16 immediately commands mutual confession ('confess your sins to one another') across the whole community, distributing the confessional posture beyond officers",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.7.25",
+        "key_term": "ὅθεν καὶ σῴζειν εἰς τὸ παντελὲς δύναται τοὺς προσερχομένους δι’ αὐτοῦ τῷ θεῷ πάντοτε ζῶν εἰς τὸ ἐντυγχάνειν ὑπὲρ αὐτῶν; proserchomai G4334; entynchanō G1793",
+        "force": "Christ is able to save to the uttermost those who 'come to God through him,' since he always lives to intercede for them. The mediator-pathway is Christ alone: through him to God, with his ongoing intercession as the sufficient priestly act. No additional priestly intercessor is named or required",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Isa.61.6",
+        "key_term": "kohanim YHWH H3548; sharath H8334 (minister)",
+        "force": "Eschatological promise: 'you shall be called the priests of the LORD; they shall speak of you as the ministers of our God.' The vision is of a redeemed people corporately bearing priestly identity, the OT-prophetic foreshadow of 1 Peter 2:9 / Rev 1:6. Concordance pattern: corporate-priesthood promise built into the prophetic future of the covenant people",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Matt.27.51",
+        "key_term": "τὸ καταπέτασμα τοῦ ναοῦ ἐσχίσθη ἀπ’ ἄνωθεν ἕως κάτω εἰς δύο; katapetasma G2665; schizō G4977",
+        "force": "At Christ's death the temple curtain is torn from top to bottom. The narrative datum is what Heb 10:19-20 interprets theologically: the priestly-access barrier between the holy place and the Most Holy is removed by Christ. Direct lay-access into God's presence is canonically inaugurated by Christ's own death. Genre is narrative, function is sign",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": [
+          "typology"
+        ]
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G2406",
+      "G2409",
+      "G749",
+      "G932",
+      "G934",
+      "G2378",
+      "G4152",
+      "G40",
+      "G1085",
+      "G1588",
+      "G1484",
+      "G2992",
+      "G3954",
+      "G1529",
+      "G4334",
+      "G3936",
+      "G3050",
+      "G2999",
+      "G3316",
+      "G1520",
+      "G1793",
+      "G2665",
+      "G4977",
+      "G4166",
+      "G4245",
+      "G4850",
+      "G1985",
+      "G4165",
+      "G218",
+      "G4336",
+      "G652",
+      "G4396",
+      "G2099",
+      "G1320",
+      "G1325",
+      "H4467",
+      "H3548",
+      "H1471",
+      "H6918",
+      "H8334"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "patristic_baptismal_priesthood",
+        "catholic_two_tier_priesthood",
+        "eastern_orthodox_two_tier_priesthood",
+        "reformation_priesthood_of_all_believers",
+        "anabaptist_congregational_priesthood",
+        "restorationist_required_priesthood_offices"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "patristic_baptismal_priesthood",
+          "verdict": "affirms",
+          "notes": "Augustine City of God 20.10 names every Christian as a priest because of incorporation into the one Priest. The patristic period universally confesses the baptismal priesthood while the office of bishop and presbyter develops as a parallel ministerial structure. Patristic reading affirms Layer 1 unambiguously"
+        },
+        {
+          "framework": "catholic_two_tier_priesthood",
+          "verdict": "complicates",
+          "notes": "CCC 1546-1547 and Lumen Gentium 10 teach two participations in the one priesthood of Christ: the common priesthood of the faithful (exercised in baptismal grace) and the ministerial or hierarchical priesthood (transmitted by Holy Orders). They differ essentially. Catholic teaching affirms Layer 1 (every baptized believer is a priest) and adds Layer 2 (a distinct ministerial priesthood is needed for sacramental ministry). The Protestant reading rejects Layer 2 as lacking NT lexical warrant (hiereus G2409 is never applied to a Christian office class)"
+        },
+        {
+          "framework": "eastern_orthodox_two_tier_priesthood",
+          "verdict": "complicates",
+          "notes": "Eastern Orthodox affirms the royal priesthood of all the baptized (sealed in chrismation) and retains a distinct ordained priesthood (bishop, priest, deacon) as a sacerdotal order serving the liturgical-sacramental life of the church. Analogous structure to Catholic teaching"
+        },
+        {
+          "framework": "reformation_priesthood_of_all_believers",
+          "verdict": "affirms",
+          "notes": "Luther's 1520 To the Christian Nobility recovered the strong emphasis on Layer 1 against the medieval sacerdotal-only ecclesiology. The Reformation reads the NT non-sacerdotal vocabulary for church office (presbyteros, episkopos, poimēn, didaskalos, never hiereus for a Christian office class) as decisive. The Augsburg Confession Article V retains an office of ministry of Word and sacrament without sacerdotal vocabulary. All Protestant lineages (Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal) align on Layer 1 and reject Layer 2 in its Catholic-Orthodox form"
+        },
+        {
+          "framework": "anabaptist_congregational_priesthood",
+          "verdict": "affirms",
+          "notes": "Schleitheim and Dordrecht treat each gathered congregation as a priestly community under Christ as sole high priest, with elected leaders (Schleitheim 5 on pastors) serving without sacerdotal status. The strongest expression of the proposition"
+        },
+        {
+          "framework": "restorationist_required_priesthood_offices",
+          "verdict": "denies",
+          "notes": "Mormonism (LDS) requires ordination to the Aaronic and Melchizedek priesthood for participation in saving ordinances (baptism, sealing, temple endowment); an unordained Mormon believer functionally cannot mediate these to himself or his family. This structurally denies Layer 1 (the unordained believer's direct priestly standing before God in Christ). The NT lexical evidence (hiereus G2409 reserved for Christ and applied to all believers, never to a sub-class of ordained men) excludes this claim. Mormonism is widely classified outside historic Christianity on multiple grounds; the priesthood structure is one such ground but is not, alone, the primary cult marker"
+        }
+      ],
+      "notes": "The verdict on Layer 1 (every believer is a priest before God in Christ; the church is a royal priesthood; every believer has direct access to God in Christ) is canonically unambiguous and confessed across all historic Christian lineages. The verdict on Layer 2 (whether the church also has a distinct ministerial priesthood) divides the Reformation from Rome and the East. The NT's consistent non-application of hiereus G2409 to a Christian office-class (it is applied only to Christ as great high priest, to all believers corporately in 1 Peter and Revelation, and to the Aaronic order; never to NT church officers, who are called presbyteros, episkopos, poimēn, didaskalos, diakonos) is the lexical evidence behind the Reformation reading. Analogia scripturae harmonizes the existence of ordained leadership (Eph 4:11, 1 Tim 3, Titus 1, James 5:14, 1 Pet 5:1-4) with the baptismal-priesthood texts by recognizing functional-ministerial offices within the priestly body rather than sacerdotal layers above it. Progressive revelation factors: Ex 19:6 sets the corporate-priestly identity for Israel before the specialized Aaronic order; the NT recasts the corporate priesthood in Christ and treats the Aaronic-specialized order as obsoleted by Christ's once-for-all priestly act (Heb 7-10)"
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God Book 20 Chapter 10; https://ccel.org/ccel/schaff/npnf102.iv.XX.10.html",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Augustine: 'as we call all believers Christians on account of the mystical chrism, so we call all priests because they are members of the one Priest.' Grounds the baptismal priesthood in incorporation into Christ"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 1546-1547; Lumen Gentium 10; https://www.vatican.va/archive/ENG0015/__P4T.HTM",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "CCC 1546-1547: 'The ministerial or hierarchical priesthood of bishops and priests, and the common priesthood of all the faithful participate in the one priesthood of Christ. While being ordered one to another, they differ essentially.'"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article V on the office of ministry; Luther, To the Christian Nobility of the German Nation 1520; https://bookofconcord.org/augsburg-confession/of-the-ministry/",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Augsburg V: 'That we may obtain this faith, the Ministry of Teaching the Gospel and administering the Sacraments was instituted.' Office of ministry retained without sacerdotal vocabulary; Luther 1520 made priesthood of all believers a Reformation rallying cry"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion Article 31, Of the one Oblation of Christ finished upon the Cross; https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Article 31: 'The Offering of Christ once made is that perfect redemption, propitiation, and satisfaction, for all the sins of the whole world.' Rejects the sacrifice of the Mass as fresh propitiation; presbyteral office retained without mediatorial sacrifice"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 30 (Of Church Censures); Heidelberg Catechism Q31; 1689 Baptist Confession 26.4",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Reformed confessions name Christ as sole mediator (Heidelberg Q31 names Christ as our great Prophet, only High Priest, and eternal King) and church officers as ministers of Word and sacrament, never as a sacerdotal class above the priestly body"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion (drawn from the 39 Articles); https://www.umc.org/en/content/articles-of-religion",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "UM Articles: 'We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith.' Direct access to God by faith in Christ; non-sacerdotal office of ministry"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 Article 5 (on Pastors); Dordrecht Confession 1632",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Schleitheim 5: the pastor's office is to read, exhort, teach, warn, admonish, discipline, and direct the congregation, a functional ministry within the priestly community. No sacerdotal class. Strongest expression of priesthood of all believers"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths; ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "AG: every Spirit-baptized believer is a priest before God with direct access; the office of pastor and elder is a functional ministry within the body. No sacerdotal class"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on chrismation as seal of the royal priesthood of the baptized; oca.org",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Orthodox teaching: chrismation following baptism seals every Christian into the royal priesthood, while the sacrament of holy orders sets apart bishops, priests, and deacons for sacerdotal liturgical ministry. Two-tier teaching analogous to Catholic"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Peter 2:5 hierateuma G2406 ANS hagion G40 ANS; the whole company addressed in vv.4-5 ('you yourselves as living stones') is being built into a holy priesthood to offer spiritual sacrifices"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/2-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Peter 2:9 basileion G934 + hierateuma G2406; direct LXX echo of Ex 19:6 mamleket kohanim; royal-priesthood title applied corporately to all addressees, not a clerical subset"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/exodus/19-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ex 19:6 mamleket H4467 + kohanim H3548 + goy H1471 + qadosh H6918; OT prototype 'a kingdom of priests and a holy nation' applied corporately to covenant Israel before Aaronic ordination"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/1-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rev 1:6 basileia G932 + hiereus G2409 NMP; Christ 'made us a kingdom, priests to his God and Father.' First-person plural refers to all loved and freed by his blood"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/5-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rev 5:10 basileia + hiereus; Christ by his blood ransomed people from every tribe and made them a kingdom and priests. Multi-ethnic universal scope"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/20-6.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rev 20:6 hiereus G2409 NMP; all who share in the first resurrection 'will be priests of God and of Christ.' Eschatological universal priesthood among the redeemed"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 10:19 parresia G3954 + ta hagia G40; every believer has frank-confident boldness for entrance into the holy places by Jesus' blood. Direct cultic-access language"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/4-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Heb 4:14 archiereus G749 megas G3173; Christ as the great high priest. The believer 'has' him directly. archiereus in the ecclesial sense is reserved for Christ throughout Hebrews"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Tim 2:5 heis G1520 + mesites G3316; numeric exclusivity: one God, one mediator between God and men, the man Christ Jesus. Excludes any additional mediator-class"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/12-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 12:1 thusia G2378 + paristemi G3936 + latreia G2999; every believer offers his own body as living sacrifice, holy and acceptable, his reasonable worship. Priestly self-offering of every Christian"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2406.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hierateuma G2406: 'priesthood, priestly fraternity, sacerdotal order.' Two NT occurrences, both in 1 Peter 2:5 and 2:9, both applied to the whole company of believers"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2409.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "hiereus G2409: 31 NT occurrences; applied to believers metaphorically only in Rev 1:6, 5:10, 20:6; applied to Christ in Hebrews chapter 5-8; otherwise of Jewish or pagan priests. Never of a Christian office-class"
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf102.iv.XX.10.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine City of God 20.10: 'as we call all believers Christians on account of the mystical chrism, so we call all priests because they are members of the one Priest.' Patristic baptismal-priesthood witness"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P4T.HTM",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "CCC 1546-1547: common priesthood of the faithful exercised in baptismal grace and ministerial priesthood transmitted by Holy Orders both participate in the one priesthood of Christ; differ essentially, ordered one to another"
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-the-ministry/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg V: 'That we may obtain this faith, the Ministry of Teaching the Gospel and administering the Sacraments was instituted.' Lutheran office of ministry without sacerdotal vocabulary"
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article 31: 'The Offering of Christ once made is that perfect redemption, propitiation, and satisfaction, for all the sins of the whole world.' Anglican rejection of the Mass as fresh propitiation"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UM Articles: 'We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works.' Direct access to God by faith; non-sacerdotal ministry"
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

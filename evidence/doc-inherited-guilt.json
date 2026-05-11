@@ -1,0 +1,322 @@
+{
+  "id": "doc-inherited-guilt",
+  "answer": {
+    "id": "doc-inherited-guilt",
+    "affirms": null,
+    "rationale": "The lexical evidence is genuinely contested at the hinge phrase. Romans 5:12 ἐφ' ᾧ πάντες ἥμαρτον admits two defensible readings: causal 'because all sinned' (Greek patristic tradition, sustained by Greek prepositional usage) and 'in whom all sinned' (Latin Vulgate's in quo, supporting Augustinian imputation). Romans 5:18 κατάκριμα and 5:19 κατεστάθησαν do carry juridical-appointment force, and 'death reigned' (5:14) over those who did not personally sin like Adam pushes toward some federal involvement, but the canon does not unambiguously settle whether this involvement is inherited guilt or inherited mortality/corruption. Verdict left null pending elder input given the in-house substantive disagreement.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "This is one of the cleanest cases of substantive in-house Christian disagreement that is not heretical on either side. Reformed-Augustinian Western theology (Westminster Confession 6.3, Augustine's anti-Pelagian writings) reads Romans 5:12 through the Vulgate's in quo as imputed Adamic guilt. Eastern Orthodoxy (OCA, Chrysostom, Cyril) explicitly denies inherited guilt while affirming inherited mortality, corruption, and ancestral consequences; the Orthodox term is 'ancestral sin' not 'original sin' in the Augustinian sense. Lutheran (Augsburg II, Formula of Concord I) treats the inherited condition as itself sin meriting condemnation though phrases it more as corruption than crisp imputation. Catholic CCC 402-406 affirms transmission of Adam's sin to all but qualifies it as 'a sin contracted, not committed', 'analogically' sin, distancing itself from strict double-imputation symmetry. Anglican Article IX affirms the corruption deserves God's wrath and damnation in every person born. Methodist Article VII explicitly says original sin 'standeth not in the following of Adam (as the Pelagians do vainly talk), but it is the corruption of the nature of every man', stopping short of full imputation. Anabaptist tradition tends toward age-of-accountability framings. Pentecostal traditions are ambivalent. The doctrine is contested in a way the deity of Christ or the bodily resurrection is not."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Adam's posterity inherit some real relation to Adam's first sin; whether that relation is inherited corruption alone or inherited corruption plus inherited juridical guilt (imputed guilt) is the question.",
+      "notes": "The original statement frames the Reformed-Augustinian answer (guilt 'reckoned', 'legally guilty in him from conception') as the proposition to affirm or deny. This pre-loads the Western juridical reading and treats the Eastern affirmation of inherited corruption-without-guilt as denial. Worked the neutralized form. Added flag stem-pre-loaded-verdict."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict is null, meaning the Bible by itself does not settle this question cleanly. The question is whether descendants of Adam not only inherit a corrupted nature, which most Christians agree on, but also inherit Adam's actual guilt, as if each of us stood in the courtroom when Adam disobeyed and was personally pronounced guilty. The strongest reason for the harder reading comes from Romans 5:12-19. Paul says death reigned from Adam to Moses, even over those who did not personally sin in the same way Adam did, suggesting that death came on them for some reason other than their own actions. He also says that through one man's disobedience, the many were constituted sinners, using a Greek verb of legal appointment. Romans 5:18 calls the result a condemnation, a legal verdict word. 1 Corinthians 15:22 says in Adam all die, suggesting some real corporate involvement in Adam. The strongest complicating factor comes from the same passage. Romans 5:12 ends with a Greek phrase that can be read two ways. The older Latin Bible translated it as 'in whom all sinned', referring back to Adam, which supports inherited guilt. The Greek phrase itself more naturally reads as 'because all sinned', referring to the descendants' own sinning, which would support inherited corruption that leads to actual personal sin but not inherited courtroom guilt. The Eastern Christian tradition, reading the Greek directly, has always taken the second reading. Ezekiel 18:20 also says explicitly that the son shall not bear the guilt of the father, and the father shall not bear the guilt of the son, which sits awkwardly against a doctrine of inherited courtroom guilt. The verdict acknowledges the tension honestly. Scripture clearly teaches inherited corruption and a universal sinful condition descending from Adam. Scripture also clearly teaches that everyone needs Christ. Whether the inherited condition includes imputed legal guilt or only the corrupted nature that inevitably produces actual sin is something the Greek text does not unambiguously resolve. Christians who deny inherited guilt are not denying the gospel. Christians who affirm it are not adding to the gospel. The doctrine is held in good faith on both sides of a real lexical ambiguity.",
+      "denominational_landscape": "Christian traditions divide substantively on this question along a lexical fault line in Romans 5:12. The Reformed tradition strongly affirms inherited guilt: Westminster Confession 6.3 says the guilt of Adam's first sin was imputed to all his posterity, descending by ordinary generation. Augustine's anti-Pelagian writings, working from the Latin Vulgate's 'in whom all sinned', founded the Western doctrine of imputed Adamic guilt and shaped subsequent Catholic, Lutheran, and Reformed thought. The Roman Catholic position in CCC 402-406 affirms transmission of original sin to all descendants but carefully qualifies it as 'a sin contracted, not committed', 'analogically' sin, a state rather than an act, with original holiness lost and the wound of human nature passed on, stopping short of strict guilt-imputation in the Reformed sense. Lutheran confessions, Augsburg II and Formula of Concord I, call the inherited condition truly sin that condemns and brings eternal death, leaning toward inherited guilt though framed as inherited corruption that itself constitutes guilt. Anglican Article IX says original sin is the fault and corruption of the nature of every man engendered of the offspring of Adam and deserves God's wrath and damnation in every person born, language closer to the Augustinian side. The Methodist Article VII, derived from Anglican Article IX but edited by John Wesley, explicitly says original sin does not consist in following Adam as the Pelagians vainly say, but is the corruption of nature, language that softens the imputation point and is balanced by Wesley's doctrine of prevenient grace covering inherited guilt. The Eastern Orthodox tradition, represented by the Orthodox Church in America, explicitly denies inherited guilt and calls the Augustinian framing a Western distortion. Orthodoxy uses the term 'ancestral sin' rather than original sin, affirming that all humans inherit mortality, corruption, and a death-bound condition from Adam, but each person bears guilt only for personal sin. The patristic Greek fathers, especially John Chrysostom in his Homilies on Romans, generally read Romans 5:12 causally rather than juridically. Pentecostal traditions, including the Assemblies of God, affirm inherited corruption and condemnation but are less precise on imputation; they share Wesleyan-Arminian sensibilities. Anabaptist traditions emphasize age of accountability and tend toward the inherited-corruption framing. No major historic Christian tradition denies inherited corruption itself; the disagreement is whether that corruption includes imputed Adamic guilt or only the wounded nature that produces actual personal sin. Public-record heterodox positions: Pelagianism, condemned at Carthage 418 and Ephesus 431, denies inherited sin entirely and was the historic boundary case. Mormonism's Articles of Faith Article 2 explicitly says men will be punished for their own sins and not for Adam's transgression, going beyond the Eastern Orthodox denial of guilt-imputation to a position closer to Pelagianism. Christadelphians similarly deny inherited sin in the imputation sense. Jehovah's Witnesses affirm inherited death from Adam but not inherited guilt. The cult-marker bar is not cleared on this question because the apparatus and the Greek text are genuinely ambiguous at the lexical hinge."
+    },
+    "scripture": [
+      {
+        "ref": "Rom.5.12",
+        "key_term": "ἐφ' ᾧ πάντες ἥμαρτον G1909+G3739+G3956+G264",
+        "force": "The Greek phrase eph ho is the lexical hinge. Most natural Greek reading is causal: 'because all sinned' or 'inasmuch as all sinned', referring to descendants' own sin. The Latin Vulgate rendered it 'in quo omnes peccaverunt' (in whom all sinned), reading the relative as referring back to Adam, which founded the Augustinian inherited-guilt tradition. The Greek does not unambiguously license either reading.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.14",
+        "key_term": "ἐβασίλευσεν ὁ θάνατος G936+G2288",
+        "force": "Death reigned from Adam to Moses even over those who did not sin in the likeness of Adam's transgression. The aorist active verb basileuo indicates death actually ruled over persons who had not personally committed an Adam-style command-breaking sin, which presses toward some federal involvement of descendants in Adam's transgression. Strongest single text for the inherited-guilt reading.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.18",
+        "key_term": "κατάκριμα G2631",
+        "force": "Katakrima is a juridical-verdict word, the formal sentence of condemnation handed down after due process, appearing only in Romans (5:16, 5:18, 8:1). Paul says one trespass led to condemnation for all. Supports the juridical reading of inherited involvement in Adam's first sin.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Rom.5.19",
+        "key_term": "κατεστάθησαν ἁμαρτωλοί G2525+G268",
+        "force": "Kathistemi in aorist passive carries the lexical force of legal appointment or constitution, as in priests being appointed (Heb 5:1, 7:28) or deacons being put in charge (Acts 6:3). 'The many were constituted sinners' through one man's disobedience supports the juridical reading. But the same verb in the second clause says the many will be constituted righteous through Christ, and most traditions read that as a real transformation, not just legal verdict, so the verb does not by itself decide the question.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism", "typology"]
+      },
+      {
+        "ref": "1Cor.15.22",
+        "key_term": "ἐν τῷ Ἀδὰμ πάντες ἀποθνῄσκουσιν G1722+G76+G599",
+        "force": "The preposition en with locative-corporate force, 'in Adam', supports some real corporate involvement of all humans in Adam's death-bringing act. The verb is present indicative 'are dying', describing the ongoing condition. Supports federal headship but does not specify whether the involvement is inherited guilt or inherited mortality.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["parallelism", "typology"]
+      },
+      {
+        "ref": "Ps.51.5",
+        "key_term": "עָוֹן (avon) H5771; חֵטְא (chet) H2399",
+        "force": "David confesses 'In iniquity I was brought forth, and in sin my mother conceived me.' Avon (iniquity) and chet (sin) together describe the natal condition. The verse supports inherited sinful condition from conception, but the genre is poetic confession and it is silent on whether the condition is inherited corruption or inherited guilt. Often cited by both sides.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Eph.2.3",
+        "key_term": "τέκνα φύσει ὀργῆς G5043+G5449+G3709",
+        "force": "'We were by nature children of wrath.' The dative phusei (by nature) indicates an inherent constitutional condition, not acquired behavior. Orge (wrath) is divinely directed judgment. The text supports the view that the natal condition itself is wrath-deserving, which is closer to the inherited-guilt reading than to a neutral inherited-corruption reading.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.18.20",
+        "key_term": "נֶפֶשׁ (nephesh) H5315; עָוֹן (avon) H5771",
+        "force": "'The soul that sins shall die. The son shall not bear the guilt of the father, nor the father bear the guilt of the son.' The strongest single complicating text against inherited juridical guilt. Ezekiel explicitly excludes transferred guilt across generations within the Old Testament covenant frame. Imputed-guilt readings must harmonize this against Rom 5; Eastern Orthodox tradition cites Ezek 18 as decisive for denying juridical inheritance.",
+        "supports": "against",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Deut.24.16",
+        "key_term": "מוּת (muth) H4191",
+        "force": "'Fathers shall not be put to death for their children, nor children for their fathers; each one shall be put to death for his own sin.' Parallel to Ezek 18:20. Legal-judicial command in Deuteronomy that the imputation of guilt across persons is forbidden in Israelite jurisprudence. Complicates the inherited-guilt reading by establishing a canonical principle against transferred guilt.",
+        "supports": "against",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Rom.3.23",
+        "key_term": "πάντες ἥμαρτον G3956+G264",
+        "force": "'All have sinned and fall short of the glory of God.' The aorist verb hemarton is the same form as in Rom 5:12, here unambiguously describing personal sin by every human, not Adamic sin imputed. The Eastern tradition treats this as the controlling Pauline statement: all sinned personally and need Christ, without requiring imputed guilt.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jer.31.29-30",
+        "key_term": "עָוֹן (avon) H5771",
+        "force": "'In those days they shall no longer say: the fathers have eaten sour grapes, and the children's teeth are set on edge. But every one shall die for his own iniquity.' Jeremiah looks forward to the new covenant under which transferred-guilt thinking is rejected. Complicates the inherited-guilt reading as a New Covenant principle.",
+        "supports": "against",
+        "genre": "prophecy",
+        "figures": ["idiom", "metaphor"]
+      }
+    ],
+    "concordance_lemmas_traversed": ["G1909", "G3739", "G264", "G3956", "G2631", "G2525", "G268", "G3876", "G599", "G76", "G444", "G1520", "G1722", "G2288", "G936", "G5179", "G5043", "G5449", "G3709", "H120", "H5771", "H2399", "H2342", "H5315", "H4191"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "Reformed federal-headship covenant theology",
+          "verdict": "Affirms. Adam as federal head represented all humanity in the covenant of works; his guilt is imputed to all by virtue of representative covenantal solidarity. Westminster 6.3 standard."
+        },
+        {
+          "framework": "Augustinian seminal/realist headship",
+          "verdict": "Affirms. All humanity was seminally present in Adam (in lumbis Adami) and so actually sinned in him. Reads Rom 5:12 eph ho as 'in whom'."
+        },
+        {
+          "framework": "Eastern Orthodox ancestral sin",
+          "verdict": "Denies inherited guilt; affirms inherited mortality, corruption, and ancestral consequence. Reads Rom 5:12 eph ho as causal 'because'. Cites Ezek 18:20 and Deut 24:16 as decisive."
+        },
+        {
+          "framework": "Roman Catholic moderate transmission",
+          "verdict": "Affirms in qualified form. CCC 404: original sin is 'a sin which will be transmitted by propagation to all mankind, that is, by the transmission of a human nature deprived of original holiness and justice'. CCC 405: 'a sin contracted and not committed, a state and not an act'. Stops short of strict double-imputation."
+        },
+        {
+          "framework": "Wesleyan-Arminian",
+          "verdict": "Affirms qualifiedly. Inherited guilt exists but is mitigated by prevenient grace covering all humanity. Methodist Article VII edited by Wesley softens the Anglican imputation language."
+        },
+        {
+          "framework": "Anabaptist age-of-accountability",
+          "verdict": "Denies meaningful inherited guilt prior to age of moral accountability. Affirms inherited corruption."
+        }
+      ],
+      "notes": "The verdict turns entirely on the interpretation of one Greek prepositional phrase (eph ho in Rom 5:12), a fact frankly admitted by lexicons on both sides. Calvin and Augustine took it as 'in whom' (Adam). Greek patristic tradition and most modern Greek grammarians take it as causal. The hermeneutic uncertainty is irreducible at the lexical level. Analogia scripturae makes the case harder, not easier: Ezek 18:20 and Deut 24:16 explicitly forbid transferred guilt, which the Augustinian reading must harmonize as 'corporate solidarity, not individual transfer'."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On the Merits and Forgiveness of Sins and the Baptism of Infants 1.10",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "In Adam all sinned at the time when, in his nature, by reason of that innate power whereby he was able to produce them, all were still that one man."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "John Chrysostom, Homilies on Romans, Homily 10 on Rom 5:12",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "What does the word sinned mean here? It means that when Adam fell, even those who had not eaten of the tree all became, from him, mortal. Chrysostom reads it as inherited mortality, not inherited guilt."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies 3.21",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "As by one man's disobedience sin entered, and death obtained a place through sin; so also by the obedience of one man, righteousness having been introduced, shall cause life to fructify."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 404",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin is called sin only in an analogical sense: it is a sin contracted and not committed, a state and not an act. Adam's sin transmitted by propagation, not by imitation."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 405",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original sin does not have the character of a personal fault in any of Adam's descendants. It is a deprivation of original holiness and justice."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II (Of Original Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence. This disease or vice of origin is truly sin, even now condemning."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article IX (Of Original or Birth-Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin is the fault and corruption of the Nature of every man, that naturally is engendered of the offspring of Adam; in every person born into this world, it deserveth God's wrath and damnation."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 6.3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "They being the root of all mankind, the guilt of this sin was imputed, and the same death in sin and corrupted nature conveyed to all their posterity, descending from them by ordinary generation."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VII (Of Original or Birth Sin)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Original sin standeth not in the following of Adam (as the Pelagians do vainly talk), but it is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, Doctrine on Sin (oca.org)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "All the children of Adam share in this tragic fate. What is inherited is the condition of living in a death-bound universe. The OCA position denies inherited guilt while affirming inherited damaged condition and mortality."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The Fall of Man",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Man was created good and upright; by voluntary transgression Adam fell and thereby incurred not only physical death but also spiritual death. AG affirms inherited consequence; ambivalent on guilt-imputation."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 and Anabaptist age-of-accountability tradition",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Anabaptist tradition emphasizes adult believer baptism on the basis that infants are not under inherited juridical guilt prior to moral accountability."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/romans/5-12.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "eph ho G1909+G3739, pantes hemarton G3956+G264; the source lists eph as 'for' without footnoting the 'because' versus 'in whom' interpretive split."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/5-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ebasileusen G936 aor act, death reigned from Adam to Moses even over those not having sinned (hamartesantas G264 aor part)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/5-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "katestathesan G2525 aor pass: were constituted, with legal-appointment force; the many were constituted sinners through one man's disobedience."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15-22.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "en to Adam G1722+G76 with representative-corporate force; describes how all humanity participates in Adam's condition of mortality."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2631.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "katakrima G2631: the formal sentence of condemnation handed down after due process; juridical verdict, not punishment itself."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/2525.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "kathistemi G2525: to place, designate, constitute; parallel uses Heb 5:1, 7:28 (priestly appointment); juridical-appointment force in Rom 5:19."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "physei G5449 (by nature) plus orge G3709 (wrath); construction points to natal constitutional condition preceding moral choice."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/51-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "avon H5771 (iniquity), chet H2399 (sin), chol H2342 (brought forth); confession of sinful natal condition."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/sin",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "OCA: All children of Adam share in this tragic fate, but what is inherited is the condition of a death-bound universe, not personal culpability for Adam's specific act."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg II: this disease or vice of origin is truly sin, even now condemning and bringing eternal death upon those not born again."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "nuance",
+        "quote": "Methodist Article VII: original sin is the corruption of the nature of every man; it is NOT the following of Adam as the Pelagians vainly talk. Softens imputation language."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article IX: Original sin is the fault and corruption of the Nature of every man that naturally is engendered of the offspring of Adam; deserveth God's wrath and damnation."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/264.htm",
+        "category": "primary_repository",
+        "stance": "complicates",
+        "quote": "hamartano G264 aorist hemarton: most NT occurrences describe personal sin; Rom 3:23 uses same form for actual personal sinning by all."
+      }
+    ],
+    "confidence": "low",
+    "flags": ["stem-pre-loaded-verdict", "apparatus-vs-counter-witness-conflict", "confession-tradition-divergence", "needs-elder-input"]
+  }
+}

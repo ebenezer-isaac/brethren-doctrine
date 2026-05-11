@@ -1,0 +1,453 @@
+{
+  "id": "doc-repentance",
+  "answer": {
+    "id": "doc-repentance",
+    "affirms": true,
+    "rationale": "Pan-canonical lexical demonstration. The Greek family μετανοέω metanoeō G3340 (34 NT occurrences) and μετάνοια metanoia G3341 (22 NT occurrences) sits at the core of both John's preaching, Jesus' preaching, and the apostolic gospel call. Mark 1:15 places μετανοεῖτε in present-imperative active alongside πιστεύετε G4100, fusing repentance and faith into one summons to enter the kingdom. Luke 13:3,5 attaches the strongest conditional consequence: ἐὰν μὴ μετανοῆτε, πάντες ὁμοίως ἀπολεῖσθε (apollumi G622, perish utterly). Luke 24:47 makes μετάνοια the content of the resurrection commission εἰς ἄφεσιν ἁμαρτιῶν G859 to be proclaimed to all nations. Acts 2:38 (μετανοήσατε καὶ βαπτισθήτω G907 ἕκαστος ὑμῶν εἰς ἄφεσιν τῶν ἁμαρτιῶν), 3:19 (μετανοήσατε οὖν καὶ ἐπιστρέψατε G1994), 17:30 (νῦν παραγγέλλει τοῖς ἀνθρώποις πάντας πανταχοῦ μετανοεῖν), 20:21 (διαμαρτυρόμενος μετάνοιαν εἰς τὸν θεὸν καὶ πίστιν εἰς τὸν κύριον ἡμῶν Ἰησοῦν), and 26:20 (μετανοεῖν καὶ ἐπιστρέφειν ἐπὶ τὸν θεόν, ἄξια τῆς μετανοίας ἔργα πράσσοντας) collectively establish repentance-and-faith as the Pauline ordo of conversion. 2 Cor 7:9-11 distinguishes κατὰ θεὸν λύπη G3077 producing μετάνοιαν εἰς σωτηρίαν G4991 ἀμεταμέλητον from worldly grief producing death. 2 Pet 3:9 makes God's patience aimed at πάντας εἰς μετάνοιαν χωρῆσαι. Heb 6:1 calls μετάνοια ἀπὸ νεκρῶν ἔργων a foundational doctrine. The OT lemma שׁוּב shuv H7725 (over 1,000 occurrences) supplies the prophetic substratum: Ezek 18:30-32, 33:11, Joel 2:12-13, Hos 14:1-2 command Israel to turn from sin to YHWH. The lexical force across both testaments is consistent: a change of mind/disposition (νοῦς G3563) toward sin and toward God that issues in turning (ἐπιστρέφω G1994 / שׁוּב) and in fruit-bearing action (Matt 3:8 ἄξιον τῆς μετανοίας; Acts 26:20).",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Cult-marker-if-denied=true is scoped carefully. The cult-grade denial is the proposition that the gospel does not call sinners to repent, i.e. that one can remain in deliberate sin and still be saved without any change of mind. That proposition contradicts the explicit pan-canonical lexical pattern of metanoeo, metanoia, and shuv across the prophetic and apostolic preaching. Public-record carriers of the cult-grade denial are narrow: the hardest stream of mid-20th-century Free Grace theology associated with Zane Hodges and the Grace Evangelical Society, which restructures the gospel call to faith alone in a way that downgrades or eliminates the call to repent of sin; antinomian streams that treat ongoing willful sin as compatible with assurance; certain hyper-grace popular teachers who insist a believer never needs to repent again. The IN-HOUSE disagreement is NOT cult-grade and is on three different questions: (1) whether repentance is logically prior to faith, simultaneous with faith, or a fruit of faith, on which Reformed, Lutheran, Wesleyan, and Anabaptist traditions divide while all affirming that genuine conversion includes both; (2) whether repentance includes a formal sacramental practice (Catholic Sacrament of Reconciliation, Orthodox sacrament of penance, Lutheran private confession) or is a non-sacramental movement of the heart (most Protestant lineages); (3) whether the believer's life remains characterized by ongoing daily repentance, with Luther 95 Theses #1 famously affirming 'when our Lord and Master Jesus Christ said Repent, he willed the entire life of believers to be one of repentance'. Fruit-vs-precision: most professing Christians in every tradition affirm with their lives that turning from sin is part of following Christ; the precision-level disputes are doctor-of-the-church-level disputes that do not affect membership in the catholic Christian gospel. The verdict-scope is: outright denial that the gospel calls sinners to repent is gospel-stake; sacramental versus non-sacramental practice and the ordo-salutis ordering of repentance and faith are in-house Christian disagreements."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Does Scripture present repentance (a change of mind toward sin and toward God that turns from sin to Christ) as integral to saving conversion, or does it present saving conversion as occurring apart from repentance?",
+      "notes": "The statement 'Repentance is integral to saving conversion, never separable from saving faith' asserts the verdict. The descriptors 'Spirit-given' and 'never separable from saving faith' contain Reformed ordo-salutis loading. However, the underlying lexical claim (metanoia is integral to the gospel call) is the direct content of Mark 1:15, Luke 24:47, Acts 2:38, Acts 17:30, Acts 20:21, and 2 Cor 7:10. Working the neutralized form yields the same affirmative verdict for the lexical claim, with an honest note that the precise relationship between repentance and faith (logical priority, simultaneity, or consequence) is debated in-house among historic Christian traditions."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: yes, the Bible presents repentance as part of how a person comes to God. When Jesus began preaching, his first recorded message in Mark 1:15 was 'repent and believe the gospel'. He paired these two words together. The strongest reason from Scripture is the sheer repetition. Jesus says in Luke 13:3 and 13:5 'unless you repent, you will all likewise perish'. After the resurrection, Luke 24:47 says he commissioned the disciples to preach 'repentance for the forgiveness of sins' to all nations. Peter preaches it on Pentecost in Acts 2:38 ('repent and be baptized'), at the temple in Acts 3:19 ('repent therefore, and turn back'), and Paul preaches it to philosophers in Acts 17:30 ('God now commands all people everywhere to repent'). Paul sums up his whole ministry in Acts 20:21 as 'testifying of repentance toward God and of faith in our Lord Jesus Christ'. 2 Corinthians 7:10 distinguishes a godly sorrow that 'produces a repentance leading to salvation' from a worldly grief that produces death. 2 Peter 3:9 says God is patient, 'not wishing that any should perish, but that all should reach repentance'. The strongest counterargument inside the Bible is the way Paul fences off works from the gospel. Romans 4:5 says God 'justifies the ungodly' and that faith is reckoned as righteousness apart from working. Ephesians 2:8-9 says salvation is by grace through faith, 'not a result of works, so that no one may boast'. If repentance means turning from sin and doing better, doesn't that re-introduce works into the gospel. The verdict handles this tension by noticing what the Greek word translated 'repent' actually means. It does not mean 'do better and earn forgiveness'. It means 'change your mind'. The change is from minimizing sin to admitting it, from running from God to turning toward him. Acts 20:21 puts repentance and faith side by side as the two directions of the same one turning: from sin to God, in trust on Jesus. Acts 26:20 says the deeds that follow are evidence of real repentance, not the cause of it. The Bible also distinguishes the worldly sorrow that just regrets getting caught from the godly sorrow that actually changes course (2 Corinthians 7:10). Where Christians agree and disagree: every major historic Christian tradition has always taught that the gospel calls sinners to repent. Where they differ is on three smaller questions. First, whether repentance comes logically before faith, at the same moment as faith, or as the fruit of faith. Second, whether repentance involves a formal practice like confession to a priest, or whether it is purely a movement of the heart. Third, whether a Christian needs to keep repenting throughout life or only at conversion. Outright denial of the call to repent at all (the hardest version of 'Free Grace' theology, in which a person can be saved with no change of mind about sin) is rejected by every historic tradition.",
+      "denominational_landscape": "Every major historic Christian lineage affirms that the gospel calls sinners to repent. Differences are about precision, not presence. Patristic witness: the earliest Christian writers treat repentance as basic to the Christian life. Tertullian's De Paenitentia treats repentance as the doorway that opens to salvation and the ongoing discipline of the baptized. Augustine teaches that conversion to God is a turning from sin made possible by grace. Catholic magisterial teaching: the Catechism of the Catholic Church paragraph 1431 defines interior repentance as 'a radical reorientation of our whole life, a return, a conversion to God with all our heart, an end of sin, a turning away from evil'. Catholic teaching places this interior repentance at the heart of the Sacrament of Reconciliation but also distinguishes it from the sacramental practice. Lutheran: the Augsburg Confession Article XII teaches that 'repentance properly consists of two parts: one is contrition, that is, terrors smiting the conscience through the knowledge of sin; the other is faith, which is born of the Gospel'. Luther's first of the 95 Theses says that when Christ said 'repent' he willed the entire life of believers to be one of repentance. Anglican: Article XVI 'Of Sin after Baptism' teaches that after receiving the Holy Spirit a believer may fall into sin and 'by the grace of God we may arise again, and amend our lives'. The Anglican rite of confession in the Book of Common Prayer makes repentance central to corporate worship. Reformed: the Westminster Confession Chapter 15 calls repentance unto life 'an evangelical grace' and ties it tightly to faith. The Heidelberg Catechism Q88-Q90 defines the two parts of true repentance as the dying of the old self and the coming to life of the new. Methodist and Wesleyan: John Wesley calls repentance 'the porch of religion' and teaches an ongoing process of sanctification grounded in continuing repentance. The Methodist Articles of Religion teach that 'the grant of repentance is not to be denied to such as fall into sin after justification'. Anabaptist: the Schleitheim Confession Article I teaches that baptism is given only 'to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ'. Pentecostal: Assemblies of God doctrine teaches that salvation involves 'repentance toward God and faith toward our Lord Jesus Christ' as the necessary response to the gospel. Eastern Orthodox: the Orthodox Church emphasizes metanoia as a lifelong transformation of mind, treating the sacrament of penance as the ongoing renewal of the change of mind begun at baptism."
+    },
+    "scripture": [
+      {
+        "ref": "Mark.1.15",
+        "key_term": "μετανοεῖτε καὶ πιστεύετε ἐν τῷ εὐαγγελίῳ; metanoeō G3340 present imperative active 2pl; pisteuō G4100 present imperative active 2pl; euangelion G2098",
+        "force": "The opening summary of Jesus' Galilean preaching. Two present-imperative commands paired by kai: repent and believe. The present imperative carries durative force, an ongoing posture. The kingdom announcement (the time is fulfilled, the kingdom of God is at hand) grounds the imperatives. Lexically the locus classicus for the gospel call",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Luke.13.3",
+        "key_term": "ἐὰν μὴ μετανοῆτε, πάντες ὁμοίως ἀπολεῖσθε; metanoeō G3340 present subjunctive active 2pl; apollumi G622 future middle 2pl; ean me G1437+G3361",
+        "force": "Strongest conditional in the canon attaching consequence to non-repentance. ean me with the subjunctive expresses a real possibility; the apodosis uses the future of apollumi (to perish utterly). Jesus speaks to crowds, not to opponents. Repeated verbatim at Luke 13:5 for emphasis. Universal call: 'all likewise perish'",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Luke.24.47",
+        "key_term": "κηρυχθῆναι ἐπὶ τῷ ὀνόματι αὐτοῦ μετάνοιαν εἰς ἄφεσιν ἁμαρτιῶν εἰς πάντα τὰ ἔθνη; metanoia G3341; aphesis G859; ethnos G1484",
+        "force": "Risen Christ identifies the content of the post-resurrection commission: metanoia eis aphesin hamartion. Repentance is the message to be proclaimed in his name to all nations, with forgiveness as the result (eis aphesin). The Great Commission as Luke records it makes metanoia the explicit content of preaching",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.38",
+        "key_term": "μετανοήσατε, καὶ βαπτισθήτω ἕκαστος ὑμῶν ἐπὶ τῷ ὀνόματι Ἰησοῦ Χριστοῦ εἰς ἄφεσιν τῶν ἁμαρτιῶν ὑμῶν; metanoeō G3340 aorist imperative active 2pl; baptizo G907; aphesis G859",
+        "force": "Peter's Pentecost altar call. The aorist imperative of metanoeo at the head of the response, paired with baptism in Christ's name, oriented to the forgiveness of sins. The order metanoeo then baptisthēto, with both linked by kai to eis aphesin, indicates repentance is the controlling response. Lexically explicit and programmatic for Acts",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.3.19",
+        "key_term": "μετανοήσατε οὖν καὶ ἐπιστρέψατε εἰς τὸ ἐξαλειφθῆναι ὑμῶν τὰς ἁμαρτίας; metanoeō G3340 aorist imperative active 2pl; epistrephō G1994 aorist imperative active 2pl; exaleiphō G1813",
+        "force": "Peter at Solomon's portico. Two paired aorist imperatives: metanoesate kai epistrepsate (repent and turn back). The doubling fuses change of mind (metanoia) with concrete turning (epistrophē). The purpose clause eis to exaleiphthenai (that your sins may be blotted out) attaches the lexical result. The two verbs together render the OT shuv pattern in NT idiom",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "τὰ νῦν παραγγέλλει τοῖς ἀνθρώποις πάντας πανταχοῦ μετανοεῖν; metanoeō G3340 present infinitive active; paraggellō G3853 present indicative active 3s",
+        "force": "Paul at the Areopagus. The verb paraggello carries military-edict force (to give a command, often imperially). The repetition pantas pantachou (all everywhere) makes the call universal in scope. Metanoia is presented not as Christian-distinctive ethics but as God's binding command on every human being. Universalizes the gospel call",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.20.21",
+        "key_term": "διαμαρτυρόμενος Ἰουδαίοις τε καὶ Ἕλλησιν τὴν εἰς θεὸν μετάνοιαν καὶ πίστιν εἰς τὸν κύριον ἡμῶν Ἰησοῦν; metanoia G3341; pistis G4102; eis G1519 twice",
+        "force": "Paul's farewell to the Ephesian elders, summarizing his entire ministry. Repentance and faith are the two objects of testimony, paired by kai, each directed by eis. Repentance is toward (eis) God; faith is toward (eis) the Lord Jesus. The Pauline ordo of conversion fuses both, never separates them. Programmatic statement of Paul's gospel",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.26.20",
+        "key_term": "μετανοεῖν καὶ ἐπιστρέφειν ἐπὶ τὸν θεόν, ἄξια τῆς μετανοίας ἔργα πράσσοντας; metanoeō G3340 present infinitive; epistrephō G1994 present infinitive; axios G514; ergon G2041",
+        "force": "Paul before Agrippa describing the message that landed him in chains: repent, turn to God, and do deeds worthy of repentance. The construction axia tes metanoias erga (works worthy of the repentance) establishes that genuine metanoia produces visible fruit, echoing John the Baptist (Matt 3:8). Lexically grounds the fruit-of-repentance pattern across the gospel call",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.7.10",
+        "key_term": "ἡ γὰρ κατὰ θεὸν λύπη μετάνοιαν εἰς σωτηρίαν ἀμεταμέλητον ἐργάζεται; lypē G3077; metanoia G3341; sōtēria G4991; ametamelētos G278",
+        "force": "Paul distinguishes two kinds of grief. kata theon lypē (grief according to God) produces metanoia eis sōtērian ametamelēton (repentance unto salvation, not to be regretted); kosmou lypē produces death. Critical for understanding repentance as Spirit-wrought, not mere remorse. The qualifier ametamelētos (irrevocable, not regretted) distinguishes saving repentance from worldly sorrow",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.3.9",
+        "key_term": "μὴ βουλόμενός τινας ἀπολέσθαι ἀλλὰ πάντας εἰς μετάνοιαν χωρῆσαι; metanoia G3341; chōreō G5562 aorist infinitive active; apollumi G622",
+        "force": "God's patient delay of the parousia explained as aimed at metanoia: he wills not that any should perish but that all should reach repentance. The verb chōrēsai (come to, make room for) presents metanoia as the destination God's patience drives toward. Universal salvific intent expressed through the lens of metanoia, not bare faith",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.6.1",
+        "key_term": "μετανοίας ἀπὸ νεκρῶν ἔργων καὶ πίστεως ἐπὶ θεόν; metanoia G3341; pistis G4102; nekros G3498; ergon G2041",
+        "force": "Author of Hebrews lists the foundational elementary teachings of the Christ-faith. Repentance from dead works and faith toward God head the list, paired by kai. Lexically reinforces the metanoia-pistis pairing as the standard apostolic catechesis. apo nekron ergon specifies the direction of turning: away from works that have no life",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.3.8",
+        "key_term": "ποιήσατε οὖν καρπὸν ἄξιον τῆς μετανοίας; karpos G2590; axios G514; metanoia G3341",
+        "force": "John the Baptist to the Pharisees and Sadducees. The aorist imperative poiesate with karpon axion (worthy fruit) establishes the test of genuine repentance: visible amendment of life. Lexical: karpos as the public evidence of internal metanoia. Programmatic for the prophet's preaching of repentance",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.11.18",
+        "key_term": "ἄρα καὶ τοῖς ἔθνεσιν ὁ θεὸς τὴν μετάνοιαν εἰς ζωὴν ἔδωκεν; metanoia G3341; zōē G2222; didōmi G1325 aorist indicative active 3s",
+        "force": "Jewish believers' response to Peter's report on Cornelius. metanoia eis zōēn (repentance unto life) is something God gave (edōken). The lexical force makes metanoia a divine gift, not a human work. Aligns with Acts 5:31 (God exalted Christ to give metanoia to Israel) and 2 Tim 2:25 (God may grant metanoia)",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.2.4",
+        "key_term": "τὸ χρηστὸν τοῦ θεοῦ εἰς μετάνοιάν σε ἄγει; chrēstos G5543; agō G71 present indicative active 3s; metanoia G3341",
+        "force": "Paul to the moralist who judges others while committing the same sins. God's kindness leads (agei, present durative) to metanoia. Lexically locates the source of repentance in God's character, not in the sinner's autonomous capacity. Critical for the Spirit-given quality of saving repentance",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.18.30",
+        "key_term": "שׁוּבוּ וְהָשִׁיבוּ מִכָּל פִּשְׁעֵיכֶם; shuv H7725 imperative; pesha H6588",
+        "force": "Ezekiel's call: 'turn (shuvu) and cause yourselves to turn from all your transgressions'. The Hebrew doubles the root shuv (qal imperative plus hiphil imperative), capturing both the turn and the bringing-oneself-to-turn. Vocabulary directly parallel to NT metanoia and epistrophē. The prophetic substratum of the apostolic call to repent",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.33.11",
+        "key_term": "אִם אֶחְפֹּץ בְּמוֹת הָרָשָׁע כִּי אִם בְּשׁוּב רָשָׁע מִדַּרְכּוֹ; shuv H7725 qal infinitive; chaphets H2654; derek H1870",
+        "force": "YHWH's self-disclosure: he takes no pleasure in the death of the wicked but in the wicked turning (be-shuv) from his way and living. Foundational OT statement of God's saving intent realized through human turning. Anchors 2 Pet 3:9 (God wills all to reach metanoia). Lexically and theologically the OT prepares the NT call",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Joel.2.12",
+        "key_term": "שֻׁבוּ עָדַי בְּכָל לְבַבְכֶם; shuv H7725 qal imperative; leb H3824",
+        "force": "Joel's call to corporate repentance: 'return to me with all your heart, with fasting, weeping, and mourning'. shuv ad-ay (turn unto me) with be-kol levavkem (with all your heart) anticipates the NT metanoia as a wholehearted turning, not external ritual only. Peter cites Joel 2:28-32 in Acts 2; Joel's repentance frame undergirds Pentecost",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Rom.4.5",
+        "key_term": "τῷ μὴ ἐργαζομένῳ πιστεύοντι δὲ ἐπὶ τὸν δικαιοῦντα τὸν ἀσεβῆ λογίζεται ἡ πίστις αὐτοῦ εἰς δικαιοσύνην; ergazomai G2038; pisteuō G4100; asebēs G765",
+        "force": "Paul: to the one who does not work but believes on him who justifies the ungodly, faith is reckoned as righteousness. Complicates the verdict because Paul foregrounds faith without listing repentance in this Abraham-paradigm passage. The harmonization is that metanoia is not a work earning forgiveness but the change of mind that turns to trust God; Paul's ergazomai language targets meritorious works of law, not metanoia",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.8",
+        "key_term": "τῇ γὰρ χάριτί ἐστε σεσῳσμένοι διὰ πίστεως καὶ τοῦτο οὐκ ἐξ ὑμῶν θεοῦ τὸ δῶρον οὐκ ἐξ ἔργων; charis G5485; pistis G4102; dōron G1435; ergon G2041",
+        "force": "Salvation by grace through faith, not from works, lest anyone boast. Complicates the verdict if repentance is misread as a work. Resolves by Acts 11:18 (God gave metanoia eis zōēn) and Rom 2:4 (God's kindness leads to metanoia): repentance is the divine-gift change of mind that turns to receive the free gift, not a meritorious act earning it",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.3.16",
+        "key_term": "ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται; pisteuō G4100 present active participle; apollumi G622",
+        "force": "Famous formulation: whoever believes shall not perish. The verse names pisteuō without explicit metanoia. Complicates only if pisteuō and metanoeo are treated as separable. Concordance shows John's Gospel uses pisteuō (98 times) as the integrating verb of faith-conversion; metanoeo appears in John's writings concentrated in Revelation 2-3. The two NT vocabularies converge on the one event of turning to Christ",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rev.2.5",
+        "key_term": "μνημόνευε οὖν πόθεν πέπτωκας καὶ μετανόησον καὶ τὰ πρῶτα ἔργα ποίησον; metanoeō G3340 aorist imperative; mnemoneuō G3421",
+        "force": "Risen Christ to Ephesus: remember, repent, and do the first works. Concordance pattern: metanoeō appears 8 times in Rev 2-3 (2:5 twice, 2:16, 2:21 twice, 2:22, 3:3, 3:19) addressed to churches, demonstrating that the call to repent applies to baptized believers, not only to first conversion. Repentance is ongoing covenantal posture",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Hos.14.1",
+        "key_term": "שׁוּבָה יִשְׂרָאֵל עַד יְהוָה אֱלֹהֶיךָ כִּי כָשַׁלְתָּ בַּעֲוֹנֶךָ; shuv H7725 qal imperative; kashal H3782; avon H5771",
+        "force": "Hosea's call: 'return, O Israel, to YHWH your God, for you have stumbled in your iniquity'. The Hebrew shuvah ad-YHWH (return unto YHWH) provides the OT shape of the gospel call: turning includes naming sin (avon), acknowledging fall (kashal), and re-orienting toward God. Read with Acts 3:19 and 26:20 across testaments",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.2.25",
+        "key_term": "μήποτε δώῃ αὐτοῖς ὁ θεὸς μετάνοιαν εἰς ἐπίγνωσιν ἀληθείας; metanoia G3341; epignosis G1922; alētheia G225",
+        "force": "Paul on correcting opponents in gentleness: perhaps God may grant them metanoia leading to a full knowledge of the truth. The optative dōē plus metanoia as the gift God grants makes the source-of-repentance explicit: it is given by God, not generated by the human autonomously. Aligns with Acts 11:18 and Rom 2:4",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G3340",
+      "G3341",
+      "G3563",
+      "G4100",
+      "G4102",
+      "G1994",
+      "G2098",
+      "G622",
+      "G907",
+      "G859",
+      "G2041",
+      "G514",
+      "G2590",
+      "G3853",
+      "G1437",
+      "G3361",
+      "G3077",
+      "G4991",
+      "G278",
+      "G5562",
+      "G3498",
+      "G3498",
+      "G5543",
+      "G71",
+      "G2222",
+      "G1325",
+      "G1922",
+      "G2038",
+      "G765",
+      "G5485",
+      "G1435",
+      "G3421",
+      "G1813",
+      "G3421",
+      "G1484",
+      "G1519",
+      "H7725",
+      "H6588",
+      "H2654",
+      "H1870",
+      "H3824",
+      "H5771",
+      "H3782"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "reformed_lordship_salvation",
+        "wesleyan_arminian",
+        "lutheran_two_parts",
+        "catholic_sacramental",
+        "free_grace_hodges",
+        "eastern_orthodox_lifelong_metanoia"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "reformed_lordship_salvation",
+          "verdict": "affirms",
+          "notes": "WCF 15 and the Heidelberg Catechism Q88-Q90 read repentance as an evangelical grace inseparable from saving faith. Repentance and faith are simultaneous fruits of regeneration; the new birth gives rise to both. The Reformed verdict on the proposition as stated is unambiguous affirmation"
+        },
+        {
+          "framework": "wesleyan_arminian",
+          "verdict": "affirms",
+          "notes": "John Wesley calls repentance 'the porch of religion' and teaches that prevenient grace enables the response of repentance and faith. Methodist Articles confess that grace is given to such as fall after justification to enable them to repent. Lifelong repentance is integral to the Wesleyan order of salvation"
+        },
+        {
+          "framework": "lutheran_two_parts",
+          "verdict": "affirms",
+          "notes": "Augsburg Confession Article XII defines repentance as contrition (terrors of conscience over sin) and faith (which receives the gospel). Lutheran teaching makes faith the second of the two parts of repentance itself. The proposition that repentance is integral to saving conversion and never separable from faith is the AC XII formula"
+        },
+        {
+          "framework": "catholic_sacramental",
+          "verdict": "affirms",
+          "notes": "CCC 1431 defines interior repentance as a radical reorientation of the whole life. Catholic teaching makes metanoia the heart of conversion and locates its sacramental expression in the Sacrament of Reconciliation. The proposition is affirmed; the further claim that sacramental confession is required for post-baptismal grave sin is a Catholic-distinctive addition not shared by Protestants"
+        },
+        {
+          "framework": "free_grace_hodges",
+          "verdict": "denies",
+          "notes": "Zane Hodges and the Grace Evangelical Society defined saving faith in a way that does not require a turning from sin or submission to Christ's lordship at the point of conversion. On this lens, calling sinners to repent of sin as a condition of receiving eternal life confuses the gospel with works. The 1980s-1990s 'Lordship Salvation' controversy (John MacArthur vs. Zane Hodges) made these positions explicit. This is the minority framework within professing evangelicalism whose proposition the present statement directly contradicts"
+        },
+        {
+          "framework": "eastern_orthodox_lifelong_metanoia",
+          "verdict": "affirms",
+          "notes": "Orthodox teaching treats metanoia as the lifelong transformation of the nous, beginning at baptism and ongoing through the sacrament of penance. The proposition that repentance is integral to saving conversion is affirmed; the Orthodox formulation goes further to make ongoing metanoia the structure of the entire Christian life"
+        }
+      ],
+      "notes": "The grammatico-historical method with full concordance traversal of metanoeo G3340, metanoia G3341, and shuv H7725 settles the verdict at the lexical level. Analogia scripturae harmonizes Acts 20:21 (the metanoia + pistis Pauline ordo) with Rom 4:5 and Eph 2:8 (sola gratia / sola fide) by recognizing that the Greek metanoia (change of mind) is not a meritorious work but the divinely-given change of disposition that turns to receive the free gift. Progressive revelation operates between the OT shuv (prophetic call to corporate Israel) and the NT metanoia (the apostolic gospel call to all nations); the lexical continuity is unmistakable. The proposition's specific Reformed-confessional loading ('Spirit-given', 'never separable from saving faith') represents one historic framing among several; the lexical-canonical claim (repentance is integral to the gospel call) is sustained across all magisterial frameworks. The verdict requires no esoteric or dispensational hermeneutic. Frameworks_in_play exist primarily for the ordo-salutis precision question and the sacramental practice question, not for the bare lexical claim."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, De Paenitentia (On Repentance), CCEL ANF Vol 3; Augustine various works on conversion",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Tertullian's De Paenitentia treats repentance as the doorway opening to salvation and the ongoing discipline of the baptized. Augustine teaches conversion as a turning from sin made possible by grace, foundational to the patristic doctrine of metanoia"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 1431",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "CCC 1431: 'Interior repentance is a radical reorientation of our whole life, a return, a conversion to God with all our heart, an end of sin, a turning away from evil.' Catholic teaching makes interior metanoia the heart of conversion"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XII, Of Repentance (bookofconcord.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "AC XII: 'Repentance consists properly of these two parts. One is contrition, that is, terrors smiting the conscience through the knowledge of sin; the other is faith.' Lutheran teaching makes faith the second part of repentance itself"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article XVI, Of Sin after Baptism (churchofengland.org)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Article XVI: after receiving the Holy Spirit we may depart from grace given and fall into sin, and by the grace of God we may arise again and amend our lives. Repentance available throughout Christian life"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 15 (Of Repentance unto Life); Heidelberg Catechism Q88-Q90",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "WCF 15: 'Repentance unto life is an evangelical grace, the doctrine whereof is to be preached by every minister of the gospel, as well as that of faith in Christ.' Heidelberg Q88-Q90: true repentance is the dying of the old self and the coming to life of the new"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion, Article XII (umc.org); Wesley's sermons on repentance",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "UM Article XII: 'the grant of repentance is not to be denied to such as fall into sin after justification.' Wesley calls repentance the porch of religion; lifelong ongoing process grounded in prevenient grace"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession Article I (1527)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Schleitheim I: 'Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ.' Repentance prerequisite to believer's baptism"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Truth 5 (The Salvation of Man)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "AG Truth 5: salvation involves repentance toward God and faith toward our Lord Jesus Christ as the necessary response to the gospel; conditioned by godly sorrow that works repentance unto salvation"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on the Sacrament of Penance and metanoia (oca.org)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "OCA: 'the sacrament of penance exists in the Church to allow for the repentance and reconversion of Christians who have fallen away from the life of faith.' Sincere sorrow, confession, behavioral change required"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/mark/1-15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Mark 1:15 metanoeite kai pisteuete en to euangelio. Two present-imperative actives paired by kai. metanoeo G3340 means change of mind; the durative imperative implies ongoing posture"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-38.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 2:38 metanoesate kai baptistheto hekastos hymon epi to onomati Iesou Christou eis aphesin ton hamartion. Aorist imperative of metanoeo heads Peter's response. Lexically programmatic for Acts"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/20-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 20:21 ten eis theon metanoian kai pistin eis ton kyrion hemon Iesoun. Paul's Pauline ordo: repentance toward God and faith toward the Lord Jesus, paired by kai, both directed by eis"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_corinthians/7-10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Cor 7:10 he kata theon lype metanoian eis soterian ametameleton ergazetai. Godly grief works repentance unto irrevocable salvation; worldly grief works death. Distinguishes saving repentance from remorse"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3340.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "metanoeo G3340 occurs 34 times in the NT. Concentrated in the Gospels (Jesus' preaching), Acts (apostolic preaching), and Revelation 2-3 (calls to churches). Pan-canonical lexical pattern"
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3341.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "metanoia G3341 occurs 22 times in the NT. Paired with pistis at Acts 20:21 and Heb 6:1; given by God at Acts 5:31, 11:18, 2 Tim 2:25, Rom 2:4. Lexically the divine-gift change of mind"
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/7725.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "shuv H7725 occurs over 1,000 times in the OT. Core prophetic vocabulary for turning, returning. Ezek 18:30, 33:11; Joel 2:12; Hos 14:1-2 form the OT substratum of NT metanoia"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P4B.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 1431: 'Interior repentance is a radical reorientation of our whole life, a return, a conversion to God with all our heart, an end of sin, a turning away from evil.' Catholic interior metanoia at heart of conversion"
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-repentance/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article XII: 'Repentance consists properly of these two parts. One is contrition, that is, terrors smiting the conscience through the knowledge of sin; the other is faith.'"
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "United Methodist Article XII: 'the grant of repentance is not to be denied to such as fall into sin after justification.' Repentance available throughout the Christian life by grace"
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/penance",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: 'the sacrament of penance exists in the Church to allow for the repentance and reconversion of Christians who have fallen away from the life of faith.' Lifelong metanoia framework"
+      },
+      {
+        "url": "https://courses.washington.edu/hist112/SCHLEITHEIM%20CONFESSION%20OF%20FAITH.htm",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Schleitheim Confession Article I: 'Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ.'"
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-paywalled"
+    ]
+  }
+}

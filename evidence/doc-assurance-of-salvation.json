@@ -1,0 +1,400 @@
+{
+  "id": "doc-assurance-of-salvation",
+  "answer": {
+    "id": "doc-assurance-of-salvation",
+    "affirms": true,
+    "rationale": "1 John 5:13 states an explicit didactic purpose, hina eidete (G1492 perfect subjunctive, settled knowledge), that believers may know they have eternal life; Rom 8:16 says the Spirit symmartureo (G4828) bears joint-witness with our spirit; Heb 10:22 and Heb 6:11 use plerophoria (G4136, full assurance) of faith and of hope; Eph 1:13-14 names the Spirit the arrabon (G728, down-payment guarantee). The lexical pattern is pan-canonical and unambiguous.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "Affirmed as a well-grounded biblical doctrine, but the degree, ground, and mode of assurance is genuine in-house Christian disagreement. Reformed, Baptist, Lutheran (Word and sacrament), Anglican, Methodist (with Wesleyan witness of the Spirit) and Pentecostal traditions affirm conscious present assurance. Catholic teaching (CCC 2005, Trent canon 13-14 anathematized infallible certainty of election) and Eastern Orthodox traditions are more cautious, framing salvation as an ongoing synergistic process and warning against presumption. Denial does not constitute denial of the gospel itself; therefore not a cult-marker. Brethren-formation reading lands within the broad Protestant majority view here."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement is balanced; it conditions assurance on the promises of God in Christ, the inward witness of the Spirit, and the evidence of Spirit-wrought fruit, which tracks the actual canonical pattern (objective ground in Christ, subjective witness of Spirit, fruit-evidence in 1 John). It does not pre-load Reformed-confessional vocabulary like 'infallible assurance' from WCF 18.2."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict is yes: the Bible teaches that a believer can have real, grounded confidence that they are saved, while still living humbly and watchfully. The clearest reason is 1 John 5:13, where John says he wrote his whole letter so that believers may know they have eternal life. That is an explicit statement of purpose: God wants his people to know, not merely hope vaguely. Paul says the same thing differently. In Romans 8 he says the Holy Spirit himself testifies together with our spirit that we are God's children, and in Ephesians 1 he calls the Spirit a down-payment, a deposit guaranteeing the inheritance. Hebrews 10:22 invites believers to draw near with full assurance of faith, and Hebrews 6:11 urges full assurance of hope right up to the end. Paul personally says in 2 Timothy 1:12, I know whom I have believed and I am persuaded. The counterargument inside Scripture is real and must be honored. Hebrews 6:4-6, Hebrews 10:26-31, and 2 Peter 2:20-22 warn severely about falling away. Philippians 2:12 tells believers to work out their salvation with fear and trembling. 1 Corinthians 9:27 has Paul saying he disciplines his body lest he himself be disqualified. These passages mean that assurance is never a license for casualness and is never grounded merely in a past decision or feeling. The way the verdict handles the tension is to ground assurance in three things together: the objective promise of God in Christ, the inward witness of the Holy Spirit, and the visible fruit of a changed life (1 John's repeated test of love for brothers, obedience, and right belief). Assurance grows when those three converge. Where they do not converge, Scripture itself counsels self-examination rather than panic, and certainly not presumption. So the well-grounded Christian can have real confidence today, but it is the kind of confidence that produces holiness, not the kind that excuses sin.",
+      "denominational_landscape": "Most major Christian traditions agree that some form of assurance is legitimate, but they differ on its strength and ground. Reformed and Presbyterian bodies teach a strong, attainable assurance grounded in the promise of God, the inward evidences of grace, and the testimony of the Spirit. Lutheran teaching affirms assurance, but anchors it firmly in the external Word and sacraments (the means of grace) rather than in subjective experience. Anglican Article 17 calls the godly consideration of election sweet, pleasant, and unspeakable comfort to believers feeling the Spirit's work, balanced by warnings against presumption. Methodist and broader Wesleyan tradition has historically had a distinctive emphasis on the conscious experiential witness of the Spirit (John Wesley's doctrine of assurance), while still recognizing the possibility of falling away. Pentecostal and broader evangelical bodies affirm conscious assurance through faith in Christ and the Spirit's inward witness. Anabaptist and free-church traditions generally affirm assurance but tie it to a discipled, obedient life. Catholic teaching (Catechism 2005, Council of Trent canon 13-14) is more cautious: ordinarily no one can know with infallible certainty that they are presently in a state of grace apart from special revelation, and Trent anathematized strong claims of certain election. Eastern Orthodox tradition treats salvation as an ongoing synergistic process (theosis) and treats strong present-tense assurance as spiritually risky presumption, emphasizing humility, repentance, and perseverance. Patristic writers (notably Augustine in his anti-Pelagian writings) affirmed God's keeping of his elect but also taught the gift of perseverance must be sought. Public-record heterodox groups generally do not deny assurance per se in a way that places them outside historic Christianity on this particular point, so cult-carrier examples are not specifically relevant to this doctrine."
+    },
+    "scripture": [
+      {
+        "ref": "1John.5.13",
+        "key_term": "οἶδα (oida) G1492 perfect subjunctive eidete; πιστεύω (pisteuo) G4100",
+        "force": "Explicit didactic purpose clause hina eidete: I wrote so that you may know (settled knowledge) that you have eternal life",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.15-16",
+        "key_term": "συμμαρτυρέω (symmartureo) G4828; υἱοθεσία (huiothesia) G5206; κράζω (krazo) G2896",
+        "force": "Spirit bears joint-witness with our spirit; received Spirit of adoption by whom we cry Abba Father",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.35-39",
+        "key_term": "πέπεισμαι (perfect of peitho G3982); χωρίζω (chorizo) G5563",
+        "force": "Paul's settled persuasion (perfect-tense conviction) that nothing shall separate believers from the love of Christ",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["merism"]
+      },
+      {
+        "ref": "Heb.10.22",
+        "key_term": "πληροφορία (plērophoria) G4136 πίστεως",
+        "force": "Full assurance of faith as the proper posture for drawing near to God after Christ's once-for-all sacrifice",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.6.11",
+        "key_term": "πληροφορία (plērophoria) G4136 ἐλπίδος",
+        "force": "Earnestly pursue full assurance of hope until the end; assurance is sought, grown, and held",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Tim.1.12",
+        "key_term": "οἶδα (oida) G1492; πέπεισμαι (perfect of peitho G3982)",
+        "force": "I know whom I have believed and I have been persuaded (perfect, settled) that he is able to guard my deposit",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.3.14",
+        "key_term": "οἴδαμεν (oidamen G1492); μεταβέβηκαμεν (metabebēkamen G3327 perfect)",
+        "force": "We know (perfect-tense settled knowledge) that we have passed from death to life because we love the brothers; fruit-evidence test",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.13-14",
+        "key_term": "σφραγίζω (sphragizō) G4972; ἀρραβών (arrabōn) G728",
+        "force": "Sealed with the promised Holy Spirit who is the arrabon (down-payment, earnest, guarantee) of our inheritance",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "2Pet.1.10",
+        "key_term": "βεβαίος (bebaios) G949; ἐκλογή (eklogē) G1589",
+        "force": "Make your calling and election sure (bebaian) by diligent practice; assurance grown through obedience",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.1-5",
+        "key_term": "δικαιόω (dikaioō) G1344 aorist passive; εἰρήνη (eirene) G1515",
+        "force": "Having been justified by faith we have peace with God; hope does not put to shame because God's love has been poured into our hearts by the Spirit",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.6.4-6",
+        "key_term": "παραπίπτω (parapipto) G3895; ἀδύνατον (adynaton) G102",
+        "force": "Impossible to restore those who have fallen away after being enlightened; warning against presumption",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.10.26-31",
+        "key_term": "ἑκουσίως (hekousios) G1596 ἁμαρτάνω (hamartano) G264",
+        "force": "If we go on sinning deliberately after receiving the knowledge of the truth, no sacrifice remains; fearful expectation of judgment",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Pet.2.20-22",
+        "key_term": "ἐπίγνωσις (epignosis) G1922; ἐμπλέκω (empleko) G1707",
+        "force": "Those who escaped the world's defilements through knowledge of Christ and are again entangled, last state worse than first",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Phil.2.12",
+        "key_term": "κατεργάζομαι (katergazomai) G2716; σωτηρία (soteria) G4991",
+        "force": "Work out your own salvation with fear and trembling; assurance is not casualness",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.9.27",
+        "key_term": "ἀδόκιμος (adokimos) G96",
+        "force": "Paul disciplines his body lest he himself be disqualified; self-examination is normal Christian posture",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.13.5",
+        "key_term": "πειράζω (peirazo) G3985; δοκιμάζω (dokimazo) G1381",
+        "force": "Examine yourselves to see whether you are in the faith; test yourselves; assurance includes self-examination",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.10.27-29",
+        "key_term": "ἁρπάζω (harpazo) G726",
+        "force": "Jesus' sheep hear his voice and follow him; he gives them eternal life and no one shall snatch them out of his hand",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Col.2.2",
+        "key_term": "πληροφορία (plērophoria) G4136 συνέσεως",
+        "force": "Full assurance of understanding: same plerophoria term applied to confident grasp of Christ as the mystery of God",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Thess.1.5",
+        "key_term": "πληροφορία (plērophoria) G4136 πολλῇ",
+        "force": "The gospel came in much full conviction; same plerophoria term used of the Spirit's effect when the gospel is received",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1492",
+      "G4100",
+      "G4828",
+      "G4136",
+      "G3982",
+      "G5206",
+      "G4972",
+      "G728",
+      "G3327",
+      "G949",
+      "G1589",
+      "G3895",
+      "G102",
+      "G1596",
+      "G1922",
+      "G1707",
+      "G2716",
+      "G4991",
+      "G96",
+      "G3985",
+      "G1381",
+      "G726",
+      "G2896",
+      "G2222",
+      "G166"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "wesleyan_arminianism",
+        "reformed_perseverance",
+        "eastern_orthodox_synergy",
+        "catholic_sacramental"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "reformed_perseverance",
+          "verdict": "affirms strong present assurance grounded in unconditional election and effectual calling; warning passages address professors not possessors"
+        },
+        {
+          "lens": "wesleyan_arminianism",
+          "verdict": "affirms conscious assurance via the Spirit's witness, but allows for genuine apostasy; warning passages addressed to real believers"
+        },
+        {
+          "lens": "lutheran_means_of_grace",
+          "verdict": "affirms assurance grounded objectively in Word and sacrament, not introspective evidence-gathering"
+        },
+        {
+          "lens": "catholic_sacramental",
+          "verdict": "affirms moral but not infallible certainty of present state of grace; strong present-tense certainty of final perseverance treated as presumption"
+        },
+        {
+          "lens": "eastern_orthodox_synergy",
+          "verdict": "salvation is an ongoing process of theosis; strong present assurance considered spiritually risky; emphasis on humility and perseverance"
+        }
+      ],
+      "notes": "All lenses agree some assurance is biblical; they differ on its strength, ground (objective promise vs subjective experience vs sacramental participation), and whether perseverance is guaranteed. The lexical evidence (1 John 5:13 hina eidete, plerophoria texts, arrabon, perfect-tense pepeismai) clearly supports real, well-grounded present assurance. The harmonization of warning passages varies by framework but does not erase the assurance texts."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On Rebuke and Grace; The Spirit and the Letter (NPNF1 Series, Vol. 5)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Augustine affirmed God's keeping of his elect and the gift of perseverance, but taught that one's own perseverance must be sought and is not infallibly known in advance by the believer"
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 2005",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "We cannot therefore rely on our feelings or our works to conclude that we are justified and saved. Grace belongs to the supernatural order and escapes our experience."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Council of Trent, Decree on Justification, Session 6, Canons 13-14, 15-16",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Trent anathematized the claim that one is infallibly certain of being among the predestined or of final perseverance apart from special revelation"
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession IV and XII",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "They are freely justified for Christ's sake, through faith, when they believe that they are received into favor, and that their sins are forgiven for Christ's sake"
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article 17 (Of Predestination and Election)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The godly consideration of Predestination, and our Election in Christ, is full of sweet, pleasant, and unspeakable comfort to godly persons"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith, Chapter 18 (Of the Assurance of Grace and Salvation)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Such as truly believe in the Lord Jesus, and love him in sincerity, endeavoring to walk in all good conscience before him, may, in this life, be certainly assured that they are in the state of grace"
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Heidelberg Catechism, Question 1",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "What is your only comfort in life and in death? That I am not my own, but belong with body and soul, both in life and in death, to my faithful Savior Jesus Christ"
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "John Wesley, Sermon 10: The Witness of the Spirit, Discourse I",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The testimony of the Spirit is an inward impression on the soul, whereby the Spirit of God directly witnesses to my spirit that I am a child of God"
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527 (does not address assurance directly; later Mennonite and Hutterite teaching ties assurance to obedient discipleship)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Free-church and Anabaptist traditions affirm assurance but tie it to ongoing obedient discipleship, not to a forensic decisional moment"
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God, Statement of Fundamental Truths, Article 5 (Salvation of Man)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The inward evidence of salvation is the direct witness of the Spirit; the outward evidence to all men is a life of righteousness and true holiness"
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, teaching on salvation as ongoing process and theosis",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Orthodox tradition treats salvation as ongoing synergistic process and warns against presumption; strong present-tense assurance is considered spiritually risky"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_john/5-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Tauta egrapsa hymin hina eidete hoti zoen echete aionion: the perfect subjunctive eidete denotes complete settled knowledge, not vague hope; assurance is the stated purpose"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8-16.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "auto to Pneuma symmartyrei to pneumati hemon hoti esmen tekna Theou: the Spirit himself bears joint-witness with our spirit that we are children of God"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/10-22.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "proserchometha meta alethines kardias en plerophoria pisteos: draw near with a true heart in full assurance (plerophoria) of faith"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/6-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "pros ten plerophorian tes elpidos achri telous: toward the full assurance of hope until the end; assurance is to be earnestly pursued"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_timothy/1-12.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "oida hoi pepisteuka kai pepeismai: I know whom I have believed and I have been persuaded; perfect-tense settled conviction"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "esphragisthete to Pneumati tes epangelias to Hagio: you were sealed with the promised Holy Spirit; the Spirit is the arrabon of inheritance"
+      },
+      {
+        "url": "https://biblehub.com/greek/strongs_4136.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "plerophoria G4136 appears at Col 2:2, 1 Thess 1:5, Heb 6:11, Heb 10:22; pan-canonical pattern of full conviction tied to gospel reception, faith, and hope"
+      },
+      {
+        "url": "https://biblehub.com/greek/strongs_4828.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "symmartureo G4828 appears at Rom 2:15, Rom 8:16, Rom 9:1; the Spirit bearing joint-witness with our spirit at Rom 8:16 is the assurance text"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P6Z.HTM",
+        "category": "magisterial",
+        "stance": "complicates",
+        "quote": "CCC 2005: We cannot therefore rely on our feelings or our works to conclude that we are justified and saved. Grace escapes our experience."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-justification/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg IV: They are freely justified for Christ's sake, through faith, when they believe that they are received into favor and their sins are forgiven for Christ's sake"
+      },
+      {
+        "url": "https://anglicancompass.com/the-thirty-nine-articles-of-religion/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "39 Articles, Art. 17: The godly consideration of Predestination, and our Election in Christ, is full of sweet, pleasant, and unspeakable comfort to godly persons"
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "apparatus-paywalled",
+      "confession-tradition-divergence"
+    ]
+  }
+}

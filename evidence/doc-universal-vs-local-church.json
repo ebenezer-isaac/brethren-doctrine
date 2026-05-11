@@ -1,0 +1,375 @@
+{
+  "id": "doc-universal-vs-local-church",
+  "answer": {
+    "id": "doc-universal-vs-local-church",
+    "affirms": true,
+    "rationale": "The New Testament uses one Greek word, ekklesia (G1577), in two unambiguous senses across the canon. The universal sense is named directly: Christ says I will build my church in the singular at Matthew 16:18 (mou ten ekklesian), the ascended Christ is given as head over all things to the church which is his body at Ephesians 1:22-23 and Colossians 1:18, Christ loved the church and gave himself up for her at Ephesians 5:25-27, and believers have come to the assembly (ekklesia) of the firstborn enrolled in heaven at Hebrews 12:22-23. The local sense is named with equal directness: the church of God that is in Corinth at 1 Corinthians 1:2 (dative singular ekklesia with a geographical locative), the churches of Galatia in the plural at Galatians 1:2 (dative feminine plural ekklesiais), the seven churches of Asia at Revelation 1:4 with seven named local congregations in chapters 2-3, the church in their house at Romans 16:5 and Philemon 2. Both usages are pan-canonical and lexically uncontested. The doctrine that the church exists in both senses follows from the lexical pattern itself.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "The proposition is universally affirmed across every tracked Christian lineage with rich theological development: patristic (Ignatius of Antioch, Cyprian, Augustine), Roman Catholic (CCC 752-757 treats local churches as the realization of the universal church in particular places), Eastern Orthodox (eucharistic ecclesiology where each local church gathered around its bishop is the full manifestation of the one church), Lutheran (Augsburg VII names the una sancta ecclesia perpetua, manifested where the gospel is rightly preached and sacraments rightly administered), Anglican (Article XIX defines the visible church and the 39 Articles assume both dimensions), Reformed (WCF 25.1 distinguishes the church universal invisible from the visible church catholic which is also local), Methodist (Article XIII), Anabaptist (Schleitheim Article V on local pastors within the universal believing body), Pentecostal (AG affirms both), and continuationist streams. Public-record disagreement is not about whether both exist but about which has primacy in structure. Some hyper-congregationalist Baptist streams emphasize the local church almost exclusively, treating the universal church only as the future eschatological gathering. Some Open and Exclusive Brethren writings have flowed this direction, with J. N. Darby distinguishing the church in mystery (universal) from the church in responsibility (local) but still holding both. The denial of the universal church entirely is rare; it does not constitute a gospel boundary or a Trinitarian or Christological boundary. The cult-marker bar fails on condition 1: denial of the visible-universal church dimension is not a gospel denial. A Christian who emphasizes local-only is in error on church doctrine but is not necessarily outside the gospel. The would_die_for value is true because the universal church is the body of Christ for which Christ died (Eph 5:25) and confessing the one holy catholic apostolic church is part of the historic creedal faith; denying the existence of the universal church across time and space contradicts Christ's own promise to build his church (Matt 16:18) and the Spirit-inspired pan-canonical lexical pattern. The would_serve_if_otherwise, would_be_member_if_otherwise, and would_let_children_be_taught_otherwise are false because a body that denies the universal church (as opposed to merely emphasizing the local) signals sectarian isolation and a likely refusal to recognize fellow believers in other gatherings as one body, which is a serious practical problem even if not gospel-denying. Public-record cult or heterodox carriers of forms of exclusivist denial that flow toward denying any genuine church outside the sect include the Iglesia ni Cristo (Felix Manalo, true church restored 1914), Mormonism (Joseph Smith, all other churches abominations), and Branhamites (William Branham, the bride identified with his message); but these are not denying universal church as such; they are claiming to be the only true church, which is a different (and more cultic) denial pattern."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "The statement names both dimensions evenhandedly without prejudicing toward one polity. The qualifier covenanted fellowship is lightly Reformed-Baptist confessional vocabulary, but it does not pre-load the universal-vs-local verdict; it merely characterizes the local gathering. No flag needed."
+    },
+    "lay_summary": {
+      "reasoning": "The question is whether the Bible uses the word church in two senses: a universal church meaning all believers everywhere across time and space, and a local church meaning a particular gathered congregation in one place. The strongest reason for affirming both is that the same Greek word, ekklesia, is used both ways throughout the New Testament. Jesus says in Matthew 16:18 I will build my church, in the singular, referring to one body that he builds. Paul says in Ephesians 1:22-23 that God gave Christ as head over all things to the church which is his body, and in Colossians 1:18 he is the head of the body the church. Hebrews 12:22-23 says believers have come to the assembly of the firstborn who are enrolled in heaven. These all name the one universal church. At the same time, Paul writes in 1 Corinthians 1:2 to the church of God that is in Corinth, in Galatians 1:2 to the churches of Galatia in the plural, in Romans 16:5 he greets the church in their house, and Revelation chapters 1 to 3 addresses seven named churches of Asia. These all name local gatherings. The Bible plainly uses both senses. The strongest counterargument is that some passages naming the church seem only to point to local gatherings, and the local church is where actual obedience, worship, and discipline happen. Critics of an over-mystical universal church argue that an invisible body of all believers is hard to find, hard to be a member of in practice, and easy to use as a way to ignore the concrete local church. The honest response is that the Bible holds both together. The universal church is real because Christ has one body, not many. The local church is real because believers gather in actual places under actual elders. The two are not in competition; the local is the visible expression of the universal in a particular place at a particular time. Every Christian belongs to both at once. Most Christian traditions agree on this. The disagreement is about which dimension has primacy in church structure, not about whether both exist.",
+      "denominational_landscape": "Every major Christian lineage tracked in this project affirms both the universal and the local church. The patristic record from Ignatius of Antioch around the year 110 names the local church gathered around its bishop and also names the catholic church as the whole body wherever Jesus Christ is. Cyprian of Carthage names one universal episcopate held in solidarity. The Roman Catholic Catechism in paragraphs 751 to 757 holds that the local or particular church is the realization of the universal church in a particular place, with both dimensions equally real. The Eastern Orthodox tradition, expressed in the Orthodox Church in America teaching and the broader patristic and conciliar consensus, holds eucharistic ecclesiology in which each local church gathered around its bishop in eucharistic communion with all other Orthodox bishops is the full manifestation of the one holy catholic apostolic church. The Lutheran Augsburg Confession Article VII names the one holy church to continue forever and locates it where the gospel is rightly preached and the sacraments rightly administered. The Anglican Thirty-Nine Articles Article XIX gives the same kind of definition. The Reformed tradition in the Westminster Confession of Faith chapter 25 distinguishes the church catholic and universal (which is invisible and consists of the whole number of the elect) from the visible church (also called catholic, consisting of all those throughout the world that profess the true religion, with their children) and from particular churches under the visible catholic church. The Methodist Articles of Religion Article XIII gives the visible church language. The Anabaptist Schleitheim Confession assumes both. The Pentecostal Assemblies of God Statement of Fundamental Truths affirms the church as the body of Christ universally and as local congregations. There is no major lineage that denies the existence of either dimension. The internal disagreement is over structure and primacy. Hyper-congregationalist Baptist streams and some Brethren writings emphasize the local church almost exclusively and treat the universal church as future or invisible only. Roman Catholic and Eastern Orthodox traditions emphasize the universal church and treat the local church as its realization. None of these denies the existence of the other dimension. Public-record cult or heterodox movements that claim to be the only true church (Iglesia ni Cristo around Felix Manalo, Mormonism around Joseph Smith, Branhamites around William Branham) do not deny the universal church in principle but redefine it as their own movement to the exclusion of all others, which is a different and more serious problem than the in-house Christian debate over primacy."
+    },
+    "scripture": [
+      {
+        "ref": "Matt.16.18",
+        "key_term": "ἐκκλησίαν ekklesian G1577 (church, accusative feminine singular); μου mou (my, possessive genitive); οἰκοδομήσω oikodomeso G3618 (I will build, future indicative active 1st singular)",
+        "force": "Christ uses ekklesia in the singular, with the possessive my church, naming one body he will build. The singular accusative feminine with mou treats the church as a single object of Christ's building action across time. This is the foundational universal-church text. The singular cannot be reduced to a single local gathering at Caesarea Philippi; the building is future and ongoing.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.22-23",
+        "key_term": "κεφαλὴν ὑπὲρ πάντα τῇ ἐκκλησίᾳ kephalen hyper panta te ekklesia G2776 G5228 G3956 G1577 (head over all things to the church); τὸ σῶμα αὐτοῦ to soma autou G4983 (his body); τὸ πλήρωμα to pleroma G4138 (the fullness)",
+        "force": "Christ is given as head over all things to the ekklesia, which is named as his body and the fullness of him who fills all in all. The scope (hyper panta, over all things) is cosmic and universal. The ekklesia here cannot be reduced to one local congregation; it is the one body of which the ascended cosmic Christ is head. Strong universal-church text.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Col.1.18",
+        "key_term": "ἡ κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας he kephale tou somatos tes ekklesias G2776 G4983 G1577 (the head of the body, the church)",
+        "force": "Christ is named as head of the body, the church, in genitive apposition (the body, which is the church). Parallel to Eph 1:22-23 and to Eph 5:23. The body-church is named in the universal cosmic-Christ context (Col 1:15-20 hymn). Universal-church text.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Eph.5.25-27",
+        "key_term": "ὁ Χριστὸς ἠγάπησεν τὴν ἐκκλησίαν ho Christos egapesen ten ekklesian G25 G1577 (Christ loved the church); ἑαυτὸν παρέδωκεν ὑπὲρ αὐτῆς heauton paredoken hyper autes G3860 (gave himself up for her); ἁγιάσῃ hagiase G37 (sanctify); ἔνδοξον endoxon G1741 (glorious)",
+        "force": "Christ loved the ekklesia and gave himself up for her, to present her to himself as a glorious church without spot. The object of Christ's atoning love is the one universal church, presented eschatologically as a single bride. The singular ekklesia with the bridal metaphor cannot be reduced to local congregations only; it is the one bride of Christ. Universal-church text with bridal-metaphor figure.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor", "typology"]
+      },
+      {
+        "ref": "Heb.12.22-23",
+        "key_term": "ἐκκλησίᾳ πρωτοτόκων ἀπογεγραμμένων ἐν οὐρανοῖς ekklesia prototokon apogegrammenon en ouranois G1577 G4416 G583 G3772 (assembly of the firstborn enrolled in heaven); Σιὼν Sion G4622 (Zion); Ἰερουσαλὴμ ἐπουρανίῳ Ierousalem epouranio G2419 G2032 (heavenly Jerusalem)",
+        "force": "Believers have come (perfect tense) to the ekklesia of the firstborn whose names are enrolled in heaven, joined with the heavenly Jerusalem and the spirits of the righteous made perfect. The ekklesia here is the eschatological-universal assembly across all time and space. This is the universal-church text in its most cosmic-eschatological form. Genre includes apocalyptic-symbolic elements in the heavenly-Jerusalem imagery.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["apocalyptic-symbolism", "metonymy"]
+      },
+      {
+        "ref": "1Cor.1.2",
+        "key_term": "τῇ ἐκκλησίᾳ τοῦ θεοῦ τῇ οὔσῃ ἐν Κορίνθῳ te ekklesia tou theou te ouse en Korintho G1577 G2316 G2882 (the church of God that is in Corinth, dative feminine singular)",
+        "force": "Paul addresses one local body in one named city, the church of God being (te ouse, present participle locative) in Corinth. Dative singular ekklesia with the geographical locative en Korintho fixes the local-congregational sense. This is the foundational local-church text. Paul writes to one church in one named city.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.1.2",
+        "key_term": "ταῖς ἐκκλησίαις τῆς Γαλατίας tais ekklesiais tes Galatias G1577 G1053 (to the churches of Galatia, dative feminine plural)",
+        "force": "Paul addresses ekklesiais in the plural, the churches (plural) of Galatia (one region). One region, multiple distinct local congregations. The dative plural settles that ekklesia in this sense is countable and local, distributed across cities and towns. Strong local-church text against any reading that collapses ekklesia into one universal-only sense.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.1.4",
+        "key_term": "ταῖς ἑπτὰ ἐκκλησίαις ταῖς ἐν τῇ Ἀσίᾳ tais hepta ekklesiais tais en te Asia G1577 G2033 G773 (to the seven churches in Asia)",
+        "force": "John addresses ekklesiais in the dative plural, seven churches named in chapters 2-3 (Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, Laodicea). Seven named local congregations in one region. Each receives its own letter with its own commendations and rebukes. This is the densest local-church text in the canon and decisively settles the countable-plural local sense.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["apocalyptic-symbolism"]
+      },
+      {
+        "ref": "Rom.16.5",
+        "key_term": "τὴν κατ οἶκον αὐτῶν ἐκκλησίαν ten kat oikon auton ekklesian G2596 G3624 G1577 (the church in their house)",
+        "force": "Paul greets the ekklesia in the house of Prisca and Aquila. The local sense reaches down to a single household gathering. Together with Phlm 2 (the church in your house) and Col 4:15 (Nympha and the church in her house), this shows ekklesia naming small house-based local assemblies. Local-church text.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Phlm.1.2",
+        "key_term": "τῇ κατ οἶκόν σου ἐκκλησίᾳ te kat oikon sou ekklesia G1577 (the church in your house)",
+        "force": "Paul greets the church (singular dative) that meets in Philemon's house. Parallel to Rom 16:5. The local-house-church sense is canonical. Local-church text.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.9.31",
+        "key_term": "ἡ μὲν οὖν ἐκκλησία καθ ὅλης τῆς Ἰουδαίας καὶ Γαλιλαίας καὶ Σαμαρείας he men oun ekklesia kath holes tes Ioudaias kai Galilaias kai Samareias G1577 G2596 G3650 G2449 G1056 G4540 (the church throughout all Judea and Galilee and Samaria)",
+        "force": "Luke names the ekklesia in the singular spanning three regions. The textual tradition supports the singular reading (NA28). This is a regional-or-corporate use of ekklesia that bridges the local and universal senses. The church in Judea, Galilee, and Samaria is named as one ekklesia, not as plural ekklesiai. This complicates the pure local-only reading and supports the universal dimension within the visible church on earth.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.20.28",
+        "key_term": "τὴν ἐκκλησίαν τοῦ θεοῦ ἣν περιεποιήσατο διὰ τοῦ αἵματος τοῦ ἰδίου ten ekklesian tou theou hen periepoiesato dia tou haimatos tou idiou G1577 G2316 G4046 G129 (the church of God which he obtained with his own blood)",
+        "force": "Paul tells the Ephesian elders to shepherd the ekklesia of God which God obtained through the blood of his own (Son). The object of the atoning blood is the church of God, named in the singular with no geographical restriction. Same object as Eph 5:25-27. This bridges local-shepherding application with universal-atonement scope; the elders shepherd the local manifestation of the one blood-bought church.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "1Cor.12.28",
+        "key_term": "οὓς μὲν ἔθετο ὁ θεὸς ἐν τῇ ἐκκλησίᾳ hous men etheto ho theos en te ekklesia G1577 (whom God appointed in the church)",
+        "force": "God appointed in the ekklesia first apostles, second prophets, third teachers, then various gifts. The dative singular ekklesia here is corporate-universal: apostles are not local-only, and the listing of universally-distributed gifts requires a universal scope. The local and universal senses coexist in the same Corinthian letter (cf. 1 Cor 1:2 local).",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.18.17",
+        "key_term": "εἰπὲ τῇ ἐκκλησίᾳ eipe te ekklesia G2036 G1577 (tell it to the church, dative singular)",
+        "force": "Jesus places the discipline of an unrepentant brother at the level of te ekklesia, the gathered local assembly. The dative singular here cannot mean the universal church across time; you cannot tell something to the invisible body of all believers in all places. This text is decisively local-sense ekklesia in the teaching of Jesus, alongside his universal-sense use in Matt 16:18. Both senses are on the lips of Jesus.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Eph.3.10",
+        "key_term": "διὰ τῆς ἐκκλησίας dia tes ekklesias G1577 (through the church); τοῖς ἀρχαῖς καὶ ταῖς ἐξουσίαις ἐν τοῖς ἐπουρανίοις tois archais kai tais exousiais en tois epouraniois G746 G1849 G2032 (to the rulers and authorities in the heavenly places)",
+        "force": "The manifold wisdom of God is now made known through the ekklesia to the rulers and authorities in the heavenly places. The cosmic-display scope of the church requires the universal sense. One local congregation does not display the manifold wisdom of God to heavenly powers; the one universal church does. Strong universal-church text in the same Ephesians letter that uses ekklesia in the universal sense throughout chapters 1-5.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.7.38",
+        "key_term": "ὁ γενόμενος ἐν τῇ ἐκκλησίᾳ ἐν τῇ ἐρήμῳ ho genomenos en te ekklesia en te eremo G1577 G2048 (who was in the assembly in the wilderness)",
+        "force": "Stephen calls the gathered congregation of Israel in the wilderness ekklesia. The Septuagint regularly renders Hebrew qahal as ekklesia. The covenant-assembly background underwrites both the universal and the local senses in NT usage. The same lemma covers Israel at Sinai and the church of God in Corinth, which means ekklesia is intrinsically suited to a corporate-covenantal body that has both a universal (all the people of God) and local (gathered today in this place) expression.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1577",
+      "G3618",
+      "G2776",
+      "G5228",
+      "G3956",
+      "G4983",
+      "G4138",
+      "G25",
+      "G3860",
+      "G37",
+      "G1741",
+      "G4416",
+      "G583",
+      "G3772",
+      "G4622",
+      "G2419",
+      "G2032",
+      "G2316",
+      "G2882",
+      "G1053",
+      "G2033",
+      "G773",
+      "G2596",
+      "G3624",
+      "G3650",
+      "G2449",
+      "G1056",
+      "G4540",
+      "G4046",
+      "G129",
+      "G2036",
+      "G746",
+      "G1849",
+      "G2048",
+      "G3831",
+      "G5048",
+      "G3831"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "progressive_covenantalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "affirms",
+          "reasoning": "The one people of God across both testaments is the church universal, with Israel and the NT church as two administrations of one covenant of grace. Local churches are visible expressions of the one covenant community."
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "affirms",
+          "reasoning": "The church (universal) is a distinct dispensational entity beginning at Pentecost, the body of Christ comprising all believers from Pentecost to the rapture, with local churches as its visible expressions during the present age. Both dimensions are clearly affirmed; the dispensational distinctive concerns the church's distinction from Israel, not the universal-vs-local question."
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "reasoning": "The church is the new-covenant community of all those united to Christ by faith and Spirit, expressed in local gatherings. Both dimensions are uncontested."
+        },
+        {
+          "lens": "progressive_covenantalism",
+          "verdict": "affirms",
+          "reasoning": "The church is the eschatological people of God across all nations under the new covenant, manifested locally. Both dimensions are uncontested."
+        }
+      ],
+      "notes": "All major Christian hermeneutical frameworks affirm both dimensions. The universal-local distinction in ekklesia usage is lexically uncontested across the canon. The frameworks differ on the church's relationship to Israel and on polity, not on whether the church exists in both senses. No framework produces a different verdict on the question as stated."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Ignatius of Antioch, Epistle to the Smyrnaeans, chapter 8 (c. 110), ccel.org Schaff ANF Vol 1",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Wherever the bishop appears, there let the multitude be; even as wherever Jesus Christ is, there is the catholic Church. Local and universal named together."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Cyprian of Carthage, On the Unity of the Church (c. 251), ccel.org Schaff ANF Vol 5",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The episcopate is one, of which a part is held by each in its entirety. He can no longer have God for his Father who has not the Church for his mother."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraphs 751-757 and 832-835 on the Church and the particular churches, vatican.va",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Church of Christ is really present in all legitimately organized local groups of the faithful. The particular Church is in and formed out of the universal Church, and the universal Church exists in and from the particular Churches."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article VII Of the Church (1530), bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "One holy Church is to continue forever. The Church is the congregation of saints, in which the Gospel is rightly taught and the Sacraments are rightly administered."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles of Religion (1571), Article XIX Of the Church, churchofengland.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The visible Church of Christ is a congregation of faithful men, in the which the pure Word of God is preached, and the Sacraments be duly ministered."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith chapter 25 Of the Church (1647)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The catholic or universal Church which is invisible consists of the whole number of the elect. The visible Church, which is also catholic or universal under the gospel, consists of all those throughout the world that profess the true religion, together with their children."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion Article XIII Of the Church, umc.org/en/content/articles-of-religion",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The visible church of Christ is a congregation of faithful men in which the pure Word of God is preached, and the Sacraments duly administered according to Christ's ordinance."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527), Article V Of Pastors in the Church of God, courses.washington.edu",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The pastor in the Church of God shall be one wholly according to the rule of Paul. The Church is the company of believers gathered locally within the universal body."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The Church and Its Mission, ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Church is the Body of Christ, the habitation of God through the Spirit, with divine appointments for the fulfillment of her great commission, expressed in local assemblies."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith: Doctrine and Scripture on the Church, oca.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The Orthodox Church is one holy catholic apostolic Church, present in fullness in each local eucharistic gathering around its bishop, in communion with all other Orthodox bishops."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/strongs/greek/1577.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ekklesia G1577, 114 NT occurrences. Senses: classical assembly, Israel in wilderness, local Christian congregation (Acts 5:11, 1 Cor 1:2), universal body (Matt 16:18, Eph 1:22, 3:10, 5:23)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/matthew/16-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "mou ten ekklesian G1577 accusative feminine singular; oikodomeso G3618 future indicative 1sg. My church, one body Christ builds. Universal sense."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/1-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "te ekklesia tou theou G1577 dative feminine singular, en Korintho G1722 G2882. One local church of God in one named city. Local sense fixed by geographical locative."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-22.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "kephalen hyper panta te ekklesia G1577 dative feminine singular. Christ as cosmic head over all things given to the church which is his body. Universal sense."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/colossians/1-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "he kephale tou somatos tes ekklesias G1577 genitive feminine singular. Christ as head of the body the church. Parallel to Eph 1:22. Universal-cosmic sense."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/hebrews/12-23.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ekklesia prototokon G1577 G4416 apogegrammenon en ouranois G583 G3772. Assembly of the firstborn enrolled in heaven. Universal-eschatological sense."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/revelation/1-4.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "tais hepta ekklesiais G1577 dative feminine plural. Seven named local congregations of Asia (Rev 2-3). Countable-plural local sense decisively fixed."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/galatians/1-2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "tais ekklesiais tes Galatias G1577 dative feminine plural. Churches plural of one region. Local-countable sense."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/16-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ten kat oikon auton ekklesian G1577 G2596 G3624. The church in their house. Local sense reaches house-gathering scale."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-the-church/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg VII: one holy Church is to continue forever; defined as the congregation of saints where the Gospel is rightly taught and Sacraments rightly administered. Both dimensions affirmed."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article XIII: the visible church of Christ is a congregation of faithful men in which the pure Word of God is preached and the Sacraments duly administered."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

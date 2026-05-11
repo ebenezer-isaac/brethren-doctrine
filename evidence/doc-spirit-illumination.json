@@ -1,0 +1,365 @@
+{
+  "id": "doc-spirit-illumination",
+  "answer": {
+    "id": "doc-spirit-illumination",
+    "affirms": true,
+    "rationale": "Apparatus + interlinear show a pan-canonical lexical pattern: ἀποκαλύπτω (G601) and ἐραυνάω (G2045) at 1 Cor 2:10, ψυχικός (G5591) vs spiritual discernment ἀνακρίνω (G350) at 1 Cor 2:14, διδάσκω (G1321) and ὑπομιμνῄσκω (G5279) at John 14:26, ὁδηγέω (G3594) at John 16:13, χρῖσμα (G5545) and διδάσκω (G1321) at 1 John 2:20, 27, φωτίζω (G5461) of the heart's eyes at Eph 1:18, διανοίγω (G1272) the νοῦς (G3563) at Luke 24:45, and Heb גלה (H1540) + נבט (H5027) at Ps 119:18. Scripture itself teaches that the Spirit opens minds and hearts to receive God's word.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Affirmed convictionally rather than at gospel-stake. Denial of any role for the Spirit in understanding Scripture would amount to a rationalist or sola-ratio reading that flattens 1 Cor 2:14 and 1 John 2:27, but the doctrine is not Trinitarian or Christological boundary. Catholic and Eastern Orthodox tie illumination to the Magisterium and Tradition; Reformed (Calvin's testimonium internum) and Lutheran (Word + sacrament) tie illumination to the external Word; Pentecostal and continuationist streams emphasize ongoing personal illumination. None of these denies the Spirit's role; they disagree on the mediating channel. A church that taught the Spirit plays no role in believers' understanding of Scripture would be a serious doctrinal red flag, falling outside historic Christian consensus, but the question is convictional, not cult-classifying."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Stem uses the term 'illumines' which is technical-theological vocabulary, but it does not assert the verdict or name heretics. The proposition is testable from apparatus + interlinear without confessional preloading."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict: yes, the Bible teaches that the Holy Spirit helps believers understand Scripture. The strongest reason is 1 Corinthians 2:10-14, where Paul says the Spirit searches the deep things of God and reveals them, while the person without the Spirit cannot accept spiritual realities because they have to be spiritually discerned. John 14:26 says the Holy Spirit will teach the disciples all things and remind them of what Jesus said. John 16:13 says the Spirit of truth will guide them into all the truth. 1 John 2:20 and 27 say the anointing believers have received teaches them. Ephesians 1:17-18 prays that God will give a spirit of wisdom and revelation so the eyes of believers' hearts will be enlightened. Luke 24:45 records that Jesus opened the disciples' minds to understand the Scriptures. Even in the Old Testament, Psalm 119:18 prays, 'Open my eyes, that I may behold wondrous things out of your law.' A possible complicating text is 1 John 2:27 itself, which says believers have no need that anyone should teach them. Taken in isolation this could rule out teachers, but Paul, John, and Jesus all assigned teaching gifts to the church (Ephesians 4:11, James 3:1, Matthew 28:20), so the verse is best read as saying the Spirit secures the believer against being led away by counterfeit teachers, not that human teaching is forbidden. The doctrine stands clearly across the whole Bible, not from one passage.",
+      "denominational_landscape": "Every major Christian tradition affirms that the Holy Spirit illumines Scripture for believers. The disagreement is about HOW. Catholic teaching (Dei Verbum 5, 8) and Eastern Orthodox teaching hold that the Spirit illumines Scripture through Sacred Tradition and the Church's teaching office, so the individual reader is never reading alone. Lutheran teaching (Augsburg Confession Article V) emphasizes that the Spirit works through Word and sacrament as instruments, not apart from them. Reformed teaching follows Calvin's testimonium Spiritus Sancti internum, the inward testimony of the Spirit who seals Scripture's authority directly in the believer's heart. Anglican and Methodist articles affirm both the sufficiency of Scripture and the necessity of grace for understanding. Pentecostal and continuationist streams emphasize an ongoing personal illumination tied to the Spirit's presence. Patristic voices like Augustine spoke of the inward teacher who alone can make the words on the page bear fruit. No mainstream lineage denies the doctrine. Outright rejection appears mainly in rationalist or hyper-cessationist readings that treat Scripture as a self-contained text requiring only grammar and history, with no spiritual operation on the reader. Some cult movements claim a private illumination that overrides Scripture's plain sense (William Branham, Joseph Smith, Sun Myung Moon), which is the opposite error: not denying illumination but counterfeiting it by placing private revelation above the canon."
+    },
+    "scripture": [
+      {
+        "ref": "1Cor.2.10",
+        "key_term": "ἀποκαλύπτω (apokalyptō) G601; ἐραυνάω (eraunaō) G2045; βάθος (bathos) G899",
+        "force": "The Spirit reveals (apokalyptō) the deep things (bathos) of God because the Spirit searches (eraunaō) all things, even the depths of God",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.2.14",
+        "key_term": "ψυχικός (psychikos) G5591; ἀνακρίνω (anakrino) G350; μωρία (mōria) G3472",
+        "force": "The natural (psychikos) person does not accept Spirit-things and cannot know them because they are spiritually discerned (anakrino)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.14.26",
+        "key_term": "διδάσκω (didaskō) G1321; ὑπομιμνῄσκω (hypomimnēskō) G5279",
+        "force": "The Holy Spirit will teach (didaskō) all things and bring to remembrance (hypomimnēskō) Jesus' words",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.16.13",
+        "key_term": "ὁδηγέω (hodēgeō) G3594; ἀλήθεια (alētheia) G225",
+        "force": "The Spirit of truth will guide (hodēgeō) believers into all the truth (alētheia)",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1John.2.20",
+        "key_term": "χρῖσμα (chrisma) G5545; οἶδα (oida) G1492",
+        "force": "Believers have an anointing (chrisma) from the Holy One and all of them know (oida)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1John.2.27",
+        "key_term": "χρῖσμα (chrisma) G5545; διδάσκω (didaskō) G1321",
+        "force": "The anointing (chrisma) abides in believers and teaches (didaskō) them about all things; safeguard against deceivers, not negation of all human teaching",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.1.17",
+        "key_term": "σοφία (sophia) G4678; ἀποκάλυψις (apokalypsis) G602; ἐπίγνωσις (epignōsis) G1922",
+        "force": "Paul prays that the Father give a spirit of wisdom (sophia) and revelation (apokalypsis) in the knowledge (epignōsis) of him",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Eph.1.18",
+        "key_term": "φωτίζω (phōtizō) G5461; ὀφθαλμός (ophthalmos) G3788; καρδία (kardia) G2588",
+        "force": "Enlightened (phōtizō, perfect passive) eyes of the heart so believers may know the hope of God's calling",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Luke.24.45",
+        "key_term": "διανοίγω (dianoigō) G1272; νοῦς (nous) G3563; συνίημι (syniēmi) G4920",
+        "force": "Jesus thoroughly opened (dianoigō) their mind (nous) to understand (syniēmi) the Scriptures",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Ps.119.18",
+        "key_term": "גלה (galah) H1540; עין (ayin) H5869; נבט (nabat) H5027; פלא (pala) H6381; תורה (torah) H8451",
+        "force": "Imperative prayer: Uncover (galah) my eyes so I may regard (nabat) wonders (pala) from your instruction (torah); OT prefigures the believer's need for divine illumination",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "1Cor.2.12",
+        "key_term": "λαμβάνω (lambanō) G2983; πνεῦμα (pneuma) G4151",
+        "force": "Believers received not the spirit of the world but the Spirit from God, that they might know the things freely given by God",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jas.3.15",
+        "key_term": "ψυχικός (psychikos) G5591",
+        "force": "Wisdom that is earthly, natural (psychikos), demonic; concordance traversal confirms psychikos consistently names the unregenerate cognitive register",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Jude.1.19",
+        "key_term": "ψυχικός (psychikos) G5591",
+        "force": "Those causing divisions are natural (psychikos), not having the Spirit; further confirms the psychikos vs pneumatikos canon-wide pattern",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.4.4",
+        "key_term": "τυφλόω (typhloō) G5186; νόημα (noēma) G3540",
+        "force": "The god of this age has blinded the minds of unbelievers; complicating-text class showing the negative pole of illumination is real spiritual blindness, not mere ignorance",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "διανοίγω (dianoigō) G1272; καρδία (kardia) G2588",
+        "force": "The Lord opened (dianoigō) Lydia's heart to pay attention to what Paul said; canonical instance of illumination at conversion-hearing",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G601",
+      "G602",
+      "G2045",
+      "G899",
+      "G5591",
+      "G350",
+      "G3472",
+      "G1321",
+      "G5279",
+      "G3594",
+      "G225",
+      "G5545",
+      "G1492",
+      "G4678",
+      "G1922",
+      "G5461",
+      "G3788",
+      "G2588",
+      "G1272",
+      "G3563",
+      "G4920",
+      "G2983",
+      "G4151",
+      "G3540",
+      "G5186",
+      "H1540",
+      "H5027",
+      "H5869",
+      "H6381",
+      "H8451"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "affirms",
+          "note": "Spirit illumines all believers across redemptive history, with continuity from Ps 119:18 to NT realization"
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "affirms",
+          "note": "Spirit's indwelling and illuminating ministry as a Church-age provision; OT illumination acknowledged but not parallel"
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Jer 31:33-34 internalization fulfilled in Spirit's teaching at 1 John 2:27 and Heb 8:10-11"
+        }
+      ],
+      "notes": "All major Protestant hermeneutical frameworks land on affirms. The doctrine survives lens variation, which is one mark of canonical demonstration. Catholic/Orthodox readings affirm illumination but bind it to Tradition; this is a different mediation theory, not a different verdict on illumination per se."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, De Magistro (The Teacher); also Tractates on the Gospel of John on the inner teacher",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Augustine: the inner teacher (Christ by the Spirit) alone makes written and spoken words yield understanding; the outer word reaches the ear, but illumination comes from within."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Dei Verbum 5, Vatican II",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The grace of God and the interior help of the Holy Spirit must precede and assist, moving the heart and turning it to God, opening the eyes of the mind."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article V, Of the Ministry",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Through the Word and Sacraments, as through instruments, the Holy Ghost is given, who works faith where and when it pleases God in them that hear the Gospel."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Calvin, Institutes 1.7.4-5 on testimonium Spiritus Sancti internum",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Scripture, carrying its own evidence along with it, owes the full conviction with which we ought to receive it to the testimony of the Spirit."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article XVII on grace; Article VI on sufficiency of Scripture",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Anglican formularies affirm Scripture's sufficiency for salvation and the necessity of preventing grace for any movement of the will toward God, presupposing the Spirit's enabling work."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion VIII, on Free Will and prevenient grace",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Man cannot turn and prepare himself by his own natural strength to faith without the grace of God by Christ preventing us, that we may have a good will."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite/Anabaptist hermeneutics emphasize Spirit-led community reading; Schleitheim Confession assumes Spirit's guidance",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Anabaptist tradition holds that Scripture is rightly understood only by those walking in the Spirit, in the community of disciples, with obedience as the seal of understanding."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths on Scripture and Holy Spirit",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Pentecostal tradition emphasizes the Holy Spirit as the inspirer of Scripture and the present illuminator who applies the Word to believers' hearts and minds."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, doctrine of Scripture; reading Scripture within Holy Tradition",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Orthodox teaching holds that Scripture is rightly read only within the living Tradition of the Church, guided by the same Holy Spirit who inspired the prophets and apostles."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 2:10-14 interlinear: apokalyptō (G601), eraunaō (G2045), psychikos (G5591), anakrino (G350), mōria (G3472); natural person cannot know spiritually discerned things."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/14-26.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 14:26 interlinear: didaskō (G1321) and hypomimnēskō (G5279); Spirit teaches and brings to remembrance Jesus' words."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/16-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "John 16:13 interlinear: hodēgeō (G3594) and alētheia (G225); Spirit of truth will guide believers into all truth."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 1:17-18 interlinear: sophia (G4678), apokalypsis (G602), epignōsis (G1922), phōtizō (G5461) of the heart's eyes."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 John 2:20, 27 interlinear: chrisma (G5545), oida (G1492), didaskō (G1321); the anointing teaches believers."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/luke/24-45.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Luke 24:45 interlinear: dianoigō (G1272) the nous (G3563) to syniēmi (G4920) the Scriptures; Jesus opens minds."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/119-18.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ps 119:18 interlinear: galah (H1540) the ayin (H5869) to nabat (H5027) pala (H6381) from torah (H8451); OT prayer for illumination."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/5591.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Strong's G5591 psychikos occurs in 1 Cor 2:14, 15:44 (twice), 15:46, James 3:15, Jude 1:19; canon-wide pattern of natural vs spiritual register."
+      },
+      {
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "Dei Verbum 5: the grace of God and the interior help of the Holy Spirit must precede and assist, moving the heart and opening the eyes of the mind."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg V: through Word and Sacraments as instruments the Holy Ghost is given, who works faith in them that hear the Gospel."
+      },
+      {
+        "url": "https://ccel.org/ccel/calvin/institutes.iii.viii.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Calvin Institutes 1.7.5: Scripture owes the full conviction with which we ought to receive it to the testimony of the Spirit."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VIII: man cannot turn to faith without the grace of God by Christ preventing us, that we may have a good will."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "id": "doc-conversion",
+  "answer": {
+    "id": "doc-conversion",
+    "affirms": true,
+    "rationale": "Conversion as the human turning to God in repentance and faith is canonically attested by epistrephō G1994 (Acts 3:19; 11:21; 26:18; 1 Thess 1:9), metanoeō G3340 (Mark 1:15; Acts 2:38), and pisteuō G4100 (Acts 16:31), forming a unified pan-canonical lexical pattern. Apparatus and interlinear are unambiguous; concordance shows the turning verb is the technical idiom for conversion across Luke-Acts and Pauline literature.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": false,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Denial of conversion as response to the gospel call collapses into either fatalistic determinism (no human response needed) or pure works-religion (no turning of heart, only ritual). Both contradict the apostolic preaching pattern. In-house disagreements remain over timing and form: paedobaptist traditions (Lutheran, Reformed, Anglican, Catholic) read conversion as initiated in infant baptism and ratified later; credobaptist and revivalist traditions read it as a definite conscious-moment turning; Eastern Orthodox emphasizes metanoia as lifelong process. These are not cult-grade disagreements because all affirm conversion itself; they differ on its phenomenology and chronology. Cult-grade denial (e.g., universalism that denies the necessity of turning, or sacramentalism that severs ritual from conscious faith entirely) does fail the canonical pattern."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement frames conversion as conscious response combining repentance and faith, naming it both gift and act. The 'regenerated sinner turns' phrasing reflects Reformed ordo salutis (regeneration precedes conversion logically) but the substantive claim, that conversion is the believer's responsive turning, is lexically transparent in epistrephō and metanoeō. Statement is broadly accurate, not pre-loaded with denominational verdict."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: Yes, conversion is the human response to the gospel call, the turning from sin to God in repentance and faith. Scripture uses one main word for this turning, found in passages like Acts 3:19 ('repent and turn back'), Acts 11:21 ('a great number who believed turned to the Lord'), Acts 26:18 (Paul sent 'to open their eyes that they may turn from darkness to light'), and 1 Thessalonians 1:9 ('you turned to God from idols'). The pattern is consistent across Luke's history of the early church and Paul's letters: hearing the gospel calls for a definite turn of the whole person away from sin and false gods and toward the living God. Mark 1:15 binds two responses together: 'repent and believe in the gospel.' Acts 16:31 condenses it: 'Believe in the Lord Jesus and you will be saved.' Strongest complicating texts: Some passages stress God's prior initiative so heavily that human response can seem secondary. John 6:44 says no one can come to Jesus unless the Father draws him. Acts 16:14 says the Lord opened Lydia's heart to respond. Ephesians 2:8 says faith itself is God's gift. These do not erase the human response; they ground it in God's enabling work, which is why the historic phrase 'both gift of God and act of the believer' holds together. How the verdict handles the tension: Scripture itself holds both sides without resolving the philosophical puzzle. The same Luke who reports the Lord opened Lydia's heart also records Paul commanding 'repent therefore and turn back.' The turning is genuinely the person's act, but the capacity for it is genuinely God's work. Honest acknowledgment: the philosophical relationship between divine enabling and human response remains contested across Christian history.",
+      "denominational_landscape": "Conversion as response to the gospel is universally affirmed across historic Christianity. Disagreement runs along timing and form, not on whether conversion is real. Patristic writers like Justin Martyr describe converts as those 'persuaded and believe' who then pray and fast for forgiveness before baptism. The Roman Catholic Catechism (paragraphs 1427-1429) treats conversion as both a one-time entry through baptism and an ongoing daily turning of the baptized back toward Christ. Lutheran teaching in the Augsburg Confession article XII defines repentance as 'contrition' and 'faith,' two parts of the converting response. Anglican 39 Articles affirm justification by faith as the means by which conversion is received. Reformed tradition (Westminster Confession chapters 10 and 11) places conversion under effectual calling and union with Christ, with faith and repentance as the believer's response. Methodist Articles of Religion follow Anglican language: justified by faith, with sanctification as ongoing renewal. Pentecostal traditions (Assemblies of God) emphasize definite conversion as a conscious experience, often paired with a moment of decision. Anabaptist traditions tie conversion tightly to believer's baptism following conscious repentance. Eastern Orthodox teaching emphasizes metanoia as a lifelong transformation rather than a single dated moment. The major fault line is paedobaptist versus credobaptist: paedobaptists locate the start of conversion in infant baptism with later personal ratification; credobaptists require conscious adult or older-child repentance and faith before baptism. Public-record groups that deny gospel-response conversion in favor of pure sacramental automaticity or fatalistic determinism (some hyper-Calvinist fringes, some sacramentalist extremes) place themselves outside the canonical pattern, but no major historic communion denies conversion as such."
+    },
+    "scripture": [
+      {
+        "ref": "Acts.3.19",
+        "key_term": "ἐπιστρέφω (epistrephō) G1994; μετανοέω (metanoeō) G3340",
+        "force": "Peter commands 'repent therefore and turn back, that your sins may be blotted out.' Both verbs are aorist imperatives, paired as the standard apostolic call to conversion.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.11.21",
+        "key_term": "ἐπιστρέφω (epistrephō) G1994; πιστεύω (pisteuō) G4100",
+        "force": "Believing and turning to the Lord are joined as the human response, while the hand of the Lord enabling them is named first.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.14.15",
+        "key_term": "ἐπιστρέφω (epistrephō) G1994",
+        "force": "Paul and Barnabas preach good news 'that you should turn from these vain things to a living God,' using the conversion verb in a missionary-preaching setting to pagans.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.26.18",
+        "key_term": "ἐπιστρέφω (epistrephō) G1994",
+        "force": "Paul's commission summary: to open eyes 'to turn from darkness to light and from the power of Satan to God.' Conversion as Spirit-enabled human reorientation receiving forgiveness through faith.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Thess.1.9",
+        "key_term": "ἐπιστρέφω (epistrephō) G1994",
+        "force": "Paul recalls the Thessalonians 'turned to God from idols to serve the living and true God.' Classic conversion grammar: turning toward (pros) God and away from (apo) idols.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Mark.1.15",
+        "key_term": "μετανοέω (metanoeō) G3340; πιστεύω (pisteuō) G4100",
+        "force": "Jesus's opening proclamation pairs the two response verbs: 'repent and believe in the gospel.' Both present imperatives, framed as the proper answer to the kingdom drawing near.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.31",
+        "key_term": "πιστεύω (pisteuō) G4100",
+        "force": "To the Philippian jailer: 'Believe on the Lord Jesus and you will be saved.' Aorist imperative; faith named alone as the saving response in this dialogue.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.2.38",
+        "key_term": "μετανοέω (metanoeō) G3340",
+        "force": "Peter's Pentecost answer to 'what shall we do': 'Repent and be baptized.' Conversion-response is the immediate apostolic prescription.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.17.30",
+        "key_term": "μετανοέω (metanoeō) G3340",
+        "force": "Paul at Areopagus: God 'commands all people everywhere to repent.' Conversion as universal divine command.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "John.6.44",
+        "key_term": "ἕλκω (helkō) G1670",
+        "force": "'No one can come to me unless the Father who sent me draws him.' Complicates the picture by grounding the human response in prior divine drawing. Does not deny the response; locates its source.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "διανοίγω (dianoigō) G1272",
+        "force": "'The Lord opened her heart to pay attention to what was said by Paul.' Conversion response presented as enabled by divine opening of the heart.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.8",
+        "key_term": "πίστις (pistis) G4102; χάρις (charis) G5485",
+        "force": "'By grace you have been saved through faith, and this is not your own doing; it is the gift of God.' Frames faith itself within the gift-economy without erasing the believing.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "2Cor.7.10",
+        "key_term": "μετάνοια (metanoia) G3341",
+        "force": "'Godly grief produces a repentance that leads to salvation without regret.' Distinguishes genuine conversion-grief from worldly grief; affirms repentance as a real human turning.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": ["G1994", "G3340", "G3341", "G4100", "G4102", "G5485", "G1670", "G1272", "G455", "G4655", "G5457"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "Conversion affirmed; located within effectual calling and ordo salutis; for paedobaptist branches, often initially mediated through covenant baptism with later conscious ratification."
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "Conversion affirmed as conscious individual repentance and faith in Christ's finished work in the present church age; typically credobaptist; emphasizes a definite moment of personal trust."
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "Conversion affirmed as the response of repentance and faith inaugurating new-covenant participation; typically credobaptist; emphasizes regeneration and conscious turning together."
+        }
+      ],
+      "notes": "All major Protestant hermeneutical frameworks affirm conversion as the human response of repentance and faith. They differ on its sacramental location (paedobaptist vs credobaptist) and on the philosophical relation between divine enabling and human response (monergism vs synergism), but the lexical pattern in epistrephō, metanoeō, and pisteuō is uncontested. Catholic and Eastern Orthodox add an ongoing-process dimension without denying the initial response."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Justin Martyr, First Apology 61 (mid 2nd c.); CCEL Schaff ANF 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "As many as are persuaded and believe that what we teach and say is true are instructed to pray and to entreat God with fasting for the remission of their past sins."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 1427-1429 (on conversion of the baptized; interior conversion)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ's call to conversion continues to resound in the lives of Christians; interior conversion is a radical reorientation of our whole life, a return to God with all our heart."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession XII (Of Repentance), 1530; bookofconcord.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Repentance consists properly of these two parts: one is contrition, that is, terrors smiting the conscience through the knowledge of sin; the other is faith."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion IX (Justification of Man); umc.org",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles XI-XII (Of Justification, Of Good Works); churchofengland.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ by Faith, and not for our own works or deservings."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, art. 5 (The Salvation of Man); ag.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man's only hope of redemption is through the shed blood of Jesus Christ. Salvation is received through repentance toward God and faith toward the Lord Jesus Christ."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA Orthodox Faith: metanoia as ongoing transformation; oca.org",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Repentance, metanoia, is not a single act but a continuing reorientation of the whole person toward God, the foundation of the spiritual life."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/strongs/greek/1994.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G1994 epistrephō: to turn, to return, to convert; combines epi (toward) and strephō (turn); used 36x in NT for spiritual conversion as reorientation toward God."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3340.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G3340 metanoeō: to change one's mind for the better, heartily to amend with abhorrence of past sins; inward conviction with outward manifestation."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/4100.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G4100 pisteuō in salvation contexts denotes conviction full of joyful trust that Jesus is the Messiah, the divinely appointed author of eternal salvation."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_thessalonians/1-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "epestrepsate pros ton Theon apo ton eidolon: aorist active, you turned toward God away from the idols. Classic conversion grammar."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-repentance/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Repentance consists properly of these two parts: one is contrition, that is, terrors smiting the conscience through the knowledge of sin; the other is faith."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf01.viii.ii.lxi.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "As many as are persuaded and believe that what we teach and say is true are instructed to pray and to entreat God with fasting for the remission of past sins."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings."
+      }
+    ],
+    "confidence": "high",
+    "flags": []
+  }
+}

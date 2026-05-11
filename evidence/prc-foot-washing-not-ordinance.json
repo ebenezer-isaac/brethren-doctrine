@@ -1,0 +1,276 @@
+{
+  "id": "prc-foot-washing-not-ordinance",
+  "answer": {
+    "id": "prc-foot-washing-not-ordinance",
+    "affirms": true,
+    "rationale": "John 13:15 calls Christ's act a hypodeigma (G5262, example/pattern, used elsewhere for moral exemplar and typological copy, never for liturgical institution), and the verb opheilo (G3784, general moral debt) in v.14 is the same verb used for love-debt in Rom 13:8 and 1 John 3:16. Compared with the Supper, no anamnesis command, no covenant-cup language, no canonical repetition pattern is attached. 1 Tim 5:10 lists foot-washing among hospitality works for widows alongside child-rearing and entertaining strangers, with no sacramental framing.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": true,
+    "would_be_member_if_otherwise": true,
+    "would_let_children_be_taught_otherwise": true,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "In-house Christian practice question, not a gospel boundary. The 'ought to' command in John 13:14 is real and binding as a pattern of humble service; the question is only whether it rises to ordinance status alongside baptism and the Supper. Carriers of foot-washing as a third ordinance include Mennonite Church USA, Charis Fellowship / Grace Brethren, Church of the Brethren, Dunkard Brethren, several Free Will / Primitive / Separate Baptist streams, Seventh-day Adventists, and some Pentecostal Holiness bodies. The majority of Christian tradition (Catholic, Eastern Orthodox, Lutheran, Anglican, Reformed, Methodist) practices it ceremonially on Maundy Thursday as commemoration without elevating it to ordinance/sacrament status. Plymouth Brethren and most Open / Exclusive Brethren assemblies historically practice the Lord's Supper weekly and baptism on profession but do NOT practice foot-washing as an ordinance; the question therefore does not stress-test Brethren formation. Stem audit flagged: statement assumes the verdict; neutralized form worked. Fruit-vs-precision: a congregation that practices foot-washing devoutly may bear more fruit of humility than one that argues correctly against it; the verdict concerns category, not the practice's spiritual value."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Did Christ in John 13 institute foot-washing as an ongoing ordinance of the Church alongside baptism and the Lord's Supper, or as an exemplary pattern of servant love?",
+      "notes": "Statement uses 'beautiful pattern' and 'not instituted' language that assumes the verdict and uses Reformed-mainstream sacramental categories. Worked the neutralized question."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict: foot-washing as Jesus performed it in John 13 is a real and binding pattern of humble servant love, but Scripture does not present it as a third standing ordinance of the church alongside baptism and the Lord's Supper. Strongest reason FOR: in John 13:15 Jesus calls his act an 'example' (a word used elsewhere in the New Testament for moral patterns to imitate and for typological copies, never for setting up a recurring liturgical rite). The 'ought to' in verse 14 is the same general 'owe' word used in Romans 13:8 for the debt of love and in 1 John 3:16 for laying down our lives for one another. By contrast, when Jesus institutes the Lord's Supper in Luke 22 he says 'do this in remembrance of me' and gives covenant-cup language, and 1 Corinthians 11 shows Paul rehearsing and regulating that specific rite for the gathered church. No such institution language, no remembrance command, and no covenant cup is attached to foot-washing. 1 Timothy 5:10 lists foot-washing among hospitality acts for widows alongside raising children and entertaining strangers, not as a sacrament. Strongest counterargument: the command in John 13:14 is real and direct, 'you also ought to wash one another's feet,' and verse 17 promises blessing to those who do these things. Critics also point to verse 8, where Jesus tells Peter 'unless I wash you, you have no share with me,' which sounds weightier than a mere lesson. The verdict handles this tension by reading verse 8 in light of verses 10 and 11, where Jesus himself reads the washing symbolically as ongoing cleansing among those already bathed, and by noting that John 13 is the only Gospel that records the act and the rest of the New Testament treats it as hospitality rather than as a liturgical rite. The 'ought' remains binding as servant love expressed however a congregation faithfully practices it; the verdict only denies that it rises to ordinance status. This is an in-house practice question, not a gospel boundary.",
+      "denominational_landscape": "Christians genuinely disagree about this, but most disagreement is about category and not about whether the practice is good. The majority of historic Christianity (Catholic, Eastern Orthodox, Lutheran, Anglican, Reformed, and Methodist) practices foot-washing ceremonially on Holy Thursday or Maundy Thursday as commemoration of John 13, while listing only two sacraments instituted by Christ (baptism and the Lord's Supper) and explicitly not counting foot-washing among them. The Catholic Catechism enumerates seven sacraments and does not include foot-washing; the pope and bishops perform the rite on Holy Thursday as a mandatum, not as a sacrament. The 39 Articles of Religion (Anglican) and the Methodist Articles of Religion both state 'there are two Sacraments ordained of Christ our Lord in the Gospel, that is to say, Baptism, and the Supper of the Lord.' The Schleitheim Confession (1527 Anabaptist) lists baptism and the breaking of bread but does not mention foot-washing. A minority of traditions teach foot-washing as a third ordinance alongside baptism and communion: Mennonite congregations (with allowance for local variation), Charis Fellowship / Grace Brethren, Church of the Brethren and Dunkard Brethren, Seventh-day Adventists, several Free Will, Primitive, and Separate Baptist streams, and some Pentecostal Holiness bodies. Plymouth Brethren and most Open or Exclusive Brethren assemblies do not practice foot-washing as an ordinance; their two practices are believer's baptism and the weekly Lord's Supper. No mainstream tradition treats denial of foot-washing as an ordinance as a gospel-level error, and no public-record heterodox or cult body is defined by its position on this question."
+    },
+    "scripture": [
+      {
+        "ref": "John.13.4-5",
+        "key_term": "νίπτειν (niptein) G3538",
+        "force": "Present infinitive of partial washing (hands, feet, face); contrasts with louo G3068 for full bathing.",
+        "supports": "neutral",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.13.8",
+        "key_term": "νίψῃς (nipses) G3538",
+        "force": "Aorist subjunctive: 'unless I wash you, you have no share (meros) with me'; symbolic register opens beyond hygienic act.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "John.13.10",
+        "key_term": "λελουμένος (leloumenos) G3068",
+        "force": "Perfect passive participle: 'the one having been bathed' needs only to wash (nipto) his feet; distinguishes once-for-all bathing from ongoing partial cleansing.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor", "typology"]
+      },
+      {
+        "ref": "John.13.14",
+        "key_term": "ὀφείλετε (opheilete) G3784",
+        "force": "Present indicative of general moral debt; same verb as Rom 13:8 (love-debt) and 1 John 3:16 (lay down lives). Not a sacramental-institution verb.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "John.13.15",
+        "key_term": "ὑπόδειγμα (hypodeigma) G5262",
+        "force": "Pattern/exemplar for imitation or warning; used 6x in NT (Heb 4:11, 8:5, 9:23, Jas 5:10, 2 Pet 2:6); never used to denote a liturgical institution.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "John.13.17",
+        "key_term": "ποιῆτε (poiete) G4160",
+        "force": "Present subjunctive 'if you do them'; general 'do/practice' verb, not the institutional 'do this' (touto poieite) of Luke 22:19 paired with anamnesis.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.5.10",
+        "key_term": "ἔνιψεν (enipsen) G3538",
+        "force": "Aorist of nipto inside a list of widow-roll qualifying works (raised children, hosted strangers, washed saints' feet, relieved afflicted, every good work); hospitality framing, no sacramental marker.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Luke.22.19",
+        "key_term": "ποιεῖτε (poieite) G4160 + ἀνάμνησιν (anamnesin) G364",
+        "force": "Explicit institution formula 'do this in remembrance of me' attached to the bread; no parallel command attached to foot-washing.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.11.23-26",
+        "key_term": "παρέδωκα (paredoka) G3860",
+        "force": "Paul 'received from the Lord and delivered' the Supper rite, regulates its corporate observance, ties it to proclamation 'until he comes'; nothing analogous in NT for foot-washing.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Matt.28.19",
+        "key_term": "βαπτίζοντες (baptizontes) G907",
+        "force": "Great Commission institutes baptism with explicit Trinitarian formula for all nations; no comparable commission to foot-wash all nations.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.13.8",
+        "key_term": "ὀφείλετε (opheilete) G3784",
+        "force": "'Owe no one anything except to love one another'; confirms opheilo in John 13:14 as general moral debt vocabulary, not sacramental institution.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.8.5",
+        "key_term": "ὑποδείγματι (hypodeigmati) G5262",
+        "force": "Earthly sanctuary is a 'copy and shadow' (hypodeigma) of heavenly realities; confirms hypodeigma's typological/exemplary range, not liturgical-institution sense.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      }
+    ],
+    "concordance_lemmas_traversed": ["G3538", "G3068", "G5262", "G3784", "G4160", "G364", "G3860", "G907"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "anabaptist-restorationist"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {"lens": "anabaptist-restorationist", "verdict": "John 13:14-15 plus 1 Tim 5:10 establish foot-washing as a continuing church ordinance", "notes": "Read by Mennonite, Grace Brethren, Dunkard Brethren, Schwarzenau Brethren streams."},
+        {"lens": "mainstream-protestant / catholic / orthodox", "verdict": "Foot-washing is an exemplary pattern and ceremonial commemoration, not a sacrament/ordinance", "notes": "Two-sacrament Protestants and seven-sacrament Catholics agree foot-washing is not among the instituted sacraments."}
+      ],
+      "notes": "Grammatico-historical reading of hypodeigma G5262 and opheilo G3784 against the institution vocabulary of the Supper (anamnesis, paredoka, touto poieite) is decisive. Analogia scripturae: 1 Tim 5:10 frames foot-washing as hospitality, not sacrament. Counter-witness divergence is real and recorded; it does not vote on the verdict."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, Tractate 58 on John (NPNF 1.7)",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Augustine reads foot-washing primarily as humility to be imitated, with a secondary sacramental sign of mutual forgiveness; not classed among the major sacraments."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church, Part 2 Section 2 (Seven Sacraments)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "CCC lists seven sacraments: Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, Matrimony. Foot-washing not among them; performed as Holy Thursday mandatum."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession / Apology Art. XIII",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Lutheran confessions name Baptism and Lord's Supper (with Absolution variously included) as sacraments; foot-washing not enumerated as sacrament."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles of Religion, Article XXV",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "There are two Sacraments ordained of Christ our Lord in the Gospel, that is to say, Baptism, and the Supper of the Lord."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith XXVII-XXIX",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Westminster lists Baptism and the Lord's Supper as the two sacraments of the New Testament; foot-washing not enumerated as sacrament or ordinance."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article XVI",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "There are two Sacraments ordained of Christ our Lord in the Gospel; that is to say, Baptism and the Supper of the Lord."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Confession of Faith, Article 13 (Foot Washing)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Believers who wash each other's feet show that they share in the body of Christ; practiced where it meaningfully expresses service, but not uniformly mandated as ordinance."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Schleitheim names baptism, the ban, and breaking of bread as the chief ordinances; foot-washing is not mentioned."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths (Ordinances)",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "AG enumerates Baptism in Water and Holy Communion as the two ordinances; foot-washing is not listed (some Pentecostal Holiness bodies do practice it as ordinance)."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, Sacraments / Mysteries page",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "OCA enumerates seven mysteries: Baptism, Chrismation, Eucharist, Penance, Holy Unction, Marriage, Holy Orders. Foot-washing practiced liturgically on Holy Thursday but not classed as a mystery."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/strongs/greek/5262.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G5262 hypodeigma occurs 6x in NT (John 13:15, Heb 4:11, 8:5, 9:23, Jas 5:10, 2 Pet 2:6) as pattern/exhibit for imitation or warning; never liturgical institution."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3784.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G3784 opheilo (35x NT) covers debt and general moral obligation; tied to ethical duties, not sacramental requirements."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3538.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G3538 nipto (17x NT) is partial washing of hands, feet, face. Compare G3068 louo (whole-body bathing); John 13:10 contrasts the two."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Tim 5:10 lists foot-washing among hospitality acts and good works for widows, not as ordinance language."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "CCC Section 2 lists seven sacraments: Baptism, Confirmation, Eucharist, Penance, Anointing, Holy Orders, Matrimony. Foot-washing not enumerated."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article XXV: There are two Sacraments ordained of Christ our Lord in the Gospel, that is to say, Baptism, and the Supper of the Lord."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article XVI: There are two Sacraments ordained of Christ our Lord in the Gospel; that is to say, Baptism and the Supper of the Lord."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA enumerates Baptism, Chrismation, Eucharist, Penance, Holy Unction, Marriage, Holy Orders; foot-washing not classed as a mystery."
+      },
+      {
+        "url": "https://courses.washington.edu/hist112/SCHLEITHEIM%20CONFESSION%20OF%20FAITH.htm",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Schleitheim 1527 names baptism, the ban, and breaking of bread; foot-washing is not addressed as an ordinance."
+      },
+      {
+        "url": "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/foot-washing/",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Mennonite Article 13: foot-washing symbolizes humility and servanthood; some congregations practice it, others have discontinued or never observed it."
+      }
+    ],
+    "confidence": "medium",
+    "flags": ["stem-pre-loaded-verdict", "confession-tradition-divergence", "apparatus-paywalled"]
+  }
+}

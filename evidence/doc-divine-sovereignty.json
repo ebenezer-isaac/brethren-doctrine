@@ -1,0 +1,371 @@
+{
+  "id": "doc-divine-sovereignty",
+  "answer": {
+    "id": "doc-divine-sovereignty",
+    "affirms": true,
+    "rationale": "Apparatus and interlinear establish pan-canonical sovereignty: Ps 115:3 (chafetz H2654 + asah H6213, He does whatever He pleases), Dan 4:35 (tsebah H6634, none can stay His hand), Eph 1:11 (boulē G1012 of His thelēma G2307, working all things), Rev pantokratōr G3841. The scope of sovereignty (election, libertarian freedom) divides in-house Christian traditions but the basic affirmation that God reigns and providentially governs is pan-canonical.",
+    "would_die_for": true,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Honest scoping: blanket denial that God rules at all (deistic absentee god, process theology with finite God, open theism in its strongest form denying any sovereignty over future contingents) departs from canonical witness. But Reformed, Arminian, Wesleyan, Anabaptist, Eastern Orthodox, and most open theists all affirm SOME doctrine of sovereignty; they disagree on scope (meticulous vs general, compatibilist vs libertarian-freedom). Setting cult_marker=true would wrongly classify large swaths of historic Christianity as cult. The cult-marker bar is reserved for denial of the proposition itself, not scope disagreements."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Does God rule over creation and history, and in what sense does He direct events?",
+      "notes": "The phrase 'working all events according to the counsel of His will' is a near-direct lift from Ephesians 1:11 phrased in Reformed-confessional cadence (echoes WCF 3.1). Working the neutralized question prevents importing meticulous-sovereignty assumptions before lexical work is done."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible repeatedly says God reigns over creation and history and that nothing thwarts what He intends to do. Psalm 115:3 says God is in the heavens and does whatever He pleases. Daniel 4:35 says no one can stay His hand or ask Him what He has done. Ephesians 1:11 says God works all things according to the counsel of His will. Romans 11:36 says from Him and through Him and to Him are all things. The strongest complicating texts within Scripture are passages that describe God as regretting (Genesis 6:6) or relenting (Exodus 32:14, 1 Samuel 15:11, Jonah 3:10, Jeremiah 18:8), and passages that present real human choice (Deuteronomy 30:19, Joshua 24:15) or Jesus saying 'how often I would have gathered you... and you would not' (Matthew 23:37). Scripture itself juxtaposes these: 1 Samuel 15:29 says God is not a man that He should change His mind, in the same chapter where it says He regretted making Saul king. The historic Christian reading treats the regret and relent passages as God speaking in human terms about real relational responses, while still affirming He is sovereign over the whole. The verdict that God rules over all things stands across the canon. Disagreement among Christians is about the SCOPE of that rule, especially how it relates to human choice, not about whether God rules at all.",
+      "denominational_landscape": "Every historic Christian lineage affirms that God rules over creation and history. Patristic writers like Augustine treated divine providence as governing every kingdom and event. The Catholic Catechism teaches God as Creator and provident sustainer of all things. Lutheran confessions describe God as maker and preserver of all things visible and invisible. Anglican Article 17 frames God's eternal purpose. Reformed confessions affirm meticulous sovereignty most strongly, with the Westminster Confession saying God ordains whatsoever comes to pass. Methodist and Wesleyan-Arminian traditions affirm sovereignty but emphasize that God grants real human freedom and that some divine decrees are conditional on human response. Eastern Orthodox theology calls God Pantokrator (ruler of all) and stresses synergy between divine grace and human will. Anabaptist confessions trust providence quietly without resolving the philosophical tension. The divide is in-house: Reformed, classical Arminian, Wesleyan, Orthodox, and open theist Christians all affirm SOME doctrine of sovereignty while disagreeing about whether God meticulously ordains every event or grants creatures genuine alternative possibilities. Public-record groups that deny the proposition itself are rare; process theology (a fringe academic movement) denies that God has comprehensive power over creation, and some forms of deism deny providence outright. Mainstream Christianity treats those positions as outside the historic faith."
+    },
+    "scripture": [
+      {
+        "ref": "Ps.115.3",
+        "key_term": "chafetz H2654 (delight/please) + asah H6213 (do)",
+        "force": "God is in the heavens; whatever He pleased He has done. Qal perfect parallel verbs link divine desire directly to divine action without obstacle.",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Dan.4.35",
+        "key_term": "tsebah H6634 (will/desire, Aramaic) + machah H4223 (restrain)",
+        "force": "He does according to His will in heaven's army and earth's inhabitants; none can restrain His hand or say to Him 'what have you done.'",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["anthropomorphism", "merism"]
+      },
+      {
+        "ref": "Eph.1.11",
+        "key_term": "boulē G1012 (counsel/decree) + thelēma G2307 (will) + energeō G1754 (work)",
+        "force": "kata tēn boulēn tou thelēmatos autou: according to the counsel of His will, working all things. boulē carries deliberative decree force.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.11.36",
+        "key_term": "ek + dia + eis (from, through, to)",
+        "force": "Triple-preposition doxology: God as origin, agent, and goal of all things. Pan-cosmic scope.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["merism"]
+      },
+      {
+        "ref": "Rom.9.21",
+        "key_term": "kerameus G2763 (potter) + pēlos G4081 (clay) + exousia G1849 (authority)",
+        "force": "Potter has authority over the clay to make vessels for honor or dishonor. Asserts Creator's sovereign prerogative over creatures.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Rev.19.6",
+        "key_term": "pantokratōr G3841 (ruler of all)",
+        "force": "The Lord God the Almighty reigns. Doxological closing-vision affirmation of universal divine rule.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": []
+      },
+      {
+        "ref": "Prov.16.9",
+        "key_term": "chashav H2803 (plan) + kun H3559 (establish)",
+        "force": "The heart of man plans his way, but the LORD establishes his steps. Concurrence of human deliberation and divine ordering.",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Gen.6.6",
+        "key_term": "nacham H5162 (regret/be sorry, Niphal)",
+        "force": "The LORD was sorry He had made man on the earth. God grieves over human wickedness in terms of relational response.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Exod.32.14",
+        "key_term": "nacham H5162 (relent)",
+        "force": "The LORD relented from the disaster He had spoken of bringing on His people, after Moses' intercession.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "1Sam.15.29",
+        "key_term": "netzach H5331 (Glory/Enduring One) + nacham H5162 negated",
+        "force": "The Glory of Israel will not lie or have regret, for He is not a man that He should change His mind. Same chapter (15:11) says He DID regret making Saul king. Canonical juxtaposition forces accommodation reading.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Jonah.3.10",
+        "key_term": "nacham H5162 (relented, Niphal)",
+        "force": "God saw their works and relented of the disaster He had said He would do. Real divine response to repentance.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Jer.18.8",
+        "key_term": "nacham H5162 (relent) + shuv H7725 (turn)",
+        "force": "If that nation turns from its evil, I will relent of the disaster I intended. Stated programmatic conditional pattern.",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": ["anthropopathism"]
+      },
+      {
+        "ref": "Deut.30.19",
+        "key_term": "bachar H977 (choose) + chayim H2416 (life)",
+        "force": "I have set before you life and death; therefore choose life. Real moral choice presented as covenantal demand.",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Matt.23.37",
+        "key_term": "thelō G2309 (will/wish) repeated",
+        "force": "How often I willed (ēthelēsa) to gather your children, and you willed not (ouk ēthelēsate). Jesus' willing met by human counter-willing.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.4.27-28",
+        "key_term": "boulē G1012 + proorizō G4309 (foreordain)",
+        "force": "Herod, Pilate, Gentiles, and Israel did what God's hand and counsel (boulē) had predestined to occur. Concurrence of human wickedness and divine decree at the crucifixion.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Isa.46.10",
+        "key_term": "etsah H6098 (counsel) + chefetz H2656 (good pleasure)",
+        "force": "Declaring the end from the beginning; My counsel shall stand, and I will accomplish all My good pleasure.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "H2654",
+      "H6213",
+      "H6634",
+      "H4223",
+      "H4427",
+      "H5945",
+      "H136",
+      "H5162",
+      "H5331",
+      "H8266",
+      "H977",
+      "H2416",
+      "H2803",
+      "H3559",
+      "H7725",
+      "H6098",
+      "H2656",
+      "G1012",
+      "G2307",
+      "G1754",
+      "G3841",
+      "G2309",
+      "G2763",
+      "G4081",
+      "G1849",
+      "G4309",
+      "G3756"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "Reformed_compatibilism",
+        "classical_Arminianism",
+        "Wesleyan_Arminianism",
+        "Eastern_Orthodox_synergy",
+        "open_theism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "Reformed compatibilism",
+          "verdict": "God meticulously ordains every event including human choices; human choices remain voluntary and culpable. Anthropopathic regret passages are accommodation language describing God's relational stance toward creatures, not literal change of mind."
+        },
+        {
+          "lens": "Classical Arminianism",
+          "verdict": "God exhaustively foreknows and providentially governs all things, but grants libertarian freedom to creatures. Some divine decrees are conditional. Regret passages reveal real divine responsiveness within sovereign superintendence."
+        },
+        {
+          "lens": "Wesleyan-Arminian",
+          "verdict": "Affirms sovereignty and prevenient grace; rejects unconditional individual election to salvation. God's sovereign love grants genuine creaturely response."
+        },
+        {
+          "lens": "Eastern Orthodox synergy",
+          "verdict": "God as Pantokrator providentially governs all; salvation is synergistic cooperation between divine grace and human will. Avoids the Western Augustinian-Pelagian framing."
+        },
+        {
+          "lens": "Open theism",
+          "verdict": "God is sovereign over creation in general but the future free choices of creatures are genuinely open even to God. Regret and relent passages are read more literally. Minority view; criticized by mainstream evangelicals for diminished doctrine of foreknowledge."
+        }
+      ],
+      "notes": "All lenses except the most extreme open theism affirm the proposition that God rules over all things. They disagree about the MODE: meticulous ordination vs general superintendence with libertarian creaturely freedom. The complicating texts (regret, relent, conditional warnings, real choice) are the lexical pressure that drives the in-house disagreement. The verdict on the proposition itself holds across all mainstream lenses; the scope question is unresolved."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, City of God 5.11",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God can never be believed to have left the kingdoms of men outside of the laws of His providence."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "CCC 303 (Catholic Catechism on providence)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "God is the sovereign master of His plan; He works through secondary causes and grants creatures dignity of acting on their own."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "One God, eternal, of infinite power, wisdom, and goodness, the Maker and Preserver of all things, visible and invisible."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Thirty-Nine Articles, Article 1 and Article 17",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "One living and true God, of infinite power; and Article 17 frames God's eternal purpose to deliver from curse those chosen in Christ."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 3.1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "God, from all eternity, did, by the most wise and holy counsel of His own will, freely, and unchangeably ordain whatsoever comes to pass."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article 1",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "One living and true God, everlasting, of infinite power, wisdom, and goodness; the maker and preserver of all things."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession (1527) and Mennonite trust in providence",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Lord is the Lord of peace and not of quarreling; trusts providence to sustain the flock under persecution without speculative decree theology."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "The one true God revealed Himself as the eternally self-existent 'I AM,' Creator of heaven and earth and Redeemer of mankind."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA doctrine summary on God the Father Almighty",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "One God, the Father Almighty, who does all that He can for the life and salvation of man and the world. Synergistic emphasis."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/1-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "kata ten boulen tou thelematos autou: boule G1012 (counsel, deliberative decree) + thelema G2307 (will) + energeo G1754 (work, be active) on ta panta."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/psalms/115-3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "chafetz H2654 (delight/please, Qal perfect) parallel with asah H6213 (do, Qal perfect): whatever He pleased He has done. Direct desire to action."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/daniel/4-35.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "tsebah H6634 in Aramaic P'al: He does according to His will; vela ithai di yemache videh: none restrains His hand."
+      },
+      {
+        "url": "https://biblehub.com/strongs/hebrew/4427.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "malak H4427: to reign, be king; 348 occurrences; used of human kings and pan-canonically of YHWH reigning (the LORD shall reign forever)."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/3841.htm",
+        "category": "primary_repository",
+        "stance": "supports",
+        "quote": "pantokrator G3841: all-ruling, almighty; 10 NT occurrences (1 in 2 Cor, rest in Revelation); consistent identification of God's supreme authority."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/6-6.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "nacham H5162, Niphal consecutive imperfect: the LORD was sorry He had made man. Anthropopathic divine grief reading."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_samuel/15-29.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Netzach Yisrael (Glory of Israel) will not lie or relent, He is not a man to repent. Same chapter (15:11) says He DID relent of making Saul king."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/npnf102/npnf102.iv.V.11.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Augustine, City of God 5.11: God can never be believed to have left the kingdoms of men outside the laws of His providence."
+      },
+      {
+        "url": "https://www.opc.org/wcf.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "WCF 3.1: God, from all eternity, did, by the most wise and holy counsel of His own will, freely, and unchangeably ordain whatsoever comes to pass."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession Article 1: One God, of infinite power, wisdom, and goodness, the Maker and Preserver of all things, visible and invisible."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article 1: One living and true God, everlasting, of infinite power, wisdom, and goodness; the maker and preserver of all things."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/god",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "One God, the Father Almighty, who does all that He can for the life and salvation of man and the world. Orthodox synergistic providence framing."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}

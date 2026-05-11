@@ -1,0 +1,369 @@
+{
+  "id": "doc-fall-historical",
+  "answer": {
+    "id": "doc-fall-historical",
+    "affirms": true,
+    "rationale": "Genesis 3 narrates a temporally located event with named persons, a specific prohibition, a transgression, and four named curses (serpent, woman, man, ground); Paul's argument in Rom 5:12-21 and 1 Cor 15:21-22 structurally depends on that event being historical, anchored in heis anthropos (one man G1520+G444), paraptoma (G3900), parakoe (G3876), and the typological symmetry with Christ; 2 Cor 11:3 and 1 Tim 2:13-14 treat the deception of Eve by the serpent as an actual past event.",
+    "would_die_for": true,
+    "cult_marker_if_denied": true,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": false,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Full mythic-only denial dissolves Paul's hamartiology (Rom 5) and Christology (Christ as last Adam reversing the fall), which is gospel-stake. The cult-marker bar is met by canonical demonstration: the fall is not a single-passage doctrine; the lemma network sin (G266), death (G2288), trespass (G3900), disobedience (G3876), corruption (G5356), futility (G3153), serpent (G3789/H5175), and deceived (G1818) is pan-canonical and tied to the same historical referent across Genesis, Pauline epistles, and Revelation 12:9 / 20:2. An in-house evangelical debate exists over the mechanism (theistic-evolution accounts that retain a real historical fall as a moral-rupture event without sole-pair monogenism still affirm a historical fall and are not the cult-marker boundary). The cult-marker line is between affirming a real rupture event in history and dissolving it into pure myth, which is the public-record liberal-mainline position (Schleiermacher, Bultmann's demythologizing, Tillich's symbolic readings, process theism). Mormonism affirms a fall but with non-orthodox additions (Adam's transgression as a 'fortunate fall' necessary for human procreation, 2 Nephi 2:22-25); Jehovah's Witnesses affirm a historical fall; Christadelphians affirm a historical fall but deny inherited guilt; Christian Science (Mary Baker Eddy, Science and Health) treats the fall as illusion, placing it outside historic Christianity. The 'would_die_for' is calibrated to the canonical-theological stake of a historical fall as the load-bearing structural presupposition of Pauline soteriology, not to any specific monogenism or chronology."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": false,
+      "neutralized_form": null,
+      "notes": "Statement is descriptive (Adam, covenant head, disobeyed God, sin and death entered creation). It uses 'covenant head' which is Reformed-confessional vocabulary, but the substantive claim (historical fall, real event, real consequences) is broader than Reformed federalism and is held across patristic, Catholic, Orthodox, Lutheran, Anglican, Methodist, and Pentecostal lineages. Tested the substantive claim, not the Reformed federal-head packaging."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict: yes, the Bible treats the fall of Adam and Eve as something that actually happened in time, not as a poetic story with no real event behind it. The strongest reason for it comes from Genesis 3 itself, which narrates a specific sequence: a prohibition is given in Genesis 2:17, the serpent contradicts it in 3:1-5, the woman eats and gives to her husband in 3:6, and God responds with named curses on the serpent, the woman, the man, and the ground in 3:14-19. The narrative is structured like a real-event report, not like a parable or a vision. Paul reinforces this in Romans 5:12-21, where he writes that 'sin entered the world through one man, and death through sin,' and builds his entire argument about salvation in Christ as a parallel response to that one historical disobedience. In 1 Corinthians 15:21-22 he writes 'as in Adam all die, so also in Christ shall all be made alive,' which only works if Adam's death-bringing act was real in the same way that Christ's life-giving act was real. The strongest complicating texts are inside Genesis itself. Genesis 2:7 uses a word-pun between adam (man) and adamah (ground), and Genesis 3:1 introduces a talking serpent, which has led some readers to argue the chapter is purely symbolic. Romans 8:20-22 says the creation was 'subjected to futility' without naming the subjector or the moment, which leaves room for different readings of how the fall touched the natural world. The verdict handles this tension by holding that literary craft and real historical reference are not opposites. A narrator can use word-play and symbol while still pointing to an actual event. The New Testament writers, especially Paul in 1 Timothy 2:13-14 and 2 Corinthians 11:3, treat the deception of Eve by the serpent as a real past occurrence, not a myth. The pure-myth reading dissolves Paul's logic and is the position that historic Christianity has consistently rejected.",
+      "denominational_landscape": "Affirmation of a historical fall is unanimous across historic Christian lineages. The patristic tradition treats it as a real event: Irenaeus builds his recapitulation theology on Christ undoing what Adam did, Athanasius in On the Incarnation grounds the need for the incarnation in the 'primal transgression' that brought death to humanity, and Augustine develops original sin as inherited corruption from the fall in his anti-Pelagian writings. The Roman Catholic Catechism in paragraphs 385 through 421 affirms the fall as a primeval event, the foundation of the doctrine of original sin. The Lutheran Augsburg Confession Article II teaches that since Adam's fall all are born with sin. The Anglican Article IX, the Methodist Article VII, and the Reformed Westminster and Belgic confessions all affirm inherited corruption from Adam's transgression. Eastern Orthodoxy affirms the fall as the entry of sin and death through Adam's disobedience, though Orthodoxy emphasizes ancestral consequence more than inherited guilt. The Pentecostal Assemblies of God statement affirms Adam's voluntary transgression bringing condemnation on humanity. The genuine in-house Christian disagreement is not about whether the fall happened but about the mechanism: classical six-day creationists hold to a sole-pair fall with biological consequences for all descendants, while evangelical theistic-evolution proponents argue that Adam was the federal head of an existing population through whom moral rupture entered without sole genetic descent. Both positions affirm a real fall. Public-record carriers of pure-myth denial sit in liberal-mainline Protestant theology: Friedrich Schleiermacher, Rudolf Bultmann's demythologizing project, Paul Tillich's symbolic reading, and process theism. Christian Science under Mary Baker Eddy treats the fall as illusion, placing it outside historic Christianity. Mormonism affirms a fall but recasts it as a necessary step for human flourishing, departing from the historic reading. Jehovah's Witnesses and Christadelphians affirm a historical fall though they deny inherited guilt."
+    },
+    "scripture": [
+      {
+        "ref": "Gen.3.1",
+        "key_term": "נָחָשׁ (nachash) H5175; עָרוּם (arum) H6175",
+        "force": "The serpent, more crafty than any beast of the field. Introduction of the antagonist as a creature within the created order; the term arum (crafty) is the same root used in wisdom literature, signaling moral agency and reasoned deception.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Gen.3.6",
+        "key_term": "אָכַל (akal) H398",
+        "force": "The woman saw, took, ate, and gave. Four sequential verbs of physical action describe a temporally located transgression, not a symbolic posture.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Gen.3.15",
+        "key_term": "זֶרַע (zera) H2233",
+        "force": "Enmity between the serpent's seed and the woman's seed; the bruising of head and heel. The protoevangelium presupposes a real rupture that requires a real redemptive reversal. Anchors the canonical typology that Paul will pick up in Rom 5.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["typology", "metonymy"]
+      },
+      {
+        "ref": "Gen.3.17",
+        "key_term": "אָרוּר (arur) H779; אֲדָמָה (adamah) H127",
+        "force": "Cursed is the ground for your sake; in toil you shall eat of it all the days of your life. The curse falls on the physical earth, not on a symbolic concept; the consequence is bodily labor and bodily death.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Gen.3.19",
+        "key_term": "מוּת (mut) H4191",
+        "force": "Till you return to the ground, for out of it you were taken; dust you are and to dust you shall return. Death enters as bodily return to dust, the inverse of Gen 2:7's formation. Concrete and physical, not allegorical.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["merism"]
+      },
+      {
+        "ref": "Gen.3.24",
+        "key_term": "גָּרַשׁ (garash) H1644",
+        "force": "He drove out the man, and stationed the cherubim and the flaming sword. Expulsion from Eden is narrated as a physical relocation with physical guardians, not a change of inner disposition.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.5.12",
+        "key_term": "ἁμαρτία (hamartia) G266; θάνατος (thanatos) G2288",
+        "force": "Through one man sin entered the world, and death through sin. The verb eiselthen (entered) marks a temporal point of entry; sin and death are not eternal givens but consequences of a historical act.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.5.14",
+        "key_term": "παράπτωμα (paraptoma) G3900",
+        "force": "Death reigned from Adam to Moses even over those whose sin was not like the transgression of Adam. The named period from Adam to Moses presupposes Adam as a real point in time.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology"]
+      },
+      {
+        "ref": "Rom.5.19",
+        "key_term": "παρακοή (parakoe) G3876",
+        "force": "Through the disobedience of the one man the many were made sinners. The parallel structure of one-man disobedience and one-man obedience requires both poles to be historical persons performing historical acts.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "1Cor.15.21",
+        "key_term": "δι' ἀνθρώπου θάνατος G444+G2288",
+        "force": "By a man came death, by a man also came the resurrection of the dead. The grammatical symmetry presupposes that the death-bringing act and the life-giving act are both real historical occurrences.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "1Cor.15.22",
+        "key_term": "ζῳοποιέω (zoopoieo) G2227",
+        "force": "As in Adam all die, so also in Christ shall all be made alive. The universal scope of dying in Adam requires Adam to be a historical universal-scope ancestor whose act actually transmitted the consequence.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["typology", "parallelism"]
+      },
+      {
+        "ref": "2Cor.11.3",
+        "key_term": "ἐξαπατάω (exapatao) G1818; ὄφις (ophis) G3789",
+        "force": "As the serpent deceived Eve by his craftiness. Paul treats the Genesis 3 deception as a real past event, using the aorist form of exapatao to mark a completed historical occurrence.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.2.13",
+        "key_term": "πλάσσω (plasso) G4111",
+        "force": "Adam was formed first, then Eve. The temporal sequence prota / eita and the verb of forming locate both persons in a real chronological order.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Tim.2.14",
+        "key_term": "ἐξαπατάω (exapatao) G1818; παράβασις (parabasis) G3847",
+        "force": "Adam was not deceived, but the woman was deceived and became a transgressor. Paul distinguishes who was deceived and who transgressed, treating the events as factually distinguishable historical occurrences.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.20",
+        "key_term": "ματαιότης (mataiotes) G3153",
+        "force": "The creation was subjected to futility, not willingly but because of him who subjected it. Paul treats the bondage of creation as the consequence of an act done in time. The 'subjector' is unnamed but the temporal logic is past-event.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rom.8.22",
+        "key_term": "συστενάζω (systenazo) G4959; φθορά (phthora) G5356",
+        "force": "The whole creation groans together and travails together until now. Cosmic decay is described as an ongoing state with a past starting-point, consistent with the curse on the ground in Gen 3:17.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "Rev.12.9",
+        "key_term": "ὄφις ὁ ἀρχαῖος (ophis ho archaios) G3789+G744",
+        "force": "The ancient serpent, who is called the devil and Satan, the deceiver of the whole world. John identifies the Gen 3 serpent with Satan as a named historical agent, anchoring the fall narrative across the canon.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["apocalyptic-symbolism", "typology"]
+      },
+      {
+        "ref": "Rev.20.2",
+        "key_term": "ὄφις ὁ ἀρχαῖος G3789+G744",
+        "force": "He seized the dragon, the ancient serpent, who is the devil and Satan. Repeats the identification of the Gen 3 serpent as a real personal agent at the eschatological close of the canon.",
+        "supports": "for",
+        "genre": "apocalyptic",
+        "figures": ["apocalyptic-symbolism"]
+      },
+      {
+        "ref": "Gen.3.1",
+        "key_term": "נָחָשׁ (nachash) H5175",
+        "force": "The talking serpent is a complicating literary feature for readers who hold that real-event reportage cannot include speaking animals. Numbers 22 (Balaam's donkey) and Rev 12:9 show the canon comfortable with speaking-animal episodes inside event-narratives, but the surface oddity is noted honestly.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": ["personification"]
+      }
+    ],
+    "concordance_lemmas_traversed": ["H5175", "H6175", "H4191", "H779", "H6093", "H2233", "H398", "H127", "H1644", "G266", "G2288", "G3900", "G3876", "G5485", "G5179", "G1520", "G444", "G3789", "G1818", "G3834", "G2096", "G2937", "G3153", "G5356", "G4959", "G4944", "G4111", "G3847", "G2227", "G744", "G76"],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology", "progressive_covenantalism"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "young-earth creationism",
+          "verdict": "Historical fall with literal six-day chronology; physical death enters human and animal world at Gen 3."
+        },
+        {
+          "framework": "old-earth creationism",
+          "verdict": "Historical fall; physical animal death may predate Gen 3 but human spiritual and physical death enters at Adam's transgression."
+        },
+        {
+          "framework": "evolutionary creationism",
+          "verdict": "Historical fall as moral rupture in a population; Adam as federal head experiences real disobedience without sole-pair monogenism. Still affirms a historical fall."
+        },
+        {
+          "framework": "framework / literary hypothesis",
+          "verdict": "Genesis 1 is literary structure; Gen 2-3 may retain historical reference to a real disobedience event even if presentation is highly stylized."
+        },
+        {
+          "framework": "demythologizing / mainline liberal",
+          "verdict": "Fall is purely symbolic of universal human alienation; this is the position the verdict rejects because it dissolves the Pauline structural argument."
+        }
+      ],
+      "notes": "Four of five competing lenses converge on a historical fall; only the demythologizing lens denies it outright. The verdict therefore holds across the in-house evangelical spectrum and is the gospel-stake boundary."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Athanasius, On the Incarnation 4-5 (CCEL)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "All men were due to die through a primal transgression; the Word came so He might settle man's account with death and free him from the primal transgression."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Irenaeus, Against Heresies 3.18-23 (recapitulation theology)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Christ recapitulates Adam, undoing in obedience what Adam did in disobedience; the entire argument requires the fall as a real historical rupture."
+      },
+      {
+        "tradition": "patristic",
+        "anchor": "Augustine, On the Predestination of the Saints; anti-Pelagian writings",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Massa damnata: the whole human mass is condemned in Adam through inherited corruption from his real transgression. CCEL page returned table of contents only."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 379 and 385-421",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "This entire harmony of original justice, foreseen for man in God's plan, will be lost by the sin of our first parents. The fall is affirmed as primeval event."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II (Of Original Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article IX (Of Original or Birth-Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Original sin standeth not in the following of Adam, but it is the fault and corruption of the Nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article VII (Of Original or Birth Sin)",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "It is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith chapter 6 (Of the Fall of Man, of Sin, and of the Punishment thereof)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Our first parents, being seduced by the subtilty and temptation of Satan, sinned in eating the forbidden fruit; thereby they fell from their original righteousness."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA, The Orthodox Faith, on Sin and the Fall",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The Fall occurred when man disobeyed God through pride and yielded to Satan's temptation, resulting in sin, evil, suffering, and death entering creation."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The Fall of Man (URL returned 403)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man was created good and upright; by voluntary transgression Adam fell, and thereby incurred not only physical death but also spiritual death, separation from God."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Mennonite Dordrecht Confession of 1632, Article 2",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We believe that man was created good, in the image of God, but transgressing the commandment of God, fell into sin, and thereby brought death upon himself and all his posterity."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/genesis/3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Genesis 3 in Hebrew: nachash H5175 (serpent), arum H6175 (crafty), akal H398 (eat), arur H779 (cursed), mut H4191 (die), zera H2233 (seed)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 5:12 di' henos anthropou: through one man sin entered (eiselthen), and death through sin. Heis G1520 anthropos G444 marks a singular historical agent."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/15.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 15:21-22: dia anthropou thanatos G2288; en to Adam G76 pantes apothneskousin: by a man death, in Adam all die."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/2_corinthians/11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "2 Cor 11:3 ho ophis G3789 exepatesen Heuan G2096: the serpent deceived Eve. Paul treats the event as a real past occurrence."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_timothy/2.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Tim 2:13-14: Adam first formed (eplasthe G4111), then Eve; Adam not deceived, the woman deceived and became a transgressor (parabasis G3847)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 8:20-22 ktisis G2937 subjected to mataiotes G3153 (futility) and phthora G5356 (corruption); creation groans and travails together."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1B.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 379: This entire harmony of original justice, foreseen for man in God's plan, will be lost by the sin of our first parents."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-original-sin/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg Confession II: Since the fall of Adam all men begotten in the natural way are born with sin, without the fear of God, without trust in God."
+      },
+      {
+        "url": "https://anglicansonline.org/basics/thirty-nine_articles.html",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article IX: Original sin is the fault and corruption of the Nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Methodist Article VII: It is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/sin",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: The Fall occurred when man disobeyed God through pride and yielded to Satan's temptation, resulting in sin, evil, suffering, and death entering creation."
+      },
+      {
+        "url": "https://ccel.org/ccel/athanasius/incarnation/incarnation.v.html",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Athanasius On the Incarnation: All men were due to die because of a primal transgression; the Word came to settle man's account with death."
+      }
+    ],
+    "confidence": "high",
+    "flags": ["confession-tradition-divergence"]
+  }
+}

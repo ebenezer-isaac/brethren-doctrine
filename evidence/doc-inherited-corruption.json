@@ -1,0 +1,337 @@
+{
+  "id": "doc-inherited-corruption",
+  "answer": {
+    "id": "doc-inherited-corruption",
+    "affirms": true,
+    "rationale": "Apparatus and interlinear establish inherited moral corruption canonically: Ps 51.5 places the speaker in iniquity (H5771 awon) and sin (H2399 chet) from conception; Gen 8.21 places yetzer (H3336) of the heart as evil from youth; Jer 17.9 names the heart deceitful (H6121) and desperately sick (H605); Rom 5.12, 18-19 treats hamartia (G266) as a power entering through one man with universal reach, and katestathesan (G2525) constitutes the many as sinners through one disobedience; Eph 2.3 places humanity by nature (physei G5449) children of wrath (G3709). Pan-canonical lexical demonstration sustains affirmation.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": false,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "Inherited corruption is unanimously affirmed across major historic Christian lineages (Catholic, Orthodox, Lutheran, Anglican, Reformed, Methodist, Pentecostal). In-house disagreement lies on (a) whether inherited guilt is included with inherited corruption, addressed in the sibling question doc-inherited-guilt, and (b) the degree and effect of inability. Pelagius denied inherited corruption and was condemned at Carthage 418 and Orange 529. Modern denial is largely confined to Pelagian-tending sects, Christian Science (denies the reality of sin), and some progressive theologies that reframe sin as social only. Cult-marker bar not met: this is a foundational anthropology doctrine but Scripture does not gate the gospel itself on assent to inherited corruption in the same way it gates the deity and resurrection of Christ; condition 1 (would_die_for entailment as gospel-boundary marker) is not cleared at the same threshold as Trinitarian or Christological boundaries."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Are human beings born with a morally corrupt nature traceable to Adam such that they are by nature objects of divine wrath, or do they begin in moral neutrality and become sinners only by personal act?",
+      "notes": "The original statement bundles three claims (inherited sinful nature, sharing Adam's corruption, by nature objects of wrath) and uses Reformed-Augustinian vocabulary as if neutral. Worked on the neutralized form which separates the lexical question (is there a pre-personal moral condition traceable to Adam) from the imputation question (doc-inherited-guilt)."
+    },
+    "lay_summary": {
+      "reasoning": "The verdict affirms that human beings are born with a corrupted moral nature inherited as a consequence of Adam's fall, not in moral neutrality. The strongest reason from Scripture is the cumulative pan-canonical witness. Psalm 51.5 has David tracing his sinful condition to conception, before any personal act. Genesis 8.21 has God Himself describing the intention of the human heart as evil from youth. Jeremiah 17.9 names the heart deceitful above all things and incurably sick. Romans 5.12 says sin entered the world through one man and death spread to all because all sinned, and Romans 5.19 says by one man's disobedience the many were made sinners using a verb that means constituted or established as such. Ephesians 2.3 says we were by nature children of wrath. The strongest complicating texts are Ezekiel 18.20 which says the son shall not bear the iniquity of the father, and Deuteronomy 24.16 which forbids putting children to death for the sins of their fathers. These can be read as denying that we inherit guilt for Adam's specific act. The verdict handles this tension by distinguishing inherited corruption (a real moral condition transmitted with human nature) from inherited guilt (legal liability for Adam's specific personal act), which is the subject of a separate question. Ezekiel and Deuteronomy address judicial responsibility for a parent's individual act, not the propagation of a corrupted nature. The Romans 5 logic itself distinguishes the one trespass from the many sins it produced. Job 14.4 (who can bring a clean thing out of an unclean) and Psalm 58.3 (the wicked are estranged from the womb) corroborate the womb-onward corruption reading.",
+      "denominational_landscape": "Inherited corruption is one of the most broadly affirmed doctrines in historic Christianity. The Catholic Church teaches in the Catechism (paragraphs 404-406) that Adam's sin affected the human nature he transmitted in a fallen state, leaving humanity wounded, subject to suffering and death, and inclined to sin. Eastern Orthodoxy teaches ancestral sin: all bear the consequences of Adam's sin (mortality and corruption) but only Adam and Eve bear the personal guilt for the specific act, distinguishing Orthodox teaching from Western imputation models. The Lutheran Augsburg Confession Article II teaches that since the fall all are born with sin, calling this a disease or vice of origin that is truly sin. The Anglican 39 Articles Article IX teaches original sin as the fault and corruption of the nature of every man naturally engendered of the offspring of Adam. The Wesleyan Methodist tradition affirms the same inherited corruption but adds prevenient grace that restores moral capacity. The Reformed tradition (Westminster, Heidelberg, Belgic) teaches total depravity, the strongest version of inherited corruption. Pentecostal traditions (Assemblies of God) affirm the fall and inherited fallen state. Pelagianism denied inherited corruption and was condemned at the Council of Carthage in 418 and the Council of Orange in 529, placing denial outside historic Christianity. Modern denials are largely confined to Christian Science (which denies the reality of sin), some progressive theologies that reframe sin as purely social, and movements that revive Pelagian or semi-Pelagian anthropologies. The in-house disagreement among orthodox lineages is not over inherited corruption itself but over whether inherited guilt for Adam's specific act is also transmitted (the separate doc-inherited-guilt question) and over the degree of resulting inability."
+    },
+    "scripture": [
+      {
+        "ref": "Ps.51.5",
+        "key_term": "H2399 chet (sin), H5771 awon (iniquity), H2342 chul (brought forth)",
+        "force": "Speaker traces his sinful condition to conception and birth, predating any personal act",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism", "hyperbole"]
+      },
+      {
+        "ref": "Ps.58.3",
+        "key_term": "H2114 zur (estranged), H7358 rechem (womb), H8582 taah (go astray)",
+        "force": "The wicked are alienated from the womb, going astray from birth, places moral disorder pre-personal",
+        "supports": "for",
+        "genre": "psalm",
+        "figures": ["parallelism", "hyperbole"]
+      },
+      {
+        "ref": "Gen.8.21",
+        "key_term": "H3336 yetzer (intention), H3820 leb (heart), H7451 ra (evil), H5271 naur (youth)",
+        "force": "Yahweh's own assessment: the framing or intent of the human heart is evil from youth",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Gen.6.5",
+        "key_term": "H3336 yetzer (intention), H4284 machashabah (thought), H7451 ra (evil)",
+        "force": "Every intent of the thoughts of the heart was only evil continually, prefall-Adam human anthropology",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["hyperbole"]
+      },
+      {
+        "ref": "Jer.17.9",
+        "key_term": "H6121 aqob (deceitful/crooked), H605 anash (desperately sick/incurable), H3820 leb (heart)",
+        "force": "The heart is deceitful above all things and incurably sick; diagnostic statement on default human condition",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": ["personification", "hyperbole"]
+      },
+      {
+        "ref": "Job.14.4",
+        "key_term": "H2889 tahor (clean), H2931 tame (unclean)",
+        "force": "Rhetorical question with emphatic negation: no one brings a clean thing out of an unclean, propagation logic",
+        "supports": "for",
+        "genre": "wisdom",
+        "figures": ["parallelism", "metaphor"]
+      },
+      {
+        "ref": "Rom.5.12",
+        "key_term": "G266 hamartia (sin), G2288 thanatos (death), G1330 dierchomai (spread)",
+        "force": "Sin entered the world through one man and death through sin, death spread to all because all sinned; Adam-origin universal scope",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["personification"]
+      },
+      {
+        "ref": "Rom.5.18",
+        "key_term": "G3900 paraptoma (trespass), G2631 katakrima (condemnation), G1345 dikaioma (righteous act)",
+        "force": "One trespass led to condemnation for all; one righteous act led to justification for all; parallel headship structure",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Rom.5.19",
+        "key_term": "G3876 parakoe (disobedience), G2525 kathistemi (were constituted), G268 hamartolos (sinner)",
+        "force": "By one man's disobedience the many were constituted sinners (passive verb of formal establishment, not mere example)",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["parallelism"]
+      },
+      {
+        "ref": "Eph.2.3",
+        "key_term": "G5043 teknon (child), G5449 physis (nature), G3709 orge (wrath)",
+        "force": "We were by nature children of wrath; physei denotes inherent condition not acquired status",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Ezek.18.20",
+        "key_term": "H1121 ben (son), H5771 awon (iniquity)",
+        "force": "The son shall not bear the iniquity of the father; can be read as denying any inherited culpability",
+        "supports": "complicates",
+        "genre": "prophecy",
+        "figures": []
+      },
+      {
+        "ref": "Deut.24.16",
+        "key_term": "H4191 muth (put to death), H2399 chet (sin)",
+        "force": "Fathers shall not be put to death for the children, nor children for the fathers; each shall die for his own sin (judicial)",
+        "supports": "complicates",
+        "genre": "law",
+        "figures": []
+      },
+      {
+        "ref": "Rom.7.18",
+        "key_term": "G3611 oikeo (dwells), G18 agathos (good), G4561 sarx (flesh)",
+        "force": "Nothing good dwells in me, that is in my flesh; Paul's anthropology of indwelling sin confirms moral corruption persists post-conversion",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "H2399",
+      "H5771",
+      "H2342",
+      "H3179",
+      "H3336",
+      "H4284",
+      "H7451",
+      "H3820",
+      "H5271",
+      "H6121",
+      "H605",
+      "H2114",
+      "H7358",
+      "H8582",
+      "H2889",
+      "H2931",
+      "G266",
+      "G2288",
+      "G1330",
+      "G3900",
+      "G2631",
+      "G1345",
+      "G1347",
+      "G3876",
+      "G2525",
+      "G268",
+      "G5043",
+      "G5449",
+      "G3709"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": ["covenant_theology", "dispensationalism", "new_covenant_theology"],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "lens": "covenant_theology",
+          "verdict": "affirms",
+          "note": "Adam as federal head transmits both corruption and guilt; classic Reformed reading of Rom 5.12-19"
+        },
+        {
+          "lens": "dispensationalism",
+          "verdict": "affirms",
+          "note": "Affirms inherited corruption but tends to weaker federalism than Reformed covenant model"
+        },
+        {
+          "lens": "new_covenant_theology",
+          "verdict": "affirms",
+          "note": "Affirms inherited corruption from Adam by lexical pattern; no dispute on this question across lenses"
+        },
+        {
+          "lens": "eastern_orthodox_ancestral_sin",
+          "verdict": "affirms",
+          "note": "Affirms inherited corruption (mortality and corrupted nature) but denies inherited juridical guilt for Adam's specific act"
+        }
+      ],
+      "notes": "Inherited corruption distinct from inherited guilt: this question concerns the lexical-canonical demonstration of pre-personal moral condition (chet from conception, yetzer evil from youth, physei children of wrath, kathistemi sinners through one man). The guilt-imputation question is sibling doc-inherited-guilt. Ezek 18 and Deut 24 address judicial responsibility for a parent's individual act, not propagation of a corrupted nature, so are not in actual tension with the corruption verdict. All major hermeneutic lenses affirm the corruption claim; the disagreement is downstream on imputation and total inability."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Council of Carthage 418, Canons I-II condemning Pelagianism",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Canon I: Adam was not created subject to death (death entered through sin). Canon II: infants are baptized for the remission of sins."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 404-406",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Adam and Eve committed a personal sin, but this sin affected the human nature that they would then transmit in a fallen state."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article II Of Original Sin",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article IX Of Original or Birth Sin",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Original Sin standeth not in the following of Adam, but it is the fault and corruption of the Nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "United Methodist Articles of Religion VII Of Original or Birth Sin",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "Schleitheim is silent on original sin doctrine; it focuses on church discipline and separation, leaving inherited corruption unaddressed at the confessional level."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession 6.2-6.3",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "By this sin they fell from their original righteousness, and so became dead in sin, and wholly defiled in all the parts and powers of soul and body."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America Q&A on Original Sin",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "While everyone bears the consequences of the first sin, the foremost of which is death, only Adam and Eve are guilty of that sin."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, The Fall of Man",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Man was created good and upright; but by voluntary transgression he fell and his only hope of redemption is in Jesus Christ the Son of God."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/psalms/51-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Behold, in iniquity (H5771 awon) I have been brought forth, and in sin (H2399 chet) doth my mother conceive me."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/genesis/8-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "H3336 yetzer (the imagination/intent) of the H3820 leb (heart) of man is H7451 ra (evil) from his H5271 naur (youth)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/jeremiah/17-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "The heart is H6121 aqob (deceitful/crooked) above all things and H605 anash (desperately sick/incurable); who can know it?"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/5-19.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G2525 kathistemi (constituted, aorist passive katestathesan) the many as G268 hamartolos (sinners) through one man's G3876 parakoe (disobedience)."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-3.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "We were G5449 physei (by nature) G5043 tekna (children) of G3709 orge (wrath), as also the rest."
+      },
+      {
+        "url": "https://biblehub.com/strongs/greek/266.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "G266 hamartia in Paul (Rom 5-7) functions as an imperial personage: sin reigns, exercises dominion, dwells in the flesh; not merely individual act."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1C.HTM",
+        "category": "magisterial",
+        "stance": "supports",
+        "quote": "CCC 404: Adam and Eve committed a personal sin, but this sin affected the human nature that they would then transmit in a fallen state."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Augsburg II: Since the fall of Adam all men begotten in the natural way are born with sin... this disease, or vice of origin, is truly sin."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "UM Articles VII: the corruption of the nature of every man, that naturally is engendered of the offspring of Adam."
+      },
+      {
+        "url": "https://www.oca.org/questions/teaching/original-sin",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "OCA: while everyone bears the consequences of the first sin, the foremost of which is death, only Adam and Eve are guilty of that sin."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Council_of_Carthage_(418)",
+        "category": "patristic_archive",
+        "stance": "supports",
+        "quote": "Carthage 418, Canon I: Adam was not created subject to death; death entered through sin. Canon II: infants are baptized for remission of sins."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "anglican-39-articles-text-not-fetched-this-run",
+      "ag-statement-of-fundamental-truths-not-fetched-this-run",
+      "ccel-augustine-direct-text-not-fetched-this-run",
+      "westminster-confession-text-not-fetched-this-run"
+    ]
+  }
+}

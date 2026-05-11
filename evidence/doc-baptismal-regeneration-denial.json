@@ -1,0 +1,460 @@
+{
+  "id": "doc-baptismal-regeneration-denial",
+  "answer": {
+    "id": "doc-baptismal-regeneration-denial",
+    "affirms": true,
+    "rationale": "Baptismal regeneration denied as a canonical-lexical reading. The clearest controlling text is 1 Pet 3:21, where Peter himself glosses the saving force of baptisma G908 negatively (ou sarkos apothesis rhupou G595 G4509 G4561, not removal of dirt of flesh) and positively (eperotema syneideseos agathes G1906 G4893 G18, appeal of a good conscience) tied di anastaseos Iesou Christou G386 (through the resurrection of Jesus Christ); the water is not the operative cause. This aligns with Eph 2:8-9 (chariti G5485 sesosmenoi G4982 dia pisteos G4102, not ex ergon G2041), Acts 10:44-48 (Spirit fell on Cornelius's household epi tous akouontas G191, hearing the word, before water baptism), Luke 23:43 (the unbaptized thief enters paradeisos G3857 sezomeron), Rom 4:11 (the sign sphragis G4973 follows the faith), Rom 10:9-10 (homologeo G3670 + pisteuo G4100 = sotheria G4991, no water step listed), and 1 Cor 1:14-17 (Paul distinguishes baptizo G907 from euangelizo G2097, his apostolic commission). Sacramentalist anchors (John 3:5 hydor G5204; Acts 2:38 eis G1519 aphesin G859; Titus 3:5 loutron palingenesias G3067 G3824; Mark 16:16 baptistheis G907 sothesetai G4982; Acts 22:16 apolouo G628) are real exegetical pressure, but each has plausible non-sacramentalist construals and Mark 16:16 sits in the disputed long-ending bracketed in NA28/UBS5.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": false,
+    "notes": "The proposition is contested across historic Christianity along a clean lineage line. Catholic, Eastern Orthodox, Lutheran, and high-church Anglican traditions affirm baptismal regeneration in some form (CCC 1213 calls baptism the sacrament of regeneration; Luther's Small Catechism IV says baptism works forgiveness of sins, rescues from death and the devil, gives eternal salvation; OCA teaches baptism is new birth by water and Spirit; Article XXVII calls baptism a sign of regeneration or new birth; the Methodist articles preserve similar language). Reformed, Baptist, Brethren, Anabaptist, Pentecostal, and most non-denominational traditions deny it (1689 Baptist Confession 29, Westminster 28, Belgic 34, Schleitheim 1527, Assemblies of God Statement). Because the historical consensus is divided_lineages, lexical evidence is genuinely contested at sacramentalist anchor verses, and faithful believers across centuries have held the opposite view in good conscience, this is not a Trinitarian or gospel-boundary line. Cult-marker status is reserved for a separate denial pattern (e.g., the International Churches of Christ, which conditions salvation on submission to their own baptism by their own administrator; that is handled at cult-icc-baptismal-regeneration, K2_explicitly_excluded). The broad in-house sacramentalist position (Rome, Wittenberg, Canterbury, Constantinople) is heterodoxy on the Brethren reading but not a cult-marker by canonical bar. The owner can visit, participate (e.g., attend a wedding-mass), and marry a faithful Lutheran or Anglican spouse, but cannot be a member of, serve under, or have children catechized in a tradition that teaches the water itself effects new birth, because that placement of regenerative agency strikes at sola gratia sola fide and risks producing the Cornelius reversal (water without Spirit, presumption without faith)."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Water baptism is or is not the instrumental cause of regeneration and forgiveness of sins ex opere operato, apart from a distinct prior or simultaneous Spirit-wrought faith.",
+      "notes": "The stem reads as a Reformed-Baptist-evangelical thesis statement: 'outward sign of an inward reality accomplished by grace through faith, and does not in itself effect regeneration or wash away sin apart from the inner work of the Spirit and faith.' That is a confessional formulation, not a neutral question. It is also the polemical opposite of CCC 1213, the Lutheran Small Catechism IV, OCA on baptism, and Article XXVII. Working form proceeds from the neutralized version: the question is whether the canonical-lexical pattern locates regenerative agency in the water rite itself, in the appeal-of-conscience and faith through which the rite is received, or in both inseparably. Flag stem-pre-loaded-verdict applied."
+    },
+    "lay_summary": {
+      "reasoning": "Verdict in plain words. Water baptism does not by itself make a person spiritually alive or wash away their sins. The new birth happens by God's grace, received through faith, by the work of the Holy Spirit. Baptism is the outward sign and pledge of that work, not the instrument that performs it. The strongest reason from Scripture. Peter himself, in 1 Peter 3:21, anticipates the question. He says baptism saves you, then immediately clarifies what he means: not the washing of dirt off the body, but the appeal of a good conscience toward God, through the resurrection of Jesus Christ. Peter says out loud that the water is not the operative thing. The appeal of conscience is. In Ephesians 2:8-9 Paul says we are saved by grace through faith, and this is the gift of God, not from works, so no one can boast. In Acts 10, when Peter preached to Cornelius's household, the Holy Spirit fell on them while they were still listening, before Peter had time to pour any water. Peter then said, can anyone refuse water, since they have received the Spirit just as we have? The Spirit arrived first; water followed as confirmation. The thief on the cross was promised paradise that same day without ever being baptized. In Romans 10:9 Paul lists only confession and faith as the route to salvation, with no water step. In Romans 4 Abraham was counted righteous by faith and only after that received circumcision as a seal of the righteousness he already had by faith. The pattern is consistent. The strongest counterargument from Scripture. John 3:5 says unless someone is born of water and the Spirit they cannot enter the kingdom of God. Acts 2:38 says repent and be baptized for the forgiveness of sins. Acts 22:16 says rise and be baptized and wash away your sins. Titus 3:5 says God saved us by the washing of regeneration. Mark 16:16 says whoever believes and is baptized will be saved. Read flatly, these sound as if water baptism actually accomplishes forgiveness and new birth. How the verdict handles the tension. Each sacramentalist text has a real non-sacramentalist construal grounded in the same Greek. In John 3:5 water can mean physical birth, the Spirit's cleansing word, or baptism as the visible sign of an invisible reality; the chapter goes on to ground new birth in believing, never circling back to water. In Acts 2:38 the little word for forgiveness can mean either in order to get or with reference to a forgiveness already granted, and the same writer Luke later shows Cornelius's household forgiven before any water. In Acts 22:16 the washing of sins is parallel to calling on his name, which is the operative phrase.",
+      "denominational_landscape": "Christians disagree on this proposition, and the disagreement runs along old lineage lines. The Roman Catholic Church affirms baptismal regeneration in strong form. The Catechism of the Catholic Church calls baptism the gateway to life in the Spirit and the sacrament of regeneration through water in the word, by which a person is freed from sin and reborn as a child of God. Eastern Orthodoxy teaches the same, with baptism and chrismation as the entry into new life in Christ. The Orthodox Church in America describes baptism as new birth by water and the Holy Spirit into the Kingdom of God. Lutheranism affirms it in a strong form: Luther's Small Catechism teaches that baptism works forgiveness of sins, rescues from death and the devil, and gives eternal salvation to all who believe what God has promised. Classical Anglicanism in Article XXVII calls baptism a sign of regeneration or new birth and ties the Spirit's grace to the rite, though low-church Anglicans read this symbolically and high-church Anglicans read it sacramentally. Methodism preserves the same wording from the Anglican article. Reformed traditions occupy a middle position: Westminster Confession 28 and Belgic Confession 34 reject the ex opere operato view but tie the rite closely to the covenant of grace, especially for infants of believers. Particular Baptists, in the 1689 Confession 29, explicitly deny that the rite itself confers grace and restrict baptism to professing believers. Anabaptists (Schleitheim 1527, Mennonite Confession of Dordrecht) hold the same denial and confine baptism to those who have learned repentance and believe. Pentecostal traditions (Assemblies of God Statement of Fundamental Truths) deny baptismal regeneration and treat water baptism as an ordinance of obedience for believers. The Brethren tradition aligns with the Baptist and Anabaptist denial. The patristic record shows progressive movement: the second century Didache and Justin tie baptism to forgiveness language; by Tertullian's De Baptismo and Cyprian, baptism is described as effecting new life; by the fifth century the Augustinian framework of original sin reinforces baptism's necessity for infants. Public-record cult-grade carriers of a hard form of baptismal regeneration include the International Churches of Christ, which conditions salvation on submission to baptism administered by their own movement; this is treated as a cult-marker in a separate question. The broad Catholic, Lutheran, Anglican, and Orthodox positions are not cult-grade; they are kin traditions disagreeing on the locus of regenerative agency."
+    },
+    "scripture": [
+      {
+        "ref": "1Pet.3.21",
+        "key_term": "βάπτισμα (baptisma) G908, ἀντίτυπον (antitypon) G499, ἀπόθεσις ῥύπου σαρκὸς (apothesis rhupou sarkos) G595 G4509 G4561, ἐπερώτημα συνειδήσεως ἀγαθῆς (eperotema syneideseos agathes) G1906 G4893 G18, δι ἀναστάσεως Ἰησοῦ Χριστοῦ (di anastaseos Iesou Christou) G386",
+        "force": "Baptism now saves you, as antitype of the flood, NOT as apothesis rhupou sarkos (removal of dirt of flesh) but AS eperotema syneideseos agathes (appeal/pledge of a good conscience) through the resurrection of Jesus Christ. Peter himself explicitly negates the water-as-cause reading and relocates the saving force in the conscience-appeal and the resurrection. Controlling text for the verdict.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Eph.2.8-9",
+        "key_term": "χάριτι (chariti) G5485, σεσῳσμένοι (sesosmenoi) G4982, διὰ πίστεως (dia pisteos) G4102, δῶρον (doron) G1435, οὐκ ἐξ ἔργων (ouk ex ergon) G2041",
+        "force": "By grace you have been saved, through faith; and this not of yourselves, it is the gift of God; not of works, lest anyone boast. Saving causality is located in charis dia pisteos, not in any human-administered rite. The negation ouk ex ergon excludes baptism as the instrumental cause of salvation if baptism is reckoned an ergon.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.10.44-48",
+        "key_term": "ἐπέπεσεν τὸ πνεῦμα τὸ ἅγιον (epepesen to pneuma to hagion) G1968 G4151 G40, ἐπὶ τοὺς ἀκούοντας τὸν λόγον (epi tous akouontas ton logon) G191 G3056, κωλῦσαι (kolusai) G2967, βαπτισθῆναι (baptisthenai) G907",
+        "force": "The Holy Spirit fell on Cornelius and household epi tous akouontas, while they were hearing the word, BEFORE any water baptism. Peter then asks if anyone can kolyo (forbid) water now that they have received the Spirit. Narrative-canonical refutation of water-as-cause-of-regeneration: the regenerative event is Spirit-on-faith-hearing the gospel, water follows as confirming sign.",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Luke.23.42-43",
+        "key_term": "μνήσθητί μου (mnestheti mou) G3415, παράδεισος (paradeisos) G3857, σήμερον (semeron) G4594",
+        "force": "Remember me when you come into your kingdom. Today you will be with me in paradeisos. The dying thief, unbaptized in NT-Christian baptism, is given immediate paradeisos by Christ on the basis of faith-appeal alone. Concrete canonical case of regeneration-and-final-salvation without water baptism.",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Rom.4.10-11",
+        "key_term": "σημεῖον (semeion) G4592, περιτομῆς (peritomes) G4061, σφραγῖδα (sphragida) G4973, δικαιοσύνης τῆς πίστεως (dikaiosynes tes pisteos) G1343 G4102",
+        "force": "Abraham received the semeion of circumcision, a sphragis (seal) of the righteousness of the faith he had while still uncircumcised. The pattern is fixed: faith-righteousness FIRST, covenant-sign SECOND, as confirming seal not as cause. Paul makes this the paradigm of how every NT sign relates to its inner reality.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "typology"
+        ]
+      },
+      {
+        "ref": "Rom.10.9-10",
+        "key_term": "ὁμολογήσῃς (homologeses) G3670, πιστεύσῃς (pisteuses) G4100, σωθήσῃ (sotheses) G4982, εἰς δικαιοσύνην (eis dikaiosynen) G1343, εἰς σωτηρίαν (eis soterian) G4991",
+        "force": "If you homologeo Jesus as Lord and pisteuo in your kardia that God raised him from the dead, you sothesetai. Heart-faith for righteousness, mouth-confession for salvation. Water baptism is not in the formula. Pauline summary of how a person passes from death to life.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1Cor.1.14-17",
+        "key_term": "οὐκ ἀπέστειλέν με Χριστὸς βαπτίζειν ἀλλὰ εὐαγγελίζεσθαι (ouk apesteilen me Christos baptizein alla euangelizesthai) G649 G907 G2097",
+        "force": "Christ did not send me to baptize but to preach the gospel. Paul distinguishes baptizo from euangelizo as two functions, glad he personally baptized only a few in Corinth. Lexically incompatible with the view that baptism IS the salvific moment; if it were, the apostle's primary mission would be administering baptism.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Gal.3.6-9",
+        "key_term": "ἐπίστευσεν Ἀβραὰμ (episteusen Abraam) G4100, ἐλογίσθη εἰς δικαιοσύνην (elogisthe eis dikaiosynen) G3049 G1343, οἱ ἐκ πίστεως (hoi ek pisteos) G4102, εὐλογοῦνται (eulogountai) G2127",
+        "force": "Abraham believed God and it was credited to him as righteousness; those of pistis are sons of Abraham. Justification by faith is anchored centuries before Mosaic circumcision or any water rite. Pan-canonical pattern: faith justifies, sign confirms.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Heb.11.4-12",
+        "key_term": "πίστει (pistei) G4102, ἐμαρτυρήθη (emartyrethe) G3140",
+        "force": "Abel, Enoch, Noah, Abraham, Sarah all approved by God through pistis without NT baptism. Hebrews 11 surveys the OT cloud of witnesses justified by faith with no water-rite-as-cause. Pan-canonical confirmation that the regenerative pattern is faith, not water.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "John.3.5",
+        "key_term": "ἐὰν μή τις γεννηθῇ ἐξ ὕδατος καὶ πνεύματος (ean me tis gennethe ex hydatos kai pneumatos) G1080 G5204 G4151",
+        "force": "Unless one is born of hydor and pneuma he cannot enter the kingdom. Sacramentalist proof-text. Three exegetically defensible readings: (a) baptism + Spirit (sacramental); (b) physical birth (water of the womb) + spiritual birth; (c) hendiadys, water=Spirit's cleansing word (cf. Ezek 36:25-27, Eph 5:26). The chapter's resolution at 3:14-16 grounds eternal life in believing, not in water. Complicates surface reading; does not control the verdict against the appeal-of-conscience text in 1 Pet 3:21.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Acts.2.38",
+        "key_term": "μετανοήσατε (metanoesate) G3340, βαπτισθήτω (baptistheto) G907, εἰς ἄφεσιν τῶν ἁμαρτιῶν (eis aphesin ton hamartion) G1519 G859",
+        "force": "Repent and be baptized eis aphesin ton hamartion. The preposition eis G1519 is genuinely ambiguous: causal-telic (in order to obtain) or resultative-causal-backward (with reference to). Compare Matt 12:41 eis to kerygma Iona (the Ninevites repented eis the preaching of Jonah, not in order to produce it but in response to it). Luke himself shows Cornelius's household forgiven and Spirit-filled BEFORE water (Acts 10:44-48), constraining the Acts 2:38 reading away from strict instrumental causation.",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Acts.22.16",
+        "key_term": "βάπτισαι (baptisai) G907, ἀπόλουσαι τὰς ἁμαρτίας σου (apolousai tas hamartias sou) G628 G266, ἐπικαλεσάμενος τὸ ὄνομα αὐτοῦ (epikalesamenos to onoma autou) G1941 G3686",
+        "force": "Rise, be baptized, and apolouo (wash away) your sins, epikaleomai (calling upon) his name. The participle epikalesamenos grammatically governs the washing: the sins are washed away in the calling on the name, not by the water itself. Same syntactic pattern as Joel 2:32 / Rom 10:13 (pas hos an epikalesetai to onoma kyriou sothesetai).",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Titus.3.5",
+        "key_term": "λουτροῦ παλιγγενεσίας (loutrou palingenesias) G3067 G3824, ἀνακαινώσεως πνεύματος ἁγίου (anakainoseos pneumatos hagiou) G342 G4151 G40",
+        "force": "Not by works of righteousness which we have done, but according to his mercy he saved us, dia loutrou palingenesias kai anakainoseos pneumatos hagiou. The loutron of palingenesia is paired with renewal by the Holy Spirit. Sacramentalist reading: baptism. Non-sacramentalist reading: the inner washing IS the Spirit's renewal, the metaphor of bath standing for new birth (cf. Ezek 36:25, John 3:5, Eph 5:26). The clause opens with explicit exclusion of works as the saving cause.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Mark.16.16",
+        "key_term": "ὁ πιστεύσας καὶ βαπτισθεὶς σωθήσεται (ho pisteusas kai baptistheis sothesetai) G4100 G907 G4982, ὁ δὲ ἀπιστήσας κατακριθήσεται (ho de apistesas katakrithesetai) G569 G2632",
+        "force": "He who believes and is baptized will be saved; he who does not believe will be condemned. Asymmetric: condemnation hinges only on apistia, not on lack of baptism. Verse sits in Mark 16:9-20 (long ending), absent from Codex Sinaiticus and Vaticanus, bracketed in NA28 and UBS5 as not original. Cannot bear the weight of a regenerative-water doctrine alone.",
+        "supports": "complicates",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Ezek.36.25-27",
+        "key_term": "וְזָרַקְתִּי עֲלֵיכֶם מַיִם טְהוֹרִים (we-zaraqti aleikem mayim tehorim) H2236 H4325 H2889, רוּחַ חֲדָשָׁה (ruach chadashah) H7307 H2319, וְאֶת רוּחִי אֶתֵּן בְּקִרְבְּכֶם (we-et ruchi etten be-qirbekem) H7307",
+        "force": "I will sprinkle clean water upon you, and you shall be clean; a new ruach I will put within you; my ruach I will put within you. The water and the Spirit are coupled in the new-covenant promise, with the WATER FUNCTIONING AS THE FIGURE for the Spirit's inner cleansing. OT background to John 3:5: water=Spirit-cleansing metaphor, not water-rite-as-cause.",
+        "supports": "for",
+        "genre": "prophecy",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Eph.5.26",
+        "key_term": "καθαρίσας τῷ λουτρῷ τοῦ ὕδατος ἐν ῥήματι (katharisas to loutro tou hydatos en rhemati) G2511 G3067 G5204 G4487",
+        "force": "Christ cleanses the church to loutro tou hydatos en rhemati (by the washing of water by the word). Same loutron noun as Titus 3:5. The instrumental phrase en rhemati locates the cleansing agency in the word, with hydatos serving as the figurative medium. Pauline-canonical control on how loutron language works in NT epistles.",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      },
+      {
+        "ref": "Rom.6.3-4",
+        "key_term": "ἐβαπτίσθημεν εἰς Χριστὸν Ἰησοῦν (ebaptisthemen eis Christon Iesoun) G907, εἰς τὸν θάνατον αὐτοῦ (eis ton thanaton autou) G2288, συνετάφημεν (synetaphemen) G4916",
+        "force": "We were baptized eis Christ, eis his death, synthapto (buried with) him through baptism into death. The baptism here is portrayed as participation in Christ's death and resurrection. Complicating text: sacramentalists read this as the regenerative locus. Non-sacramentalists read it as union with Christ figured by the rite; the same Paul writes Eph 2:8-9 and 1 Cor 1:14-17, foreclosing rite-as-cause.",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": [
+          "metaphor"
+        ]
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G908",
+      "G907",
+      "G499",
+      "G595",
+      "G4509",
+      "G4561",
+      "G1906",
+      "G4893",
+      "G18",
+      "G386",
+      "G5485",
+      "G4982",
+      "G4102",
+      "G1435",
+      "G2041",
+      "G1968",
+      "G4151",
+      "G40",
+      "G191",
+      "G3056",
+      "G2967",
+      "G3415",
+      "G3857",
+      "G4594",
+      "G4592",
+      "G4061",
+      "G4973",
+      "G1343",
+      "G3670",
+      "G4100",
+      "G4991",
+      "G649",
+      "G2097",
+      "G3049",
+      "G2127",
+      "G3140",
+      "G1080",
+      "G5204",
+      "G3340",
+      "G1519",
+      "G859",
+      "G628",
+      "G266",
+      "G1941",
+      "G3686",
+      "G3067",
+      "G3824",
+      "G342",
+      "G569",
+      "G2632",
+      "H2236",
+      "H4325",
+      "H2889",
+      "H7307",
+      "H2319",
+      "G2511",
+      "G4487",
+      "G2288",
+      "G4916"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "dispensationalism",
+        "new_covenant_theology",
+        "progressive_covenantalism"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": true,
+      "competing_lens_verdicts": [
+        {
+          "framework": "covenant_theology",
+          "verdict": "Mixed. Continental Reformed (Belgic 34, Heidelberg) and Westminster covenant theology deny baptismal regeneration ex opere operato but tie baptism tightly to the covenant of grace, especially for infants. Within paedobaptist covenant theology, baptism is a sign and seal of the covenant promises; regenerative grace may or may not be tied to the moment of administration. Federal Vision streams inside Reformed covenant theology come closer to objective regenerative efficacy via baptism but remain a minority and contested view."
+        },
+        {
+          "framework": "dispensationalism",
+          "verdict": "Affirms denial. Classical dispensationalism (Scofield, Ryrie, Walvoord) treats water baptism as a believer's ordinance of obedience, not a means of regeneration. Hyper-dispensationalism (Bullinger, Stam, the Pauline-baptism-only stream) goes further and questions whether water baptism applies to the present dispensation at all."
+        },
+        {
+          "framework": "new_covenant_theology",
+          "verdict": "Affirms denial. NCT treats believer's baptism as the sign of the new covenant, administered to those already regenerated by the Spirit through faith. Regenerative agency is located in the Spirit's effectual call, not in the water rite."
+        },
+        {
+          "framework": "progressive_covenantalism",
+          "verdict": "Affirms denial. Progressive covenantalism reads the new covenant as inaugurated with the Spirit poured out on all who believe, with baptism as the sign of union with Christ for those already regenerate."
+        }
+      ],
+      "notes": "Brethren-on-trial discipline: the Brethren reading aligns with NCT and progressive covenantalism and against classical Reformed paedobaptist covenant theology on the connection between sign and regenerative grace. The lexical work in 1 Pet 3:21 (eperotema syneideseos negation of water-as-cause) and Acts 10:44-48 (Spirit precedes water for Cornelius) is canonically pan-passage; it survives across all four NT hermeneutical frameworks listed. But the ambiguity in John 3:5, Acts 2:38, Acts 22:16, Titus 3:5, and Mark 16:16 is real and is what allows the Catholic, Orthodox, Lutheran, and Anglican traditions to construct their sacramentalist reading in good conscience. Confidence is therefore not high; the lexical pattern is contested at the sacramentalist anchor verses, and the most decisive single text (1 Pet 3:21) does the work of explicit clarification rather than of standalone proof."
+    },
+    "counter_witness": [
+      {
+        "tradition": "patristic",
+        "anchor": "Tertullian, De Baptismo 1 (ANF Volume 3), c. 200 AD",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "By washing away the sins of our early blindness, we are set free and admitted into eternal life. Tertullian affirms baptism's regenerative efficacy as a sacrament of new life."
+      },
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church paragraph 1213 (on Baptism as the basis of the whole Christian life)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Holy Baptism is the basis of the whole Christian life, the gateway to life in the Spirit; through Baptism we are freed from sin and reborn as sons of God."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Luther's Small Catechism, Part IV Of Holy Baptism (Book of Concord)",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Baptism works forgiveness of sins, rescues from death and the devil, and gives eternal salvation to all who believe what God has promised in the words of institution."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "Articles of Religion XXVII Of Baptism (Church of England, 1571)",
+        "verified": false,
+        "stance": "denies",
+        "key_phrase": "Baptism is not only a sign of profession but also a sign of regeneration or new birth, whereby they that receive baptism rightly are grafted into the Church."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion, Article XVII Of Baptism (Wesley's abridgement)",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Baptism is not only a sign of profession and mark of difference whereby Christians are distinguished from others that are not baptized; but it is also a sign of regeneration or the new birth."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith Chapter 28 Of Baptism, sections 5-6; Belgic Confession Article 34",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Grace and salvation are not so inseparably annexed unto baptism as that no person can be regenerated or saved without it, or that all who are baptized are undoubtedly regenerated."
+      },
+      {
+        "tradition": "anabaptist",
+        "anchor": "Schleitheim Confession 1527, Article I on Baptism",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths, Article 6 Ordinances of the Church",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "Ordinance of Baptism in Water: a declaration to the world that the believer has died with Christ and been raised with Him to walk in newness of life. A symbol, not a means of regeneration."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "Orthodox Church in America, The Orthodox Faith, on the Sacrament of Baptism",
+        "verified": true,
+        "stance": "denies",
+        "key_phrase": "Christian baptism is man's participation in the event of Easter. It is a new birth by water and the Holy Spirit into the Kingdom of God."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/1_peter/3-21.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Pet 3:21 baptisma G908 antitypon G499 ou sarkos apothesis rhupou G595 G4509 G4561 alla syneideseos agathes eperotema G1906 G4893 G18, di anastaseos Iesou Christou G386."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-8.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 2:8-9 chariti G5485 este sesosmenoi G4982 dia pisteos G4102; kai touto ouk ex hymon, theou to doron G1435; ouk ex ergon G2041, hina me tis kauchesetai."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/10.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Acts 10:44 epepesen to pneuma to hagion epi pantas tous akouontas ton logon G191 G3056; v.47 dynatai kolusai G2967 tis to hydor G5204 tou me baptisthenai G907 toutous."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/luke/23-43.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Luke 23:43 amen lego soi, semeron G4594 met emou ese en to paradeiso G3857. Unbaptized thief, immediate paradeisos by Christ on faith-appeal alone."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/4-11.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 4:11 semeion G4592 elaben peritomes G4061, sphragida G4973 tes dikaiosynes G1343 tes pisteos G4102. Sign-and-seal follows faith-righteousness as confirming pattern."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/romans/10-9.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Rom 10:9-10 homologeses G3670 + pisteuses G4100 = sothese G4982. Mouth-confession and heart-faith; no water step in the apostolic salvation formula."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_corinthians/1-17.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "1 Cor 1:17 ou gar apesteilen me Christos baptizein G907 alla euangelizesthai G2097. Apostolic distinction between rite-administration and gospel-proclamation."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/john/3-5.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "John 3:5 ean me tis gennethe ex hydatos G5204 kai pneumatos G4151. Hydor admits multiple construals: baptism, physical birth, hendiadys with Spirit-cleansing word."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/2-38.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Acts 2:38 metanoesate G3340 kai baptistheto G907 hekastos hymon eis G1519 aphesin G859 ton hamartion. Preposition eis ambiguous: telic or resultative-with-reference-to."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/22-16.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Acts 22:16 anastas baptisai G907 kai apolousai G628 tas hamartias sou, epikalesamenos G1941 to onoma autou G3686. Participle epikalesamenos governs the washing."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/3-5.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Titus 3:5 esosen hemas dia loutrou G3067 palingenesias G3824 kai anakainoseos G342 pneumatos hagiou. Bath-of-new-birth paired with Spirit-renewal; metaphor of inner cleansing."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/mark/16-16.htm",
+        "category": "interlinear",
+        "stance": "complicates",
+        "quote": "Mark 16:16 ho pisteusas kai baptistheis G907 sothesetai G4982; ho de apistesas G569 katakrithesetai G2632. Condemnation hinges only on unbelief. Long-ending textual status disputed."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ezekiel/36-25.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Ezek 36:25-27 zaraq mayim tehorim H2236 H4325 H2889; ruach chadashah H7307 H2319. Water as figure of Spirit's inner cleansing; OT background to John 3:5."
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/5-26.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Eph 5:26 katharisas G2511 to loutro G3067 tou hydatos G5204 en rhemati G4487. Cleansing-instrument is the word; loutron-water language operates figuratively."
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3G.HTM",
+        "category": "magisterial",
+        "stance": "opposes",
+        "quote": "CCC 1213: Holy Baptism is the basis of the whole Christian life, the gateway to life in the Spirit; through Baptism we are freed from sin and reborn as sons of God."
+      },
+      {
+        "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/worship/the-sacraments/baptism",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Christian baptism is man's participation in the event of Easter. It is a new birth by water and the Holy Spirit into the Kingdom of God."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "opposes",
+        "quote": "Methodist Article XVII: Baptism is not only a sign of profession but also a sign of regeneration or the new birth. Wesleyan moderate sacramentalism."
+      },
+      {
+        "url": "https://ccel.org/ccel/schaff/anf03.vi.iii.i.html",
+        "category": "patristic_archive",
+        "stance": "opposes",
+        "quote": "Tertullian, De Baptismo 1: by washing away the sins of our early blindness, we are set free and admitted into eternal life. Early patristic sacramentalism."
+      },
+      {
+        "url": "https://courses.washington.edu/hist112/SCHLEITHEIM%20CONFESSION%20OF%20FAITH.htm",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Schleitheim 1527 Article I: Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ."
+      }
+    ],
+    "confidence": "medium",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "apparatus-vs-counter-witness-conflict",
+      "confession-tradition-divergence"
+    ]
+  }
+}

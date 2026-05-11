@@ -1,0 +1,307 @@
+{
+  "id": "doc-decisional-regeneration",
+  "answer": {
+    "id": "doc-decisional-regeneration",
+    "affirms": true,
+    "rationale": "Apparatus and interlinear show new birth is God-initiated: John 1:13 ek theou egennethesan (gennao G1080 with ek theou, expressly negating thelematos andros, the will of man); Eph 2:5 syzoopoieo G4806 acts on people dead in trespasses; Titus 3:5 paliggenesia G3824 + loutron G3067 by the Spirit, ou ex ergon; 1 John 5:1 gegennetai G1080 (perfect indicative passive) attaches birth as completed prior state to ongoing pisteuon (present active participle); James 1:18 boulomai + apokyeo place initiative in God's will. The decisional act is response, not the saving event.",
+    "would_die_for": false,
+    "cult_marker_if_denied": false,
+    "would_visit_if_otherwise": true,
+    "would_participate_if_otherwise": true,
+    "would_serve_if_otherwise": false,
+    "would_be_member_if_otherwise": false,
+    "would_let_children_be_taught_otherwise": false,
+    "would_marry_if_held_otherwise": true,
+    "would_publicly_correct_if_otherwise": true,
+    "notes": "In-house evangelical methodology debate, not a gospel boundary. Decisional emphasis is carried by revivalist streams (Finney's New Measures 1830s, Billy Graham crusades 20th century, much of Wesleyan-Methodist and Pentecostal altar-call practice). The Reformed-evangelical critique (B.B. Warfield, Iain Murray, James Montgomery Boice, R.C. Sproul, Paul Washer's 2002 Shocking Youth Message) is what the stem encodes. The lexical data favors the critique on a strong reading: regeneration is monergistic in the texts. But many faithful believers across centuries have been genuinely converted under altar-call methodology; fruit and precision are not the same thing. Decline a teaching role where the saving event is identified with the outward act; accept worship and friendship across the divide."
+  },
+  "evidence": {
+    "stem_audit": {
+      "verdict_preloaded": true,
+      "neutralized_form": "Is the new birth effected by God's Spirit prior to and producing the human response of faith, or is it effected by the human decision of faith itself?",
+      "notes": "Original stem packages the Reformed verdict and a polemic caricature of revivalist practice (raised hand, walked aisle, repeated prayer treated as itself the saving event). Few revivalist practitioners would describe their own theology in those terms. Working the neutral form."
+    },
+    "lay_summary": {
+      "reasoning": "The Bible teaches that being born again is something God does in a person, not something a person produces by raising a hand, walking to the front of a church, or repeating a prayer. John 1:13 says believers were born not of any human will but of God. Ephesians 2 says people were dead in their sins and God made them alive, which is an action done to someone who cannot act for themselves. Titus 3:5 calls this a washing of new birth done by the Holy Spirit. James 1:18 says God of his own will brought us forth by the word of truth. 1 Peter 1:23 says we have been born again through God's living and abiding word. 1 John 5:1 uses a verb form for has been born that places the birth as something already completed and standing behind the act of believing, so belief is the evidence that the birth has happened, not the cause of it. Acts 16:14 shows the pattern: the Lord opened Lydia's heart, and then she paid attention to what Paul said. There are texts that look like they push the other way. Acts 16:31 says believe in the Lord Jesus and you will be saved. Romans 10:9 says if you confess and believe you will be saved. Revelation 3:20 pictures Christ knocking at the door. These name belief and response as real and necessary. They do not, however, locate the saving power in the outward act of the response. They locate it in the object trusted, which is Christ, and the faith itself is described elsewhere as a gift God grants. So the strongest answer is that the outward act of decision is a true response and can be a genuine moment of conversion in a person's experience, but the saving event itself is the Spirit's work of giving new birth, which produces the faith, which then expresses itself in confession. Where revivalist preachers tell people the prayer or the walk forward is the saving event, that crosses a line Scripture itself does not cross. Where they call sinners to respond to Christ in real faith, that is the apostolic pattern.",
+      "denominational_landscape": "This is an in-house disagreement inside the wider Protestant family, not a line between Christianity and a cult. Catholic and Eastern Orthodox traditions tie new birth to baptism and largely sit outside the revivalist-versus-Reformed dispute. The Catholic Catechism stresses that the grace of salvation is a free gift and that conversion responds to divine initiative. Eastern Orthodoxy teaches synergy, a real cooperation of human will with divine grace, but always with grace going first. Lutherans, in the Augsburg Confession Article 18, deny that the human will can produce spiritual righteousness without the Holy Spirit. Anglican formularies in the 39 Articles deny that natural human strength can turn a person to faith. Methodist Articles of Religion, drawing on Wesley, teach prevenient grace, which means God's grace goes before human willing and enables it. So on the deep question, where the new birth comes from, the historic confessions agree: God acts first. The visible disagreement is over evangelistic method. Reformed and many Lutheran and Anglican congregations are wary of altar-call and decision-card methodology because it can give a person false assurance based on an outward act. Wesleyan-Methodist, Holiness, Pentecostal, and many Baptist congregations use altar calls and decision prayers as means of calling sinners to respond. Most thoughtful preachers in those traditions do not actually teach that the prayer itself regenerates; they treat it as the moment a person publicly closes with the offer of Christ. The teaching that decisional regeneration in its strong form is wrong is therefore widely shared across the historic confessional traditions when stated carefully, but the practice of altar calls is broadly accepted. Public-record cults like Mormonism redefine new birth so thoroughly that the present question does not even apply to them in the same shape."
+    },
+    "scripture": [
+      {
+        "ref": "John.1.13",
+        "key_term": "γεννάω (gennao) G1080 + ἐκ θεοῦ (ek theou) G2316 + θέλημα ἀνδρός (thelema andros) G2307+G435",
+        "force": "Believers were begotten not of blood, nor of will of flesh, nor of will of man, but of God; the will of man is expressly excluded as the cause of new birth",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "John.3.8",
+        "key_term": "πνεῦμα (pneuma) G4151 + πνέω (pneo) G4154 + θέλω (thelo) G2309",
+        "force": "The Spirit blows where it wills; the new birth is at the Spirit's initiative, not at the candidate's",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": ["metaphor", "simile"]
+      },
+      {
+        "ref": "John.6.44",
+        "key_term": "ἑλκύω (helkyo) G1670",
+        "force": "No one is able to come to Christ unless the Father draws him; coming is conditioned on prior divine drawing",
+        "supports": "for",
+        "genre": "gospel",
+        "figures": []
+      },
+      {
+        "ref": "Eph.2.5",
+        "key_term": "συζωοποιέω (syzoopoieo) G4806",
+        "force": "God made us alive together with Christ while we were dead in trespasses; the dead do not decide themselves alive",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Titus.3.5",
+        "key_term": "παλιγγενεσία (paliggenesia) G3824 + λουτρόν (loutron) G3067",
+        "force": "Saved by the washing of new birth and renewing of the Holy Spirit, not by works done in righteousness",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1John.5.1",
+        "key_term": "πιστεύων (pisteuon) G4100 present active participle + γεγέννηται (gegennetai) G1080 perfect passive indicative",
+        "force": "The one believing has already been born of God; the verb form places the new birth as completed prior state under the ongoing act of believing",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Acts.16.14",
+        "key_term": "διανοίγω (dianoigo) G1272",
+        "force": "The Lord opened Lydia's heart, and then she paid attention to Paul's words; divine opening precedes attentive response",
+        "supports": "for",
+        "genre": "narrative",
+        "figures": ["metonymy"]
+      },
+      {
+        "ref": "James.1.18",
+        "key_term": "βούλομαι (boulomai) G1014 + ἀποκυέω (apokyeo) G616 + λόγος ἀληθείας (logos aletheias) G3056+G225",
+        "force": "Of his own will God brought us forth by the word of truth; agency and initiative are God's",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "1Pet.1.23",
+        "key_term": "ἀναγεννάω (anagennao) G313 + σπορά (spora) G4701 + λόγος (logos) G3056",
+        "force": "Having been born again, not of perishable seed but of imperishable, through the living and abiding word of God",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      },
+      {
+        "ref": "Acts.16.31",
+        "key_term": "πιστεύω (pisteuo) G4100",
+        "force": "Believe in the Lord Jesus and you will be saved; faith named as the means of salvation on the human side",
+        "supports": "complicates",
+        "genre": "narrative",
+        "figures": []
+      },
+      {
+        "ref": "Rom.10.9",
+        "key_term": "ὁμολογέω (homologeo) G3670 + πιστεύω (pisteuo) G4100",
+        "force": "If you confess with your mouth and believe in your heart, you will be saved; outward confession + inward faith are named as the saving response",
+        "supports": "complicates",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "Rev.3.20",
+        "key_term": "κρούω (krouo) G2925 + φωνή (phone) G5456",
+        "force": "Behold I stand at the door and knock; if anyone hears my voice and opens the door, I will come in; pictures real human response",
+        "supports": "complicates",
+        "genre": "apocalyptic",
+        "figures": ["metaphor", "apocalyptic-symbolism"]
+      },
+      {
+        "ref": "1John.5.4",
+        "key_term": "γεννάω (gennao) G1080",
+        "force": "Whatever has been born of God overcomes the world; the new birth is the cause of overcoming faith, not its effect",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": []
+      },
+      {
+        "ref": "1John.3.9",
+        "key_term": "γεννάω (gennao) G1080 + σπέρμα (sperma) G4690",
+        "force": "Everyone born of God does not keep on sinning, for God's seed abides in him; new birth carries an ontological change",
+        "supports": "for",
+        "genre": "epistle",
+        "figures": ["metaphor"]
+      }
+    ],
+    "concordance_lemmas_traversed": [
+      "G1080",
+      "G313",
+      "G3824",
+      "G3067",
+      "G4806",
+      "G4151",
+      "G4154",
+      "G2309",
+      "G2307",
+      "G1670",
+      "G1272",
+      "G1014",
+      "G616",
+      "G4701",
+      "G3056",
+      "G4100",
+      "G3670",
+      "G4690",
+      "G2925"
+    ],
+    "complicating_texts_searched": true,
+    "hermeneutics": {
+      "primary_method": "grammatico-historical",
+      "frameworks_in_play": [
+        "covenant_theology",
+        "new_covenant_theology",
+        "wesleyan_arminian"
+      ],
+      "analogia_scripturae_invoked": true,
+      "progressive_revelation_factor": false,
+      "competing_lens_verdicts": [
+        {
+          "lens": "monergistic_reformed",
+          "verdict": "Regeneration precedes and produces faith; decisional methodology is at best imprecise, at worst false assurance"
+        },
+        {
+          "lens": "wesleyan_arminian_prevenient_grace",
+          "verdict": "Prevenient grace enables the human will, which then cooperates with God in believing; the moment of decision is a real instrument by which the Spirit applies new birth"
+        },
+        {
+          "lens": "lutheran_sacramental",
+          "verdict": "New birth is tied to baptism and the Word; decisional revivalism is rejected as a separate methodology"
+        },
+        {
+          "lens": "catholic_baptismal_regeneration",
+          "verdict": "New birth occurs at baptism; the revivalist-versus-Reformed framing sits outside this lens"
+        }
+      ],
+      "notes": "Cross-text harmonization is the load-bearing move: divine-monergistic texts (John 1:13, Eph 2:5, Titus 3:5, 1 John 5:1) interpret human-response texts (Acts 16:31, Rom 10:9) by placing the response inside the new birth, not before it. Different lenses harmonize this differently without dissolving it."
+    },
+    "counter_witness": [
+      {
+        "tradition": "catholic_magisterial",
+        "anchor": "Catechism of the Catholic Church 1250, 1254",
+        "verified": true,
+        "stance": "complicates",
+        "key_phrase": "The sheer gratuitousness of the grace of salvation is particularly manifest in infant Baptism; conversion responds to divine initiative."
+      },
+      {
+        "tradition": "lutheran",
+        "anchor": "Augsburg Confession Article XVIII Of Free Will",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The human will has no power, without the Holy Ghost, to work the righteousness of God, that is, spiritual righteousness."
+      },
+      {
+        "tradition": "methodist",
+        "anchor": "Methodist Articles of Religion Article VIII Of Free Will",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "The condition of man after the fall is such that he cannot turn and prepare himself, by his own natural strength and works, to faith; grace prevents and works with us."
+      },
+      {
+        "tradition": "pentecostal",
+        "anchor": "Assemblies of God Statement of Fundamental Truths (URL returned 403, citing institutional position from published doctrinal summary): The Salvation of Man",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Salvation is received through repentance toward God and faith in the Lord Jesus Christ; the new birth is by the regenerating work of the Spirit through the Word."
+      },
+      {
+        "tradition": "reformed",
+        "anchor": "Westminster Confession of Faith 10.1-2 Of Effectual Calling",
+        "verified": true,
+        "stance": "affirms",
+        "key_phrase": "Those whom God effectually calls he enlightens, renews their wills, and effectually draws them to Jesus Christ, yet so as they come most freely, being made willing by his grace."
+      },
+      {
+        "tradition": "eastern_orthodox",
+        "anchor": "OCA doctrinal teaching on grace and synergy (specific URL 404; teaching summarized from broader OCA catechetical material)",
+        "verified": false,
+        "stance": "complicates",
+        "key_phrase": "Salvation is a synergy of divine grace and human freedom; grace always precedes and enables, never coerces, the human response."
+      },
+      {
+        "tradition": "anglican",
+        "anchor": "39 Articles, Article X Of Free Will (specific section of churchofengland.org rendered only navigation menu in fetch)",
+        "verified": false,
+        "stance": "affirms",
+        "key_phrase": "We have no power to do good works pleasant to God without the grace of God by Christ preventing us, that we may have a good will."
+      }
+    ],
+    "web": [
+      {
+        "url": "https://biblehub.com/interlinear/john/1-13.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "ek thelematos andros all' ek theou egennethesan: not of the will of man but of God they were begotten; will of man explicitly negated"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/1_john/5-1.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "pisteuon present active participle paired with gegennetai perfect passive: the believing one has already been born of God as completed prior state"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/titus/3-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "Saved by loutron paliggenesias kai anakainoseos pneumatos hagiou: the washing of new birth and renewing of the Holy Spirit, not by works of righteousness"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/ephesians/2-5.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "syzoopoieo: God made us alive together with Christ while we were dead in trespasses; agency is God's on people described as spiritually dead"
+      },
+      {
+        "url": "https://biblehub.com/interlinear/acts/16-14.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "dianoigo: the Lord opened Lydia's heart, and then she paid attention to the things spoken by Paul; divine opening precedes attentive response"
+      },
+      {
+        "url": "https://biblehub.com/greek/1080.htm",
+        "category": "interlinear",
+        "stance": "supports",
+        "quote": "gennao G1080 in 1 John 2:29, 3:9, 4:7, 5:1, 5:4, 5:18 consistently treats new birth as a divine act with God as agent, not as a product of decision"
+      },
+      {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3K.HTM",
+        "category": "magisterial",
+        "stance": "nuance",
+        "quote": "The sheer gratuitousness of the grace of salvation is particularly manifest in infant Baptism; catechumenate aims at bringing conversion in response to the divine initiative."
+      },
+      {
+        "url": "https://bookofconcord.org/augsburg-confession/of-free-will/",
+        "category": "tradition_primary",
+        "stance": "supports",
+        "quote": "Article XVIII: the human will has no power, without the Holy Ghost, to work the righteousness of God; condemns Pelagian view that spiritual acts are possible without the Spirit."
+      },
+      {
+        "url": "https://www.umc.org/en/content/articles-of-religion",
+        "category": "tradition_primary",
+        "stance": "nuance",
+        "quote": "Article VIII: man after the fall cannot turn and prepare himself by his own natural strength to faith; grace prevents us, that we may have a good will, and works with us when we have that good will."
+      }
+    ],
+    "confidence": "high",
+    "flags": [
+      "stem-pre-loaded-verdict",
+      "confession-tradition-divergence",
+      "apparatus-paywalled"
+    ]
+  }
+}
