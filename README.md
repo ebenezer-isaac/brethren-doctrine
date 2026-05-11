@@ -1,4 +1,4 @@
-# The Case for Brethren Doctrine
+# The Case for Christian Doctrine
 
 This project is a theological GraphRAG engine encyclopedia for personal reflection and doctrinal evaluation, grounded in the conviction that Scripture is divine revelation and that doctrinal claims should be tested against the original-language text rather than against any one tradition's summary. 
 
