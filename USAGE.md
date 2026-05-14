@@ -1,167 +1,166 @@
-# USAGE: Querying the brethren-doctrine corpus
+# Usage
 
-This guide is for any Claude session opening the project in VSCode (or any other tool with file access). It tells you what's where, what queries work today, and what's planned.
+Cross-session guide. How to drive the engine from a Claude Code session. Assumes the architecture and PoC docs in [docs/](docs/) have been read.
 
-For the full project picture, read [docs/PROJECT.md](docs/PROJECT.md). For the inferred-baseline methodology, read [tools/derive_baseline_prompt.md](tools/derive_baseline_prompt.md).
+## Boot the orchestrator
 
----
+To run any operational phase, start a Claude Code session at the repo root and invoke the orchestrator phase prompt.
 
-## What's in the corpus
+1. Open Claude Code in `e:/projects-working-dir/brethren-doctrine/`.
+2. Have Claude read `docs/phase_prompts/orchestrator.md` (it loads on session start if you reference it).
+3. Tell the orchestrator what to do, in plain language. Example:
+   - "Run the lexical ingest pass for MACULA Hebrew and MACULA Greek only."
+   - "Run Pipeline 2 verdict derivation for question id `doc-trinity`."
+   - "Auto-tag the doctrine_tags on the latest cultural scrape batch."
 
-Two distinct stores share a Neo4j + Qdrant backbone:
+The orchestrator routes the work, dispatches subagents (via the Agent tool, consuming Max plan quota), tracks progress with TodoWrite, and aggregates results.
 
-**Tier 1, sermon + SOF corpus (live)**: structured JSON in `parsed/`, plus Tier 2 hybrid retrieval CLI for semantic queries. This is the "what does my teaching tradition say?" layer. Used by Pipeline B (per-respondent files); NOT used during inferred-baseline derivation.
+## Query the engine
 
-**Concordance + Bible text (built)**: STEPBible TAHOT + TAGNT + OSHB + OpenBible + TSK ingested into Neo4j (17k lemmas, 448k tokens, 34k verses, 600k OpenBible refs, 591k TSK refs). This is the spider-map layer that backs the inferred-baseline pipeline. See `docs/CONCORDANCE.md`.
-
----
-
-## Tier 1 (sermon + SOF)
-
-The static corpus is queryable using only Read + Grep. No external services, no embeddings, no graph DB. This is the baseline working today.
-
-### What's in `parsed/`
-
-15 structured JSON files, one per source document. Each follows the schema in `.claude/skills/ingest-sermons/SKILL.md` Step 4.
-
-Per-document fields you'll use most:
-- `doc_slug`: anchor identifier
-- `session_metadata.title`, `session_metadata.session_topic`, `session_metadata.topic_clusters`
-- `theological_themes`: top-level themes for the document
-- `scripture_refs`: every scripture reference, OSIS-normalized
-- `chunks[]`: semantic chunks with `content`, `themes`, `claims`, `scripture_refs`, optional `perspectives_within_chunk`
-- `confidence`: extraction confidence per dimension
-
-Two aggregate files at the root of `parsed/`:
-- `_index.json`: corpus-wide aggregate (themes, scripture coverage, per-doc summaries)
-- `_perspectives.json`: cross-document perspective sets (where different docs address the same theme with distinct claims)
-
-### Common Tier 1 query patterns
-
-**"What documents touch a theme?"**
-- Read `parsed/_index.json` → `by_theme["<theme>"]` returns document slugs.
-
-**"What does the corpus say about [topic]?"**
-- Find candidate docs via `_index.json` themes.
-- Read those JSONs and pull the matching `chunks[]` by their `themes` array.
-
-**"Show me everything referencing [scripture]"**
-- Read `_index.json` → `scripture_coverage["<OSIS book>"]` gives doc slugs.
-- For exact verse: Grep across `parsed/*.json` for the OSIS form.
-
-**"Where do documents disagree or present multiple angles?"**
-- Read `parsed/_perspectives.json` → `perspective_sets[]`.
-
-### jq one-liners
+The engine is exposed via an MCP server. From any MCP-native client (Claude Code, Claude Desktop, custom client):
 
 ```bash
-# All themes from a doc
-jq '.theological_themes' parsed/sof_holy_spirit.json
-
-# Perspective sets touching a theme
-jq '.perspective_sets[] | select(.shared_theme | contains("baptism"))' parsed/_perspectives.json
+# Start the MCP server (target; implementation pending)
+uv run python -m bd_mcp.server
 ```
 
-### Authority hierarchy in Tier 1
+Then call tools. The 11 tools are documented in [docs/MCP_TOOLS.md](docs/MCP_TOOLS.md). Example tool calls:
 
-Every parsed chunk is `authority_level: 4` (exegetical application). When you cite a Tier 1 result, label it as a *teaching claim*, not as Bible-textual ground truth. The interlinear and original-language verification layer is at Level 1 (concordance + apparatus, see below).
+```jsonc
+// Look up Strong's G2316
+{"tool": "lexical_lookup", "input": {"query": "G2316", "id_type": "strong", "lang": "gk"}}
 
----
+// Walk every occurrence of theos
+{"tool": "concordance_walk", "input": {"strong": "G2316", "window": 5, "limit": 50}}
 
-## Tier 2 retrieval (live for sermon/SOF)
+// Get cross-references for John 3:16
+{"tool": "cross_ref", "input": {"ref": "John.3.16", "sources": ["openbible", "tsk"], "min_votes": 10}}
+
+// Resolve a verse between schemes (Hebrew Psa 51:3 == English Psa 51:1)
+{"tool": "versification_resolve", "input": {"ref": "Psa.51.1", "from_scheme": "english", "to_scheme": "hebrew"}}
+
+// Cultural overlay for a doctrine
+{"tool": "cultural_overlay", "input": {"doctrine": "sacraments", "traditions": ["catholic-magisterial", "reformed"], "k": 8}}
+
+// Long-running doctrinal verdict (streams progress)
+{
+  "tool": "doctrinal_verdict",
+  "input": {
+    "proposition": "Scripture is the sole and final authority for the rule of faith",
+    "denominations": ["plymouth-brethren", "reformed", "catholic-magisterial"],
+    "depth": "deep",
+    "progressToken": "abc-123"
+  }
+}
+
+// Read back a stored evidence file
+{"tool": "evidence_inspect", "input": {"question_id": "doc-trinity"}}
+
+// Audit the license stack on a prior response
+{"tool": "license_audit", "input": {"subject_type": "response_trace", "subject_id": "<trace_id>"}}
+```
+
+## Query the parsed Brethren corpus directly
+
+Until the cultural store is ingested, the `parsed/` JSON files are queryable from any Claude Code session via Read + Grep + jq. This is the Tier 1 access path that pre-dates the cultural store.
 
 ```bash
-# Hybrid retrieval over the sermon + SOF corpus
-uv run python -m retrieval.cli "what does the corpus say about substitutionary atonement?"
+# List all chunks across the corpus
+ls parsed/*.json
 
-# Machine-readable
-uv run python -m retrieval.cli "Romans 6:1-4 baptism" --k 8 --json-only
+# Search for a topic across all parsed documents
+grep -l "baptism" parsed/*.json
+
+# Read the aggregate index
+cat parsed/_index.json | jq '.documents[] | {slug, topics}'
+
+# Read cross-doc perspective comparisons
+cat parsed/_perspectives.json | jq '.perspectives[] | {doctrine, viewpoints}'
 ```
 
-Returns the `answer_context[]` envelope with `chunk_id`, `score`, `source_doc`, `authority_level`, `chunk_type`, `themes`, `scripture_refs`, `text`, `citations`, `graph_context`.
+Once the cultural store is up, the same data is queryable via `cultural_overlay` and `debate_for_verse` MCP tools under `tradition=plymouth-brethren`.
 
-This CLI is for Pipeline B (per-respondent overlays) and downstream church-evaluation queries. **It is not used during inferred-baseline derivation.**
+## Run validation
 
----
+Validation is a phase prompt; the orchestrator dispatches a subagent that reads pipeline outputs and verifies them against schemas. The phase prompt is at [docs/phase_prompts/validation.md](docs/phase_prompts/validation.md).
 
-## Inferred-baseline pipeline
+Tell the orchestrator:
 
-The 231-question doctrinal baseline is derived by `tools/baseline_orchestrator.py`, one subagent per question, each writing to `evidence/<id>.json`. The pipeline does NOT consult `parsed/`, `source-docs/`, confessions, or Brethren teaching notes. It only consults:
+- "Validate every file in `evidence/` against the v3.0 schema."
+- "Run a triangle test on `evidence/doc-trinity.json` vs `tmp/triangle/doc-trinity_run2.json`."
+- "Run license audit on the last 20 evidence files; surface any with `evidence_safe_to_publish: false`."
 
-- Critical apparatus (BHS, NA28/UBS5)
-- Interlinear (STEPBible, BibleHub, OSHB)
-- Concordance (TAHOT + TAGNT lemma index, OpenBible + TSK cross-references) via Cypher
-- Counter-witness traditions (patristic, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal, Eastern Orthodox primary sources), **research aids only, not authority**
-
-Read `tools/derive_baseline_prompt.md` for the full methodology and `tools/verify_baseline.py` for the KPI matrix that gates the orchestrator run.
+## Inspect license posture
 
 ```bash
-# Show worklist (questions without complete evidence)
-python tools/baseline_orchestrator.py worklist
+# List all sources with non-redistributable license
+cat docs/LICENSE_TAGGING.md | grep -A1 "redistribute" | grep "false"
 
-# Validate a single evidence file
-python tools/baseline_orchestrator.py validate doc-trinity
-
-# Validate all
-python tools/baseline_orchestrator.py validate-all
-
-# Run the KPI verifier (gates green-light for the orchestrator)
-python -m tools.verify_baseline --check all --report
-
-# Run the regression test suite (parsers + golden evidence schema round-trip)
-.venv/Scripts/python -m pytest tests/ -v
+# Check redistribution for a specific evidence file
+uv run python -c "
+import json
+e = json.load(open('evidence/doc-trinity.json'))
+print('safe to publish:', e['license_audit']['evidence_safe_to_publish'])
+print('reason:', e['license_audit'].get('non_redistributable_reason'))
+"
 ```
 
-The `tests/` directory contains pytest fixtures that lock:
-- STEPBible TAHOT/TAGNT parser column extraction (`tests/test_concordance_parsers.py`)
-- Evidence-schema validator + PDF renderer round-trip (`tests/test_evidence_schema.py`)
-- Legacy-key rejection (any v1 schema field is hard-rejected by validator)
-- Cult-marker canonical-demonstration enforcement (pan-canonical lexical breadth, not lineage count)
-- Empty `concordance_lemmas_traversed` rejection (universal, all tiers)
+## Refresh a dataset
 
-If pytest exits zero AND `tools/verify_baseline.py --check all` exits zero, phase 2 (orchestrator run) is unblocked.
+Each Pipeline 1 dataset is pinned at a commit SHA in `pipeline1/lockfile.json` (when implemented). To refresh:
 
----
+1. Bump the SHA in `pipeline1/lockfile.json` to the desired upstream commit.
+2. Tell the orchestrator: "Re-ingest dataset `<dataset_name>` at the new pinned SHA."
+3. The orchestrator dispatches a fresh Pipeline 1 lexical ingest subagent.
+4. After ingest, run a validation pass to confirm record counts and license tags.
 
-## Concordance ingestion (complete)
+For cultural sources, the same pattern but the "pin" is a content hash of the scraped HTML (so we can detect when an upstream source changes meaningfully).
+
+## Inspect the air-gap
+
+To verify the two-Docker air-gap is in place after stacks are running:
 
 ```bash
-# Drop the STEPBible-Data and OSHB clones under data/private/
-git clone https://github.com/STEPBible/STEPBible-Data data/private/stepbible
-git clone https://github.com/openscriptures/morphhb data/private/oshb
+# Lexical Neo4j should respond
+curl -sf http://localhost:7475 && echo "lexical Neo4j: up"
 
-# Run loaders (one-time, idempotent)
-python -m ingest.adapters.concordance_loader load-all --src data/private
+# Cultural Neo4j should respond
+curl -sf http://localhost:7476 && echo "cultural Neo4j: up"
+
+# Cross-network DNS lookup must FAIL
+docker exec lexical-neo4j getent hosts cultural-neo4j  # expect exit 2 (NSS_NOTFOUND)
+docker exec cultural-neo4j getent hosts lexical-neo4j  # expect exit 2
+
+# Cross-network HTTP must FAIL
+docker exec lexical-neo4j wget -qO- http://cultural-neo4j:7474  # expect exit 4
+docker exec cultural-neo4j wget -qO- http://lexical-neo4j:7474  # expect exit 4
 ```
 
-See `docs/CONCORDANCE.md` for the full plan, expected counts, and KPI verification.
+The PoC equivalent of this is at `tmp/poc/infra/docker/test_airgap.ps1`. See [docs/POC_FINDINGS.md](docs/POC_FINDINGS.md) H8.
 
----
+## Common pitfalls
 
-## What you should NOT do
+- **Do not install the `anthropic` Python package.** The engine has no programmatic API path. All LLM work is via Claude Code subagents under the Max plan. Adding the package signals a violation of the orchestrator pattern.
+- **Do not modify `evidence/<id>.json` files by hand.** They are Pipeline 2 outputs; modifications break the audit trail. To re-derive, dispatch a Pipeline 2 verdict subagent.
+- **Do not bypass `license_guard.check_redistribute`** when emitting responses or exports. Every export path goes through the guard. Bypassing it can leak NC-licensed bulk content.
+- **Do not cross stores.** Pipeline 2 subagents read only the lexical store; Pipeline 3 synthesis reads both as separate services. Direct cross-store traversal (e.g., a Cypher query that spans both Neo4j databases) is not just bad practice; it is not possible at the network layer because the air-gap blocks it.
+- **Do not over-tag cultural chunks.** Pydantic validator caps `doctrine_tags` at 5 per chunk.
+- **Do not use em-dashes (—) or en-dashes (–) anywhere** in committed output. The validator at multiple layers rejects them.
 
-- **Never write personal contributor names into outputs.** See `docs/ANONYMIZATION.md`. External published authors are fine; teachers whose lessons populate this corpus are not.
-- **Never override authority levels.** A teaching claim doesn't trump an interlinear reading. See `docs/AUTHORITY_HIERARCHY.md`.
-- **Never modify `source-docs/`.** Those files are read-only inputs.
-- **Never invoke the retrieval CLI from a baseline subagent.** Baseline derivation does not consult sermon material.
-- **Never cite Reformed-aligned commentary sites as authority** (carm.org, equip.org, gotquestions.org, monergism.com, ligonier.org, thegospelcoalition.org). They share the formation-under-examination's substrate. Primary-source repositories only.
-- **Don't reinvent ingestion.** Re-run the `ingest-sermons` skill if new docs land in `source-docs/`. Re-run `concordance_loader` if STEPBible data updates. Both are idempotent.
+## Cost posture
 
----
+- Voyage embedding for v1 ingest: ~22 M tokens estimated, well within Voyage's 200 M free tier. **Cost: $0.**
+- LLM (Opus + Sonnet) via Claude Code subagents under Max plan: **Cost: $0** (covered by existing Max subscription).
+- No proprietary lexicon, ECM, or DSS purchases for v1.
+- Optional v1 print reference (NA28 Large Print + UBS6 + ECM Catholic Letters Part 1): ~£190-230 if you want physical books for human cross-check. **Not required for the engine to work.**
 
-## Re-running the sermon ingestion
+## Where to read more
 
-If new files land in `source-docs/`, invoke the `ingest-sermons` skill (or just say "ingest the sermons"). It will inventory new/changed files, dispatch parallel Opus subagents, and rebuild `parsed/_index.json` and `parsed/_perspectives.json`. Existing parsed files are not re-processed unless their source `mtime` has changed.
-
----
-
-## When in doubt
-
-- Project shape and architecture: `docs/PROJECT.md`
-- Inferred-baseline methodology: `tools/derive_baseline_prompt.md`
-- Authority rules: `docs/AUTHORITY_HIERARCHY.md`
-- Hermeneutics methodology: `docs/HERMENEUTICS.md`
-- Concordance / spider-map: `docs/CONCORDANCE.md`
-- KPI verifier: `tools/verify_baseline.py`
-- Privacy/anonymization: `docs/ANONYMIZATION.md`
-- Sermon ingestion mechanics: `.claude/skills/ingest-sermons/SKILL.md`
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — canonical reference, full 10-layer architecture, three pipelines, two air-gapped stores, all 15 PoC-validated deltas.
+- [docs/MCP_TOOLS.md](docs/MCP_TOOLS.md) — 11 tools with I/O schemas.
+- [docs/EVIDENCE_SCHEMA.md](docs/EVIDENCE_SCHEMA.md) — Pipeline 2 evidence v3.0 schema.
+- [docs/CULTURAL_SCHEMA.md](docs/CULTURAL_SCHEMA.md) — cultural-store per-chunk schema.
+- [docs/INGESTION_PATTERNS.md](docs/INGESTION_PATTERNS.md) — per-dataset and per-source ingest recipes.
+- [docs/LICENSE_TAGGING.md](docs/LICENSE_TAGGING.md) — license posture per source, redistribution rules.
+- [docs/POC_FINDINGS.md](docs/POC_FINDINGS.md) — 15 hypotheses validated 2026-05-12.
+- [docs/phase_prompts/](docs/phase_prompts/) — explicit prompts the orchestrator dispatches.

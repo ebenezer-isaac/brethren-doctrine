@@ -56,3 +56,10 @@ questions-hygiene-report.md
 
 # Question-reframe backup (pre-apply)
 questions.json.*.bak
+
+# Doc subfolders are working scratch (implementation_phases, phase_prompts, archive snapshots).
+# Only top-level docs/*.md canonical specs are tracked.
+docs/*/
+
+# Sandboxed scratch per phase discipline (D9)
+tmp/

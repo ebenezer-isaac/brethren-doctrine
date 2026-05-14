@@ -1,10 +1,10 @@
 # The Case for Brethren Doctrine
 
-This project is a theological GraphRAG engine encyclopedia for personal reflection and doctrinal evaluation, grounded in the conviction that Scripture is divine revelation and that doctrinal claims should be tested against the original-language text rather than against any one tradition's summary. 
+This project is a manuscript-anchored biblical doctrine engine for personal reflection and doctrinal evaluation, grounded in the conviction that Scripture is divine revelation and that doctrinal claims should be tested against the original-language manuscript tradition rather than against any one church's summary.
 
-It indexes the Hebrew/Greek interlinear with full Strong's-tagged concordance, multiple English translations, archaeological data, church history, and a curated set of doctrinal teaching notes into a single queryable system. Then it lets me triangulate any church's stated doctrine against primary sources (the original languages, the manuscript tradition, ecumenical history) instead of trusting secondary chains.
+It indexes the Hebrew and Greek interlinear with full Strong's-tagged concordance, multiple English translations, cross-reference graph, semantic-domain data, and a curated set of historical confessional and patristic sources. It runs the lexical sources and the cultural sources in **two physically separate, air-gapped stores**. The engine produces a doctrinal verdict from Scripture alone, then attaches a diagnostic overlay showing how each tracked Christian tradition reads the same lexical pattern.
 
-The aim is *calibrated discernment*, not church-scoring. A church which checks green on all markers can still fall flat in practical execution. There's a difference between beliveing the doctrine and practicing the doctrine. 
+The aim is *calibrated discernment*, not church-scoring. A church that checks green on all markers can still fall flat in practical execution. There is a difference between believing the doctrine and practicing the doctrine.
 
 ---
 
@@ -28,7 +28,7 @@ The answer I've landed on, at least as a working frame: our access to truth was 
 
 **This endeavour aims to identify, for myself, the truths I'm willing to lay my life down for, and the truths I'm willing to live and let live.**
 
-That sentence is not rhetorical. It maps directly onto the boolean pattern of every answer. `would_die_for=true` is "die for"; `would_be_member=true` is "live and let live"; everything in between is graduated. The standings (gospel-essential, convictional, preference, adiaphora) emerge from the booleans rather than being pre-assigned to the question. The whole point of the engine is to calibrate that line *against primary sources* rather than inherit it from any single teacher, including the Brethren tradition I was formed in.
+That sentence is not rhetorical. It maps directly onto the boolean pattern of every respondent answer. `would_die_for=true` is "die for"; `would_be_member=true` is "live and let live"; everything in between is graduated. The standings (gospel-essential, convictional, preference, adiaphora) emerge from the booleans rather than being pre-assigned to the question. The whole point of the engine is to calibrate that line *against primary sources* rather than inherit it from any single teacher, including the Brethren tradition I was formed in.
 
 ---
 
@@ -46,119 +46,109 @@ Each stage closes one trust gap so the next can be examined cleanly. I'm not del
 
 ## What the engine actually does
 
-The engine runs in two pipelines, sharing a Neo4j + Qdrant graph backbone:
+The engine runs in three pipelines and uses two physically separate, air-gapped stores. This is the load-bearing architectural commitment: the lexical pipeline cannot see the cultural pipeline, and vice versa, at the data-model level. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full picture.
 
-**Pipeline A: Inferred-baseline derivation (tradition-neutral lexical-philological floor).** For each of 231 doctrinal propositions, the engine derives an answer that any of the eight major Christian lineages (Eastern Orthodox, Catholic, Lutheran, Anglican, Reformed, Methodist, Anabaptist, Pentecostal) could audit. The verdict is settled by **apparatus + interlinear + concordance**. Counter-witness traditions are recorded as diagnostic information showing how each lineage reads the same lexical text; they do not vote on any verdict field. **My Brethren-adjacent teaching notes are NOT in this pipeline.** Confessions (1689 LBC, WCF, Westminster Standards, Brethren Archive, all of them) are NOT in this pipeline. The whole point is that the formation I came from has to be tested against the lexical floor, not granted authority over it. See [tools/derive_baseline_prompt.md](tools/derive_baseline_prompt.md).
+**Pipeline 1: Ingestion.** Open biblical datasets flow into the lexical store. Confessional, patristic, magisterial, and denominational sources flow into the cultural store. Both stores are Neo4j + Qdrant, but they run in separate Docker stacks on separate Docker networks. Containers on one network cannot reach the other.
 
-**Pipeline B: Per-respondent overlays.** A small set of churches and elders I personally know and trust fill out the same 231-question form, with their own confessional lens. So do I, when I fill out my own. This is where the 1689 LBC, the WCF, my Brethren teaching notes, and the sermon corpus in `parsed/` actually live; they are inputs to specific respondents' viewpoints, not to the canonical baseline. After all responses come in, `consolidated.json` is the final post-research baseline used downstream.
+**Pipeline 2: Lexical pre-inference.** For each of 231 doctrinal propositions in `questions.json`, an Opus subagent reads ONLY the lexical store (apparatus where available, MACULA Hebrew + Greek, STEPBible, ETCBC, OSHB, MorphGNT, TSK + OpenBible cross-references, Theographic metadata, INTF NTVMR transcriptions where ECM is published). It cannot see confessions, magisterial documents, or denominational commentary. It produces a per-question audit trail at `evidence/<id>.json` under a lean v3.0 schema. The verdict is settled by Scripture's lexical pattern alone. A deterministic post-processor then computes `lexical_score` from the structured fields; the LLM cannot override it.
 
-**Downstream.** Given a potential church I'm considering visiting or joining, the engine triangulates that church's statement of faith or sermon claim against:
+**Pipeline 3: Query-time RAG via MCP.** An MCP server exposes 11 tools (`lexical_lookup`, `cross_ref`, `cultural_overlay`, `doctrinal_verdict`, etc.). At query time, the engine retrieves lexical evidence from Pipeline 2 and a cultural overlay from the cultural store, then synthesizes a response with the two clearly segregated. The lexical verdict is authoritative; the cultural overlay is diagnostic (it records how each tradition reads the same lexical pattern, never adjudicating).
 
-- the **original Hebrew/Greek**, with Strong's tagging and morphology (via [STEPBible TAHOT/TAGNT](https://github.com/STEPBible/STEPBible-Data) and [OSHB](https://github.com/openscriptures/morphhb)),
-- the **canon-wide concordance** (every Strong's lemma → every occurrence; OpenBible + TSK cross-references),
-- **multiple English translations** in parallel (formal: ESV/NASB/NKJV; dynamic: NIV/NLT, only for narrative grasp),
-- **archaeological context** (Open Context, DAAHL, Dead Sea Scrolls anchoring),
-- **church history nodes** (ecumenical councils, the [Reformation](https://en.wikipedia.org/wiki/Reformation), modern denominational lineages),
-- and the **consolidated baseline** built upstream.
-
-Output of any query: where claims agree, where they diverge, and where one tier of authority overrides another.
+**Per-respondent overlays** are a separate concept. Trusted churches and elders (and I myself) can fill out the same 231-question form. These responses live in `responses/<respondent_id>.json` and capture each respondent's commitment threshold via the boolean pattern (would_die_for, would_be_member, etc.). They are private and do not enter the lexical store.
 
 ---
 
-## Authority (whose word counts when)
+## Authority
 
-Every record in the corpus carries an `authority_level` from 0 to 4. The **critical apparatus is the source of truth**; everything else is downstream.
+Every record in the lexical store carries an `authority_level` from 0 to 4. **The critical apparatus is the source of truth; everything else is downstream.** Confessions sit OUTSIDE the hierarchy on a sibling diagnostic track.
 
 | Level | Layer | Source |
 |---|---|---|
-| **0** | **Critical Apparatus** ← **source of truth** | [BHS](https://en.wikipedia.org/wiki/Biblia_Hebraica_Stuttgartensia) and [Nestle-Aland (NA28/UBS5)](https://en.wikipedia.org/wiki/Novum_Testamentum_Graece) footnotes: manuscript variants, editorial decisions. |
-| 1 | Interlinear (Critical Text) + Concordance | OSHB, WLC, [SBLGNT](https://en.wikipedia.org/wiki/SBL_Greek_New_Testament), [STEPBible](https://www.stepbible.org/) alignment. Strong's-tagged lemma index for canon-wide spider-mapping. |
-| 2 | Formal Equivalence | NKJV, ESV. Word-for-word priority. |
-| 3 | Dynamic Equivalence | NIV, NLT. Thought-for-thought. Useful for narrative grasp; never for doctrinal mapping. |
-| 4 | Exegetical Application | Personal teaching notes, archaeology, church history, commentaries. |
+| **0** | **Critical Apparatus** ← **source of truth** | BHS footnotes (where extractable), Nestle-Aland (NA28/UBS5) apparatus via INTF NTVMR transcriptions, ECM apparatus where published |
+| 1 | Interlinear + Concordance | MACULA Hebrew + Greek, STEPBible TAHOT/TAGNT/TVTMS, OSHB, MorphGNT, TSK + OpenBible cross-references, Theographic metadata |
+| 2 | Formal Equivalence | NKJV, ESV, NASB. Word-for-word priority. Layer 5 parallel rendering, never Pipeline 2 exegetical authority. |
+| 3 | Dynamic Equivalence | NIV, NLT. Thought-for-thought. Useful for narrative grasp; **forbidden as exegetical authority** in Pipeline 2. |
+| 4 | Exegetical Application | Personal teaching notes (in `parsed/`), archaeology, church history. Commentary, not authority. |
 
-A Level 4 sermon claim cannot override a Level 1 interlinear reading; a Level 1 interlinear reading cannot override a Level 0 apparatus footnote. **Confessions (Reformed or otherwise) do not appear in this tier scale**, they are an information layer recorded as `counter_witness[]` in evidence files, not authority. When tiers disagree, the engine surfaces the conflict; it does not silently pick a side. See [docs/AUTHORITY_HIERARCHY.md](docs/AUTHORITY_HIERARCHY.md).
+A Level 4 sermon claim cannot override a Level 1 interlinear reading; a Level 1 interlinear reading cannot override a Level 0 apparatus footnote. **Confessions do not appear on this scale.** They are recorded in the cultural store with `(tradition, doctrine, stance, confidence)` tags. When tiers disagree within the lexical pipeline, the engine surfaces the conflict; it does not silently pick a side. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full hierarchy.
 
 ---
 
-## The doctrinal baseline (multi-stage, collaborative)
+## The doctrinal baseline
 
-I'm not building the baseline alone in a room. The collaborators are churches and elders I already know and trust personally. The output is then the tool I use to evaluate potential churches I'm considering visiting or joining.
+I am not building the baseline alone. The collaborators are churches and elders I personally know and trust. The output is then the tool I use to evaluate potential churches I am considering visiting or joining.
 
 ```
-questions.json (universal, locked envelope, 231 entries)
+questions.json (universal question bank, 231 entries)
         │
-        │  tools/derive_baseline_prompt.md  (one subagent per question)
-        │  Pillars: concordance + hermeneutics + counter-witness
+        │  Pipeline 2: orchestrator dispatches Opus subagents
+        │  (one per question, reading only the lexical store)
         ▼
-baseline.json (lexical-philological seed)  ───┬─►  evidence/<id>.json (per-question audit trail)
-        │                                     │
-        │  distributed to trusted elders      │
-        ▼                                     │
-responses/<respondent_id>.json (filled, with respondent's confessional lens)
-        │                                     │
-        │  collation + research                │
-        ▼                                     │
-consolidated.json (final, canonical)  ───────┘
+evidence/<id>.json (Pipeline 2 output, lexical-only audit trail)
+        │
+        │  distributed to trusted elders for testimony
+        ▼
+responses/<respondent_id>.json (filled questionnaires from trusted elders + me)
+        │
+        │  collation
+        ▼
+consolidated.json (final canonical baseline)
 ```
 
 | File | What it is | Status |
 |---|---|---|
-| [questions.json](questions.json) | Universal question bank with 231 entries, each carrying 10 fields. Envelope updated to `formation_under_examination` + `judging_panel`. | Locked schema; question text scheduled for phase-3 reframe. |
-| `baseline.json` | **Tradition-neutral lexical-philological seed answers** (231 × 13 fields + viewpoint envelope). Generated autonomously from apparatus + interlinear + concordance, with counter-witness traditions recorded as diagnostic information. **Provisional**: autofill drudgework so trusted-elder collaborators engage with substantive disagreements, not blank forms. | To be generated |
-| `responses/<id>.json` | Filled questionnaires from churches and elders I personally know and trust (and from me, with my own Brethren-adjacent confessional lens recorded). Same 13-field shape. **Private** (gitignored). | Pending input |
-| `consolidated.json` | Final canonical baseline after collating all responses with the inferred seed and final research. | Future |
-| `evidence/<id>.json` | Per-question audit trail: scripture citations with genre + figures, concordance lemma traversal, hermeneutic block, counter-witness citations, web sources, confidence flag. Survives every later phase. | To be generated |
+| [questions.json](questions.json) | Universal question bank, 231 entries, 9 fields each | **Locked schema.** |
+| `evidence/<id>.json` | Per-question lexical audit trail (v3.0 schema). Citations, anchor lemmas, cross-references, hermeneutics, license_audit. | Schema locked; Pipeline 2 regeneration pending implementation. The archived v2 evidence files from the prior session live under `evidence/archive-v2-2026-05-12/`. |
+| `responses/<respondent_id>.json` | Filled questionnaires with respondent's commitment booleans. **Private** (gitignored). | Pending input |
+| `consolidated.json` | Final canonical baseline collating Pipeline 2 verdicts with respondent testimonies | Future |
 
-All three answer files share the same 13-field boolean-pattern shape; the envelope's `viewpoint` field disambiguates whose stance is recorded (`inferred-from-sources` | `individual:<id>` | `consolidated`). Schemas are locked in [docs/QUESTION_SCHEMA.md](docs/QUESTION_SCHEMA.md) and [docs/ANSWER_SCHEMA.md](docs/ANSWER_SCHEMA.md).
-
-The answer's boolean pattern is where the testimony lands in code: `would_die_for=true` is "I'd lay my life down for this," `would_be_member=true` is "I'd join a church that teaches it differently." Standing is inferred from the pattern, not pre-assigned to the question.
+Schemas are locked in [docs/EVIDENCE_SCHEMA.md](docs/EVIDENCE_SCHEMA.md) (per-question lexical audit trail) and [docs/CULTURAL_SCHEMA.md](docs/CULTURAL_SCHEMA.md) (per-chunk doctrine tagging for the cultural store).
 
 ---
 
 ## How each question gets tested
 
-Every question runs through three pillars, in order, before any verdict is recorded:
+Pipeline 2 runs each doctrinal proposition through deterministic lexical analytics, in order, before any verdict is recorded. Cultural sources are NOT in this pipeline.
 
 | Pillar | Source | Purpose |
 |---|---|---|
-| **1. Concordance** (mechanical) | STEPBible TAHOT + TAGNT (Strong's-tagged Hebrew/Greek tokens), OSHB cross-validation, OpenBible + TSK cross-references via Neo4j Cypher | Makes `analogia scripturae` (Scripture interprets Scripture) deterministic. Every Strong's lemma in the anchor verses is spider-mapped to every occurrence in the canon. Selection bias dies at the data layer, a subagent cannot quietly skip Gen 6:6 / Ex 32:14 / Jonah 3:10 when the lemma index lists them mechanically. See [docs/CONCORDANCE.md](docs/CONCORDANCE.md). |
-| **2. Hermeneutics** (visible) | Recorded per verdict in `evidence.hermeneutics` | Primary method (grammatico-historical / redemptive-historical / quadriga / patristic-typological / accommodation), frameworks in play (covenant / dispensational / NCT / progressive covenantalism / historic premillennial), figures of speech per scripture citation, genre rules, competing-lens verdicts. Forces the subagent to surface *how* the verdict was reached. See [docs/HERMENEUTICS.md](docs/HERMENEUTICS.md). |
-| **3. Counter-witness** (diagnostic) | Patristic ([ccel.org](https://ccel.org/fathers)), Catholic magisterial ([CCC at vatican.va](https://www.vatican.va/archive/ENG0015/_INDEX.HTM)), Lutheran ([Book of Concord](https://bookofconcord.org)), Anglican ([39 Articles](https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion)), Reformed (Westminster, Heidelberg, Belgic), Methodist ([UMC Articles](https://www.umc.org/en/content/articles-of-religion)), Anabaptist (Schleitheim 1527), Pentecostal ([AG Fundamental Truths](https://ag.org/Beliefs/Statement-of-Fundamental-Truths)), Eastern Orthodox ([OCA](https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture)) primary sources | Records how each major lineage reads the same lexical text, so the reader sees where traditions agree and disagree. **Encouraged for diagnostic completeness** on every question. **Does NOT vote on `affirms`, `cult_marker_if_denied`, `would_die_for`, or `confidence`**. Apparatus + interlinear + concordance settle every verdict; counter-witness is research aid, not authority. |
+| **1. Concordance** (mechanical) | STEPBible TAHOT + TAGNT (Strong's-tagged Hebrew / Greek tokens), MACULA Hebrew + Greek, OSHB cross-validation, OpenBible + TSK cross-references via Neo4j Cypher | Makes `analogia scripturae` (Scripture interprets Scripture) deterministic. Every Strong's lemma in the anchor verses is spider-mapped to every occurrence in the canon. Selection bias dies at the data layer. |
+| **2. Hermeneutics** (visible) | Recorded per verdict in `evidence.hermeneutics` | Primary method (grammatico-historical / redemptive-historical / quadriga / patristic-typological / accommodation), frameworks in play, figures of speech per scripture citation, genre rules, competing-lens verdicts. Forces the subagent to surface *how* the verdict was reached. |
+| **3. Variant analysis** (manuscript) | INTF NTVMR transcriptions where ECM is published; NA28 apparatus shadow elsewhere | Surfaces variant-sensitive verdicts. Critical Apparatus drives Layer 0. **Deferred from v1 per scope decision** pending a 3 John pilot. |
 
-A clear interlinear reading contradicted by every counter-witness source is still a clear interlinear reading. Confessions never override Scripture, regardless of which lineage they come from. Counter-witness records what each tradition says; it does not adjudicate.
+A clear interlinear reading contradicted by every cultural-overlay tradition is still a clear interlinear reading. Cultural overlay records what each tradition says; it does not adjudicate.
 
-Subagents are **forbidden** from citing Reformed-aligned commentary sites (carm.org, equip.org, gotquestions.org, monergism, ligonier, gospelcoalition) as authority. They share the formation-under-examination's substrate, so citing them as authority would smuggle the formation back in through the side door. Only primary repositories are permitted: BibleHub, STEPBible, OSHB, ccel.org (Schaff), vatican.va (CCC), bookofconcord.org, oca.org, ag.org, umc.org, openbible.info.
+**Forbidden in Pipeline 2 derivation**: Reformed-aligned commentary sites (carm.org, equip.org, gotquestions.org, monergism, ligonier, gospelcoalition, brethrenarchive.org). Only primary lexical repositories are permitted: MACULA, STEPBible, ETCBC, OSHB, MorphGNT, BibleHub interlinear (cross-validation only), INTF NTVMR.
 
-**Cult-marker bar, two conditions, both canonical.** A position counts as cult-grade only when:
+**Caveat for fellow Brethren readers**: Plymouth Brethren historically reject formal confessions ("[no creed but Christ](https://en.wikipedia.org/wiki/Sola_scriptura)", sola scriptura strictly applied, though that phrase is itself a Reformed distinctive, which is part of what this engine is designed to surface). Including WCF, 1689 LBC, the Catechism, Book of Concord, and the rest in the **cultural store** is informational diagnostic only, not subscription. They are how each tradition reads the lexical text, useful to record, never authoritative for the verdict.
 
-1. `would_die_for=true` (moral entailment). Denial constitutes denial of the gospel itself or a core Trinitarian or Christological boundary clearly mandated by Scripture's own lexical pattern.
-2. Apparatus + interlinear + concordance demonstrate the doctrine across the canon (pan-canonical lexical reading, not from a single passage).
+---
 
-**Lineage agreement does NOT grant or withhold cult-marker status.** Scripture's clarity drives the bar; counter-witness from major lineages is recorded as diagnostic information so the reader sees how each tradition reads the same lexical text, but it does not vote on `affirms`, `cult_marker_if_denied`, `would_die_for`, or `confidence`.
+## Orchestrator pattern
 
-**Even Trinity is not exempt.** Each question, including the Nicene-Chalcedonian foundations, clears or fails the bar on its own per-question canonical evidence. The Brethren-on-trial discipline is preserved through canonical demonstration: most Brethren distinctives lack unambiguous pan-canonical lexical support and will fail condition 2 honestly.
-
-**Caveat for fellow Brethren readers**: Plymouth Brethren historically reject formal confessions ("[no creed but Christ](https://en.wikipedia.org/wiki/Sola_scriptura)", sola scriptura strictly applied, though that phrase is itself a Reformed distinctive, which is part of what this engine is designed to surface). Including WCF, 1689 LBC, the Catechism, Book of Concord, and the rest in this engine is *informational research only*, not subscription. They are how each tradition reads the lexical text, useful to record, never authoritative for the verdict.
+All agentic work runs in-house via Claude Code subagents under the user's Max plan. **No programmatic Anthropic API access.** The single orchestrator agent reads `docs/ARCHITECTURE.md` and the phase prompts in `docs/phase_prompts/` on startup, then dispatches subagents per operational phase: lexical ingest, cultural scrape, cultural auto-tag, Pipeline 2 verdict derivation, Pipeline 3 query synthesis, validation. Every dispatch carries a `task_id`, explicit `allowed_stores` and `forbidden_stores` lists, and an output path under `tmp/<phase>/<task_id>/`. See [docs/phase_prompts/orchestrator.md](docs/phase_prompts/orchestrator.md).
 
 ---
 
 ## Anonymization
 
-The only personal name permitted anywhere in this repository is my own. Every other personal contributor (teachers whose teaching is in the corpus, friends, organization members) is redacted from `parsed/`, code, docs, server responses, and downstream artifacts. External published authors (John Piper, [Justin Martyr](https://en.wikipedia.org/wiki/Justin_Martyr), Augustine, Calvin) are retained as citations because they preserve the chain back to public sources. See [docs/ANONYMIZATION.md](docs/ANONYMIZATION.md) for the full policy.
+The only personal name permitted anywhere in this repository is my own. Every other personal contributor (teachers whose teaching is in the corpus, friends, organization members) is redacted from `parsed/`, code, docs, server responses, and downstream artifacts. External published authors (John Piper, [Justin Martyr](https://en.wikipedia.org/wiki/Justin_Martyr), Augustine, Calvin) are retained as citations because they preserve the chain back to public sources.
 
-The `source-docs/` and `converted/` directories are gitignored. They contain raw private teaching notes; only sanitized derivatives go public.
+The `source-docs/` and `converted/` directories are gitignored. They contain raw private teaching notes; only sanitized derivatives go public. The `parsed/` Brethren corpus is ingested into the cultural store under `tradition=plymouth-brethren` with `redistribute: false`.
 
 ---
 
-## What's built and what's not
+## What is built and what is not
 
-- **Tier 1 (static structured corpus)**: *built*. Per-document JSON in [parsed/](parsed/), queryable from any Claude session via Read + Grep + jq.
-- **Tier 2 retrieval (semantic + graph layer for sermon/SOF)**: *built*. Hybrid retrieval CLI is live: `uv run python -m retrieval.cli "<query>"`. Used by Pipeline B (per-respondent overlays).
-- **Tier 2 concordance + Bible-text ingestion**: *built*. Neo4j carries 17,003 lemmas, 447,700 tokens, 34,128 verses, 600,364 OpenBible cross-references, 591,039 TSK cross-references. See [docs/CONCORDANCE.md](docs/CONCORDANCE.md) and [ingest/adapters/concordance_loader.py](ingest/adapters/concordance_loader.py).
-- **Inferred-baseline pipeline**: *architecture complete*; orchestrator gated on KPI verifier green-light. See [tools/derive_baseline_prompt.md](tools/derive_baseline_prompt.md), [tools/baseline_orchestrator.py](tools/baseline_orchestrator.py), [tools/verify_baseline.py](tools/verify_baseline.py).
-- **MCP server (Tier 3)**: *planned.* Schema designed; server not yet built.
-- **Flutter client (Tier 3)**: *planned.*
+- **Architecture: locked** (2026-05-12 PoC validation round). See [docs/POC_FINDINGS.md](docs/POC_FINDINGS.md). 15 hypotheses validated structurally; 90% live (3 Opus-driven steps run in stub mode pending Max-plan validation).
+- **Tier 1 static corpus**: built. Per-document JSON in [parsed/](parsed/). Ingested into the cultural store under `tradition=plymouth-brethren`.
+- **Two-Docker air-gap (lexical and cultural stacks)**: PoC validated; production compose files pending implementation.
+- **Pipeline 1 lexical adapters**: PoC validated for 9 datasets; production adapters pending implementation.
+- **Pipeline 1 cultural scrapers**: PoC validated for 4 sources; remaining sources pending implementation.
+- **Pipeline 2 (Opus pre-inference)**: prompt + schema + score_calc PoC validated; production orchestrator pending. Earlier archived v2 evidence files moved to `evidence/archive-v2-2026-05-12/`; re-derivation under v3.0 schema pending.
+- **Pipeline 3 (MCP server with 11 tools)**: tool surface specified in [docs/MCP_TOOLS.md](docs/MCP_TOOLS.md); server implementation pending.
+- **CBGM / variant data**: **deferred from v1** per scope decision. 3 John pilot validated on open-cbgm; full Catholic Letters TEI requires INTF outreach later.
+- **Flutter client**: planned for v2.
 
 ---
 
@@ -166,82 +156,100 @@ The `source-docs/` and `converted/` directories are gitignored. They contain raw
 
 ```
 brethren-doctrine/
-├── parsed/                 Sanitized structured JSON corpus (per-document + aggregate index + cross-doc perspectives).
-├── docs/                   PROJECT.md, ANSWER_SCHEMA.md, QUESTION_SCHEMA.md, AUTHORITY_HIERARCHY.md, HERMENEUTICS.md, CONCORDANCE.md, ANONYMIZATION.md.
-├── ingest/                 Pydantic models + Neo4j MERGE upsert adapters (sermon, SOF, concordance).
-├── embeddings/             Voyage contextualized_embed + FastEmbed BM25 → Qdrant; Neo4j MERGE upsert.
-├── retrieval/              Stage 0-4 hybrid retriever (router, hybrid RRF, BGE rerank, authority boost, envelope, Typer CLI).
-├── graph/                  Neo4j schema (constraints + vector / fulltext / btree indexes).
-├── docker/                 Neo4j + Qdrant compose.
-├── research/               Tier 2 design research (embeddings, GraphRAG, hybrid+rerank, Bible data sources, MCP).
-├── tools/                  derive_baseline_prompt.md (methodology), baseline_orchestrator.py (runtime + validator), verify_baseline.py (KPI verifier), verify_catalogs.json (catalogs), evidence_to_pdf.py (A4 PDF renderer).
-├── evidence/               Per-question audit trail (populated by the baseline derivation run).
-├── responses/              Filled questionnaires from trusted-elder collaborators + me. Private (gitignored).
-├── questions.json          Universal question bank (231 entries; phase-3 reframe pending).
-├── USAGE.md                Cross-session guide for querying the corpus from any Claude session.
-└── .claude/skills/         `ingest-sermons` skill (Opus subagent orchestration for source → JSON parsing).
+├── parsed/                      Sanitized Brethren teaching corpus (cultural-store input)
+├── docs/
+│   ├── ARCHITECTURE.md          Canonical architecture reference
+│   ├── INGESTION_PATTERNS.md    Per-dataset ingestion recipes
+│   ├── LICENSE_TAGGING.md       License posture + guard contract
+│   ├── MCP_TOOLS.md             11 MCP tool specifications
+│   ├── EVIDENCE_SCHEMA.md       v3.0 evidence schema + Pipeline 2 prompt contract
+│   ├── CULTURAL_SCHEMA.md       Per-chunk doctrine-tagging schema
+│   ├── POC_FINDINGS.md          Aggregated PoC findings (2026-05-12)
+│   ├── phase_prompts/           Orchestrator + 6 phase prompts
+│   └── archive-2026-05-12/      Pre-greenfield-rewrite docs
+├── docker/
+│   ├── lexical/                 Lexical Neo4j + Qdrant stack (pending)
+│   └── cultural/                Cultural Neo4j + Qdrant stack (pending)
+├── graph/
+│   ├── lexical.cypher           Lexical Neo4j schema (pending)
+│   └── cultural.cypher          Cultural Neo4j schema (pending)
+├── ingest/
+│   ├── lexical/                 Pipeline 1 lexical adapters (pending)
+│   ├── cultural/                Pipeline 1 cultural adapters (pending)
+│   ├── canonical_strongs.py     Strong's normalization utility (pending)
+│   ├── versification_mapper.py  TVTMS-driven versification service (pending)
+│   ├── models.py                Pydantic chunk and node models (pending)
+│   └── license_guard.py         Redistribution enforcement (pending)
+├── embeddings/                  Voyage embed + load to lex_col / cult_col (pending)
+├── retrieval/                   Hybrid retrieve + BGE rerank + envelope (pending)
+├── bd_mcp/                      FastMCP server with 11 tools (pending; named bd_mcp to avoid PyPI mcp SDK collision)
+├── pipeline2/                   Lean prompt + Pydantic schema + score_calc (pending)
+├── tools/                       verify_baseline, verify_questions, evidence_to_pdf
+├── tests/                       Real test suite (pending rewrite)
+├── questions.json               231-question bank (locked)
+├── evidence/                    Pipeline 2 output (regeneration under v3.0 pending)
+├── responses/                   Gitignored per-respondent answers
+├── source-docs/, converted/     Gitignored raw inputs
+├── tmp/                         Gitignored scratch (PoC outputs lived here)
+├── README.md, USAGE.md          User-facing
+├── pyproject.toml, uv.lock      Python project (uv, Python 3.12+)
+└── .env, .env.example           VOYAGE_API_KEY, NEO4J_*, QDRANT_URL (no ANTHROPIC_API_KEY)
 ```
 
 ---
 
 ## Running it locally
 
+The implementation is pending; this section describes the target. The architecture and PoC verification are complete; production code begins after the memory update pass and live validation.
+
 ```bash
 # Set up environment
 cp .env.example .env
-# Fill in: VOYAGE_API_KEY, NEO4J_PASSWORD
-
-# Bring up Neo4j + Qdrant
-docker compose -f docker/docker-compose.yml up -d
+# Fill in: VOYAGE_API_KEY, NEO4J_LEXICAL_PASSWORD, NEO4J_CULTURAL_PASSWORD
+# Do NOT add ANTHROPIC_API_KEY; the engine uses Claude Code subagents under Max plan
 
 # Install Python deps
 uv sync
 
-# Apply Neo4j schema
-cypher-shell -f graph/schema.cypher
+# Bring up two Docker stacks
+docker compose -p lexical -f docker/lexical/docker-compose.yml up -d
+docker compose -p cultural -f docker/cultural/docker-compose.yml up -d
 
-# Bootstrap Qdrant collection
-uv run python -m embeddings.bootstrap_qdrant
+# Apply Neo4j schemas
+cypher-shell -a bolt://localhost:7475 -f graph/lexical.cypher
+cypher-shell -a bolt://localhost:7476 -f graph/cultural.cypher
 
-# Ingest sermon + SOF corpus into Neo4j + Qdrant (Pipeline B)
-uv run python -m embeddings.embed_and_load
+# Bootstrap two Qdrant collections
+uv run python -m embeddings.bootstrap --store lexical
+uv run python -m embeddings.bootstrap --store cultural
 
-# Ingest the concordance layer (one-time, idempotent; see docs/CONCORDANCE.md)
-git clone https://github.com/STEPBible/STEPBible-Data data/private/stepbible
-git clone https://github.com/openscriptures/morphhb data/private/oshb
-uv run python -m ingest.adapters.concordance_loader load-all --src data/private
+# Pipeline 1: lexical ingest (orchestrator dispatches subagents)
+# (run as a Claude Code session at repo root, invoking the orchestrator phase prompt)
 
-# Run regression tests (parsers + golden evidence schema)
-uv run python -m pytest tests/ -v
+# Pipeline 1: cultural scrape + auto-tag (same orchestrator)
 
-# Run KPI verifier (gates the baseline orchestrator run)
-uv run python -m tools.verify_baseline --check all --report
+# Pipeline 2: lexical verdict derivation across 231 questions (same orchestrator)
 
-# Audit questions.json for verdict pre-loading / confessional-vocab smuggling
-# (must pass before phase 2; the orchestrator's stem_audit step is a safety net,
-#  not a substitute for clean question stems)
-uv run python -m tools.verify_questions --report
+# Validate
+uv run python -m tools.verify_questions
+uv run python -m tools.verify_evidence --mode full
 
-# Run the inferred-baseline orchestrator (only after pytest + KPI verifier + question hygiene are green)
-# (orchestrator is invoked by handing tools/derive_baseline_prompt.md to a fresh
-# Claude Code session at the project root)
-
-# Render an evidence/<id>.json as an A4 PDF
-uv run python -m tools.evidence_to_pdf evidence/doc-trinity.json
-
-# Query the live retrieval CLI (Pipeline B / downstream church-evaluation)
-uv run python -m retrieval.cli "what does the corpus say about substitutionary atonement?"
-uv run python -m retrieval.cli "Romans 6:1-4 baptism" --k 8 --json-only
+# Start the MCP server
+uv run python -m bd_mcp.server
 ```
 
 ---
 
 ## Status
 
-Personal-use, single-user. No auth, no multi-tenant, no public API. The collaborative-questionnaire workflow runs in two directions: the baseline is built **with** churches and elders I personally know and trust; the baseline is then used to **evaluate** potential churches I'm considering visiting or joining. Personal due-diligence tooling. See [docs/PROJECT.md](docs/PROJECT.md) for the full picture and phase plan.
+Personal-use, single-user. No auth, no multi-tenant, no public API. The collaborative-questionnaire workflow runs in two directions: the lexical baseline is derived from Scripture alone via Pipeline 2; trusted churches and elders fill responses with their commitment booleans; the consolidated baseline is then used to evaluate potential churches I am considering visiting or joining. Personal due-diligence tooling.
 
-If you're another believer running the same diagnostic for yourself, the rubric (`questions.json`, the eventual `consolidated.json`, the engine itself) is potentially useful. The personal questionnaire responses (`responses/*.json`) are private. The structure is reusable; the answers are mine.
+If you are another believer running the same diagnostic for yourself, the rubric (`questions.json`, the engine itself, the lexical evidence files where the license stack allows public release) is potentially useful. The personal questionnaire responses (`responses/*.json`) are private. The Brethren teaching corpus in `parsed/` is private. The structure is reusable; the answers and corpus are mine.
+
+---
 
 ## License
 
-No license declared. Personal-use code shared as-is for educational reference; treat anything you reuse as inspiration rather than a library to depend on.
+No license declared on the engine code yet. The plan is MIT or Apache-2.0 once the v1 implementation is far enough along to warrant a public README that says so honestly. Until then, treat anything you reuse as inspiration rather than a library to depend on.
+
+Derived corpora are NOT redistributed in bulk. The engine works against the user's locally-ingested data. See [docs/LICENSE_TAGGING.md](docs/LICENSE_TAGGING.md) for per-source license posture and the redistribution-enforcement contract.
