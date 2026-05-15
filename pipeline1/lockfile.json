@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": 1,
+  "datasets": {
+    "macula_hebrew": {
+      "repo": "https://github.com/Clear-Bible/macula-hebrew",
+      "sha": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+      "sparse_paths": ["WLC/tsv/macula-hebrew.tsv", "WLC/lowfat/"],
+      "expected_size_mb": 200
+    },
+    "macula_greek": {
+      "repo": "https://github.com/Clear-Bible/macula-greek",
+      "sha": "453876a98c049b08b54375918d04ead2a3d879e7",
+      "sparse_paths": ["SBLGNT/tsv/macula-greek-SBLGNT.tsv", "Nestle1904/tsv/"],
+      "expected_size_mb": 50
+    },
+    "stepbible_data": {
+      "repo": "https://github.com/STEPBible/STEPBible-Data",
+      "sha": "67ad3d420db76872da887bc4d2ae40f31ff80ae7",
+      "sparse_paths": [
+        "Translators Amalgamated OT+NT/",
+        "Translators Versification Mapping/",
+        "Translators Amalgamated Tagged ESV/"
+      ],
+      "expected_size_mb": 60
+    },
+    "oshb_morphhb": {
+      "repo": "https://github.com/openscriptures/morphhb",
+      "sha": "3d15126fb1ef74867fc1434be1942e837932691f",
+      "sparse_paths": ["wlc/"],
+      "expected_size_mb": 100
+    },
+    "morphgnt_sblgnt": {
+      "repo": "https://github.com/morphgnt/sblgnt",
+      "sha": "aaed91e57c8e4a8dc9a2383e129ca5e75fe6393d",
+      "sparse_paths": ["*.txt"],
+      "expected_size_mb": 10
+    },
+    "openbible_cross_refs": {
+      "url": "https://www.openbible.info/labs/cross-references/cross_references.zip",
+      "sha256": "67a47f2fe8a9975e24e971e88e384864fe7c247c6fa2e9cd4d9c6d9daf120826",
+      "release_date": "2026-05-10",
+      "expected_size_mb": 2
+    },
+    "theographic": {
+      "repo": "https://github.com/robertrouse/theographic-bible-metadata",
+      "sha": "cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc",
+      "sparse_paths": ["CSV/", "json/"],
+      "expected_size_mb": 50
+    },
+    "bhsa": {
+      "package": "text-fabric",
+      "dataset": "ETCBC/bhsa",
+      "version": "2021"
+    },
+    "tsk": {
+      "primary_source": "CrossWire SWORD TSK module (public domain)",
+      "primary_url": "https://crosswire.org/sword/modules/ModInfo.jsp?modName=TSK",
+      "fallback_repo": "https://github.com/sleeptillseven/TSK",
+      "sha256": "6741647c7ab23c3710d1f070a7413994d1059b64dc3e7fc13ebc50f281e35e54",
+      "release_date": "2026-05-10",
+      "versification": "KJV (remapped via TVTMS on ingest)",
+      "expected_size_mb": 8
+    }
+  }
+}

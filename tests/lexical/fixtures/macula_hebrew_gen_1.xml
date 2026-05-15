@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter lang="he" id="GEN 1">
+  <sentence id="GEN 1:1">
+    <p>
+      <w xml:id="o010010010011" ref="GEN 1:1!1" lemma="בְּ" morph="R" gloss="in" strongnumberx="0871a" greek="ἐν" greekstrong="1722" lang="H">בְּ</w>
+      <w xml:id="o010010010012" ref="GEN 1:1!1" lemma="רֵאשִׁית" morph="Ncfsa" gloss="beginning" strongnumberx="7225" greek="ἀρξῇ" greekstrong="746" lang="H">רֵאשִׁ֖ית</w>
+      <w xml:id="o010010010021" ref="GEN 1:1!2" lemma="בָּרָא" morph="Vqp3ms" gloss="created" strongnumberx="1254" lang="H">בָּרָ֣א</w>
+      <w xml:id="o010010010031" ref="GEN 1:1!3" lemma="אֱלֹהִים" morph="Ncmpa" gloss="God" strongnumberx="0430" lang="H">אֱלֹהִ֑ים</w>
+    </p>
+  </sentence>
+</chapter>

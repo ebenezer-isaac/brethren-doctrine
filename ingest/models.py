@@ -51,6 +51,8 @@ class LexicalRecord(BaseModel):
         "Event",
         "Clause",
         "Phrase",
+        "Morpheme",
+        "TFNode",
     ]
     id: str
     properties: dict[str, str | int | float | bool | None]
