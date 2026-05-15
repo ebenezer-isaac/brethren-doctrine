@@ -1,0 +1,33 @@
+"""Dei Verbum adapter (Pipeline 1 cultural, stub).
+
+Stub adapter: deferred to live-scrape pass. scrape() returns an empty list when
+BD_CULTURAL_LIVE_SCRAPE is unset. Live implementation pulls from CANONICAL_URL
+(with FALLBACK_URLS) per docs/INGESTION_PATTERNS.md politeness rules.
+"""
+
+from __future__ import annotations
+
+from ingest.cultural._adapter_stub import SKIP_LIVE_SCRAPE
+from ingest.models import CulturalChunk
+
+SOURCE_SLUG = "vatican-dv"
+WORK_ID = "vatican-dv"
+TRADITION = "catholic-magisterial"
+LICENSE = "Libreria-Editrice-Vaticana"
+REDISTRIBUTE = False
+CANONICAL_URL = "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
+FALLBACK_URLS: list[str] = []
+EXPECTED = (26, 26)
+
+
+def scrape() -> list[CulturalChunk]:
+    if SKIP_LIVE_SCRAPE:
+        return []
+    raise NotImplementedError(
+        f"{SOURCE_SLUG} live scrape not implemented in this session; "
+        "set BD_CULTURAL_LIVE_SCRAPE=1 only after the per-source live implementation lands"
+    )
+
+
+def expected_chunk_count() -> tuple[int, int]:
+    return EXPECTED
