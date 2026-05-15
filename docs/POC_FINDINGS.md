@@ -15,7 +15,7 @@ Six parallel PoC agents validated 15 hypotheses against the architecture. This d
 | H1 | MACULA Hebrew + Greek TSV parses cleanly; Gen 1:1 + John 1:1 extract correctly | **PASS** | Live | A | None |
 | H2 | STEPBible TAHOT / TAGNT / TVTMS parse; TVTMS bridges Psa 51:1 Hebrew↔English | **PASS** | Live | A | None |
 | H3 | OSHB MorphHB OSIS XML parses; Gen 1:1 extracts H7225 / H1254 / H0430 | **PASS** | Live | A | OSHB collapses prefixes (7 words) vs MACULA splits (11 morphemes) |
-| H4 | MorphGNT iterates John 1:1 | **PASS** | Live | A | pysblgnt is dead on PyPI; direct .txt parse works. My brief said "theos at position 4" — wrong; theos is at positions 12 and 14 |
+| H4 | MorphGNT iterates John 1:1 | **PASS** | Live | A | pysblgnt is dead on PyPI; direct .txt parse works. My brief said "theos at position 4", wrong; theos is at positions 12 and 14 |
 | H5 | Theographic ~3000 persons load | **PASS** | Live | A | 3069 person rows; Abraham has 277 verse mentions |
 | H6 | ETCBC BHSA via Text-Fabric | **PASS** | Live | A | Requires `~/github` symlink quirk for text-fabric path resolution |
 | H7a | open-cbgm Windows install + 3 John run | **PASS** | Live | B | 5-minute install via pre-built v2.0 binary |

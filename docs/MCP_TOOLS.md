@@ -31,9 +31,9 @@ If `ok: false`, `result` is `null` and `error` is `{"code": "<>", "message": "<>
 
 Every license-sensitive tool accepts an optional `caller_context` field. Default `"personal"`. Values:
 
-- `"personal"` — caller is using the engine privately; snippet caps still apply but full fair-use latitude is granted.
-- `"public-share"` — caller intends to publish; any chunk with `redistribute: false` is paraphrased rather than quoted.
-- `"export"` — caller is bulk-exporting; any chunk with `redistribute: false` is excluded entirely.
+- `"personal"`: caller is using the engine privately; snippet caps still apply but full fair-use latitude is granted.
+- `"public-share"`: caller intends to publish; any chunk with `redistribute: false` is paraphrased rather than quoted.
+- `"export"`: caller is bulk-exporting; any chunk with `redistribute: false` is excluded entirely.
 
 The license guard's `response_safe_to_share` is derived from `caller_context` plus the set of cited sources. Tools that accept `caller_context`: `parallel_translation`, `cultural_overlay`, `debate_for_verse`, `doctrinal_verdict`, `evidence_inspect`, `license_audit`.
 

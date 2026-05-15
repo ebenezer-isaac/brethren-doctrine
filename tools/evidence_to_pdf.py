@@ -105,7 +105,7 @@ def yes_no(v: object) -> str:
         return "Yes"
     if v is False:
         return "No"
-    return "—"
+    return "N/A"
 
 
 def load_questions_index() -> dict[str, dict]:
@@ -160,7 +160,7 @@ def metadata_line(question: dict | None, answer: dict, evidence: dict, styles: d
             bits.append(esc(question["historical_consensus"]))
         if question.get("brethren_distinctive"):
             bits.append("Brethren distinctive")
-    bits.append(f"confidence: <b>{esc(evidence.get('confidence', '—'))}</b>")
+    bits.append(f"confidence: <b>{esc(evidence.get('confidence', 'N/A'))}</b>")
     return Paragraph(" &middot; ".join(bits), styles["subtitle"])
 
 
@@ -377,7 +377,7 @@ def build_story(data: dict, styles: dict, question: dict | None) -> list:
         story.append(Paragraph(", ".join(esc(l) for l in lemmas), styles["code"]))
     else:
         story.append(Paragraph(
-            "<font color='#b42318'><b>EMPTY</b></font> — validation failure",
+            "<font color='#b42318'><b>EMPTY</b></font>. Validation failure.",
             styles["body"],
         ))
     cts = evidence.get("complicating_texts_searched")

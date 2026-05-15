@@ -145,7 +145,7 @@ The PoC equivalent of this is at `tmp/poc/infra/docker/test_airgap.ps1`. See [do
 - **Do not bypass `license_guard.check_redistribute`** when emitting responses or exports. Every export path goes through the guard. Bypassing it can leak NC-licensed bulk content.
 - **Do not cross stores.** Pipeline 2 subagents read only the lexical store; Pipeline 3 synthesis reads both as separate services. Direct cross-store traversal (e.g., a Cypher query that spans both Neo4j databases) is not just bad practice; it is not possible at the network layer because the air-gap blocks it.
 - **Do not over-tag cultural chunks.** Pydantic validator caps `doctrine_tags` at 5 per chunk.
-- **Do not use em-dashes (—) or en-dashes (–) anywhere** in committed output. The validator at multiple layers rejects them.
+- **Do not use em-dashes or en-dashes anywhere** in committed output. The validator at multiple layers rejects them.
 
 ## Cost posture
 
@@ -156,11 +156,11 @@ The PoC equivalent of this is at `tmp/poc/infra/docker/test_airgap.ps1`. See [do
 
 ## Where to read more
 
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — canonical reference, full 10-layer architecture, three pipelines, two air-gapped stores, all 15 PoC-validated deltas.
-- [docs/MCP_TOOLS.md](docs/MCP_TOOLS.md) — 11 tools with I/O schemas.
-- [docs/EVIDENCE_SCHEMA.md](docs/EVIDENCE_SCHEMA.md) — Pipeline 2 evidence v3.0 schema.
-- [docs/CULTURAL_SCHEMA.md](docs/CULTURAL_SCHEMA.md) — cultural-store per-chunk schema.
-- [docs/INGESTION_PATTERNS.md](docs/INGESTION_PATTERNS.md) — per-dataset and per-source ingest recipes.
-- [docs/LICENSE_TAGGING.md](docs/LICENSE_TAGGING.md) — license posture per source, redistribution rules.
-- [docs/POC_FINDINGS.md](docs/POC_FINDINGS.md) — 15 hypotheses validated 2026-05-12.
-- [docs/phase_prompts/](docs/phase_prompts/) — explicit prompts the orchestrator dispatches.
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): canonical reference, full 10-layer architecture, three pipelines, two air-gapped stores, all 15 PoC-validated deltas.
+- [docs/MCP_TOOLS.md](docs/MCP_TOOLS.md): 11 tools with I/O schemas.
+- [docs/EVIDENCE_SCHEMA.md](docs/EVIDENCE_SCHEMA.md): Pipeline 2 evidence v3.0 schema.
+- [docs/CULTURAL_SCHEMA.md](docs/CULTURAL_SCHEMA.md): cultural-store per-chunk schema.
+- [docs/INGESTION_PATTERNS.md](docs/INGESTION_PATTERNS.md): per-dataset and per-source ingest recipes.
+- [docs/LICENSE_TAGGING.md](docs/LICENSE_TAGGING.md): license posture per source, redistribution rules.
+- [docs/POC_FINDINGS.md](docs/POC_FINDINGS.md): 15 hypotheses validated 2026-05-12.
+- [docs/phase_prompts/](docs/phase_prompts/): explicit prompts the orchestrator dispatches.

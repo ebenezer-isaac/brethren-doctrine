@@ -72,16 +72,16 @@ Pydantic validator: `id == question_id`.
 
 ### `affirms` semantics
 
-- `true` — lexical pattern across the canon supports the proposition.
-- `false` — lexical pattern contradicts it.
-- `null` — lexical evidence is genuinely insufficient (sparse anchor lemmas, narrow textual base).
-- `"disputed"` — lexical pattern is materially contested across the canon (e.g., paedobaptism, women in eldership) such that multiple defensible readings exist.
+- `true`: lexical pattern across the canon supports the proposition.
+- `false`: lexical pattern contradicts it.
+- `null`: lexical evidence is genuinely insufficient (sparse anchor lemmas, narrow textual base).
+- `"disputed"`: lexical pattern is materially contested across the canon (e.g., paedobaptism, women in eldership) such that multiple defensible readings exist.
 
 ### `confidence` semantics
 
-- `high` — dense anchor_lemmas, `pan_canonical: true`, complicating_texts addressed, `variant_robust: true`.
-- `medium` — some of the above with gaps.
-- `low` — sparse lemma evidence OR complicating texts unresolved OR verdict variant-sensitive.
+- `high`: dense anchor_lemmas, `pan_canonical: true`, complicating_texts addressed, `variant_robust: true`.
+- `medium`: some of the above with gaps.
+- `low`: sparse lemma evidence OR complicating texts unresolved OR verdict variant-sensitive.
 
 ## lexical_evidence block
 
@@ -264,7 +264,7 @@ If `verdict_preloaded: true`, `neutralized_form` provides a tradition-neutral re
 A single string field, 100-500 words, plain language, lexical reasoning only.
 
 Constraints:
-- No em-dashes (—) or en-dashes (–).
+- No em-dashes or en-dashes.
 - No "the historic Christian position is..." framing (that's cultural overlay).
 - No "Reformed teach X; Catholics teach Y" (that's cultural overlay).
 - Plain prose that explains what the lexical pattern says.
@@ -326,12 +326,12 @@ If `evidence_safe_to_publish: false`, the orchestrator records the question id i
 ## flags array
 
 Free-form list of slug-style flags. Standard slugs:
-- `ecm-shadow` — variant data is NA28-apparatus-shadow, not ECM-published
-- `concordance-thin` — anchor_lemmas count is below a threshold (e.g., < 3)
-- `variant-sensitive` — `verdict_variant_sensitive: true`
-- `lexically-disputed` — verdict is `"disputed"` rather than true/false/null
-- `cross-tradition-divergent` — set by Pipeline 3 synthesis, not Pipeline 2 (verdict diverges from majority cultural-overlay stance; informational only, does not change verdict)
-- `complicating-unresolved` — at least one complicating text has `addressed: false`
+- `ecm-shadow`: variant data is NA28-apparatus-shadow, not ECM-published
+- `concordance-thin`: anchor_lemmas count is below a threshold (e.g., < 3)
+- `variant-sensitive`: `verdict_variant_sensitive: true`
+- `lexically-disputed`: verdict is `"disputed"` rather than true/false/null
+- `cross-tradition-divergent`: set by Pipeline 3 synthesis, not Pipeline 2 (verdict diverges from majority cultural-overlay stance; informational only, does not change verdict)
+- `complicating-unresolved`: at least one complicating text has `addressed: false`
 
 ## Pipeline 2 prompt contract
 

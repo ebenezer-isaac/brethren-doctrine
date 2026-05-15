@@ -117,7 +117,7 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | Loader | `lxml.etree` with OSIS namespace |
 | License | Text PD (WLC); lemma + morphology CC BY 4.0 |
 | Neo4j model | Same `:Word` schema as MACULA Hebrew; use OSHB `xml:id` as alternate key |
-| Qdrant payload | Skip — covered by MACULA Hebrew. OSHB ingested only as fallback morphology source. |
+| Qdrant payload | Skip. Covered by MACULA Hebrew. OSHB ingested only as fallback morphology source. |
 | Gotchas | Ketiv/Qere encoded as `type="x-ketiv"` on `<w>`; maqqef entries have type flag (don't double-count); Hebrew word vs morpheme boundary disagrees with MACULA (OSHB collapses prefixes into one `<w>` with slash-prefixed lemma like `b/7225`; MACULA splits into morphemes). Neo4j carries both: `(:Word)-[:HAS_MORPHEME]->(:Morpheme)`. |
 | Expected counts | Gen 1:1 has 7 `<w>` elements (collapsed) vs MACULA's 11 morphemes |
 
@@ -130,9 +130,9 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | Loader | Direct `.txt` parse. **`pysblgnt` is dead on PyPI**; do not depend on it. |
 | License | SBLGNT text under SBLGNT EULA; morphology + lemmatization **CC BY-SA 4.0** |
 | Neo4j model | `:Word {source: "morphgnt-sblgnt"}` reconciled to MACULA Greek SBLGNT by BCV + wordnum |
-| Qdrant payload | Skip — MACULA Greek covers. MorphGNT as canonical parse-code source for citations. |
+| Qdrant payload | Skip. MACULA Greek covers. MorphGNT as canonical parse-code source for citations. |
 | Gotchas | CC-BY-SA on morphology means SA-propagation for derivatives; cannot be used in a Greek-English diglot without separate SBL license; parse codes are MorphGNT's own scheme (use the `morphgnt/sblgnt` wiki expansion table) |
-| Expected counts | John 1:1 has exactly 17 tokens; θεός at positions 12 and 14 (not position 4 — historical brief was wrong) |
+| Expected counts | John 1:1 has exactly 17 tokens; θεός at positions 12 and 14 (not position 4, historical brief was wrong) |
 
 ### TSK (Treasury of Scripture Knowledge)
 
@@ -142,7 +142,7 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | URL fallback | CrossWire SWORD module; `narthur/tsk-cli` for parser reference |
 | License | Public domain |
 | Neo4j model | `(:Verse)-[:CROSS_REF {source: "tsk", votes, rank}]->(:Verse)` |
-| Qdrant | Skip — graph-only |
+| Qdrant | Skip. Graph-only. |
 | Gotchas | Versification: original TSK uses KJV scheme; remap via TVTMS on ingest |
 
 ### OpenBible cross-references
@@ -155,8 +155,8 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | License | CC BY |
 | Loader | Trivial; `pandas.read_csv(delimiter="\t")` |
 | Neo4j model | `(:Verse {osisID})-[:CROSS_REF {votes, source: "openbible"}]->(:Verse)` |
-| Qdrant | Skip — graph-only |
-| Gotchas | **`To Verse` can be a range** (e.g. `Rom.1.19-Rom.1.20`). Explode at ingest into multiple edges (do NOT store as range property). Asymmetric direction — A→B doesn't imply B→A (keep directed, union at query time). |
+| Qdrant | Skip. Graph-only. |
+| Gotchas | **`To Verse` can be a range** (e.g. `Rom.1.19-Rom.1.20`). Explode at ingest into multiple edges (do NOT store as range property). Direction is asymmetric: A to B does not imply B to A (keep directed, union at query time). |
 | Expected counts | **~344,799 edges** (verified by H7 PoC) |
 | Refresh | Manual; monthly drift; pin to a release date |
 
@@ -183,7 +183,7 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | License | **CC BY-NC 4.0** with persistent identifier `10.17026/dans-z6y-skyh`. Personal RAG OK; commercial use requires DBG consent. |
 | Neo4j model | `(:TFNode {tf_id, otype})` plus typed labels for `Book/Chapter/Verse/Sentence/Clause/Phrase/Word/Lex`. Map TF `oslots` to `[:HAS_SLOT]` edges. Carry `pargr`, `instruction`, `function`, `typ` as properties. |
 | Qdrant payload | Embed `lex_utf8` + English `gloss` + `function` + `typ`; payload `{tf_node, book, ch, v, lex, gloss, source: "bhsa", license: "CC-BY-NC-4.0"}` |
-| Gotchas | NC license — keep `license_components` field; never bulk-export verbatim feature dumps; versification differs from WLC/MACULA in a handful of poetic books; multiple BHSA versions co-resident (pin to `2021` per release notes "most consistent ever"); `language` feature uses ISO codes `hbo`/`arc` |
+| Gotchas | NC license. Keep `license_components` field; never bulk-export verbatim feature dumps; versification differs from WLC/MACULA in a handful of poetic books; multiple BHSA versions co-resident (pin to `2021` per release notes "most consistent ever"); `language` feature uses ISO codes `hbo`/`arc` |
 | Expected counts | ~426,000 word nodes; full Hebrew Bible coverage |
 | text-fabric quirk | `use()` resolves `~/github/...`; symlink or pass `locations=` |
 
@@ -279,7 +279,7 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 | Alternate | `https://en.wikisource.org/wiki/Thirty-Nine_Articles_of_Religion` |
 | Anchor | `39A.<article_number>`; BCP per service / collect / canticle |
 | License | 1571 PD; BCP 1662 PD; BCP 1979 has US Episcopal © |
-| Gotchas | TLS handshake failure (SSLv3 alert) on justus.anglican.org — automatic fallback to Wikisource |
+| Gotchas | TLS handshake failure (SSLv3 alert) on justus.anglican.org, automatic fallback to Wikisource |
 
 ### UMC Articles of Religion (Methodist)
 
@@ -293,11 +293,11 @@ All git-sourced datasets are pinned at commit SHAs in `pipeline1/lockfile.json`.
 
 | Field | Value |
 |---|---|
-| Primary | `https://en.wikisource.org/wiki/Schleitheim_Confession` (recently 404 — verify) |
+| Primary | `https://en.wikisource.org/wiki/Schleitheim_Confession` (recently 404, verify) |
 | Alternate | `https://anabaptists.org/history/the-schleitheim-confession.html` |
 | Anchor | `Schleitheim.A<article_number>` (1-7) |
 | License | Public domain |
-| Gotchas | Wikisource slug drift — re-probe on 404 |
+| Gotchas | Wikisource slug drift. Re-probe on 404. |
 
 ### AG Fundamental Truths (Pentecostal)
 

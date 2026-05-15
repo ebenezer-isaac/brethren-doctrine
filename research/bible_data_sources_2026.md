@@ -6,18 +6,18 @@ Research date: 2026-05-10. Scope: Hebrew OT, Greek NT, Strong's, morphology, Eng
 
 ## 1. Recommended Ingestion Plan (in order)
 
-1. **STEPBible-Data first** (TAHOT + TAGNT). One repo gives Hebrew OT *and* Greek NT with disambiguated extended Strong's, morphology, glosses — already aligned. CC BY 4.0. This is the Tier-2 backbone.
+1. **STEPBible-Data first** (TAHOT + TAGNT). One repo gives Hebrew OT *and* Greek NT with disambiguated extended Strong's, morphology, glosses, already aligned. CC BY 4.0. This is the Tier-2 backbone.
 2. **OSHB v2.2** (`openscriptures/morphhb`) as a second Hebrew witness. Public-domain WLC text plus CC-BY lemma/morph. Use it to validate STEPBible's TAHOT and to recover the OSIS XML structure (chapter/verse/word IDs).
 3. **MorphGNT/SBLGNT** (`morphgnt/sblgnt`) as a second Greek witness. CCAT-style POS+parsing per word; cross-check against TAGNT.
-4. **TBESH + TBESG** (in STEPBible repo) for Hebrew (BDB-abridged) and Greek (Abbott-Smith) lexicon definitions — the "gloss" column for the relational schema.
-5. **TTESV** (also STEPBible) — already maps Strong's tags onto ESV English text. Lets you ship interlinear without scraping the ESV API for every verse.
+4. **TBESH + TBESG** (in STEPBible repo) for Hebrew (BDB-abridged) and Greek (Abbott-Smith) lexicon definitions, the "gloss" column for the relational schema.
+5. **TTESV** (also STEPBible). Already maps Strong's tags onto ESV English text. Lets you ship interlinear without scraping the ESV API for every verse.
 6. **English translations** layered on top:
    - **ESV** via `api.esv.org` (dev key, 5,000/day, 1,000/hr, 60/min, max 500 verses cached).
    - **NLT** via `api.nlt.to` (free non-commercial; anonymous = 50 verses/req, 500/day; keyed = higher).
    - **NIV / NKJV** via `scripture.api.bible` Starter (5,000 calls/mo, pick 3 copyrighted Bibles).
-   - **KJV** from any public-domain source (api.bible Starter, or a static SWORD/Zefania module — `bible-api.com` or `wldeh/bible-api` work too).
+   - **KJV** from any public-domain source (api.bible Starter, or a static SWORD/Zefania module; `bible-api.com` or `wldeh/bible-api` work too).
 7. **Open Context** (`opencontext.org/query/`) for archaeology cross-refs. Filter by Levant `bbox` + `allevent-start/-stop`. Send `User-Agent: oc-api-client` or you get blocked.
-8. **DAAHL** has no public REST API as of 2026 — site is a PHP front-end over a SQL DB at daahl.ucsd.edu. Treat as reference-only / manual lookup; do not script-scrape (TOU-unfriendly). Use Open Context + Pleiades (gazetteer) for programmatic site data instead.
+8. **DAAHL** has no public REST API as of 2026. The site is a PHP front-end over a SQL DB at daahl.ucsd.edu. Treat as reference-only / manual lookup; do not script-scrape (TOU-unfriendly). Use Open Context + Pleiades (gazetteer) for programmatic site data instead.
 
 ## 2. Format Normalization Plan (single relational schema)
 
@@ -54,20 +54,20 @@ Pipeline:
 | **Open Context** | CC BY (per record) | JSON-LD / GeoJSON-LD | Live | REST: `GET /query/?bbox=…&allevent-start=…`, `User-Agent: oc-api-client` |
 | **DAAHL** | Academic, no API | HTML/KML | Static | Manual reference only |
 
-Personal-use note for NIV/NKJV/NLT: the user owns physical copies, so storing a personal local copy from a Sword/Zefania module for offline querying is fine for personal study — but **do not commit copyrighted text to the public repo**. Keep those texts in a gitignored `data/private/` and pull from API.Bible/NLT.to in CI.
+Personal-use note for NIV/NKJV/NLT: the user owns physical copies, so storing a personal local copy from a Sword/Zefania module for offline querying is fine for personal study, but **do not commit copyrighted text to the public repo**. Keep those texts in a gitignored `data/private/` and pull from API.Bible/NLT.to in CI.
 
 ## 4. Concrete Next Steps (libraries)
 
 - Python:
-  - `pip install py-sblgnt` — Greek NT with morph, native Python API.
-  - `pip install pythonbible` + `pythonbible-parser` — OSIS XML parsing & reference normalization.
-  - `pip install pysword` — read SWORD modules (KJV, ASV, WEB).
+  - `pip install py-sblgnt`: Greek NT with morph, native Python API.
+  - `pip install pythonbible` + `pythonbible-parser`: OSIS XML parsing and reference normalization.
+  - `pip install pysword`: read SWORD modules (KJV, ASV, WEB).
   - `pip install lxml` + custom loader for OSHB OSIS XML (`<w lemma="strong:H0430" morph="HNcmpa">`).
-  - `pip install pandas` — load STEPBible TSVs (`pd.read_csv(sep='\t', comment='#')`, then handle `$` sub-records manually).
+  - `pip install pandas`: load STEPBible TSVs (`pd.read_csv(sep='\t', comment='#')`, then handle `$` sub-records manually).
   - `pip install httpx` (async) for ESV / NLT / api.bible / Open Context calls; wrap with `tenacity` for retry, `diskcache` for response caching.
 - Node:
-  - `npm i morphhb` — pre-built JSON of OSHB.
-  - `npm i bible-passage-reference-parser` (openbibleinfo) — robust ref parser, OSIS output.
+  - `npm i morphhb`: pre-built JSON of OSHB.
+  - `npm i bible-passage-reference-parser` (openbibleinfo): robust ref parser, OSIS output.
 - Schema: PostgreSQL with `verse_id text PRIMARY KEY` (OSIS), `tsvector` for text search, `PostGIS` for archaeology geoms. SQLite fine for v1.
 
 Build order:

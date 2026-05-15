@@ -45,7 +45,7 @@
     "local church authority": [
       "baptism_and_communion"
     ],
-    "John 3:5 — born of water and Spirit": [
+    "John 3:5, born of water and Spirit": [
       "baptism_and_communion"
     ],
     "remembrance of Christ": [
@@ -650,7 +650,7 @@
     "creation ex nihilo by the Father": [
       "sof_god_the_father"
     ],
-    "doxology — all things for God's glory": [
+    "doxology, all things for God's glory": [
       "sof_god_the_father"
     ],
     "divine sustenance / providence": [
@@ -1691,8 +1691,8 @@
   "documents": [
     {
       "doc_slug": "baptism_and_communion",
-      "title": "The Two Ordinances — Baptism and Communion",
-      "session_topic": "Doctrinal exposition of the two church ordinances: Believers Baptism and the Lord's Supper — their biblical basis, mode, recipients, meaning, and local-church practice.",
+      "title": "The Two Ordinances: Baptism and Communion",
+      "session_topic": "Doctrinal exposition of the two church ordinances: Believers Baptism and the Lord's Supper, their biblical basis, mode, recipients, meaning, and local-church practice.",
       "topic_clusters": [
         "Ecclesiology",
         "Sacramentology / Ordinances",
@@ -1712,7 +1712,7 @@
     {
       "doc_slug": "boundaries",
       "title": "Boundaries Talk with the Guys",
-      "session_topic": "Establishing healthy biblical boundaries for men with the opposite sex — physical, emotional, digital, spiritual, and social safeguards that honor God, protect marriages, and maintain personal purity.",
+      "session_topic": "Establishing healthy biblical boundaries for men with the opposite sex, with physical, emotional, digital, spiritual, and social safeguards that honor God, protect marriages, and maintain personal purity.",
       "topic_clusters": [
         "Christian Ethics",
         "Sanctification",
@@ -1874,7 +1874,7 @@
     },
     {
       "doc_slug": "sof_god_the_father",
-      "title": "Statement of Faith — God the Father",
+      "title": "Statement of Faith: God the Father",
       "session_topic": "Statement of Faith article on God the Father: His identity within the Trinity, eternal nature, role as all-powerful Creator and sustainer, sovereign ordering of all things for His glory, sending of the Son for redemption, and adoption of believers as His children.",
       "topic_clusters": [
         "Theology Proper",
@@ -1895,7 +1895,7 @@
     },
     {
       "doc_slug": "sof_god_the_son",
-      "title": "Statement of Faith — God the Son (Jesus)",
+      "title": "Statement of Faith: God the Son (Jesus)",
       "session_topic": "Statement-of-faith outline on the person and work of Jesus Christ: deity, incarnation, sinlessness, hypostatic union, substitutionary atonement, burial, resurrection, ascension, present priestly intercession, and bodily second coming.",
       "topic_clusters": [
         "Christology",
@@ -1936,7 +1936,7 @@
     },
     {
       "doc_slug": "sof_man",
-      "title": "Statement of Faith — Man (Anthropology)",
+      "title": "Statement of Faith: Man (Anthropology)",
       "session_topic": "Statement of Faith class on biblical anthropology: God's original design for humanity, the impact of the fall and sin, and the redemptive impact of the cross of Christ.",
       "topic_clusters": [
         "Anthropology",

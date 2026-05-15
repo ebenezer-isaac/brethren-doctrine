@@ -125,7 +125,7 @@
       "scripture_refs": ["Heb 9:14", "Deut 33:27", "Ps 90:2"],
       "themes": ["eternal existence of God"],
       "claims": [
-        "God's existence is eternal — without beginning or end."
+        "God's existence is eternal, without beginning or end."
       ],
       "perspectives_within_chunk": [],
       "cross_references": []
@@ -139,7 +139,7 @@
       "claims": [
         "God is one Being who exists eternally in three distinct Persons: Father, Son, and Holy Spirit.",
         "The Son is fully God (Matthew 28:18 cited for his authority/deity).",
-        "The Holy Spirit is fully God (Acts 5:3-4 — lying to the Spirit equated with lying to God).",
+        "The Holy Spirit is fully God (Acts 5:3-4, lying to the Spirit equated with lying to God).",
         "The three Persons are equal in being and dignity."
       ],
       "perspectives_within_chunk": [],
@@ -148,7 +148,7 @@
     {
       "chunk_id": "sof_god_06",
       "type": "definition",
-      "content": "Divine attributes — definition: 'Attributes are the perfections which are predicated of the divine being in the scriptures or are visibly exercised by Him in His work of creation, redemption and providence.' (Louis Berkhof)",
+      "content": "Divine attributes, definition: 'Attributes are the perfections which are predicated of the divine being in the scriptures or are visibly exercised by Him in His work of creation, redemption and providence.' (Louis Berkhof)",
       "scripture_refs": [],
       "themes": ["divine attributes (incommunicable and communicable)"],
       "claims": [
@@ -193,7 +193,7 @@
       "themes": ["distinct and harmonious roles of the Trinity", "Trinity", "providence"],
       "claims": [
         "Each Person of the Trinity has a distinct role in the divine works of creation, providence, and redemption.",
-        "The roles of the three Persons are harmonious — never in conflict."
+        "The roles of the three Persons are harmonious, never in conflict."
       ],
       "perspectives_within_chunk": [],
       "cross_references": ["sof_god_10", "sof_god_11", "sof_god_12"]
@@ -255,12 +255,12 @@
   ],
 
   "embedded_assets": [
-    {"path": "converted/media/image1.png", "description": "Diagram illustrating the Trinity (the classic 'Shield of the Trinity' / Scutum Fidei figure, inferred from context — image content not directly inspected)."}
+    {"path": "converted/media/image1.png", "description": "Diagram illustrating the Trinity (the classic 'Shield of the Trinity' / Scutum Fidei figure, inferred from context, image content not directly inspected)."}
   ],
 
   "raw_extracted_text": "God (Trinity)\n\nWe believe\n- in One God (Deut 6:4, Mark 12:29) -- Compared to other theories of polytheism, monotheism,\n- who created and - Isa 45:7, Gen 1:1 -- Compared to evolution,\n- sustains - Isa 45:7 -- compared to Deism\n  - all things.\n- God has eternally existed - Hebrews 9:14, Deu. 33:27, Psalm 90:2\n- in three Persons; (Mat 28:19, Matt. 3:16, 2 Corinthians 13:14, John 15:26, John 16:3\n  - The Father,\n  - The Son, - Matthew 28:18\n  - The Holy Spirit - Acts 5:3-4\n  - They are equal -- Phil 2:6, John 14:6,\n    - TRINITY\n    - [diagram image]\n  - holy in all divine attributes.\n    - Louis Berkhof: \"Attributes are the perfections which are predicated of the divine being in the scriptures or are visibly exercised by Him in His work of creation, redemption and providence\"\n    - Incommunicable and Communicable\n      - The incommunicable perfections are those characteristics unique to God (e.g., self-existence, simplicity, immensity)\n      - The communicable perfections are those characteristics transferable in part to humans (e.g., goodness, righteousness, love).\n    - omniscient, holy, Just, love, true free, omnipotent, eternal, infinite, immutable (God is unchanging and unchangeable), omnipresent, sovereign,\n    - 1 Peter 1:2\n- The Persons of the Godhead - 1 Peter 1:2\n  - perform distinct and harmonious roles\n    - in creation,\n    - providence, and\n    - redemption.\n      - Creation and preservation\n        - Through the Son (John 1:3, 10; Col. 1:16-17; 1 Cor. 8:6; Heb. 1:2-3, 10)\n        - Through the Spirit (Gen. 1:2; Job 26:13; 32:8; 33:4; 34:14-15; Ps. 104:30)\n      - Redemption\n        - Through the Father (1 Chron. 17:21; Isa. 63:16; Gal. 4:4-5)\n        - Through the Spirit (Heb. 9:14; Rom. 8:11)\n      - Sanctification\n        - Through the Father (John 17:17; 1 Thess. 5:23)\n        - Through the Son (1 Cor. 1:30; Eph. 5:25-27)\n\nWe believe in One God who created and sustains all things. God has eternally existed in three Persons; The Father, The Son, and The Holy Spirit. They are equal and holy in all divine attributes. The Persons of the Godhead perform distinct and harmonious roles in creation, providence, and redemption.\n\nVerses: Deut 6:4, Isa 45:7, Mk 12:29, Gen 1:1; Mat 28:19, Mat 3:16, 2 Corinthians 13:14; John 15:26, 16:3, Phil 2, John 14:6; Mat 28:18, Acts 5:3-4, Jn 1:14, Heb 9:13,14, I Pet 1:2",
 
-  "parsing_notes": "Document is a Statement of Faith (SOF) class outline on the doctrine of God / Trinity (overview), distinct from the Father-specific SOF document. Format is a bulleted outline with scripture references appended to each proposition; no narrative prose or contributor names appear in the source, so anonymization required no name removal. The Louis Berkhof citation (a published 20th-century systematic theologian) is preserved as a quoted source — he is not a corpus contributor. The source lists 'John 16:3' alongside John 15:26 in the Trinity proof-texts; this is most likely a typo for John 16:13 (Spirit-of-truth context), but recorded as written per quality bar (no hallucinated correction). The closing 'Verses' summary block lists 'Heb 9:13,14' which is normalized as Heb 9:13-14. The classic Trinity diagram (referenced as media/image1.png) was not visually inspected; description is inferred from the 'TRINITY' label adjacent to the image reference. The 'sustenance' bullet was kept in chunk sof_god_03 (matching its outline-level distinction from creation in sof_god_02), and the parallel 'Through the Son / Through the Spirit' structure for creation/redemption/sanctification is preserved across chunks 10-12. Note: the source does NOT explicitly list 'Through the Son' for redemption nor 'Through the Spirit' for sanctification, mirroring an apparent gap in the original outline; the JSON faithfully reflects only what the source records.",
+  "parsing_notes": "Document is a Statement of Faith (SOF) class outline on the doctrine of God / Trinity (overview), distinct from the Father-specific SOF document. Format is a bulleted outline with scripture references appended to each proposition; no narrative prose or contributor names appear in the source, so anonymization required no name removal. The Louis Berkhof citation (a published 20th-century systematic theologian) is preserved as a quoted source, he is not a corpus contributor. The source lists 'John 16:3' alongside John 15:26 in the Trinity proof-texts; this is most likely a typo for John 16:13 (Spirit-of-truth context), but recorded as written per quality bar (no hallucinated correction). The closing 'Verses' summary block lists 'Heb 9:13,14' which is normalized as Heb 9:13-14. The classic Trinity diagram (referenced as media/image1.png) was not visually inspected; description is inferred from the 'TRINITY' label adjacent to the image reference. The 'sustenance' bullet was kept in chunk sof_god_03 (matching its outline-level distinction from creation in sof_god_02), and the parallel 'Through the Son / Through the Spirit' structure for creation/redemption/sanctification is preserved across chunks 10-12. Note: the source does NOT explicitly list 'Through the Son' for redemption nor 'Through the Spirit' for sanctification, mirroring an apparent gap in the original outline; the JSON faithfully reflects only what the source records.",
 
   "confidence": {
     "text_extraction": "high",

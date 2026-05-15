@@ -71,7 +71,7 @@
     {
       "chunk_id": "vision_and_mission_02",
       "type": "teaching",
-      "content": "Etymology of the name — geographic-locator component: The choice to incorporate a regional landmark (a directional/geographic identifier) into the assembly's name follows a long-standing assembly tradition that emphasizes the idea of a local body within a defined geographic area. This pattern is held to be similar to biblical examples of the 'church at...' formula (e.g., the church at Corinth, the church at Ephesus), where local congregations were identified by their location.",
+      "content": "Etymology of the name, geographic-locator component: The choice to incorporate a regional landmark (a directional/geographic identifier) into the assembly's name follows a long-standing assembly tradition that emphasizes the idea of a local body within a defined geographic area. This pattern is held to be similar to biblical examples of the 'church at...' formula (e.g., the church at Corinth, the church at Ephesus), where local congregations were identified by their location.",
       "scripture_refs": [],
       "themes": ["local church identity", "geographic locality of the church"],
       "claims": [
@@ -84,7 +84,7 @@
     {
       "chunk_id": "vision_and_mission_03",
       "type": "definition",
-      "content": "Etymology of the name — 'Bible' component: 'Bible' in the assembly's name signifies commitment to the Bible itself as the basis of the church's life and teaching. Supporting passages: 2 Tim 3:16 (all Scripture is God-breathed and profitable for doctrine, reproof, correction, and instruction in righteousness) and 2 Tim 2:14-15 (rightly handling the word of truth). The practical expression is expository preaching and teaching.",
+      "content": "Etymology of the name, 'Bible' component: 'Bible' in the assembly's name signifies commitment to the Bible itself as the basis of the church's life and teaching. Supporting passages: 2 Tim 3:16 (all Scripture is God-breathed and profitable for doctrine, reproof, correction, and instruction in righteousness) and 2 Tim 2:14-15 (rightly handling the word of truth). The practical expression is expository preaching and teaching.",
       "scripture_refs": ["2Tim 3:16", "2Tim 2:14-15"],
       "themes": ["biblical authority and sufficiency of Scripture", "expository preaching and teaching"],
       "claims": [
@@ -99,7 +99,7 @@
     {
       "chunk_id": "vision_and_mission_04",
       "type": "definition",
-      "content": "Etymology of the name — 'Fellowship' component: Fellowship is defined as an intentional gathering with one heart and one purpose as a community that follows Christ. Supporting passage: Heb 10:24-25, which exhorts believers not to forsake gathering together but to provoke one another to love and good works.",
+      "content": "Etymology of the name, 'Fellowship' component: Fellowship is defined as an intentional gathering with one heart and one purpose as a community that follows Christ. Supporting passage: Heb 10:24-25, which exhorts believers not to forsake gathering together but to provoke one another to love and good works.",
       "scripture_refs": ["Heb 10:24-25"],
       "themes": ["intentional Christian fellowship"],
       "claims": [
@@ -117,7 +117,7 @@
       "scripture_refs": ["Acts 2:42"],
       "themes": ["Acts 2:42 marks of the early church", "intentional Christian fellowship", "biblical authority and sufficiency of Scripture", "corporate prayer"],
       "claims": [
-        "The four practices in Acts 2:42 — teaching, fellowship, breaking of bread, and prayer — serve as the foundational pattern for the fellowship's core values."
+        "The four practices in Acts 2:42, teaching, fellowship, breaking of bread, and prayer, serve as the foundational pattern for the fellowship's core values."
       ],
       "perspectives_within_chunk": [],
       "cross_references": []
@@ -125,7 +125,7 @@
     {
       "chunk_id": "vision_and_mission_06",
       "type": "teaching",
-      "content": "Core value: Christ Centered. Anchored in 1 Corinthians 1:10-24 — a passage addressing factionalism in the Corinthian church and pointing to Christ crucified as the unifying center against partisan loyalties to human teachers. The Lord's Supper is identified as a concrete, ongoing expression of this Christ-centeredness.",
+      "content": "Core value: Christ Centered. Anchored in 1 Corinthians 1:10-24, a passage addressing factionalism in the Corinthian church and pointing to Christ crucified as the unifying center against partisan loyalties to human teachers. The Lord's Supper is identified as a concrete, ongoing expression of this Christ-centeredness.",
       "scripture_refs": ["1Cor 1:10-24"],
       "themes": ["Christ-centered worship", "the Lord's Supper", "intentional Christian fellowship"],
       "claims": [
@@ -139,7 +139,7 @@
     {
       "chunk_id": "vision_and_mission_07",
       "type": "teaching",
-      "content": "Core value: Discipleship. Anchored in Matt 28:17-20 — the Great Commission, where the risen Christ commands the making of disciples by going, baptizing, and teaching them to observe all that he commanded. Practical components named: evangelism (the going and proclaiming) and teaching (instruction in the commands of Christ).",
+      "content": "Core value: Discipleship. Anchored in Matt 28:17-20, the Great Commission, where the risen Christ commands the making of disciples by going, baptizing, and teaching them to observe all that he commanded. Practical components named: evangelism (the going and proclaiming) and teaching (instruction in the commands of Christ).",
       "scripture_refs": ["Matt 28:17-20"],
       "themes": ["Great Commission discipleship", "evangelism and teaching"],
       "claims": [
@@ -153,7 +153,7 @@
     {
       "chunk_id": "vision_and_mission_08",
       "type": "teaching",
-      "content": "Core value: Church Life & Fellowship. Anchored in Romans 12, which lays out the body-life paradigm — believers as members of one body with diverse gifts, exhorted to genuine love, mutual honor, hospitality, and serving according to grace given. Practical expressions enumerated: holistic small groups, loving relationships, worship, developing and empowering leadership, gift-oriented ministry, prayer, mission focus, and good works (social work).",
+      "content": "Core value: Church Life & Fellowship. Anchored in Romans 12, which lays out the body-life paradigm, believers as members of one body with diverse gifts, exhorted to genuine love, mutual honor, hospitality, and serving according to grace given. Practical expressions enumerated: holistic small groups, loving relationships, worship, developing and empowering leadership, gift-oriented ministry, prayer, mission focus, and good works (social work).",
       "scripture_refs": ["Rom 12"],
       "themes": [
         "body life and one-another ministry",
@@ -170,7 +170,7 @@
         "Loving relationships among members is treated as a core practical value, not optional.",
         "Worship is a corporate practice of the body.",
         "The church intentionally develops and empowers leadership rather than relying on a static leadership pool.",
-        "Ministry is gift-oriented — every member's spiritual gift is to be deployed in service.",
+        "Ministry is gift-oriented, every member's spiritual gift is to be deployed in service.",
         "Prayer is a body-wide practice, not merely individual.",
         "The church orients itself around mission rather than inward-only focus.",
         "Good works, including social work, are part of the body's expression of fellowship."
@@ -192,7 +192,7 @@
         "personal holiness and magnifying Christ"
       ],
       "claims": [
-        "The vision is geographically scoped — directed at a defined locality.",
+        "The vision is geographically scoped, directed at a defined locality.",
         "Gospel proclamation in that locality is the primary aim.",
         "The means to that aim is the establishment of a strong, healthy, Bible-believing local fellowship.",
         "The fellowship is composed of disciples (not merely attenders) of Christ.",
@@ -233,7 +233,7 @@
       "claims": [
         "The session is structured to invite participatory reflection rather than passive reception.",
         "Members are expected to identify both areas of unclarity and personal points of resonance with the church's identity.",
-        "Mission is treated as actionable — believers are pressed to name concrete weekly actions that advance it."
+        "Mission is treated as actionable, believers are pressed to name concrete weekly actions that advance it."
       ],
       "perspectives_within_chunk": [],
       "cross_references": []
@@ -277,7 +277,7 @@
     {
       "chunk_id": "vision_and_mission_14",
       "type": "other",
-      "content": "Operational notes — language: Services will be primarily conducted in English, with translation provided as needed to accommodate other languages.",
+      "content": "Operational notes, language: Services will be primarily conducted in English, with translation provided as needed to accommodate other languages.",
       "scripture_refs": [],
       "themes": ["intentional Christian fellowship"],
       "claims": [
@@ -290,7 +290,7 @@
     {
       "chunk_id": "vision_and_mission_15",
       "type": "other",
-      "content": "Operational notes — geographic intent: The fellowship desires to serve the area along a particular regional corridor and, the Lord willing, intends to meet regularly somewhere in one of several specific neighborhoods in the target area, depending on which door the Lord opens. Prayer is requested for this matter.",
+      "content": "Operational notes, geographic intent: The fellowship desires to serve the area along a particular regional corridor and, the Lord willing, intends to meet regularly somewhere in one of several specific neighborhoods in the target area, depending on which door the Lord opens. Prayer is requested for this matter.",
       "scripture_refs": [],
       "themes": ["geographic locality of the church", "vision for gospel proclamation in a geographic area", "corporate prayer"],
       "claims": [
@@ -318,7 +318,7 @@
 
   "embedded_assets": [],
 
-  "raw_extracted_text": "We are [this fellowship]… A local church in a specific geographic region of the city that strives to follow the Bible in all that we do as we fellowship together with one heart to glorify the Lord!\n\nWhat's our name?\n\nDoes anyone know who decided on this name and why?\n\n[Geographic-region] Bible Fellowship\n\n[Geographic-region locator] - based on the pattern in the New Testament, we were inspired by the long time assembly tradition of emphasizing the idea of a local body within a geographic area by incorporating the name of a regional landmark into the assembly name. i.e. similar to Biblical examples of the \"church at…\"\n\nBible - Bible\n• 2 Tim 3:16\n• 2 Tim 2:14-15\n• Expository Preaching and Teaching\n\nFellowship - an intentional gathering with one heart and one purpose as a community that follows Christ. Heb 10:24-25.\n\nWho are we?\n\nWhat do you think our core values are?\n\nCore Values:\n\nActs 2:42: prayer, fellowship, teaching, and breaking of bread.\n\nChrist Centered\n• 1 Corinthians 1:10-24\n• Lords Supper\n\nDiscipleship\n• Matt 28:17-20\n• Evangelism\n• Teaching\n\nChurch Life & Fellowship\n• Rom 12\n• Holistic small groups\n• Loving relationships\n• Worship\n• Developing and empowering leadership\n• Gift oriented ministry\n• Prayer\n• Mission focused\n• Good works – (Social work)\n\nWhy are we here?\n\nVision: Our vision for [this fellowship] is to reach the [target geographic area] with the Gospel of Christ through the establishment of a strong and healthy Bible believing fellowship of disciples of Christ who shine as lights that bring glory to God.\n\nWhat would this look like to you?\n\nMission:\n- To be a community of Bible believing disciples of Christ who engage with each other and the local community\n- to magnify and honor Christ with our lives\n- To live life together based on the teachings of Scripture.\n- to proclaim the Good News of salvation through faith in Christ Jesus to friends, family, and neighbors as the Lord gives us opportunity to do so.\n- To be a blessing to our community and fellow residents of [the target geographic area]\n\nGroup discussion:\n• What aspects of our identity, vision and mission do you feel unsure or unclear about?\n• Which aspects do you feel like you connect with the most?\n• Brainstorm: What are some actions we could take this week that would help us achieve our mission?\n• What are some ways in which you feel like we have already been achieving our mission and vision?\n• What is at least one thing you can take away from today that will help you engage with [this fellowship] to better reach our vision?\n\nWhat's next?\n\nIf you agree with our statement of faith, practices, vision and mission, then we invite you to Unite (engage) with us and become part of what God is going through [this fellowship] in this area. The first step would be for those who have not yet decided to become members, please talk to one of us if you are interested in committing to become a member.\n\nMembers only: Those who have already joined as members of this local body, ask yourself personally how might you grow in the things which we described. For example:\n• have you discovered your spiritual gift so that you can minister to the body of Christ?\n• Have you determined in your heart to prioritize Fellowship with other believers?\n• Have you been intentional in how you live each day so that Christ might be magnified through your life each day?\n• Is the Bible the primary authoritative source of direction for how you live?\n\nNotes:\n\nWe will be primarily conducting services in English but will aim to provide translation as needed to accommodate for other languages.\n\nFor those familiar with the area, we are desiring to serve the area along the highway between [two specific neighborhoods] and Lord willing will be meeting regularly somewhere in [one of several specific neighborhoods in the target area] depending on which door the Lord opens for us. Your prayers are appreciated in this regard!\n\nIt has been a pleasure introducing this local body to you all and we are extremely grateful for your encouragement and support! If anyone has questions regarding our identity as a church, please do not hesitate to find me after this service.",
+  "raw_extracted_text": "We are [this fellowship]… A local church in a specific geographic region of the city that strives to follow the Bible in all that we do as we fellowship together with one heart to glorify the Lord!\n\nWhat's our name?\n\nDoes anyone know who decided on this name and why?\n\n[Geographic-region] Bible Fellowship\n\n[Geographic-region locator] - based on the pattern in the New Testament, we were inspired by the long time assembly tradition of emphasizing the idea of a local body within a geographic area by incorporating the name of a regional landmark into the assembly name. i.e. similar to Biblical examples of the \"church at…\"\n\nBible - Bible\n• 2 Tim 3:16\n• 2 Tim 2:14-15\n• Expository Preaching and Teaching\n\nFellowship - an intentional gathering with one heart and one purpose as a community that follows Christ. Heb 10:24-25.\n\nWho are we?\n\nWhat do you think our core values are?\n\nCore Values:\n\nActs 2:42: prayer, fellowship, teaching, and breaking of bread.\n\nChrist Centered\n• 1 Corinthians 1:10-24\n• Lords Supper\n\nDiscipleship\n• Matt 28:17-20\n• Evangelism\n• Teaching\n\nChurch Life & Fellowship\n• Rom 12\n• Holistic small groups\n• Loving relationships\n• Worship\n• Developing and empowering leadership\n• Gift oriented ministry\n• Prayer\n• Mission focused\n• Good works - (Social work)\n\nWhy are we here?\n\nVision: Our vision for [this fellowship] is to reach the [target geographic area] with the Gospel of Christ through the establishment of a strong and healthy Bible believing fellowship of disciples of Christ who shine as lights that bring glory to God.\n\nWhat would this look like to you?\n\nMission:\n- To be a community of Bible believing disciples of Christ who engage with each other and the local community\n- to magnify and honor Christ with our lives\n- To live life together based on the teachings of Scripture.\n- to proclaim the Good News of salvation through faith in Christ Jesus to friends, family, and neighbors as the Lord gives us opportunity to do so.\n- To be a blessing to our community and fellow residents of [the target geographic area]\n\nGroup discussion:\n• What aspects of our identity, vision and mission do you feel unsure or unclear about?\n• Which aspects do you feel like you connect with the most?\n• Brainstorm: What are some actions we could take this week that would help us achieve our mission?\n• What are some ways in which you feel like we have already been achieving our mission and vision?\n• What is at least one thing you can take away from today that will help you engage with [this fellowship] to better reach our vision?\n\nWhat's next?\n\nIf you agree with our statement of faith, practices, vision and mission, then we invite you to Unite (engage) with us and become part of what God is going through [this fellowship] in this area. The first step would be for those who have not yet decided to become members, please talk to one of us if you are interested in committing to become a member.\n\nMembers only: Those who have already joined as members of this local body, ask yourself personally how might you grow in the things which we described. For example:\n• have you discovered your spiritual gift so that you can minister to the body of Christ?\n• Have you determined in your heart to prioritize Fellowship with other believers?\n• Have you been intentional in how you live each day so that Christ might be magnified through your life each day?\n• Is the Bible the primary authoritative source of direction for how you live?\n\nNotes:\n\nWe will be primarily conducting services in English but will aim to provide translation as needed to accommodate for other languages.\n\nFor those familiar with the area, we are desiring to serve the area along the highway between [two specific neighborhoods] and Lord willing will be meeting regularly somewhere in [one of several specific neighborhoods in the target area] depending on which door the Lord opens for us. Your prayers are appreciated in this regard!\n\nIt has been a pleasure introducing this local body to you all and we are extremely grateful for your encouragement and support! If anyone has questions regarding our identity as a church, please do not hesitate to find me after this service.",
 
   "parsing_notes": "Source is a clean, typeset 3-page PDF (not handwritten); text extraction confidence is high. Document is intrinsically a vision/mission statement for a specific local congregation, so it inherently references that specific church and city. Per anonymization protocol, all proper nouns (the church's full name, its abbreviation, the city name, the regional-direction component of the church name, and named neighborhoods/highways) have been replaced in every field with neutral abstractions ('this fellowship', 'this local body', 'the target geographic area', 'specific neighborhoods in the target area', 'a regional landmark / geographic-region locator'). Original first-person pastoral framing ('find me after this service') has been retained in substance but stripped of any individual-attribution. The document does not present multiple internal perspectives; it is a single unified statement, so perspectives_within_chunk is empty across all chunks and presents_multiple_perspectives is false. Scripture references are explicit and unambiguous; normalization confidence is high. The two-line bullet 'Bible - Bible' on page 1 is read as a section header pairing the church-name component with the doctrinal commitment that the component signifies, not as duplicate text. Document type within the corpus is best characterized as a church-identity / charter teaching with discussion-group structure baked in.",
 

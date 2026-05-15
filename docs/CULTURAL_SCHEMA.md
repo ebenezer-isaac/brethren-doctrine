@@ -145,7 +145,7 @@ A document is tagged to its tradition at scrape time by the `pipeline1_cultural_
 
 True for binding confessional documents (WCF, 1689, Heidelberg, Belgic, Dort, Augsburg, Schleitheim, 39 Articles, UMC Articles, AG Fundamental Truths, conciliar definitions).
 
-False for non-binding theological texts (Augustine's Confessions, Calvin's Institutes, Aquinas's Summa, Wesley's sermons, Darby's Synopsis, Hopko's Orthodox Faith, encyclicals are arguably borderline — treat as false unless the encyclical is a definitive dogmatic act).
+False for non-binding theological texts (Augustine's Confessions, Calvin's Institutes, Aquinas's Summa, Wesley's sermons, Darby's Synopsis, Hopko's Orthodox Faith, encyclicals are arguably borderline, treat as false unless the encyclical is a definitive dogmatic act).
 
 This boolean drives retrieval ranking. Confessional text is weighted higher when the user asks "what does Tradition X officially teach" vs. theological text which is "what did Author A argue."
 
@@ -217,10 +217,10 @@ Coarse-to-fine consistency: each `doctrine_fine` slug maps to exactly one `doctr
 
 ### stance enum
 
-- `affirms` — chunk asserts the doctrine as true
-- `denies` — chunk asserts the doctrine as false
-- `qualifies` — chunk affirms with significant restrictions or exceptions
-- `disputed` — chunk explicitly notes intra-tradition disagreement
+- `affirms`: chunk asserts the doctrine as true
+- `denies`: chunk asserts the doctrine as false
+- `qualifies`: chunk affirms with significant restrictions or exceptions
+- `disputed`: chunk explicitly notes intra-tradition disagreement
 
 `silent` is NOT in this enum. Chunks that do not substantively address a doctrine simply lack a tag for that doctrine; we do not record silence.
 
@@ -366,7 +366,7 @@ Hybrid retrieval can additionally embed-search the chunk text via Qdrant `cult_c
 
 ## What is NOT in the cultural schema
 
-- `tradition_weight` — was considered, deferred for v1. Cultural overlay is diagnostic; weighting smuggles authority.
-- `question_ids_addressed` — dropped per architecture decision; the Neo4j `:UNDER_QUESTION` edge handles linkage.
-- `verdict` field on a chunk — chunks do not carry verdicts. Only `evidence/<id>.json` (Pipeline 2 output) carries verdicts.
-- `counter_witness_for_lexical_verdict` — explicitly NO. Cultural is diagnostic, never adjudicative.
+- `tradition_weight`: was considered, deferred for v1. Cultural overlay is diagnostic; weighting smuggles authority.
+- `question_ids_addressed`: dropped per architecture decision; the Neo4j `:UNDER_QUESTION` edge handles linkage.
+- `verdict` field on a chunk: chunks do not carry verdicts. Only `evidence/<id>.json` (Pipeline 2 output) carries verdicts.
+- `counter_witness_for_lexical_verdict`: explicitly NO. Cultural is diagnostic, never adjudicative.

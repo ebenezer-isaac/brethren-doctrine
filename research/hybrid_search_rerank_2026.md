@@ -1,4 +1,4 @@
-# Hybrid Search + Reranking — 2026 Research
+# Hybrid Search + Reranking, 2026 Research
 
 Scope: brethren-doctrine GraphRAG. Tens of thousands of chunks max, single-digit QPS, personal use, theology-domain queries spanning theme, scripture-anchored, exact-name, conceptual, and comparative intents.
 
@@ -9,29 +9,29 @@ Scope: brethren-doctrine GraphRAG. Tens of thousands of chunks max, single-digit
 Three stages, all server-side in Qdrant where possible. Numbers tuned for our corpus size and QPS.
 
 ```
-Stage 0 — Query routing (cheap, classify intent)
+Stage 0, Query routing (cheap, classify intent)
    exact-name / scripture-ref  →  weight BM25 0.7, dense 0.3
    conceptual / comparative    →  weight BM25 0.3, dense 0.7
    theme                       →  balanced 0.5 / 0.5
 
-Stage 1 — Parallel retrieval, K=80 each
+Stage 1, Parallel retrieval, K=80 each
    1a. Dense vectors (Voyage-3-large or text-embedding-3-large), top-80
    1b. Sparse BM25 (Qdrant native, IDF on), top-80
    Optional Stage 1c (graph queries): Neo4j Cypher hop-1 from any
    matched scripture/person/place node, cap 40 chunks
 
-Stage 2 — Fusion, K_in≈200 → K_fused=60
+Stage 2, Fusion, K_in≈200 → K_fused=60
    Weighted RRF (k=60) with per-source weights from Stage 0 router.
    RRF chosen over alpha-weighted: scores from BM25 vs cosine
    live in different distributions and naive normalization is brittle.
 
-Stage 3 — Cross-encoder rerank, K_fused=60 → K_rerank=10
+Stage 3, Cross-encoder rerank, K_fused=60 → K_rerank=10
    Single-stage rerank with BGE-reranker-v2-m3 (self-hosted) OR
    Cohere Rerank 3.5 (hosted). Skip the cheap-then-expensive
    two-stage; at K=60 the marginal latency from a tiny first-pass
    reranker is not worth the orchestration complexity at our scale.
 
-Stage 4 — Authority-aware score boost (Qdrant score_boost
+Stage 4, Authority-aware score boost (Qdrant score_boost
    formula or in-process), then truncate to top-K_final (5-8 for
    LLM context, 20+ for browsing UI).
 ```
@@ -55,10 +55,10 @@ Why these K values: ZeroEntropy and Pinecone consistently show 50-100 candidates
 **Use Qdrant native sparse vectors with IDF modifier** (Qdrant >= 1.15.2, BM25 model from FastEmbed or Qdrant Cloud Inference).
 
 Why not the alternatives:
-- **Tantivy** is faster (~6.5x vs Elasticsearch) but is a second store to keep in sync — not worth it at <50k chunks
+- **Tantivy** is faster (~6.5x vs Elasticsearch) but is a second store to keep in sync, not worth it at <50k chunks
 - **Elastic / OpenSearch** are overkill for personal use; ops burden is real
 - **pgvector + FTS** would require swapping the whole vector store
-- **Neo4j full-text** works (`HybridRetriever` in neo4j-graphrag-python uses it) — keep this option only if you decide Neo4j becomes the primary retrieval store; otherwise mirror chunks into Qdrant and keep Neo4j for graph traversal
+- **Neo4j full-text** works (`HybridRetriever` in neo4j-graphrag-python uses it), keep this option only if you decide Neo4j becomes the primary retrieval store; otherwise mirror chunks into Qdrant and keep Neo4j for graph traversal
 
 Config sketch:
 ```python
@@ -77,7 +77,7 @@ Then a single Query API call with `prefetch=[dense_query, sparse_query]` and `qu
 
 Two viable layers. Use both.
 
-**Layer A — Qdrant Score Boost (post-rerank, in-engine, v1.14+).**
+**Layer A, Qdrant Score Boost (post-rerank, in-engine, v1.14+).**
 After RRF + cross-encoder produces a normalized relevance score `r in [0,1]`, apply:
 
 ```
@@ -86,13 +86,13 @@ final = r + 0.08 * (authority_level / max_authority)
       - 0.05 * is_speculative_flag
 ```
 
-Keep weights small (<=10% of `r`); rerankers already encode topical relevance and you don't want authority to override a clearly-better chunk. The 0.08 cap roughly equals one rerank-rank slot at our K — meaningful but not dominating.
+Keep weights small (<=10% of `r`); rerankers already encode topical relevance and you don't want authority to override a clearly-better chunk. The 0.08 cap roughly equals one rerank-rank slot at our K, meaningful but not dominating.
 
-**Layer B — Authority as a re-ranking input feature.** Most cross-encoders don't read structured metadata, but you can prepend a tiny authority tag to the document text before reranking, e.g. `[authority:high] [type:sermon] {chunk_text}`. BGE-reranker-v2-m3 picks up on these tokens; tested in legal/medical RAG with measurable nDCG lift. Keep tags short — they consume the reranker's 512/8192 token budget.
+**Layer B, Authority as a re-ranking input feature.** Most cross-encoders don't read structured metadata, but you can prepend a tiny authority tag to the document text before reranking, e.g. `[authority:high] [type:sermon] {chunk_text}`. BGE-reranker-v2-m3 picks up on these tokens; tested in legal/medical RAG with measurable nDCG lift. Keep tags short, they consume the reranker's 512/8192 token budget.
 
-Do NOT bake authority into the dense or sparse retrieval scores directly — it pollutes recall and is hard to debug.
+Do NOT bake authority into the dense or sparse retrieval scores directly, it pollutes recall and is hard to debug.
 
-## 5. ColBERT / ColPali — Not Yet for Us
+## 5. ColBERT / ColPali, Not Yet for Us
 
 ColBERTv2 and Jina-ColBERT-v2 are production-ready in Qdrant via multivector support, and ColPali is brilliant for visual/PDF-layout corpora. But:
 - 1k+ vectors per chunk → ~30-100x storage vs single-vector
@@ -115,14 +115,14 @@ Revisit if/when you index PDF page-images of original sermons or Hebrew/Greek ma
 
 ## Sources
 
-- [Qdrant — Hybrid Search Revamped (Query API)](https://qdrant.tech/articles/hybrid-search/)
-- [Qdrant — Sparse Vectors & BM25](https://qdrant.tech/articles/sparse-vectors/)
-- [Qdrant — Score Boosting / Decay Functions](https://qdrant.tech/blog/decay-functions/)
-- [Agentset — Reranker Leaderboard 2026](https://agentset.ai/rerankers)
-- [ZeroEntropy — Ultimate Guide to Choosing the Best Reranking Model (2026)](https://www.zeroentropy.dev/articles/ultimate-guide-to-choosing-the-best-reranking-model-in-2025)
-- [Pinecone — Rerankers and Two-Stage Retrieval](https://www.pinecone.io/learn/series/rag/rerankers/)
-- [Elastic — Weighted RRF in Elasticsearch](https://www.elastic.co/search-labs/blog/weighted-reciprocal-rank-fusion-rrf)
-- [Neo4j — Hybrid Retrieval for GraphRAG (Python)](https://neo4j.com/blog/developer/hybrid-retrieval-graphrag-python-package/)
-- [Qdrant + ColPali — Multi-Vector Retrieval at Scale](https://qdrant.tech/blog/colpali-qdrant-optimization/)
-- [Supermemory — Hybrid Search Guide (April 2026)](https://supermemory.ai/blog/hybrid-search-guide/)
+- [Qdrant, Hybrid Search Revamped (Query API)](https://qdrant.tech/articles/hybrid-search/)
+- [Qdrant, Sparse Vectors & BM25](https://qdrant.tech/articles/sparse-vectors/)
+- [Qdrant, Score Boosting / Decay Functions](https://qdrant.tech/blog/decay-functions/)
+- [Agentset, Reranker Leaderboard 2026](https://agentset.ai/rerankers)
+- [ZeroEntropy, Ultimate Guide to Choosing the Best Reranking Model (2026)](https://www.zeroentropy.dev/articles/ultimate-guide-to-choosing-the-best-reranking-model-in-2025)
+- [Pinecone, Rerankers and Two-Stage Retrieval](https://www.pinecone.io/learn/series/rag/rerankers/)
+- [Elastic, Weighted RRF in Elasticsearch](https://www.elastic.co/search-labs/blog/weighted-reciprocal-rank-fusion-rrf)
+- [Neo4j, Hybrid Retrieval for GraphRAG (Python)](https://neo4j.com/blog/developer/hybrid-retrieval-graphrag-python-package/)
+- [Qdrant + ColPali, Multi-Vector Retrieval at Scale](https://qdrant.tech/blog/colpali-qdrant-optimization/)
+- [Supermemory, Hybrid Search Guide (April 2026)](https://supermemory.ai/blog/hybrid-search-guide/)
 - [ColBERTv2 paper (arXiv)](https://arxiv.org/abs/2112.01488)

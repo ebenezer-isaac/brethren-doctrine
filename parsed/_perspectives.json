@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-05-10T01:30:00Z",
-  "method_notes": "Cross-document grouping of chunks addressing the same theme with distinct claims. Source-anchored only — no personal attribution. Chunks are referenced solely by doc_slug and chunk_id. External theological authors cited in source documents (e.g., John Piper, Wayne Grudem, D.A. Carson, Charles Ryrie, Louis Berkhof, MacArthur/Mayhue, Justin Martyr, Didache) are retained as legitimate published-author citations within claim text where they appeared in the source. Perspective sets are formed where two or more chunks from different docs address the same theological theme but advance distinct, complementary, contrasting, or disputed claims. Stance markers are short, neutral, doctrine-focused tags.",
+  "method_notes": "Cross-document grouping of chunks addressing the same theme with distinct claims. Source-anchored only, no personal attribution. Chunks are referenced solely by doc_slug and chunk_id. External theological authors cited in source documents (e.g., John Piper, Wayne Grudem, D.A. Carson, Charles Ryrie, Louis Berkhof, MacArthur/Mayhue, Justin Martyr, Didache) are retained as legitimate published-author citations within claim text where they appeared in the source. Perspective sets are formed where two or more chunks from different docs address the same theological theme but advance distinct, complementary, contrasting, or disputed claims. Stance markers are short, neutral, doctrine-focused tags.",
 
   "perspective_sets": [
     {
@@ -53,7 +53,7 @@
         {
           "source_doc": "sof_holy_spirit",
           "chunk_id": "sof_holy_spirit_18",
-          "claim": "The Holy Spirit gives spiritual gifts for the purpose of building up the church (no specification of which gifts continue or have ceased — neutral SOF formulation).",
+          "claim": "The Holy Spirit gives spiritual gifts for the purpose of building up the church (no specification of which gifts continue or have ceased, neutral SOF formulation).",
           "scripture_refs": ["1Cor 12:4-13", "Heb 2:4"],
           "stance_marker": "neutral_silent_on_cessation"
         }
@@ -77,7 +77,7 @@
         {
           "source_doc": "baptism_and_communion",
           "chunk_id": "baptism_and_communion_14",
-          "claim": "Acknowledged tension: there is no explicit New Testament statement restricting the Table to baptised believers only — the requirement is inferred rather than commanded.",
+          "claim": "Acknowledged tension: there is no explicit New Testament statement restricting the Table to baptised believers only. The requirement is inferred rather than commanded.",
           "scripture_refs": [],
           "stance_marker": "tension_acknowledged_no_explicit_command"
         },
@@ -115,14 +115,14 @@
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_12",
-          "claim": "A woman should wear a literal/physical head covering when praying or prophesying in the gathering — the passage gives multiple reasons (creation order, glory, angels) that transcend culture.",
+          "claim": "A woman should wear a literal/physical head covering when praying or prophesying in the gathering. The passage gives multiple reasons (creation order, glory, angels) that transcend culture.",
           "scripture_refs": ["1Cor 11:5", "1Cor 11:7", "1Cor 11:8-9", "1Cor 11:10", "Eph 3:10"],
           "stance_marker": "literal_cloth_covering"
         },
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_12",
-          "claim": "A woman's natural long hair is itself the covering, so an additional cloth covering is not required — 1 Cor 11:14-15 says her hair is given to her for a covering and the glory order God-Man-Woman-Hair places hair in the covering position.",
+          "claim": "A woman's natural long hair is itself the covering, so an additional cloth covering is not required. First Cor 11:14-15 says her hair is given to her for a covering and the glory order God-Man-Woman-Hair places hair in the covering position.",
           "scripture_refs": ["1Cor 11:14-15"],
           "stance_marker": "hair_is_the_covering"
         },
@@ -157,7 +157,7 @@
         {
           "source_doc": "boundaries",
           "chunk_id": "boundaries_17",
-          "claim": "God has designed an order in male-female relationships (1 Cor 11:3) — there is a reason for it (cited as part of the basis for boundaries, not as direct head-covering instruction).",
+          "claim": "God has designed an order in male-female relationships (1 Cor 11:3), and there is a reason for it (cited as part of the basis for boundaries, not as direct head-covering instruction).",
           "scripture_refs": ["1Cor 11:3"],
           "stance_marker": "headship_order_affirmed_indirectly"
         }
@@ -174,28 +174,28 @@
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_13",
-          "claim": "A covered woman may pray and prophesy aloud in the assembly because 1 Cor 11:5 envisions her doing so — the rule given is about covering, not silence.",
+          "claim": "A covered woman may pray and prophesy aloud in the assembly because 1 Cor 11:5 envisions her doing so. The rule given is about covering, not silence.",
           "scripture_refs": ["1Cor 11:5"],
           "stance_marker": "covered_speech_permitted"
         },
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_13",
-          "claim": "Even when covered, a woman is to remain silent in the gathered assembly because 1 Cor 14:33-34 (and parallel passages) commands silence — the two passages address two distinct problems and the silence command still binds.",
+          "claim": "Even when covered, a woman is to remain silent in the gathered assembly because 1 Cor 14:33-34 (and parallel passages) commands silence. The two passages address two distinct problems and the silence command still binds.",
           "scripture_refs": ["1Cor 14:33-34", "1Tim 4"],
           "stance_marker": "silence_binds_even_when_covered"
         },
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_14",
-          "claim": "Women's silence is given without the conditions attached to silence of tongues-speakers and prophets, but the binding application is that women are not to lead the congregation — the command does not necessarily require absolute silence.",
+          "claim": "Women's silence is given without the conditions attached to silence of tongues-speakers and prophets, but the binding application is that women are not to lead the congregation. The command does not necessarily require absolute silence.",
           "scripture_refs": ["1Cor 14", "1Cor 14:33-34"],
           "stance_marker": "silence_in_leading_only"
         },
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_11",
-          "claim": "Women hold significant roles and ministries — older women teach younger women (Titus 2:4), a wife may participate in privately instructing a man (Acts 18:26), women labored in the gospel (Phil 4:3) — the restriction is on the public leading/teaching of the assembly.",
+          "claim": "Women hold significant roles and ministries: older women teach younger women (Titus 2:4), a wife may participate in privately instructing a man (Acts 18:26), women labored in the gospel (Phil 4:3). The restriction is on the public leading/teaching of the assembly.",
           "scripture_refs": ["Titus 2:4", "Acts 18:26", "Phil 4:3"],
           "stance_marker": "private_instruction_permitted_public_leading_restricted"
         },
@@ -209,7 +209,7 @@
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_33",
-          "claim": "1 Cor 14:34-35 presumes the headship order — women keep silence in the churches and ask their husbands at home if they want to learn anything; v.35 encourages them to ask, not be silent, when home order is applicable.",
+          "claim": "1 Cor 14:34-35 presumes the headship order: women keep silence in the churches and ask their husbands at home if they want to learn anything; v.35 encourages them to ask, not be silent, when home order is applicable.",
           "scripture_refs": ["1Cor 11:8-9", "1Cor 11:3", "1Cor 14:34-35"],
           "stance_marker": "silence_in_church_questioning_at_home"
         },
@@ -223,7 +223,7 @@
         {
           "source_doc": "baptism_and_communion",
           "chunk_id": "baptism_and_communion_17",
-          "claim": "During the breaking-of-bread meeting, men, when led by the Spirit, may spontaneously share scripture, prayer, or song — by implication this open ministry is for men.",
+          "claim": "During the breaking-of-bread meeting, men, when led by the Spirit, may spontaneously share scripture, prayer, or song. By implication this open ministry is for men.",
           "scripture_refs": ["1Cor 14:26"],
           "stance_marker": "men_only_open_ministry_at_table"
         }
@@ -299,7 +299,7 @@
         {
           "source_doc": "sof_holy_spirit",
           "chunk_id": "sof_holy_spirit_14",
-          "claim": "Sealing belongs to all believers without exception, occurs at the moment of conversion, and endures until the day of redemption — sealing is permanent for the believer (Eph 4:30).",
+          "claim": "Sealing belongs to all believers without exception, occurs at the moment of conversion, and endures until the day of redemption. Sealing is permanent for the believer (Eph 4:30).",
           "scripture_refs": ["Eph 1:13", "2Cor 1:22", "Eph 4:30", "Acts 2:38"],
           "stance_marker": "permanent_sealing_to_day_of_redemption"
         },
@@ -337,21 +337,21 @@
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_30",
-          "claim": "Unconditional Election — God's choice of the elect is not based on any condition foreseen in them.",
+          "claim": "Unconditional Election: God's choice of the elect is not based on any condition foreseen in them.",
           "scripture_refs": ["Rom 9-11"],
           "stance_marker": "unconditional_election"
         },
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_30",
-          "claim": "Conditional Election — God's choice of the elect is conditioned on something (commonly foreseen faith).",
+          "claim": "Conditional Election: God's choice of the elect is conditioned on something (commonly foreseen faith).",
           "scripture_refs": [],
           "stance_marker": "conditional_election"
         },
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_30",
-          "claim": "In-Christ Election — Election is corporate and 'in Christ' rather than individual selection apart from Him.",
+          "claim": "In-Christ Election: Election is corporate and 'in Christ' rather than individual selection apart from Him.",
           "scripture_refs": [],
           "stance_marker": "in_christ_corporate_election"
         },
@@ -379,7 +379,7 @@
         {
           "source_doc": "salvation_soteriology",
           "chunk_id": "salvation_soteriology_03_grace_through_faith",
-          "claim": "The gospel is the power of God for salvation to everyone who believes — everyone who calls on the name of the Lord will be saved.",
+          "claim": "The gospel is the power of God for salvation to everyone who believes, and everyone who calls on the name of the Lord will be saved.",
           "scripture_refs": ["Rom 10:9-13", "Eph 2:8-10"],
           "stance_marker": "universal_offer_to_whoever_believes"
         }
@@ -396,7 +396,7 @@
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_06",
-          "claim": "Eldership is a group function — the plurality itself keeps the elders in check (mutual accountability).",
+          "claim": "Eldership is a group function. The plurality itself keeps the elders in check (mutual accountability).",
           "scripture_refs": [],
           "stance_marker": "plurality_for_mutual_accountability"
         },
@@ -410,7 +410,7 @@
         {
           "source_doc": "membership",
           "chunk_id": "membership_02",
-          "claim": "Church government is by a plurality of elders rather than a single pastor or hierarchical body — this is a distinctive members are expected to affirm.",
+          "claim": "Church government is by a plurality of elders rather than a single pastor or hierarchical body. This is a distinctive members are expected to affirm.",
           "scripture_refs": [],
           "stance_marker": "plurality_as_membership_distinctive"
         },
@@ -483,7 +483,7 @@
         {
           "source_doc": "vision_and_mission",
           "chunk_id": "vision_and_mission_05",
-          "claim": "Acts 2:42's four practices — teaching, fellowship, breaking of bread, and prayer — serve as the foundational pattern for the fellowship's core values.",
+          "claim": "Acts 2:42's four practices (teaching, fellowship, breaking of bread, and prayer) serve as the foundational pattern for the fellowship's core values.",
           "scripture_refs": ["Acts 2:42"],
           "stance_marker": "acts_2_42_as_core_value_template"
         }
@@ -507,7 +507,7 @@
         {
           "source_doc": "sof_god",
           "chunk_id": "sof_god_09",
-          "claim": "Each Person of the Trinity has a distinct role in the divine works of creation, providence, and redemption — the roles are harmonious, never in conflict.",
+          "claim": "Each Person of the Trinity has a distinct role in the divine works of creation, providence, and redemption. The roles are harmonious, never in conflict.",
           "scripture_refs": ["1Pet 1:2"],
           "stance_marker": "distinct_harmonious_roles"
         },
@@ -521,7 +521,7 @@
         {
           "source_doc": "sof_god_the_son",
           "chunk_id": "sof_god_the_son_07",
-          "claim": "Jesus is truly God and truly man — one person with two natures (hypostatic union); existing in 'the form of God,' equality with God was already His by right; He humbled Himself in real human likeness while remaining fully God.",
+          "claim": "Jesus is truly God and truly man, one person with two natures (hypostatic union); existing in 'the form of God,' equality with God was already His by right; He humbled Himself in real human likeness while remaining fully God.",
           "scripture_refs": ["Phil 2:6-8", "John 1:1-2", "John 1:14", "Luke 2:52"],
           "stance_marker": "hypostatic_union_kenosis_without_relinquishing_deity"
         },
@@ -535,25 +535,25 @@
         {
           "source_doc": "baptism_and_communion",
           "chunk_id": "baptism_and_communion_07",
-          "claim": "Baptism must be performed in the name of the Father, the Son, and the Holy Spirit — the Trinitarian formula is an appeal to and dependence on each Person of the Godhead.",
+          "claim": "Baptism must be performed in the name of the Father, the Son, and the Holy Spirit. The Trinitarian formula is an appeal to and dependence on each Person of the Godhead.",
           "scripture_refs": ["Matt 28:19"],
           "stance_marker": "trinitarian_formula_in_baptism"
         },
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_10",
-          "claim": "Headship distinguishes role, not essential equality — analogous to the Father being 'greater' than the Son in role only; Christ is not inferior to God in essence.",
+          "claim": "Headship distinguishes role, not essential equality, analogous to the Father being 'greater' than the Son in role only; Christ is not inferior to God in essence.",
           "scripture_refs": ["1Cor 11:3"],
           "stance_marker": "role_subordination_essential_equality"
         }
       ],
       "relationship": "nuanced_agreement",
-      "notes": "Core Trinitarian doctrine is uniform across all four Trinitarian SOF documents and the practical documents (baptism, governance). The interesting nuance is the role-subordination claim invoked in church_governance_10 to ground male headship by analogy — equal in essence, distinct in role — which goes beyond the simpler 'equal Persons' formulations elsewhere."
+      "notes": "Core Trinitarian doctrine is uniform across all four Trinitarian SOF documents and the practical documents (baptism, governance). The interesting nuance is the role-subordination claim invoked in church_governance_10 to ground male headship by analogy, equal in essence, distinct in role, which goes beyond the simpler 'equal Persons' formulations elsewhere."
     },
 
     {
       "set_id": "ps_011",
-      "shared_theme": "John 3:5 — born of water and Spirit / regeneration",
+      "shared_theme": "John 3:5, born of water and Spirit / regeneration",
       "scripture_refs_in_common": ["John 3:5", "Titus 3:5"],
       "perspectives": [
         {
@@ -566,7 +566,7 @@
         {
           "source_doc": "baptism_and_communion",
           "chunk_id": "baptism_and_communion_11",
-          "claim": "Alternative view: 'Water' in John 3:5 refers to water baptism — baptism is required for regeneration (rejected here because Acts shows baptism follows repentance and belief).",
+          "claim": "Alternative view: 'Water' in John 3:5 refers to water baptism. Baptism is required for regeneration (rejected here because Acts shows baptism follows repentance and belief).",
           "scripture_refs": ["John 3:5"],
           "stance_marker": "baptismal_regeneration_rejected"
         },
@@ -618,7 +618,7 @@
         {
           "source_doc": "membership",
           "chunk_id": "membership_02",
-          "claim": "Baptism is for believers and is administered by immersion — a practiced distinctive of the church that members affirm.",
+          "claim": "Baptism is for believers and is administered by immersion, a practiced distinctive of the church that members affirm.",
           "scripture_refs": [],
           "stance_marker": "credobaptism_by_immersion_distinctive"
         },
@@ -643,13 +643,13 @@
 
     {
       "set_id": "ps_013",
-      "shared_theme": "spiritual gifts — when and how given",
+      "shared_theme": "spiritual gifts, when and how given",
       "scripture_refs_in_common": ["1Cor 12:11", "Heb 2:4", "1Cor 12:4-13"],
       "perspectives": [
         {
           "source_doc": "sof_holy_spirit",
           "chunk_id": "sof_holy_spirit_17",
-          "claim": "The Spirit distributes spiritual gifts according to His will (Heb 2:4) — distribution is sovereignly determined by the Spirit, not chosen by the recipient.",
+          "claim": "The Spirit distributes spiritual gifts according to His will (Heb 2:4). Distribution is sovereignly determined by the Spirit, not chosen by the recipient.",
           "scripture_refs": ["Rom 8:26", "Heb 2:4"],
           "stance_marker": "sovereign_distribution_by_spirit"
         },
@@ -732,7 +732,7 @@
         {
           "source_doc": "church_governance",
           "chunk_id": "church_governance_11",
-          "claim": "Women hold significant ministries: older women teach younger women (Titus 2:4); a wife may participate in privately instructing a man alongside her husband (Acts 18:26); women labored in the gospel (Phil 4:3) — restriction is on public leading/teaching of the assembly only.",
+          "claim": "Women hold significant ministries: older women teach younger women (Titus 2:4); a wife may participate in privately instructing a man alongside her husband (Acts 18:26); women labored in the gospel (Phil 4:3). Restriction is on public leading/teaching of the assembly only.",
           "scripture_refs": ["Titus 2:4", "Acts 18:26", "Phil 4:3"],
           "stance_marker": "private_teaching_and_co_labor_permitted"
         },
@@ -753,7 +753,7 @@
         {
           "source_doc": "boundaries",
           "chunk_id": "boundaries_17",
-          "claim": "Older men should teach men and older women should teach women — same-gender discipleship.",
+          "claim": "Older men should teach men and older women should teach women. Same-gender discipleship.",
           "scripture_refs": ["Eph 5:1-2,15-17", "Jer 17:9-10", "Prov 4:20-23", "1Cor 11:3"],
           "stance_marker": "same_gender_discipleship"
         },
@@ -805,7 +805,7 @@
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_20",
-          "claim": "If a member marries a non-believer against counsel, the church will not perform the wedding and the person's membership is in question; restoration remains the goal — whatever discipline is given, restoration must be the key.",
+          "claim": "If a member marries a non-believer against counsel, the church will not perform the wedding and the person's membership is in question; restoration remains the goal. Whatever discipline is given, restoration must be the key.",
           "scripture_refs": [],
           "stance_marker": "discipline_with_restoration_as_goal"
         }
@@ -850,7 +850,7 @@
         {
           "source_doc": "topics_to_discuss",
           "chunk_id": "topics_to_discuss_33",
-          "claim": "1 Cor 11:8-9 grounds the order in creation: the woman is from and for the man; Paul's analogy is between Christ and His bride — as the bride does not teach or lead Christ, women do not teach or lead in the setting of the church.",
+          "claim": "1 Cor 11:8-9 grounds the order in creation: the woman is from and for the man; Paul's analogy is between Christ and His bride, and as the bride does not teach or lead Christ, women do not teach or lead in the setting of the church.",
           "scripture_refs": ["1Cor 11:8-9", "1Cor 11:3", "1Cor 14:34-35"],
           "stance_marker": "creation_order_christ_bride_analogy"
         },
@@ -874,7 +874,7 @@
         {
           "source_doc": "sof_holy_spirit",
           "chunk_id": "sof_holy_spirit_10",
-          "claim": "Spirit baptism is the Spirit's act of adding believers to the body of Christ (1 Cor 12:13); operative only in the present dispensation; experienced by all believers in this dispensation; occurs at the moment of salvation and is not repeated — therefore not a subsequent second-blessing experience.",
+          "claim": "Spirit baptism is the Spirit's act of adding believers to the body of Christ (1 Cor 12:13); operative only in the present dispensation; experienced by all believers in this dispensation; occurs at the moment of salvation and is not repeated. It is therefore not a subsequent second-blessing experience.",
           "scripture_refs": ["1Cor 12:13", "Acts 2:1", "Acts 2:2", "Acts 2:3", "Acts 2:4"],
           "stance_marker": "dispensational_spirit_baptism_at_salvation"
         },
@@ -936,7 +936,7 @@
     "Spirit-led conviction of sin and Word-mediated illumination",
     "regeneration as a Spirit work (not a baptismal work)",
     "marriage between believers as the church-conducted norm",
-    "no replacement theology — the church has not replaced Israel",
+    "no replacement theology, the church has not replaced Israel",
     "private and humble almsgiving (eyes-closed offering)",
     "trinitarian baptismal formula",
     "baptism by immersion of believers only"

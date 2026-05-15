@@ -17,7 +17,7 @@ Flags surfaced:
 - META_FRAMING: statement frames the question as "X is a legitimate position" or
   "X is the historic position" rather than asking the underlying proposition.
 - NAMED_CARRIERS: statement names specific cult/heretical groups inline
-  (Mormonism, Watchtower, etc.) — these belong in evidence.notes, not in the stem.
+  (Mormonism, Watchtower, etc.). These belong in evidence.notes, not in the stem.
 """
 
 from __future__ import annotations
@@ -165,7 +165,7 @@ def write_report(results: list[dict], total: int) -> None:
         cat = f"{r['category']}"
         if r["subcategory"]:
             cat += f" › {r['subcategory']}"
-        lines.append(f"### {r['id']} — {cat}")
+        lines.append(f"### {r['id']}: {cat}")
         lines.append(f"> {r['statement']}")
         lines.append("")
         for fname, hits in r["flags"]:

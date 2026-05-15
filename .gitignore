@@ -63,3 +63,11 @@ docs/*/
 
 # Sandboxed scratch per phase discipline (D9)
 tmp/
+
+# Required gitignore entries (Phase 00 cleanup)
+*.pyc
+.pytest_cache/
+.coverage
+.mypy_cache/
+responses/
+*.bak
