@@ -1,0 +1,53 @@
+# docker/lexical/docker-compose.yml
+name: brethren-lexical
+
+services:
+  lexical-neo4j:
+    image: neo4j:5-community
+    container_name: lexical-neo4j
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_LEXICAL_PASSWORD}
+      NEO4J_server_memory_heap_initial__size: 1G
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 1G
+    volumes:
+      - lexical-neo4j-data:/data
+      - lexical-neo4j-logs:/logs
+    networks:
+      - lexical_net
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  lexical-qdrant:
+    image: qdrant/qdrant:v1.13.0
+    container_name: lexical-qdrant
+    ports:
+      - "7100:6333"
+      - "7102:6334"
+    volumes:
+      - lexical-qdrant-data:/qdrant/storage
+    networks:
+      - lexical_net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  lexical-neo4j-data:
+  lexical-neo4j-logs:
+  lexical-qdrant-data:
+
+# Network isolation: default bridge network. Do NOT add `internal: true`. That would
+# block image pulls. Containers on lexical_net cannot resolve names on cultural_net
+# by default (Docker user-defined bridge isolation). See POC delta #13.
+networks:
+  lexical_net:
+    driver: bridge

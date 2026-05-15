@@ -1,0 +1,30 @@
+# TVTMS sample fixture: from_scheme<TAB>from_ref<TAB>to_scheme<TAB>to_ref<TAB>rule_type<TAB>block_scope
+# Hand-crafted subset reflecting STEPBible TVTMS conventions.
+english	Psa.51.1	hebrew	Psa.51.3	OneToOne	Psa.51.title
+english	Psa.51.2	hebrew	Psa.51.4	OneToOne	Psa.51.title
+english	Psa.51.3	hebrew	Psa.51.5	OneToOne	Psa.51.title
+english	Psa.3.1	hebrew	Psa.3.2	OneToOne	Psa.3.title
+english	Psa.3.2	hebrew	Psa.3.3	OneToOne	Psa.3.title
+english	Psa.4.1	hebrew	Psa.4.2	OneToOne	Psa.4.title
+english	Psa.7.1	hebrew	Psa.7.2	OneToOne	Psa.7.title
+english	Psa.18.1	hebrew	Psa.18.2	OneToOne	Psa.18.title
+english	Psa.30.1	hebrew	Psa.30.2	OneToOne	Psa.30.title
+english	Psa.34.1	hebrew	Psa.34.2	OneToOne	Psa.34.title
+english	Psa.52.1	hebrew	Psa.52.3	OneToOne	Psa.52.title
+english	Psa.54.1	hebrew	Psa.54.3	OneToOne	Psa.54.title
+english	Psa.56.1	hebrew	Psa.56.3	OneToOne	Psa.56.title
+english	Psa.57.1	hebrew	Psa.57.3	OneToOne	Psa.57.title
+english	Psa.59.1	hebrew	Psa.59.3	OneToOne	Psa.59.title
+english	Psa.60.1	hebrew	Psa.60.3	OneToOne	Psa.60.title
+english	Psa.63.1	hebrew	Psa.63.2	OneToOne	Psa.63.title
+english	Joel.2.28	hebrew	Joel.3.1	OneToOne	Joel.chapter-shift
+english	Joel.2.29	hebrew	Joel.3.2	OneToOne	Joel.chapter-shift
+english	Joel.2.30	hebrew	Joel.3.3	OneToOne	Joel.chapter-shift
+english	Joel.2.31	hebrew	Joel.3.4	OneToOne	Joel.chapter-shift
+english	Joel.2.32	hebrew	Joel.3.5	OneToOne	Joel.chapter-shift
+english	Mal.4.1	hebrew	Mal.3.19	OneToOne	Mal.chapter-shift
+english	Mal.4.2	hebrew	Mal.3.20	OneToOne	Mal.chapter-shift
+english	Mal.4.3	hebrew	Mal.3.21	OneToOne	Mal.chapter-shift
+english	Rom.16.25	greek	Rom.14.24	OneToOne	Rom.doxology-floats
+english	Rom.16.26	greek	Rom.14.25	OneToOne	Rom.doxology-floats
+english	Rom.16.27	greek	Rom.14.26	OneToOne	Rom.doxology-floats

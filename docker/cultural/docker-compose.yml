@@ -1,0 +1,53 @@
+# docker/cultural/docker-compose.yml
+name: brethren-cultural
+
+services:
+  cultural-neo4j:
+    image: neo4j:5-community
+    container_name: cultural-neo4j
+    ports:
+      - "7476:7474"
+      - "7689:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_CULTURAL_PASSWORD}
+      NEO4J_server_memory_heap_initial__size: 1G
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 1G
+    volumes:
+      - cultural-neo4j-data:/data
+      - cultural-neo4j-logs:/logs
+    networks:
+      - cultural_net
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  cultural-qdrant:
+    image: qdrant/qdrant:v1.13.0
+    container_name: cultural-qdrant
+    ports:
+      - "7101:6333"
+      - "7103:6334"
+    volumes:
+      - cultural-qdrant-data:/qdrant/storage
+    networks:
+      - cultural_net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  cultural-neo4j-data:
+  cultural-neo4j-logs:
+  cultural-qdrant-data:
+
+# Network isolation: default bridge network. Do NOT add `internal: true`. That would
+# block image pulls. Containers on cultural_net cannot resolve names on lexical_net
+# by default (Docker user-defined bridge isolation). See POC delta #13.
+networks:
+  cultural_net:
+    driver: bridge
