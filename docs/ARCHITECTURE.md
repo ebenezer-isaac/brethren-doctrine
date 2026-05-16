@@ -172,7 +172,7 @@ The orchestrator aggregates results and writes them to the appropriate store via
 - **Python**: 3.12 via uv. The `.venv` at repo root is the canonical venv.
 - **Neo4j**: 5-community (Docker, two instances). Lexical at host port 7475/7688, cultural at 7476/7689 in PoC; production picks final ports.
 - **Qdrant**: latest (Docker, two instances). Lexical at 7100/7102, cultural at 7101/7103.
-- **Voyage**: `voyage-4-large` for v1. Pricing: $0.12 / M tokens after 200 M free tier; our v1 ingest is roughly 22 M tokens so cost is $0. Locked over voyage-context-3 and voyage-3-large.
+- **Voyage**: `voyage-4-large` at native 2048 dimensions for v1 (multilingual; handles Hebrew, Greek, and English in one embedding space). Pricing: $0.18 / M tokens after 200M free tokens; our v1 ingest is roughly 22M tokens so cost is $0. Locked over voyage-3-large and voyage-multilingual-2 (older Series 2/3) since voyage-4-large is strictly higher quality at identical paid-tier rate limits.
 - **Reranker**: BGE-reranker-v2-m3 (Apache-2.0, open weights, multilingual). Loaded locally; no API.
 - **LLM**: Claude Opus 4.7 for Pipeline 2 lexical verdicts (highest reasoning quality). Sonnet 4.6 for cultural-corpus auto-tagging and Pipeline 3 query synthesis (good cost-quality balance). **Haiku is not used.** **All LLM dispatch is via in-house Claude Code subagents under the user's Max plan.** Programmatic Anthropic API access is forbidden in this architecture.
 - **MCP**: official Python SDK (`pip install mcp`). FastMCP server pattern. Streamable HTTP transport per the 2025-06-18 spec revision.
@@ -221,7 +221,7 @@ The following are non-negotiable for implementation:
 5. **pysblgnt is dead on PyPI.** Direct `.txt` parse of `morphgnt/sblgnt` (space-delimited, 7 columns).
 6. **text-fabric path quirk.** `use()` resolves `~/github/...`, not `~/text-fabric-data/github/...`. Bootstrap script must symlink or pass `locations=`.
 7. **OpenBible "To Verse" ranges explode at ingest.** `Rom.1.19-Rom.1.20` becomes two edges. Range queries handled at retrieval time, not stored as a range property.
-8. **Voyage model: `voyage-3-large` (not `voyage-context-3`).** Current `voyageai==0.3.7` client does not accept the contextual model. Revisit after a documented client upgrade.
+8. **Voyage model: `voyage-4-large` at native 2048 dimensions.** Multilingual (Hebrew + Greek + English in one embedding space). At usage tier 1 (paid card on file) the limits are 3M TPM / 2000 RPM, more than enough for our ~22M token v1 ingest budget.
 9. **TTESV is CC BY-NC**, unlike the rest of STEPBible. Tag explicitly at ingest.
 10. **Sparse-checkout strategy.** MACULA Hebrew full clone is 1.5 GB; Greek is 655 MB. TSV-only sparse checkout drops the total under 500 MB.
 11. **Cultural scrape link-rot mitigation.** Wikisource slug drift (Schleitheim was 404 on PoC run) and TLS-fragile mirrors (justus.anglican.org SSLv3 handshake failure). Catalog records canonical URL plus fallback URLs per source. Re-probe on failure.

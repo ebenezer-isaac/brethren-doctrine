@@ -89,7 +89,14 @@ class HybridRetriever:
     def _embed_dense(self, query: str) -> list[float]:
         if self._voyage is None:
             return []
-        result = self._voyage.embed(texts=[query], model="voyage-3-large", input_type="query")
+        from embeddings.bootstrap import VOYAGE_MODEL, VOYAGE_OUTPUT_DIMENSION
+
+        result = self._voyage.embed(
+            texts=[query],
+            model=VOYAGE_MODEL,
+            input_type="query",
+            output_dimension=VOYAGE_OUTPUT_DIMENSION,
+        )
         return [float(x) for x in result.embeddings[0]]
 
     def _query_dense(

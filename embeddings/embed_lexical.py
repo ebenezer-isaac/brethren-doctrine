@@ -18,11 +18,11 @@ from neo4j import GraphDatabase
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 
-from embeddings.bootstrap import VOYAGE_OUTPUT_DIMENSION
+from embeddings.bootstrap import VOYAGE_MODEL, VOYAGE_OUTPUT_DIMENSION
 
 NS = uuid.UUID("a4f6e6c0-0000-4000-8000-000000000002")
-BATCH = 16
-MIN_INTERVAL_SECONDS = 22.0
+BATCH = 128
+MIN_INTERVAL_SECONDS = 0.0
 
 
 def _iter_lemmas(session: Any, limit: int) -> list[dict[str, Any]]:
@@ -51,7 +51,7 @@ def _embed_batch(voyage_client: Any, texts: list[str]) -> list[list[float]] | No
         try:
             result = voyage_client.embed(
                 texts=texts,
-                model="voyage-3-large",
+                model=VOYAGE_MODEL,
                 input_type="document",
                 output_dimension=VOYAGE_OUTPUT_DIMENSION,
             )

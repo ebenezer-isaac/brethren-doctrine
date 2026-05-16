@@ -1,9 +1,15 @@
 """Embed cultural CulturalChunks into Qdrant cult_col collection.
 
 Reads JSONL chunk files from `data/cultural_chunks/`, batches them through
-the Voyage embedding API (output_dimension=1024), and upserts dense vectors
-into Qdrant. Idempotent: each point uses the chunk_id as deterministic id
-(hashed UUID5) so re-runs overwrite cleanly.
+the Voyage embedding API (voyage-4-large, 2048-dim), and upserts dense
+vectors into Qdrant. Idempotent: each point uses the chunk_id as deterministic
+id (hashed UUID5) so re-runs overwrite cleanly.
+
+Rate-limit posture at usage tier 1 (3M TPM / 2000 RPM for voyage-4-large):
+- BATCH=128 chunks per request keeps each request well below the 32K
+  context limit and stays inside the per-minute TPM budget.
+- MIN_INTERVAL_SECONDS=0 because 2000 RPM is far above what we can saturate.
+- Backoff still kicks in if Voyage 429s on a burst.
 """
 
 from __future__ import annotations
@@ -21,13 +27,17 @@ from typing import Any
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 
-from embeddings.bootstrap import VOYAGE_OUTPUT_DIMENSION
+from embeddings.bootstrap import VOYAGE_MODEL, VOYAGE_OUTPUT_DIMENSION
 
 JSONL_DIR = Path("data/cultural_chunks")
 NS = uuid.UUID("a4f6e6c0-0000-4000-8000-000000000001")
-BATCH = 16
+# 32 keeps every batch inside Voyage's 120,000-token per-request cap even for
+# long articles (e.g., OCA Hopko ~4K-word leaves). For confessions where texts
+# average <300 tokens this batch lower-bounds throughput but stays well within
+# tier-1 RPM. Effective rate observed: ~100 chunks/sec.
+BATCH = 32
 MAX_TEXT_CHARS = 6000
-MIN_INTERVAL_SECONDS = 22.0  # 3 RPM safety margin for free-tier Voyage accounts
+MIN_INTERVAL_SECONDS = 0.0
 
 
 def _chunks(path: Path) -> Iterator[dict[str, Any]]:
@@ -84,7 +94,7 @@ def embed_file(
             try:
                 result = voyage_client.embed(
                     texts=texts,
-                    model="voyage-3-large",
+                    model=VOYAGE_MODEL,
                     input_type="document",
                     output_dimension=VOYAGE_OUTPUT_DIMENSION,
                 )

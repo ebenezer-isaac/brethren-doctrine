@@ -14,8 +14,8 @@ from embeddings.bootstrap import (
 )
 
 
-def test_voyage_dimension_constant_is_1024() -> None:
-    assert VOYAGE_OUTPUT_DIMENSION == 1024
+def test_voyage_dimension_constant_is_2048() -> None:
+    assert VOYAGE_OUTPUT_DIMENSION == 2048
 
 
 def test_bootstrap_unknown_store_raises() -> None:
@@ -70,20 +70,20 @@ def test_bootstrap_skips_create_if_collection_exists(monkeypatch: pytest.MonkeyP
     assert mock_client.create_payload_index.call_count >= 5
 
 
-def test_embed_with_voyage_passes_output_dimension_1024() -> None:
+def test_embed_with_voyage_passes_voyage_4_large_2048() -> None:
     mock_result = MagicMock()
-    mock_result.embeddings = [[0.0] * 1024]
+    mock_result.embeddings = [[0.0] * 2048]
     mock_client = MagicMock()
     mock_client.embed.return_value = mock_result
 
     with patch("voyageai.Client", return_value=mock_client):
         vec = _embed_with_voyage("hello", "fake-key")
 
-    assert len(vec) == 1024
+    assert len(vec) == 2048
     mock_client.embed.assert_called_once()
     call_kwargs = mock_client.embed.call_args.kwargs
-    assert call_kwargs["output_dimension"] == 1024
-    assert call_kwargs["model"] == "voyage-3-large"
+    assert call_kwargs["output_dimension"] == 2048
+    assert call_kwargs["model"] == "voyage-4-large"
 
 
 def test_bootstrap_uses_cosine_distance(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -96,4 +96,4 @@ def test_bootstrap_uses_cosine_distance(monkeypatch: pytest.MonkeyPatch) -> None
 
     call_kwargs = mock_client.create_collection.call_args.kwargs
     dense = call_kwargs["vectors_config"]["dense"]
-    assert dense.size == 1024
+    assert dense.size == 2048

@@ -1,8 +1,9 @@
 """Bootstrap Qdrant collections for lexical and cultural stores.
 
-Voyage embedding output dimension is hard-coded to 1024 per architecture decision:
-voyage-4-large native dimension is 2048, but v1 uses 1024 for cost and memory
-efficiency at v1 scale. All runtime embed calls must pass output_dimension=1024.
+Voyage model: `voyage-4-large` (Voyage 4 series flagship; multilingual handles
+Hebrew + Greek + English in one space; 2048 native dim). v1 uses native 2048
+for max retrieval quality now that the account is on paid tier (3M TPM /
+2000 RPM at usage tier 1, well within our ~22M token v1 ingest budget).
 """
 
 from __future__ import annotations
@@ -19,7 +20,8 @@ from qdrant_client.models import (
     VectorParams,
 )
 
-VOYAGE_OUTPUT_DIMENSION = 1024
+VOYAGE_MODEL = "voyage-4-large"
+VOYAGE_OUTPUT_DIMENSION = 2048
 
 _COLLECTION_BY_STORE: dict[str, tuple[str, str]] = {
     "lexical": ("lex_col", "QDRANT_LEXICAL_URL"),
@@ -43,11 +45,13 @@ _CULTURAL_PAYLOAD_INDEXES: dict[str, PayloadSchemaType] = {
 
 
 def _embed_with_voyage(text: str, api_key: str) -> list[float]:
-    """Production-time call. Records the output_dimension=1024 contract."""
+    """Production-time call."""
     import voyageai
 
     client = voyageai.Client(api_key=api_key)  # type: ignore[attr-defined]
-    result = client.embed([text], model="voyage-3-large", output_dimension=VOYAGE_OUTPUT_DIMENSION)
+    result = client.embed(
+        [text], model=VOYAGE_MODEL, output_dimension=VOYAGE_OUTPUT_DIMENSION
+    )
     return list(result.embeddings[0])
 
 
