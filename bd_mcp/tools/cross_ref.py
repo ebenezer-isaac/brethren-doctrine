@@ -23,12 +23,12 @@ def handle(payload: CrossRefInput, neo4j_session: Any | None = None) -> dict[str
     sources_used: list[dict[str, str]] = []
     if neo4j_session is not None:
         cypher = (
-            "MATCH (v:Verse {osisID: $ref})-[r:CROSS_REF]->(v2:Verse) "
-            "WHERE ($min_votes IS NULL OR r.votes >= $min_votes) "
-            "AND ($sources IS NULL OR r.source IN $sources) "
-            "RETURN v.osisID AS from_ref, v2.osisID AS to_ref, "
-            "coalesce(r.source, 'openbible') AS source, "
-            "coalesce(r.votes, 1) AS votes "
+            "MATCH (cr:CrossRef {from_ref: $ref}) "
+            "WHERE ($min_votes IS NULL OR cr.votes >= $min_votes) "
+            "AND ($sources IS NULL OR cr.source IN $sources) "
+            "RETURN cr.from_ref AS from_ref, cr.to_ref AS to_ref, "
+            "coalesce(cr.source, 'openbible') AS source, "
+            "coalesce(cr.votes, 1) AS votes "
             "ORDER BY votes DESC LIMIT $lim"
         )
         for rec in neo4j_session.run(

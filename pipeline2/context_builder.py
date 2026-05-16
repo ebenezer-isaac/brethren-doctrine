@@ -138,7 +138,7 @@ def _anchor_refs(question: dict[str, Any]) -> list[str]:
 def _query_anchor_lemmas(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})-[:HAS_WORD]->(w:Word)-[:INSTANCE_OF]->(l:Lemma)
+    MATCH (v:Verse {osisID: ref})<-[:IN_VERSE]-(w:Word)-[:INSTANCE_OF]->(l:Lemma)
     WITH l, count(DISTINCT w) AS local_count
     OPTIONAL MATCH (:Word)-[:INSTANCE_OF]->(l)
     WITH l, local_count, count(*) AS occurrences_in_canon
@@ -159,9 +159,9 @@ def _query_anchor_verses(driver: Driver, refs: list[str]) -> list[dict[str, Any]
     cypher = """
     UNWIND $refs AS ref
     MATCH (v:Verse {osisID: ref})
-    OPTIONAL MATCH (v)-[:HAS_WORD]->(w:Word)
+    OPTIONAL MATCH (v)<-[:IN_VERSE]-(w:Word)
     OPTIONAL MATCH (w)-[:HAS_MORPHEME]->(m:Morpheme)
-    WITH v, w, collect(DISTINCT {morph: m.morph_code, lemma: m.lemma}) AS morphology
+    WITH v, w, collect(DISTINCT {morph: coalesce(m.morph, m.morph_code, ''), lemma: m.lemma}) AS morphology
     RETURN v.osisID AS ref,
            collect(DISTINCT {
              surface: w.surface,
@@ -181,11 +181,11 @@ def _query_anchor_verses(driver: Driver, refs: list[str]) -> list[dict[str, Any]
 def _query_cross_refs(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})-[r:CROSS_REF]->(v2:Verse)
-    RETURN v.osisID AS from_ref,
-           v2.osisID AS to_ref,
-           coalesce(r.source, 'openbible') AS source,
-           coalesce(r.votes, 1) AS votes
+    MATCH (cr:CrossRef {from_ref: ref})
+    RETURN cr.from_ref AS from_ref,
+           cr.to_ref AS to_ref,
+           coalesce(cr.source, 'openbible') AS source,
+           coalesce(cr.votes, 1) AS votes
     ORDER BY votes DESC
     LIMIT $limit
     """
