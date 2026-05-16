@@ -1,0 +1,161 @@
+"""doctrinal_verdict: end-to-end verdict synthesis from stored evidence + cultural overlay."""
+
+from __future__ import annotations
+
+import json
+from collections.abc import Callable
+from pathlib import Path
+from typing import Any, Literal
+
+from pydantic import Field
+
+from bd_mcp.tools._common import (
+    ToolInputBase,
+    error_envelope,
+    success_envelope,
+    validate_question_id,
+)
+
+TOOL_NAME = "doctrinal_verdict"
+EVIDENCE_DIR = Path("evidence")
+
+
+class DoctrinalVerdictInput(ToolInputBase):
+    proposition: str = Field(min_length=1)
+    denominations: list[str] | None = None
+    depth: Literal["fast", "deep"] = "fast"
+    progressToken: str | None = None  # noqa: N815  MCP-protocol field, camelCase required
+
+
+def transform_synthesis_to_envelope(synthesis_output: dict[str, Any]) -> dict[str, Any]:
+    """Pure transform: synthesis subagent output -> MCP envelope.result + license_audit."""
+    lex = dict(synthesis_output.get("lexical_verdict", {}))
+    affirms = lex.pop("affirms", None)
+    score = lex.pop("lexical_score", None)
+    confidence = lex.pop("confidence", None)
+    source_files = lex.get("source_evidence_files") or []
+    evidence_file_id = ""
+    if source_files:
+        first = source_files[0]
+        evidence_file_id = Path(first).stem
+    result = {
+        "verdict": affirms,
+        "lexical_score": score,
+        "confidence": confidence,
+        "lexical_evidence": lex,
+        "cultural_overlay": synthesis_output.get("cultural_overlay"),
+        "variant_sensitivity": synthesis_output.get("variant_sensitivity"),
+        "evidence_file_id": evidence_file_id,
+    }
+    license_audit = synthesis_output.get("license_audit", {})
+    return {"result": result, "license_audit": license_audit}
+
+
+def _classify_to_question_id(proposition: str) -> str:
+    """Map proposition prose to a question_id. v1: simple keyword match against questions.json."""
+    questions_path = Path("questions.json")
+    if not questions_path.exists():
+        return ""
+    raw = json.loads(questions_path.read_text(encoding="utf-8"))
+    needle = proposition.lower()
+    best_qid = ""
+    best_score = 0
+    for q in raw.get("questions", []):
+        stmt = (q.get("statement", "") or "").lower()
+        score = sum(1 for word in needle.split() if word in stmt)
+        if score > best_score:
+            best_score = score
+            best_qid = q["id"]
+    return best_qid
+
+
+def handle(
+    payload: DoctrinalVerdictInput,
+    synthesis_fn: Callable[[dict[str, Any]], dict[str, Any]] | None = None,
+    evidence_dir: Path | None = None,
+) -> dict[str, Any]:
+    qid = _classify_to_question_id(payload.proposition)
+    if not qid:
+        return error_envelope(
+            TOOL_NAME,
+            "no_matching_question",
+            "could not classify proposition",
+            payload.caller_context,
+        )
+    try:
+        qid = validate_question_id(qid)
+    except ValueError as exc:
+        return error_envelope(TOOL_NAME, "invalid_question_id", str(exc), payload.caller_context)
+    evidence_path = (evidence_dir or EVIDENCE_DIR) / f"{qid}.json"
+    if not evidence_path.exists():
+        return error_envelope(
+            TOOL_NAME, "evidence_missing", f"no evidence for {qid}", payload.caller_context
+        )
+    evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+
+    synthesis_input = {
+        "question_id": qid,
+        "proposition": payload.proposition,
+        "depth": payload.depth,
+        "denominations": payload.denominations,
+        "evidence": evidence,
+    }
+    if synthesis_fn is None:
+        synthesis_output = {
+            "lexical_verdict": {
+                "affirms": evidence["verdict"]["affirms"],
+                "lexical_score": evidence["verdict"]["lexical_score"],
+                "confidence": evidence["verdict"]["confidence"],
+                "source_evidence_files": [f"evidence/{qid}.json"],
+            },
+            "cultural_overlay": {"by_tradition": {}},
+            "variant_sensitivity": evidence.get("variants", {}),
+            "license_audit": evidence.get("license_audit", {}),
+        }
+    else:
+        synthesis_output = synthesis_fn(synthesis_input)
+
+    transformed = transform_synthesis_to_envelope(synthesis_output)
+    result = transformed["result"]
+    license_audit = transformed["license_audit"]
+
+    if result["verdict"] != evidence["verdict"]["affirms"]:
+        return error_envelope(
+            TOOL_NAME,
+            "verdict_fidelity_violation",
+            "Synthesis verdict does not match stored evidence file. "
+            "Re-derivation at query time is forbidden.",
+            payload.caller_context,
+        )
+
+    sources = [
+        {"source": s.get("source", "?"), "license": s.get("license", "?")}
+        for s in license_audit.get("sources_used", [])
+    ]
+    return success_envelope(
+        tool=TOOL_NAME,
+        result=result,
+        sources_used=sources,
+        caller_context=payload.caller_context,
+    )
+
+
+def register(server: Any) -> None:
+    @server.tool(
+        name=TOOL_NAME, description="End-to-end doctrinal verdict with stored-evidence fidelity."
+    )
+    def _tool(
+        proposition: str,
+        denominations: list[str] | None = None,
+        depth: Literal["fast", "deep"] = "fast",
+        progressToken: str | None = None,  # noqa: N803
+        caller_context: Literal["personal", "public-share", "export"] = "personal",
+    ) -> dict[str, Any]:
+        payload = DoctrinalVerdictInput(
+            proposition=proposition,
+            denominations=denominations,
+            depth=depth,
+            progressToken=progressToken,
+            caller_context=caller_context,
+        )
+        return handle(payload)

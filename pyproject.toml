@@ -47,6 +47,18 @@ strict = true
 warn_return_any = true
 warn_unused_configs = true
 
+[[tool.mypy.overrides]]
+module = ["FlagEmbedding"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["bd_mcp.tools.*"]
+disable_error_code = ["untyped-decorator"]
+
+[[tool.mypy.overrides]]
+module = ["mcp.*"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
