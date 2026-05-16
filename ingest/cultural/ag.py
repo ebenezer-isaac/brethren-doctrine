@@ -1,7 +1,14 @@
-"""Assemblies of God Statement of Fundamental Truths (16 truths) adapter."""
+"""Assemblies of God Statement of Fundamental Truths (16 truths) adapter.
+
+ag.org runs Cloudflare WAF that rejects automated UAs with HTTP 403. We keep
+the live URL as canonical but fall back to a bundled snapshot under
+`data/cultural_cache/ag_truths.html` (refreshed manually with a browser when
+the upstream content changes).
+"""
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Literal
 
 from ingest.cultural._common import scrape_source
@@ -18,6 +25,7 @@ LICENSE_NOTE = (
 )
 CANONICAL_URL = "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
 FALLBACK_URLS: list[str] = []
+LOCAL_SNAPSHOT = Path("data/cultural_cache/ag_truths.html")
 WORK_TITLE = "Statement of Fundamental Truths"
 DATE_WRITTEN = "1916"
 EXPECTED = (16, 16)
@@ -54,7 +62,13 @@ def parse(raw: bytes) -> list[CulturalChunk]:
 
 
 def scrape() -> list[CulturalChunk]:
-    raw = scrape_source(SOURCE_SLUG, CANONICAL_URL, FALLBACK_URLS)
+    try:
+        raw = scrape_source(SOURCE_SLUG, CANONICAL_URL, FALLBACK_URLS)
+    except RuntimeError:
+        if LOCAL_SNAPSHOT.exists():
+            raw = LOCAL_SNAPSHOT.read_bytes()
+        else:
+            raise
     return parse(raw)
 
 

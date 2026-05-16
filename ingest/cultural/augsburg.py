@@ -79,12 +79,19 @@ def parse_article_page(raw: bytes, article: int, title: str) -> CulturalChunk | 
 
 def scrape() -> list[CulturalChunk]:
     out: list[CulturalChunk] = []
+    failures: list[tuple[int, str]] = []
     for article, slug, title in ARTICLE_SLUGS:
         url = f"{BASE}/{slug}/"
-        raw = scrape_source(f"{SOURCE_SLUG}.A{article:02d}", url, [])
+        try:
+            raw = scrape_source(f"{SOURCE_SLUG}.A{article:02d}", url, [])
+        except RuntimeError as exc:
+            failures.append((article, str(exc)))
+            continue
         chunk = parse_article_page(raw, article, title)
         if chunk is not None:
             out.append(chunk)
+    if failures and not out:
+        raise RuntimeError(f"all augsburg articles failed: {failures}")
     return out
 
 
