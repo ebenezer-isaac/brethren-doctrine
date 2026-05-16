@@ -11,7 +11,7 @@ from __future__ import annotations
 from collections.abc import Iterator
 from pathlib import Path
 
-from lxml import etree  # type: ignore[import-untyped]
+from lxml import etree
 
 from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver, upsert_records
