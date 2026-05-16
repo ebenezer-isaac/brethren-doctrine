@@ -1,33 +1,103 @@
-"""Ecumenical Conciliar Canons adapter (Pipeline 1 cultural, stub).
+"""Ecumenical Conciliar texts adapter.
 
-Stub adapter: deferred to live-scrape pass. scrape() returns an empty list when
-BD_CULTURAL_LIVE_SCRAPE is unset. Live implementation pulls from CANONICAL_URL
-(with FALLBACK_URLS) per docs/INGESTION_PATTERNS.md politeness rules.
+Pulls the major historic creeds and definitions from Wikisource / Wikipedia,
+each emitted as one CulturalChunk with anchor `<Council>.<Section>`. Coverage
+in v1: Apostles' Creed, Nicene Creed (325 + 381), Chalcedonian Definition (451),
+Athanasian Creed. Council canons are deferred to a v1.5 pass.
 """
 
 from __future__ import annotations
 
-from ingest.cultural._adapter_stub import SKIP_LIVE_SCRAPE
-from ingest.models import CulturalChunk
+from typing import Literal
+
+from ingest.cultural._common import fetch_with_politeness, scrape_source
+from ingest.cultural._html import wikisource_article_paragraphs
+from ingest.models import CulturalChunk, CulturalChunkSource
 
 SOURCE_SLUG = "conciliar"
 WORK_ID = "conciliar"
-TRADITION = "patristic"
+TRADITION: Literal["patristic"] = "patristic"
 LICENSE = "public_domain"
 REDISTRIBUTE = True
-CANONICAL_URL = "https://en.wikisource.org/wiki/Category:Ecumenical_Councils"
+CANONICAL_URL = "https://en.wikisource.org/wiki/Nicene_Creed"
 FALLBACK_URLS: list[str] = []
-EXPECTED = (40, 60)
+EXPECTED = (3, 20)
+
+SOURCES: list[tuple[str, str, str, str, str]] = [
+    (
+        "Apostles",
+        "Apostles' Creed",
+        "https://en.wikisource.org/wiki/Apostles%27_Creed",
+        "c. 4th century",
+        "Apostles.Creed",
+    ),
+    (
+        "Nicene",
+        "Nicene Creed (325/381)",
+        "https://en.wikisource.org/wiki/Nicene_Creed",
+        "325",
+        "Nicaea325.Creed",
+    ),
+    (
+        "Athanasian",
+        "Athanasian Creed (Quicunque vult)",
+        "https://en.wikisource.org/wiki/Athanasian_Creed",
+        "c. 5th-6th century",
+        "Athanasian.Creed",
+    ),
+    (
+        "Chalcedon",
+        "Chalcedonian Definition (451)",
+        "https://en.wikipedia.org/wiki/Chalcedonian_Definition",
+        "451",
+        "Chalcedon451.Definition",
+    ),
+]
+
+
+def parse(raw: bytes, anchor: str, work_title: str, date_written: str) -> CulturalChunk | None:
+    paras = wikisource_article_paragraphs(raw)
+    text_parts = [p for p in paras if not p.startswith("# ")]
+    body = " ".join(text_parts).strip()
+    if not body or len(body) < 200:
+        return None
+    return CulturalChunk(
+        chunk_id=f"{SOURCE_SLUG}.{anchor}",
+        tradition=TRADITION,
+        source=CulturalChunkSource(
+            work_id=WORK_ID,
+            work_title=work_title,
+            author="Ecumenical council / early church",
+            date_written=date_written,
+            is_confessional_text=True,
+            anchor_id=anchor,
+            language="en",
+            translator="Wikisource / NPNF",
+        ),
+        text=body,
+        text_to_embed=f"{work_title}. {body}",
+        license=LICENSE,
+        redistribute=REDISTRIBUTE,
+        license_note=None,
+    )
 
 
 def scrape() -> list[CulturalChunk]:
-    if SKIP_LIVE_SCRAPE:
-        return []
-    raise NotImplementedError(
-        f"{SOURCE_SLUG} live scrape not implemented in this session; "
-        "set BD_CULTURAL_LIVE_SCRAPE=1 only after the per-source live implementation lands"
-    )
+    out: list[CulturalChunk] = []
+    last_request: dict[str, float] = {}
+    for _key, work_title, url, date_written, anchor in SOURCES:
+        try:
+            raw = fetch_with_politeness(url, last_request_by_host=last_request)
+        except Exception:
+            continue
+        chunk = parse(raw, anchor, work_title, date_written)
+        if chunk is not None:
+            out.append(chunk)
+    return out
 
 
 def expected_chunk_count() -> tuple[int, int]:
     return EXPECTED
+
+
+_ = scrape_source

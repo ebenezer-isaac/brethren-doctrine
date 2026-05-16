@@ -52,6 +52,10 @@ module = ["FlagEmbedding"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
+module = ["lxml", "lxml.html", "lxml.etree"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
 module = ["bd_mcp.tools.*"]
 disable_error_code = ["untyped-decorator"]
 

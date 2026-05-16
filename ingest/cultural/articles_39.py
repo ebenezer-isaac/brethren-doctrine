@@ -1,32 +1,66 @@
-"""Thirty-Nine Articles of Religion adapter (Pipeline 1 cultural, stub).
+"""Thirty-Nine Articles of Religion (1571) adapter.
 
-Stub adapter: deferred to live-scrape pass. scrape() returns an empty list when
-BD_CULTURAL_LIVE_SCRAPE is unset. Live implementation pulls from CANONICAL_URL
-(with FALLBACK_URLS) per docs/INGESTION_PATTERNS.md politeness rules.
+Primary source: justus.anglican.org has TLS issues per docs/INGESTION_PATTERNS.md.
+We use the Wikisource fallback as canonical for stability.
 """
 
 from __future__ import annotations
 
-from ingest.cultural._adapter_stub import SKIP_LIVE_SCRAPE
-from ingest.models import CulturalChunk
+from typing import Literal
+
+from ingest.cultural._common import scrape_source
+from ingest.cultural._html import wikisource_39_articles
+from ingest.models import CulturalChunk, CulturalChunkSource
 
 SOURCE_SLUG = "articles-39"
 WORK_ID = "articles-39"
-TRADITION = "anglican"
+TRADITION: Literal["anglican"] = "anglican"
 LICENSE = "public_domain"
 REDISTRIBUTE = True
-CANONICAL_URL = "https://justus.anglican.org/resources/bcp/1662/articles.htm"
-FALLBACK_URLS: list[str] = ["https://en.wikisource.org/wiki/Thirty-Nine_Articles"]
+CANONICAL_URL = "https://en.wikisource.org/wiki/Thirty-Nine_Articles_of_Religion"
+FALLBACK_URLS: list[str] = [
+    "https://en.wikisource.org/wiki/Thirty-Nine_Articles",
+]
+WORK_TITLE = "Thirty-Nine Articles of Religion"
+DATE_WRITTEN = "1571"
 EXPECTED = (39, 39)
 
 
+def parse(raw: bytes) -> list[CulturalChunk]:
+    arts = wikisource_39_articles(raw)
+    out: list[CulturalChunk] = []
+    for a in arts:
+        if a["article"] < 1 or a["article"] > 39:
+            continue
+        anchor = f"39A.A{a['article']:02d}"
+        text_to_embed = f"{a['title']}. {a['text']}"
+        out.append(
+            CulturalChunk(
+                chunk_id=f"{SOURCE_SLUG}.{anchor}",
+                tradition=TRADITION,
+                source=CulturalChunkSource(
+                    work_id=WORK_ID,
+                    work_title=WORK_TITLE,
+                    author="Convocation of the Church of England",
+                    date_written=DATE_WRITTEN,
+                    is_confessional_text=True,
+                    anchor_id=anchor,
+                    language="en",
+                    translator=None,
+                ),
+                text=a["text"],
+                text_to_embed=text_to_embed,
+                license=LICENSE,
+                redistribute=REDISTRIBUTE,
+                license_note=None,
+            )
+        )
+    return out
+
+
 def scrape() -> list[CulturalChunk]:
-    if SKIP_LIVE_SCRAPE:
-        return []
-    raise NotImplementedError(
-        f"{SOURCE_SLUG} live scrape not implemented in this session; "
-        "set BD_CULTURAL_LIVE_SCRAPE=1 only after the per-source live implementation lands"
-    )
+    raw = scrape_source(SOURCE_SLUG, CANONICAL_URL, FALLBACK_URLS)
+    return parse(raw)
 
 
 def expected_chunk_count() -> tuple[int, int]:
