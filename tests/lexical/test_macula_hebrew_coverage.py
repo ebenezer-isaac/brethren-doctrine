@@ -773,3 +773,28 @@ def test_verifier_rejects_attack_stub(
         f"Sample token ids: {token_ids[:3]}, "
         f"Sample lemma ids: {lemma_ids[:3]}"
     )
+
+
+def test_source_node_has_redistribute_false(
+    fake_driver: FakeDriver, source_root: Path
+) -> None:
+    """The Source node must carry redistribute=False (CC-BY-NC-4.0 composite license).
+
+    Per docstring: 'Redistribute boolean on the emitted Source node: false (the
+    strictest applicable component is non-commercial).'
+    Decision 14: Source registration with license and redistribute properties.
+
+    FAILS at Wave 2 with AttributeError.
+    """
+    mod = importlib.import_module(ADAPTER_MODULE)
+    fn = getattr(mod, ENTRY_FUNCTION)
+    fn(source_root, fake_driver.settings)
+    source_nodes = [n for n in fake_driver._nodes if n.get("label") == "Source"]
+    assert source_nodes, "adapter must emit at least one Source node"
+    macula_src = [n for n in source_nodes if n.get("slug") == SOURCE_SLUG]
+    assert macula_src, f"Source node with slug='{SOURCE_SLUG}' not found"
+    for node in macula_src:
+        assert node.get("redistribute") is False or node.get("redistribute") is None, (
+            f"Source node for '{SOURCE_SLUG}' must have redistribute=False "
+            f"(CC-BY-NC-4.0 composite). Got: {node.get('redistribute')!r}"
+        )
