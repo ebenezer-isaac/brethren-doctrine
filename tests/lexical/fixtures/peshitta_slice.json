@@ -1,0 +1,49 @@
+{
+  "seed_commit_sha": "dee1fb927fbcb91de68d98c97df1ce6c0d53582b",
+  "seed_int": 3739351954,
+  "length": 13626,
+  "source_path": "data/private/peshitta/peshitta_nt.tf",
+  "offset": null,
+  "fixture_sha256": null,
+  "source_slug": "peshitta",
+  "citation_slug": "peshitta-text",
+  "tier": "C",
+  "tolerance_relative": 0.05,
+  "expected_count": null,
+  "corpus_note": "Three Syriac NT verses from the ETCBC text-fabric peshitta module. Corpus regions: Matthew (Synoptic), John (Johannine), Romans (Pauline epistles). Data directory data/private/peshitta/ is not present on this machine (network procurement, gitignored). The seed (int('dee1fb92', 16) = 3739351954) is derived from the first peshitta.py commit SHA (dee1fb927fbcb91de68d98c97df1ce6c0d53582b). Length 13626 = random.Random(3739351954).randint(1024, 16384). Offset and sha256 cannot be computed until data/private/peshitta/ is populated.",
+  "placeholder_verses": [
+    {
+      "verse_ref": "Matt.6.9",
+      "raw_verse_ref": "MATT 6:9",
+      "siglum": "P",
+      "token_pos": 1,
+      "text": "ܐܒܘְܢܢ",
+      "lex": "ܐܒܘְܢܢ",
+      "lex_nfc": "ܐܒܘְܢܢ",
+      "gloss": "father",
+      "morph": "Np"
+    },
+    {
+      "verse_ref": "John.1.1",
+      "raw_verse_ref": "JHN 1:1",
+      "siglum": "P",
+      "token_pos": 1,
+      "text": "ܒܪܘܪܪܐ",
+      "lex": "ܒܪܘܪܪܐ",
+      "lex_nfc": "ܒܪܘܪܪܐ",
+      "gloss": "beginning",
+      "morph": "Np"
+    },
+    {
+      "verse_ref": "Rom.1.1",
+      "raw_verse_ref": "ROM 1:1",
+      "siglum": "P",
+      "token_pos": 1,
+      "text": "ܦܘַׁ׀ָ",
+      "lex": null,
+      "lex_nfc": null,
+      "gloss": null,
+      "morph": "V"
+    }
+  ]
+}
