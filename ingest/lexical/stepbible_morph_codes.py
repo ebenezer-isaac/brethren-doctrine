@@ -31,7 +31,7 @@ Decisions implemented: 17.
 
 Upstream and license
 ====================
-Upstream path:    data/private/stepbible/Morphology codes ... (versioned
+Upstream path:    data/private/stepbible/Morphology codes/ ... (versioned
                   release tarball under the Tyndale STEPBible data tree).
 License id:       CC-BY-4.0 per docs/LICENSE_TAGGING.md per-source map.
 Source record:    The Source node for slug 'STEPBible-morph-codes' is
@@ -199,3 +199,187 @@ graph/lexical.cypher constraint morph_code_unique on MorphCode.code per Decision
 tools/expected_counts.json sources."STEPBible-morph-codes" (tier A, expected_count 2782, record_unit morph_code).
 tools/predicates_by_type.cypher for $pred_string, $pred_list, $pred_bool semantics.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-morph-codes"
+LICENSE_ID = "CC-BY-4.0"
+MORPH_SUBDIR = "Morphology codes"
+HEBREW_FILE = (
+    "TEHMC - Translators Expansion of Hebrew Morphology Codes - STEPBible.org CC BY.txt"
+)
+GREEK_FILE = (
+    "TEGMC - Translators Expansion of Greek Morphhology Codes - STEPBible.org CC BY.txt"
+)
+BATCH_SIZE = 500
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_MORPH = (
+    "UNWIND $rows AS row MERGE (n:`MorphCode` {code: row.code}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+
+
+def _read_text(path: Path) -> str:
+    with path.open(encoding="utf-8-sig") as fh:
+        return fh.read()
+
+
+def _split_sections(text: str) -> tuple[str, str]:
+    full_idx = text.find("FULL MORPHOLOGY CODES")
+    if full_idx == -1:
+        return text, ""
+    brief_idx = text.find("BRIEF LEXICAL MORPHOLOGY CODES")
+    brief = text[brief_idx:full_idx] if brief_idx != -1 else ""
+    return brief, text[full_idx:]
+
+
+def _split_alternatives(meaning: str) -> list[str]:
+    for sep in (" OR ", " / "):
+        if sep in meaning:
+            return [p.strip() for p in meaning.split(sep) if p.strip()]
+    return [meaning]
+
+
+def _parse_brief(section: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    header = False
+    for raw in section.splitlines():
+        line = raw.rstrip("\r")
+        s = line.strip()
+        if not s or (set(s) <= {"="}):
+            continue
+        if not header:
+            if s.startswith("Code") and "Meaning" in s:
+                header = True
+            continue
+        if "\t" not in line:
+            continue
+        parts = [p.strip() for p in line.split("\t")]
+        code = parts[0]
+        meaning = parts[-1] if len(parts) >= 2 else ""
+        if not code or not meaning or code in seen:
+            continue
+        seen.add(code)
+        alts = _split_alternatives(meaning)
+        rows = [*rows, {
+            "code": code,
+            "expansion": meaning,
+            "expansions": alts if len(alts) > 1 else None,
+            "source": SOURCE_SLUG,
+        }]
+    return rows
+
+
+def _iter_blocks(section: str) -> list[list[str]]:
+    blocks: list[list[str]] = []
+    current: list[str] = []
+    for raw in section.splitlines():
+        line = raw.rstrip("\r")
+        if line.strip() == "$":
+            if current:
+                blocks = [*blocks, current]
+            current = []
+            continue
+        current = [*current, line]
+    if current:
+        blocks = [*blocks, current]
+    return blocks
+
+
+def _block_to_node(block: list[str], seen: set[str]) -> dict[str, Any] | None:
+    head: str | None = None
+    head_idx = -1
+    for idx, line in enumerate(block):
+        if line.strip() and not line.startswith("\t") and not line.startswith(" "):
+            head = line
+            head_idx = idx
+            break
+    if head is None:
+        return None
+    parts = head.split("\t", 1)
+    code = parts[0].strip()
+    if not code or code in seen:
+        return None
+    seen.add(code)
+    spec = parts[1].strip() if len(parts) > 1 else ""
+    details = [block[i].strip() for i in range(head_idx + 1, len(block)) if block[i].strip()]
+    primary = spec or (details[0] if details else code)
+    if len(details) > 1:
+        items: list[str] = [spec] if spec else []
+        for d in details:
+            if d and d not in items:
+                items = [*items, d]
+        expansions = items
+    else:
+        expansions = None
+    return {
+        "code": code,
+        "expansion": primary,
+        "expansions": expansions,
+        "source": SOURCE_SLUG,
+    }
+
+
+def _parse_full(section: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for block in _iter_blocks(section):
+        node = _block_to_node(block, seen)
+        if node is not None:
+            rows = [*rows, node]
+    return rows
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    morph_dir = data_root / MORPH_SUBDIR
+    collected: list[dict[str, Any]] = []
+    for filename in (HEBREW_FILE, GREEK_FILE):
+        path = morph_dir / filename
+        if not path.exists():
+            continue
+        brief, full = _split_sections(_read_text(path))
+        collected = [*collected, *_parse_brief(brief), *_parse_full(full)]
+    deduped: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for r in collected:
+        c = r["code"]
+        if c in seen:
+            continue
+        seen.add(c)
+        deduped = [*deduped, r]
+    return deduped
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_morph_codes(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_MORPH, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_morph_codes(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible morphology codes and MERGE MorphCode + Source nodes."""
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_morph_codes(session, rows)
+    return {"MorphCode": merged, "Source": 1}
