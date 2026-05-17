@@ -182,7 +182,7 @@ first_occurrence) as ProperNoun node properties. The thirty sparse
 residual columns are NOT persisted on the node; the adapter reads
 them so the snapshot ledger can record their occurrence rate per row
 for triangle-test drift detection, but no node property is written
-for those columns. If a later upstream release populates a residual
+for those columns. If a subsequent upstream release populates a residual
 column to non-zero occurrence in the inventory pass, that column
 SHALL be added to this projection only via a SCHEMA-REVISION commit
 to docs/SCHEMA_DECISIONS.md (Decision 17) and to
