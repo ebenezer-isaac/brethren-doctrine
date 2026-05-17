@@ -148,6 +148,7 @@ CASTE_RULES: dict[str, CasteRule] = {
             "tests/lexical/stubs/*.py",
             "embeddings/embed_lexical.py",
             "docker/lexical/docker-compose.yml",
+            "tools/expected_counts.baseline",
         ),
         forbidden_globs=(
             "tools/expected_counts.json",
@@ -332,6 +333,14 @@ def _self_test() -> int:
     if not z1.ok:
         print(f"self-test FAIL: implementer-z1 with tools/* rejected: {z1.violations}",
               file=sys.stderr)
+        return 1
+    z1b = evaluate("implementer-z1", ["tools/expected_counts.baseline"])
+    if not z1b.ok:
+        print(
+            "self-test FAIL: implementer-z1 with tools/expected_counts.baseline "
+            f"rejected: {z1b.violations}",
+            file=sys.stderr,
+        )
         return 1
     missing = evaluate(None, ["tests/tools/test_check_caste.py"])
     if missing.ok:
