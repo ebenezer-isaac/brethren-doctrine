@@ -1,0 +1,54 @@
+{
+  "source_slug": "coptic-scriptorium",
+  "tier": "C",
+  "seed_commit_sha": "e1a37d32ea0af51957d3a505e1733fd3a5ba52a9",
+  "seed_int": 3785588018,
+  "fixture_length": 2690,
+  "corpus_note": "Three corpus regions: sahidica.nt (Sahidic NT), bohairic.gospels (Bohairic gospels), sahidica.nt (Sahidic with editorial supplement). Each region yields one token for verifier assertions. Coptic SCRIPTORIUM is NT-focused; OT slot is sahidica.nt fragment-only (verse_ref null) for Sahidic fragment-only chapter coverage.",
+  "tokens": [
+    {
+      "id": "coptic-scriptorium:sahidica.nt:B01KA01:0",
+      "norm": "ⲡⲁⲩⲗⲟⲥ",
+      "lemma": "ⲡⲁⲩⲗⲟⲥ",
+      "pos": "NPROP",
+      "verse_ref": "Rom.1.1",
+      "dialect": "sahidic",
+      "supplement": false,
+      "source": "coptic-scriptorium",
+      "corpus": "sahidica.nt",
+      "doc_id": "B01KA01",
+      "token_pos": 0
+    },
+    {
+      "id": "coptic-scriptorium:bohairic.gospels:B01KA01:0",
+      "norm": "ⲡⲁⲩⲗⲟⲥ",
+      "lemma": "ⲡⲁⲩⲗⲟⲥ",
+      "pos": "NPROP",
+      "verse_ref": "Rom.1.1",
+      "dialect": "bohairic",
+      "supplement": false,
+      "source": "coptic-scriptorium",
+      "corpus": "bohairic.gospels",
+      "doc_id": "B01KA01",
+      "token_pos": 0
+    },
+    {
+      "id": "coptic-scriptorium:sahidica.nt:B01KA01:1",
+      "norm": "ⲭⲣⲓⲥⲧⲟⲥ",
+      "lemma": "ⲭⲣⲓⲥⲧⲟⲥ",
+      "pos": "NPROP",
+      "verse_ref": "Rom.1.1",
+      "dialect": "sahidic",
+      "supplement": true,
+      "source": "coptic-scriptorium",
+      "corpus": "sahidica.nt",
+      "doc_id": "B01KA01",
+      "token_pos": 1
+    }
+  ],
+  "source_node": {
+    "slug": "coptic-scriptorium",
+    "license": "CC-BY-4.0",
+    "redistribute": true
+  }
+}

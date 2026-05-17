@@ -1,0 +1,42 @@
+{
+  "source_path": "data/private/vulgate/clementine.xml",
+  "offset": 0,
+  "length": 6276,
+  "fixture_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "seed_commit_sha": "1f0e87fb9a94c80e71cfa9624c3bed73d946f961",
+  "seed_int": 521046011,
+  "corpus_note": "Three verse regions: (1) protocanonical Psalms-offset case (Ps.9 Clementine maps to Ps.9+Ps.10 in OSIS via TVTMS); (2) deuterocanonical (Tob.1.1, Tobit is in the Clementine canon but not the Protestant canon, canon='deutero'); (3) standard protocanonical (Gen.1.1, no numbering offset, canon='protocanonical'). Offset is 0 because the vulgate source file is absent from this machine; the SHA-256 field is a sentinel of 64 zeros. The seed derivation test asserts length only (not offset) when the source file is absent.",
+  "source_slug": "vulgate-clementine",
+  "tier": "C",
+  "expected_count": null,
+  "record_unit": "vulgate_verse",
+  "verses": [
+    {
+      "osis": "Ps.9.1",
+      "text_latin": "In finem, pro occultis filii. Psalmus David.",
+      "canon": "protocanonical",
+      "notes": "Psalmus David de secretis Filii",
+      "transcription_notes": [],
+      "source": "vulgate-clementine",
+      "_fixture_note": "Psalms-offset case: Clementine Ps 9 covers modern OSIS Ps.9 plus Ps.10 range. TVTMS projects this reference to OSIS Ps.9.1. Stable id: vulgate-clementine:Ps.9.1"
+    },
+    {
+      "osis": "Tob.1.1",
+      "text_latin": "Tobias ex tribu et civitate Nephthali, quae est in superioribus Galilaeae supra Naassen, post viam quae ducit ad occidentem, in sinistro habens civitatem Sephet,",
+      "canon": "deutero",
+      "notes": null,
+      "transcription_notes": [],
+      "source": "vulgate-clementine",
+      "_fixture_note": "Deuterocanonical verse. Tobit is absent from the Protestant canon. canon='deutero' enables Pipeline 2 to filter it when canon scope is Protestant-only."
+    },
+    {
+      "osis": "Gen.1.1",
+      "text_latin": "In principio creavit Deus caelum et terram.",
+      "canon": "protocanonical",
+      "notes": null,
+      "transcription_notes": ["[a]"],
+      "source": "vulgate-clementine",
+      "_fixture_note": "Standard protocanonical verse with one transcription footnote marker stripped from text_latin into transcription_notes. The surface text_latin is clean for hashing."
+    }
+  ]
+}
