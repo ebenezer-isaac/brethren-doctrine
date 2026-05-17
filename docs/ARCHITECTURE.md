@@ -75,18 +75,18 @@ Numbered from manuscript floor to client. Data flows downward in the diagram. Lo
 
 | Layer | Role | Tech / data sources |
 |---|---|---|
-| 0 | Manuscript floor | Hebrew: WLC, OSHB. Greek: SBLGNT, Nestle1904. Versions: LXX Rahlfs, Peshitta (ETCBC), Vulgate. Apparatus: NA28 footnotes via INTF NTVMR transcriptions where published. Deferred for v1: DSS, full ECM, Old Latin, Coptic. |
+| 0 | Manuscript floor | Hebrew: WLC, OSHB. Greek: SBLGNT, Nestle1904. Versions in scope per `docs/data_inventory_catalog.json` procurement entries: Peshitta (ETCBC, CC-BY-SA-4.0), Vulgate Clementine (public domain), Coptic SCRIPTORIUM (CC-BY-4.0); LXX is resolved via STEPBible LXX columns rather than a standalone Rahlfs ingest. Apparatus: NA28 footnotes via INTF NTVMR transcriptions where published. Excluded from this reseed per inventory `explicit_deadends`: full ECM beyond 3 John, Old Latin Vetus Latina, LXX Rahlfs standalone; DSS is also excluded from this reseed and revisited after the Layer 1 3 John pilot lands. |
 | 0.5 | Versification mapping | STEPBible TVTMS. Every cross-version operation routes through it. |
-| 1 | Critical text and apparatus | open-cbgm (MIT) over INTF TEI XML where ECM is published. **Deferred in v1 per user decision; will resume once 3 John pilot proves value.** |
+| 1 | Critical text and apparatus | open-cbgm (MIT) over INTF TEI XML where ECM is published. **3 John pilot IS IN SCOPE via local asset at `tmp/poc/cbgm/` (open-cbgm binaries, `3_john.db`, `3_john_collation.xml`).** Catholic Letters beyond 3 John excluded per inventory `explicit_deadends[0]`; revisit once the 3 John pilot establishes the loading and query pattern. |
 | 2 | Unified lexical foundation | MACULA Hebrew + Greek (Clear Bible, CC BY 4.0). Includes WLC + OSHB morphology + Westminster syntax + UBS MARBLE Louw-Nida and SDBH semantic domains + Berean glosses. STEPBible TAHOT / TAGNT / TTESV layered on top. Access via Text-Fabric (MIT) for BHSA, ETCBC peshitta, ETCBC syrnt; via lxml for OSHB; via direct .txt parse for MorphGNT. |
-| 3 | Deterministic analytics | Concordance graph, cross-reference topology (TSK + OpenBible), syntactic structure (ETCBC for Hebrew, MACULA Greek trees), semantic domains (Louw-Nida, SDBH), pericope boundaries (OpenText annotations). Deferred for v1: chiasm detection, stylometry, conceptual metaphor mapping, speech-act classification beyond Speaker-Quotations dataset. |
+| 3 | Deterministic analytics | Concordance graph, cross-reference topology (TSK + OpenBible), syntactic structure (ETCBC for Hebrew, MACULA Greek trees), semantic domains (Louw-Nida, SDBH), pericope boundaries (OpenText annotations). Excluded from this reseed: chiasm detection, stylometry, conceptual metaphor mapping, speech-act classification beyond the Speaker-Quotations dataset. |
 | 4 | Lexical verdict engine | Pipeline 2. Opus reads layers 0-3 (no cultural data, ever), produces `evidence/<id>.json` per doctrinal proposition. LLM is constrained to writing structured evidence; a deterministic post-processor computes `lexical_score` from the structured fields. The LLM cannot override the score. |
 | 5 | Translation view | STEPBible TTESV plus Clear Bible Alignments. Parallel rendering only. Never feeds Layer 4. |
 | 6 | Cultural sibling corpus | CCEL patristic + Vatican.va magisterial + Book of Concord + Reformed confessions + 39 Articles + UMC + Schleitheim + AG + OCA + Plymouth Brethren archives + conciliar. Air-gapped store. |
 | 6.5 | Light doctrinal tagging | Per-chunk `(tradition, doctrine_coarse, doctrine_fine, stance, confidence, anchor_id)`. No formal ontology. Opus auto-tags at ingest; high-confidence tags ship, low-confidence flagged for review. |
 | 7 | Cultural overlay engine | Pipeline 3 synthesis stage. Reads Layer 4 verdict and Layer 6/6.5 tags. Attaches "how each lineage reads this lexical pattern" as diagnostic information. Never edits the Layer 4 verdict. |
-| 8 | Variant debate surface | Per-verse: every variant in Layer 0, every CBGM-derived reading from Layer 1 where ECM exists, every translation choice from Layer 5, every Layer 4 verdict that is variant-sensitive. The "informed decision" reading surface. **Variant data deferred in v1 because Layer 1 is deferred.** |
-| 9 | MCP server and client | Python MCP SDK (`pip install mcp`). 11 tools (specified in docs/MCP_TOOLS.md). Streamable HTTP transport with progress tokens for the long-running `doctrinal_verdict` tool. Flutter client deferred to v2; v1 is MCP-only, queryable from Claude Code or other MCP-native clients. |
+| 8 | Variant debate surface | Per-verse: every variant in Layer 0, every CBGM-derived reading from Layer 1 where ECM exists, every translation choice from Layer 5, every Layer 4 verdict that is variant-sensitive. The "informed decision" reading surface. **Variant data populated for 3 John in v1 via Layer 1 CBGM ingest; variants for other Catholic Letters books excluded per `explicit_deadends[0]`.** |
+| 9 | MCP server and client | Python MCP SDK (`pip install mcp`). 11 tools (specified in docs/MCP_TOOLS.md). Streamable HTTP transport with progress tokens for the long-running `doctrinal_verdict` tool. Flutter client is excluded from this reseed; v1 ships as MCP-only, queryable from Claude Code or other MCP-native clients. The Flutter surface is tracked outside the reseed scope. |
 
 ## Authority hierarchy
 
@@ -238,7 +238,7 @@ The following are non-negotiable for implementation:
 | Stage 1 | Full Pipeline 1 over all 7 lexical sources at pinned SHAs. Pipeline 1 over 7 cultural sources (Schleitheim, Augsburg, Heidelberg, WCF, 1689 LBC, 39 Articles, conciliar canons). MCP server with `lexical_lookup`, `cross_ref`, `versification_resolve` | Within a month |
 | Stage 2 | Cultural corpus completion (CCEL, Vatican.va, remaining traditions). MCP tools `cultural_overlay`, `debate_for_verse`. Pipeline 2 on first 20-50 doctrinal propositions via Max-plan subagents | Within two months |
 | Stage 3 | `doctrinal_verdict` MCP tool with streaming progress. Print reference purchase (NA28 + UBS6 + ECM Catholic Letters Part 1, ~£190-230) | Within three months |
-| Future | Flutter client (v2). Variant data via INTF outreach for full Catholic Letters TEI. DSS / Peshitta / Vulgate ingestion. Deterministic layer extension (chiasm, stylometry, etc.) | v2+ |
+| Post-reseed | Flutter client surface. Variant data via INTF outreach for full Catholic Letters TEI. DSS / additional manuscript-witness procurement. Deterministic-layer extensions (chiasm, stylometry, conceptual metaphor, speech-act classification). | Beyond reseed scope |
 
 ## Anti-patterns avoided
 
@@ -256,7 +256,7 @@ Documented failure modes from prior biblical RAG attempts that this architecture
 | Versification chaos | Many translation apps | STEPBible TVTMS as canonical versification service; every cross-version operation routes through it |
 | Naive RAG chunking on biblical text | Common 2024 demos | Pericope-aware chunking using OpenText.org context annotations + MACULA syntactic trees; not token-window |
 | Quotation / speaker attribution errors | Most apps | Clear Bible Speaker-Quotations dataset treated as gold |
-| Stylometry on English translations | Popular-press articles | Stylometric features (when added in v2) operate on lemma sequences from MorphGNT / MACULA |
+| Stylometry on English translations | Popular-press articles | Stylometric features (post-reseed addition) operate on lemma sequences from MorphGNT / MACULA |
 | TR / Byzantine / Majority Text / NA28 conflation | Popular Bible apps | STEPBible TAGNT per-word edition flags respected per chunk |
 
 ## Repo layout (target)
