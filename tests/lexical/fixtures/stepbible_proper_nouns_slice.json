@@ -1,0 +1,44 @@
+{
+  "source_slug": "STEPBible-proper-nouns",
+  "tier": "A",
+  "expected_count": 23205,
+  "seed_commit_sha": "e3ed6dc4ae935d108ad2525521074abaf5d65667",
+  "seed_int": 3823988164,
+  "length": 9782,
+  "corpus_note": "Three proper-noun entries: one Hebrew person (Avraham / H85), one Greek person (Petros / G4074), one place (Yerushalayim / H3389). Covers language discriminator (hebrew/greek), verse_count nullable edge case, and NAMED_AT first_occurrence resolution. Seed from git log -1 --format=%H -- ingest/lexical/stepbible_proper_nouns.py = e3ed6dc4, seed_int = int('e3ed6dc4',16) = 3823988164.",
+  "proper_nouns": [
+    {
+      "proper_name_entry": "Avraham",
+      "transliteration": "Avraham",
+      "meaning": "father of a multitude",
+      "strong": "H85",
+      "pos": "person",
+      "language": "hebrew",
+      "verse_count": 175,
+      "first_occurrence": "Gen.12.1",
+      "source": "STEPBible-proper-nouns"
+    },
+    {
+      "proper_name_entry": "Petros",
+      "transliteration": "Petros",
+      "meaning": "rock, stone",
+      "strong": "G4074",
+      "pos": "person",
+      "language": "greek",
+      "verse_count": 156,
+      "first_occurrence": "Matt.4.18",
+      "source": "STEPBible-proper-nouns"
+    },
+    {
+      "proper_name_entry": "Yerushalayim",
+      "transliteration": "Yerushalayim",
+      "meaning": "foundation of peace",
+      "strong": "H3389",
+      "pos": "place",
+      "language": "hebrew",
+      "verse_count": null,
+      "first_occurrence": "Josh.10.1",
+      "source": "STEPBible-proper-nouns"
+    }
+  ]
+}
