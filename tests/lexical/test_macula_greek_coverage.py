@@ -23,7 +23,7 @@ Seed derivation:
   length   = Random(seed_int).randint(1024, 16384) = 13074
 
 Fixture: tests/lexical/fixtures/macula_greek_slice.json
-  Three disjoint NT regions:
+  Three disjoint NT regions (fixture wave=C.2):
     gospels    -> data/private/macula-greek/Nestle1904/lowfat/04-john.xml
     epistles   -> data/private/macula-greek/Nestle1904/lowfat/06-romans.xml
     apocalypse -> data/private/macula-greek/Nestle1904/lowfat/27-revelation.xml

@@ -1,4 +1,6 @@
 {
+  "wave": "C.2",
+  "adapter": "MACULA-Greek",
   "seed_commit_sha": "8abcfe30d09dcc9feabf32db1f89ec8eee800306",
   "seed_int": 2327641648,
   "length": 13074,
