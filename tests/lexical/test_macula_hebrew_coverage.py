@@ -798,3 +798,28 @@ def test_source_node_has_redistribute_false(
             f"Source node for '{SOURCE_SLUG}' must have redistribute=False "
             f"(CC-BY-NC-4.0 composite). Got: {node.get('redistribute')!r}"
         )
+
+
+def test_hapax_question_mark_gloss_normalised(
+    fake_driver: FakeDriver, source_root: Path
+) -> None:
+    """Hapax gloss value '?' must be normalised to null before persistence.
+
+    Decision 1 edge case: 'Hapax legomena whose ETCBC-BHSA freq_lex equals one
+    occasionally carry a MACULA gloss value that is the literal English string ?.
+    The adapter MUST normalise this to a null gloss so $pred_string(gloss)
+    returns false rather than reporting a populated value.'
+
+    Predicate: $pred_string from tools/predicates_by_type.cypher.
+    FAILS at Wave 2 with AttributeError.
+    """
+    mod = importlib.import_module(ADAPTER_MODULE)
+    fn = getattr(mod, ENTRY_FUNCTION)
+    fn(source_root, fake_driver.settings)
+    token_nodes = [n for n in fake_driver._nodes if n.get("label") == "MaculaToken"]
+    # Any token with gloss='?' is a normalisation failure.
+    bad = [n for n in token_nodes if n.get("gloss") == "?"]
+    assert not bad, (
+        f"{len(bad)} MaculaToken node(s) have un-normalised hapax gloss '?'. "
+        "Decision 1: normalise '?' gloss to null (empty/None) before persistence."
+    )
