@@ -1,12 +1,14 @@
 """Reject deferral/punt language in architecture + phase-02 docs.
 
 Grep-style scan over a fixed allowlist of documentation files (override
-with ``--path``) looking for any of these case-insensitive markers:
+with ``--path``) looking for any of these 12 case-insensitive markers:
 
-    deferred, defer to, v1.5, future, TBD, FIXME, TODO, XXX,
-    eventually, later
+    deferred, defer to, out of scope, v1.5, v2, future, TBD, FIXME,
+    TODO, XXX, eventually, later
 
-A single hit anywhere exits 1 with the offending file:line:text printed.
+Word boundaries apply to the bare-word markers so embedded substrings
+(e.g. "futures", "v22.0", "BGE-reranker-v2-m3") do not flag. A single
+hit anywhere exits 1 with the offending file:line:text printed.
 
 Usage:
     python tools/verify_no_deferral.py [--path FILE [FILE ...]]
@@ -24,7 +26,11 @@ from typing import Iterable
 
 
 PATTERN = re.compile(
-    r"(deferred|defer to|v1\.5|future|TBD|FIXME|TODO|XXX|eventually|later)",
+    r"\b(?:deferred|future|eventually|later|TBD|FIXME|TODO|XXX)\b"
+    r"|defer to"
+    r"|out of scope"
+    r"|(?<!\w)v1\.5(?!\w)"
+    r"|(?<!\w)v2(?![\w.\-])",
     re.IGNORECASE,
 )
 
