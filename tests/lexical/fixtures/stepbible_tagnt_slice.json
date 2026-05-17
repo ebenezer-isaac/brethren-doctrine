@@ -1,0 +1,121 @@
+{
+  "source_path": "data/private/stepbible/Translators Amalgamated OT+NT/TAGNT_MERGED.txt",
+  "seed_commit_sha": "de38fdb5e2f502a8479298e23e7cd70464dad90f",
+  "seed_int": 3728276917,
+  "length": 13498,
+  "source_slug": "STEPBible-TAGNT",
+  "tier": "A",
+  "expected_token_count": 141720,
+  "corpus_note": "Three NT corpus regions: gospels=Matt.1.1 (Synoptic), epistles=Rom.8.1 (Pauline), apocalypse=Rev.1.1 (Johannine Apocalypse). Covers all three major NT genre blocks.",
+  "sample_rows": [
+    {
+      "word_and_type": "Matt.1.1#01=N",
+      "greek": "ἀρχή",
+      "english_translation": "beginning",
+      "dstrongs_grammar": "G746=N-NSF",
+      "dictionary_gloss": "beginning, origin",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,TrgmA,TrgmB,Wh,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["beginning", "origin"],
+      "spelling_variants": [],
+      "sstrong_instance": "G746-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Matt.1.1#02=N",
+      "greek": "βίβλου",
+      "english_translation": "of [the] book",
+      "dstrongs_grammar": "G976=N-GSN",
+      "dictionary_gloss": "book, scroll",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,TrgmA,TrgmB,Wh,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["book", "scroll", "list"],
+      "spelling_variants": [],
+      "sstrong_instance": "G976-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Matt.1.1#03=N",
+      "greek": "γενέσεως",
+      "english_translation": "of [the] genealogy",
+      "dstrongs_grammar": "G1078=N-GSF",
+      "dictionary_gloss": "genealogy, origin",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,TrgmA,TrgmB,Wh,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["genealogy", "origin", "generation"],
+      "spelling_variants": [],
+      "sstrong_instance": "G1078-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Rom.8.1#01=A",
+      "greek": "oὐδεν",
+      "english_translation": "nothing",
+      "dstrongs_grammar": "G3762=A-NSN",
+      "dictionary_gloss": "no one, nothing",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,NA27,NA28,SBLG",
+      "meaning_variants": ["no one", "nothing"],
+      "spelling_variants": ["οὐδεν"],
+      "sstrong_instance": "G3762-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Rom.8.1#02=X",
+      "greek": "ἄρα",
+      "english_translation": "therefore",
+      "dstrongs_grammar": "G686=ADV",
+      "dictionary_gloss": "therefore, then",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,NA27,NA28,SBLG",
+      "meaning_variants": ["therefore", "then", "so"],
+      "spelling_variants": [],
+      "sstrong_instance": "G686-a",
+      "alt_strongs": "G687"
+    },
+    {
+      "word_and_type": "Rom.8.1#03=X",
+      "greek": "νῦν",
+      "english_translation": "now",
+      "dstrongs_grammar": "G3568=ADV",
+      "dictionary_gloss": "now, at this time",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,NA27,NA28,SBLG",
+      "meaning_variants": ["now", "at this time"],
+      "spelling_variants": [],
+      "sstrong_instance": "G3568-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Rev.1.1#01=N",
+      "greek": "ἀποκάλυψις",
+      "english_translation": "revelation",
+      "dstrongs_grammar": "G602=N-NSF",
+      "dictionary_gloss": "revelation, disclosure",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["revelation", "disclosure", "uncovering"],
+      "spelling_variants": [],
+      "sstrong_instance": "G602-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Rev.1.1#02=N",
+      "greek": "Ἰησοῦ",
+      "english_translation": "of Jesus",
+      "dstrongs_grammar": "G2424=N-GSM-P",
+      "dictionary_gloss": "Jesus",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["Jesus"],
+      "spelling_variants": ["Ἰησοῦς"],
+      "sstrong_instance": "G2424-a",
+      "alt_strongs": ""
+    },
+    {
+      "word_and_type": "Rev.1.1#03=N",
+      "greek": "Χριστοῦ",
+      "english_translation": "of Christ",
+      "dstrongs_grammar": "G5547=N-GSM-T",
+      "dictionary_gloss": "Christ, Anointed One",
+      "editions": "Tyn,Steph,Beza,Elz,Gries,Lach,Trgm,WH,NA27,NA28,SBLG",
+      "meaning_variants": ["Christ", "Anointed One"],
+      "spelling_variants": [],
+      "sstrong_instance": "G5547-a",
+      "alt_strongs": ""
+    }
+  ],
+  "sample_osis_refs": ["Matt.1.1", "Rom.8.1", "Rev.1.1"]
+}
