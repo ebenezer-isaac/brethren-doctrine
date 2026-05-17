@@ -118,7 +118,7 @@ finite-and-not-NaN rule:
   $pred_float(x) := x IS NOT NULL AND NOT (x <> x)
                     AND x < (1.0/0.0) AND x > -(1.0/0.0)
 
-If a future upstream revision switches the delimiter (for example
+If a subsequent upstream revision switches the delimiter (for example
 to a colon), the change MUST be reflected here under a
 `[SCHEMA-REVISION]` commit prefix as required by Decision header
 in `docs/SCHEMA_DECISIONS.md`; the adapter implementation MUST NOT
@@ -144,7 +144,7 @@ Edge `PARALLEL_OF` (`BhsaWord` to `BhsaWord`):
 
   `source` is the literal string `ETCBC-parallels`, recorded on
   the edge so Pipeline 2 provenance filters can isolate ETCBC
-  parallels from any future parallel-edge source without joining
+  parallels from any other parallel-edge source without joining
   on the endpoint nodes.
 
 No other edge types are emitted. In particular this adapter does
