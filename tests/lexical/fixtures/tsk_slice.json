@@ -1,0 +1,51 @@
+{
+  "source_path": "data/private/tskxref.txt",
+  "offset": 0,
+  "length": 16076,
+  "fixture_sha256": "not_checked_source_absent",
+  "commit_sha": "c68bac76e7ef67d2e383145f4c5fd1ccfa019281",
+  "seed_int": 3331042422,
+  "note": "Seeded from git log -1 -- ingest/lexical/tsk.py = c68bac76e7ef67d2e383145f4c5fd1ccfa019281; seed = int('c68bac76', 16) = 3331042422; length = rng.randint(1024, 16384) = 16076.",
+  "entries": [
+    {
+      "book_num": 1,
+      "chapter": 1,
+      "verse": 1,
+      "word_num": 1,
+      "keyword": "In the beginning",
+      "xref_string": "John.1.1",
+      "stable_id": "tsk:1.1.1.1",
+      "note": "Single cross-ref. One CROSS_REF edge expected with osis_target='John.1.1'."
+    },
+    {
+      "book_num": 19,
+      "chapter": 119,
+      "verse": 1,
+      "word_num": 3,
+      "keyword": "Blessed",
+      "xref_string": "Ps.119.1-5",
+      "stable_id": "tsk:19.119.1.3",
+      "note": "Range cross-ref. Ps 119:1-5 expands to 5 CROSS_REF edges, one per verse in the range."
+    },
+    {
+      "book_num": 43,
+      "chapter": 3,
+      "verse": 36,
+      "word_num": 2,
+      "keyword": "believeth",
+      "xref_string": "Rev.999.1",
+      "stable_id": "tsk:43.3.36.2",
+      "note": "Unresolved-candidate. Rev 999:1 exceeds canonical chapter length and cannot be reconciled by TVTMS. Must be tagged tvtms_quarantine=true on the CrossRef node; zero CROSS_REF edges emitted."
+    }
+  ],
+  "expected_edge_counts": {
+    "tsk:1.1.1.1": 1,
+    "tsk:19.119.1.3": 5,
+    "tsk:43.3.36.2": 0
+  },
+  "corpus_slots": {
+    "slot_1": "Genesis 1:1 (OT narrative, canonical anchor)",
+    "slot_2": "Psalm 119:1 (OT wisdom, range-expansion stress case)",
+    "slot_3": "John 3:36 (NT, unresolved-target quarantine case)"
+  }
+}
