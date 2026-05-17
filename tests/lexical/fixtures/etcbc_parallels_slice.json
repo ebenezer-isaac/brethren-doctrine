@@ -1,0 +1,31 @@
+{
+  "source_slug": "ETCBC-parallels",
+  "seed_commit_sha": "e4743362c344524d9022c5186aeb30de7d855a10",
+  "seed_int": 3832820578,
+  "seeded_length": 14920,
+  "tier": "A",
+  "expected_count": 8246,
+  "corpus_note": "Three parallel pairs from distinct corpus regions: early-OT word range (Genesis-Deuteronomy tier, source_node 407371), mid-OT word range (Psalms-Proverbs tier, source_node 442381), late-OT word range (prophets tier, source_node 476273). All node identifiers are ETCBC text-fabric word slots within the BHSA keyspace (400000-500000 range). Self-loops are excluded by design; each pair has distinct source and target identifiers.",
+  "pairs": [
+    {
+      "source_node": "407371",
+      "target_and_value": "443914,0.915882",
+      "corpus_region": "early-OT"
+    },
+    {
+      "source_node": "442381",
+      "target_and_value": "475245,0.586926",
+      "corpus_region": "mid-OT"
+    },
+    {
+      "source_node": "476273",
+      "target_and_value": "425552,0.914006",
+      "corpus_region": "late-OT"
+    }
+  ],
+  "split_delimiter": ",",
+  "edge_type": "PARALLEL_OF",
+  "edge_property": "similarity",
+  "edge_source_property": "ETCBC-parallels",
+  "node_label": "BhsaWord"
+}
