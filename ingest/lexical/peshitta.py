@@ -3,8 +3,9 @@
 This module is a docstring-only stub committed under the
 implementer-docstring caste. The companion implementer-impl commit adds
 parsing, MERGE writes, and the TVTMS verse-reference projection. No
-import, function, class, future statement, or other top-level executable
-appears here by design; the AST gate enforced by the Phase C contract
+import, function, class, __future__ statement, or other top-level
+executable appears here by design; the AST gate enforced by the Phase C
+contract
 test requires that ``len(ast.parse(source).body) == 1`` and that the
 single body element is an ``ast.Expr`` wrapping a string ``Constant``.
 
@@ -48,7 +49,7 @@ Tier and tolerance from ``tools/expected_counts.json`` block
   is established at the first ingest run and locked into a follow-on
   baseline commit per the tier_rationale recorded in the counts file.
   ``tools/check_thresholds_immutable.py`` accepts the null sentinel and
-  later accepts the locked-in integer once the follow-on commit lands.
+  the follow-on commit accepts the locked-in integer once it lands.
 * tolerance ``0.05`` relative (five percent), per the Tier C policy in
   the same counts file; the verifier asserts
   ``abs(observed - locked) / locked <= 0.05`` once the baseline is in
