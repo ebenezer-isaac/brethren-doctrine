@@ -1,0 +1,121 @@
+{
+  "seed_commit_sha": "23c42ecd3fce242a35e9e09cc62a530ea345c22c",
+  "seed_int": 600059597,
+  "length": 8599,
+  "source_slug": "open-cbgm-3-john",
+  "tier": "B",
+  "record_unit": "cbgm_record",
+  "expected_count": 600,
+  "tolerance_relative": 0.02,
+  "tolerance_absolute_cap_records": 1000,
+  "min": 588,
+  "max": 612,
+  "scope": {
+    "book": "3John",
+    "chapter": 1,
+    "verse_min": 1,
+    "verse_max": 15
+  },
+  "variant_units": [
+    {
+      "variant_unit_id": "3John.1.1/2",
+      "book": "3John",
+      "chapter": 1,
+      "verse": 1,
+      "readings": [
+        {
+          "reading_id": "3John.1.1/2-a",
+          "text": "τῇ ἀγαπητῷ",
+          "is_lacuna": false,
+          "witnesses": ["01", "02", "03", "04", "18", "33"]
+        },
+        {
+          "reading_id": "3John.1.1/2-b",
+          "text": "ἀγαπητῷ",
+          "is_lacuna": false,
+          "witnesses": ["P74", "A"]
+        },
+        {
+          "reading_id": "3John.1.1/2-lac",
+          "text": "",
+          "is_lacuna": true,
+          "witnesses": ["206", "429"]
+        }
+      ],
+      "correctors": [
+        {
+          "base_siglum": "01",
+          "corrector_siglum": "01*",
+          "corrector_type": "original_hand"
+        },
+        {
+          "base_siglum": "01",
+          "corrector_siglum": "01C",
+          "corrector_type": "corrector"
+        }
+      ]
+    },
+    {
+      "variant_unit_id": "3John.1.6/22",
+      "book": "3John",
+      "chapter": 1,
+      "verse": 6,
+      "readings": [
+        {
+          "reading_id": "3John.1.6/22-a",
+          "text": "προπέμψας",
+          "is_lacuna": false,
+          "witnesses": ["01", "02", "A", "P74", "18", "33", "206", "429"]
+        },
+        {
+          "reading_id": "3John.1.6/22-b",
+          "text": "προπεμψας",
+          "is_lacuna": false,
+          "witnesses": ["03", "04", "01C"]
+        }
+      ],
+      "correctors": []
+    },
+    {
+      "variant_unit_id": "3John.1.12/10",
+      "book": "3John",
+      "chapter": 1,
+      "verse": 12,
+      "readings": [
+        {
+          "reading_id": "3John.1.12/10-a",
+          "text": "καὶ ὑπὸ αὐτῆς",
+          "is_lacuna": false,
+          "witnesses": ["01", "02", "03", "A", "P74", "18", "33"]
+        },
+        {
+          "reading_id": "3John.1.12/10-b",
+          "text": "καὶ ὑπὸ τῆς ἐκκλησίας",
+          "is_lacuna": false,
+          "witnesses": ["04", "206"]
+        },
+        {
+          "reading_id": "3John.1.12/10-lac",
+          "text": "",
+          "is_lacuna": true,
+          "witnesses": ["429"]
+        }
+      ],
+      "correctors": []
+    }
+  ],
+  "all_witnesses": [
+    {"siglum": "P74", "date_century": 7, "language": "greek", "ga_number": "P74"},
+    {"siglum": "01", "date_century": 4, "language": "greek", "ga_number": "01"},
+    {"siglum": "01*", "date_century": 4, "language": "greek", "ga_number": null},
+    {"siglum": "01C", "date_century": 4, "language": "greek", "ga_number": null},
+    {"siglum": "02", "date_century": 5, "language": "greek", "ga_number": "02"},
+    {"siglum": "03", "date_century": 4, "language": "greek", "ga_number": "03"},
+    {"siglum": "04", "date_century": 5, "language": "greek", "ga_number": "04"},
+    {"siglum": "A", "date_century": 5, "language": "greek", "ga_number": "A"},
+    {"siglum": "18", "date_century": 14, "language": "greek", "ga_number": "18"},
+    {"siglum": "33", "date_century": 9, "language": "greek", "ga_number": "33"},
+    {"siglum": "206", "date_century": 13, "language": "greek", "ga_number": "206"},
+    {"siglum": "429", "date_century": 14, "language": "greek", "ga_number": "429"}
+  ]
+}
