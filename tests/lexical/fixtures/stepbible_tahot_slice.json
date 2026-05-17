@@ -1,5 +1,5 @@
 {
-  "fixture_note": "Seeded from stepbible_tahot.py docstring commit SHA 036930c6ed1fbf3c658747fe238af623feba629f. Three OT corpus slices: torah (Gen), wisdom (Prov), prophets (Isa). Stable-id format: stepbible-tahot:<osisRef>.w<pos>.",
+  "fixture_note": "Seeded from stepbible_tahot.py docstring commit SHA 036930c6ed1fbf3c658747fe238af623feba629f. Three OT corpus slices: torah (Gen), wisdom (Prov), prophets (Isa). Stable-id format: stepbible-tahot:<osisRef>.w<pos>. Phase C.2 verifier commit.",
   "docstring_commit_sha": "036930c6ed1fbf3c658747fe238af623feba629f",
   "seed_int": 57225414,
   "length": 10683,

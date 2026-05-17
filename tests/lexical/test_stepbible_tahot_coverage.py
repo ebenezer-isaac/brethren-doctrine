@@ -1,4 +1,4 @@
-"""STEPBible-TAHOT adapter coverage tests (Phase C Wave 2).
+"""STEPBible-TAHOT adapter coverage tests (Phase C Wave 2, verifier caste).
 
 This file references tools/predicates_by_type.cypher for $pred_string definitions.
 Predicate semantics are loaded at module level from that file per RESEED_PLAN C.5.
