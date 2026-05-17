@@ -1,0 +1,61 @@
+{
+  "seed_commit_sha": "fdf5f40e258a01adff3b5f06b66d535f8a678111",
+  "seed_int": 4260754446,
+  "length": 9005,
+  "source_slug": "STEPBible-TBESH",
+  "tier": "A",
+  "expected_count": 11682,
+  "record_unit": "lemma",
+  "corpus_note": "Three Hebrew Strongs from disjoint corpus regions: early range H0001 (Genesis context, creation vocabulary), mid range H4397 (Psalms/prophetic context, messenger/angel domain), late range H8451 (Deuteronomy context, law/instruction vocabulary). Aramaic subscript case also included via H10001A which is Aramaic-range, demonstrating subscript_aramaic flag handling per Decision 11 edge case 2.",
+  "entries": [
+    {
+      "strong_disambig": "H0001",
+      "base_strong": "H0001",
+      "gloss_line": "father",
+      "hebrew": "אָב",
+      "transliteration": "ʾāḇ",
+      "pos": "noun",
+      "english": "father",
+      "definition": "A male ancestor in the direct line; the founder or patriarch of a family, tribe, or nation; used figuratively of God as the originating source of creation and covenant relationship. Occurs in genealogical, covenantal, and honorific contexts throughout the Hebrew Bible.",
+      "language": "hebrew",
+      "source": "STEPBible-TBESH"
+    },
+    {
+      "strong_disambig": "H4397",
+      "base_strong": "H4397",
+      "gloss_line": "messenger, angel",
+      "hebrew": "מַלְאָךְ",
+      "transliteration": "malʾāḵ",
+      "pos": "noun",
+      "english": "messenger, angel",
+      "definition": "A delegate or representative dispatched with an authoritative message; in the human domain denotes a royal or prophetic envoy; in the divine domain denotes a heavenly being sent on a divine mission. The term is semantically broad and context determines whether the referent is human or supernatural.",
+      "language": "hebrew",
+      "source": "STEPBible-TBESH"
+    },
+    {
+      "strong_disambig": "H8451",
+      "base_strong": "H8451",
+      "gloss_line": "law, instruction, Torah",
+      "hebrew": "תּוֹרָה",
+      "transliteration": "tôrāh",
+      "pos": "noun",
+      "english": "law, instruction, direction, Torah",
+      "definition": "The body of divine instruction delivered through Moses; broadly any authoritative teaching or direction from God or a wise teacher. In postexilic usage the term narrows to the Pentateuch as a canonical unit, but in earlier texts it denotes specific priestly rulings or prophetic guidance. The term roots in the verb yarah, to shoot or to direct.",
+      "language": "hebrew",
+      "source": "STEPBible-TBESH"
+    },
+    {
+      "strong_disambig": "H10001",
+      "base_strong": "H10001",
+      "gloss_line": "father (Aramaic)",
+      "hebrew": "אַב",
+      "transliteration": "ʾaḇ (Aram.)",
+      "pos": "noun",
+      "english": "father (Aramaic)",
+      "definition": "Aramaic cognate of Hebrew H0001. Occurs in the Aramaic sections of Daniel and Ezra in identical paternal and honorific senses. Carries subscript_aramaic flag to distinguish from Hebrew proper entries within the shared BriefLexEntry label space.",
+      "language": "hebrew",
+      "source": "STEPBible-TBESH",
+      "subscript_aramaic": true
+    }
+  ]
+}
