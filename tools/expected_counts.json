@@ -1,0 +1,334 @@
+{
+  "$schema_version": "1.0",
+  "generated_at": "2026-05-17T20:57:05Z",
+  "commit_baseline": "ecea53e3b8056890e7471e2ed25ebb389d9af070",
+  "tier_policy": {
+    "A": {
+      "tolerance": 0,
+      "description": "deterministic from source file lines, exact match required"
+    },
+    "B": {
+      "tolerance_relative": 0.02,
+      "tolerance_absolute_cap_records": 1000,
+      "description": "joined or derived edges, two percent relative tolerance capped at one thousand records"
+    },
+    "C": {
+      "tolerance_relative": 0.05,
+      "description": "network procurement, five percent relative tolerance to absorb upstream shift between fetches"
+    }
+  },
+  "sources": {
+    "MACULA-Hebrew": {
+      "tier": "A",
+      "record_unit": "morpheme",
+      "expected_count": 475911,
+      "tolerance": 0,
+      "min": 475911,
+      "max": 475911,
+      "tier_rationale": "Single XML enumeration from the Clear team. The total morpheme count is an exact element count taken straight from the upstream file as recorded in the inventory catalog, with no joining or sampling involved.",
+      "catalog_source_index": 0
+    },
+    "MACULA-Greek-Nestle1904": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 137779,
+      "tolerance": 0,
+      "min": 137779,
+      "max": 137779,
+      "tier_rationale": "Single XML word stream from MACULA against Nestle 1904. Word count is a deterministic element count from the upstream file, identical across reruns because the corpus is frozen and shipped as a versioned release.",
+      "catalog_source_index": 1
+    },
+    "MACULA-Greek-SBLGNT": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 137741,
+      "tolerance": 0,
+      "min": 137741,
+      "max": 137741,
+      "tier_rationale": "MACULA enrichment over SBLGNT shipped as one XML stream. Word count is an exact element count from the upstream file. SBLGNT edition is versioned and reproducible byte-for-byte across reruns.",
+      "catalog_source_index": 2
+    },
+    "MorphGNT-SBLGNT": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 137554,
+      "tolerance": 0,
+      "min": 137554,
+      "max": 137554,
+      "tier_rationale": "MorphGNT-SBLGNT ships one whitespace token per word across versioned book files. Total is a deterministic line count over the canonical release, identical across reruns because the upstream is a tagged github release.",
+      "catalog_source_index": 3
+    },
+    "OSHB-morphology": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 306785,
+      "tolerance": 0,
+      "min": 306785,
+      "max": 306785,
+      "tier_rationale": "Open Scriptures Hebrew Bible morphology ships one record per consonantal word slot across versioned OSIS XML files. Total is a deterministic element count from the tagged release used at ingest time.",
+      "catalog_source_index": 4
+    },
+    "STEPBible-TAHOT": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 283734,
+      "tolerance": 0,
+      "min": 283734,
+      "max": 283734,
+      "tier_rationale": "STEPBible Translators Amalgamated Hebrew OT ships one TSV row per tagged Hebrew word across tagged release files. Total is a deterministic line count from the versioned upstream tarball used at ingest.",
+      "catalog_source_index": 5
+    },
+    "STEPBible-TAGNT": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 141720,
+      "tolerance": 0,
+      "min": 141720,
+      "max": 141720,
+      "tier_rationale": "STEPBible Translators Amalgamated Greek NT ships one TSV row per tagged Greek word across tagged release files. Total is a deterministic line count from the versioned upstream tarball used at ingest time.",
+      "catalog_source_index": 6
+    },
+    "STEPBible-TVTMS": {
+      "tier": "A",
+      "record_unit": "versification_rule",
+      "expected_count": 1308,
+      "tolerance": 0,
+      "min": 1308,
+      "max": 1308,
+      "tier_rationale": "STEPBible Translators Versification Mapping System ships one row per versification reconciliation rule across two tradition columns. Total is a deterministic line count from the versioned upstream release used at ingest.",
+      "catalog_source_index": 7
+    },
+    "STEPBible-TBESH": {
+      "tier": "A",
+      "record_unit": "lemma",
+      "expected_count": 11682,
+      "tolerance": 0,
+      "min": 11682,
+      "max": 11682,
+      "tier_rationale": "STEPBible Brief Extended Strongs Hebrew brief lexicon ships one row per disambiguated Strong-keyed lemma. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "catalog_source_index": 8
+    },
+    "STEPBible-TBESG": {
+      "tier": "A",
+      "record_unit": "lemma",
+      "expected_count": 11035,
+      "tolerance": 0,
+      "min": 11035,
+      "max": 11035,
+      "tier_rationale": "STEPBible Brief Extended Strongs Greek brief lexicon ships one row per disambiguated Strong-keyed Greek lemma. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "catalog_source_index": 9
+    },
+    "STEPBible-TFLSJ": {
+      "tier": "A",
+      "record_unit": "lemma",
+      "expected_count": 11034,
+      "tolerance": 0,
+      "min": 11034,
+      "max": 11034,
+      "tier_rationale": "STEPBible Tagged LSJ extract ships one row per Greek lemma with LSJ definition. Total is a deterministic line count from the versioned upstream release used at ingest, identical across reruns under tagged builds.",
+      "catalog_source_index": 10
+    },
+    "STEPBible-morph-codes": {
+      "tier": "A",
+      "record_unit": "morph_code",
+      "expected_count": 2782,
+      "tolerance": 0,
+      "min": 2782,
+      "max": 2782,
+      "tier_rationale": "STEPBible morphology code dictionary ships one row per code with human-readable expansion. Total is a deterministic line count from the versioned upstream release used at ingest, identical across reruns under tagged builds.",
+      "catalog_source_index": 11
+    },
+    "STEPBible-proper-nouns": {
+      "tier": "A",
+      "record_unit": "proper_name",
+      "expected_count": 23205,
+      "tolerance": 0,
+      "min": 23205,
+      "max": 23205,
+      "tier_rationale": "STEPBible proper nouns reference table ships one row per proper-name entry across Hebrew and Greek sections. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "catalog_source_index": 12
+    },
+    "STEPBible-TTESV": {
+      "tier": "A",
+      "record_unit": "tagged_word",
+      "expected_count": 31272,
+      "tolerance": 0,
+      "min": 31272,
+      "max": 31272,
+      "tier_rationale": "STEPBible Tagged Translation ESV ships one row per tagged English surface word with Strong key and morph code. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "catalog_source_index": 13
+    },
+    "OpenBible-cross-refs": {
+      "tier": "A",
+      "record_unit": "cross_ref",
+      "expected_count": 344799,
+      "tolerance": 0,
+      "min": 344799,
+      "max": 344799,
+      "tier_rationale": "OpenBible.info community cross-reference table ships one row per voted From-Verse to-Verse pair. Total is a deterministic line count from the versioned upstream CSV release used at ingest, no derivation involved.",
+      "catalog_source_index": 14
+    },
+    "TSK": {
+      "tier": "A",
+      "record_unit": "tsk_entry",
+      "expected_count": 63682,
+      "tolerance": 0,
+      "min": 63682,
+      "max": 63682,
+      "tier_rationale": "Treasury of Scripture Knowledge ships one row per per-word entry with packed xref_string payload. Row total is a deterministic line count. Edge expansion from xref_string is counted separately in the edge_counts block.",
+      "catalog_source_index": 15
+    },
+    "Theographic-Bible-Metadata": {
+      "tier": "A",
+      "record_unit": "multi_entity_record",
+      "expected_count": 43690,
+      "tolerance": 0,
+      "min": 43690,
+      "max": 43690,
+      "tier_rationale": "Theographic ships a multi-file JSON corpus across books, chapters, verses, people, places, periods, events, and easton entries. Total is the exact sum of upstream-published per-file counts in the versioned github release.",
+      "catalog_source_index": 16
+    },
+    "ETCBC-BHSA": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 426590,
+      "tolerance": 0,
+      "min": 426590,
+      "max": 426590,
+      "tier_rationale": "ETCBC Biblia Hebraica Stuttgartensia Amstelodamensis is shipped via text-fabric as a frozen feature set. Word slot count is deterministic from the otype feature in the versioned text-fabric module used at ingest.",
+      "catalog_source_index": 17
+    },
+    "ETCBC-parallels": {
+      "tier": "A",
+      "record_unit": "parallel_edge",
+      "expected_count": 8246,
+      "tolerance": 0,
+      "min": 8246,
+      "max": 8246,
+      "tier_rationale": "ETCBC parallels module ships one row per pre-derived parallel-passage edge with packed source_node and target_and_value fields. Total is the exact upstream feature count from the versioned text-fabric module at ingest.",
+      "catalog_source_index": 18
+    },
+    "ETCBC-phono": {
+      "tier": "A",
+      "record_unit": "word",
+      "expected_count": 426590,
+      "tolerance": 0,
+      "min": 426590,
+      "max": 426590,
+      "tier_rationale": "ETCBC phonetic transcription ships one phono value per BHSA word slot in the same text-fabric module. Total equals the BHSA word slot count exactly because the feature is keyed one-to-one with word identifiers.",
+      "catalog_source_index": 19
+    },
+    "open-cbgm-3-john": {
+      "tier": "B",
+      "record_unit": "cbgm_record",
+      "expected_count": 600,
+      "tolerance_relative": 0.02,
+      "tolerance_absolute_cap_records": 1000,
+      "min": 588,
+      "max": 612,
+      "tier_rationale": "Local SQLite plus collation XML, scoped to 3 John verses one through fifteen. Variant, Reading, and Witness node counts are derived from joins across the database tables and TEI elements, not from a single line count.",
+      "catalog_source_index": 3
+    },
+    "peshitta": {
+      "tier": "C",
+      "record_unit": "syriac_word",
+      "expected_count": null,
+      "tolerance_relative": 0.05,
+      "min": null,
+      "max": null,
+      "tier_rationale": "Network procurement against ETCBC peshitta text-fabric module. Upstream byte count is the only signal at procurement time, so the record count is established at first ingest run and locked into a follow-on baseline commit.",
+      "catalog_source_index": 0
+    },
+    "vulgate-clementine": {
+      "tier": "C",
+      "record_unit": "vulgate_verse",
+      "expected_count": null,
+      "tolerance_relative": 0.05,
+      "min": null,
+      "max": null,
+      "tier_rationale": "Network procurement against Wikisource Special:Export. Upstream byte count is the only signal at procurement time, so the verse record count is established at first ingest run and locked into a follow-on baseline commit.",
+      "catalog_source_index": 1
+    },
+    "coptic-scriptorium": {
+      "tier": "C",
+      "record_unit": "coptic_word",
+      "expected_count": null,
+      "tolerance_relative": 0.05,
+      "min": null,
+      "max": null,
+      "tier_rationale": "Network procurement against Coptic SCRIPTORIUM github corpora. Upstream byte count is the only signal at procurement time, so the word record count is established at first ingest run and locked into a follow-on baseline commit.",
+      "catalog_source_index": 2
+    }
+  },
+  "edge_counts": {
+    "GLOSSES_GREEK_LEMMA": {
+      "tier": "B",
+      "expected_min": 326475,
+      "expected_max": 382157,
+      "tier_rationale": "Derived from MACULA-Hebrew morphemes whose greek and greekstrong fields are non-empty per Decision 4. Min uses greekstrong occurrence rate, max uses greek occurrence rate. Range covers the fallback path through STEPBible TBESG lemma lookup."
+    },
+    "HAS_CROSS_REF": {
+      "tier": "B",
+      "expected_min": 100001,
+      "expected_max": 509456,
+      "tier_rationale": "Derived from TSK xref_string parsing and range expansion per Decision 5. Lower bound is the Decision 5 acceptance gate of one hundred thousand. Upper bound assumes an average of eight refs per parsed entry across sixty-three thousand rows."
+    },
+    "OPENBIBLE_CROSS_REF": {
+      "tier": "B",
+      "expected_min": 343799,
+      "expected_max": 345799,
+      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals row count since one row produces one edge. Two percent capped at one thousand absolute records covers ingest-time row drops."
+    },
+    "HAS_VARIANT_UNIT": {
+      "tier": "B",
+      "expected_min": 80,
+      "expected_max": 200,
+      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6, scoped to verses one through fifteen. VariantUnit count comes from joined database rows in the local SQLite and TEI XML, varying with collation revisions."
+    },
+    "HAS_READING": {
+      "tier": "B",
+      "expected_min": 250,
+      "expected_max": 600,
+      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6. Reading count exceeds VariantUnit count because each unit has multiple attested readings across witnesses, including the lacuna sentinel reading per the edge-case rule."
+    },
+    "HAS_LOUW_NIDA_DOMAIN": {
+      "tier": "B",
+      "expected_min": 254167,
+      "expected_max": 266875,
+      "tier_rationale": "Derived from MACULA-Greek Nestle1904 plus SBLGNT words with non-null ln per Decision 2. Min uses raw occurrence sum across both editions. Max adds five percent for polysemy multi-edges where one Strong carries several Louw-Nida senses.",
+      "expected_count": null,
+      "tolerance_relative": 0.02
+    },
+    "HAS_SDBH_DOMAIN": {
+      "tier": "B",
+      "expected_min": 244570,
+      "expected_max": 246570,
+      "tier_rationale": "Derived from MACULA-Hebrew morphemes whose sdbh field is non-null at occurrence rate 0.516 per Decision 1 and Decision 2. Range applies tier B tolerance of two percent capped at one thousand absolute records around the central estimate."
+    },
+    "HAS_CLAUSE": {
+      "tier": "B",
+      "expected_min": 71500,
+      "expected_max": 74500,
+      "tier_rationale": "Derived from ETCBC-BHSA text-fabric clause slots per Decision 3. Count comes from the clause otype feature, a join over the word-to-clause containment edges. Range absorbs minor revision drift between text-fabric module releases."
+    },
+    "HAS_PHRASE": {
+      "tier": "B",
+      "expected_min": 248000,
+      "expected_max": 256000,
+      "tier_rationale": "Derived from ETCBC-BHSA text-fabric phrase slots per Decision 3. Count comes from the phrase otype feature, a join over the clause-to-phrase and phrase-to-word containment edges across the full Hebrew Bible.",
+      "expected_count": null
+    },
+    "HAS_PARALLEL": {
+      "tier": "B",
+      "expected_min": 8082,
+      "expected_max": 8411,
+      "tier_rationale": "Derived from ETCBC-parallels rows per Decision 3, where each row produces one PARALLEL_OF edge after splitting target_and_value into target node and similarity score. Range applies tier B tolerance of two percent around the upstream row count."
+    },
+    "IS_PROPER_NOUN": {
+      "tier": "B",
+      "expected_min": 23205,
+      "expected_max": 27546,
+      "tier_rationale": "Derived from STEPBible proper-nouns rows plus Theographic Person and Place projections per Decision 10. Min counts only STEPBible entries, max adds Theographic person and place entity counts that resolve to proper-noun labels."
+    }
+  }
+}
