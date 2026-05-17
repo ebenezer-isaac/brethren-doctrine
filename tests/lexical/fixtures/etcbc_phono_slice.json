@@ -1,0 +1,209 @@
+{
+  "source_slug": "ETCBC-phono",
+  "seed_commit_sha": "dde769003daf1e20607c6ef19b5baa0eac6a09df",
+  "seed_int": 3722930432,
+  "seeded_length": 12352,
+  "tier": "A",
+  "expected_count": 426590,
+  "record_unit": "word",
+  "corpus_note": "Three OT verses from distinct corpus regions: Genesis 1:1 (early-OT, node range 1-7), Psalms 23:1 (mid-OT, node range 213000-213007), Proverbs 3:5 (wisdom-adjacent, node range 318400-318405). Node identifiers are BHSA text-fabric word slots. One word in Proverbs 3:5 has phono=null (ketiv-only slot, node_id 318402) reflecting the 1.6 percent null rate per Decision 3 Edge cases handled bullet 3.",
+  "null_rate": 0.016,
+  "stable_id_format": "bhsa:tf:<node_id>",
+  "join_key_corpus": "bhsa",
+  "property_attach": "phono",
+  "property_nullable": true,
+  "no_new_label": true,
+  "no_edges": true,
+  "node_label": "BhsaWord",
+  "words": [
+    {
+      "node_id": 1,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:1",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "bereXit"
+    },
+    {
+      "node_id": 2,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:2",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "bara"
+    },
+    {
+      "node_id": 3,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:3",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "elohim"
+    },
+    {
+      "node_id": 4,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:4",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "et"
+    },
+    {
+      "node_id": 5,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:5",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "hashamayim"
+    },
+    {
+      "node_id": 6,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:6",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "weet"
+    },
+    {
+      "node_id": 7,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:7",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 1,
+      "phono": "haarec"
+    },
+    {
+      "node_id": 213000,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213000",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "adonay"
+    },
+    {
+      "node_id": 213001,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213001",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "roxi"
+    },
+    {
+      "node_id": 213002,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213002",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "lachaseer"
+    },
+    {
+      "node_id": 213003,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213003",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "binot"
+    },
+    {
+      "node_id": 213004,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213004",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "nesheraan"
+    },
+    {
+      "node_id": 213005,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213005",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "al"
+    },
+    {
+      "node_id": 213006,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213006",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "batax"
+    },
+    {
+      "node_id": 213007,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:213007",
+      "book": "Psalms",
+      "chapter": 23,
+      "verse": 1,
+      "phono": "bJahweh"
+    },
+    {
+      "node_id": 318400,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318400",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": "batax"
+    },
+    {
+      "node_id": 318401,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318401",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": "belibkaa"
+    },
+    {
+      "node_id": 318402,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318402",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": null
+    },
+    {
+      "node_id": 318403,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318403",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": "bekal"
+    },
+    {
+      "node_id": 318404,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318404",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": "draakayw"
+    },
+    {
+      "node_id": 318405,
+      "corpus": "bhsa",
+      "stable_id": "bhsa:tf:318405",
+      "book": "Proverbs",
+      "chapter": 3,
+      "verse": 5,
+      "phono": "bereXit"
+    }
+  ]
+}

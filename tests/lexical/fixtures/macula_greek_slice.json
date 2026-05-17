@@ -1,0 +1,37 @@
+{
+  "seed_commit_sha": "8abcfe30d09dcc9feabf32db1f89ec8eee800306",
+  "seed_int": 2327641648,
+  "length": 13074,
+  "corpus_note": "Three NT corpus regions: gospels=04-john.xml (JHN), epistles=06-romans.xml (ROM), apocalypse=27-revelation.xml (REV). Regions are disjoint: Gospel corpus, Pauline epistles, Apocalyptic. Edition MACULA-Greek-Nestle1904 (Nestle 1904 lowfat XML). All three files are from data/private/macula-greek/Nestle1904/lowfat/.",
+  "source_slug_nestle1904": "MACULA-Greek-Nestle1904",
+  "source_slug_sblgnt": "MACULA-Greek-SBLGNT",
+  "tier": "A",
+  "expected_word_count_nestle1904": 137779,
+  "expected_word_count_sblgnt": 137741,
+  "slices": [
+    {
+      "region": "gospels",
+      "source_path": "data/private/macula-greek/Nestle1904/lowfat/04-john.xml",
+      "offset": 7185046,
+      "length": 13074,
+      "fixture_sha256": "97a14cbb76be355744589c748f0f7a6bc64fefc0296a189898d5596bbe7a4302",
+      "verse_ref": "JHN"
+    },
+    {
+      "region": "epistles",
+      "source_path": "data/private/macula-greek/Nestle1904/lowfat/06-romans.xml",
+      "offset": 2181666,
+      "length": 13074,
+      "fixture_sha256": "13ce3980587c32d0c564e466636977b11e2416aa11ab39295d5fba645bb12da9",
+      "verse_ref": "ROM"
+    },
+    {
+      "region": "apocalypse",
+      "source_path": "data/private/macula-greek/Nestle1904/lowfat/27-revelation.xml",
+      "offset": 1831105,
+      "length": 13074,
+      "fixture_sha256": "59bcb6ac1cc3a0742fbe7655b36dee98cb2766c8d3230be6bdb101155597f629",
+      "verse_ref": "REV"
+    }
+  ]
+}

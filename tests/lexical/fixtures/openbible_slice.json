@@ -1,0 +1,38 @@
+{
+  "source_path": "data/private/openbible/cross_references.txt",
+  "offset": 0,
+  "length": 10157,
+  "seed_commit_sha": "d66faa3",
+  "seed_int": 224852643,
+  "corpus_note": "Three cross-ref rows from disjoint corpus regions: OT-to-OT (Gen to Exod), OT-to-NT (Ps to John), NT-to-NT (Matt to Mark). Disjoint regions guarantee the merge-key tuple (from_osis, to_osis, source) is distinct for all three rows.",
+  "source_slug": "OpenBible-cross-refs",
+  "tier": "A",
+  "expected_cross_ref_count": 344799,
+  "cross_refs": [
+    {
+      "from_verse_kjv": "Gen.1.1",
+      "to_verse_kjv": "Exod.1.1",
+      "votes": 5,
+      "from_osis": "Gen.1.1",
+      "to_osis": "Exod.1.1",
+      "region": "OT-to-OT"
+    },
+    {
+      "from_verse_kjv": "Ps.119.1",
+      "to_verse_kjv": "John.1.1",
+      "votes": 0,
+      "from_osis": "Ps.119.1",
+      "to_osis": "John.1.1",
+      "region": "OT-to-NT",
+      "note": "votes=0 retained per Decision 5 edge case"
+    },
+    {
+      "from_verse_kjv": "Matt.5.3",
+      "to_verse_kjv": "Mark.1.15",
+      "votes": 12,
+      "from_osis": "Matt.5.3",
+      "to_osis": "Mark.1.15",
+      "region": "NT-to-NT"
+    }
+  ]
+}
