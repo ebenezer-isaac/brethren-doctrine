@@ -23,6 +23,46 @@ from embeddings.bootstrap import VOYAGE_MODEL, VOYAGE_OUTPUT_DIMENSION
 NS = uuid.UUID("a4f6e6c0-0000-4000-8000-000000000002")
 BATCH = 128
 MIN_INTERVAL_SECONDS = 0.0
+EMBED_TEXT_MAX_LEN = 6000
+
+
+def build_embed_text(row: dict[str, Any]) -> str:
+    """Compose the input string handed to Voyage for one Lemma row.
+
+    Phase Z.1 contract (RESEED_PLAN E.1):
+
+    * concatenates lemma, transliteration, gloss, plus part-of-speech
+      and semantic-domain hints when present (Phase E enrichment);
+    * yields >= 6 distinct whitespace-separated tokens once
+      ``pos``/``domain`` columns are populated;
+    * deterministic: same input row always yields the same text;
+    * never returns the empty string for a row whose required fields
+      (``lemma``, ``transliteration``, ``gloss``) are non-empty;
+    * truncates to ``EMBED_TEXT_MAX_LEN`` characters at the tail.
+
+    The function is pure: no I/O, no globals beyond the constant cap.
+    """
+    parts: list[str] = []
+    lemma = (row.get("lemma") or "").strip()
+    translit = (row.get("transliteration") or "").strip()
+    gloss = (row.get("gloss") or "").strip()
+    if lemma:
+        parts.append(lemma)
+    if translit and translit != lemma:
+        parts.append(f"({translit})")
+    if gloss:
+        parts.append(f": {gloss}")
+    pos = (row.get("pos") or "").strip()
+    if pos:
+        parts.append(f"| pos {pos}")
+    domain = (row.get("domain") or "").strip()
+    if domain:
+        parts.append(f"| domain {domain}")
+    louw_nida = (row.get("louw_nida") or "").strip()
+    if louw_nida:
+        parts.append(f"| LN {louw_nida}")
+    text = " ".join(parts).strip()
+    return text[:EMBED_TEXT_MAX_LEN]
 
 
 def _iter_lemmas(session: Any, limit: int) -> list[dict[str, Any]]:
@@ -102,10 +142,7 @@ def main(argv: list[str] | None = None) -> int:
             wait = MIN_INTERVAL_SECONDS - (time.monotonic() - last)
             if wait > 0:
                 time.sleep(wait)
-            texts = [
-                f"{r['lemma']} ({r['transliteration']}): {r['gloss']}".strip()[:6000]
-                for r in batch
-            ]
+            texts = [build_embed_text(r) for r in batch]
             vecs = _embed_batch(voyage_client, texts)
             last = time.monotonic()
             if vecs is None:
