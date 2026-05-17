@@ -1,0 +1,37 @@
+{
+  "source_slug": "STEPBible-TFLSJ",
+  "tier": "A",
+  "expected_count": 11034,
+  "seed_commit_sha": "d45619bd1382d84558640f08e10b767055f37567",
+  "seed_int": 3562412477,
+  "corpus_note": "Three Greek lemmas from disjoint NT regions: Johannine (logos, G3056), Pauline (pistis, G4102), Synoptic (agapos, G26). Each row exercises a distinct Decision 13 field-nullability axis: row 1 all required fields populated, row 2 english=null (occ 0.991 gap), row 3 lsj_definition=null (occ 0.896 gap).",
+  "rows": [
+    {
+      "strong": "G3056",
+      "lemma": "λόγος",
+      "lemma_unaccented": "λογος",
+      "transliteration": "logos",
+      "pos": "N",
+      "english": "word, reason, discourse",
+      "lsj_definition": "the word by which the inward thought is expressed; also the inward thought itself"
+    },
+    {
+      "strong": "G4102",
+      "lemma": "πίστις",
+      "lemma_unaccented": "πιστις",
+      "transliteration": "pistis",
+      "pos": "N",
+      "english": null,
+      "lsj_definition": "trust, trustworthiness; in NT faith"
+    },
+    {
+      "strong": "G26",
+      "lemma": "ἀγάπη",
+      "lemma_unaccented": "αγαπη",
+      "transliteration": "agape",
+      "pos": "N",
+      "english": "love (divine)",
+      "lsj_definition": null
+    }
+  ]
+}
