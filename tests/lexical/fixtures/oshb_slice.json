@@ -1,6 +1,12 @@
 {
   "source_path": "data/private/oshb/wlc/Gen.xml",
-  "offset": 4287,
-  "length": 8192,
-  "fixture_sha256": "5d1feaab55398c5199118196d645c276ba2c47e15bf5f22b9245a7ceacab8bcd"
+  "offset": 227422,
+  "length": 1429,
+  "fixture_sha256": "c209c6c593c0dd14e1ec9656e369228a268879323393407f2849ffb24dfdf9ca",
+  "seed_commit_sha": "ee8d877864ef1e77d4951e8c5d5567b8f292f820",
+  "seed_int": 4002252664,
+  "corpus_note": "Three corpus regions: torah=Gen.xml (OSHB, OT), wisdom=Ps.xml (OSHB, OT), third=Prov.xml (OSHB, OT wisdom-but-distinct). OSHB is OT-only; no NT corpus exists in this source. The NT slot is replaced by Proverbs as a wisdom-adjacent-but-distinct corpus region, per verifier note.",
+  "source_slug": "OSHB-morphology",
+  "tier": "A",
+  "expected_word_count": 306785
 }
