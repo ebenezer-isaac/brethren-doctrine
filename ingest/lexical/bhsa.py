@@ -363,4 +363,5 @@ docs/implementation_phases/RESEED_PLAN.md Phase C.1 (TDD workflow per adapter) a
 graph/lexical.cypher constraints bhsa_clause_id, bhsa_phrase_id, bhsa_word_id, tfnode_tuple, source_slug and indices bhsa_word_lex, bhsa_phrase_function.
 tools/expected_counts.json sources."ETCBC-BHSA" (tier A, expected_count 426590, record_unit word) and edge_counts.HAS_CLAUSE, edge_counts.HAS_PHRASE.
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
+tools/check_caste.py implementer-docstring caste allowed-glob ingest/lexical/*.py and forbidden-glob tests/**, docs/**, tools/expected_counts.json.
 """
