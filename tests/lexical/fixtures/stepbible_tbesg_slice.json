@@ -1,0 +1,55 @@
+{
+  "source_slug": "STEPBible-TBESG",
+  "tier": "A",
+  "expected_lemma_count": 11035,
+  "seed_commit_sha": "d45619bd1382d84558640f08e10b767055f37567",
+  "seed_int": 3562412477,
+  "corpus_note": "Three Greek Strongs drawn from disjoint NT regions: early_gospels (G1-G3000), pauline_letters (G3001-G5000), late_epistles (G5001-G5624). Seeded from int(commit_sha[:8], 16) of the TBESG docstring commit d45619bd.",
+  "entries": [
+    {
+      "region": "early_gospels",
+      "strong_disambig": "G1373",
+      "base_strong": "G1373",
+      "greek": "ṱιψάω",
+      "transliteration": "dipsao",
+      "pos": "V",
+      "gloss_line": "G1373 ṱιψάω dipsao: to thirst",
+      "english": "to thirst, to be thirsty",
+      "definition": "to thirst; to suffer thirst; metaph. to painfully feel the want of, and eagerly long for, those things by which the soul is refreshed, supported and strengthened",
+      "language": "greek",
+      "source": "STEPBible-TBESG",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "region": "pauline_letters",
+      "strong_disambig": "G4899",
+      "base_strong": "G4899",
+      "greek": "συνεκλεκτός",
+      "transliteration": "suneklektos",
+      "pos": "Adj",
+      "gloss_line": "G4899 συνεκλεκτός suneklektos: elect together with",
+      "english": "chosen together with, co-elect",
+      "definition": "elected together with, i.e. fellow-elect; used of the church at Babylon (Rome) which together with the recipients of the epistle had been chosen by God",
+      "language": "greek",
+      "source": "STEPBible-TBESG",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "region": "late_epistles",
+      "strong_disambig": "G5264",
+      "base_strong": "G5264",
+      "greek": "ὑποδέχομαι",
+      "transliteration": "hypodechomai",
+      "pos": "V",
+      "gloss_line": "G5264 ὑποδέχομαι hypodechomai: to receive under one's roof",
+      "english": "to receive as a guest, to welcome, to entertain",
+      "definition": "to receive under one's roof, i.e. to receive as a guest; to entertain hospitably",
+      "language": "greek",
+      "source": "STEPBible-TBESG",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    }
+  ]
+}

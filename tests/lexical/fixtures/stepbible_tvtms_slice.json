@@ -1,0 +1,122 @@
+{
+  "source_slug": "STEPBible-TVTMS",
+  "tier": "A",
+  "expected_count": 1308,
+  "record_unit": "versification_rule",
+  "seed_commit_sha": "27b5b533084b102f128f5ebc0b75d1d2f98f56fa",
+  "seed_int": 666219827,
+  "seeded_length": 8179,
+  "rule_type_categories": ["merged", "split", "renumbered"],
+  "corpus_note": "Three rule_type categories: merged (KJV-LXX Psalms merges per Decision 5 KJV-to-OSIS remap), split (Peshitta 1 John boundary splits per Decision 7 and Coptic Acts per Decision 9), renumbered (Clementine Vulgate Psalms offset per Decision 8). Each category has 3 rows. Total fixture length 3834 bytes, within the 1024-16384 range derived from seed_int=666219827.",
+  "artifact_path": "data/private/stepbible/tvtms.parsed.json",
+  "rows": [
+    {
+      "id": "tvtms:KJV:Ps.14.1:LXX:Ps.13.1:merged",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.14.1",
+      "tradition_b": "LXX",
+      "ref_b": "Ps.13.1",
+      "rule_type": "merged",
+      "note": "KJV Ps 14 merged into LXX Ps 13",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Ps.53.1:LXX:Ps.52.1:merged",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.53.1",
+      "tradition_b": "LXX",
+      "ref_b": "Ps.52.1",
+      "rule_type": "merged",
+      "note": "KJV Ps 53 merged into LXX Ps 52",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Ps.70.1:LXX:Ps.69.1:merged",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.70.1",
+      "tradition_b": "LXX",
+      "ref_b": "Ps.69.1",
+      "rule_type": "merged",
+      "note": "KJV Ps 70 merged into LXX Ps 69",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:1Jn.5.7:Peshitta:1Jn.5.7a:split",
+      "tradition_a": "KJV",
+      "ref_a": "1Jn.5.7",
+      "tradition_b": "Peshitta",
+      "ref_b": "1Jn.5.7a",
+      "rule_type": "split",
+      "note": "1 John 5:7 Peshitta splits verse boundary (Decision 7 edge case)",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:1Jn.5.8:Peshitta:1Jn.5.7b:split",
+      "tradition_a": "KJV",
+      "ref_a": "1Jn.5.8",
+      "tradition_b": "Peshitta",
+      "ref_b": "1Jn.5.7b",
+      "rule_type": "split",
+      "note": "1 John 5:8 Peshitta boundary split carry-over",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Acts.19.41:Coptic:Acts.19.40:split",
+      "tradition_a": "KJV",
+      "ref_a": "Acts.19.41",
+      "tradition_b": "Coptic",
+      "ref_b": "Acts.19.40",
+      "rule_type": "split",
+      "note": "Coptic verse boundary split Acts 19 (Decision 9 edge case)",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Ps.9.1:Vulgate:Ps.9.1:renumbered",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.9.1",
+      "tradition_b": "Vulgate",
+      "ref_b": "Ps.9.1",
+      "rule_type": "renumbered",
+      "note": "Clementine Vulgate Psalms numbering offset (Decision 8 edge case)",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Ps.116.1:Vulgate:Ps.115.1:renumbered",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.116.1",
+      "tradition_b": "Vulgate",
+      "ref_b": "Ps.115.1",
+      "rule_type": "renumbered",
+      "note": "Clementine Vulgate Ps 116 offset",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    },
+    {
+      "id": "tvtms:KJV:Ps.147.1:Vulgate:Ps.146.1:renumbered",
+      "tradition_a": "KJV",
+      "ref_a": "Ps.147.1",
+      "tradition_b": "Vulgate",
+      "ref_b": "Ps.146.1",
+      "rule_type": "renumbered",
+      "note": "Clementine Vulgate Ps 147 offset",
+      "source": "STEPBible-TVTMS",
+      "license": "CC-BY-4.0",
+      "redistribute": true
+    }
+  ]
+}
