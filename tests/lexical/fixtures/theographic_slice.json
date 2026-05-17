@@ -1,0 +1,46 @@
+{
+  "seed_commit_sha": "27b5b53",
+  "seed_int": 41638739,
+  "source_slug": "Theographic-Bible-Metadata",
+  "tier": "A",
+  "expected_count": 43690,
+  "record_unit": "multi_entity_record",
+  "corpus_note": "Three entity regions: Person (people/), Place (places/), Period (periods/). Seeded from git log -1 -- ingest/lexical/theographic.py SHA 27b5b53; int('27b5b53', 16) = 41638739.",
+  "entities": [
+    {
+      "entity_type": "Person",
+      "entity_id": "mary-magdalene",
+      "display_name": "Mary Magdalene",
+      "verses": ["Luke.8.2", "Matt.27.56", "Matt.27.61", "Matt.28.1", "Mark.15.40", "Mark.15.47", "Mark.16.1", "John.19.25", "John.20.1", "John.20.11", "John.20.18"],
+      "description_markdown": "Mary Magdalene was a follower of Jesus from Magdala, mentioned among those who supported Jesus and his disciples.",
+      "source": "Theographic-Bible-Metadata",
+      "upstream_folder": "people/",
+      "present_fields": ["entity_id", "display_name", "verses", "description_markdown", "source"]
+    },
+    {
+      "entity_type": "Place",
+      "entity_id": "bethlehem-of-judah",
+      "display_name": "Bethlehem",
+      "aliases": ["Bethlehem Ephrathah", "City of David"],
+      "verses": ["Ruth.1.1", "Ruth.1.2", "Ruth.4.11", "Mic.5.2", "Matt.2.1", "Matt.2.5", "Matt.2.6", "Luke.2.4", "Luke.2.15", "John.7.42"],
+      "source": "Theographic-Bible-Metadata",
+      "upstream_folder": "places/",
+      "present_fields": ["entity_id", "display_name", "aliases", "verses", "source"]
+    },
+    {
+      "entity_type": "Period",
+      "entity_id": "second-temple-period",
+      "display_name": "Second Temple Period",
+      "start_year": -516,
+      "end_year": 70,
+      "source": "Theographic-Bible-Metadata",
+      "upstream_folder": "periods/",
+      "present_fields": ["entity_id", "display_name", "start_year", "end_year", "source"]
+    }
+  ],
+  "field_presence_ledger": {
+    "mary-magdalene": ["description_markdown", "display_name", "entity_id", "source", "verses"],
+    "bethlehem-of-judah": ["aliases", "display_name", "entity_id", "source", "verses"],
+    "second-temple-period": ["display_name", "end_year", "entity_id", "source", "start_year"]
+  }
+}
