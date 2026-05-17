@@ -299,3 +299,115 @@ A, tolerance 0, record_unit versification_rule).
 tools/predicates_by_type.cypher for $pred_string and $pred_bool
 semantics.
 """
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TVTMS"
+LICENSE_ID = "CC-BY-4.0"
+ARTIFACT_FILENAME = "tvtms.parsed.json"
+BATCH_SIZE = 500
+REQUIRED_AXES = ("tradition_a", "ref_a", "tradition_b", "ref_b", "rule_type")
+PERSISTED_STRING_FIELDS = (
+    "id",
+    "tradition_a",
+    "ref_a",
+    "tradition_b",
+    "ref_b",
+    "rule_type",
+    "note",
+    "source",
+    "license",
+)
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_RULE = (
+    "UNWIND $rows AS row MERGE (n:`VersificationRule` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+
+
+def _stable_id(row: dict[str, Any]) -> str:
+    axes = [str(row[k]).strip() for k in REQUIRED_AXES]
+    return "tvtms:" + ":".join(axes)
+
+
+def _normalize_row(raw: dict[str, Any]) -> dict[str, Any] | None:
+    for k in REQUIRED_AXES:
+        v = raw.get(k)
+        if v is None or str(v).strip() == "":
+            return None
+    note = raw.get("note")
+    note_str = "" if note is None else str(note)
+    rid = raw.get("id")
+    stable = str(rid).strip() if rid is not None and str(rid).strip() else _stable_id(raw)
+    return {
+        "id": stable,
+        "tradition_a": str(raw["tradition_a"]),
+        "ref_a": str(raw["ref_a"]),
+        "tradition_b": str(raw["tradition_b"]),
+        "ref_b": str(raw["ref_b"]),
+        "rule_type": str(raw["rule_type"]),
+        "note": note_str,
+        "source": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": True,
+    }
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    artifact = data_root / ARTIFACT_FILENAME
+    if not artifact.exists():
+        return []
+    with artifact.open(encoding="utf-8") as fh:
+        payload = json.load(fh)
+    if isinstance(payload, dict):
+        raw_rows = payload.get("rows", [])
+    else:
+        raw_rows = payload
+    seen: set[str] = set()
+    rows: list[dict[str, Any]] = []
+    for raw in raw_rows:
+        if not isinstance(raw, dict):
+            continue
+        node = _normalize_row(raw)
+        if node is None:
+            continue
+        if node["id"] in seen:
+            continue
+        seen.add(node["id"])
+        rows = [*rows, node]
+    return rows
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_rules(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_RULE, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_tvtms(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TVTMS rule set artifact and MERGE VersificationRule + Source nodes."""
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_rules(session, rows)
+    return {"VersificationRule": merged, "Source": 1}
