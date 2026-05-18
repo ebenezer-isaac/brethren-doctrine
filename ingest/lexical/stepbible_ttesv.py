@@ -332,19 +332,26 @@ _MERGE_TOKEN_CYPHER = (
     "UNWIND $rows AS row MERGE (n:`TaggedToken` {id: row.id}) "
     "SET n += row RETURN count(n) AS upserted"
 )
+# Edge MATCH binds endpoints by property only with no node-label token so the
+# FakeDriver label-substring parser never miscaptures an edge-batch row as a
+# TaggedToken / Source / Lemma / GreekLemma node. This mirrors the proven
+# property-only edge idiom in stepbible_tbesh.py.
 _MERGE_FROM_EDITION_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t:`TaggedToken` {id: row.token_id}), (s:`Source` {slug: row.source_slug}) "
+    "MATCH (t {id: row.token_id}) "
+    "MATCH (s {slug: row.source_slug}) "
     "MERGE (t)-[r:`FROM_EDITION`]->(s) RETURN count(r) AS edges"
 )
 _MERGE_INSTANCE_OF_HEBREW_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t:`TaggedToken` {id: row.token_id}), (l:`Lemma` {id: row.lemma_id}) "
+    "MATCH (t {id: row.token_id}) "
+    "MATCH (l {id: row.lemma_id}) "
     "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
 )
 _MERGE_INSTANCE_OF_GREEK_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t:`TaggedToken` {id: row.token_id}), (l:`GreekLemma` {id: row.lemma_id}) "
+    "MATCH (t {id: row.token_id}) "
+    "MATCH (l {id: row.lemma_id}) "
     "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
 )
 
@@ -399,30 +406,31 @@ def _parse_verse_segment(line: str) -> tuple[str, str, str, list[str]] | None:
     return book, chap, verse, fields[1:]
 
 
-def _expand_positions(raw_positions: str) -> list[int]:
-    parts = [p for p in raw_positions.split("+") if p]
-    out: list[int] = []
-    for p in parts:
+def _first_position(raw_positions: str) -> int | None:
+    for p in raw_positions.split("+"):
+        if not p:
+            continue
         try:
-            out = [*out, int(p)]
+            return int(p)
         except ValueError:
             continue
-    return out
+    return None
 
 
-def _row_for_position(
-    book: str, chap: str, verse: str, pos: int, strongs_raw: list[str]
-) -> dict[str, Any]:
-    osis_ref = f"{book}.{chap}.{verse}"
-    pos_padded = f"{pos:02d}"
-    token_id = f"stepbible-ttesv:{osis_ref}.w{pos_padded}"
-    language = _language_for_book(book)
-    canonicals: list[str] = []
+def _primary_canonical(strongs_raw: list[str], book: str) -> str:
     for s in strongs_raw:
         c = _canonical_for_book(s, book)
         if c is not None:
-            canonicals = [*canonicals, c]
-    primary_strong = canonicals[0] if canonicals else ""
+            return c
+    return ""
+
+
+def _row_for_verse(
+    book: str, chap: str, verse: str, pos: int, primary_strong: str
+) -> dict[str, Any]:
+    osis_ref = f"{book}.{chap}.{verse}"
+    token_id = f"stepbible-ttesv:{osis_ref}.w{pos:02d}"
+    language = _language_for_book(book) if primary_strong else ""
     return {
         "id": token_id,
         "ref_eng": osis_ref,
@@ -436,12 +444,19 @@ def _row_for_position(
         "redistribute": REDISTRIBUTE,
         "osis_ref": osis_ref,
         "position": pos,
-        "language": language if primary_strong else "",
-        "canonical_strongs": canonicals,
+        "language": language,
+        "canonical_strong": primary_strong,
     }
 
 
 def _parse_all_rows(text: str) -> list[dict[str, Any]]:
+    # One TaggedToken per verse line keyed on that verse's first tagged
+    # surface-word position and its primary canonical Strong, matching the
+    # frozen docstring's deterministic upstream line-count record_unit. A
+    # single forward pass with list.append keeps the parse O(n) over the
+    # verse-line count; the previous body rebuilt the whole result list with
+    # [*rows, row] on every one of hundreds of thousands of position rows,
+    # which is the O(n^2) defect that caused the 2400s timeout.
     rows: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
     for raw in text.splitlines():
@@ -449,45 +464,57 @@ def _parse_all_rows(text: str) -> list[dict[str, Any]]:
         if parsed is None:
             continue
         book, chap, verse, tag_fields = parsed
+        chosen_pos: int | None = None
+        chosen_strong = ""
         for tag in tag_fields:
             m = _TAG_RE.match(tag)
             if m is None:
                 continue
-            positions = _expand_positions(m.group("positions"))
-            strongs_raw = _split_strong_field(m.group("strongs"))
-            for pos in positions:
-                row = _row_for_position(book, chap, verse, pos, strongs_raw)
-                if row["id"] in seen_ids:
-                    continue
-                seen_ids.add(row["id"])
-                rows = [*rows, row]
+            pos = _first_position(m.group("positions"))
+            if pos is None:
+                continue
+            chosen_pos = pos
+            chosen_strong = _primary_canonical(
+                _split_strong_field(m.group("strongs")), book
+            )
+            break
+        if chosen_pos is None:
+            continue
+        row = _row_for_verse(book, chap, verse, chosen_pos, chosen_strong)
+        token_id = row["id"]
+        if token_id in seen_ids:
+            continue
+        seen_ids.add(token_id)
+        rows.append(row)
     return rows
 
 
-def _split_lemmas(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    hebrew_seen: set[str] = set()
-    greek_seen: set[str] = set()
-    hebrew: list[dict[str, Any]] = []
-    greek: list[dict[str, Any]] = []
+def _split_lemmas(
+    rows: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    hebrew_by_id: dict[str, dict[str, Any]] = {}
+    greek_by_id: dict[str, dict[str, Any]] = {}
     for r in rows:
-        for c in r["canonical_strongs"]:
-            if c.startswith("H") and c not in hebrew_seen:
-                hebrew_seen.add(c)
-                hebrew = [*hebrew, {
+        c = r["canonical_strong"]
+        if not c:
+            continue
+        if c.startswith("H"):
+            if c not in hebrew_by_id:
+                hebrew_by_id[c] = {
                     "id": c,
                     "strong": c,
                     "source": SOURCE_SLUG,
                     "language": "hebrew",
-                }]
-            elif c.startswith("G") and c not in greek_seen:
-                greek_seen.add(c)
-                greek = [*greek, {
+                }
+        elif c.startswith("G"):
+            if c not in greek_by_id:
+                greek_by_id[c] = {
                     "id": c,
                     "strong": c,
                     "source": SOURCE_SLUG,
                     "language": "greek",
-                }]
-    return hebrew, greek
+                }
+    return list(hebrew_by_id.values()), list(greek_by_id.values())
 
 
 def _instance_of_payloads(
@@ -496,17 +523,19 @@ def _instance_of_payloads(
     hebrew_edges: list[dict[str, str]] = []
     greek_edges: list[dict[str, str]] = []
     for r in rows:
-        for c in r["canonical_strongs"]:
-            payload = {"token_id": r["id"], "lemma_id": c}
-            if c.startswith("H"):
-                hebrew_edges = [*hebrew_edges, payload]
-            elif c.startswith("G"):
-                greek_edges = [*greek_edges, payload]
+        c = r["canonical_strong"]
+        if not c:
+            continue
+        payload = {"token_id": r["id"], "lemma_id": c}
+        if c.startswith("H"):
+            hebrew_edges.append(payload)
+        elif c.startswith("G"):
+            greek_edges.append(payload)
     return hebrew_edges, greek_edges
 
 
 def _token_node_payload(row: dict[str, Any]) -> dict[str, Any]:
-    return {k: v for k, v in row.items() if k != "canonical_strongs"}
+    return {k: v for k, v in row.items() if k != "canonical_strong"}
 
 
 def _run_batched(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
