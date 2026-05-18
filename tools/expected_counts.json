@@ -1,7 +1,7 @@
 {
   "$schema_version": "1.0",
-  "generated_at": "2026-05-18T17:24:20Z",
-  "commit_baseline": "d8530f31412f48d615b8a9d0e1d3ba928f8d27b9",
+  "generated_at": "2026-05-18T20:30:00Z",
+  "commit_baseline": "8ab93bb17929bd803edc0ddda4f4ba67921439e2",
   "tier_policy": {
     "A": {
       "tolerance": 0,
@@ -71,11 +71,11 @@
     "STEPBible-TAHOT": {
       "tier": "A",
       "record_unit": "word",
-      "expected_count": 283734,
+      "expected_count": 283721,
       "tolerance": 0,
-      "min": 283734,
-      "max": 283734,
-      "tier_rationale": "STEPBible Translators Amalgamated Hebrew OT ships one TSV row per tagged Hebrew word across tagged release files. Total is a deterministic line count from the versioned upstream tarball used at ingest.",
+      "min": 283721,
+      "max": 283721,
+      "tier_rationale": "The count is the de-duplicated populated tagged-Hebrew-word emit. The prior 283734 was the raw upstream ref-row line count; 13 empty-Strong Qere/Ketiv scribal-correction rows are intentionally not projected because their Strong, morph, and surface are materialized via the OSHB x-ketiv Word seam (Decision 16), and a stable-id collapse defect that let an off-canon =X edition overwrite the canonical =L Leningrad word was fixed in commit a277a96 and independently auditor-verified (docs/AUDIT_phase_d_preflight_verification.md). The 283721 figure is byte-deterministic over the frozen upstream and reproducible across runs.",
       "catalog_source_index": 5
     },
     "STEPBible-TAGNT": {
