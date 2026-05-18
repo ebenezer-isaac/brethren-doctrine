@@ -1,7 +1,7 @@
 {
   "$schema_version": "1.0",
-  "generated_at": "2026-05-17T20:57:05Z",
-  "commit_baseline": "ecea53e3b8056890e7471e2ed25ebb389d9af070",
+  "generated_at": "2026-05-18T17:24:20Z",
+  "commit_baseline": "d8530f31412f48d615b8a9d0e1d3ba928f8d27b9",
   "tier_policy": {
     "A": {
       "tolerance": 0,
@@ -61,11 +61,11 @@
     "OSHB-morphology": {
       "tier": "A",
       "record_unit": "word",
-      "expected_count": 306785,
+      "expected_count": 305507,
       "tolerance": 0,
-      "min": 306785,
-      "max": 306785,
-      "tier_rationale": "Open Scriptures Hebrew Bible morphology ships one record per consonantal word slot across versioned OSIS XML files. Total is a deterministic element count from the tagged release used at ingest time.",
+      "min": 305507,
+      "max": 305507,
+      "tier_rationale": "Count is verse-child <w> word slots. The prior 306785 was a naive count(.//w) that included 1278 qere <w> nested in <note> blocks, which are materialized as Reading nodes not Words; see docs/PHASE_D_CATALOG_RECONCILIATION.md section 2.",
       "catalog_source_index": 4
     },
     "STEPBible-TAHOT": {
@@ -81,11 +81,11 @@
     "STEPBible-TAGNT": {
       "tier": "A",
       "record_unit": "word",
-      "expected_count": 141720,
+      "expected_count": 142096,
       "tolerance": 0,
-      "min": 141720,
-      "max": 141720,
-      "tier_rationale": "STEPBible Translators Amalgamated Greek NT ships one TSV row per tagged Greek word across tagged release files. Total is a deterministic line count from the versioned upstream tarball used at ingest time.",
+      "min": 142096,
+      "max": 142096,
+      "tier_rationale": "Deterministic distinct tagged-Greek-word data-row count over the frozen snapshot actually ingested. The prior 141720 was computed from a different release and is not reproducible against these bytes; see docs/PHASE_D_CATALOG_RECONCILIATION.md section 3.",
       "catalog_source_index": 6
     },
     "STEPBible-TVTMS": {
@@ -141,21 +141,21 @@
     "STEPBible-proper-nouns": {
       "tier": "A",
       "record_unit": "proper_name",
-      "expected_count": 23205,
+      "expected_count": 5468,
       "tolerance": 0,
-      "min": 23205,
-      "max": 23205,
-      "tier_rationale": "STEPBible proper nouns reference table ships one row per proper-name entry across Hebrew and Greek sections. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "min": 5468,
+      "max": 5468,
+      "tier_rationale": "Count is the de-duplicated unique person and place occurrence with a resolvable Strong and language. The prior 23205 was a naive tab-line count that included 4262 record-separator banners and alias and meta lines; see docs/PHASE_D_CATALOG_RECONCILIATION.md section 1.",
       "catalog_source_index": 12
     },
     "STEPBible-TTESV": {
       "tier": "A",
       "record_unit": "tagged_word",
-      "expected_count": 31272,
+      "expected_count": 31127,
       "tolerance": 0,
-      "min": 31272,
-      "max": 31272,
-      "tier_rationale": "STEPBible Tagged Translation ESV ships one row per tagged English surface word with Strong key and morph code. Total is a deterministic line count from the versioned upstream release used at ingest time.",
+      "min": 31127,
+      "max": 31127,
+      "tier_rationale": "One record per tagged verse line carrying at least one Strong-keyed surface position. The prior 31272 was a naive tab-line count including 53 structural and 92 tag-free ESV-supplied lines; see docs/PHASE_D_CATALOG_RECONCILIATION.md section 4.",
       "catalog_source_index": 13
     },
     "OpenBible-cross-refs": {
@@ -180,12 +180,12 @@
     },
     "Theographic-Bible-Metadata": {
       "tier": "A",
-      "record_unit": "multi_entity_record",
-      "expected_count": 43690,
+      "record_unit": "projected_entity",
+      "expected_count": 4849,
       "tolerance": 0,
-      "min": 43690,
-      "max": 43690,
-      "tier_rationale": "Theographic ships a multi-file JSON corpus across books, chapters, verses, people, places, periods, events, and easton entries. Total is the exact sum of upstream-published per-file counts in the versioned github release.",
+      "min": 4849,
+      "max": 4849,
+      "tier_rationale": "Projected entity nodes (Person plus Place plus Event plus Group plus Tribe plus derived Period). The prior 43690 was the exact 8-file element file-sum which counts books, chapters, verses, and easton that this adapter intentionally does not nodify; see docs/PHASE_D_CATALOG_RECONCILIATION.md section 7.",
       "catalog_source_index": 16
     },
     "ETCBC-BHSA": {
@@ -220,14 +220,14 @@
     },
     "open-cbgm-3-john": {
       "tier": "B",
-      "record_unit": "cbgm_record",
-      "expected_count": 600,
+      "record_unit": "cbgm_node",
+      "expected_count": 728,
       "tolerance_relative": 0.02,
       "tolerance_absolute_cap_records": 1000,
-      "min": 588,
-      "max": 612,
-      "tier_rationale": "Local SQLite plus collation XML, scoped to 3 John verses one through fifteen. Variant, Reading, and Witness node counts are derived from joins across the database tables and TEI elements, not from a single line count.",
-      "catalog_source_index": 3
+      "min": 700,
+      "max": 760,
+      "tier_rationale": "Count is node-only (Witness plus VariantUnit plus Reading). The prior hand-set 600 with 588 and 612 envelope had no derivation and never modeled the by-design lacuna back-fill; the 700 to 760 envelope absorbs collation revisions. catalog_source_index is null because there is no open-cbgm entry in docs/data_inventory_catalog.json; the previous index 3 mis-pointed at MorphGNT. See docs/PHASE_D_CATALOG_RECONCILIATION.md section 6.",
+      "catalog_source_index": null
     },
     "peshitta": {
       "tier": "C",
