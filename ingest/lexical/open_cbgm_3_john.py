@@ -460,3 +460,366 @@ attestation graph. Those analyses belong to the consumer side of
 the lexical store; the ingest layer persists the raw attestation
 profile only.
 """
+
+from __future__ import annotations
+
+import re
+import sqlite3
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "open-cbgm-3-john"
+LICENSE_ID = "MIT"
+BOOK = "3John"
+CHAPTER = 1
+VERSE_MIN = 1
+VERSE_MAX = 15
+LANGUAGE = "greek"
+BATCH_SIZE = 500
+DB_FILENAME = "3_john.db"
+XML_FILENAME = "3_john_collation.xml"
+_TEI = "{http://www.tei-c.org/ns/1.0}"
+
+_APP_RE = re.compile(r"^B\d+K(\d+)V(\d+)(U.+)$")
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_WITNESS = (
+    "UNWIND $rows AS row MERGE (n:`Witness` {siglum: row.siglum}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_VARIANT_UNIT = (
+    "UNWIND $rows AS row MERGE (n:`VariantUnit` "
+    "{variant_unit_id: row.variant_unit_id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_READING = (
+    "UNWIND $rows AS row MERGE (n:`Reading` {reading_id: row.reading_id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_READS_AT = (
+    "UNWIND $rows AS row "
+    "MATCH (w {siglum: row.siglum}) "
+    "MATCH (rd {reading_id: row.reading_id}) "
+    "MERGE (w)-[r:`READS_AT` {variant_unit_id: row.variant_unit_id}]->(rd) "
+    "SET r.source = row.source RETURN count(r) AS edges"
+)
+_MERGE_ATTESTED_BY = (
+    "UNWIND $rows AS row "
+    "MATCH (rd {reading_id: row.reading_id}) "
+    "MATCH (v {variant_unit_id: row.variant_unit_id}) "
+    "MERGE (rd)-[r:`ATTESTED_BY`]->(v) "
+    "SET r.source = row.source RETURN count(r) AS edges"
+)
+_MERGE_CORRECTOR_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (c {siglum: row.corrector_siglum}) "
+    "MATCH (b {siglum: row.base_siglum}) "
+    "MERGE (c)-[r:`CORRECTOR_OF`]->(b) "
+    "SET r.source = row.source RETURN count(r) AS edges"
+)
+
+
+def _century_for_siglum(base: str) -> int:
+    if base.startswith("P"):
+        return 3
+    if base.startswith("L"):
+        return 10
+    if base == "Byz":
+        return 9
+    if base.isalpha():
+        return 5
+    if base.startswith("0") and len(base) > 1:
+        return 5
+    digits = "".join(ch for ch in base if ch.isdigit())
+    if digits:
+        value = int(digits)
+        if value < 100:
+            return 9
+        if value < 1000:
+            return 11
+    return 12
+
+
+def _split_hand(token: str) -> tuple[str, str | None]:
+    """Return (base_siglum, hand_marker) for a wit token.
+
+    The open-cbgm 3 John collation marks a non-original hand with a
+    trailing supplement letter (for example `206S`). Per Decision 6
+    edge case C that secondary hand is a corrector-class hand: the
+    base manuscript keeps its Gregory-Aland identity, and the
+    secondary hand is re-expressed with the canonical `C` suffix so
+    `witness_siglum` distinguishes the hands without a merge collision.
+    """
+    if len(token) > 1 and token[-1] in ("S", "V", "C") and token[:-1]:
+        body = token[:-1]
+        if any(ch.isdigit() for ch in body) or body.isalpha():
+            return body, "C"
+    return token, None
+
+
+def _read_db_witnesses(db_path: Path) -> set[str]:
+    connection = sqlite3.connect(str(db_path))
+    try:
+        cursor = connection.execute("SELECT WITNESS FROM WITNESSES")
+        return {str(row[0]).strip() for row in cursor.fetchall() if row[0]}
+    finally:
+        connection.close()
+
+
+def _parse_units(xml_path: Path) -> list[dict[str, Any]]:
+    tree = ET.parse(str(xml_path))
+    root = tree.getroot()
+    units: list[dict[str, Any]] = []
+    for ab in root.iter(f"{_TEI}ab"):
+        for app in ab.findall(f"{_TEI}app"):
+            parsed = _parse_app(app)
+            if parsed is not None:
+                units = [*units, parsed]
+    return units
+
+
+def _parse_app(app: ET.Element) -> dict[str, Any] | None:
+    raw_name = (app.attrib.get("n") or "").strip()
+    match = _APP_RE.match(raw_name)
+    if match is None:
+        return None
+    chapter = int(match.group(1))
+    verse = int(match.group(2))
+    if chapter != CHAPTER or not (VERSE_MIN <= verse <= VERSE_MAX):
+        return None
+    unit_segment = match.group(3)
+    variant_unit_id = f"{BOOK}.{CHAPTER}.{verse}/{unit_segment}"
+    readings: list[dict[str, Any]] = []
+    for rdg in app.findall(f"{_TEI}rdg"):
+        reading_name = (rdg.attrib.get("n") or "").strip()
+        if not reading_name:
+            continue
+        text = (rdg.text or "").strip()
+        wit_tokens = (rdg.attrib.get("wit") or "").split()
+        readings = [
+            *readings,
+            {
+                "reading_id": f"{variant_unit_id}-{reading_name}",
+                "text": text,
+                "is_lacuna": False,
+                "witnesses": tuple(wit_tokens),
+            },
+        ]
+    if not readings:
+        return None
+    return {
+        "variant_unit_id": variant_unit_id,
+        "verse": verse,
+        "readings": readings,
+    }
+
+
+def _build_payloads(
+    units: list[dict[str, Any]], db_witnesses: set[str]
+) -> dict[str, list[dict[str, Any]]]:
+    witness_props: dict[str, dict[str, Any]] = {}
+    corrector_edges: dict[tuple[str, str], dict[str, Any]] = {}
+    variant_units: list[dict[str, Any]] = []
+    readings: list[dict[str, Any]] = []
+    reads_at: list[dict[str, Any]] = []
+    attested_by: list[dict[str, Any]] = []
+
+    in_scope: set[str] = set()
+    for unit in units:
+        for reading in unit["readings"]:
+            for token in reading["witnesses"]:
+                base, marker = _split_hand(token)
+                in_scope.add(base if marker is None else f"{base}{marker}")
+                if marker is not None:
+                    in_scope.add(base)
+    for token in db_witnesses:
+        base, marker = _split_hand(token)
+        in_scope.add(base if marker is None else f"{base}{marker}")
+        if marker is not None:
+            in_scope.add(base)
+
+    def _register(siglum: str, is_hand: bool, base: str) -> None:
+        if siglum in witness_props:
+            return
+        witness_props[siglum] = {
+            "siglum": siglum,
+            "date_century": _century_for_siglum(base),
+            "language": LANGUAGE.lower(),
+            "ga_number": None if is_hand else siglum,
+        }
+
+    for siglum in sorted(in_scope):
+        if siglum.endswith("C") or siglum.endswith("*"):
+            _register(siglum, True, siglum[:-1])
+        else:
+            _register(siglum, False, siglum)
+
+    for unit in units:
+        variant_unit_id = unit["variant_unit_id"]
+        verse = unit["verse"]
+        variant_units = [
+            *variant_units,
+            {
+                "variant_unit_id": variant_unit_id,
+                "book": BOOK,
+                "chapter": CHAPTER,
+                "verse": verse,
+            },
+        ]
+        attested_here: set[str] = set()
+        for reading in unit["readings"]:
+            readings = [
+                *readings,
+                {
+                    "reading_id": reading["reading_id"],
+                    "text": reading["text"],
+                    "is_lacuna": False,
+                    "variant_unit_id": variant_unit_id,
+                },
+            ]
+            attested_by = [
+                *attested_by,
+                {
+                    "reading_id": reading["reading_id"],
+                    "variant_unit_id": variant_unit_id,
+                    "source": SOURCE_SLUG,
+                },
+            ]
+            for token in reading["witnesses"]:
+                base, marker = _split_hand(token)
+                siglum = base if marker is None else f"{base}{marker}"
+                if siglum not in witness_props:
+                    continue
+                attested_here.add(siglum)
+                reads_at = [
+                    *reads_at,
+                    {
+                        "siglum": siglum,
+                        "reading_id": reading["reading_id"],
+                        "variant_unit_id": variant_unit_id,
+                        "source": SOURCE_SLUG,
+                    },
+                ]
+                if marker is not None and base in witness_props:
+                    firsthand = f"{base}*"
+                    _register(firsthand, True, base)
+                    corrector_edges[(siglum, base)] = {
+                        "corrector_siglum": siglum,
+                        "base_siglum": base,
+                        "source": SOURCE_SLUG,
+                    }
+                    corrector_edges[(firsthand, base)] = {
+                        "corrector_siglum": firsthand,
+                        "base_siglum": base,
+                        "source": SOURCE_SLUG,
+                    }
+
+        missing = sorted(
+            s for s in witness_props if s not in attested_here and "*" not in s
+        )
+        if missing:
+            lacuna_id = f"{variant_unit_id}-lac"
+            readings = [
+                *readings,
+                {
+                    "reading_id": lacuna_id,
+                    "text": "",
+                    "is_lacuna": True,
+                    "variant_unit_id": variant_unit_id,
+                },
+            ]
+            attested_by = [
+                *attested_by,
+                {
+                    "reading_id": lacuna_id,
+                    "variant_unit_id": variant_unit_id,
+                    "source": SOURCE_SLUG,
+                },
+            ]
+            for siglum in missing:
+                reads_at = [
+                    *reads_at,
+                    {
+                        "siglum": siglum,
+                        "reading_id": lacuna_id,
+                        "variant_unit_id": variant_unit_id,
+                        "source": SOURCE_SLUG,
+                    },
+                ]
+
+    return {
+        "witnesses": [witness_props[s] for s in sorted(witness_props)],
+        "variant_units": variant_units,
+        "readings": readings,
+        "reads_at": reads_at,
+        "attested_by": attested_by,
+        "corrector_of": [
+            corrector_edges[k] for k in sorted(corrector_edges)
+        ],
+    }
+
+
+def _merge_source(session: Any) -> None:
+    payload = [
+        {"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}
+    ]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_batched(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(cypher, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_open_cbgm_3_john(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse the open-cbgm 3 John collation and MERGE CBGM nodes and edges."""
+    root = Path(data_root)
+    db_path = root / DB_FILENAME
+    xml_path = root / XML_FILENAME
+    db_witnesses = _read_db_witnesses(db_path) if db_path.exists() else set()
+    units = _parse_units(xml_path)
+    payloads = _build_payloads(units, db_witnesses)
+
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        witnesses = _merge_batched(
+            session, _MERGE_WITNESS, payloads["witnesses"]
+        )
+        variant_units = _merge_batched(
+            session, _MERGE_VARIANT_UNIT, payloads["variant_units"]
+        )
+        readings = _merge_batched(
+            session, _MERGE_READING, payloads["readings"]
+        )
+        reads_at = _merge_batched(
+            session, _MERGE_READS_AT, payloads["reads_at"]
+        )
+        attested_by = _merge_batched(
+            session, _MERGE_ATTESTED_BY, payloads["attested_by"]
+        )
+        corrector_of = _merge_batched(
+            session, _MERGE_CORRECTOR_OF, payloads["corrector_of"]
+        )
+
+    return {
+        "Source": 1,
+        "Witness": witnesses,
+        "VariantUnit": variant_units,
+        "Reading": readings,
+        "READS_AT": reads_at,
+        "ATTESTED_BY": attested_by,
+        "CORRECTOR_OF": corrector_of,
+    }
