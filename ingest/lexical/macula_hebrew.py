@@ -388,6 +388,77 @@ LOWFAT_GLOB = "*-lowfat.xml"
 XML_ID_ATTR = "{http://www.w3.org/XML/1998/namespace}id"
 BATCH_SIZE = 1000
 
+# KEY-MH-ENRICH (Phase D ledger T16 / JOINKEY_AUDIT_A defect A-1).
+#
+# The HAS_MACULA_ENRICHMENT join (`_MERGE_ENRICHMENT`) matches the OSHB
+# `Word` the MACULA token enriches by `Word.ref`. The oshb producer writes
+# `Word.ref` verbatim as the OSHB XML `osisID` attribute, i.e. the canonical
+# OSIS dotted form `Gen.1.1` (oshb.py: `"ref": osis_ref` where
+# `osis_ref = verse_elem.get("osisID")`; Verse.id/osisID/osis carry the same
+# bare OSIS dotted token). The MACULA-Hebrew lowfat upstream `ref` attribute
+# is instead the MACULA reference form `GEN 1:1!1` (UPPERCASE MACULA book
+# token, ASCII space, `chapter:verse`, `!word` suffix). The two strings are
+# never equal, so before this normalisation every enrichment MERGE matched
+# zero Word nodes and the Decision 1 alignment gate computed 0/total.
+#
+# `_MACULA_BOOK_TO_OSIS` maps every uppercase MACULA-Hebrew book token to the
+# exact OSIS book abbreviation the OSHB osisID attribute carries. Both token
+# sets were enumerated from the real upstream bytes
+# (`data/private/macula-hebrew/WLC/lowfat/*-lowfat.xml` `ref="..."` values and
+# `data/private/oshb/wlc/*.xml` `osisID="..."` values): each side has exactly
+# the 39 books of the Hebrew canon and the mapping below is a verified strict
+# bijection (no missing, extra, or duplicate token on either side). This is
+# the OSIS abbreviation set, not a guess; if upstream ever adds a book token
+# absent from this map `_osis_ref` returns None and the row is faithfully
+# dropped from the enrichment build rather than mis-joined.
+#
+# Lemma.strong is ALREADY the canonical Strong string (Decision 18) and is
+# NOT touched here. This change only normalises the OSIS reference used as
+# the HAS_MACULA_ENRICHMENT join key on the macula_hebrew (consumer) side;
+# oshb Word.ref is the canonical OSIS form per Decision 1 / Decision 15 and
+# must not change.
+_MACULA_BOOK_TO_OSIS = {
+    "GEN": "Gen",
+    "EXO": "Exod",
+    "LEV": "Lev",
+    "NUM": "Num",
+    "DEU": "Deut",
+    "JOS": "Josh",
+    "JDG": "Judg",
+    "RUT": "Ruth",
+    "1SA": "1Sam",
+    "2SA": "2Sam",
+    "1KI": "1Kgs",
+    "2KI": "2Kgs",
+    "1CH": "1Chr",
+    "2CH": "2Chr",
+    "EZR": "Ezra",
+    "NEH": "Neh",
+    "EST": "Esth",
+    "JOB": "Job",
+    "PSA": "Ps",
+    "PRO": "Prov",
+    "ECC": "Eccl",
+    "SNG": "Song",
+    "ISA": "Isa",
+    "JER": "Jer",
+    "LAM": "Lam",
+    "EZK": "Ezek",
+    "DAN": "Dan",
+    "HOS": "Hos",
+    "JOL": "Joel",
+    "AMO": "Amos",
+    "OBA": "Obad",
+    "JON": "Jonah",
+    "MIC": "Mic",
+    "NAM": "Nah",
+    "HAB": "Hab",
+    "ZEP": "Zeph",
+    "HAG": "Hag",
+    "ZEC": "Zech",
+    "MAL": "Mal",
+}
+
 _MERGE_SOURCE = (
     "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
     "SET n += row RETURN count(n) AS upserted"
@@ -492,10 +563,34 @@ def _lowfat_files(data_root: Path) -> list[Path]:
 
 
 def _osis_ref(ref: str | None) -> str | None:
+    """Normalise a MACULA-Hebrew upstream ref to the OSIS dotted form.
+
+    Upstream MACULA-Hebrew lowfat `ref` is `BOOK C:V!w` (uppercase MACULA
+    book token, ASCII space, `chapter:verse`, optional `!word` suffix), e.g.
+    `GEN 1:1!1`. The HAS_MACULA_ENRICHMENT join key must be byte-identical to
+    the OSIS dotted form oshb writes for `Word.ref` (= the OSHB osisID
+    attribute), e.g. `Gen.1.1`. Transform: drop the `!word` suffix, map the
+    uppercase MACULA book token to its OSIS abbreviation, and replace the
+    space and the colon with dots. Returns None (faithful drop, no
+    mis-join) when the ref is empty, structurally unexpected, or carries a
+    book token absent from the verified bijection. KEY-MH-ENRICH / A-1.
+    """
     text = _clean(ref)
     if text is None:
         return None
-    return text.split("!", 1)[0].strip() or None
+    bare = text.split("!", 1)[0].strip()
+    if not bare:
+        return None
+    book_part, sep, chap_verse = bare.partition(" ")
+    if not sep:
+        return None
+    osis_book = _MACULA_BOOK_TO_OSIS.get(book_part)
+    if osis_book is None:
+        return None
+    chapter, colon, verse = chap_verse.strip().partition(":")
+    if not colon or not chapter or not verse:
+        return None
+    return f"{osis_book}.{chapter}.{verse}"
 
 
 def _word_to_row(attrib: dict[str, str]) -> dict[str, Any] | None:
