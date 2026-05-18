@@ -13,8 +13,10 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     ``docs/CULTURAL_SCHEMA_DECISIONS.md``,
     ``docs/cultural_data_inventory_catalog.json``,
     ``docs/ARCHITECTURE.md``, ``docs/implementation_phases/**``,
-    ``docs/PHASE_D_CATALOG_RECONCILIATION.md`` (byte-derived evidence
-    backing the [SCHEMA-REVISION]s ceb3898 and 01e09c6),
+    ``docs/PHASE_D_*.md`` (Phase D governance, ledger and analysis
+    docs, generalizes the single literal
+    ``docs/PHASE_D_CATALOG_RECONCILIATION.md`` so worktree agents that
+    reset to main tip can see the master ledger and audits),
     ``graph/lexical.cypher``, ``graph/cultural.cypher``,
     ``tools/expected_counts.json``. On a ``[SCHEMA-REVISION]``-tagged
     commit ONLY, also ``tools/expected_counts.baseline`` (its atomic
@@ -111,11 +113,17 @@ CASTE_RULES: dict[str, CasteRule] = {
             "docs/ARCHITECTURE.md",
             "docs/implementation_phases/*.md",
             "docs/phase_prompts/*.md",
-            # Architect byte-derived evidence backing the
-            # [SCHEMA-REVISION] catalog reconciliation (ceb3898,
-            # 01e09c6). Literal path, not a docs/*.md wildcard, to keep
-            # the architect docs scope tightly enumerated.
-            "docs/PHASE_D_CATALOG_RECONCILIATION.md",
+            # Phase D governance, master ledger and analysis docs.
+            # Generalizes the single literal
+            # docs/PHASE_D_CATALOG_RECONCILIATION.md added in 34180a7
+            # (byte-derived evidence backing [SCHEMA-REVISION]s ceb3898,
+            # 01e09c6) to the docs/PHASE_D_*.md family so the untracked
+            # master ledger and audit docs become durable and visible to
+            # worktree agents that reset to main tip. Scoped to the
+            # PHASE_D_ prefix, not a broad docs/*.md wildcard, to keep
+            # the architect docs scope tightly enumerated. Follows the
+            # b66831c / 34180a7 tightly scoped governance precedent.
+            "docs/PHASE_D_*.md",
             "graph/lexical.cypher",
             "graph/cultural.cypher",
             "tools/expected_counts.json",
@@ -169,6 +177,11 @@ CASTE_RULES: dict[str, CasteRule] = {
             "tests/lexical/stubs/*.py",
             "embeddings/embed_lexical.py",
             "docker/lexical/docker-compose.yml",
+            # Cultural compose mirrors the lexical compose ownership so
+            # the verified qdrant healthcheck fix (bash /dev/tcp /readyz,
+            # wget/curl absent in image) can land on both stacks under
+            # the same implementer-z1 governance.
+            "docker/cultural/docker-compose.yml",
             "tools/expected_counts.baseline",
         ),
         forbidden_globs=(
