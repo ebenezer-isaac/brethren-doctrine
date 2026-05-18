@@ -37,6 +37,8 @@ from ingest.lexical.vulgate_clementine import ingest_vulgate_clementine
 
 DATA_ROOT = Path("data/private")
 STEPBIBLE_ROOT = DATA_ROOT / "stepbible"
+STEPBIBLE_TAGGED_BIBLES_ROOT = STEPBIBLE_ROOT / "Tagged-Bibles"
+OPEN_CBGM_ROOT = Path("tmp/poc/cbgm")
 
 DATASETS = [
     "oshb",
@@ -87,7 +89,7 @@ def _run_one(name: str, settings: Settings) -> dict[str, int]:
     if name == "stepbible_tagnt":
         return ingest_stepbible_tagnt(STEPBIBLE_ROOT, settings)
     if name == "stepbible_ttesv":
-        return ingest_stepbible_ttesv(STEPBIBLE_ROOT, settings)
+        return ingest_stepbible_ttesv(STEPBIBLE_TAGGED_BIBLES_ROOT, settings)
     if name == "stepbible_tbesh":
         return ingest_stepbible_tbesh(STEPBIBLE_ROOT, settings)
     if name == "stepbible_tbesg":
@@ -105,7 +107,7 @@ def _run_one(name: str, settings: Settings) -> dict[str, int]:
     if name == "vulgate_clementine":
         return ingest_vulgate_clementine(DATA_ROOT / "vulgate", settings)
     if name == "open_cbgm_3_john":
-        return ingest_open_cbgm_3_john(DATA_ROOT / "open-cbgm-3-john", settings)
+        return ingest_open_cbgm_3_john(OPEN_CBGM_ROOT, settings)
     if name == "openbible":
         return ingest_openbible(DATA_ROOT / "openbible", settings)
     if name == "tsk":
