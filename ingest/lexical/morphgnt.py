@@ -220,3 +220,248 @@ write to the cultural Neo4j, and does not produce evidence files. It
 emits ``Word`` and ``Verse`` nodes plus ``PARSE_OF`` and ``IN_VERSE``
 edges, and registers the ``Source`` node for the MorphGNT-SBLGNT slug.
 """
+
+from __future__ import annotations
+
+import string
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "MorphGNT-SBLGNT"
+LICENSE_ID = "CC-BY-SA-3.0"
+CANON_SECTION = "NT"
+MACULA_GREEK_SLUG = "MACULA-Greek-SBLGNT"
+BATCH_SIZE = 1000
+
+OSIS_BOOKS: tuple[str, ...] = (
+    "Matt", "Mark", "Luke", "John", "Acts",
+    "Rom", "1Cor", "2Cor", "Gal", "Eph",
+    "Phil", "Col", "1Thess", "2Thess", "1Tim",
+    "2Tim", "Titus", "Phlm", "Heb", "Jas",
+    "1Pet", "2Pet", "1John", "2John", "3John",
+    "Jude", "Rev",
+)
+
+_PUNCT_STRIP = "".join(
+    ch for ch in (string.punctuation + "—–‘’“”…")
+)
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_WORD = (
+    "UNWIND $rows AS row MERGE (n:`Word` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_VERSE = (
+    "UNWIND $rows AS row MERGE (n:`Verse` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_IN_VERSE = (
+    "UNWIND $rows AS row "
+    "MATCH (a:Word{id: row.from_id}), (b:Verse{id: row.to_id}) "
+    "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_PARSE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (a:Word{id: row.from_id}), (b:Word{id: row.to_id, source: row.target_source}) "
+    "MERGE (a)-[r:`PARSE_OF`]->(b) RETURN count(r) AS edges"
+)
+
+
+def _osis_book(bcv: str) -> str | None:
+    book_idx = int(bcv[:2])
+    if 1 <= book_idx <= len(OSIS_BOOKS):
+        return OSIS_BOOKS[book_idx - 1]
+    return None
+
+
+def _osis_ref(bcv: str) -> str | None:
+    if len(bcv) != 6 or not bcv.isdigit():
+        return None
+    book = _osis_book(bcv)
+    if book is None:
+        return None
+    chapter = int(bcv[2:4])
+    verse = int(bcv[4:6])
+    return f"{book}.{chapter}.{verse}"
+
+
+def _strip_punct(token: str) -> str:
+    return "".join(ch for ch in token if ch not in _PUNCT_STRIP)
+
+
+def _parse_line(line: str) -> dict[str, str] | None:
+    stripped = line.rstrip("\r\n").strip()
+    if not stripped:
+        return None
+    parts = stripped.split()
+    if len(parts) < 7:
+        return None
+    bcv = parts[0]
+    if len(bcv) != 6 or not bcv.isdigit():
+        return None
+    return {
+        "bcv": bcv,
+        "pos": parts[1],
+        "parsing_code": parts[2],
+        "text": parts[3],
+        "word": parts[4],
+        "normalized": parts[5],
+        "lemma": parts[6],
+    }
+
+
+def _book_files(data_root: Path) -> list[Path]:
+    if not data_root.exists():
+        return []
+    candidates = sorted(p for p in data_root.iterdir() if p.suffix == ".txt")
+    return [p for p in candidates if "morphgnt" in p.name.lower()]
+
+
+def _iter_book_records(path: Path) -> list[dict[str, str]]:
+    records: list[dict[str, str]] = []
+    with path.open(encoding="utf-8") as fh:
+        for raw in fh:
+            parsed = _parse_line(raw)
+            if parsed is not None:
+                records = [*records, parsed]
+    return records
+
+
+def _build_verse_groups(
+    records: list[dict[str, str]],
+) -> list[tuple[str, list[dict[str, str]]]]:
+    groups: list[tuple[str, list[dict[str, str]]]] = []
+    current_ref: str | None = None
+    current_words: list[dict[str, str]] = []
+    for rec in records:
+        ref = _osis_ref(rec["bcv"])
+        if ref is None:
+            continue
+        if ref != current_ref:
+            if current_ref is not None and current_words:
+                groups = [*groups, (current_ref, current_words)]
+            current_ref = ref
+            current_words = [rec]
+        else:
+            current_words = [*current_words, rec]
+    if current_ref is not None and current_words:
+        groups = [*groups, (current_ref, current_words)]
+    return groups
+
+
+def _word_node_row(rec: dict[str, str], osis_ref: str, position: int) -> dict[str, Any]:
+    word_pos = f"w{position:02d}"
+    return {
+        "id": f"morphgnt-sblgnt:{osis_ref}.{word_pos}",
+        "source": SOURCE_SLUG,
+        "bcv": rec["bcv"],
+        "osis_ref": osis_ref,
+        "word_pos": position,
+        "pos": rec["pos"],
+        "parsing_code": rec["parsing_code"],
+        "text": rec["text"],
+        "word": _strip_punct(rec["word"]),
+        "normalized": rec["normalized"],
+        "lemma": rec["lemma"],
+    }
+
+
+def _verse_node_row(osis_ref: str, verse_text: str) -> dict[str, Any]:
+    return {
+        "id": f"verse:{osis_ref}",
+        "osis": osis_ref,
+        "text": verse_text,
+        "canon_section": CANON_SECTION,
+        "source": SOURCE_SLUG,
+    }
+
+
+def _in_verse_edge_row(word_id: str, osis_ref: str) -> dict[str, Any]:
+    return {"from_id": word_id, "to_id": f"verse:{osis_ref}"}
+
+
+def _parse_of_edge_row(word_id: str, osis_ref: str, position: int) -> dict[str, Any]:
+    target_id = f"{MACULA_GREEK_SLUG}:{osis_ref}.w{position:02d}"
+    return {
+        "from_id": word_id,
+        "to_id": target_id,
+        "target_source": MACULA_GREEK_SLUG,
+    }
+
+
+def _build_rows(
+    data_root: Path,
+) -> tuple[
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+]:
+    word_rows: list[dict[str, Any]] = []
+    verse_rows: list[dict[str, Any]] = []
+    in_verse_rows: list[dict[str, Any]] = []
+    parse_of_rows: list[dict[str, Any]] = []
+    seen_verses: set[str] = set()
+    for book_path in _book_files(data_root):
+        records = _iter_book_records(book_path)
+        groups = _build_verse_groups(records)
+        for osis_ref, words in groups:
+            verse_text = " ".join(w["text"] for w in words).strip()
+            if osis_ref not in seen_verses:
+                seen_verses.add(osis_ref)
+                verse_rows = [*verse_rows, _verse_node_row(osis_ref, verse_text)]
+            for idx, rec in enumerate(words, start=1):
+                node = _word_node_row(rec, osis_ref, idx)
+                word_rows = [*word_rows, node]
+                in_verse_rows = [
+                    *in_verse_rows,
+                    _in_verse_edge_row(node["id"], osis_ref),
+                ]
+                parse_of_rows = [
+                    *parse_of_rows,
+                    _parse_of_edge_row(node["id"], osis_ref, idx),
+                ]
+    return word_rows, verse_rows, in_verse_rows, parse_of_rows
+
+
+def _batched(rows: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]]]:
+    return [rows[i:i + size] for i in range(0, len(rows), size)]
+
+
+def _run_batches(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for batch in _batched(rows, BATCH_SIZE):
+        session.run(cypher, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def ingest_morphgnt(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse MorphGNT per-book files and MERGE Word, Verse, Source nodes plus PARSE_OF and IN_VERSE edges."""
+    word_rows, verse_rows, in_verse_rows, parse_of_rows = _build_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        words = _run_batches(session, _MERGE_WORD, word_rows)
+        verses = _run_batches(session, _MERGE_VERSE, verse_rows)
+        in_verse = _run_batches(session, _MERGE_IN_VERSE, in_verse_rows)
+        parse_of = _run_batches(session, _MERGE_PARSE_OF, parse_of_rows)
+    return {
+        "Word": words,
+        "Verse": verses,
+        "Source": 1,
+        "IN_VERSE": in_verse,
+        "PARSE_OF": parse_of,
+    }
