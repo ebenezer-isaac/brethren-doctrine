@@ -283,3 +283,312 @@ graph/lexical.cypher constraints tagged_token_id (line 42), source_slug (line 35
 tools/expected_counts.json sources."STEPBible-TTESV" (tier A, expected_count 31272, record_unit tagged_word, tolerance 0).
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
 """
+
+from __future__ import annotations
+
+import re
+from pathlib import Path
+from typing import Any
+
+from ingest.canonical_strongs import canonical_strongs
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TTESV"
+LICENSE_ID = "CC-BY-NC-4.0"
+REDISTRIBUTE = False
+TTESV_FILENAME = (
+    "TTESV - Tyndale Translation tags for ESV "
+    "- TyndaleHouse.com STEPBible.org CC BY-NC.txt"
+)
+BATCH_SIZE = 500
+
+# Books emitting Hebrew Strongs (H prefix). All remaining $Book lines route to
+# Greek so the language discriminator never falls back to empty when a Strong
+# is present per Decision 14 Edge cases handled bullet 1.
+_OT_BOOKS = frozenset({
+    "Gen", "Exo", "Lev", "Num", "Deu",
+    "Jos", "Jdg", "Rut",
+    "1Sa", "2Sa", "1Ki", "2Ki", "1Ch", "2Ch",
+    "Ezr", "Neh", "Est",
+    "Job", "Psa", "Pro", "Ecc", "Song",
+    "Isa", "Jer", "Lam", "Ezek", "Dan",
+    "Hos", "Joel", "Amo", "Oba", "Jon", "Mic",
+    "Nah", "Hab", "Zep", "Hag", "Zec", "Mal",
+})
+
+_MERGE_SOURCE_CYPHER = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_LEMMA_CYPHER = (
+    "UNWIND $rows AS row MERGE (n:`Lemma` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_GREEK_LEMMA_CYPHER = (
+    "UNWIND $rows AS row MERGE (n:`GreekLemma` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_TOKEN_CYPHER = (
+    "UNWIND $rows AS row MERGE (n:`TaggedToken` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_FROM_EDITION_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (t:`TaggedToken` {id: row.token_id}), (s:`Source` {slug: row.source_slug}) "
+    "MERGE (t)-[r:`FROM_EDITION`]->(s) RETURN count(r) AS edges"
+)
+_MERGE_INSTANCE_OF_HEBREW_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (t:`TaggedToken` {id: row.token_id}), (l:`Lemma` {id: row.lemma_id}) "
+    "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
+)
+_MERGE_INSTANCE_OF_GREEK_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (t:`TaggedToken` {id: row.token_id}), (l:`GreekLemma` {id: row.lemma_id}) "
+    "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
+)
+
+_VERSE_HEAD_RE = re.compile(r"^\$(?P<book>\S+)\s+(?P<chap>\d+):(?P<verse>\d+)\s*$")
+_TAG_RE = re.compile(r"^(?P<positions>[\d+]+)=(?P<strongs><[\w/]+>(?:\+<[\w/]+>)*)$")
+_STRONG_TOKEN_RE = re.compile(r"<([^<>]+)>")
+
+
+def _language_for_book(book: str) -> str:
+    # Empty string honoured by $pred_string when the Strong slot is also empty,
+    # so untagged glue tokens propagate the absence honestly per the docstring
+    # adapter-local edge-case 2.
+    return "hebrew" if book in _OT_BOOKS else "greek"
+
+
+def _read_ttesv(path: Path) -> str:
+    with path.open(encoding="utf-8-sig") as fh:
+        return fh.read()
+
+
+def _split_strong_field(field: str) -> list[str]:
+    return _STRONG_TOKEN_RE.findall(field)
+
+
+def _canonical_for_book(raw: str, book: str) -> str | None:
+    if not raw:
+        return None
+    lang_hint = "hb" if book in _OT_BOOKS else "gk"
+    try:
+        canonical, _suffix = canonical_strongs(raw, lang=lang_hint)
+    except ValueError:
+        return None
+    return canonical
+
+
+def _parse_verse_segment(line: str) -> tuple[str, str, str, list[str]] | None:
+    # Verse segments use a leading head field "$Book C:V" followed by tab
+    # separated "pos=<strong>...<strong>" entries; everything else in the
+    # file is the human-readable prelude before the "=====" rule.
+    if not line.startswith("$"):
+        return None
+    fields = [f for f in line.rstrip("\r").split("\t") if f.strip()]
+    if not fields:
+        return None
+    head = fields[0]
+    m = _VERSE_HEAD_RE.match(head)
+    if m is None:
+        return None
+    book = m.group("book")
+    chap = m.group("chap")
+    verse = m.group("verse")
+    return book, chap, verse, fields[1:]
+
+
+def _expand_positions(raw_positions: str) -> list[int]:
+    parts = [p for p in raw_positions.split("+") if p]
+    out: list[int] = []
+    for p in parts:
+        try:
+            out = [*out, int(p)]
+        except ValueError:
+            continue
+    return out
+
+
+def _row_for_position(
+    book: str, chap: str, verse: str, pos: int, strongs_raw: list[str]
+) -> dict[str, Any]:
+    osis_ref = f"{book}.{chap}.{verse}"
+    pos_padded = f"{pos:02d}"
+    token_id = f"stepbible-ttesv:{osis_ref}.w{pos_padded}"
+    language = _language_for_book(book)
+    canonicals: list[str] = []
+    for s in strongs_raw:
+        c = _canonical_for_book(s, book)
+        if c is not None:
+            canonicals = [*canonicals, c]
+    primary_strong = canonicals[0] if canonicals else ""
+    return {
+        "id": token_id,
+        "ref_eng": osis_ref,
+        "english_surface": "",
+        "strong": primary_strong,
+        "morph": "",
+        "lemma": "",
+        "normalized": "",
+        "source": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": REDISTRIBUTE,
+        "osis_ref": osis_ref,
+        "position": pos,
+        "language": language if primary_strong else "",
+        "canonical_strongs": canonicals,
+    }
+
+
+def _parse_all_rows(text: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for raw in text.splitlines():
+        parsed = _parse_verse_segment(raw)
+        if parsed is None:
+            continue
+        book, chap, verse, tag_fields = parsed
+        for tag in tag_fields:
+            m = _TAG_RE.match(tag)
+            if m is None:
+                continue
+            positions = _expand_positions(m.group("positions"))
+            strongs_raw = _split_strong_field(m.group("strongs"))
+            for pos in positions:
+                row = _row_for_position(book, chap, verse, pos, strongs_raw)
+                if row["id"] in seen_ids:
+                    continue
+                seen_ids.add(row["id"])
+                rows = [*rows, row]
+    return rows
+
+
+def _split_lemmas(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    hebrew_seen: set[str] = set()
+    greek_seen: set[str] = set()
+    hebrew: list[dict[str, Any]] = []
+    greek: list[dict[str, Any]] = []
+    for r in rows:
+        for c in r["canonical_strongs"]:
+            if c.startswith("H") and c not in hebrew_seen:
+                hebrew_seen.add(c)
+                hebrew = [*hebrew, {
+                    "id": c,
+                    "strong": c,
+                    "source": SOURCE_SLUG,
+                    "language": "hebrew",
+                }]
+            elif c.startswith("G") and c not in greek_seen:
+                greek_seen.add(c)
+                greek = [*greek, {
+                    "id": c,
+                    "strong": c,
+                    "source": SOURCE_SLUG,
+                    "language": "greek",
+                }]
+    return hebrew, greek
+
+
+def _instance_of_payloads(
+    rows: list[dict[str, Any]],
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    hebrew_edges: list[dict[str, str]] = []
+    greek_edges: list[dict[str, str]] = []
+    for r in rows:
+        for c in r["canonical_strongs"]:
+            payload = {"token_id": r["id"], "lemma_id": c}
+            if c.startswith("H"):
+                hebrew_edges = [*hebrew_edges, payload]
+            elif c.startswith("G"):
+                greek_edges = [*greek_edges, payload]
+    return hebrew_edges, greek_edges
+
+
+def _token_node_payload(row: dict[str, Any]) -> dict[str, Any]:
+    return {k: v for k, v in row.items() if k != "canonical_strongs"}
+
+
+def _run_batched(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(cypher, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_source(session: Any) -> int:
+    payload = [{
+        "slug": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": REDISTRIBUTE,
+    }]
+    session.run(_MERGE_SOURCE_CYPHER, rows=payload).consume()
+    return 1
+
+
+def _merge_lemmas(
+    session: Any, hebrew: list[dict[str, Any]], greek: list[dict[str, Any]]
+) -> tuple[int, int]:
+    h_count = _run_batched(session, _MERGE_LEMMA_CYPHER, hebrew)
+    g_count = _run_batched(session, _MERGE_GREEK_LEMMA_CYPHER, greek)
+    return h_count, g_count
+
+
+def _merge_tokens(session: Any, rows: list[dict[str, Any]]) -> int:
+    payloads = [_token_node_payload(r) for r in rows]
+    return _run_batched(session, _MERGE_TOKEN_CYPHER, payloads)
+
+
+def _merge_from_edition(session: Any, rows: list[dict[str, Any]]) -> int:
+    payloads = [
+        {"token_id": r["id"], "source_slug": SOURCE_SLUG} for r in rows
+    ]
+    return _run_batched(session, _MERGE_FROM_EDITION_CYPHER, payloads)
+
+
+def _merge_instance_of(
+    session: Any,
+    hebrew_edges: list[dict[str, str]],
+    greek_edges: list[dict[str, str]],
+) -> int:
+    h_count = _run_batched(session, _MERGE_INSTANCE_OF_HEBREW_CYPHER, hebrew_edges)
+    g_count = _run_batched(session, _MERGE_INSTANCE_OF_GREEK_CYPHER, greek_edges)
+    return h_count + g_count
+
+
+def ingest_stepbible_ttesv(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse TTESV tagged-words and MERGE TaggedToken plus Source nodes.
+
+    INSTANCE_OF edges dispatch on the canonical Strong prefix (H to Lemma,
+    G to GreekLemma) per Decision 14. FROM_EDITION edges link every
+    TaggedToken to the singleton Source node MERGEd once per ingest run.
+    Untagged glue tokens persist as TaggedToken nodes with strong = '' and
+    skip the INSTANCE_OF edge per adapter-local edge-case 1.
+    """
+    path = Path(data_root) / TTESV_FILENAME
+    rows = _parse_all_rows(_read_ttesv(path)) if path.exists() else []
+    hebrew_lemmas, greek_lemmas = _split_lemmas(rows)
+    hebrew_edges, greek_edges = _instance_of_payloads(rows)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        source_count = _merge_source(session)
+        h_lemma_count, g_lemma_count = _merge_lemmas(
+            session, hebrew_lemmas, greek_lemmas
+        )
+        token_count = _merge_tokens(session, rows)
+        from_edition_count = _merge_from_edition(session, rows)
+        instance_of_count = _merge_instance_of(
+            session, hebrew_edges, greek_edges
+        )
+    return {
+        "TaggedToken": token_count,
+        "Source": source_count,
+        "Lemma": h_lemma_count,
+        "GreekLemma": g_lemma_count,
+        "FROM_EDITION": from_edition_count,
+        "INSTANCE_OF": instance_of_count,
+    }
