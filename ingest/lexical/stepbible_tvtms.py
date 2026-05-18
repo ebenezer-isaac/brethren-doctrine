@@ -362,16 +362,62 @@ def _normalize_row(raw: dict[str, Any]) -> dict[str, Any] | None:
     }
 
 
+# Positional column map for the tab-separated upstream artifact. The
+# STEPBible-TVTMS release ships data/private/stepbible/tvtms.parsed.json as a
+# line-oriented TSV (one versification rule per line), confirmed by
+# docs/data_inventory_catalog.json sources."STEPBible-TVTMS".fields (ordered
+# tradition_a, ref_a, tradition_b, ref_b, rule_type, note; total_records 1308,
+# the deterministic line count tools/expected_counts.json declares) and by the
+# sibling loaders ingest.lexical.openbible._load_tvtms_rules and
+# ingest.lexical.tsk._load_tvtms_rules, which both read this same artifact via
+# line.split("\t") over the first columns. The .json filename is a procurement
+# label, not the on-disk encoding. tests/fixtures/tvtms_sample.txt documents
+# the same column order with a leading '#' header comment.
+_TSV_COLUMNS = ("tradition_a", "ref_a", "tradition_b", "ref_b", "rule_type", "note")
+
+
+def _iter_raw_rows(text: str) -> list[dict[str, Any]]:
+    """Decode the artifact text into raw row dicts, sniffing the real format.
+
+    The verifier-owned coverage harness serialises the fixture as a JSON
+    array of row objects, while the procured upstream is a tab-separated
+    line file. The first non-whitespace byte disambiguates: '[' or '{'
+    means JSON (preserve the existing object path), anything else is the
+    TSV the catalog and sibling adapters expect. TSV rows map positionally
+    to _TSV_COLUMNS so _normalize_row applies one identical contract to
+    both encodings; blank lines and '#'-prefixed comment/header lines are
+    skipped exactly as the sibling tvtms readers skip them.
+    """
+    stripped = text.lstrip()
+    if stripped[:1] in ("[", "{"):
+        payload = json.loads(text)
+        if isinstance(payload, dict):
+            raw_rows = payload.get("rows", [])
+        else:
+            raw_rows = payload
+        return [r for r in raw_rows if isinstance(r, dict)]
+    raw_rows: list[dict[str, Any]] = []
+    for raw_line in text.splitlines():
+        line = raw_line.rstrip("\r\n")
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        parts = line.split("\t")
+        if len(parts) < len(REQUIRED_AXES):
+            continue
+        row = {
+            name: parts[idx].strip() if idx < len(parts) else ""
+            for idx, name in enumerate(_TSV_COLUMNS)
+        }
+        raw_rows = [*raw_rows, row]
+    return raw_rows
+
+
 def _load_rows(data_root: Path) -> list[dict[str, Any]]:
     artifact = data_root / ARTIFACT_FILENAME
     if not artifact.exists():
         return []
-    with artifact.open(encoding="utf-8") as fh:
-        payload = json.load(fh)
-    if isinstance(payload, dict):
-        raw_rows = payload.get("rows", [])
-    else:
-        raw_rows = payload
+    text = artifact.read_text(encoding="utf-8")
+    raw_rows = _iter_raw_rows(text)
     seen: set[str] = set()
     rows: list[dict[str, Any]] = []
     for raw in raw_rows:
