@@ -280,3 +280,76 @@ tools/expected_counts.json sources."ETCBC-phono" (tier A, expected_count 426590,
 tools/predicates_by_type.cypher for $pred_string, $pred_bool semantics.
 docs/LICENSE_TAGGING.md row 'ETCBC-BHSA' for the CC-BY-NC-4.0 license tag the phono feature inherits and the redistribute-false policy under Decision 14.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "ETCBC-phono"
+LICENSE_ID = "CC-BY-NC-4.0"
+PHONO_TF_PATH = Path(
+    "C:/Users/Ebenezer/text-fabric-data/github/ETCBC/phono/tf/2021/phono.tf"
+)
+WORD_NODE_MIN = 1
+WORD_NODE_MAX = 426590
+BATCH_SIZE = 5000
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_ATTACH_PHONO = (
+    "UNWIND $rows AS row MATCH (w:`BhsaWord` {id: row.id}) "
+    "SET w.phono = row.phono RETURN count(w) AS attached"
+)
+
+
+def _read_header_end(lines: list[str]) -> int:
+    for idx, line in enumerate(lines):
+        if line.strip() == "" and idx > 0:
+            return idx + 1
+    return 0
+
+
+def _load_phono_rows(path: Path) -> list[dict[str, Any]]:
+    with path.open(encoding="utf-8") as fh:
+        text = fh.read()
+    lines = text.split("\n")
+    data_start = _read_header_end(lines)
+    rows: list[dict[str, Any]] = []
+    node_id = 0
+    for raw in lines[data_start:]:
+        if node_id >= WORD_NODE_MAX:
+            break
+        node_id += 1
+        value = raw.rstrip("\r")
+        phono = value if value.strip() != "" else None
+        rows = [*rows, {"id": f"bhsa:tf:{node_id}", "phono": phono}]
+    return rows
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": False}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _attach_phono(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_ATTACH_PHONO, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_etcbc_phono(settings: Settings) -> dict[str, int]:
+    """Attach phono property onto BhsaWord nodes via MATCH-then-SET."""
+    rows = _load_phono_rows(PHONO_TF_PATH) if PHONO_TF_PATH.exists() else []
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        attached = _attach_phono(session, rows)
+    return {"BhsaWord": attached, "Source": 1}
