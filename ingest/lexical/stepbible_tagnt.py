@@ -220,6 +220,7 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 SOURCE_SLUG = "STEPBible-TAGNT"
@@ -244,12 +245,14 @@ _MERGE_TOKEN = (
 )
 _MERGE_INSTANCE_OF = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`TaggedToken` {id: row.from_id}), "
+    "(b:`GreekLemma` {strong: row.to_id}) "
     "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {osisID: row.to_id}) "
+    "MATCH (a:`TaggedToken` {id: row.from_id}), "
+    "(b:`Verse` {osisID: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
 
@@ -278,7 +281,13 @@ def _parse_word_and_type(word_and_type: str) -> tuple[str, str] | None:
 
 
 def _strong_from_grammar(dstrongs_grammar: str) -> str:
-    return dstrongs_grammar.split("=", 1)[0].strip() if dstrongs_grammar else ""
+    raw = dstrongs_grammar.split("=", 1)[0].strip() if dstrongs_grammar else ""
+    if not raw:
+        return ""
+    try:
+        return canonical_strongs(raw, "gk")[0]
+    except ValueError:
+        return ""
 
 
 def _iter_file_lines(path: Path) -> Iterator[str]:
