@@ -423,18 +423,78 @@ def _verse_sid(osis_ref: str) -> str:
     return f"verse:{osis_ref}"
 
 
+_OSIS_BY_ETCBC_BOOK = {
+    "Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+    "Numeri": "Num", "Deuteronomium": "Deut", "Josua": "Josh",
+    "Judices": "Judg", "Samuel_I": "1Sam", "Samuel_II": "2Sam",
+    "Reges_I": "1Kgs", "Reges_II": "2Kgs", "Jesaia": "Isa",
+    "Jeremia": "Jer", "Ezechiel": "Ezek", "Hosea": "Hos",
+    "Joel": "Joel", "Amos": "Amos", "Obadia": "Obad",
+    "Jona": "Jonah", "Micha": "Mic", "Nahum": "Nah",
+    "Habakuk": "Hab", "Zephania": "Zeph", "Haggai": "Hag",
+    "Sacharia": "Zech", "Maleachi": "Mal", "Psalmi": "Ps",
+    "Iob": "Job", "Proverbia": "Prov", "Ruth": "Ruth",
+    "Canticum": "Song", "Ecclesiastes": "Eccl", "Threni": "Lam",
+    "Esther": "Esth", "Daniel": "Dan", "Esra": "Ezra",
+    "Nehemia": "Neh", "Chronica_I": "1Chr", "Chronica_II": "2Chr",
+}
+
+_WORD_STRING_FEATURES = (
+    "g_word_utf8", "lex_utf8", "gloss", "sp", "pdp",
+    "vt", "vs", "ps", "nu", "gn", "language",
+)
+_PHRASE_STRING_FEATURES = ("function", "typ", "det", "rela")
+_CLAUSE_STRING_FEATURES = ("typ", "rela", "txt", "code")
+
+_WORD_FIELDS = (
+    "node_id", "ref", "book", "chapter", "verse",
+    "g_word_utf8", "lex_utf8", "gloss",
+    "sp", "pdp", "vt", "vs", "ps", "nu", "gn",
+    "freq_lex", "language", "region",
+)
+_WORD_ROWS = (
+    (1, "Gen.1.1", "Gen", 1, 1, "בְּ", "בְּ", "in",
+     "prep", "prep", "NA", "NA", "NA", "NA", "NA", 15542, "hbo", "torah"),
+    (2, "Gen.1.1", "Gen", 1, 1, "רֵאשִׁ֖ית", "רֵאשִׁית", "beginning",
+     "subs", "subs", "NA", "NA", "NA", "sg", "f", 51, "hbo", "torah"),
+    (3, "Gen.1.1", "Gen", 1, 1, "בָּרָ֣א", "ברא", "create",
+     "verb", "verb", "perf", "qal", "p3", "sg", "m", 48, "hbo", "torah"),
+    (480123, "Prov.1.1", "Prov", 1, 1, "מִשְׁלֵי", "מָשָׁל", "proverb",
+     "subs", "subs", "NA", "NA", "NA", "pl", "m", 39, "hbo", "wisdom"),
+    (510987, "Isa.1.1", "Isa", 1, 1, "חֲזוֹן", "חָזוֹן", "vision",
+     "subs", "subs", "NA", "NA", "NA", "sg", "m", 35, "hbo", "prophets"),
+)
+
+_PHRASE_FIELDS = (
+    "node_id", "function", "typ", "det", "rela",
+    "ref", "book", "chapter", "verse", "word_ids",
+)
+_PHRASE_ROWS = (
+    (651573, "Time", "PP", "und", "NA", "Gen.1.1", "Gen", 1, 1, (1, 2)),
+    (651574, "Pred", "VP", "NA", "NA", "Gen.1.1", "Gen", 1, 1, (3,)),
+    (720001, "Subj", "NP", "det", "NA", "Prov.1.1", "Prov", 1, 1, (480123,)),
+    (730001, "Subj", "NP", "und", "NA", "Isa.1.1", "Isa", 1, 1, (510987,)),
+)
+
+_CLAUSE_FIELDS = (
+    "node_id", "typ", "rela", "txt", "code",
+    "ref", "book", "chapter", "verse", "phrase_ids",
+)
+_CLAUSE_ROWS = (
+    (427559, "xQt0", "NA", "N", "200", "Gen.1.1", "Gen", 1, 1, (651573, 651574)),
+    (460001, "NmCl", "NA", "N", "200", "Prov.1.1", "Prov", 1, 1, (720001,)),
+    (470001, "NmCl", "NA", "N", "200", "Isa.1.1", "Isa", 1, 1, (730001,)),
+)
+
+
 def _read_tf_body(path: Path) -> list[str]:
     with path.open(encoding="utf-8") as fh:
         text = fh.read()
-    out: list[str] = []
-    in_body = False
-    for raw in text.splitlines():
-        if not in_body:
-            if raw == "":
-                in_body = True
-            continue
-        out = [*out, raw]
-    return out
+    lines = text.splitlines()
+    blank_at = next((i for i, raw in enumerate(lines) if raw == ""), None)
+    if blank_at is None:
+        return []
+    return lines[blank_at + 1:]
 
 
 def _parse_otype_runs(lines: list[str]) -> dict[str, tuple[int, int]]:
@@ -452,45 +512,84 @@ def _parse_otype_runs(lines: list[str]) -> dict[str, tuple[int, int]]:
     return runs
 
 
-_WORD_FIELDS = (
-    "node_id", "ref", "book", "chapter", "verse",
-    "g_word_utf8", "lex_utf8", "gloss",
-    "sp", "pdp", "vt", "vs", "ps", "nu", "gn",
-    "freq_lex", "language", "region",
-)
-_WORD_ROWS = (
-    (1, "Gen.1.1", "Genesis", 1, 1, "בְּ", "בְּ", "in",
-     "prep", "prep", "NA", "NA", "NA", "NA", "NA", 15542, "hbo", "torah"),
-    (2, "Gen.1.1", "Genesis", 1, 1, "רֵאשִׁ֖ית", "רֵאשִׁית", "beginning",
-     "subs", "subs", "NA", "NA", "NA", "sg", "f", 51, "hbo", "torah"),
-    (3, "Gen.1.1", "Genesis", 1, 1, "בָּרָ֣א", "ברא", "create",
-     "verb", "verb", "perf", "qal", "p3", "sg", "m", 48, "hbo", "torah"),
-    (480123, "Prov.1.1", "Proverbs", 1, 1, "מִשְׁלֵי", "מָשָׁל", "proverb",
-     "subs", "subs", "NA", "NA", "NA", "pl", "m", 39, "hbo", "wisdom"),
-    (510987, "Isa.1.1", "Isaiah", 1, 1, "חֲזוֹן", "חָזוֹן", "vision",
-     "subs", "subs", "NA", "NA", "NA", "sg", "m", 35, "hbo", "prophets"),
-)
+def _parse_node_feature(lines: list[str]) -> dict[int, str]:
+    values: dict[int, str] = {}
+    counter = 1
+    for raw in lines:
+        if raw == "":
+            counter += 1
+            continue
+        if "\t" in raw:
+            spec, value = raw.split("\t", 1)
+            if "-" in spec:
+                lo, hi = (int(x) for x in spec.split("-", 1))
+                for node_id in range(lo, hi + 1):
+                    values[node_id] = value
+                counter = hi + 1
+            else:
+                node_id = int(spec)
+                values[node_id] = value
+                counter = node_id + 1
+        else:
+            values[counter] = raw
+            counter += 1
+    return values
 
-_PHRASE_FIELDS = (
-    "node_id", "function", "typ", "det", "rela",
-    "ref", "book", "chapter", "verse", "word_ids",
-)
-_PHRASE_ROWS = (
-    (651573, "Time", "PP", "und", "NA", "Gen.1.1", "Genesis", 1, 1, (1, 2)),
-    (651574, "Pred", "VP", "NA", "NA", "Gen.1.1", "Genesis", 1, 1, (3,)),
-    (720001, "Subj", "NP", "det", "NA", "Prov.1.1", "Proverbs", 1, 1, (480123,)),
-    (730001, "Subj", "NP", "und", "NA", "Isa.1.1", "Isaiah", 1, 1, (510987,)),
-)
 
-_CLAUSE_FIELDS = (
-    "node_id", "typ", "rela", "txt", "code",
-    "ref", "book", "chapter", "verse", "phrase_ids",
-)
-_CLAUSE_ROWS = (
-    (427559, "xQt0", "NA", "N", "200", "Gen.1.1", "Genesis", 1, 1, (651573, 651574)),
-    (460001, "NmCl", "NA", "N", "200", "Prov.1.1", "Proverbs", 1, 1, (720001,)),
-    (470001, "NmCl", "NA", "N", "200", "Isa.1.1", "Isaiah", 1, 1, (730001,)),
-)
+def _expand_slot_spec(spec: str) -> tuple[int, ...]:
+    slots: list[int] = []
+    for part in spec.split(","):
+        chunk = part.strip()
+        if not chunk:
+            continue
+        if "-" in chunk:
+            lo, hi = (int(x) for x in chunk.split("-", 1))
+            slots = [*slots, *range(lo, hi + 1)]
+        else:
+            slots = [*slots, int(chunk)]
+    return tuple(slots)
+
+
+def _parse_oslots(lines: list[str], first_non_slot: int) -> dict[int, tuple[int, ...]]:
+    spans: dict[int, tuple[int, ...]] = {}
+    counter = first_non_slot
+    for raw in lines:
+        if raw == "":
+            counter += 1
+            continue
+        if "\t" in raw:
+            spec, value = raw.split("\t", 1)
+            if "-" in spec:
+                lo, hi = (int(x) for x in spec.split("-", 1))
+                for node_id in range(lo, hi + 1):
+                    spans[node_id] = _expand_slot_spec(value)
+                counter = hi + 1
+            else:
+                node_id = int(spec)
+                spans[node_id] = _expand_slot_spec(value)
+                counter = node_id + 1
+        else:
+            spans[counter] = _expand_slot_spec(raw)
+            counter += 1
+    return spans
+
+
+def _slot_owner_map(
+    spans: dict[int, tuple[int, ...]], lo: int, hi: int
+) -> dict[int, int]:
+    owner: dict[int, int] = {}
+    for node_id in range(lo, hi + 1):
+        for slot in spans.get(node_id, ()):
+            owner[slot] = node_id
+    return owner
+
+
+def _osis_ref(book_latin: str, chapter: str, verse: str) -> tuple[str, str, int, int]:
+    osis_book = _OSIS_BY_ETCBC_BOOK.get(book_latin, book_latin)
+    chapter_int = int(chapter) if chapter.isdigit() else 0
+    verse_int = int(verse) if verse.isdigit() else 0
+    ref = f"{osis_book}.{chapter_int}.{verse_int}"
+    return ref, osis_book, chapter_int, verse_int
 
 
 def _embedded_sample() -> dict[str, list[dict[str, Any]]]:
@@ -500,19 +599,192 @@ def _embedded_sample() -> dict[str, list[dict[str, Any]]]:
     return {"words": words, "phrases": phrases, "clauses": clauses}
 
 
+def _build_words(
+    runs: dict[str, tuple[int, int]],
+    tf_root: Path,
+    slot_book: dict[int, str],
+    slot_chapter: dict[int, str],
+    slot_verse: dict[int, str],
+) -> list[dict[str, Any]]:
+    word_lo, word_hi = runs["word"]
+    features = {
+        name: _parse_node_feature(_read_tf_body(tf_root / f"{name}.tf"))
+        for name in _WORD_STRING_FEATURES
+    }
+    freq_lex = _parse_node_feature(_read_tf_body(tf_root / "freq_lex.tf"))
+
+    def _row(node_id: int) -> dict[str, Any]:
+        ref, osis_book, chapter_int, verse_int = _osis_ref(
+            slot_book.get(node_id, ""),
+            slot_chapter.get(node_id, ""),
+            slot_verse.get(node_id, ""),
+        )
+        raw_lang = features["language"].get(node_id, "")
+        freq_raw = freq_lex.get(node_id, "")
+        return {
+            "node_id": node_id,
+            "ref": ref, "book": osis_book,
+            "chapter": chapter_int, "verse": verse_int,
+            "g_word_utf8": features["g_word_utf8"].get(node_id, ""),
+            "lex_utf8": features["lex_utf8"].get(node_id, ""),
+            "gloss": features["gloss"].get(node_id, ""),
+            "sp": features["sp"].get(node_id, ""),
+            "pdp": features["pdp"].get(node_id, ""),
+            "vt": features["vt"].get(node_id, "NA"),
+            "vs": features["vs"].get(node_id, "NA"),
+            "ps": features["ps"].get(node_id, "NA"),
+            "nu": features["nu"].get(node_id, "NA"),
+            "gn": features["gn"].get(node_id, "NA"),
+            "freq_lex": int(freq_raw) if freq_raw.lstrip("-").isdigit() else 0,
+            "language": "arc" if raw_lang == "Aramaic" else "hbo",
+        }
+
+    return [_row(node_id) for node_id in range(word_lo, word_hi + 1)]
+
+
+def _build_phrases(
+    runs: dict[str, tuple[int, int]],
+    tf_root: Path,
+    phrase_slots: dict[int, tuple[int, ...]],
+    slot_book: dict[int, str],
+    slot_chapter: dict[int, str],
+    slot_verse: dict[int, str],
+) -> list[dict[str, Any]]:
+    phrase_lo, phrase_hi = runs["phrase"]
+    features = {
+        name: _parse_node_feature(_read_tf_body(tf_root / f"{name}.tf"))
+        for name in _PHRASE_STRING_FEATURES
+    }
+    def _row(node_id: int) -> dict[str, Any]:
+        slots = phrase_slots.get(node_id, ())
+        anchor = slots[0] if slots else node_id
+        ref, osis_book, chapter_int, verse_int = _osis_ref(
+            slot_book.get(anchor, ""),
+            slot_chapter.get(anchor, ""),
+            slot_verse.get(anchor, ""),
+        )
+        return {
+            "node_id": node_id,
+            "function": features["function"].get(node_id, "NA"),
+            "typ": features["typ"].get(node_id, "NA"),
+            "det": features["det"].get(node_id, "NA"),
+            "rela": features["rela"].get(node_id, "NA"),
+            "ref": ref, "book": osis_book,
+            "chapter": chapter_int, "verse": verse_int,
+            "word_ids": slots,
+        }
+
+    return [_row(node_id) for node_id in range(phrase_lo, phrase_hi + 1)]
+
+
+def _build_clauses(
+    runs: dict[str, tuple[int, int]],
+    tf_root: Path,
+    clause_slots: dict[int, tuple[int, ...]],
+    slot_phrase: dict[int, int],
+    slot_book: dict[int, str],
+    slot_chapter: dict[int, str],
+    slot_verse: dict[int, str],
+) -> list[dict[str, Any]]:
+    clause_lo, clause_hi = runs["clause"]
+    features = {
+        name: _parse_node_feature(_read_tf_body(tf_root / f"{name}.tf"))
+        for name in _CLAUSE_STRING_FEATURES
+    }
+    def _child_phrases(slots: tuple[int, ...]) -> tuple[int, ...]:
+        ordered: list[int] = []
+        seen: set[int] = set()
+        for slot in slots:
+            phrase_id = slot_phrase.get(slot)
+            if phrase_id is None or phrase_id in seen:
+                continue
+            seen.add(phrase_id)
+            ordered.append(phrase_id)
+        return tuple(ordered)
+
+    def _row(node_id: int) -> dict[str, Any]:
+        slots = clause_slots.get(node_id, ())
+        anchor = slots[0] if slots else node_id
+        ref, osis_book, chapter_int, verse_int = _osis_ref(
+            slot_book.get(anchor, ""),
+            slot_chapter.get(anchor, ""),
+            slot_verse.get(anchor, ""),
+        )
+        return {
+            "node_id": node_id,
+            "typ": features["typ"].get(node_id, "NA"),
+            "rela": features["rela"].get(node_id, "NA"),
+            "txt": features["txt"].get(node_id, "NA"),
+            "code": features["code"].get(node_id, "NA"),
+            "ref": ref, "book": osis_book,
+            "chapter": chapter_int, "verse": verse_int,
+            "phrase_ids": _child_phrases(slots),
+        }
+
+    return [_row(node_id) for node_id in range(clause_lo, clause_hi + 1)]
+
+
 def _load_dataset(tf_root: Path) -> dict[str, list[dict[str, Any]]]:
     if not tf_root.exists():
         return _embedded_sample()
     otype_path = tf_root / "otype.tf"
-    if not otype_path.exists():
+    oslots_path = tf_root / "oslots.tf"
+    if not otype_path.exists() or not oslots_path.exists():
         return _embedded_sample()
-    try:
-        runs = _parse_otype_runs(_read_tf_body(otype_path))
-    except (OSError, ValueError):
+
+    runs = _parse_otype_runs(_read_tf_body(otype_path))
+    required = ("word", "phrase", "clause", "verse", "book", "chapter")
+    if any(name not in runs for name in required):
         return _embedded_sample()
-    if "word" not in runs:
+
+    word_lo, word_hi = runs["word"]
+    first_non_slot = word_hi + 1
+    spans = _parse_oslots(_read_tf_body(oslots_path), first_non_slot)
+
+    slot_phrase = _slot_owner_map(spans, *runs["phrase"])
+    slot_verse_node = _slot_owner_map(spans, *runs["verse"])
+    slot_book_node = _slot_owner_map(spans, *runs["book"])
+    slot_chapter_node = _slot_owner_map(spans, *runs["chapter"])
+
+    book_feature = _parse_node_feature(_read_tf_body(tf_root / "book.tf"))
+    chapter_feature = _parse_node_feature(_read_tf_body(tf_root / "chapter.tf"))
+    verse_feature = _parse_node_feature(_read_tf_body(tf_root / "verse.tf"))
+
+    slot_book = {
+        slot: book_feature.get(node_id, "")
+        for slot, node_id in slot_book_node.items()
+    }
+    slot_chapter = {
+        slot: chapter_feature.get(node_id, "")
+        for slot, node_id in slot_chapter_node.items()
+    }
+    slot_verse = {
+        slot: verse_feature.get(node_id, "")
+        for slot, node_id in slot_verse_node.items()
+    }
+
+    phrase_slots = {
+        node_id: spans.get(node_id, ())
+        for node_id in range(runs["phrase"][0], runs["phrase"][1] + 1)
+    }
+    clause_slots = {
+        node_id: spans.get(node_id, ())
+        for node_id in range(runs["clause"][0], runs["clause"][1] + 1)
+    }
+
+    words = _build_words(
+        runs, tf_root, slot_book, slot_chapter, slot_verse
+    )
+    phrases = _build_phrases(
+        runs, tf_root, phrase_slots, slot_book, slot_chapter, slot_verse
+    )
+    clauses = _build_clauses(
+        runs, tf_root, clause_slots, slot_phrase,
+        slot_book, slot_chapter, slot_verse
+    )
+    if not words or not phrases or not clauses:
         return _embedded_sample()
-    return _embedded_sample()
+    return {"words": words, "phrases": phrases, "clauses": clauses}
 
 
 def _word_row(w: dict[str, Any]) -> dict[str, Any]:
@@ -566,15 +838,14 @@ def _tfnode_rows(
     clauses: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
-    seen: set[tuple[str, int]] = set()
+    seen: set[int] = set()
     for items, otype in ((words, "word"), (phrases, "phrase"), (clauses, "clause")):
         for item in items:
             nid = int(item["node_id"])
-            key = (CORPUS, nid)
-            if key in seen:
+            if nid in seen:
                 continue
-            seen = seen | {key}
-            rows = [*rows, {"corpus": CORPUS, "node_id": nid, "otype": otype}]
+            seen.add(nid)
+            rows.append({"corpus": CORPUS, "node_id": nid, "otype": otype})
     return rows
 
 
