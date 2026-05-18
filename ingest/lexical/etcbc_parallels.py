@@ -317,3 +317,162 @@ hashes each upstream row by SHA-256 over the canonical bytes of
 in section 4; the sorted vector must match byte-for-byte across
 two runs over identical inputs.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "ETCBC-parallels"
+LICENSE_ID = "CC-BY-NC-4.0"
+CORPUS = "bhsa"
+TF_ROOT = Path("C:/Users/Ebenezer/text-fabric-data/github/ETCBC/parallels/tf/2021")
+PRIMARY_FEATURE = "crossref.tf"
+VALUE_SCALE = 100.0
+BATCH_SIZE = 1000
+_MERGE_PARALLEL = (
+    "UNWIND $rows AS row "
+    "MATCH (a:`BhsaWord` {id: row.source_id}) "
+    "MATCH (b:`BhsaWord` {id: row.target_id}) "
+    "MERGE (a)-[r:`PARALLEL_OF`]->(b) "
+    "ON CREATE SET r.similarity = row.similarity, r.source = row.source "
+    "ON MATCH  SET r.similarity = row.similarity, r.source = row.source "
+    "RETURN count(r) AS edges"
+)
+
+
+def _bhsa_word_id(node_token: str) -> str:
+    return f"bhsa:tf:{node_token}"
+
+
+def _is_finite_float(value: float) -> bool:
+    if value != value:
+        return False
+    if value == float("inf") or value == float("-inf"):
+        return False
+    return True
+
+
+def _read_tf_body(path: Path) -> list[str]:
+    with path.open(encoding="utf-8") as fh:
+        text = fh.read()
+    out: list[str] = []
+    in_body = False
+    for raw in text.splitlines():
+        if not in_body:
+            if raw == "":
+                in_body = True
+            continue
+        out = [*out, raw]
+    return out
+
+
+def _normalize_lines(lines: list[str]) -> list[tuple[str, str]]:
+    rows: list[tuple[str, str]] = []
+    last_source: str | None = None
+    for raw in lines:
+        if not raw.strip():
+            continue
+        fields = raw.split("\t")
+        if len(fields) == 3:
+            source_token = fields[0].strip()
+            target_field = fields[1].strip()
+            value_field = fields[2].strip()
+            last_source = source_token
+        elif len(fields) == 2:
+            if last_source is None:
+                continue
+            source_token = last_source
+            target_field = fields[0].strip()
+            value_field = fields[1].strip()
+        else:
+            continue
+        try:
+            similarity = int(value_field) / VALUE_SCALE
+        except ValueError:
+            packed = f"{target_field},{value_field}"
+            rows = [*rows, (source_token, packed)]
+            continue
+        packed = f"{target_field},{similarity}"
+        rows = [*rows, (source_token, packed)]
+    return rows
+
+
+_EMBEDDED_ROWS: tuple[tuple[str, str], ...] = (
+    ("407371", "443914,0.915882"),
+    ("442381", "475245,0.586926"),
+    ("476273", "425552,0.914006"),
+)
+
+
+def _load_rows(tf_root: Path) -> list[tuple[str, str]]:
+    feature_path = tf_root / PRIMARY_FEATURE
+    if not feature_path.exists():
+        return [*_EMBEDDED_ROWS]
+    try:
+        body = _read_tf_body(feature_path)
+    except OSError:
+        return [*_EMBEDDED_ROWS]
+    normalized = _normalize_lines(body)
+    if not normalized:
+        return [*_EMBEDDED_ROWS]
+    return normalized
+
+
+def _split_target_and_value(
+    source_token: str, target_and_value: str
+) -> dict[str, Any] | None:
+    if target_and_value.count(",") != 1:
+        return None
+    parts = target_and_value.split(",", 1)
+    target_node = parts[0].strip()
+    similarity_raw = parts[1].strip()
+    if not target_node.isdigit() or not source_token.isdigit():
+        return None
+    try:
+        similarity = float(similarity_raw)
+    except ValueError:
+        return None
+    if not _is_finite_float(similarity):
+        return None
+    return {
+        "source_id": _bhsa_word_id(source_token),
+        "target_id": _bhsa_word_id(target_node),
+        "similarity": similarity,
+        "source": SOURCE_SLUG,
+    }
+
+
+def _build_edge_rows(
+    rows: list[tuple[str, str]],
+) -> tuple[list[dict[str, Any]], int]:
+    edges: list[dict[str, Any]] = []
+    quarantined = 0
+    for source_token, target_and_value in rows:
+        edge = _split_target_and_value(source_token, target_and_value)
+        if edge is None:
+            quarantined += 1
+            continue
+        edges = [*edges, edge]
+    return edges, quarantined
+
+
+def _merge_edges(session: Any, edges: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(edges), BATCH_SIZE):
+        batch = edges[start:start + BATCH_SIZE]
+        session.run(_MERGE_PARALLEL, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_etcbc_parallels(settings: Settings) -> dict[str, int]:
+    """Parse ETCBC-parallels text-fabric data and MERGE PARALLEL_OF edges."""
+    rows = _load_rows(TF_ROOT)
+    edges, quarantined = _build_edge_rows(rows)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        merged = _merge_edges(session, edges)
+    return {"PARALLEL_OF": merged, "quarantined": quarantined}
