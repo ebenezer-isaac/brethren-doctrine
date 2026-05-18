@@ -12,24 +12,53 @@ from pathlib import Path
 
 from ingest.lexical._common import Settings, assert_counts_match
 from ingest.lexical.bhsa import ingest_bhsa
+from ingest.lexical.coptic_scriptorium import ingest_coptic_scriptorium
+from ingest.lexical.etcbc_parallels import ingest_etcbc_parallels
+from ingest.lexical.etcbc_phono import ingest_etcbc_phono
 from ingest.lexical.macula_greek import ingest_macula_greek
 from ingest.lexical.macula_hebrew import ingest_macula_hebrew
 from ingest.lexical.morphgnt import ingest_morphgnt
+from ingest.lexical.open_cbgm_3_john import ingest_open_cbgm_3_john
 from ingest.lexical.openbible import ingest_openbible
 from ingest.lexical.oshb import ingest_oshb
-from ingest.lexical.stepbible import ingest_stepbible
+from ingest.lexical.peshitta import ingest_peshitta
+from ingest.lexical.stepbible_morph_codes import ingest_stepbible_morph_codes
+from ingest.lexical.stepbible_proper_nouns import ingest_stepbible_proper_nouns
+from ingest.lexical.stepbible_tagnt import ingest_stepbible_tagnt
+from ingest.lexical.stepbible_tahot import ingest_stepbible_tahot
+from ingest.lexical.stepbible_tbesg import ingest_stepbible_tbesg
+from ingest.lexical.stepbible_tbesh import ingest_stepbible_tbesh
+from ingest.lexical.stepbible_tflsj import ingest_stepbible_tflsj
+from ingest.lexical.stepbible_ttesv import ingest_stepbible_ttesv
+from ingest.lexical.stepbible_tvtms import ingest_stepbible_tvtms
 from ingest.lexical.theographic import ingest_theographic
 from ingest.lexical.tsk import ingest_tsk
+from ingest.lexical.vulgate_clementine import ingest_vulgate_clementine
 
 DATA_ROOT = Path("data/private")
+STEPBIBLE_ROOT = DATA_ROOT / "stepbible"
 
 DATASETS = [
     "oshb",
     "macula_hebrew",
     "bhsa",
+    "etcbc_phono",
+    "etcbc_parallels",
     "morphgnt",
     "macula_greek",
-    "stepbible",
+    "stepbible_morph_codes",
+    "stepbible_tahot",
+    "stepbible_tagnt",
+    "stepbible_ttesv",
+    "stepbible_tbesh",
+    "stepbible_tbesg",
+    "stepbible_tflsj",
+    "stepbible_proper_nouns",
+    "stepbible_tvtms",
+    "peshitta",
+    "coptic_scriptorium",
+    "vulgate_clementine",
+    "open_cbgm_3_john",
     "openbible",
     "tsk",
     "theographic",
@@ -43,12 +72,40 @@ def _run_one(name: str, settings: Settings) -> dict[str, int]:
         return ingest_macula_hebrew(DATA_ROOT / "macula-hebrew", settings)
     if name == "bhsa":
         return ingest_bhsa(settings)
+    if name == "etcbc_phono":
+        return ingest_etcbc_phono(settings)
+    if name == "etcbc_parallels":
+        return ingest_etcbc_parallels(settings)
     if name == "morphgnt":
         return ingest_morphgnt(DATA_ROOT / "morphgnt", settings)
     if name == "macula_greek":
         return ingest_macula_greek(DATA_ROOT / "macula-greek", settings)
-    if name == "stepbible":
-        return ingest_stepbible(DATA_ROOT / "stepbible", settings)
+    if name == "stepbible_morph_codes":
+        return ingest_stepbible_morph_codes(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tahot":
+        return ingest_stepbible_tahot(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tagnt":
+        return ingest_stepbible_tagnt(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_ttesv":
+        return ingest_stepbible_ttesv(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tbesh":
+        return ingest_stepbible_tbesh(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tbesg":
+        return ingest_stepbible_tbesg(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tflsj":
+        return ingest_stepbible_tflsj(STEPBIBLE_ROOT / "Lexicons", settings)
+    if name == "stepbible_proper_nouns":
+        return ingest_stepbible_proper_nouns(STEPBIBLE_ROOT, settings)
+    if name == "stepbible_tvtms":
+        return ingest_stepbible_tvtms(STEPBIBLE_ROOT, settings)
+    if name == "peshitta":
+        return ingest_peshitta(DATA_ROOT / "peshitta", settings)
+    if name == "coptic_scriptorium":
+        return ingest_coptic_scriptorium(DATA_ROOT / "coptic", settings)
+    if name == "vulgate_clementine":
+        return ingest_vulgate_clementine(DATA_ROOT / "vulgate", settings)
+    if name == "open_cbgm_3_john":
+        return ingest_open_cbgm_3_john(DATA_ROOT / "open-cbgm-3-john", settings)
     if name == "openbible":
         return ingest_openbible(DATA_ROOT / "openbible", settings)
     if name == "tsk":
@@ -62,9 +119,9 @@ EXPECTED_COUNTS: dict[str, dict[str, tuple[int, int]]] = {
     "macula_hebrew": {"Word": (300000, 320000)},
     "macula_greek": {"Word": (130000, 145000)},
     "morphgnt": {"Word": (130000, 145000)},
-    "openbible": {"CrossRef": (340000, 350000)},
-    "tsk": {"CrossRef": (380000, 400000)},
-    "theographic": {"Person": (3000, 3100), "Place": (1500, 1700)},
+    "openbible": {"CrossRef": (600000, 620000)},
+    "tsk": {"CrossRef": (590000, 610000)},
+    "theographic": {"Person": (3000, 3100), "Place": (1200, 1700)},
 }
 
 
@@ -84,11 +141,21 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", default="all", help="all | comma-separated list")
     parser.add_argument(
+        "--list",
+        action="store_true",
+        help="print every wired dataset name and exit without ingesting",
+    )
+    parser.add_argument(
         "--verify-only",
         action="store_true",
         help="skip ingest; validate counts only via Neo4j queries",
     )
     args = parser.parse_args()
+
+    if args.list:
+        for name in DATASETS:
+            print(name)
+        return 0
 
     if args.dataset == "all":
         chosen = DATASETS
