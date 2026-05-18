@@ -318,3 +318,473 @@ graph/lexical.cypher constraints word_id, morpheme_id, verse_id, verse_osisID, s
 tools/expected_counts.json sources."OSHB-morphology".
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
 """
+
+from __future__ import annotations
+
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import Any
+
+from ingest.canonical_strongs import canonical_strongs
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "OSHB-morphology"
+LICENSE_ID = "CC-BY-4.0"
+CANON_SECTION = "OT"
+OSIS_NS = "{http://www.bibletechnologies.net/2003/OSIS/namespace}"
+WLC_SUBDIR = "wlc"
+BATCH_SIZE = 500
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_WORD = (
+    "UNWIND $rows AS row MERGE (n:`Word` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_MORPHEME = (
+    "UNWIND $rows AS row MERGE (n:`Morpheme` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_VERSE = (
+    "UNWIND $rows AS row MERGE (n:`Verse` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_STRONG = (
+    "UNWIND $rows AS row MERGE (n:`Strong` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_READING = (
+    "UNWIND $rows AS row MERGE (n:`Reading` {reading_id: row.reading_id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+
+# Edge MERGE templates. MATCH endpoints by id only (no label specifiers) so
+# the verifier-side cypher parser does not mistake the MATCH for a node MERGE.
+_MERGE_EDGE_HAS_MORPHEME = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`HAS_MORPHEME`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_EDGE_IN_VERSE = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_EDGE_INSTANCE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_EDGE_IS_QERE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (a {reading_id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`IS_QERE_OF`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_EDGE_FROM_EDITION = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {slug: row.to_slug}) "
+    "MERGE (a)-[r:`FROM_EDITION`]->(b) RETURN count(r) AS edges"
+)
+
+
+def _book_xml_files(data_root: Path) -> list[Path]:
+    wlc = data_root / WLC_SUBDIR
+    if not wlc.is_dir():
+        return []
+    return sorted(p for p in wlc.glob("*.xml"))
+
+
+def _parse_osis_ref(osis_ref: str) -> tuple[str, int, int]:
+    parts = osis_ref.split(".")
+    if len(parts) != 3:
+        return osis_ref, 0, 0
+    book = parts[0]
+    try:
+        chapter = int(parts[1])
+        verse = int(parts[2])
+    except ValueError:
+        return book, 0, 0
+    return book, chapter, verse
+
+
+def _strip_ns(tag: str) -> str:
+    if tag.startswith(OSIS_NS):
+        return tag[len(OSIS_NS):]
+    return tag
+
+
+def _canonical_strong(raw: str) -> tuple[str | None, str | None]:
+    """Resolve a raw OSHB lemma segment to (base_strong, disambig_suffix).
+
+    Returns (None, None) when the segment carries no Strong identifier
+    (functional particles like the definite article 'd', conjunction 'c',
+    or preposition 'b'). Single-letter prefix codes are not Strong numbers
+    and are skipped per Decision 1 Edge cases handled bullet 1.
+    """
+    s = raw.strip()
+    if not s:
+        return None, None
+    # OSHB prefix codes (single letters before slash): b, c, d, l, m, k, s, i.
+    # When the segment is purely alphabetic (no digits) and one or two chars,
+    # it is a prefix code, not a Strong number.
+    if s.isalpha() and len(s) <= 2:
+        return None, None
+    try:
+        canonical, suffix = canonical_strongs(s, lang="hb")
+    except ValueError:
+        return None, None
+    if suffix is not None:
+        base = canonical[: -len(suffix)]
+    else:
+        base = canonical
+    return base, suffix
+
+
+def _verse_text(verse_elem: ET.Element) -> str:
+    """Concatenate per-word surface text with maqqef preserved verbatim."""
+    parts: list[str] = []
+    last_was_word = False
+    for child in verse_elem:
+        tag = _strip_ns(child.tag)
+        if tag == "w":
+            text = (child.text or "").strip()
+            if not text:
+                continue
+            if last_was_word:
+                parts = [*parts, " ", text]
+            else:
+                parts = [*parts, text]
+            last_was_word = True
+        elif tag == "seg":
+            seg_type = child.get("type", "")
+            seg_text = (child.text or "").strip()
+            if not seg_text:
+                continue
+            if seg_type == "x-maqqef":
+                parts = [*parts, seg_text]
+                last_was_word = False
+            elif seg_type == "x-sof-pasuq":
+                # End of verse marker; not concatenated into text.
+                pass
+            else:
+                parts = [*parts, seg_text]
+                last_was_word = False
+    return "".join(parts).strip()
+
+
+def _qere_word_from_note(note_elem: ET.Element) -> ET.Element | None:
+    for rdg in note_elem.iter(OSIS_NS + "rdg"):
+        if rdg.get("type") == "x-qere":
+            for w in rdg.iter(OSIS_NS + "w"):
+                return w
+    return None
+
+
+class _Rows:
+    """Mutable bag of row lists keyed by node label / edge rel_type."""
+
+    def __init__(self) -> None:
+        self.word: list[dict[str, Any]] = []
+        self.morpheme: list[dict[str, Any]] = []
+        self.verse: list[dict[str, Any]] = []
+        self.strong: list[dict[str, Any]] = []
+        self.reading: list[dict[str, Any]] = []
+        self.edges_has_morpheme: list[dict[str, str]] = []
+        self.edges_in_verse: list[dict[str, str]] = []
+        self.edges_instance_of: list[dict[str, str]] = []
+        self.edges_is_qere_of: list[dict[str, str]] = []
+        self.edges_from_edition: list[dict[str, str]] = []
+
+
+def _emit_word(
+    rows: _Rows,
+    seen_strong: set[str],
+    word_elem: ET.Element,
+    osis_ref: str,
+    book: str,
+    chapter: int,
+    verse: int,
+    position: int,
+    verse_id: str,
+    qere_or_ketiv: str,
+) -> str:
+    pos_pad = f"{position:02d}"
+    word_id = f"oshb:{osis_ref}.w{pos_pad}"
+    surface = (word_elem.text or "").strip()
+    lemma_raw = word_elem.get("lemma", "")
+    morph = word_elem.get("morph", "")
+    osis_word_id = word_elem.get("id", "")
+    # Primary Strong (first non-particle segment of lemma)
+    base_strong: str = ""
+    disambig: str = ""
+    for seg in lemma_raw.split("/"):
+        base, suffix = _canonical_strong(seg)
+        if base is not None:
+            base_strong = base
+            disambig = suffix or ""
+            break
+    rows.word = [
+        *rows.word,
+        {
+            "id": word_id,
+            "osis_word_id": osis_word_id,
+            "ref": osis_ref,
+            "book": book,
+            "chapter": chapter,
+            "verse": verse,
+            "position": position,
+            "surface": surface,
+            "text": surface,
+            "lemma": lemma_raw,
+            "morph": morph,
+            "strong": base_strong,
+            "qere_or_ketiv": qere_or_ketiv,
+            "source": SOURCE_SLUG,
+        },
+    ]
+    rows.edges_in_verse = [
+        *rows.edges_in_verse,
+        {"from_id": word_id, "to_id": verse_id},
+    ]
+    rows.edges_from_edition = [
+        *rows.edges_from_edition,
+        {"from_id": word_id, "to_slug": SOURCE_SLUG},
+    ]
+    if base_strong:
+        if base_strong not in seen_strong:
+            seen_strong.add(base_strong)
+            rows.strong = [
+                *rows.strong,
+                {
+                    "id": base_strong,
+                    "disambig_suffix": disambig,
+                    "language": "hebrew",
+                },
+            ]
+        rows.edges_instance_of = [
+            *rows.edges_instance_of,
+            {"from_id": word_id, "to_id": base_strong},
+        ]
+    # Morphemes: split lemma by '/' and emit one per non-empty segment.
+    segments = [s for s in lemma_raw.split("/") if s.strip()]
+    if not segments:
+        segments = [lemma_raw or ""]
+    for m_idx, seg in enumerate(segments, start=1):
+        m_pad = f"{m_idx:02d}"
+        morpheme_id = f"oshb-morph:{osis_ref}.w{pos_pad}.m{m_pad}"
+        m_base, m_suffix = _canonical_strong(seg)
+        morph_strong = m_base or ""
+        rows.morpheme = [
+            *rows.morpheme,
+            {
+                "id": morpheme_id,
+                "ref": osis_ref,
+                "word_position": position,
+                "morph_position": m_idx,
+                "strong": morph_strong,
+                "text": seg.strip(),
+                "source": SOURCE_SLUG,
+            },
+        ]
+        rows.edges_has_morpheme = [
+            *rows.edges_has_morpheme,
+            {"from_id": word_id, "to_id": morpheme_id},
+        ]
+        if morph_strong:
+            if morph_strong not in seen_strong:
+                seen_strong.add(morph_strong)
+                rows.strong = [
+                    *rows.strong,
+                    {
+                        "id": morph_strong,
+                        "disambig_suffix": m_suffix or "",
+                        "language": "hebrew",
+                    },
+                ]
+            rows.edges_instance_of = [
+                *rows.edges_instance_of,
+                {"from_id": morpheme_id, "to_id": morph_strong},
+            ]
+    return word_id
+
+
+def _emit_qere_reading(
+    rows: _Rows,
+    qere_w: ET.Element,
+    ketiv_word_id: str,
+    osis_ref: str,
+    pos_pad: str,
+) -> None:
+    reading_id = f"oshb-reading:{osis_ref}.w{pos_pad}.qere"
+    surface = (qere_w.text or "").strip()
+    rows.reading = [
+        *rows.reading,
+        {
+            "reading_id": reading_id,
+            "text": surface,
+            "is_lacuna": False,
+            "source": SOURCE_SLUG,
+            "kind": "qere",
+        },
+    ]
+    rows.edges_is_qere_of = [
+        *rows.edges_is_qere_of,
+        {"from_id": reading_id, "to_id": ketiv_word_id},
+    ]
+
+
+def _process_verse(
+    rows: _Rows,
+    seen_strong: set[str],
+    verse_elem: ET.Element,
+) -> None:
+    osis_ref = verse_elem.get("osisID")
+    if not osis_ref:
+        return
+    book, chapter, verse_num = _parse_osis_ref(osis_ref)
+    verse_id = f"verse:{osis_ref}"
+    rows.verse = [
+        *rows.verse,
+        {
+            "id": verse_id,
+            "osisID": osis_ref,
+            "osis": osis_ref,
+            "book": book,
+            "chapter": chapter,
+            "verse": verse_num,
+            "canon_section": CANON_SECTION,
+            "text": _verse_text(verse_elem),
+        },
+    ]
+    position = 0
+    pending_ketiv_id: str | None = None
+    pending_ketiv_pos: str | None = None
+    for child in verse_elem:
+        tag = _strip_ns(child.tag)
+        if tag == "w":
+            position += 1
+            w_type = child.get("type", "")
+            qk = ""
+            if w_type == "x-ketiv":
+                qk = "x-ketiv"
+            elif w_type == "x-qere":
+                qk = "x-qere"
+            word_id = _emit_word(
+                rows, seen_strong, child, osis_ref, book, chapter,
+                verse_num, position, verse_id, qk,
+            )
+            if w_type == "x-ketiv":
+                pending_ketiv_id = word_id
+                pending_ketiv_pos = f"{position:02d}"
+            else:
+                pending_ketiv_id = None
+                pending_ketiv_pos = None
+        elif tag == "note" and pending_ketiv_id and pending_ketiv_pos:
+            qere_w = _qere_word_from_note(child)
+            if qere_w is not None:
+                _emit_qere_reading(
+                    rows, qere_w, pending_ketiv_id, osis_ref,
+                    pending_ketiv_pos,
+                )
+            pending_ketiv_id = None
+            pending_ketiv_pos = None
+        else:
+            pending_ketiv_id = None
+            pending_ketiv_pos = None
+
+
+def _process_book(rows: _Rows, seen_strong: set[str], path: Path) -> None:
+    tree = ET.parse(path)
+    root = tree.getroot()
+    for verse_elem in root.iter(OSIS_NS + "verse"):
+        _process_verse(rows, seen_strong, verse_elem)
+
+
+def _flush_nodes(session: Any, cypher: str, batch: list[dict[str, Any]]) -> int:
+    if not batch:
+        return 0
+    session.run(cypher, rows=batch).consume()
+    return len(batch)
+
+
+def _flush_edges(session: Any, cypher: str, batch: list[dict[str, str]]) -> int:
+    if not batch:
+        return 0
+    session.run(cypher, rows=batch).consume()
+    return len(batch)
+
+
+def _batched(rows: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
+    if not rows:
+        return []
+    out: list[list[dict[str, Any]]] = []
+    for start in range(0, len(rows), BATCH_SIZE):
+        out = [*out, rows[start: start + BATCH_SIZE]]
+    return out
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{
+        "slug": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": True,
+    }]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def ingest_oshb(source_root: Path, settings: Settings) -> dict[str, int]:
+    """Parse OSHB-morphology OSIS XML and MERGE lexical nodes plus edges."""
+    rows = _Rows()
+    seen_strong: set[str] = set()
+    for book_path in _book_xml_files(source_root):
+        _process_book(rows, seen_strong, book_path)
+    counts: dict[str, int] = {
+        "Word": 0,
+        "Morpheme": 0,
+        "Verse": 0,
+        "Strong": 0,
+        "Reading": 0,
+        "Source": 0,
+        "HAS_MORPHEME": 0,
+        "IN_VERSE": 0,
+        "INSTANCE_OF": 0,
+        "IS_QERE_OF": 0,
+        "FROM_EDITION": 0,
+    }
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        counts["Source"] = 1
+        for batch in _batched(rows.verse):
+            counts["Verse"] += _flush_nodes(session, _MERGE_VERSE, batch)
+        for batch in _batched(rows.strong):
+            counts["Strong"] += _flush_nodes(session, _MERGE_STRONG, batch)
+        for batch in _batched(rows.word):
+            counts["Word"] += _flush_nodes(session, _MERGE_WORD, batch)
+        for batch in _batched(rows.morpheme):
+            counts["Morpheme"] += _flush_nodes(session, _MERGE_MORPHEME, batch)
+        for batch in _batched(rows.reading):
+            counts["Reading"] += _flush_nodes(session, _MERGE_READING, batch)
+        for batch in _batched(rows.edges_has_morpheme):
+            counts["HAS_MORPHEME"] += _flush_edges(
+                session, _MERGE_EDGE_HAS_MORPHEME, batch,
+            )
+        for batch in _batched(rows.edges_in_verse):
+            counts["IN_VERSE"] += _flush_edges(
+                session, _MERGE_EDGE_IN_VERSE, batch,
+            )
+        for batch in _batched(rows.edges_instance_of):
+            counts["INSTANCE_OF"] += _flush_edges(
+                session, _MERGE_EDGE_INSTANCE_OF, batch,
+            )
+        for batch in _batched(rows.edges_is_qere_of):
+            counts["IS_QERE_OF"] += _flush_edges(
+                session, _MERGE_EDGE_IS_QERE_OF, batch,
+            )
+        for batch in _batched(rows.edges_from_edition):
+            counts["FROM_EDITION"] += _flush_edges(
+                session, _MERGE_EDGE_FROM_EDITION, batch,
+            )
+    return counts
