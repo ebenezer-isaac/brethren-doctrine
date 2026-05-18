@@ -216,6 +216,7 @@ in-air-gap ingest run.
 from __future__ import annotations
 
 import unicodedata
+from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
@@ -243,15 +244,13 @@ _MERGE_TOKEN = (
 )
 _MERGE_INSTANCE_OF = (
     "UNWIND $rows AS row "
-    "MATCH (t:`TaggedToken` {id: row.from_id}), "
-    "(l:`GreekLemma` {id: row.to_id}) "
-    "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
-    "MATCH (t:`TaggedToken` {id: row.from_id}), "
-    "(v:`Verse` {osisID: row.to_id}) "
-    "MERGE (t)-[r:`IN_VERSE`]->(v) RETURN count(r) AS edges"
+    "MATCH (a {id: row.from_id}), (b {osisID: row.to_id}) "
+    "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
 
 
@@ -282,16 +281,15 @@ def _strong_from_grammar(dstrongs_grammar: str) -> str:
     return dstrongs_grammar.split("=", 1)[0].strip() if dstrongs_grammar else ""
 
 
-def _read_text(path: Path) -> str:
+def _iter_file_lines(path: Path) -> Iterator[str]:
     with path.open(encoding="utf-8-sig") as fh:
-        return fh.read()
+        for raw in fh:
+            yield raw.rstrip("\r\n")
 
 
-def _iter_data_rows(text: str) -> list[list[str]]:
-    rows: list[list[str]] = []
+def _iter_data_rows(lines: Iterator[str]) -> Iterator[list[str]]:
     header_seen = False
-    for raw in text.splitlines():
-        line = raw.rstrip("\r")
+    for line in lines:
         if not header_seen:
             if line.startswith(_HEADER_TOKEN):
                 header_seen = True
@@ -301,9 +299,7 @@ def _iter_data_rows(text: str) -> list[list[str]]:
         first = line.split("\t", 1)[0].strip()
         if not first or first.startswith("#") or "#" not in first:
             continue
-        parts = [p.strip() for p in line.split("\t")]
-        rows = [*rows, parts]
-    return rows
+        yield [p.strip() for p in line.split("\t")]
 
 
 def _row_to_token(parts: list[str]) -> dict[str, Any] | None:
@@ -349,23 +345,23 @@ def _row_to_token(parts: list[str]) -> dict[str, Any] | None:
     }
 
 
-def _load_tokens(data_root: Path) -> list[dict[str, Any]]:
+def _iter_tokens(data_root: Path) -> Iterator[dict[str, Any]]:
     tagnt_dir = data_root / TAGNT_SUBDIR
-    tokens: list[dict[str, Any]] = []
     seen: set[str] = set()
     for filename in TAGNT_FILES:
         path = tagnt_dir / filename
         if not path.exists():
             continue
-        for parts in _iter_data_rows(_read_text(path)):
+        for parts in _iter_data_rows(_iter_file_lines(path)):
             token = _row_to_token(parts)
-            if token is None:
-                continue
-            if token["id"] in seen:
+            if token is None or token["id"] in seen:
                 continue
             seen.add(token["id"])
-            tokens = [*tokens, token]
-    return tokens
+            yield token
+
+
+def _load_tokens(data_root: Path) -> list[dict[str, Any]]:
+    return list(_iter_tokens(data_root))
 
 
 def _merge_source(session: Any) -> None:
