@@ -212,3 +212,217 @@ ctypes, or dynamic __import__; tools/check_adapter_purity.py rejects
 any of those imports under the AST scan that gates the Phase 02
 in-air-gap ingest run.
 """
+
+from __future__ import annotations
+
+import unicodedata
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TAGNT"
+LICENSE_ID = "CC-BY-4.0"
+TAGNT_SUBDIR = "Translators Amalgamated OT+NT"
+TAGNT_FILES = (
+    "TAGNT Mat-Jhn - Translators Amalgamated Greek NT - STEPBible.org CC-BY.txt",
+    "TAGNT Act-Rev - Translators Amalgamated Greek NT - STEPBible.org CC-BY.txt",
+)
+BATCH_SIZE = 500
+ID_PREFIX = "stepbible-tagnt"
+
+_HEADER_TOKEN = "Word & Type"
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_TOKEN = (
+    "UNWIND $rows AS row MERGE (n:`TaggedToken` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_INSTANCE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (t:`TaggedToken` {id: row.from_id}), "
+    "(l:`GreekLemma` {id: row.to_id}) "
+    "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
+)
+_MERGE_IN_VERSE = (
+    "UNWIND $rows AS row "
+    "MATCH (t:`TaggedToken` {id: row.from_id}), "
+    "(v:`Verse` {osisID: row.to_id}) "
+    "MERGE (t)-[r:`IN_VERSE`]->(v) RETURN count(r) AS edges"
+)
+
+
+def _normalise(value: str) -> str:
+    return unicodedata.normalize("NFC", value).strip()
+
+
+def _split_semicolon_list(value: str) -> list[str]:
+    if not value:
+        return []
+    parts = [p.strip() for p in value.split(";")]
+    return [p for p in parts if p]
+
+
+def _parse_word_and_type(word_and_type: str) -> tuple[str, str] | None:
+    if "#" not in word_and_type:
+        return None
+    osis_ref, rest = word_and_type.split("#", 1)
+    pos_token = rest.split("=", 1)[0]
+    osis_ref = osis_ref.strip()
+    pos_token = pos_token.strip()
+    if not osis_ref or not pos_token:
+        return None
+    return osis_ref, pos_token
+
+
+def _strong_from_grammar(dstrongs_grammar: str) -> str:
+    return dstrongs_grammar.split("=", 1)[0].strip() if dstrongs_grammar else ""
+
+
+def _read_text(path: Path) -> str:
+    with path.open(encoding="utf-8-sig") as fh:
+        return fh.read()
+
+
+def _iter_data_rows(text: str) -> list[list[str]]:
+    rows: list[list[str]] = []
+    header_seen = False
+    for raw in text.splitlines():
+        line = raw.rstrip("\r")
+        if not header_seen:
+            if line.startswith(_HEADER_TOKEN):
+                header_seen = True
+            continue
+        if "\t" not in line:
+            continue
+        first = line.split("\t", 1)[0].strip()
+        if not first or first.startswith("#") or "#" not in first:
+            continue
+        parts = [p.strip() for p in line.split("\t")]
+        rows = [*rows, parts]
+    return rows
+
+
+def _row_to_token(parts: list[str]) -> dict[str, Any] | None:
+    if len(parts) < 5:
+        return None
+    word_and_type = _normalise(parts[0])
+    parsed = _parse_word_and_type(word_and_type)
+    if parsed is None:
+        return None
+    osis_ref, pos_token = parsed
+    digits = "".join(ch for ch in pos_token if ch.isdigit())
+    if not digits:
+        return None
+    pos_padded = digits.zfill(2)
+    stable_id = f"{ID_PREFIX}:{osis_ref}.w{pos_padded}"
+    greek = _normalise(parts[1]) if len(parts) > 1 else ""
+    english_translation = _normalise(parts[2]) if len(parts) > 2 else ""
+    dstrongs_grammar = _normalise(parts[3]) if len(parts) > 3 else ""
+    dictionary_gloss = _normalise(parts[4]) if len(parts) > 4 else ""
+    editions = _normalise(parts[5]) if len(parts) > 5 else ""
+    meaning_raw = parts[6] if len(parts) > 6 else ""
+    spelling_raw = parts[7] if len(parts) > 7 else ""
+    sstrong_instance = _normalise(parts[11]) if len(parts) > 11 else ""
+    alt_strongs = _normalise(parts[12]) if len(parts) > 12 else ""
+    return {
+        "id": stable_id,
+        "osis_ref": osis_ref,
+        "strong_id": _strong_from_grammar(dstrongs_grammar),
+        "properties": {
+            "id": stable_id,
+            "source": SOURCE_SLUG,
+            "word_and_type": word_and_type,
+            "greek": greek,
+            "english_translation": english_translation,
+            "dstrongs_grammar": dstrongs_grammar,
+            "dictionary_gloss": dictionary_gloss,
+            "editions": editions,
+            "meaning_variants": _split_semicolon_list(meaning_raw),
+            "spelling_variants": _split_semicolon_list(spelling_raw),
+            "sstrong_instance": sstrong_instance,
+            "alt_strongs": alt_strongs,
+        },
+    }
+
+
+def _load_tokens(data_root: Path) -> list[dict[str, Any]]:
+    tagnt_dir = data_root / TAGNT_SUBDIR
+    tokens: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for filename in TAGNT_FILES:
+        path = tagnt_dir / filename
+        if not path.exists():
+            continue
+        for parts in _iter_data_rows(_read_text(path)):
+            token = _row_to_token(parts)
+            if token is None:
+                continue
+            if token["id"] in seen:
+                continue
+            seen.add(token["id"])
+            tokens = [*tokens, token]
+    return tokens
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_tokens(session: Any, tokens: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(tokens), BATCH_SIZE):
+        chunk = tokens[start:start + BATCH_SIZE]
+        rows = [t["properties"] for t in chunk]
+        session.run(_MERGE_TOKEN, rows=rows).consume()
+        total += len(chunk)
+    return total
+
+
+def _merge_instance_edges(session: Any, tokens: list[dict[str, Any]]) -> int:
+    edge_rows = [
+        {"from_id": t["id"], "to_id": t["strong_id"]}
+        for t in tokens if t["strong_id"]
+    ]
+    total = 0
+    for start in range(0, len(edge_rows), BATCH_SIZE):
+        chunk = edge_rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_INSTANCE_OF, rows=chunk).consume()
+        total += len(chunk)
+    return total
+
+
+def _merge_in_verse_edges(session: Any, tokens: list[dict[str, Any]]) -> int:
+    edge_rows = [
+        {"from_id": t["id"], "to_id": t["osis_ref"]}
+        for t in tokens if t["osis_ref"]
+    ]
+    total = 0
+    for start in range(0, len(edge_rows), BATCH_SIZE):
+        chunk = edge_rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_IN_VERSE, rows=chunk).consume()
+        total += len(chunk)
+    return total
+
+
+def ingest_stepbible_tagnt(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TAGNT and MERGE TaggedToken nodes plus INSTANCE_OF and IN_VERSE edges."""
+    tokens = _load_tokens(Path(data_root))
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_tokens(session, tokens)
+        instance_edges = _merge_instance_edges(session, tokens)
+        verse_edges = _merge_in_verse_edges(session, tokens)
+    return {
+        "TaggedToken": merged,
+        "Source": 1,
+        "INSTANCE_OF": instance_edges,
+        "IN_VERSE": verse_edges,
+    }
