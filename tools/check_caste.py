@@ -13,6 +13,8 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     ``docs/CULTURAL_SCHEMA_DECISIONS.md``,
     ``docs/cultural_data_inventory_catalog.json``,
     ``docs/ARCHITECTURE.md``, ``docs/implementation_phases/**``,
+    ``docs/PHASE_D_CATALOG_RECONCILIATION.md`` (byte-derived evidence
+    backing the [SCHEMA-REVISION]s ceb3898 and 01e09c6),
     ``graph/lexical.cypher``, ``graph/cultural.cypher``,
     ``tools/expected_counts.json``. On a ``[SCHEMA-REVISION]``-tagged
     commit ONLY, also ``tools/expected_counts.baseline`` (its atomic
@@ -109,6 +111,11 @@ CASTE_RULES: dict[str, CasteRule] = {
             "docs/ARCHITECTURE.md",
             "docs/implementation_phases/*.md",
             "docs/phase_prompts/*.md",
+            # Architect byte-derived evidence backing the
+            # [SCHEMA-REVISION] catalog reconciliation (ceb3898,
+            # 01e09c6). Literal path, not a docs/*.md wildcard, to keep
+            # the architect docs scope tightly enumerated.
+            "docs/PHASE_D_CATALOG_RECONCILIATION.md",
             "graph/lexical.cypher",
             "graph/cultural.cypher",
             "tools/expected_counts.json",
