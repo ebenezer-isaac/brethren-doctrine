@@ -11,6 +11,19 @@ verifier statically rejects:
   with ``data/private/`` (or a ``pathlib.Path("data/private/...")``
   call). Dynamic paths must be rejected because we cannot statically
   prove they stay inside the sandbox.
+* Any non-docstring string constant (including the arguments of
+  ``Path(...)`` / ``PurePath(...)`` constructions and
+  ``os.path.join(...)`` calls) whose normalised path segments contain a
+  segment equal to ``tests`` (case-insensitive), or that references
+  ``tests/lexical/fixtures``. Wave 3 adapters were caught reading the
+  verifier test fixtures from production code (one evaded the earlier
+  ``open()`` guard via ``Path(var).open()`` plus a tests-path literal);
+  this rule kills that class regardless of the open() receiver form.
+  Module / class / function docstrings are exempt because they document
+  the verifier contract in prose, not executable paths. The documented
+  adapter data roots (``data/private/``, the per-user text-fabric cache
+  ``C:/Users/Ebenezer/text-fabric-data``, and ``tmp/poc/`` for
+  procurement) carry no ``tests`` segment and stay clean.
 
 Usage:
     python tools/check_adapter_purity.py --all
@@ -57,6 +70,46 @@ def _module_root(name: str) -> str:
     return name.split(".", 1)[0]
 
 
+def _has_tests_path_segment(value: str) -> bool:
+    """Return True if ``value`` contains a path segment equal to ``tests``
+    (case-insensitive) or references the verifier fixtures directory.
+
+    Both POSIX and Windows separators are normalised so ``tests\\x`` and
+    ``a/tests/b`` are caught alongside the bare ``tests`` segment.
+    """
+    normalised = value.replace("\\", "/")
+    lowered = normalised.lower()
+    if "tests/lexical/fixtures" in lowered:
+        return True
+    return any(seg.strip().lower() == "tests" for seg in normalised.split("/"))
+
+
+def _collect_docstring_constants(tree: ast.AST) -> frozenset[int]:
+    """Identity-set of string ``Constant`` nodes that are module / class /
+    function docstrings.
+
+    Docstrings document the verifier contract in prose (``peshitta.py``
+    names ``tests/lexical/fixtures/peshitta_slice.json`` to explain the
+    locked structural shape) and must not be treated as executable
+    paths. Only the leading ``Expr`` statement of each scope qualifies.
+    """
+    ids: set[int] = set()
+    for parent in ast.walk(tree):
+        if isinstance(
+            parent,
+            (ast.Module, ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef),
+        ):
+            body = getattr(parent, "body", [])
+            if (
+                body
+                and isinstance(body[0], ast.Expr)
+                and isinstance(body[0].value, ast.Constant)
+                and isinstance(body[0].value.value, str)
+            ):
+                ids.add(id(body[0].value))
+    return frozenset(ids)
+
+
 def _arg_is_safe_path_literal(node: ast.AST) -> bool:
     """Return True if ``node`` is a literal whose value starts with
     ``data/private/`` or ``data\\private\\``, OR a ``Path("data/private/...")``
@@ -87,9 +140,23 @@ def _arg_is_safe_path_literal(node: ast.AST) -> bool:
 
 
 class _PurityVisitor(ast.NodeVisitor):
-    def __init__(self, file: Path) -> None:
+    def __init__(self, file: Path, docstring_ids: frozenset[int]) -> None:
         self.file = file
+        self.docstring_ids = docstring_ids
         self.violations: list[Violation] = []
+
+    def visit_Constant(self, node: ast.Constant) -> None:
+        if (
+            isinstance(node.value, str)
+            and id(node) not in self.docstring_ids
+            and _has_tests_path_segment(node.value)
+        ):
+            self.violations.append(Violation(
+                self.file, node.lineno,
+                "forbidden_tests_path",
+                f"string references a 'tests' path segment: {node.value!r}",
+            ))
+        self.generic_visit(node)
 
     def visit_Import(self, node: ast.Import) -> None:
         for alias in node.names:
@@ -193,7 +260,7 @@ class _PurityVisitor(ast.NodeVisitor):
 def check_file(path: Path) -> list[Violation]:
     text = path.read_text(encoding="utf-8")
     tree = ast.parse(text, filename=str(path))
-    v = _PurityVisitor(path)
+    v = _PurityVisitor(path, _collect_docstring_constants(tree))
     v.visit(tree)
     return v.violations
 
@@ -231,9 +298,47 @@ def _self_test() -> int:
             "    return open(p).read()\n",
             encoding="utf-8",
         )
+        # Gaming form that evaded the earlier open() guard: a Path
+        # variable receiver plus a tests-fixture string literal.
+        gamed = Path(td) / "gamed.py"
+        gamed.write_text(
+            "from pathlib import Path\n"
+            "def run():\n"
+            "    p = Path('tests/lexical/fixtures/x_slice.json')\n"
+            "    with p.open(encoding='utf-8') as fh:\n"
+            "        return fh.read()\n",
+            encoding="utf-8",
+        )
+        # Docstring naming the verifier fixture must NOT be flagged: it
+        # is contract prose, not an executable path.
+        doc_ok = Path(td) / "doc_ok.py"
+        doc_ok.write_text(
+            '"""Mirrors tests/lexical/fixtures/peshitta_slice.json shape."""\n'
+            "from pathlib import Path\n"
+            "def run():\n"
+            "    with open('data/private/x.tsv') as fh:\n"
+            "        return fh.read()\n",
+            encoding="utf-8",
+        )
         if check_file(good):
             print(f"self-test FAIL: good adapter flagged: {check_file(good)}",
                   file=sys.stderr)
+            return 1
+        if check_file(doc_ok):
+            print(
+                "self-test FAIL: docstring fixture reference flagged: "
+                f"{check_file(doc_ok)}",
+                file=sys.stderr,
+            )
+            return 1
+        gamed_v = check_file(gamed)
+        gamed_rules = {v.rule for v in gamed_v}
+        if "forbidden_tests_path" not in gamed_rules:
+            print(
+                "self-test FAIL: gamed tests-path read not caught: "
+                f"{gamed_v}",
+                file=sys.stderr,
+            )
             return 1
         bad_v = check_file(bad)
         if len(bad_v) < 2:
