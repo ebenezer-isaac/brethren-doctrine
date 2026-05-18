@@ -357,3 +357,360 @@ recompute in Phase D re-runs the adapter on the same source bytes;
 the per-row presence vector produces a sorted list of per-row
 SHA-256 hashes that must match byte-for-byte across two runs.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any, Iterator
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+EDITION_NESTLE = "Nestle1904"
+EDITION_SBLGNT = "SBLGNT"
+SOURCE_SLUG_NESTLE = "MACULA-Greek-Nestle1904"
+SOURCE_SLUG_SBLGNT = "MACULA-Greek-SBLGNT"
+LOUW_NIDA_PROVENANCE = "MACULA-Greek-Louw-Nida"
+LICENSE_NESTLE = "CC-BY-4.0"
+LICENSE_SBLGNT = "CC-BY-NC-4.0"
+NULL_LITERAL = "n/a"
+BATCH_SIZE = 2000
+
+_EDITION_FILES: dict[str, str] = {
+    EDITION_NESTLE: "macula-greek-Nestle1904.tsv",
+    EDITION_SBLGNT: "macula-greek-SBLGNT.tsv",
+}
+
+_EDITION_TO_SOURCE: dict[str, str] = {
+    EDITION_NESTLE: SOURCE_SLUG_NESTLE,
+    EDITION_SBLGNT: SOURCE_SLUG_SBLGNT,
+}
+
+_MERGE_SOURCE_CYPHER = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row "
+    "RETURN count(n) AS upserted"
+)
+
+_MERGE_WORD_CYPHER = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`Word` {id: row.id}) "
+    "SET n += row "
+    "RETURN count(n) AS upserted"
+)
+
+_MERGE_LEMMA_CYPHER = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`GreekLemma` {id: row.id}) "
+    "SET n += row "
+    "RETURN count(n) AS upserted"
+)
+
+_MERGE_DOMAIN_CYPHER = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`LouwNidaDomain` {id: row.id}) "
+    "SET n += row "
+    "RETURN count(n) AS upserted"
+)
+
+_MERGE_INSTANCE_OF_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (w:`Word` {id: row.from_id}) "
+    "MATCH (l:`GreekLemma` {id: row.to_id}) "
+    "MERGE (w)-[r:`INSTANCE_OF`]->(l) "
+    "RETURN count(r) AS upserted"
+)
+
+_MERGE_IN_DOMAIN_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (w:`Word` {id: row.from_id}) "
+    "MATCH (d:`LouwNidaDomain` {id: row.to_id}) "
+    "MERGE (w)-[r:`IN_DOMAIN` "
+    "{domain_code: row.domain_code, "
+    "subdomain_code: row.subdomain_code, "
+    "source: row.source}]->(d) "
+    "RETURN count(r) AS upserted"
+)
+
+_MERGE_FROM_EDITION_CYPHER = (
+    "UNWIND $rows AS row "
+    "MATCH (w:`Word` {id: row.from_id}) "
+    "MATCH (s:`Source` {slug: row.to_slug}) "
+    "MERGE (w)-[r:`FROM_EDITION`]->(s) "
+    "RETURN count(r) AS upserted"
+)
+
+
+def _coerce_string(value: str) -> str | None:
+    """Return trimmed value, or None when empty or the literal n/a sentinel."""
+    if value is None:
+        return None
+    trimmed = value.strip()
+    if not trimmed or trimmed == NULL_LITERAL:
+        return None
+    return trimmed
+
+
+def _coerce_strong(value: str) -> int | None:
+    s = _coerce_string(value)
+    if s is None:
+        return None
+    cleaned = "".join(ch for ch in s if ch.isdigit())
+    if not cleaned:
+        return None
+    return int(cleaned)
+
+
+def _split_ln_pair(token: str) -> tuple[int, int] | None:
+    """Split a single Louw-Nida code token like '93.169a' into (domain, subdomain).
+
+    Trailing variant letters on the subdomain are stripped before int conversion.
+    Returns None when the token cannot be parsed as two non-empty numeric parts.
+    """
+    if "." in token:
+        head, tail = token.split(".", 1)
+    elif ":" in token:
+        head, tail = token.split(":", 1)
+    else:
+        return None
+    head = head.strip()
+    tail = tail.strip()
+    if not head or not tail:
+        return None
+    sub_digits = "".join(ch for ch in tail if ch.isdigit())
+    if not head.isdigit() or not sub_digits:
+        return None
+    return int(head), int(sub_digits)
+
+
+def _ln_tokens(ln_value: str | None) -> list[str]:
+    if ln_value is None:
+        return []
+    return [tok for tok in ln_value.replace("\t", " ").split() if tok]
+
+
+def _row_word_payload(edition: str, fields: dict[str, str]) -> dict[str, Any]:
+    xml_id = _coerce_string(fields.get("xml:id", ""))
+    source = _EDITION_TO_SOURCE[edition]
+    payload: dict[str, Any] = {
+        "id": f"{source}:{xml_id}" if xml_id else None,
+        "xml_id": xml_id,
+        "ref": _coerce_string(fields.get("ref", "")),
+        "lemma": _coerce_string(fields.get("lemma", "")),
+        "normalized": _coerce_string(fields.get("normalized", "")),
+        "strong": _coerce_strong(fields.get("strong", "")),
+        "morph": _coerce_string(fields.get("morph", "")),
+        "gloss": _coerce_string(fields.get("gloss", "")),
+        "domain": _coerce_string(fields.get("domain", "")),
+        "ln": _coerce_string(fields.get("ln", "")),
+        "text": _coerce_string(fields.get("text", "")),
+        "source": source,
+        "edition": edition,
+    }
+    return payload
+
+
+def _row_lemma_payload(edition: str, word: dict[str, Any]) -> dict[str, Any] | None:
+    strong = word.get("strong")
+    lemma = word.get("lemma")
+    if strong is None or lemma is None:
+        return None
+    source = _EDITION_TO_SOURCE[edition]
+    lemma_id = f"{source}:strong-{int(strong):05d}"
+    return {
+        "id": lemma_id,
+        "lemma": lemma,
+        "strong": int(strong),
+        "source": source,
+        "edition": edition,
+    }
+
+
+def _row_domain_payload(domain_code: int) -> dict[str, Any]:
+    return {
+        "id": str(domain_code),
+        "domain_code": int(domain_code),
+        "source": LOUW_NIDA_PROVENANCE,
+    }
+
+
+def _iter_tsv_rows(path: Path) -> Iterator[dict[str, str]]:
+    with path.open(encoding="utf-8") as fh:
+        header_line = fh.readline()
+        if not header_line:
+            return
+        header = header_line.rstrip("\r\n").split("\t")
+        for raw in fh:
+            line = raw.rstrip("\r\n")
+            if not line:
+                continue
+            parts = line.split("\t")
+            if len(parts) < len(header):
+                parts = [*parts, *([""] * (len(header) - len(parts)))]
+            yield {header[i]: parts[i] for i in range(len(header))}
+
+
+def _flush(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    if not rows:
+        return 0
+    session.run(cypher, rows=rows).consume()
+    return len(rows)
+
+
+def _merge_sources(session: Any) -> int:
+    payload = [
+        {
+            "slug": SOURCE_SLUG_NESTLE,
+            "license": LICENSE_NESTLE,
+            "redistribute": True,
+        },
+        {
+            "slug": SOURCE_SLUG_SBLGNT,
+            "license": LICENSE_SBLGNT,
+            "redistribute": False,
+        },
+    ]
+    session.run(_MERGE_SOURCE_CYPHER, rows=payload).consume()
+    return len(payload)
+
+
+def _process_edition(
+    session: Any,
+    edition: str,
+    tsv_path: Path,
+    lemma_seen: set[str],
+    domain_seen: set[int],
+) -> dict[str, int]:
+    counts = {
+        "Word": 0,
+        "GreekLemma": 0,
+        "LouwNidaDomain": 0,
+        "INSTANCE_OF": 0,
+        "IN_DOMAIN": 0,
+        "FROM_EDITION": 0,
+    }
+    word_batch: list[dict[str, Any]] = []
+    lemma_batch: list[dict[str, Any]] = []
+    domain_batch: list[dict[str, Any]] = []
+    instance_batch: list[dict[str, Any]] = []
+    in_domain_batch: list[dict[str, Any]] = []
+    from_edition_batch: list[dict[str, Any]] = []
+    source_slug = _EDITION_TO_SOURCE[edition]
+    per_word_in_domain_keys: set[tuple[str, int, int]] = set()
+
+    for fields in _iter_tsv_rows(tsv_path):
+        word = _row_word_payload(edition, fields)
+        if word["id"] is None:
+            continue
+        word_batch = [*word_batch, word]
+        from_edition_batch = [
+            *from_edition_batch,
+            {"from_id": word["id"], "to_slug": source_slug},
+        ]
+        lemma = _row_lemma_payload(edition, word)
+        if lemma is not None:
+            if lemma["id"] not in lemma_seen:
+                lemma_seen.add(lemma["id"])
+                lemma_batch = [*lemma_batch, lemma]
+            instance_batch = [
+                *instance_batch,
+                {"from_id": word["id"], "to_id": lemma["id"]},
+            ]
+        ln_value = word.get("ln")
+        if ln_value is not None and word.get("strong") is not None:
+            for token in _ln_tokens(ln_value):
+                pair = _split_ln_pair(token)
+                if pair is None:
+                    continue
+                d_code, s_code = pair
+                key = (word["id"], d_code, s_code)
+                if key in per_word_in_domain_keys:
+                    continue
+                per_word_in_domain_keys.add(key)
+                if d_code not in domain_seen:
+                    domain_seen.add(d_code)
+                    domain_batch = [*domain_batch, _row_domain_payload(d_code)]
+                in_domain_batch = [
+                    *in_domain_batch,
+                    {
+                        "from_id": word["id"],
+                        "to_id": str(d_code),
+                        "domain_code": d_code,
+                        "subdomain_code": s_code,
+                        "source": source_slug,
+                    },
+                ]
+        if len(word_batch) >= BATCH_SIZE:
+            counts["Word"] += _flush(session, _MERGE_WORD_CYPHER, word_batch)
+            word_batch = []
+            counts["GreekLemma"] += _flush(
+                session, _MERGE_LEMMA_CYPHER, lemma_batch
+            )
+            lemma_batch = []
+            counts["LouwNidaDomain"] += _flush(
+                session, _MERGE_DOMAIN_CYPHER, domain_batch
+            )
+            domain_batch = []
+            counts["INSTANCE_OF"] += _flush(
+                session, _MERGE_INSTANCE_OF_CYPHER, instance_batch
+            )
+            instance_batch = []
+            counts["IN_DOMAIN"] += _flush(
+                session, _MERGE_IN_DOMAIN_CYPHER, in_domain_batch
+            )
+            in_domain_batch = []
+            counts["FROM_EDITION"] += _flush(
+                session, _MERGE_FROM_EDITION_CYPHER, from_edition_batch
+            )
+            from_edition_batch = []
+
+    counts["Word"] += _flush(session, _MERGE_WORD_CYPHER, word_batch)
+    counts["GreekLemma"] += _flush(session, _MERGE_LEMMA_CYPHER, lemma_batch)
+    counts["LouwNidaDomain"] += _flush(
+        session, _MERGE_DOMAIN_CYPHER, domain_batch
+    )
+    counts["INSTANCE_OF"] += _flush(
+        session, _MERGE_INSTANCE_OF_CYPHER, instance_batch
+    )
+    counts["IN_DOMAIN"] += _flush(
+        session, _MERGE_IN_DOMAIN_CYPHER, in_domain_batch
+    )
+    counts["FROM_EDITION"] += _flush(
+        session, _MERGE_FROM_EDITION_CYPHER, from_edition_batch
+    )
+    return counts
+
+
+def ingest_macula_greek(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse MACULA Greek Nestle1904 and SBLGNT TSV releases and MERGE the graph.
+
+    Reads TSV releases at data_root / <edition> / tsv / macula-greek-<edition>.tsv
+    and emits Word, GreekLemma, LouwNidaDomain, Source nodes plus INSTANCE_OF,
+    IN_DOMAIN, FROM_EDITION edges per the docstring contract above.
+    """
+    driver = get_lexical_driver(settings)
+    totals: dict[str, int] = {
+        "Word": 0,
+        "GreekLemma": 0,
+        "LouwNidaDomain": 0,
+        "Source": 0,
+        "INSTANCE_OF": 0,
+        "IN_DOMAIN": 0,
+        "FROM_EDITION": 0,
+    }
+    lemma_seen: set[str] = set()
+    domain_seen: set[int] = set()
+    with driver.session() as session:
+        totals["Source"] = _merge_sources(session)
+        for edition in (EDITION_NESTLE, EDITION_SBLGNT):
+            tsv_path = data_root / edition / "tsv" / _EDITION_FILES[edition]
+            if not tsv_path.exists():
+                continue
+            edition_counts = _process_edition(
+                session, edition, tsv_path, lemma_seen, domain_seen
+            )
+            for key, value in edition_counts.items():
+                totals[key] = totals.get(key, 0) + value
+    return totals
