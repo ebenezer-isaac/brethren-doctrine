@@ -299,6 +299,7 @@ import unicodedata
 from pathlib import Path
 from typing import Any
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 SOURCE_SLUG = "STEPBible-TFLSJ"
@@ -321,7 +322,7 @@ _MERGE_LSJ_ENTRY = (
 )
 _MERGE_LEX_FOR = (
     "UNWIND $rows AS row "
-    "MATCH (e:LsjEntry{id: row.id}), (g:GreekLemma{strong: row.strong}) "
+    "MATCH (e:LsjEntry{id: row.id}), (g:GreekLemma{strong: row.canonical_strong}) "
     "MERGE (e)-[r:`LEX_FOR`]->(g) "
     "RETURN count(r) AS edges"
 )
@@ -347,6 +348,26 @@ def _nullable(value: str) -> str | None:
 
 def _stable_id(strong: str, lemma: str) -> str:
     return f"tflsj:{strong}:{lemma}"
+
+
+def _canonical_greek_strong(raw_strong: str) -> str | None:
+    """Decision 18 LEX_FOR join key: canonical Greek Strong string.
+
+    Routes the raw upstream `strong` token through the single committed
+    normaliser `ingest.canonical_strongs.canonical_strongs(raw, 'gk')`
+    and returns `canon[0]` (e.g. raw `G40` -> `G0040`). This is the
+    byte-identical value the macula_greek producer writes to
+    `GreekLemma.strong` post-Decision-18, so the LEX_FOR match resolves
+    index-backed against the `greek_lemma_strong` index
+    (graph/lexical.cypher, Decision 18). When the token fails to
+    normalise the adapter MUST NOT fabricate a Strong (Decision 18
+    no-Strong clause): it returns None and the caller skips the
+    outbound LEX_FOR edge while still persisting the LsjEntry node.
+    """
+    try:
+        return canonical_strongs(raw_strong, "gk")[0]
+    except ValueError:
+        return None
 
 
 def _parse_row(line: str) -> dict[str, Any] | None:
@@ -427,10 +448,14 @@ def _merge_lsj_entries(session: Any, rows: list[dict[str, Any]]) -> int:
 def _merge_lex_for_edges(session: Any, rows: list[dict[str, Any]]) -> int:
     total = 0
     for start in range(0, len(rows), BATCH_SIZE):
-        batch = [
-            {"id": r["id"], "strong": r["strong"]}
-            for r in rows[start:start + BATCH_SIZE]
-        ]
+        batch = []
+        for r in rows[start:start + BATCH_SIZE]:
+            canonical = _canonical_greek_strong(r["strong"])
+            if canonical is None:
+                continue
+            batch = [*batch, {"id": r["id"], "canonical_strong": canonical}]
+        if not batch:
+            continue
         session.run(_MERGE_LEX_FOR, rows=batch).consume()
         total += len(batch)
     return total
