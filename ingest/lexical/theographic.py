@@ -451,4 +451,304 @@ tools/expected_counts.json sources."Theographic-Bible-Metadata" (tier A, expecte
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_list, $pred_bool semantics.
 docs/LICENSE_TAGGING.md row 'Theographic-Bible-Metadata' for the CC-BY-SA-4.0 license tag and the redistribute-true policy under Decision 14 with the SA propagation note.
 docs/phase_prompts/pipeline2_verdict.md citation slug 'Theographic-Bible-Metadata' for Pipeline 2 evidence-file tagging of any Theographic citation.
+
+Upstream layout note (this cached release)
+==========================================
+The contract above describes the upstream as a folder hierarchy under
+people/, places/, periods/, events/, groups/, and tribes/. The cached
+release pinned under data/private/theographic/json/ ships the same
+corpus as Airtable-style JSON arrays (people.json, places.json,
+events.json, peopleGroups.json, verses.json) rather than one file per
+entity. The per-entity slug the contract requires as entity_id is the
+upstream `slug` / `placeLookup` / `personLookup` field verbatim, with a
+record-id fallback for entities the upstream did not slug. The
+peopleGroups.json file carries both tribes (groupName beginning with
+"Tribe of") and other named groups; the adapter routes the former to
+the Tribe label and the latter to the Group label per the Decision 10
+projection. The verses arrays hold upstream verse record ids; the
+adapter resolves each id to its canonical osisRef via verses.json and
+drops any reference that does not resolve rather than fabricating one,
+per the Person projection rule above. Period has no dedicated upstream
+file in this release; the adapter derives one Period node per distinct
+century bucket present in the upstream event startDate values, so every
+Period start_year and end_year is a deterministic integer century bound
+read from upstream bytes (not a fabricated field) and re-ingest over
+identical input is byte-identical.
 """
+
+from __future__ import annotations
+
+import json
+import math
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "Theographic-Bible-Metadata"
+LICENSE_ID = "CC-BY-SA-4.0"
+JSON_SUBDIR = "json"
+BATCH_SIZE = 1000
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_NODE_TEMPLATE = (
+    "UNWIND $rows AS row MERGE (n:`{label}` {{entity_id: row.entity_id}}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_MENTIONS = (
+    "UNWIND $rows AS row "
+    "MATCH (a {entity_id: row.from_id}), (b:`Verse` {osisID: row.to_id}) "
+    "MERGE (a)-[r:`MENTIONS`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_FROM_EDITION = (
+    "UNWIND $rows AS row "
+    "MATCH (a {entity_id: row.from_id}), (b:`Source` {slug: row.slug}) "
+    "MERGE (a)-[r:`FROM_EDITION`]->(b) RETURN count(r) AS edges"
+)
+
+
+def _read_json(path: Path) -> Any:
+    with path.open(encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def _records(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [r for r in payload if isinstance(r, dict)]
+    return []
+
+
+def _slug(fields: dict[str, Any], record_id: str, *keys: str) -> str:
+    for key in keys:
+        value = fields.get(key)
+        if isinstance(value, str) and value.strip() and " " not in value.strip():
+            return value.strip()
+    return record_id
+
+
+def _verse_lookup(verses_payload: Any) -> dict[str, str]:
+    lookup: dict[str, str] = {}
+    for rec in _records(verses_payload):
+        rid = rec.get("id")
+        osis = rec.get("fields", {}).get("osisRef")
+        if isinstance(rid, str) and isinstance(osis, str) and osis.strip():
+            lookup = {**lookup, rid: osis.strip()}
+    return lookup
+
+
+def _resolve_verses(raw: Any, lookup: dict[str, str]) -> list[str]:
+    if not isinstance(raw, list):
+        return []
+    resolved: list[str] = []
+    seen: set[str] = set()
+    for ref in raw:
+        osis = lookup.get(ref) if isinstance(ref, str) else None
+        if osis and osis not in seen:
+            seen.add(osis)
+            resolved = [*resolved, osis]
+    return resolved
+
+
+def _person_node(rec: dict[str, Any], lookup: dict[str, str]) -> dict[str, Any]:
+    fields = rec.get("fields", {})
+    rid = rec.get("id", "")
+    entity_id = _slug(fields, rid, "slug", "personLookup")
+    node: dict[str, Any] = {
+        "entity_id": entity_id,
+        "display_name": str(fields.get("name") or fields.get("displayTitle") or entity_id),
+        "verses": _resolve_verses(fields.get("verses"), lookup),
+        "source": SOURCE_SLUG,
+    }
+    body = fields.get("dictText")
+    text = body[0] if isinstance(body, list) and body else body
+    if isinstance(text, str) and text.strip():
+        node = {**node, "description_markdown": text.strip()}
+    return node
+
+
+def _place_node(rec: dict[str, Any], lookup: dict[str, str]) -> dict[str, Any]:
+    fields = rec.get("fields", {})
+    rid = rec.get("id", "")
+    entity_id = _slug(fields, rid, "slug", "placeLookup")
+    display = str(fields.get("displayTitle") or fields.get("kjvName") or entity_id)
+    aliases: list[str] = []
+    for key in ("kjvName", "esvName", "recogitoLabel"):
+        value = fields.get(key)
+        if (
+            isinstance(value, str)
+            and value.strip()
+            and value.strip() not in aliases
+            and value.strip() != display
+        ):
+            aliases = [*aliases, value.strip()]
+    node: dict[str, Any] = {
+        "entity_id": entity_id,
+        "display_name": display,
+        "verses": _resolve_verses(fields.get("verses"), lookup),
+        "source": SOURCE_SLUG,
+    }
+    if aliases:
+        node = {**node, "aliases": aliases}
+    return node
+
+
+def _event_node(rec: dict[str, Any], lookup: dict[str, str]) -> dict[str, Any]:
+    fields = rec.get("fields", {})
+    rid = rec.get("id", "")
+    title = str(fields.get("title") or rid)
+    return {
+        "entity_id": rid,
+        "display_name": title,
+        "verses": _resolve_verses(fields.get("verses"), lookup),
+        "source": SOURCE_SLUG,
+    }
+
+
+def _group_node(rec: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    fields = rec.get("fields", {})
+    rid = rec.get("id", "")
+    name = str(fields.get("groupName") or rid)
+    label = "Tribe" if name.startswith("Tribe of") else "Group"
+    node: dict[str, Any] = {
+        "entity_id": rid,
+        "display_name": name,
+        "verses": [],
+        "source": SOURCE_SLUG,
+    }
+    return label, node
+
+
+def _parse_year(raw: Any) -> int | None:
+    if isinstance(raw, int):
+        return raw
+    if isinstance(raw, str) and raw.strip():
+        try:
+            return int(float(raw.strip()))
+        except ValueError:
+            return None
+    return None
+
+
+def _period_nodes(
+    events: list[dict[str, Any]], lookup: dict[str, str]
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    buckets: dict[int, list[str]] = {}
+    for rec in events:
+        fields = rec.get("fields", {})
+        year = _parse_year(fields.get("startDate"))
+        if year is None:
+            continue
+        century = math.floor(year / 100)
+        verses = _resolve_verses(fields.get("verses"), lookup)
+        merged = list(buckets.get(century, []))
+        for osis in verses:
+            if osis not in merged:
+                merged = [*merged, osis]
+        buckets = {**buckets, century: merged}
+    nodes: list[dict[str, Any]] = []
+    edges: list[dict[str, Any]] = []
+    for century in sorted(buckets):
+        start_year = century * 100
+        end_year = start_year + 99
+        if start_year < 0:
+            slug = f"period-bce-{abs(start_year)}-{abs(end_year)}"
+            label = f"{abs(start_year)} to {abs(end_year)} BCE"
+        else:
+            slug = f"period-ce-{start_year}-{end_year}"
+            label = f"{start_year} to {end_year} CE"
+        nodes = [
+            *nodes,
+            {
+                "entity_id": slug,
+                "display_name": label,
+                "start_year": start_year,
+                "end_year": end_year,
+                "source": SOURCE_SLUG,
+            },
+        ]
+        for osis in buckets[century]:
+            edges = [*edges, {"from_id": slug, "to_id": osis}]
+    return nodes, edges
+
+
+def _mention_edges(nodes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    edges: list[dict[str, Any]] = []
+    for node in nodes:
+        for osis in node.get("verses", []):
+            edges = [*edges, {"from_id": node["entity_id"], "to_id": osis}]
+    return edges
+
+
+def _merge_nodes(session: Any, label: str, rows: list[dict[str, Any]]) -> int:
+    if not rows:
+        return 0
+    cypher = _MERGE_NODE_TEMPLATE.format(label=label)
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(cypher, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_edges(session: Any, cypher: str, rows: list[dict[str, Any]]) -> None:
+    for start in range(0, len(rows), BATCH_SIZE):
+        session.run(cypher, rows=rows[start:start + BATCH_SIZE]).consume()
+
+
+def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
+    """Project Theographic entities (Person, Place, Period, Event, Group, Tribe).
+
+    Reads the cached Airtable-style JSON release, resolves verse record ids
+    to canonical osisRef strings, and MERGEs one node per entity keyed by the
+    upstream slug plus MENTIONS edges to Verse nodes and FROM_EDITION edges to
+    the Source node. Re-running over identical bytes produces zero new nodes
+    or edges.
+    """
+    json_dir = data_root / JSON_SUBDIR
+    lookup = _verse_lookup(_read_json(json_dir / "verses.json"))
+
+    people = _records(_read_json(json_dir / "people.json"))
+    places = _records(_read_json(json_dir / "places.json"))
+    events = _records(_read_json(json_dir / "events.json"))
+    groups_raw = _records(_read_json(json_dir / "peopleGroups.json"))
+
+    by_label: dict[str, list[dict[str, Any]]] = {
+        "Person": [_person_node(r, lookup) for r in people],
+        "Place": [_place_node(r, lookup) for r in places],
+        "Event": [_event_node(r, lookup) for r in events],
+        "Group": [],
+        "Tribe": [],
+    }
+    for rec in groups_raw:
+        label, node = _group_node(rec)
+        by_label = {**by_label, label: [*by_label[label], node]}
+
+    period_nodes, period_edges = _period_nodes(events, lookup)
+    by_label = {**by_label, "Period": period_nodes}
+
+    mention_edges: list[dict[str, Any]] = list(period_edges)
+    for label in ("Person", "Place", "Event", "Group", "Tribe"):
+        mention_edges = [*mention_edges, *_mention_edges(by_label[label])]
+
+    from_edition = [
+        {"from_id": node["entity_id"], "slug": SOURCE_SLUG}
+        for nodes in by_label.values()
+        for node in nodes
+    ]
+
+    driver = get_lexical_driver(settings)
+    counts: dict[str, int] = {}
+    with driver.session() as session:
+        session.run(
+            _MERGE_SOURCE,
+            rows=[{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}],
+        ).consume()
+        for label, rows in by_label.items():
+            counts = {**counts, label: _merge_nodes(session, label, rows)}
+        _merge_edges(session, _MERGE_MENTIONS, mention_edges)
+        _merge_edges(session, _MERGE_FROM_EDITION, from_edition)
+    return {**counts, "Source": 1}
