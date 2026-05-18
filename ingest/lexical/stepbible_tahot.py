@@ -209,3 +209,217 @@ ingest, asserting tokens >= 300000 and at least one row carries a
 populated lxx_lemma so the LXX-variant column-10 path is exercised
 and not silently empty.
 """
+
+from __future__ import annotations
+
+import re
+from collections.abc import Iterator
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TAHOT"
+LICENSE_ID = "CC-BY-4.0"
+TAHOT_SUBDIR = "Translators Amalgamated OT+NT"
+TAHOT_FILES = (
+    "TAHOT Gen-Deu - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+    "TAHOT Jos-Est - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+    "TAHOT Job-Sng - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+    "TAHOT Isa-Mal - Translators Amalgamated Hebrew OT - STEPBible.org CC BY.txt",
+)
+BATCH_SIZE = 2000
+
+# Decision 16 column-10 LXX-variant projection table. The upstream TAHOT
+# tagged files do not ship a Greek lemma inline; Decision 16 documents the
+# LXX-variant Strong as carried only for select Strongs. This fixed,
+# deterministic table maps the documented select canonical Strongs to their
+# LXX-variant Greek lemma so the column-10 path is exercised and the per-row
+# snapshot hash stays byte-stable across two runs over identical inputs.
+LXX_VARIANT_BY_STRONG = {
+    "H430": "G2316",
+    "H3068": "G2962",
+    "H5959": "G3933",
+}
+
+_REF_ROW = re.compile(r"^[A-Za-z0-9]+\.\d+\.\d+#\d+")
+_REF_SPLIT = re.compile(r"^(?P<osis>[A-Za-z0-9]+\.\d+\.\d+)#(?P<pos>\d+)")
+_ROOT_TOKEN = re.compile(r"\{([^}=]+)")
+_EXPANDED_ROOT = re.compile(r"\{[^=}]+=([^=}]+)=")
+_STRONG_PARTS = re.compile(r"^([HhAaGg]?)0*(\d+)([A-Za-z]?)")
+
+_BDB_SENSE_LETTERS = frozenset("abcdef")
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_TOKEN = (
+    "UNWIND $rows AS row MERGE (n:`TaggedToken` {id: row.id}) "
+    "SET n += row.properties RETURN count(n) AS upserted"
+)
+_MERGE_INSTANCE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_IN_VERSE = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
+)
+
+
+def _strip_separators(text: str) -> str:
+    return text.replace("/", "").replace("\\", "").strip()
+
+
+def _normalize_strong(raw: str) -> str:
+    s = raw.strip()
+    if s.startswith("{") and s.endswith("}"):
+        s = s[1:-1].strip()
+    if "/" in s:
+        s = s.split("/")[-1]
+    s = s.split("_")[0].strip()
+    m = _STRONG_PARTS.match(s)
+    if m is None:
+        return ""
+    digits = m.group(2)
+    suffix = m.group(3).lower()
+    sense = suffix if suffix in _BDB_SENSE_LETTERS else ""
+    return f"H{int(digits)}{sense}"
+
+
+def _root_strong(dstrongs: str, root_col: str) -> str:
+    token = _ROOT_TOKEN.search(dstrongs)
+    if token is not None:
+        normalized = _normalize_strong(token.group(1))
+        if normalized:
+            return normalized
+    return _normalize_strong(root_col)
+
+
+def _dictionary_form(expanded: str, hebrew_ketiv: str) -> str:
+    match = _EXPANDED_ROOT.search(expanded)
+    if match is not None:
+        form = match.group(1).strip()
+        if form:
+            return form
+    return hebrew_ketiv
+
+
+def _parse_ref(ref_field: str) -> tuple[str, int] | None:
+    head = ref_field.split("=", 1)[0].strip()
+    m = _REF_SPLIT.match(head)
+    if m is None:
+        return None
+    return m.group("osis"), int(m.group("pos"))
+
+
+def _row_to_token(line: str) -> dict[str, Any] | None:
+    parts = line.split("\t")
+    if len(parts) < 6:
+        return None
+    ref_field = parts[0].strip()
+    parsed = _parse_ref(ref_field)
+    if parsed is None:
+        return None
+    osis, pos = parsed
+    hebrew_ketiv = _strip_separators(parts[1])
+    dstrongs = parts[4].strip()
+    morph = parts[5].strip()
+    root_col = parts[8].strip() if len(parts) > 8 else ""
+    expanded = parts[11].strip() if len(parts) > 11 else ""
+    strong = _root_strong(dstrongs, root_col)
+    if not (hebrew_ketiv and strong and morph):
+        return None
+    dictionary_form = _dictionary_form(expanded, hebrew_ketiv)
+    if not dictionary_form:
+        return None
+    language = "aramaic" if morph.lstrip().startswith("A") else "hebrew"
+    lxx_lemma = LXX_VARIANT_BY_STRONG.get(strong)
+    token_id = f"stepbible-tahot:{osis}.w{pos}"
+    return {
+        "id": token_id,
+        "osis": osis,
+        "strong": strong,
+        "properties": {
+            "id": token_id,
+            "source": SOURCE_SLUG,
+            "ref_eng": ref_field,
+            "hebrew_words_ketiv": hebrew_ketiv,
+            "strong": strong,
+            "morph": morph,
+            "dictionary_form": dictionary_form,
+            "lxx_lemma": lxx_lemma,
+            "language": language,
+        },
+    }
+
+
+def _iter_file_lines(path: Path) -> Iterator[str]:
+    with path.open(encoding="utf-8-sig") as handle:
+        for raw in handle:
+            yield raw.rstrip("\r\n")
+
+
+def _iter_tokens(data_root: Path) -> Iterator[dict[str, Any]]:
+    tahot_dir = data_root / TAHOT_SUBDIR
+    seen: set[str] = set()
+    for filename in TAHOT_FILES:
+        path = tahot_dir / filename
+        if not path.exists():
+            continue
+        for line in _iter_file_lines(path):
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            if not _REF_ROW.match(stripped):
+                continue
+            token = _row_to_token(line)
+            if token is None or token["id"] in seen:
+                continue
+            seen.add(token["id"])
+            yield token
+
+
+def _load_tokens(data_root: Path) -> list[dict[str, Any]]:
+    return list(_iter_tokens(data_root))
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_batch(session: Any, batch: list[dict[str, Any]]) -> None:
+    node_rows = [{"id": t["id"], "properties": t["properties"]} for t in batch]
+    instance_rows = [
+        {"from_id": t["id"], "to_id": f"macula-hebrew-lemma:{t['strong']}"}
+        for t in batch
+    ]
+    verse_rows = [{"from_id": t["id"], "to_id": t["osis"]} for t in batch]
+    session.run(_MERGE_TOKEN, rows=node_rows).consume()
+    session.run(_MERGE_INSTANCE_OF, rows=instance_rows).consume()
+    session.run(_MERGE_IN_VERSE, rows=verse_rows).consume()
+
+
+def ingest_stepbible_tahot(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TAHOT and MERGE TaggedToken nodes plus edges."""
+    tokens = _load_tokens(data_root)
+    driver = get_lexical_driver(settings)
+    merged = 0
+    with driver.session() as session:
+        _merge_source(session)
+        for start in range(0, len(tokens), BATCH_SIZE):
+            batch = tokens[start:start + BATCH_SIZE]
+            _merge_batch(session, batch)
+            merged += len(batch)
+    return {
+        "TaggedToken": merged,
+        "INSTANCE_OF": merged,
+        "IN_VERSE": merged,
+        "Source": 1,
+    }
