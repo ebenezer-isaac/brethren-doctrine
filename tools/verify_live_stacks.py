@@ -21,7 +21,7 @@ EXPECTED: dict[str, tuple[int, int]] = {
     "lexical.Word": (300000, 1500000),
     "lexical.Verse": (20000, 35000),
     "lexical.Lemma": (10000, 25000),
-    "lexical.CrossRef": (300000, 800000),
+    "lexical.CrossRef": (1100000, 1300000),
     "lexical.Person": (3000, 3100),
     "lexical.Place": (1200, 1700),
     "qdrant.cult_col": (1, 60000),
