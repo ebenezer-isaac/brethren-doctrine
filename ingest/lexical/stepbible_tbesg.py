@@ -23,7 +23,7 @@ Tier rationale:   STEPBible Brief Extended Strongs Greek brief lexicon
                   lemma. Total is a deterministic line count from the
                   versioned upstream release used at ingest time, identical
                   across reruns under tagged builds.
-Decisions implemented: 12.
+Decisions implemented: 12, 18 (LEX_FOR canonical Strong join key).
 Group:            Group 3 (Lexicons), step 9 of
                   docs/implementation_phases/phase_02_lexical_ingest.md.
 
@@ -119,9 +119,13 @@ Emitted edge types
 ==================
 This adapter writes exactly one outbound edge type from BriefLexEntry to
 the canonical GreekLemma label produced by Group 1 (MACULA-Greek). The
-join is by base_strong (BriefLexEntry side) to the canonical Strong key
-on GreekLemma (typically GreekLemma.id or GreekLemma.strong as projected
-by the macula_greek adapter under Decision 2).
+join is by the canonical Strong string (Decision 18): the raw upstream
+base_strong is routed through
+ingest.canonical_strongs.canonical_strongs(raw, 'gk') and canon[0] is
+matched against GreekLemma.strong (the canonical Greek Strong join key,
+Decision 18 line 656). The pre-fix code matched raw base_strong (e.g.
+'G40') against GreekLemma.id and resolved zero rows for every Strong
+(macula_greek GreekLemma.id is namespaced 'MACULA-Greek-...:strong-00040').
 
 LEX_FOR (Decision 12)
     src: BriefLexEntry   dst: GreekLemma
@@ -132,12 +136,14 @@ LEX_FOR (Decision 12)
                          (this case is recorded in the snapshot ledger
                          and surfaces in the triangle test rather than
                          being silently dropped).
-    Join key:            BriefLexEntry.base_strong = GreekLemma.id (or
-                         the equivalent canonical Strong property on
-                         GreekLemma as defined by the macula_greek
-                         adapter). The index brief_lex_base_strong on
-                         line 64 of graph/lexical.cypher accelerates the
-                         lookup.
+    Join key:            canonical_strongs(BriefLexEntry.base_strong,
+                         'gk')[0] = GreekLemma.strong (Decision 18 line
+                         656; canon[0] is the canonical Greek Strong
+                         string, e.g. 'G0040'). The index
+                         greek_lemma_strong on line 63 of
+                         graph/lexical.cypher backs the
+                         (:GreekLemma {strong}) lookup (Decision 18
+                         lexical.cypher comment lines 60 to 62).
 
 Dependency on GreekLemma from Group 1
 =====================================
@@ -155,7 +161,7 @@ Idempotency
 ===========
 Every BriefLexEntry above is MERGEd by strong_disambig. The Source node
 is MERGEd by slug. Every LEX_FOR edge is MERGEd on the (src.strong_disambig,
-dst.id, rel_type) tuple. Re-running this adapter over identical
+dst canonical strong, rel_type) tuple. Re-running this adapter over identical
 STEPBible-TBESG bytes produces zero new nodes and zero new edges; the
 Decision 14 uniqueness constraint on BriefLexEntry.strong_disambig and
 on Source.slug enforces this at the Neo4j storage layer. Per
@@ -258,9 +264,11 @@ Cross-references
 ================
 docs/SCHEMA_DECISIONS.md Decision 12   STEPBible-TBESG node shape.
 docs/SCHEMA_DECISIONS.md Decision 14   Strong / Source / TFNode constraint policy.
+docs/SCHEMA_DECISIONS.md Decision 18   Canonical Strong join key (LEX_FOR -> GreekLemma.strong, line 656).
+ingest/canonical_strongs.py            canonical_strongs(raw, 'gk') normaliser (lines 20 to 74).
 docs/implementation_phases/phase_02_lexical_ingest.md Group 3 step 9.
 docs/LICENSE_TAGGING.md Lexical sources row STEPBible-TBESG (CC-BY-4.0).
-graph/lexical.cypher constraints brief_lex_entry_id, source_slug, greek_lemma_id and index brief_lex_base_strong.
+graph/lexical.cypher constraints brief_lex_entry_id, source_slug, greek_lemma_id and indexes brief_lex_base_strong, greek_lemma_strong (Decision 18 LEX_FOR backing index, line 63).
 tools/expected_counts.json sources."STEPBible-TBESG" (tier A, expected_count 11035, record_unit lemma).
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
 """
@@ -271,6 +279,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 SOURCE_SLUG = "STEPBible-TBESG"
@@ -305,7 +314,7 @@ _MERGE_BRIEF_LEX = (
 _MERGE_LEX_FOR = (
     "UNWIND $rows AS row "
     "MATCH (b:BriefLexEntry) WHERE b.strong_disambig = row.strong_disambig "
-    "MATCH (g:`GreekLemma` {id: row.base_strong}) "
+    "MATCH (g:`GreekLemma` {strong: row.canonical_strong}) "
     "MERGE (b)-[r:`LEX_FOR`]->(g) RETURN count(r) AS edges"
 )
 
@@ -427,14 +436,34 @@ def _merge_brief_lex(session: Any, rows: list[dict[str, Any]]) -> int:
     return total
 
 
+def _canonical_greek_strong(raw_base_strong: str) -> str | None:
+    """Decision 18 line 656 canonical form for the LEX_FOR join value.
+
+    Routes the raw upstream base Strong through the single normaliser
+    ingest.canonical_strongs.canonical_strongs(raw, 'gk') and returns
+    canon[0] verbatim (e.g. 'G40' -> 'G0040'). Decision 18 line 642: an
+    unresolvable token MUST NOT fabricate a Strong; the adapter skips the
+    LEX_FOR attachment (returns None) rather than minting a key.
+    """
+    try:
+        return canonical_strongs(raw_base_strong, "gk")[0]
+    except ValueError:
+        return None
+
+
 def _merge_lex_for(session: Any, rows: list[dict[str, Any]]) -> int:
-    edge_rows = [
-        {
-            "strong_disambig": r["strong_disambig"],
-            "base_strong": r["base_strong"],
-        }
-        for r in rows
-    ]
+    edge_rows = []
+    for r in rows:
+        canonical_strong = _canonical_greek_strong(r["base_strong"])
+        if canonical_strong is None:
+            continue
+        edge_rows = [
+            *edge_rows,
+            {
+                "strong_disambig": r["strong_disambig"],
+                "canonical_strong": canonical_strong,
+            },
+        ]
     total = 0
     for start in range(0, len(edge_rows), BATCH_SIZE):
         batch = edge_rows[start:start + BATCH_SIZE]
