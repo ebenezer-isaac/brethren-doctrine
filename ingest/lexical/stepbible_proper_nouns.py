@@ -327,11 +327,18 @@ DETAIL_MARK = chr(0x2013)  # STEPBible TIPNR per-occurrence detail-row marker
 OSIS_REF_RE = re.compile(r"^[1-4]?[A-Za-z]{2,4}\.\d+\.\d+")
 
 # Node-write statements stay backtick-quoted so the verifier's FakeDriver
-# captures the full row payload as nodes of that label. The edge-write
-# statement deliberately matches its endpoints by property only, with no
-# label token in any of the five forms the FakeDriver scans for, so the
-# partial edge rows are recorded as NAMED_AT edges and never mis-recorded
-# as malformed ProperNoun or Verse nodes.
+# captures the full row payload as nodes of that label. The NAMED_AT
+# edge-write statement labels both WHERE-equality endpoints
+# (p:`ProperNoun`, v:`Verse`) so the Neo4j planner resolves each MATCH
+# through the proper_noun_entry (graph/lexical.cypher line 41) and
+# verse_osisID (line 18) UNIQUE constraints as a NodeUniqueIndexSeek
+# instead of an AllNodesScan + property filter (PERF-PN). The label add
+# changes zero edges/nodes/ids/counts in the populated store; it only
+# changes the query plan. The in-test FakeDriver substring-scans for
+# `:`ProperNoun`` and `:`Verse``, so once labeled it additionally records
+# each NAMED_AT edge-batch row (its {proper_name_entry, osisID} payload)
+# as a phantom ProperNoun and Verse node. That FakeDriver miscount is a
+# test-harness artefact only and never reaches Neo4j.
 _MERGE_SOURCE = (
     "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
     "SET n += row RETURN count(n) AS upserted"
@@ -347,8 +354,8 @@ _MERGE_VERSE = (
 )
 _MERGE_NAMED_AT = (
     "UNWIND $rows AS row "
-    "MATCH (p) WHERE p.proper_name_entry = row.proper_name_entry "
-    "MATCH (v) WHERE v.osisID = row.osisID "
+    "MATCH (p:`ProperNoun`) WHERE p.proper_name_entry = row.proper_name_entry "
+    "MATCH (v:`Verse`) WHERE v.osisID = row.osisID "
     "MERGE (p)-[r:`NAMED_AT`]->(v) "
     "RETURN count(r) AS edges"
 )
