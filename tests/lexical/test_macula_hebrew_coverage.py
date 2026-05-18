@@ -224,7 +224,12 @@ def _parse_cypher_into_driver(
             rows_param = params.get("rows") or params.get("records") or [{}]
             count = len(rows_param) if isinstance(rows_param, list) else 1
             for _ in range(count):
-                driver._edges.append({"rel_type": rel_type})
+                props: dict[str, Any] = {}
+                if isinstance(rows_param, list) and rows_param:
+                    first = rows_param[0]
+                    if isinstance(first, dict):
+                        props = dict(first)
+                driver._edges.append({"rel_type": rel_type, **props})
 
 
 # -- fixtures ------------------------------------------------------------------
