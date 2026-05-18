@@ -622,7 +622,7 @@ _MERGE_NODE = (
 )
 _MERGE_EDGE = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b:`Verse` {osisID: row.osis_target}) "
+    "MATCH (a:`CrossRef` {id: row.from_id}), (b:`Verse` {osisID: row.osis_target}) "
     "MERGE (a)-[r:`CROSS_REF` "
     "{source: row.source, osis_target: row.osis_target}]->(b) "
     "SET r.license = row.license, r.redistribute = row.redistribute "
