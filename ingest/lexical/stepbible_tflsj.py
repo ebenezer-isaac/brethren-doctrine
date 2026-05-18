@@ -292,3 +292,165 @@ caste pre-commit hook enforces this shape so the file carries only
 the schema contract; the runnable adapter body lands in the
 implementer-impl caste commit.
 """
+
+from __future__ import annotations
+
+import unicodedata
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TFLSJ"
+LICENSE_ID = "CC-BY-4.0"
+TFLSJ_FILES = (
+    "TFLSJ  0-5624 - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt",
+    "TFLSJ extra - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt",
+)
+HEADER_PREFIX = "eStrong\tdStrong"
+MIN_COLUMNS = 8
+BATCH_SIZE = 500
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_LSJ_ENTRY = (
+    "UNWIND $rows AS row MERGE (n:`LsjEntry` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_LEX_FOR = (
+    "UNWIND $rows AS row "
+    "MATCH (e:LsjEntry{id: row.id}), (g:GreekLemma{strong: row.strong}) "
+    "MERGE (e)-[r:`LEX_FOR`]->(g) "
+    "RETURN count(r) AS edges"
+)
+
+
+def _read_text(path: Path) -> str:
+    with path.open(encoding="utf-8-sig") as fh:
+        return fh.read()
+
+
+def _strip_accents(value: str) -> str:
+    decomposed = unicodedata.normalize("NFD", value)
+    stripped = "".join(
+        ch for ch in decomposed if not (0x0300 <= ord(ch) <= 0x036F)
+    )
+    return unicodedata.normalize("NFC", stripped)
+
+
+def _nullable(value: str) -> str | None:
+    trimmed = value.strip()
+    return trimmed if trimmed else None
+
+
+def _stable_id(strong: str, lemma: str) -> str:
+    return f"tflsj:{strong}:{lemma}"
+
+
+def _parse_row(line: str) -> dict[str, Any] | None:
+    parts = line.split("\t")
+    if len(parts) < MIN_COLUMNS:
+        return None
+    strong = parts[0].strip()
+    lemma = parts[3].strip()
+    transliteration = parts[4].strip()
+    pos = parts[5].strip()
+    english = parts[6]
+    lsj_definition = parts[7]
+    if not strong or not strong.startswith(("G", "H")):
+        return None
+    if not lemma or not transliteration or not pos:
+        return None
+    return {
+        "id": _stable_id(strong, lemma),
+        "strong": strong,
+        "lemma": lemma,
+        "lemma_unaccented": _strip_accents(lemma),
+        "transliteration": transliteration,
+        "pos": pos,
+        "english": _nullable(english),
+        "lsj_definition": _nullable(lsj_definition),
+        "source": SOURCE_SLUG,
+    }
+
+
+def _parse_file(text: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    header_seen = False
+    for raw_line in text.splitlines():
+        if not header_seen:
+            if raw_line.startswith(HEADER_PREFIX):
+                header_seen = True
+            continue
+        if not raw_line.strip():
+            continue
+        row = _parse_row(raw_line)
+        if row is not None:
+            rows = [*rows, row]
+    return rows
+
+
+def _load_rows(lexicons_root: Path) -> list[dict[str, Any]]:
+    collected: list[dict[str, Any]] = []
+    for filename in TFLSJ_FILES:
+        path = lexicons_root / filename
+        if not path.exists():
+            continue
+        collected = [*collected, *_parse_file(_read_text(path))]
+    deduped: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for row in collected:
+        key = row["id"]
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped = [*deduped, row]
+    return deduped
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_lsj_entries(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_LSJ_ENTRY, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_lex_for_edges(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = [
+            {"id": r["id"], "strong": r["strong"]}
+            for r in rows[start:start + BATCH_SIZE]
+        ]
+        session.run(_MERGE_LEX_FOR, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_tflsj(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TFLSJ and MERGE LsjEntry, Source, and LEX_FOR edges.
+
+    data_root is the Lexicons directory holding the two TFLSJ release files.
+    """
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_lsj_entries(session, rows)
+        lex_for = _merge_lex_for_edges(session, rows)
+    return {
+        "LsjEntry": merged,
+        "Source": 1,
+        "LEX_FOR": lex_for,
+    }
