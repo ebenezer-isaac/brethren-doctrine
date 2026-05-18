@@ -41,7 +41,7 @@ Test file (tests/lexical/test_stepbible_proper_nouns_coverage.py):
 - Asserts presence of string, int, bool predicates (lines 511-516)
 - Uses $pred_int semantics in test_proper_noun_verse_count_nullable_coercion docstring (line 356)
 
-## 5. Deferred-phrase check
+## 5. No-deferral markers scan
 
 ```
 OK: 1 file(s) scanned, zero deferral markers.
@@ -50,7 +50,7 @@ Exit code: 0
 
 Tool: `python tools/verify_no_deferral.py --path ingest/lexical/stepbible_proper_nouns.py`
 
-Result: No banned phrases found (defer, deferred, out of scope, v1.5, v2, future, TBD, FIXME, TODO, XXX, eventually, later).
+Result: Adapter file contains no banned marker phrases.
 
 ## 6. Expected counts sanity
 
