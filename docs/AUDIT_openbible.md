@@ -53,7 +53,7 @@ OK: 1 file(s) scanned, zero deferral markers.
 EXIT_CODE: 0
 ```
 
-Gate: PASS (no forbidden phrases: defer, defer to, out of scope, v1.5, v2, future, TBD, FIXME, TODO, XXX, eventually, later).
+Gate: PASS (forbidden markers absent: defer, out of scope, v1.5, v2, future, TBD, FIXME, TODO, XXX, eventually, later).
 
 ## 6. Expected Counts Sanity
 
