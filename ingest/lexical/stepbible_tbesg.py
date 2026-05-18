@@ -264,3 +264,193 @@ graph/lexical.cypher constraints brief_lex_entry_id, source_slug, greek_lemma_id
 tools/expected_counts.json sources."STEPBible-TBESG" (tier A, expected_count 11035, record_unit lemma).
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
 """
+
+from __future__ import annotations
+
+import re
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TBESG"
+LICENSE_ID = "CC-BY-4.0"
+LANGUAGE = "greek"
+LEXICONS_SUBDIR = "Lexicons"
+TBESG_FILE = (
+    "TBESG - Translators Brief lexicon of Extended Strongs for Greek - "
+    "STEPBible.org CC BY.txt"
+)
+BATCH_SIZE = 500
+
+_ESTRONG_PATTERN = re.compile(r"^G\d")
+
+_COL_ESTRONG = 0
+_COL_DSTRONG = 1
+_COL_GREEK = 3
+_COL_TRANSLITERATION = 4
+_COL_MORPH = 5
+_COL_GLOSS = 6
+_COL_DEFINITION = 7
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_BRIEF_LEX = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`BriefLexEntry` {strong_disambig: row.strong_disambig}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_LEX_FOR = (
+    "UNWIND $rows AS row "
+    "MATCH (b:BriefLexEntry) WHERE b.strong_disambig = row.strong_disambig "
+    "MATCH (g:`GreekLemma` {id: row.base_strong}) "
+    "MERGE (b)-[r:`LEX_FOR`]->(g) RETURN count(r) AS edges"
+)
+
+
+def _column(parts: list[str], index: int) -> str:
+    if index < len(parts):
+        return parts[index].strip()
+    return ""
+
+
+def _disambig_token(dstrong_cell: str, base_strong: str) -> str:
+    head = dstrong_cell.split()
+    if head and head[0].startswith("G"):
+        return head[0]
+    return base_strong
+
+
+def _first_nonempty(*candidates: str) -> str:
+    for value in candidates:
+        if value:
+            return value
+    return ""
+
+
+def _compose_gloss_line(
+    strong_disambig: str, greek: str, transliteration: str | None, english: str
+) -> str:
+    head = f"{strong_disambig} {greek}"
+    if transliteration:
+        head = f"{head} {transliteration}"
+    return f"{head}: {english}"
+
+
+def _row_to_node(parts: list[str]) -> dict[str, Any] | None:
+    base_strong = _column(parts, _COL_ESTRONG)
+    if not _ESTRONG_PATTERN.match(base_strong):
+        return None
+    strong_disambig = _disambig_token(_column(parts, _COL_DSTRONG), base_strong)
+    raw_greek = _column(parts, _COL_GREEK)
+    raw_translit = _column(parts, _COL_TRANSLITERATION)
+    raw_pos = _column(parts, _COL_MORPH)
+    raw_gloss = _column(parts, _COL_GLOSS)
+    raw_definition = _column(parts, _COL_DEFINITION)
+
+    greek = _first_nonempty(raw_greek, raw_translit, strong_disambig)
+    english = _first_nonempty(raw_gloss, raw_greek, raw_translit, strong_disambig)
+    definition = _first_nonempty(raw_definition, english)
+    transliteration = raw_translit if raw_translit else None
+    pos = raw_pos if raw_pos else None
+
+    gloss_line = _compose_gloss_line(
+        strong_disambig, greek, transliteration, english
+    )
+    return {
+        "strong_disambig": strong_disambig,
+        "gloss_line": gloss_line,
+        "base_strong": base_strong,
+        "greek": greek,
+        "transliteration": transliteration,
+        "pos": pos,
+        "english": english,
+        "definition": definition,
+        "language": LANGUAGE,
+        "source": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": True,
+    }
+
+
+def _find_data_start(lines: list[str]) -> int:
+    for idx, line in enumerate(lines):
+        if line.startswith("eStrong") and "dStrong" in line and "Greek" in line:
+            return idx + 1
+    return len(lines)
+
+
+def _parse_lines(lines: list[str]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for raw in lines[_find_data_start(lines):]:
+        line = raw.rstrip("\r")
+        if "\t" not in line:
+            continue
+        node = _row_to_node(line.split("\t"))
+        if node is None:
+            continue
+        key = node["strong_disambig"]
+        if key in seen:
+            continue
+        seen.add(key)
+        rows = [*rows, node]
+    return rows
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    path = data_root / LEXICONS_SUBDIR / TBESG_FILE
+    if not path.exists():
+        path = data_root / TBESG_FILE
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8-sig") as handle:
+        text = handle.read()
+    return _parse_lines(text.splitlines())
+
+
+def _merge_source(session: Any) -> None:
+    payload = [
+        {"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}
+    ]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_brief_lex(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_BRIEF_LEX, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_lex_for(session: Any, rows: list[dict[str, Any]]) -> int:
+    edge_rows = [
+        {
+            "strong_disambig": r["strong_disambig"],
+            "base_strong": r["base_strong"],
+        }
+        for r in rows
+    ]
+    total = 0
+    for start in range(0, len(edge_rows), BATCH_SIZE):
+        batch = edge_rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_LEX_FOR, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_tbesg(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TBESG and MERGE BriefLexEntry, Source, LEX_FOR."""
+    rows = _load_rows(Path(data_root))
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_brief_lex(session, rows)
+        edges = _merge_lex_for(session, rows)
+    return {"BriefLexEntry": merged, "Source": 1, "LEX_FOR": edges}
