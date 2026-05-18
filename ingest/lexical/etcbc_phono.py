@@ -307,28 +307,53 @@ _ATTACH_PHONO = (
 )
 
 
-def _read_header_end(lines: list[str]) -> int:
-    for idx, line in enumerate(lines):
-        if line.strip() == "" and idx > 0:
-            return idx + 1
-    return 0
+def _read_tf_body(path: Path) -> list[str]:
+    with path.open(encoding="utf-8") as fh:
+        text = fh.read()
+    lines = text.splitlines()
+    blank_at = next((i for i, raw in enumerate(lines) if raw == ""), None)
+    if blank_at is None:
+        return []
+    return lines[blank_at + 1:]
+
+
+def _parse_phono_feature(lines: list[str]) -> dict[int, str]:
+    values: dict[int, str] = {}
+    counter = 1
+    for raw in lines:
+        if raw == "":
+            counter += 1
+            continue
+        if "\t" in raw:
+            spec, value = raw.split("\t", 1)
+            if "-" in spec:
+                lo, hi = (int(x) for x in spec.split("-", 1))
+                for node_id in range(lo, hi + 1):
+                    values[node_id] = value
+                counter = hi + 1
+            else:
+                node_id = int(spec)
+                values[node_id] = value
+                counter = node_id + 1
+        else:
+            values[counter] = raw
+            counter += 1
+    return values
+
+
+def _phono_value(raw: str) -> Any:
+    return raw if raw.strip() != "" else None
 
 
 def _load_phono_rows(path: Path) -> list[dict[str, Any]]:
-    with path.open(encoding="utf-8") as fh:
-        text = fh.read()
-    lines = text.split("\n")
-    data_start = _read_header_end(lines)
-    rows: list[dict[str, Any]] = []
-    node_id = 0
-    for raw in lines[data_start:]:
-        if node_id >= WORD_NODE_MAX:
-            break
-        node_id += 1
-        value = raw.rstrip("\r")
-        phono = value if value.strip() != "" else None
-        rows = [*rows, {"id": f"bhsa:tf:{node_id}", "phono": phono}]
-    return rows
+    values = _parse_phono_feature(_read_tf_body(path))
+    return [
+        {
+            "id": f"bhsa:tf:{node_id}",
+            "phono": _phono_value(values.get(node_id, "")),
+        }
+        for node_id in range(WORD_NODE_MIN, WORD_NODE_MAX + 1)
+    ]
 
 
 def _merge_source(session: Any) -> None:
