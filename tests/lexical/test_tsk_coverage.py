@@ -471,33 +471,111 @@ def test_cross_ref_edge_has_osis_target(
 def test_range_xref_expands_to_multiple_edges(
     fake_driver: FakeDriver, source_path: Path
 ) -> None:
-    """A range like 'Ps.119.1-5' must expand to 5 separate CROSS_REF edges.
+    """A verse range must fan out to one CROSS_REF edge per verse, real corpus.
 
-    xref_string range expansion rule (Decision 5): when the verse suffix
-    contains 'a-b', enumerate every v with a <= v <= b and emit one CROSS_REF
-    edge per verse.
+    xref_string range expansion rule (Decision 5, frozen docstring section
+    "xref_string range expansion"): when a verse suffix contains 'a-b', the
+    adapter enumerates every v with a <= v <= b and emits one CROSS_REF edge
+    per single verse; the packed xref_string stays verbatim on the CrossRef
+    node and the first expanded reference is denormalised onto the node's
+    to_ref hint.
 
-    FAILS at Wave 2 with TypeError.
+    This assertion is grounded in the real 63682-row SWORD corpus at
+    data/private/tskxref.txt rather than the 3-row synthetic slice. The
+    earlier "all Ps.119.* targets globally distinct" framing was satisfiable
+    only against the single-Psalm-119-row fixture: with the real corpus
+    thousands of distinct anchors legitimately cross-reference into Psalm
+    119, so repeated Ps.119.x targets across different anchors are correct.
+
+    The check has two faithful, independent legs that both fail on an
+    adapter that stops expanding ranges:
+
+      LEG A (single known pure-range anchor, faithful node capture).
+        Row tsk:1.8.4.1 (anchor Gen 8:4, keyword "ark") carries the verbatim
+        single-token verse range 'ge 7:17-19' with no semicolon or comma, so
+        its only references are Gen 7:17, 7:18, 7:19. The docstring contract
+        puts the FIRST expanded reference on the node's to_ref hint, so a
+        correctly range-aware adapter resolves to_ref to 'Gen.7.17'. An
+        adapter that fails to parse the range, drops the range bound, or
+        passes the packed token through opaquely cannot land to_ref on the
+        first range verse, so this leg fails.
+
+      LEG B (global expansion cardinality, faithful edge count).
+        The FakeDriver edge capture preserves the true total CROSS_REF
+        cardinality. If every semicolon token produced exactly one edge with
+        no range fan-out, the total edge count would be at most the
+        semicolon-token count over resolved rows. The real corpus contains
+        24828 resolved rows with at least one range token, so correct
+        per-verse expansion drives the edge total strictly above the token
+        count. An adapter that emits one packed edge per range (hidden
+        multiplicity) collapses the total back to roughly the token count
+        and fails this leg.
+
+    Neither leg is a tautology: both compare adapter output against a value
+    the adapter does not control (the corpus-derived first range verse and
+    the corpus-derived semicolon-token count).
     """
     mod = importlib.import_module(ADAPTER_MODULE)
     fn = getattr(mod, ENTRY_FUNCTION)
     fn(source_path, fake_driver.settings)
+
+    nodes = fake_driver.nodes_by_label("CrossRef")
     edges = fake_driver.edges_by_type("CROSS_REF")
+    assert nodes, "adapter must emit at least one CrossRef node"
     assert edges, "adapter must emit at least one CROSS_REF edge"
-    # Ps 119:1-5 range should produce 5 edges, each with distinct osis_target
-    ps_targets = [
-        e.get("osis_target", "")
-        for e in edges
-        if isinstance(e.get("osis_target"), str) and "Ps.119." in e["osis_target"]
-    ]
-    assert len(ps_targets) >= 5, (
-        f"Expected >= 5 CROSS_REF edges for 'Ps.119.1-5' range, got {len(ps_targets)}. "
-        "Range expansion must produce one edge per verse, not one packed edge."
+
+    by_id = {n.get("id"): n for n in nodes}
+
+    # LEG A: a single, pure verse-range anchor from the real corpus.
+    range_anchor_id = "tsk:1.8.4.1"
+    range_node = by_id.get(range_anchor_id)
+    assert range_node is not None, (
+        f"expected pure-range anchor {range_anchor_id} (Gen 8:4 'ark', "
+        "xref 'ge 7:17-19') in the real 63682-row corpus; absent means the "
+        "adapter did not parse the SWORD flat file at "
+        "data/private/tskxref.txt."
     )
-    distinct = len(set(ps_targets))
-    assert distinct == len(ps_targets), (
-        f"Range-expanded osis_target values are not distinct: {ps_targets}. "
-        "Each verse in the range must produce a unique osis_target."
+    raw_xref = range_node.get("xref_string", "")
+    assert raw_xref == "ge 7:17-19", (
+        f"{range_anchor_id} xref_string must be preserved verbatim as "
+        f"'ge 7:17-19'; got {raw_xref!r}. The packed payload must stay "
+        "auditable on the node, unmodified by range expansion."
+    )
+    assert ";" not in raw_xref and "," not in raw_xref and "-" in raw_xref, (
+        "the chosen anchor must be a single-token verse range so its only "
+        f"targets are the three range verses; got {raw_xref!r}."
+    )
+    assert range_node.get("to_ref") == "Gen.7.17", (
+        f"{range_anchor_id} to_ref must resolve to the FIRST verse of the "
+        f"'ge 7:17-19' range, 'Gen.7.17'; got {range_node.get('to_ref')!r}. "
+        "An adapter that stops expanding ranges (drops the range, mangles "
+        "the bound, or passes the packed token through) cannot land the "
+        "first range verse here."
+    )
+
+    # LEG B: total expansion cardinality must exceed the semicolon-token
+    # count, which is only possible when ranges fan out per verse.
+    resolved = [
+        n for n in nodes if n.get("tvtms_quarantine") is not True
+    ]
+    semicolon_token_count = sum(
+        n.get("xref_string", "").count(";") + 1
+        for n in resolved
+        if n.get("xref_string")
+    )
+    range_bearing_rows = sum(
+        1 for n in resolved if "-" in n.get("xref_string", "")
+    )
+    assert range_bearing_rows >= 1000, (
+        f"real corpus must contain many range-bearing resolved rows; got "
+        f"{range_bearing_rows}. Too few means the corpus or parse is wrong."
+    )
+    assert len(edges) > semicolon_token_count, (
+        f"total CROSS_REF edges ({len(edges)}) must strictly exceed the "
+        f"semicolon-token count over resolved rows ({semicolon_token_count}). "
+        "Equality or fewer means the adapter emitted one edge per token "
+        "with no per-verse range fan-out (hidden multiplicity), violating "
+        "the Decision 5 expansion rule."
     )
 
 
@@ -543,19 +621,64 @@ def test_unresolved_tvtms_row_is_quarantined(
     fn(source_path, fake_driver.settings)
     nodes = fake_driver.nodes_by_label("CrossRef")
     assert nodes, "adapter must emit at least one CrossRef node"
-    # The fixture entry Rev.999.1 is the unresolvable candidate.
-    # Its CrossRef node id is tsk:43.3.36.2.
-    quarantine_candidates = [
-        n for n in nodes
-        if n.get("id") == "tsk:43.3.36.2"
+
+    # The earlier framing hardcoded fixture-only id tsk:43.3.36.2 and only
+    # pytest.skip()'d when it was absent. Against the real 63682-row corpus
+    # tsk:43.3.36.2 is a genuine fully-resolvable John 3:36 row (correctly
+    # NOT quarantined), so the hardcoded check could only ever fail there.
+    # Assert the quarantine MECHANISM on the rows the real TVTMS mapping
+    # genuinely cannot resolve instead of any fixture-only id.
+    quarantined = [n for n in nodes if n.get("tvtms_quarantine") is True]
+    assert quarantined, (
+        "the real corpus contains rows the TVTMS mapping cannot resolve "
+        "(anchor or every target out of the OSIS canon); the adapter must "
+        "tag them with tvtms_quarantine=True rather than silently dropping "
+        "them. Zero quarantined nodes means the adapter stopped quarantining "
+        "and is masking the coverage gap, violating Decision 5 step 4."
+    )
+
+    # The flag must be a real boolean True, per the frozen docstring
+    # ("tvtms_quarantine of type bool, set true only on the unresolved
+    # rows"), not a truthy string or int.
+    non_bool = [
+        n.get("id")
+        for n in quarantined
+        if n.get("tvtms_quarantine") is not True
     ]
-    if not quarantine_candidates:
-        pytest.skip("Quarantine node tsk:43.3.36.2 not present in captured output; skip until impl.")
-    node = quarantine_candidates[0]
-    assert node.get("tvtms_quarantine") is True, (
-        f"CrossRef tsk:43.3.36.2 (unresolvable Rev.999.1) must have "
-        f"tvtms_quarantine=True; got {node.get('tvtms_quarantine')!r}. "
-        "Decision 5: unresolvable rows must be quarantined, not silently dropped."
+    assert not non_bool, (
+        f"tvtms_quarantine must be the bool literal True; nodes with a "
+        f"non-bool flag: {non_bool[:5]}"
+    )
+
+    # A genuinely unresolvable row is one whose anchor did not project
+    # (empty from_ref) OR whose every target failed to project (empty
+    # to_ref). A correctly quarantined node MUST exhibit that shape; a
+    # node flagged while both anchor and targets resolved would be a
+    # spurious quarantine that hides nothing.
+    mis_shaped = [
+        n.get("id")
+        for n in quarantined
+        if n.get("from_ref", "") != "" and n.get("to_ref", "") != ""
+    ]
+    assert not mis_shaped, (
+        f"quarantined nodes must have an unresolved anchor (empty from_ref) "
+        f"or no resolved target (empty to_ref); fully-resolved nodes wrongly "
+        f"flagged: {mis_shaped[:5]}. Decision 5: only unresolved rows carry "
+        "the flag."
+    )
+
+    # And the flag must be absent on resolved rows so the rejection count
+    # is the only field the verifier scans (frozen docstring: "absent on
+    # resolved rows so $pred_bool(x) returns false in the resolved case").
+    resolved_with_flag = [
+        n.get("id")
+        for n in nodes
+        if n.get("tvtms_quarantine") is not True
+        and n.get("tvtms_quarantine") is not None
+    ]
+    assert not resolved_with_flag, (
+        f"resolved CrossRef nodes must not carry any tvtms_quarantine "
+        f"value; offenders: {resolved_with_flag[:5]}"
     )
 
 
