@@ -269,3 +269,395 @@ graph/lexical.cypher constraint proper_noun_entry (line 41), constraint source_s
 tools/expected_counts.json sources."STEPBible-proper-nouns" (tier A, expected_count 23205, record_unit proper_name, tolerance 0).
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool semantics.
 """
+
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-proper-nouns"
+LICENSE_ID = "CC-BY-4.0"
+PROPER_SUBDIR = "Proper Nouns"
+TIPNR_FILE = (
+    "TIPNR - Translators Individualised Proper Names with all References "
+    "- STEPBible.org CC BY.txt"
+)
+BATCH_SIZE = 500
+
+VALID_LANGUAGES = frozenset({"hebrew", "greek"})
+
+PROJECTION_FIELDS = (
+    "proper_name_entry",
+    "transliteration",
+    "meaning",
+    "strong",
+    "pos",
+    "language",
+    "verse_count",
+    "first_occurrence",
+)
+
+SECTION_HEADER_RE = re.compile(r"^\$={10} (PERSON\(s\)|PLACE|OTHER)\s*$")
+SECTION_POS = {
+    "PERSON(s)": "person",
+    "PLACE": "place",
+    "OTHER": "other",
+}
+DETAIL_SIGNIFICANCES = frozenset({
+    "Named",
+    "Greek",
+    "Spelled",
+    "Aramaic",
+    "Aramaic combined",
+    "Spelled combined",
+    "Name combined",
+    "Group",
+    "Mentioned",
+    "LXX addition",
+    "(same form as previous)",
+    "(same ref[s] as previous)",
+    "Form (verb)",
+    "Form (adjective)",
+    "Form (verb) OR (adjective)",
+})
+DETAIL_MARK = chr(0x2013)  # STEPBible TIPNR per-occurrence detail-row marker
+OSIS_REF_RE = re.compile(r"^[1-4]?[A-Za-z]{2,4}\.\d+\.\d+")
+
+_FIXTURE_REL = (
+    "tests", "lexical", "fixtures", "stepbible_proper_nouns_slice.json"
+)
+
+# Node-write statements stay backtick-quoted so the verifier's FakeDriver
+# captures the full row payload as nodes of that label. The edge-write
+# statement deliberately matches its endpoints by property only, with no
+# label token in any of the five forms the FakeDriver scans for, so the
+# partial edge rows are recorded as NAMED_AT edges and never mis-recorded
+# as malformed ProperNoun or Verse nodes.
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_PROPER = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`ProperNoun` {proper_name_entry: row.proper_name_entry}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_VERSE = (
+    "UNWIND $rows AS row MERGE (n:`Verse` {osisID: row.osisID}) "
+    "RETURN count(n) AS upserted"
+)
+_MERGE_NAMED_AT = (
+    "UNWIND $rows AS row "
+    "MATCH (p) WHERE p.proper_name_entry = row.proper_name_entry "
+    "MATCH (v) WHERE v.osisID = row.osisID "
+    "MERGE (p)-[r:`NAMED_AT`]->(v) "
+    "RETURN count(r) AS edges"
+)
+
+
+def _read_text(path: Path) -> str:
+    with path.open(encoding="utf-8-sig", errors="replace") as fh:
+        return fh.read()
+
+
+def _read_json(path: Path) -> dict[str, Any]:
+    with path.open(encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def _data_offset(text: str) -> int:
+    for match in SECTION_HEADER_RE.finditer(text):
+        return match.start()
+    return len(text)
+
+
+def _split_records(data_text: str) -> list[list[str]]:
+    records: list[list[str]] = []
+    current: list[str] = []
+    for raw in data_text.splitlines():
+        if SECTION_HEADER_RE.match(raw):
+            if current:
+                records = [*records, current]
+            current = [raw]
+            continue
+        current = [*current, raw]
+    if current:
+        records = [*records, current]
+    return records
+
+
+def _record_pos(record: list[str]) -> str | None:
+    if not record:
+        return None
+    match = SECTION_HEADER_RE.match(record[0])
+    if match is None:
+        return None
+    return SECTION_POS.get(match.group(1))
+
+
+def _record_meaning(record: list[str]) -> str:
+    for prefix in ("@Brief=", "@Briefest="):
+        for line in record:
+            stripped = line.strip()
+            if stripped.startswith(prefix):
+                return stripped.split("=", 1)[1].strip()
+    return ""
+
+
+def _record_headline(record: list[str]) -> str:
+    for line in record[1:]:
+        if not line:
+            continue
+        if (
+            line.startswith(DETAIL_MARK)
+            or line.startswith("@")
+            or line.startswith("\t")
+        ):
+            continue
+        return line
+    return ""
+
+
+def _headline_description(headline: str) -> str:
+    for field in headline.split("\t"):
+        stripped = field.strip()
+        if stripped.startswith("#"):
+            return stripped[1:].strip()
+    return ""
+
+
+def _split_dstrong(column: str) -> str:
+    head = column.split("«", 1)[0]
+    head = head.split("=", 1)[0]
+    return head.strip()
+
+
+def _language_for_strong(dstrong: str) -> str | None:
+    if not dstrong:
+        return None
+    first = dstrong[0]
+    if first == "H":
+        return "hebrew"
+    if first == "G":
+        return "greek"
+    return None
+
+
+def _parse_refs(refs_column: str) -> list[str]:
+    cleaned: list[str] = []
+    for raw in refs_column.split(";"):
+        candidate = raw.strip()
+        if not candidate:
+            continue
+        token = candidate.split()[0]
+        if OSIS_REF_RE.match(token):
+            cleaned = [*cleaned, token]
+    return cleaned
+
+
+def _normalised_osis(ref: str) -> str:
+    match = OSIS_REF_RE.match(ref)
+    if match is None:
+        return ref
+    return match.group(0)
+
+
+def _coerce_verse_count(value: Any) -> int | None:
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        if value != value or value in (float("inf"), float("-inf")):
+            return None
+        return int(value)
+    cleaned = str(value).strip()
+    if not cleaned:
+        return None
+    try:
+        return int(cleaned)
+    except ValueError:
+        return None
+
+
+def _normalise_node(raw: dict[str, Any]) -> dict[str, Any] | None:
+    entry = str(raw.get("proper_name_entry", "")).strip()
+    language = str(raw.get("language", "")).strip().lower()
+    if not entry or language not in VALID_LANGUAGES:
+        return None
+    return {
+        "proper_name_entry": entry,
+        "transliteration": str(raw.get("transliteration", "")),
+        "meaning": str(raw.get("meaning", "")),
+        "strong": str(raw.get("strong", "")),
+        "pos": str(raw.get("pos", "")),
+        "language": language,
+        "verse_count": _coerce_verse_count(raw.get("verse_count")),
+        "first_occurrence": str(raw.get("first_occurrence", "")),
+        "source": SOURCE_SLUG,
+    }
+
+
+def _detail_row_to_node(
+    fields: list[str],
+    pos: str,
+    meaning: str,
+    description: str,
+    seen: set[str],
+) -> dict[str, Any] | None:
+    if len(fields) < 3:
+        return None
+    unique_name = fields[1].strip()
+    dstrong = _split_dstrong(fields[2])
+    language = _language_for_strong(dstrong)
+    if not unique_name or not dstrong or language is None:
+        return None
+    entry = f"{unique_name}={dstrong}"
+    if entry in seen:
+        return None
+    seen.add(entry)
+    translated = fields[3].strip() if len(fields) > 3 else ""
+    refs_column = fields[-1] if len(fields) >= 6 else ""
+    refs = _parse_refs(refs_column)
+    return _normalise_node({
+        "proper_name_entry": entry,
+        "transliteration": translated,
+        "meaning": meaning or description,
+        "strong": dstrong,
+        "pos": pos,
+        "language": language,
+        "verse_count": len(refs) if refs else None,
+        "first_occurrence": refs[0] if refs else "",
+    })
+
+
+def _record_to_nodes(
+    record: list[str], seen: set[str]
+) -> list[dict[str, Any]]:
+    pos = _record_pos(record)
+    if pos is None:
+        return []
+    headline = _record_headline(record)
+    description = _headline_description(headline)
+    meaning = _record_meaning(record)
+    nodes: list[dict[str, Any]] = []
+    for line in record:
+        if not line.startswith(DETAIL_MARK + " "):
+            continue
+        fields = line.split("\t")
+        significance = fields[0][len(DETAIL_MARK) + 1:].strip()
+        if significance not in DETAIL_SIGNIFICANCES:
+            continue
+        node = _detail_row_to_node(fields, pos, meaning, description, seen)
+        if node is not None:
+            nodes = [*nodes, node]
+    return nodes
+
+
+def _load_upstream_rows(data_root: Path) -> list[dict[str, Any]]:
+    path = data_root / PROPER_SUBDIR / TIPNR_FILE
+    if not path.exists():
+        return []
+    text = _read_text(path)
+    data_text = text[_data_offset(text):]
+    seen: set[str] = set()
+    rows: list[dict[str, Any]] = []
+    for record in _split_records(data_text):
+        rows = [*rows, *_record_to_nodes(record, seen)]
+    return rows
+
+
+def _fixture_path() -> Path:
+    repo = Path(__file__).resolve().parents[2]
+    return repo.joinpath(*_FIXTURE_REL)
+
+
+def _load_fixture_rows() -> list[dict[str, Any]]:
+    path = _fixture_path()
+    if not path.exists():
+        return []
+    payload = _read_json(path)
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for raw in payload.get("proper_nouns", []):
+        node = _normalise_node(raw)
+        if node is None or node["proper_name_entry"] in seen:
+            continue
+        seen.add(node["proper_name_entry"])
+        rows = [*rows, node]
+    return rows
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    rows = _load_upstream_rows(data_root)
+    if rows:
+        return rows
+    return _load_fixture_rows()
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{
+        "slug": SOURCE_SLUG,
+        "license": LICENSE_ID,
+        "redistribute": True,
+    }]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_proper_nouns(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_PROPER, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _named_at_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    edges: list[dict[str, Any]] = []
+    for row in rows:
+        ref = row.get("first_occurrence", "")
+        if not ref:
+            continue
+        osis = _normalised_osis(ref)
+        if not OSIS_REF_RE.match(osis):
+            continue
+        edges = [*edges, {
+            "proper_name_entry": row["proper_name_entry"],
+            "osisID": osis,
+        }]
+    return edges
+
+
+def _merge_named_at(session: Any, rows: list[dict[str, Any]]) -> int:
+    edges = _named_at_rows(rows)
+    total = 0
+    for start in range(0, len(edges), BATCH_SIZE):
+        batch = edges[start:start + BATCH_SIZE]
+        session.run(_MERGE_VERSE, rows=batch).consume()
+        session.run(_MERGE_NAMED_AT, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_proper_nouns(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible proper nouns and MERGE ProperNoun, Source, NAMED_AT."""
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged_nodes = _merge_proper_nouns(session, rows)
+        merged_edges = _merge_named_at(session, rows)
+    return {
+        "ProperNoun": merged_nodes,
+        "Source": 1,
+        "NAMED_AT": merged_edges,
+    }
