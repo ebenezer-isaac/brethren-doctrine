@@ -402,15 +402,18 @@ _MERGE_TFNODE = (
     "SET n += row RETURN count(n) AS upserted"
 )
 _MERGE_CONTAINS_PHRASE = (
-    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "UNWIND $rows AS row "
+    "MATCH (a:`BhsaClause` {id: row.from_id}), (b:`BhsaPhrase` {id: row.to_id}) "
     "MERGE (a)-[r:CONTAINS_PHRASE]->(b) RETURN count(r) AS edges"
 )
 _MERGE_CONTAINS_WORD = (
-    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "UNWIND $rows AS row "
+    "MATCH (a:`BhsaPhrase` {id: row.from_id}), (b:`BhsaWord` {id: row.to_id}) "
     "MERGE (a)-[r:CONTAINS_WORD]->(b) RETURN count(r) AS edges"
 )
 _MERGE_IN_VERSE = (
-    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "UNWIND $rows AS row "
+    "MATCH (a:`BhsaWord` {id: row.from_id}), (b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:IN_VERSE]->(b) RETURN count(r) AS edges"
 )
 
