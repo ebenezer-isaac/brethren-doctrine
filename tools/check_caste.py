@@ -14,7 +14,10 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     ``docs/cultural_data_inventory_catalog.json``,
     ``docs/ARCHITECTURE.md``, ``docs/implementation_phases/**``,
     ``graph/lexical.cypher``, ``graph/cultural.cypher``,
-    ``tools/expected_counts.json``.
+    ``tools/expected_counts.json``. On a ``[SCHEMA-REVISION]``-tagged
+    commit ONLY, also ``tools/expected_counts.baseline`` (its atomic
+    SHA-256 lock companion, which must move in the same commit as the
+    json). For all other commits the baseline remains implementer-z1's.
 * ``implementer``
     Allowed: a single ``.py`` file outside ``tests/`` and ``docs/``,
     plus that file's docstring contract commit. ``tools/*.py`` is
@@ -74,6 +77,17 @@ from pathlib import Path
 
 CASTE_TRAILER_RE = re.compile(
     r"^Caste:\s*(?P<name>[A-Za-z0-9_-]+)\s*$", re.MULTILINE,
+)
+
+# A [SCHEMA-REVISION] subject tag authorizes the architect caste to move
+# tools/expected_counts.json. Because tools/expected_counts.baseline is the
+# SHA-256 lock of that json, the two MUST move together in one atomic commit
+# (a half-move leaves the immutability gate transiently broken). The baseline
+# glob stays bound to implementer-z1 for all non-tagged commits; it is granted
+# to architect ONLY when this tag is present on the commit subject.
+SCHEMA_REVISION_TAG_RE = re.compile(r"^\[SCHEMA-REVISION\]")
+SCHEMA_REVISION_ARCHITECT_EXTRA: tuple[str, ...] = (
+    "tools/expected_counts.baseline",
 )
 
 
@@ -235,7 +249,18 @@ def _match_any(path: str, globs: tuple[str, ...]) -> bool:
     return False
 
 
-def evaluate(caste: str | None, changed: list[str]) -> Verdict:
+def _is_schema_revision(subject: str | None) -> bool:
+    if not subject:
+        return False
+    first_line = subject.splitlines()[0] if subject.splitlines() else subject
+    return SCHEMA_REVISION_TAG_RE.search(first_line.strip()) is not None
+
+
+def evaluate(
+    caste: str | None,
+    changed: list[str],
+    subject: str | None = None,
+) -> Verdict:
     if caste is None:
         return Verdict(
             ok=False,
@@ -256,12 +281,20 @@ def evaluate(caste: str | None, changed: list[str]) -> Verdict:
                 f"{sorted(CASTE_RULES)}"
             ),
         )
+    allowed_globs = rule.allowed_globs
+    if caste == "architect" and _is_schema_revision(subject):
+        # Atomic SHA-lock companion: a [SCHEMA-REVISION] commit moves
+        # tools/expected_counts.json and its lock tools/expected_counts.baseline
+        # together. Grant the baseline glob to architect ONLY here so the pair
+        # cannot be split. implementer-z1 keeps its standing baseline binding.
+        allowed_globs = allowed_globs + SCHEMA_REVISION_ARCHITECT_EXTRA
+
     violations: list[str] = []
     for f in changed:
         if _match_any(f, rule.forbidden_globs):
             violations.append(f"{f} (forbidden for caste {caste})")
             continue
-        if not _match_any(f, rule.allowed_globs):
+        if not _match_any(f, allowed_globs):
             violations.append(f"{f} (not in allowed set for caste {caste})")
     return Verdict(
         ok=len(violations) == 0,
@@ -300,7 +333,7 @@ def _commit_message_for_rev(rev: str, cwd: Path) -> str:
 def check_revision(rev: str, repo: Path) -> Verdict:
     msg = _commit_message_for_rev(rev, repo)
     changed = _changed_files_for_rev(rev, repo)
-    return evaluate(extract_caste(msg), changed)
+    return evaluate(extract_caste(msg), changed, subject=msg)
 
 
 def check_staged(repo: Path, message_file: Path | None = None) -> Verdict:
@@ -309,7 +342,7 @@ def check_staged(repo: Path, message_file: Path | None = None) -> Verdict:
     else:
         msg = ""
     changed = _staged_files(repo)
-    return evaluate(extract_caste(msg), changed)
+    return evaluate(extract_caste(msg), changed, subject=msg)
 
 
 def check_range(spec: str, repo: Path) -> list[tuple[str, Verdict]]:
