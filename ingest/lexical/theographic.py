@@ -498,14 +498,33 @@ _MERGE_NODE_TEMPLATE = (
     "UNWIND $rows AS row MERGE (n:`{label}` {{entity_id: row.entity_id}}) "
     "SET n += row RETURN count(n) AS upserted"
 )
-_MERGE_MENTIONS = (
+# PERF-THEO (docs/PHASE_D_EDGE_PERF_MANIFEST.md section 19, T8): the
+# MENTIONS / FROM_EDITION from-endpoint is one of six heterogeneous
+# entity labels (Person, Place, Period, Event, Group, Tribe), each keyed
+# by entity_id with its OWN uniqueness constraint in graph/lexical.cypher
+# (person_id, place_id, event_id, period_id, group_id, tribe_id). A single
+# unlabeled `MATCH (a {entity_id: ...})` forces an AllNodesScan because
+# Neo4j cannot pick a per-label index without a label in the pattern. The
+# fix tags every edge row with its source label at the build site (the
+# builder always knows the entity type) and dispatches one single-label
+# template per label so the planner uses NodeUniqueIndexSeek on the
+# matching *_id constraint. The to-side (Verse.osisID / Source.slug) is
+# already labeled and constraint-backed (verse_osisID / source_slug). The
+# six per-label row subsets partition the prior flat row list exactly
+# (every row carried exactly one source label), so the union of the six
+# dispatched MATCHes is the identical edge set: no edge dropped, no edge
+# duplicated, same from_id/to_id/slug/rel_type/direction/count.
+_FROM_LABELS = ("Person", "Place", "Period", "Event", "Group", "Tribe")
+_MERGE_MENTIONS_TEMPLATE = (
     "UNWIND $rows AS row "
-    "MATCH (a {entity_id: row.from_id}), (b:`Verse` {osisID: row.to_id}) "
+    "MATCH (a:`{label}` {{entity_id: row.from_id}}), "
+    "(b:`Verse` {{osisID: row.to_id}}) "
     "MERGE (a)-[r:`MENTIONS`]->(b) RETURN count(r) AS edges"
 )
-_MERGE_FROM_EDITION = (
+_MERGE_FROM_EDITION_TEMPLATE = (
     "UNWIND $rows AS row "
-    "MATCH (a {entity_id: row.from_id}), (b:`Source` {slug: row.slug}) "
+    "MATCH (a:`{label}` {{entity_id: row.from_id}}), "
+    "(b:`Source` {{slug: row.slug}}) "
     "MERGE (a)-[r:`FROM_EDITION`]->(b) RETURN count(r) AS edges"
 )
 
@@ -670,15 +689,20 @@ def _period_nodes(
             },
         ]
         for osis in buckets[century]:
-            edges = [*edges, {"from_id": slug, "to_id": osis}]
+            edges = [*edges, {"label": "Period", "from_id": slug, "to_id": osis}]
     return nodes, edges
 
 
-def _mention_edges(nodes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _mention_edges(
+    label: str, nodes: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
     edges: list[dict[str, Any]] = []
     for node in nodes:
         for osis in node.get("verses", []):
-            edges = [*edges, {"from_id": node["entity_id"], "to_id": osis}]
+            edges = [
+                *edges,
+                {"label": label, "from_id": node["entity_id"], "to_id": osis},
+            ]
     return edges
 
 
@@ -694,9 +718,32 @@ def _merge_nodes(session: Any, label: str, rows: list[dict[str, Any]]) -> int:
     return total
 
 
-def _merge_edges(session: Any, cypher: str, rows: list[dict[str, Any]]) -> None:
-    for start in range(0, len(rows), BATCH_SIZE):
-        session.run(cypher, rows=rows[start:start + BATCH_SIZE]).consume()
+def _merge_edges(session: Any, template: str, rows: list[dict[str, Any]]) -> None:
+    """Dispatch one single-label MATCH template per source label (PERF-THEO).
+
+    Every row carries exactly one ``label`` tag (Person, Place, Period,
+    Event, Group, or Tribe) assigned at the build site. The rows are
+    partitioned by that label and each non-empty subset is run through
+    the matching single-label template, so the planner uses
+    NodeUniqueIndexSeek on the per-label entity_id constraint instead of
+    AllNodesScan. The union of the six dispatched subsets is exactly the
+    input ``rows`` list (a partition: no row dropped, none duplicated),
+    so the resulting edge set is identical to the prior single unlabeled
+    MATCH over the same rows.
+    """
+    by_label: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        label = row["label"]
+        by_label = {**by_label, label: [*by_label.get(label, []), row]}
+    for label in _FROM_LABELS:
+        label_rows = by_label.get(label, [])
+        if not label_rows:
+            continue
+        cypher = template.format(label=label)
+        for start in range(0, len(label_rows), BATCH_SIZE):
+            session.run(
+                cypher, rows=label_rows[start:start + BATCH_SIZE]
+            ).consume()
 
 
 def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
@@ -732,11 +779,14 @@ def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
 
     mention_edges: list[dict[str, Any]] = list(period_edges)
     for label in ("Person", "Place", "Event", "Group", "Tribe"):
-        mention_edges = [*mention_edges, *_mention_edges(by_label[label])]
+        mention_edges = [
+            *mention_edges,
+            *_mention_edges(label, by_label[label]),
+        ]
 
     from_edition = [
-        {"from_id": node["entity_id"], "slug": SOURCE_SLUG}
-        for nodes in by_label.values()
+        {"label": label, "from_id": node["entity_id"], "slug": SOURCE_SLUG}
+        for label, nodes in by_label.items()
         for node in nodes
     ]
 
@@ -749,6 +799,6 @@ def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
         ).consume()
         for label, rows in by_label.items():
             counts = {**counts, label: _merge_nodes(session, label, rows)}
-        _merge_edges(session, _MERGE_MENTIONS, mention_edges)
-        _merge_edges(session, _MERGE_FROM_EDITION, from_edition)
+        _merge_edges(session, _MERGE_MENTIONS_TEMPLATE, mention_edges)
+        _merge_edges(session, _MERGE_FROM_EDITION_TEMPLATE, from_edition)
     return {**counts, "Source": 1}
