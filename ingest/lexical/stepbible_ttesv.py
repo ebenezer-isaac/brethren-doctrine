@@ -342,26 +342,32 @@ _MERGE_TOKEN_CYPHER = (
     "UNWIND $rows AS row MERGE (n:`TaggedToken` {id: row.id}) "
     "SET n += row RETURN count(n) AS upserted"
 )
-# Edge MATCH binds endpoints by property only with no node-label token so the
-# FakeDriver label-substring parser never miscaptures an edge-batch row as a
-# TaggedToken / Source / Lemma / GreekLemma node. This mirrors the proven
-# property-only edge idiom in stepbible_tbesh.py.
+# PERF-TTESV (Phase D ledger T9, manifest section 16 + row table). Every edge
+# MATCH endpoint carries its node label so the Neo4j planner resolves the join
+# through a label-scoped index instead of an AllNodesScan: TaggedToken.id is
+# backed by the tagged_token_id UNIQUE constraint (Decision 16), Source.slug by
+# source_slug (Decision 14), Lemma.id by lemma_id (Decision 1, 11), GreekLemma.id
+# by greek_lemma_id (Decision 2, 4, 12). The Hebrew/Greek partition already
+# happens Python-side in _instance_of_payloads, so each branch maps one-to-one
+# onto its labelled template: pure label add, zero change to edge identity,
+# counts, ids, or the routed rows. ttesv is the self-consistent canonical
+# producer of its own Lemma/GreekLemma (id = bare Strong), so NO key change.
 _MERGE_FROM_EDITION_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t {id: row.token_id}) "
-    "MATCH (s {slug: row.source_slug}) "
+    "MATCH (t:`TaggedToken` {id: row.token_id}) "
+    "MATCH (s:`Source` {slug: row.source_slug}) "
     "MERGE (t)-[r:`FROM_EDITION`]->(s) RETURN count(r) AS edges"
 )
 _MERGE_INSTANCE_OF_HEBREW_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t {id: row.token_id}) "
-    "MATCH (l {id: row.lemma_id}) "
+    "MATCH (t:`TaggedToken` {id: row.token_id}) "
+    "MATCH (l:`Lemma` {id: row.lemma_id}) "
     "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
 )
 _MERGE_INSTANCE_OF_GREEK_CYPHER = (
     "UNWIND $rows AS row "
-    "MATCH (t {id: row.token_id}) "
-    "MATCH (l {id: row.lemma_id}) "
+    "MATCH (t:`TaggedToken` {id: row.token_id}) "
+    "MATCH (l:`GreekLemma` {id: row.lemma_id}) "
     "MERGE (t)-[r:`INSTANCE_OF`]->(l) RETURN count(r) AS edges"
 )
 
