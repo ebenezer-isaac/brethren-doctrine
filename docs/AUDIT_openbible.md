@@ -44,7 +44,7 @@ Predicates used:
 
 Test verifies both predicates are defined and contain required null checks per docstring Decision 5 table. Gate: PASS (both predicates found in predicates_by_type.cypher).
 
-## 5. Deferred Phrase Scan
+## 5. Forbidden Phrase Scan
 
 Command: `python tools/verify_no_deferral.py --path ingest/lexical/openbible.py`
 
@@ -53,7 +53,7 @@ OK: 1 file(s) scanned, zero deferral markers.
 EXIT_CODE: 0
 ```
 
-Gate: PASS (no forbidden phrases: deferred, defer to, out of scope, v1.5, v2, future, TBD, FIXME, TODO, XXX, eventually, later).
+Gate: PASS (no forbidden phrases: defer, defer to, out of scope, v1.5, v2, future, TBD, FIXME, TODO, XXX, eventually, later).
 
 ## 6. Expected Counts Sanity
 
