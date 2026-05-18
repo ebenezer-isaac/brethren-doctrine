@@ -272,7 +272,6 @@ tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool semantic
 
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
 from typing import Any
@@ -327,10 +326,6 @@ DETAIL_SIGNIFICANCES = frozenset({
 DETAIL_MARK = chr(0x2013)  # STEPBible TIPNR per-occurrence detail-row marker
 OSIS_REF_RE = re.compile(r"^[1-4]?[A-Za-z]{2,4}\.\d+\.\d+")
 
-_FIXTURE_REL = (
-    "tests", "lexical", "fixtures", "stepbible_proper_nouns_slice.json"
-)
-
 # Node-write statements stay backtick-quoted so the verifier's FakeDriver
 # captures the full row payload as nodes of that label. The edge-write
 # statement deliberately matches its endpoints by property only, with no
@@ -364,14 +359,12 @@ def _read_text(path: Path) -> str:
         return fh.read()
 
 
-def _read_json(path: Path) -> dict[str, Any]:
-    with path.open(encoding="utf-8") as fh:
-        return json.load(fh)
-
-
 def _data_offset(text: str) -> int:
-    for match in SECTION_HEADER_RE.finditer(text):
-        return match.start()
+    cursor = 0
+    for raw in text.splitlines(keepends=True):
+        if SECTION_HEADER_RE.match(raw.rstrip("\r\n")):
+            return cursor
+        cursor += len(raw)
     return len(text)
 
 
@@ -523,7 +516,7 @@ def _detail_row_to_node(
         return None
     seen.add(entry)
     translated = fields[3].strip() if len(fields) > 3 else ""
-    refs_column = fields[-1] if len(fields) >= 6 else ""
+    refs_column = fields[5] if len(fields) > 5 else ""
     refs = _parse_refs(refs_column)
     return _normalise_node({
         "proper_name_entry": entry,
@@ -573,32 +566,8 @@ def _load_upstream_rows(data_root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _fixture_path() -> Path:
-    repo = Path(__file__).resolve().parents[2]
-    return repo.joinpath(*_FIXTURE_REL)
-
-
-def _load_fixture_rows() -> list[dict[str, Any]]:
-    path = _fixture_path()
-    if not path.exists():
-        return []
-    payload = _read_json(path)
-    rows: list[dict[str, Any]] = []
-    seen: set[str] = set()
-    for raw in payload.get("proper_nouns", []):
-        node = _normalise_node(raw)
-        if node is None or node["proper_name_entry"] in seen:
-            continue
-        seen.add(node["proper_name_entry"])
-        rows = [*rows, node]
-    return rows
-
-
 def _load_rows(data_root: Path) -> list[dict[str, Any]]:
-    rows = _load_upstream_rows(data_root)
-    if rows:
-        return rows
-    return _load_fixture_rows()
+    return _load_upstream_rows(data_root)
 
 
 def _merge_source(session: Any) -> None:
