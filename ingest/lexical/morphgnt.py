@@ -328,7 +328,7 @@ def _iter_book_records(path: Path) -> list[dict[str, str]]:
         for raw in fh:
             parsed = _parse_line(raw)
             if parsed is not None:
-                records = [*records, parsed]
+                records.append(parsed)
     return records
 
 
@@ -344,13 +344,13 @@ def _build_verse_groups(
             continue
         if ref != current_ref:
             if current_ref is not None and current_words:
-                groups = [*groups, (current_ref, current_words)]
+                groups.append((current_ref, current_words))
             current_ref = ref
             current_words = [rec]
         else:
-            current_words = [*current_words, rec]
+            current_words.append(rec)
     if current_ref is not None and current_words:
-        groups = [*groups, (current_ref, current_words)]
+        groups.append((current_ref, current_words))
     return groups
 
 
@@ -414,18 +414,14 @@ def _build_rows(
             verse_text = " ".join(w["text"] for w in words).strip()
             if osis_ref not in seen_verses:
                 seen_verses.add(osis_ref)
-                verse_rows = [*verse_rows, _verse_node_row(osis_ref, verse_text)]
+                verse_rows.append(_verse_node_row(osis_ref, verse_text))
             for idx, rec in enumerate(words, start=1):
                 node = _word_node_row(rec, osis_ref, idx)
-                word_rows = [*word_rows, node]
-                in_verse_rows = [
-                    *in_verse_rows,
-                    _in_verse_edge_row(node["id"], osis_ref),
-                ]
-                parse_of_rows = [
-                    *parse_of_rows,
-                    _parse_of_edge_row(node["id"], osis_ref, idx),
-                ]
+                word_rows.append(node)
+                in_verse_rows.append(_in_verse_edge_row(node["id"], osis_ref))
+                parse_of_rows.append(
+                    _parse_of_edge_row(node["id"], osis_ref, idx)
+                )
     return word_rows, verse_rows, in_verse_rows, parse_of_rows
 
 
