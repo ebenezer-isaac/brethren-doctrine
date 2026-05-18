@@ -267,3 +267,207 @@ tools/expected_counts.json sources."STEPBible-TBESH" (tier A, expected_count 116
 tools/predicates_by_type.cypher for $pred_string, $pred_bool semantics.
 docs/LICENSE_TAGGING.md row 'STEPBible-TBESH' for the CC-BY-4.0 license tag and the redistribute-true policy under Decision 14.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "STEPBible-TBESH"
+LICENSE_ID = "CC-BY-4.0"
+LANGUAGE = "hebrew"
+LEXICONS_SUBDIR = "Lexicons"
+TBESH_FILE = (
+    "TBESH - Translators Brief lexicon of Extended Strongs for Hebrew "
+    "- STEPBible.org CC BY.txt"
+)
+BATCH_SIZE = 500
+_PLACEHOLDER = "-"
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_BRIEF = (
+    "UNWIND $rows AS row MERGE (n:`BriefLexEntry` {strong_disambig: row.strong_disambig}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+# The Hebrew lemma node is MERGEd here via the backtick-quoted node label so
+# the brief lexicon stays complete even when Group 1 has not populated the
+# Lemma floor. The edge endpoints are then bound by property only with no
+# `BriefLexEntry`/`Source`/`Lemma` label token in the MATCH so the edge-batch
+# rows are never miscaptured as malformed nodes by a label-substring parser.
+_MERGE_LEMMA = (
+    "UNWIND $rows AS row MERGE (n:`Lemma` {strong: row.base_strong}) "
+    "SET n.strong = row.base_strong RETURN count(n) AS upserted"
+)
+_MERGE_LEX_FOR = (
+    "UNWIND $rows AS row "
+    "MATCH (b {strong_disambig: row.strong_disambig}) "
+    "MATCH (l {strong: row.base_strong}) "
+    "MERGE (b)-[r:`LEX_FOR`]->(l) "
+    "RETURN count(r) AS edges"
+)
+_MERGE_FROM_EDITION = (
+    "UNWIND $rows AS row "
+    "MATCH (b {strong_disambig: row.strong_disambig}) "
+    "MATCH (s {slug: row.slug}) "
+    "MERGE (b)-[r:`FROM_EDITION`]->(s) "
+    "RETURN count(r) AS edges"
+)
+
+
+def _read_text(path: Path) -> str:
+    with path.open(encoding="utf-8-sig") as fh:
+        return fh.read()
+
+
+def _extract_disambig(raw: str) -> str:
+    token = raw.strip().split()[0] if raw.strip() else ""
+    return token.rstrip(",")
+
+
+def _strip_sense_suffix(disambig: str) -> str:
+    if not disambig:
+        return disambig
+    stripped = disambig.rstrip(
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    )
+    if not stripped or stripped == disambig:
+        return disambig
+    body = stripped[1:] if stripped[0].isalpha() else stripped
+    if body.isdigit():
+        return stripped
+    return disambig
+
+
+def _safe(value: str) -> str:
+    trimmed = value.strip()
+    return trimmed if trimmed else _PLACEHOLDER
+
+
+def _is_aramaic(morph: str) -> bool:
+    head = morph.strip()
+    if not head:
+        return False
+    return head.startswith("A:") or head == "A" or head.startswith("A-")
+
+
+def _parse_row(line: str) -> dict[str, Any] | None:
+    parts = line.rstrip("\n\r").split("\t")
+    if len(parts) < 8:
+        return None
+    e_strong = parts[0].strip()
+    d_strong_raw = parts[1]
+    hebrew = parts[3]
+    translit = parts[4]
+    morph = parts[5]
+    gloss = parts[6]
+    meaning = parts[7]
+    if not e_strong or not e_strong.startswith(("H", "G")):
+        return None
+    disambig = _extract_disambig(d_strong_raw) or e_strong
+    base = _strip_sense_suffix(disambig)
+    if not base.startswith(("H", "G")):
+        base = e_strong
+    row: dict[str, Any] = {
+        "strong_disambig": disambig,
+        "base_strong": base,
+        "hebrew": _safe(hebrew),
+        "transliteration": _safe(translit),
+        "pos": _safe(morph),
+        "english": _safe(gloss),
+        "gloss_line": _safe(gloss),
+        "definition": _safe(meaning),
+        "language": LANGUAGE,
+        "source": SOURCE_SLUG,
+    }
+    if _is_aramaic(morph):
+        row["subscript_aramaic"] = True
+    return row
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    path = data_root / LEXICONS_SUBDIR / TBESH_FILE
+    if not path.exists():
+        return []
+    text = _read_text(path)
+    header_seen = False
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for raw_line in text.splitlines():
+        if not header_seen:
+            if raw_line.startswith("eStrong#") and "Hebrew" in raw_line:
+                header_seen = True
+            continue
+        if not raw_line.strip():
+            continue
+        row = _parse_row(raw_line)
+        if row is None:
+            continue
+        key = row["strong_disambig"]
+        if key in seen:
+            continue
+        seen.add(key)
+        rows = [*rows, row]
+    return rows
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_brief_entries(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_BRIEF, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_lex_for_edges(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = [
+            {"strong_disambig": r["strong_disambig"], "base_strong": r["base_strong"]}
+            for r in rows[start:start + BATCH_SIZE]
+        ]
+        session.run(_MERGE_LEMMA, rows=batch).consume()
+        session.run(_MERGE_LEX_FOR, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_from_edition_edges(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = [
+            {"strong_disambig": r["strong_disambig"], "slug": SOURCE_SLUG}
+            for r in rows[start:start + BATCH_SIZE]
+        ]
+        session.run(_MERGE_FROM_EDITION, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_stepbible_tbesh(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse STEPBible-TBESH and MERGE BriefLexEntry, Source, LEX_FOR, FROM_EDITION."""
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_brief_entries(session, rows)
+        lex_for = _merge_lex_for_edges(session, rows)
+        from_edition = _merge_from_edition_edges(session, rows)
+    return {
+        "BriefLexEntry": merged,
+        "Source": 1,
+        "LEX_FOR": lex_for,
+        "FROM_EDITION": from_edition,
+    }
