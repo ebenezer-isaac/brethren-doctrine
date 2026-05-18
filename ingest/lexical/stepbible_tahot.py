@@ -259,6 +259,7 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 SOURCE_SLUG = "STEPBible-TAHOT"
@@ -290,9 +291,6 @@ _REF_SPLIT = re.compile(
 )
 _ROOT_TOKEN = re.compile(r"\{([^}=]+)")
 _EXPANDED_ROOT = re.compile(r"\{[^=}]+=([^=}]+)=")
-_STRONG_PARTS = re.compile(r"^([HhAaGg]?)0*(\d+)([A-Za-z]?)")
-
-_BDB_SENSE_LETTERS = frozenset("abcdef")
 
 _MERGE_SOURCE = (
     "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
@@ -304,12 +302,14 @@ _MERGE_TOKEN = (
 )
 _MERGE_INSTANCE_OF = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`TaggedToken` {id: row.from_id}), "
+    "(b:`Lemma` {strong: row.to_id}) "
     "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`TaggedToken` {id: row.from_id}), "
+    "(b:`Verse` {osisID: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
 
@@ -319,19 +319,32 @@ def _strip_separators(text: str) -> str:
 
 
 def _normalize_strong(raw: str) -> str:
+    """Canonical Hebrew Strong join key per Decision 18.
+
+    Routes the raw upstream dStrongs token through the single
+    ingest.canonical_strongs.canonical_strongs normaliser and returns
+    canon[0] verbatim (e.g. H0430, H1254A). No hand-rolled Strong
+    arithmetic: the pre-fix f"H{int(digits)}{lower sense}" form dropped
+    the zero pad and lowercased the sense suffix, so it joined zero
+    Lemma rows for every Strong below 1000 and every suffixed Strong.
+    The leading underscore-delimited segment is taken first because the
+    upstream dStrongs cell appends a non-Strong morpho code after '_'
+    that canonical_strongs does not strip; the curly-brace and slash
+    forms are handled inside canonical_strongs itself. An unrecognised,
+    empty or non-Strong token yields '' so the existing _row_to_token
+    populated-projection guard drops the row (Decision 18 no-fabricate
+    rule), exactly as before the fix.
+    """
     s = raw.strip()
     if s.startswith("{") and s.endswith("}"):
         s = s[1:-1].strip()
-    if "/" in s:
-        s = s.split("/")[-1]
     s = s.split("_")[0].strip()
-    m = _STRONG_PARTS.match(s)
-    if m is None:
+    if not s:
         return ""
-    digits = m.group(2)
-    suffix = m.group(3).lower()
-    sense = suffix if suffix in _BDB_SENSE_LETTERS else ""
-    return f"H{int(digits)}{sense}"
+    try:
+        return canonical_strongs(s, "hb")[0]
+    except ValueError:
+        return ""
 
 
 def _root_strong(dstrongs: str, root_col: str) -> str:
@@ -466,7 +479,7 @@ def _merge_source(session: Any) -> None:
 def _merge_batch(session: Any, batch: list[dict[str, Any]]) -> None:
     node_rows = [{"id": t["id"], "properties": t["properties"]} for t in batch]
     instance_rows = [
-        {"from_id": t["id"], "to_id": f"macula-hebrew-lemma:{t['strong']}"}
+        {"from_id": t["id"], "to_id": t["strong"]}
         for t in batch
     ]
     verse_rows = [{"from_id": t["id"], "to_id": t["osis"]} for t in batch]
