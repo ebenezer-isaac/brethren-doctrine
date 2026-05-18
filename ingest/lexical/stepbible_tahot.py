@@ -41,12 +41,35 @@ IN_VERSE    : TaggedToken to Verse (keyed by ref_eng to OSIS
 
 TaggedToken stable identifier
 =============================
-Stable-id format     : stepbible-tahot:<osisRef>.w<pos>
-                       where <osisRef> is the OSIS rendering of the
-                       upstream ref_eng column (e.g. ref_eng of
-                       'Gen.1.1#01=L' resolves to 'Gen.1.1' and pos 1)
-                       and <pos> is the integer word position parsed
-                       from the same ref_eng suffix.
+Stable-id format     : stepbible-tahot:<osisRef>.w<pos> for the
+                       canonical Leningrad base text, and
+                       stepbible-tahot:<osisRef>.w<pos>~<edition>
+                       for any non-Leningrad edition row, where
+                       <osisRef> is the OSIS rendering of the upstream
+                       ref_eng column (e.g. ref_eng of 'Gen.1.1#01=L'
+                       resolves to 'Gen.1.1', pos 1, edition 'L') and
+                       <pos> is the integer word position parsed from
+                       the same ref_eng suffix.
+Edition disambiguator: the upstream ref_eng suffix carries an edition
+                       tag after '=' (e.g. 'Deu.30.16#01=L' is the
+                       Leningrad base text; 'Deu.30.16#0001=X' is an
+                       off-canon alternate / duplicate-passage edition
+                       with a zero-padded position). Coercing the
+                       padded '#0001' and the narrow '#01' through
+                       int() alone collapses both to position 1, so an
+                       =X word could overwrite the canonical Leningrad
+                       =L word at the same osis.w<pos> id. To keep
+                       distinct upstream records distinct (Decision 16
+                       uniqueness; AUDIT_tahot_30row_deepdive.md
+                       section 4), the stable id for the Leningrad base
+                       text family (edition tag head begins with 'L',
+                       e.g. =L, =L(p), =L(abh), =LA(bh)) is the bare
+                       stepbible-tahot:<osisRef>.w<pos> form, byte
+                       identical across runs; any non-Leningrad edition
+                       (=X, =R, =Q(K), =Q(k)) appends '~<edition>'
+                       where <edition> is the verbatim upstream tag, so
+                       it can NEVER occupy the canonical Leningrad word
+                       id and two distinct edition rows stay distinct.
 Justifiable alt      : when the upstream row carries no ref_eng word
                        position (an edge case in the parallel TAGNT
                        fileset that does not occur in TAHOT under the
@@ -152,6 +175,25 @@ TAHOT:
    code. The flag values are 'hebrew' and 'aramaic' verbatim from
    the upstream column.
 
+4. Exactly 13 '#NN=Q(K)' Ketiv rows carry a blank consonantal slot,
+   blank dStrongs and blank morph in the columns this adapter parses
+   (col_2 / col_6 / col_7), so they fail the populated-projection
+   predicate (hebrew_ketiv and strong and morph) and are
+   intentionally NOT projected as TaggedToken nodes. This is a
+   faithful, deliberate projection choice, NOT lost content: the
+   Ketiv lexical payload (Strong + morph + surface) of all 13 is
+   materialized in the graph through the OSHB-morphology seam as
+   <w type="x-ketiv"> Word nodes per Decision 16 / Decision 1, with
+   the companion qere routed via IS_QERE_OF on the OSHB Reading node.
+   AUDIT_tahot_30row_deepdive.md section 3 traced all 13
+   (Jdg.16.25#02, Rut.3.12#05, 1Sa.9.1#04, 2Sa.13.33#15,
+   2Ki.5.18#23, 2Ch.34.6#07, Isa.44.24#16, Jer.38.16#10,
+   Jer.39.12#11, Jer.51.3#03, Lam.1.6#02, Lam.4.3#10, Ezk.48.16#12)
+   and confirmed 13 of 13 present in OSHB as x-ketiv Word nodes with
+   matching Strong. These 13 require no adapter behaviour change;
+   only the bare predicate drop, recorded here so the count delta is
+   documented rather than silent.
+
 Dependencies
 ============
 Group order             : Group 2 (Witness layer) of the Phase 02
@@ -243,7 +285,9 @@ LXX_VARIANT_BY_STRONG = {
 }
 
 _REF_ROW = re.compile(r"^[A-Za-z0-9]+\.\d+\.\d+#\d+")
-_REF_SPLIT = re.compile(r"^(?P<osis>[A-Za-z0-9]+\.\d+\.\d+)#(?P<pos>\d+)")
+_REF_SPLIT = re.compile(
+    r"^(?P<osis>[A-Za-z0-9]+\.\d+\.\d+)#(?P<pos>\d+)(?:=(?P<edition>\S+))?"
+)
 _ROOT_TOKEN = re.compile(r"\{([^}=]+)")
 _EXPANDED_ROOT = re.compile(r"\{[^=}]+=([^=}]+)=")
 _STRONG_PARTS = re.compile(r"^([HhAaGg]?)0*(\d+)([A-Za-z]?)")
@@ -308,12 +352,39 @@ def _dictionary_form(expanded: str, hebrew_ketiv: str) -> str:
     return hebrew_ketiv
 
 
-def _parse_ref(ref_field: str) -> tuple[str, int] | None:
-    head = ref_field.split("=", 1)[0].strip()
-    m = _REF_SPLIT.match(head)
+def _parse_ref(ref_field: str) -> tuple[str, int, str] | None:
+    m = _REF_SPLIT.match(ref_field.strip())
     if m is None:
         return None
-    return m.group("osis"), int(m.group("pos"))
+    edition = (m.group("edition") or "").strip()
+    return m.group("osis"), int(m.group("pos")), edition
+
+
+def _is_leningrad_base(edition: str) -> bool:
+    """True for the canonical Leningrad base-text edition family.
+
+    The Leningrad family is every edition tag whose leading alphabetic
+    run begins with 'L' (=L, =L(p), =L(abh), =LA(bh), =LB(ah), and the
+    rest of the documented Leningrad vowel/accent-variant annotations).
+    Non-Leningrad editions (=X off-canon / duplicate passage, =R, and
+    the =Q(K)/=Q(k) Qere/Ketiv slots) return False so their stable id
+    is edition-namespaced and can never collapse onto a Leningrad word
+    id (AUDIT_tahot_30row_deepdive.md section 4).
+    """
+    head = edition.lstrip()
+    if not head:
+        # No edition tag at all (0 such rows in the frozen TAHOT
+        # upstream): treat as base text so the canonical bare id is
+        # used rather than an empty '~' namespace suffix.
+        return True
+    return head[0] in "Ll"
+
+
+def _token_stable_id(osis: str, pos: int, edition: str) -> str:
+    base = f"stepbible-tahot:{osis}.w{pos}"
+    if _is_leningrad_base(edition):
+        return base
+    return f"{base}~{edition}"
 
 
 def _row_to_token(line: str) -> dict[str, Any] | None:
@@ -324,7 +395,7 @@ def _row_to_token(line: str) -> dict[str, Any] | None:
     parsed = _parse_ref(ref_field)
     if parsed is None:
         return None
-    osis, pos = parsed
+    osis, pos, edition = parsed
     hebrew_ketiv = _strip_separators(parts[1])
     dstrongs = parts[4].strip()
     morph = parts[5].strip()
@@ -338,7 +409,7 @@ def _row_to_token(line: str) -> dict[str, Any] | None:
         return None
     language = "aramaic" if morph.lstrip().startswith("A") else "hebrew"
     lxx_lemma = LXX_VARIANT_BY_STRONG.get(strong)
-    token_id = f"stepbible-tahot:{osis}.w{pos}"
+    token_id = _token_stable_id(osis, pos, edition)
     return {
         "id": token_id,
         "osis": osis,
