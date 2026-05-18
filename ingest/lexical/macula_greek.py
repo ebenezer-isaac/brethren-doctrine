@@ -112,17 +112,20 @@ Label `Word` (one node per row, both editions):
   `SBLGNT`).
 
 Label `GreekLemma`:
-  Stable id format per Decision 2: `<edition>:<xml:id>` for the lemma
-  occurrence captured first per edition. For Decision 4 bridge
-  compatibility, the adapter also writes a `strong` property carrying
-  the integer Strong number so MACULA-Hebrew `BRIDGES_LXX` edges keyed
-  by `greekstrong` can MERGE the bridge target by Strong lookup.
+  Stable id format unchanged by Decision 18: `<source>:strong-<int:05d>`
+  (the id namespacing clause explicitly keeps `.id` AS-IS). Per Decision
+  18 (KEY-MG-STRONG, producer authority) the adapter writes `strong` as
+  the canonical Strong STRING `canonical_strongs(str(strong),'gk')[0]`
+  (e.g. `G0040`, never the integer `40`). This canonical `.strong` is
+  the single cross-source join key every Greek consumer (tagnt, tbesg,
+  tflsj) matches on, and it backs the Decision 4 `BRIDGES_LXX` Strong
+  lookup keyed by `greekstrong`.
 
   | Field   | Type   | Predicate       |
   |---------|--------|-----------------|
   | id      | string | $pred_string(x) |
   | lemma   | string | $pred_string(x) |
-  | strong  | int    | $pred_int(x)    |
+  | strong  | string | $pred_string(x) |
   | source  | string | $pred_string(x) |
   | edition | string | $pred_string(x) |
 
@@ -165,9 +168,12 @@ Label `Source`:
 
 Edge `INSTANCE_OF` (`Word` to `GreekLemma`):
   One edge per Word row. No edge properties. Establishes the lemma
-  membership of the word occurrence. The Word's `strong` property and
-  the GreekLemma's `strong` property MUST agree; rows where the row
-  has no resolvable Strong MUST be persisted without the
+  membership of the word occurrence. The edge is joined on
+  `GreekLemma.id` (unchanged by Decision 18), not on a Strong type
+  match: the Word's `strong` (int) and the GreekLemma's `strong`
+  (canonical string per Decision 18) MUST agree in NUMBER (the same
+  upstream Strong produced both), not in literal type. Rows where the
+  row has no resolvable Strong MUST be persisted without the
   `INSTANCE_OF` edge rather than fabricating a sentinel lemma.
 
 Edge `IN_DOMAIN` (`Word` to `LouwNidaDomain`):
@@ -363,6 +369,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Iterator
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 EDITION_NESTLE = "Nestle1904"
@@ -520,7 +527,11 @@ def _row_lemma_payload(edition: str, word: dict[str, Any]) -> dict[str, Any] | N
     return {
         "id": lemma_id,
         "lemma": lemma,
-        "strong": int(strong),
+        # Decision 18 producer authority (KEY-MG-STRONG): GreekLemma.strong is the
+        # canonical Strong STRING (canon[0], e.g. 'G0040'), never an int. Every Greek
+        # consumer (tagnt, tbesg, tflsj) joins on this exact canonical value.
+        # GreekLemma.id namespacing (<source>:strong-<int:05d>) is unchanged.
+        "strong": canonical_strongs(str(strong), "gk")[0],
         "source": source,
         "edition": edition,
     }
