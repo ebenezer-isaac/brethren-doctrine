@@ -224,7 +224,8 @@ _MERGE_SYRIAC = (
 )
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {osisID: row.to_id}) "
+    "MATCH (a:`SyriacWord` {id: row.from_id}), "
+    "(b:`Verse` {osisID: row.to_id}) "
     "MERGE (a)-[r:IN_VERSE]->(b) RETURN count(r) AS edges"
 )
 
