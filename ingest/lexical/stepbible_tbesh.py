@@ -273,6 +273,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from ingest.canonical_strongs import canonical_strongs
 from ingest.lexical._common import Settings, get_lexical_driver
 
 SOURCE_SLUG = "STEPBible-TBESH"
@@ -296,24 +297,27 @@ _MERGE_BRIEF = (
 )
 # The Hebrew lemma node is MERGEd here via the backtick-quoted node label so
 # the brief lexicon stays complete even when Group 1 has not populated the
-# Lemma floor. The edge endpoints are then bound by property only with no
-# `BriefLexEntry`/`Source`/`Lemma` label token in the MATCH so the edge-batch
-# rows are never miscaptured as malformed nodes by a label-substring parser.
+# Lemma floor. Per PERF-TBESH-LBL (Phase D master ledger section 1) the
+# LEX_FOR and FROM_EDITION endpoint MATCH clauses now carry their fixed node
+# labels (`BriefLexEntry`, `Lemma`, `Source`) so the planner resolves each
+# endpoint via the brief_lex_entry_id / lemma_strong / source_slug index
+# (NodeUniqueIndexSeek) instead of an AllNodesScan. This is a performance-only
+# change: the MERGE keys and edge tuples are unchanged.
 _MERGE_LEMMA = (
     "UNWIND $rows AS row MERGE (n:`Lemma` {strong: row.base_strong}) "
     "SET n.strong = row.base_strong RETURN count(n) AS upserted"
 )
 _MERGE_LEX_FOR = (
     "UNWIND $rows AS row "
-    "MATCH (b {strong_disambig: row.strong_disambig}) "
-    "MATCH (l {strong: row.base_strong}) "
+    "MATCH (b:`BriefLexEntry` {strong_disambig: row.strong_disambig}) "
+    "MATCH (l:`Lemma` {strong: row.base_strong}) "
     "MERGE (b)-[r:`LEX_FOR`]->(l) "
     "RETURN count(r) AS edges"
 )
 _MERGE_FROM_EDITION = (
     "UNWIND $rows AS row "
-    "MATCH (b {strong_disambig: row.strong_disambig}) "
-    "MATCH (s {slug: row.slug}) "
+    "MATCH (b:`BriefLexEntry` {strong_disambig: row.strong_disambig}) "
+    "MATCH (s:`Source` {slug: row.slug}) "
     "MERGE (b)-[r:`FROM_EDITION`]->(s) "
     "RETURN count(r) AS edges"
 )
@@ -341,6 +345,28 @@ def _strip_sense_suffix(disambig: str) -> str:
     if body.isdigit():
         return stripped
     return disambig
+
+
+def _canonical_base_strong(raw_base_strong: str) -> str:
+    """KEY-TBESH-LEMMA / Decision 18: canonical Hebrew Strong join key.
+
+    Routes the suffix-stripped base token through the single committed
+    normaliser ``ingest.canonical_strongs.canonical_strongs(raw, 'hb')`` and
+    uses ``canon[0]`` verbatim as ``base_strong``. macula_hebrew (the
+    canonical Hebrew Lemma producer, ``_hebrew_lemma_node`` writes
+    ``Lemma.strong = canonical_strongs(strongnumberx, 'hb')[0]``) emits the
+    same zero-padded form, so tbesh's self-MERGE and its LEX_FOR join now
+    converge on the SAME Lemma node instead of minting a divergent
+    unpadded ``H430`` duplicate. When the token is malformed (the normaliser
+    raises) the suffix-stripped token is returned unchanged rather than
+    fabricating a Strong; no canonical Strong is invented.
+    """
+    if not raw_base_strong:
+        return raw_base_strong
+    try:
+        return canonical_strongs(raw_base_strong, "hb")[0]
+    except ValueError:
+        return raw_base_strong
 
 
 def _safe(value: str) -> str:
@@ -372,6 +398,12 @@ def _parse_row(line: str) -> dict[str, Any] | None:
     base = _strip_sense_suffix(disambig)
     if not base.startswith(("H", "G")):
         base = e_strong
+    # KEY-TBESH-LEMMA (Decision 18): canonicalize the suffix-stripped base
+    # token (e.g. raw 'H430' -> 'H0430') so base_strong equals the
+    # macula_hebrew producer's Lemma.strong. Computed once here so BOTH the
+    # _MERGE_LEMMA and _MERGE_LEX_FOR payloads (which read row['base_strong'])
+    # carry the canonical join key.
+    base = _canonical_base_strong(base)
     row: dict[str, Any] = {
         "strong_disambig": disambig,
         "base_strong": base,
