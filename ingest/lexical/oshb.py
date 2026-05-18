@@ -453,24 +453,18 @@ def _verse_text(verse_elem: ET.Element) -> str:
             if not text:
                 continue
             if last_was_word:
-                parts = [*parts, " ", text]
-            else:
-                parts = [*parts, text]
+                parts.append(" ")
+            parts.append(text)
             last_was_word = True
         elif tag == "seg":
             seg_type = child.get("type", "")
             seg_text = (child.text or "").strip()
             if not seg_text:
                 continue
-            if seg_type == "x-maqqef":
-                parts = [*parts, seg_text]
-                last_was_word = False
-            elif seg_type == "x-sof-pasuq":
-                # End of verse marker; not concatenated into text.
-                pass
-            else:
-                parts = [*parts, seg_text]
-                last_was_word = False
+            if seg_type == "x-sof-pasuq":
+                continue
+            parts.append(seg_text)
+            last_was_word = False
     return "".join(parts).strip()
 
 
@@ -525,8 +519,7 @@ def _emit_word(
             base_strong = base
             disambig = suffix or ""
             break
-    rows.word = [
-        *rows.word,
+    rows.word.append(
         {
             "id": word_id,
             "osis_word_id": osis_word_id,
@@ -542,31 +535,25 @@ def _emit_word(
             "strong": base_strong,
             "qere_or_ketiv": qere_or_ketiv,
             "source": SOURCE_SLUG,
-        },
-    ]
-    rows.edges_in_verse = [
-        *rows.edges_in_verse,
-        {"from_id": word_id, "to_id": verse_id},
-    ]
-    rows.edges_from_edition = [
-        *rows.edges_from_edition,
-        {"from_id": word_id, "to_slug": SOURCE_SLUG},
-    ]
+        }
+    )
+    rows.edges_in_verse.append({"from_id": word_id, "to_id": verse_id})
+    rows.edges_from_edition.append(
+        {"from_id": word_id, "to_slug": SOURCE_SLUG}
+    )
     if base_strong:
         if base_strong not in seen_strong:
             seen_strong.add(base_strong)
-            rows.strong = [
-                *rows.strong,
+            rows.strong.append(
                 {
                     "id": base_strong,
                     "disambig_suffix": disambig,
                     "language": "hebrew",
-                },
-            ]
-        rows.edges_instance_of = [
-            *rows.edges_instance_of,
-            {"from_id": word_id, "to_id": base_strong},
-        ]
+                }
+            )
+        rows.edges_instance_of.append(
+            {"from_id": word_id, "to_id": base_strong}
+        )
     # Morphemes: split lemma by '/' and emit one per non-empty segment.
     segments = [s for s in lemma_raw.split("/") if s.strip()]
     if not segments:
@@ -576,8 +563,7 @@ def _emit_word(
         morpheme_id = f"oshb-morph:{osis_ref}.w{pos_pad}.m{m_pad}"
         m_base, m_suffix = _canonical_strong(seg)
         morph_strong = m_base or ""
-        rows.morpheme = [
-            *rows.morpheme,
+        rows.morpheme.append(
             {
                 "id": morpheme_id,
                 "ref": osis_ref,
@@ -586,27 +572,24 @@ def _emit_word(
                 "strong": morph_strong,
                 "text": seg.strip(),
                 "source": SOURCE_SLUG,
-            },
-        ]
-        rows.edges_has_morpheme = [
-            *rows.edges_has_morpheme,
-            {"from_id": word_id, "to_id": morpheme_id},
-        ]
+            }
+        )
+        rows.edges_has_morpheme.append(
+            {"from_id": word_id, "to_id": morpheme_id}
+        )
         if morph_strong:
             if morph_strong not in seen_strong:
                 seen_strong.add(morph_strong)
-                rows.strong = [
-                    *rows.strong,
+                rows.strong.append(
                     {
                         "id": morph_strong,
                         "disambig_suffix": m_suffix or "",
                         "language": "hebrew",
-                    },
-                ]
-            rows.edges_instance_of = [
-                *rows.edges_instance_of,
-                {"from_id": morpheme_id, "to_id": morph_strong},
-            ]
+                    }
+                )
+            rows.edges_instance_of.append(
+                {"from_id": morpheme_id, "to_id": morph_strong}
+            )
     return word_id
 
 
@@ -619,20 +602,18 @@ def _emit_qere_reading(
 ) -> None:
     reading_id = f"oshb-reading:{osis_ref}.w{pos_pad}.qere"
     surface = (qere_w.text or "").strip()
-    rows.reading = [
-        *rows.reading,
+    rows.reading.append(
         {
             "reading_id": reading_id,
             "text": surface,
             "is_lacuna": False,
             "source": SOURCE_SLUG,
             "kind": "qere",
-        },
-    ]
-    rows.edges_is_qere_of = [
-        *rows.edges_is_qere_of,
-        {"from_id": reading_id, "to_id": ketiv_word_id},
-    ]
+        }
+    )
+    rows.edges_is_qere_of.append(
+        {"from_id": reading_id, "to_id": ketiv_word_id}
+    )
 
 
 def _process_verse(
@@ -645,8 +626,7 @@ def _process_verse(
         return
     book, chapter, verse_num = _parse_osis_ref(osis_ref)
     verse_id = f"verse:{osis_ref}"
-    rows.verse = [
-        *rows.verse,
+    rows.verse.append(
         {
             "id": verse_id,
             "osisID": osis_ref,
@@ -656,8 +636,8 @@ def _process_verse(
             "verse": verse_num,
             "canon_section": CANON_SECTION,
             "text": _verse_text(verse_elem),
-        },
-    ]
+        }
+    )
     position = 0
     pending_ketiv_id: str | None = None
     pending_ketiv_pos: str | None = None
@@ -721,7 +701,7 @@ def _batched(rows: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
         return []
     out: list[list[dict[str, Any]]] = []
     for start in range(0, len(rows), BATCH_SIZE):
-        out = [*out, rows[start: start + BATCH_SIZE]]
+        out.append(rows[start: start + BATCH_SIZE])
     return out
 
 
