@@ -504,22 +504,22 @@ _MERGE_READING = (
 )
 _MERGE_READS_AT = (
     "UNWIND $rows AS row "
-    "MATCH (w {siglum: row.siglum}) "
-    "MATCH (rd {reading_id: row.reading_id}) "
+    "MATCH (w:`Witness` {siglum: row.siglum}) "
+    "MATCH (rd:`Reading` {reading_id: row.reading_id}) "
     "MERGE (w)-[r:`READS_AT` {variant_unit_id: row.variant_unit_id}]->(rd) "
     "SET r.source = row.source RETURN count(r) AS edges"
 )
 _MERGE_ATTESTED_BY = (
     "UNWIND $rows AS row "
-    "MATCH (rd {reading_id: row.reading_id}) "
-    "MATCH (v {variant_unit_id: row.variant_unit_id}) "
+    "MATCH (rd:`Reading` {reading_id: row.reading_id}) "
+    "MATCH (v:`VariantUnit` {variant_unit_id: row.variant_unit_id}) "
     "MERGE (rd)-[r:`ATTESTED_BY`]->(v) "
     "SET r.source = row.source RETURN count(r) AS edges"
 )
 _MERGE_CORRECTOR_OF = (
     "UNWIND $rows AS row "
-    "MATCH (c {siglum: row.corrector_siglum}) "
-    "MATCH (b {siglum: row.base_siglum}) "
+    "MATCH (c:`Witness` {siglum: row.corrector_siglum}) "
+    "MATCH (b:`Witness` {siglum: row.base_siglum}) "
     "MERGE (c)-[r:`CORRECTOR_OF`]->(b) "
     "SET r.source = row.source RETURN count(r) AS edges"
 )
