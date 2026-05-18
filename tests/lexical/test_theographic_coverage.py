@@ -26,7 +26,7 @@ Fixture: tests/lexical/fixtures/theographic_slice.json
   3 entities: 1 Person (mary-magdalene), 1 Place (bethlehem-of-judah), 1 Period (second-temple-period).
   Seeded from commit SHA 27b5b53 per RESEED_PLAN C.1.
 
-Source: tools/expected_counts.json sources."Theographic-Bible-Metadata" expected_count=43690.
+Source: tools/expected_counts.json sources."Theographic-Bible-Metadata" expected_count=4849.
 Decisions: 10 (Theographic projection schema), 14 (Strong/Source constraints).
 
 Caste: verifier
@@ -76,7 +76,7 @@ REQUIRED_LABELS = frozenset({"Person", "Place", "Period", "Event", "Group", "Tri
 REQUIRED_ENTITY_LABELS = frozenset({"Person", "Place", "Period", "Event", "Group", "Tribe"})
 REQUIRED_EDGES = frozenset({"MENTIONS"})
 
-EXPECTED_RECORD_COUNT = 43690
+EXPECTED_RECORD_COUNT = 4849
 DOCSTRING_COMMIT_SHA = "27b5b53"
 SEED_INT = int(DOCSTRING_COMMIT_SHA, 16)  # = 41638739
 
@@ -432,7 +432,7 @@ def test_predicates_file_has_cypher_ge_one() -> None:
 
 
 def test_expected_count_from_expected_counts_json() -> None:
-    """Theographic-Bible-Metadata expected_count in expected_counts.json must be 43690 (Tier A).
+    """Theographic-Bible-Metadata expected_count in expected_counts.json must be 4849 (Tier A).
 
     This test does NOT call the adapter. It validates the count constant
     is correct per tools/expected_counts.json.

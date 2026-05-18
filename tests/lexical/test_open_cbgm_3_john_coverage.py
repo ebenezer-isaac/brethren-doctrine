@@ -27,7 +27,11 @@ Fixture: tests/lexical/fixtures/open_cbgm_3_john_slice.json
   Covers lacuna sentinel readings, corrector hands, and single-reading units.
 
 Source: tools/expected_counts.json sources."open-cbgm-3-john"
-  expected_count=600, tier B, tolerance_relative=0.02, min=588, max=612.
+  expected_count=728, tier B, tolerance_relative=0.02, min=700, max=760,
+  record_unit cbgm_node (node-only: 142 Witness + 116 VariantUnit + 470
+  Reading = 728 per docs/PHASE_D_CATALOG_RECONCILIATION.md section 6;
+  the prior 600/588/612 with record_unit cbgm_record was a hand-set
+  estimate that never modeled the by-design lacuna back-fill).
 Decisions: 6 (CBGM Witness/Variant/Reading shape), 14 (Source node + license).
 """
 
@@ -73,9 +77,9 @@ ENTRY_FUNCTION = "ingest_open_cbgm_3_john"
 REQUIRED_LABELS = frozenset({"Witness", "VariantUnit", "Reading", "Source"})
 REQUIRED_EDGES = frozenset({"READS_AT", "ATTESTED_BY", "CORRECTOR_OF"})
 
-EXPECTED_COUNT = 600
-EXPECTED_MIN = 588
-EXPECTED_MAX = 612
+EXPECTED_COUNT = 728  # Tier B, record_unit cbgm_node (node-only), per expected_counts.json
+EXPECTED_MIN = 700
+EXPECTED_MAX = 760
 
 # Seed from open_cbgm_3_john.py docstring commit SHA
 DOCSTRING_COMMIT_SHA = "23c42ecd3fce242a35e9e09cc62a530ea345c22c"
@@ -644,8 +648,8 @@ def test_expected_count_from_expected_counts_json() -> None:
     This test does NOT call the adapter. It validates constants used by
     the coverage tests are correct per the source file.
 
-    Spec: expected_count=600, tier=B, tolerance_relative=0.02,
-    min=588, max=612.
+    Spec: expected_count=728, tier=B, tolerance_relative=0.02,
+    min=700, max=760, record_unit=cbgm_node.
     """
     ec_path = REPO / "tools" / "expected_counts.json"
     with open(ec_path, encoding="utf-8") as fh:

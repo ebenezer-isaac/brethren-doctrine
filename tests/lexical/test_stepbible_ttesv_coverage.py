@@ -26,7 +26,7 @@ Fixture: tests/lexical/fixtures/stepbible_ttesv_slice.json
   Includes one untagged glue token (no Strong) to test INSTANCE_OF skip.
   length = 6515 (seeded from RNG).
 
-Source: tools/expected_counts.json sources."STEPBible-TTESV" expected_count=31272.
+Source: tools/expected_counts.json sources."STEPBible-TTESV" expected_count=31127.
 Decisions: 14 (Strong/Source predicate constraints), 15 (Verse.text exclusion policy).
 
 Caste: verifier
@@ -76,7 +76,7 @@ REDISTRIBUTE = False
 REQUIRED_LABELS = frozenset({"TaggedToken", "Source"})
 REQUIRED_EDGES = frozenset({"INSTANCE_OF", "FROM_EDITION"})
 
-EXPECTED_TOKEN_COUNT = 31272  # Tier A, tolerance 0, per expected_counts.json
+EXPECTED_TOKEN_COUNT = 31127  # Tier A, tolerance 0, per expected_counts.json
 
 # Seed from stepbible_ttesv.py docstring commit SHA
 DOCSTRING_COMMIT_SHA = "d45619bd1382d84558640f08e10b767055f37567"
@@ -446,7 +446,7 @@ def test_untagged_token_skips_instance_of(
 
     Adapter edge-case 1: glue tokens (strong='') are persisted as TaggedToken
     nodes but the INSTANCE_OF edge is skipped. The total row count must still
-    reach 31272 (tier A, tolerance 0).
+    reach 31127 (tier A, tolerance 0).
     """
     mod = importlib.import_module(ADAPTER_MODULE)
     fn = getattr(mod, ENTRY_FUNCTION)
@@ -501,7 +501,7 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_token_count_from_expected_counts_json() -> None:
-    """STEPBible-TTESV expected count in expected_counts.json must be 31272 (Tier A).
+    """STEPBible-TTESV expected count in expected_counts.json must be 31127 (Tier A).
 
     This test does NOT call the adapter. It validates the count constant
     used by the coverage tests is correct per the source file.

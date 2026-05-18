@@ -27,7 +27,7 @@ Fixture: tests/lexical/fixtures/oshb_slice.json
   Third corpus slot: Proverbs (wisdom-adjacent, distinct from Psalms/Job).
   OSHB is OT-only; NT slot is replaced by Proverbs with that noted in fixture.
 
-Source: tools/expected_counts.json sources."OSHB-morphology" expected_count=306785.
+Source: tools/expected_counts.json sources."OSHB-morphology" expected_count=305507.
 Decisions: 1 (morpheme alignment), 14 (Strong/Source constraints), 15 (Verse.text policy).
 """
 
@@ -74,7 +74,7 @@ ENTRY_FUNCTION = "ingest_oshb"
 REQUIRED_LABELS = frozenset({"Word", "Morpheme", "Verse", "Strong", "Source", "Reading"})
 REQUIRED_EDGES = frozenset({"HAS_MORPHEME", "IN_VERSE", "INSTANCE_OF", "IS_QERE_OF", "FROM_EDITION"})
 
-EXPECTED_WORD_COUNT = 306785  # Tier A, tolerance 0, per expected_counts.json
+EXPECTED_WORD_COUNT = 305507  # Tier A, tolerance 0, per expected_counts.json
 
 # Seed from oshb.py docstring commit SHA (git log -1 -- ingest/lexical/oshb.py)
 DOCSTRING_COMMIT_SHA = "ee8d877864ef1e77d4951e8c5d5567b8f292f820"
@@ -457,7 +457,7 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_word_count_from_expected_counts_json() -> None:
-    """The OSHB-morphology expected count in expected_counts.json must be 306785 (Tier A).
+    """The OSHB-morphology expected count in expected_counts.json must be 305507 (Tier A).
 
     This test does NOT call the adapter. It validates the count constant
     used by the coverage tests is correct per the source file.

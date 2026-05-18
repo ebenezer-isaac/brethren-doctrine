@@ -94,7 +94,7 @@ REQUIRED_LIST_FIELDS = (
     "spelling_variants",
 )
 
-EXPECTED_TOKEN_COUNT = 141720  # Tier A, tolerance 0, per expected_counts.json
+EXPECTED_TOKEN_COUNT = 142096  # Tier A, tolerance 0, per expected_counts.json
 SOURCE_SLUG = "STEPBible-TAGNT"
 
 # Seed from stepbible_tagnt.py docstring commit SHA
@@ -508,7 +508,7 @@ def test_fixture_seed_derivation(fixture_slice: dict[str, Any]) -> None:
 
 
 def test_expected_token_count_from_expected_counts_json() -> None:
-    """The STEPBible-TAGNT expected count in expected_counts.json must be 141720 (Tier A).
+    """The STEPBible-TAGNT expected count in expected_counts.json must be 142096 (Tier A).
 
     This test does NOT call the adapter. It validates the count constant.
     """

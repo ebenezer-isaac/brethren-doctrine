@@ -25,7 +25,7 @@ Fixture: tests/lexical/fixtures/stepbible_proper_nouns_slice.json
   1 place (Yerushalayim/H3389 with null verse_count).
   Length = rng.randint(1024,16384) where rng = random.Random(3823988164) = 9782.
 
-Source: tools/expected_counts.json sources."STEPBible-proper-nouns" expected_count=23205.
+Source: tools/expected_counts.json sources."STEPBible-proper-nouns" expected_count=5468.
 Decision: 17 (STEPBible morph-codes and proper-nouns reference tables).
 
 Caste: verifier
@@ -84,7 +84,7 @@ PROPER_NOUN_FIELDS = (
     "first_occurrence",
 )
 
-EXPECTED_COUNT = 23205  # Tier A, tolerance 0, per expected_counts.json
+EXPECTED_COUNT = 5468  # Tier A, tolerance 0, per expected_counts.json
 
 DOCSTRING_COMMIT_SHA = "e3ed6dc4ae935d108ad2525521074abaf5d65667"
 SEED_INT = int(DOCSTRING_COMMIT_SHA[:8], 16)  # = 3823988164
@@ -517,7 +517,7 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_count_from_expected_counts_json() -> None:
-    """STEPBible-proper-nouns expected count in expected_counts.json must be 23205.
+    """STEPBible-proper-nouns expected count in expected_counts.json must be 5468.
 
     Validates the count constant is correct per the source file.
     This test does NOT call the adapter.

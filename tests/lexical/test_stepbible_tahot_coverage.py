@@ -33,7 +33,7 @@ Fixture: tests/lexical/fixtures/stepbible_tahot_slice.json
   Three OT corpus slots: torah (Gen), wisdom (Prov), prophets (Isa).
   File size: 6223 bytes (within 1024-16384 range).
 
-Expected count: 283734 rows / TaggedToken nodes (Tier A, tolerance 0).
+Expected count: 283721 rows / TaggedToken nodes (Tier A, tolerance 0).
 """
 
 from __future__ import annotations
@@ -78,7 +78,7 @@ SOURCE_SLUG = "STEPBible-TAHOT"
 REQUIRED_LABELS = frozenset({"TaggedToken", "Lemma", "Verse"})
 REQUIRED_EDGES = frozenset({"INSTANCE_OF", "IN_VERSE"})
 
-EXPECTED_TOKEN_COUNT = 283734  # Tier A, tolerance 0, per expected_counts.json
+EXPECTED_TOKEN_COUNT = 283721  # Tier A, tolerance 0, per expected_counts.json
 
 DOCSTRING_COMMIT_SHA = "036930c6ed1fbf3c658747fe238af623feba629f"
 SEED_INT = int(DOCSTRING_COMMIT_SHA[:8], 16)  # = 57225414
@@ -574,7 +574,7 @@ def test_predicates_file_has_string_predicate() -> None:
 
 
 def test_expected_token_count_from_expected_counts_json() -> None:
-    """The STEPBible-TAHOT expected count in expected_counts.json must be 283734 (Tier A).
+    """The STEPBible-TAHOT expected count in expected_counts.json must be 283721 (Tier A).
 
     Does not call the adapter. Validates the count constant is correct.
     """
