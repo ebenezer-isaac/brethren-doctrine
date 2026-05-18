@@ -361,3 +361,339 @@ implementer-impl caste commits the executable body in a separate
 commit against the same path. The caste boundary is enforced by
 `tools/check_caste.py` against the commit's `Caste:` trailer.
 """
+
+from __future__ import annotations
+
+import unicodedata
+from collections.abc import Iterator
+from pathlib import Path
+from typing import Any
+
+from lxml import etree
+
+from ingest.canonical_strongs import canonical_strongs
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "MACULA-Hebrew"
+LICENSE_ID = "CC-BY-NC-4.0"
+LEMMA_ID_PREFIX = "macula-hebrew-lemma:"
+GREEK_LEMMA_ID_PREFIX = "macula-hebrew-greek-lemma:"
+GREEK_SENTINEL_ID = "macula-hebrew-greek-lemma:unknown"
+HEBREW_LANGUAGE = "hebrew"
+GREEK_LANGUAGE = "greek"
+HAPAX_GLOSS_SENTINEL = "?"
+WLC_SUBDIR = "WLC"
+LOWFAT_SUBDIR = "lowfat"
+LOWFAT_GLOB = "*-lowfat.xml"
+XML_ID_ATTR = "{http://www.w3.org/XML/1998/namespace}id"
+BATCH_SIZE = 1000
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_TOKEN = (
+    "UNWIND $rows AS row MERGE (n:`MaculaToken` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_LEMMA = (
+    "UNWIND $rows AS row MERGE (n:`Lemma` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_GREEK_LEMMA = (
+    "UNWIND $rows AS row MERGE (n:`GreekLemma` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_ENRICHMENT = (
+    "UNWIND $rows AS row "
+    "MATCH (w:`Word` {source: 'OSHB-morphology', ref: row.osis_ref}) "
+    "MATCH (m:`MaculaToken` {id: row.to_id}) "
+    "MERGE (w)-[r:`HAS_MACULA_ENRICHMENT` "
+    "{osis_ref: row.osis_ref, join_lemma: row.join_lemma}]->(m) "
+    "RETURN count(r) AS upserted"
+)
+_MERGE_INSTANCE_OF = (
+    "UNWIND $rows AS row "
+    "MATCH (m:`MaculaToken` {id: row.from_id}) "
+    "MATCH (l:`Lemma` {id: row.to_id}) "
+    "MERGE (m)-[r:`INSTANCE_OF`]->(l) "
+    "RETURN count(r) AS upserted"
+)
+_MERGE_BRIDGES_LXX = (
+    "UNWIND $rows AS row "
+    "MATCH (h:`Lemma` {id: row.from_id}) "
+    "MATCH (g:`GreekLemma` {id: row.to_id}) "
+    "MERGE (h)-[r:`BRIDGES_LXX` "
+    "{greek_surface: row.greek_surface, "
+    "greek_strong: row.greek_strong, "
+    "source: row.source}]->(g) "
+    "RETURN count(r) AS upserted"
+)
+
+
+def _nfc(value: str | None) -> str | None:
+    if value is None:
+        return None
+    text = unicodedata.normalize("NFC", value).strip()
+    return text or None
+
+
+def _clean(value: str | None) -> str | None:
+    if value is None:
+        return None
+    text = value.strip()
+    return text or None
+
+
+def _gloss(value: str | None) -> str | None:
+    text = _clean(value)
+    if text is None or text == HAPAX_GLOSS_SENTINEL:
+        return None
+    return text
+
+
+def _strong_int(value: str | None) -> int | None:
+    text = _clean(value)
+    if text is None:
+        return None
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if not digits:
+        return None
+    return int(digits)
+
+
+def _canonical(raw: str | None, lang: str) -> tuple[str, str | None] | None:
+    text = _clean(raw)
+    if text is None:
+        return None
+    try:
+        return canonical_strongs(text, lang=lang)  # type: ignore[arg-type]
+    except ValueError:
+        return None
+
+
+def _lowfat_dir(data_root: Path) -> Path | None:
+    candidates = (
+        data_root / WLC_SUBDIR / LOWFAT_SUBDIR,
+        data_root / LOWFAT_SUBDIR,
+        data_root,
+    )
+    for candidate in candidates:
+        if candidate.is_dir() and any(candidate.glob(LOWFAT_GLOB)):
+            return candidate
+    return None
+
+
+def _lowfat_files(data_root: Path) -> list[Path]:
+    lowfat_dir = _lowfat_dir(data_root)
+    if lowfat_dir is None:
+        return []
+    return sorted(lowfat_dir.glob(LOWFAT_GLOB))
+
+
+def _osis_ref(ref: str | None) -> str | None:
+    text = _clean(ref)
+    if text is None:
+        return None
+    return text.split("!", 1)[0].strip() or None
+
+
+def _word_to_row(attrib: dict[str, str]) -> dict[str, Any] | None:
+    xml_id = _clean(attrib.get(XML_ID_ATTR) or attrib.get("id"))
+    if xml_id is None:
+        return None
+    lemma = _nfc(attrib.get("lemma"))
+    canon = _canonical(attrib.get("strongnumberx"), "hb")
+    strong = canon[0] if canon is not None else None
+    suffix = canon[1] if canon is not None else None
+    return {
+        "id": xml_id,
+        "xml_id": xml_id,
+        "ref": _clean(attrib.get("ref")),
+        "lemma": lemma,
+        "morph": _clean(attrib.get("morph")),
+        "pos": _clean(attrib.get("pos")),
+        "gloss": _gloss(attrib.get("gloss")),
+        "stronglemma": _nfc(attrib.get("stronglemma")),
+        "strongnumberx": _strong_int(attrib.get("strongnumberx")),
+        "transliteration": _clean(attrib.get("transliteration")),
+        "source": SOURCE_SLUG,
+        "_strong": strong,
+        "_suffix": suffix,
+        "_greek_surface": _nfc(attrib.get("greek")),
+        "_greek_strong_raw": _clean(attrib.get("greekstrong")),
+    }
+
+
+def _iter_words(path: Path) -> "Iterator[dict[str, Any]]":
+    with path.open("rb") as handle:
+        context = etree.iterparse(handle, events=("end",), tag="w")
+        for _event, elem in context:
+            row = _word_to_row(dict(elem.attrib))
+            if row is not None:
+                yield row
+            elem.clear()
+            parent = elem.getparent()
+            if parent is not None:
+                previous = elem.getprevious()
+                while previous is not None:
+                    parent.remove(previous)
+                    previous = elem.getprevious()
+
+
+def _collect_rows(data_root: Path) -> list[dict[str, Any]]:
+    collected: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for path in _lowfat_files(data_root):
+        for row in _iter_words(path):
+            token_id = row["id"]
+            if token_id in seen:
+                continue
+            seen.add(token_id)
+            collected.append(row)
+    return collected
+
+
+def _hebrew_lemma_node(row: dict[str, Any]) -> dict[str, Any]:
+    strong = row["_strong"]
+    return {
+        "id": f"{LEMMA_ID_PREFIX}{strong}",
+        "strong": strong,
+        "disambig_suffix": row["_suffix"],
+        "lemma": row["lemma"],
+        "language": HEBREW_LANGUAGE,
+        "source": SOURCE_SLUG,
+    }
+
+
+def _greek_lemma_node(row: dict[str, Any]) -> dict[str, Any]:
+    canon = _canonical(row["_greek_strong_raw"], "gk")
+    if canon is None:
+        return {
+            "id": GREEK_SENTINEL_ID,
+            "strong": None,
+            "disambig_suffix": None,
+            "lemma": row["_greek_surface"],
+            "language": GREEK_LANGUAGE,
+            "source": SOURCE_SLUG,
+        }
+    return {
+        "id": f"{GREEK_LEMMA_ID_PREFIX}{canon[0]}",
+        "strong": canon[0],
+        "disambig_suffix": canon[1],
+        "lemma": row["_greek_surface"],
+        "language": GREEK_LANGUAGE,
+        "source": SOURCE_SLUG,
+    }
+
+
+def _token_payload(row: dict[str, Any]) -> dict[str, Any]:
+    return {key: value for key, value in row.items() if not key.startswith("_")}
+
+
+def _build(rows: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    tokens: list[dict[str, Any]] = []
+    hebrew_lemmas: dict[str, dict[str, Any]] = {}
+    greek_lemmas: dict[str, dict[str, Any]] = {}
+    enrichment: list[dict[str, Any]] = []
+    instance_of: list[dict[str, Any]] = []
+    bridges: list[dict[str, Any]] = []
+    bridge_seen: set[tuple[str, str]] = set()
+    for row in rows:
+        tokens.append(_token_payload(row))
+        osis = _osis_ref(row["ref"])
+        if osis is not None and row["lemma"] is not None:
+            enrichment.append(
+                {
+                    "to_id": row["id"],
+                    "osis_ref": osis,
+                    "join_lemma": row["lemma"],
+                }
+            )
+        if row["_strong"] is not None:
+            hebrew = _hebrew_lemma_node(row)
+            hebrew_lemmas[hebrew["id"]] = hebrew
+            instance_of.append(
+                {"from_id": row["id"], "to_id": hebrew["id"]}
+            )
+            if row["_greek_surface"] is not None:
+                greek = _greek_lemma_node(row)
+                greek_lemmas[greek["id"]] = greek
+                pair = (hebrew["id"], greek["id"])
+                if pair not in bridge_seen:
+                    bridge_seen.add(pair)
+                    bridges.append(
+                        {
+                            "from_id": hebrew["id"],
+                            "to_id": greek["id"],
+                            "greek_surface": row["_greek_surface"],
+                            "greek_strong": _strong_int(
+                                row["_greek_strong_raw"]
+                            ),
+                            "source": SOURCE_SLUG,
+                        }
+                    )
+    return {
+        "tokens": tokens,
+        "hebrew_lemmas": list(hebrew_lemmas.values()),
+        "greek_lemmas": list(greek_lemmas.values()),
+        "enrichment": enrichment,
+        "instance_of": instance_of,
+        "bridges": bridges,
+    }
+
+
+def _run_batched(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start : start + BATCH_SIZE]
+        session.run(cypher, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_source(session: Any) -> None:
+    payload = [
+        {
+            "slug": SOURCE_SLUG,
+            "license": LICENSE_ID,
+            "redistribute": False,
+        }
+    ]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def ingest_macula_hebrew(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse MACULA-Hebrew lowfat TEI and MERGE nodes plus bridge edges."""
+    rows = _collect_rows(Path(data_root))
+    built = _build(rows)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        token_count = _run_batched(session, _MERGE_TOKEN, built["tokens"])
+        lemma_count = _run_batched(
+            session, _MERGE_LEMMA, built["hebrew_lemmas"]
+        )
+        greek_count = _run_batched(
+            session, _MERGE_GREEK_LEMMA, built["greek_lemmas"]
+        )
+        enrichment_count = _run_batched(
+            session, _MERGE_ENRICHMENT, built["enrichment"]
+        )
+        instance_count = _run_batched(
+            session, _MERGE_INSTANCE_OF, built["instance_of"]
+        )
+        bridge_count = _run_batched(
+            session, _MERGE_BRIDGES_LXX, built["bridges"]
+        )
+    return {
+        "Source": 1,
+        "MaculaToken": token_count,
+        "Lemma": lemma_count,
+        "GreekLemma": greek_count,
+        "HAS_MACULA_ENRICHMENT": enrichment_count,
+        "INSTANCE_OF": instance_count,
+        "BRIDGES_LXX": bridge_count,
+    }
