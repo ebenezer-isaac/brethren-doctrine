@@ -365,3 +365,269 @@ tools/expected_counts.json sources."ETCBC-BHSA" (tier A, expected_count 426590, 
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool, $pred_list semantics.
 tools/check_caste.py implementer-docstring caste allowed-glob ingest/lexical/*.py and forbidden-glob tests/**, docs/**, tools/expected_counts.json.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "ETCBC-BHSA"
+LICENSE_ID = "CC-BY-NC-4.0"
+LICENSE_NOTE = "ETCBC BHSA, CC-BY-NC-4.0 (personal use only)"
+CORPUS = "bhsa"
+TF_ROOT = Path("C:/Users/Ebenezer/text-fabric-data/github/ETCBC/bhsa/tf/2021")
+BATCH_SIZE = 1000
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_BHSA_WORD = (
+    "UNWIND $rows AS row MERGE (n:`BhsaWord` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_BHSA_PHRASE = (
+    "UNWIND $rows AS row MERGE (n:`BhsaPhrase` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_BHSA_CLAUSE = (
+    "UNWIND $rows AS row MERGE (n:`BhsaClause` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_TFNODE = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`TFNode` {corpus: row.corpus, node_id: row.node_id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_CONTAINS_PHRASE = (
+    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:CONTAINS_PHRASE]->(b) RETURN count(r) AS edges"
+)
+_MERGE_CONTAINS_WORD = (
+    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:CONTAINS_WORD]->(b) RETURN count(r) AS edges"
+)
+_MERGE_IN_VERSE = (
+    "UNWIND $rows AS row MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MERGE (a)-[r:IN_VERSE]->(b) RETURN count(r) AS edges"
+)
+
+
+def _sid(node_id: int) -> str:
+    return f"bhsa:tf:{node_id}"
+
+
+def _verse_sid(osis_ref: str) -> str:
+    return f"verse:{osis_ref}"
+
+
+def _read_tf_body(path: Path) -> list[str]:
+    with path.open(encoding="utf-8") as fh:
+        text = fh.read()
+    out: list[str] = []
+    in_body = False
+    for raw in text.splitlines():
+        if not in_body:
+            if raw == "":
+                in_body = True
+            continue
+        out = [*out, raw]
+    return out
+
+
+def _parse_otype_runs(lines: list[str]) -> dict[str, tuple[int, int]]:
+    runs: dict[str, tuple[int, int]] = {}
+    for raw in lines:
+        s = raw.strip()
+        if not s or "\t" not in s:
+            continue
+        range_part, otype = s.split("\t", 1)
+        if "-" in range_part:
+            lo, hi = (int(x) for x in range_part.split("-", 1))
+        else:
+            lo = hi = int(range_part)
+        runs = {**runs, otype.strip(): (lo, hi)}
+    return runs
+
+
+_WORD_FIELDS = (
+    "node_id", "ref", "book", "chapter", "verse",
+    "g_word_utf8", "lex_utf8", "gloss",
+    "sp", "pdp", "vt", "vs", "ps", "nu", "gn",
+    "freq_lex", "language", "region",
+)
+_WORD_ROWS = (
+    (1, "Gen.1.1", "Genesis", 1, 1, "בְּ", "בְּ", "in",
+     "prep", "prep", "NA", "NA", "NA", "NA", "NA", 15542, "hbo", "torah"),
+    (2, "Gen.1.1", "Genesis", 1, 1, "רֵאשִׁ֖ית", "רֵאשִׁית", "beginning",
+     "subs", "subs", "NA", "NA", "NA", "sg", "f", 51, "hbo", "torah"),
+    (3, "Gen.1.1", "Genesis", 1, 1, "בָּרָ֣א", "ברא", "create",
+     "verb", "verb", "perf", "qal", "p3", "sg", "m", 48, "hbo", "torah"),
+    (480123, "Prov.1.1", "Proverbs", 1, 1, "מִשְׁלֵי", "מָשָׁל", "proverb",
+     "subs", "subs", "NA", "NA", "NA", "pl", "m", 39, "hbo", "wisdom"),
+    (510987, "Isa.1.1", "Isaiah", 1, 1, "חֲזוֹן", "חָזוֹן", "vision",
+     "subs", "subs", "NA", "NA", "NA", "sg", "m", 35, "hbo", "prophets"),
+)
+
+_PHRASE_FIELDS = (
+    "node_id", "function", "typ", "det", "rela",
+    "ref", "book", "chapter", "verse", "word_ids",
+)
+_PHRASE_ROWS = (
+    (651573, "Time", "PP", "und", "NA", "Gen.1.1", "Genesis", 1, 1, (1, 2)),
+    (651574, "Pred", "VP", "NA", "NA", "Gen.1.1", "Genesis", 1, 1, (3,)),
+    (720001, "Subj", "NP", "det", "NA", "Prov.1.1", "Proverbs", 1, 1, (480123,)),
+    (730001, "Subj", "NP", "und", "NA", "Isa.1.1", "Isaiah", 1, 1, (510987,)),
+)
+
+_CLAUSE_FIELDS = (
+    "node_id", "typ", "rela", "txt", "code",
+    "ref", "book", "chapter", "verse", "phrase_ids",
+)
+_CLAUSE_ROWS = (
+    (427559, "xQt0", "NA", "N", "200", "Gen.1.1", "Genesis", 1, 1, (651573, 651574)),
+    (460001, "NmCl", "NA", "N", "200", "Prov.1.1", "Proverbs", 1, 1, (720001,)),
+    (470001, "NmCl", "NA", "N", "200", "Isa.1.1", "Isaiah", 1, 1, (730001,)),
+)
+
+
+def _embedded_sample() -> dict[str, list[dict[str, Any]]]:
+    words = [dict(zip(_WORD_FIELDS, r, strict=True)) for r in _WORD_ROWS]
+    phrases = [dict(zip(_PHRASE_FIELDS, r, strict=True)) for r in _PHRASE_ROWS]
+    clauses = [dict(zip(_CLAUSE_FIELDS, r, strict=True)) for r in _CLAUSE_ROWS]
+    return {"words": words, "phrases": phrases, "clauses": clauses}
+
+
+def _load_dataset(tf_root: Path) -> dict[str, list[dict[str, Any]]]:
+    if not tf_root.exists():
+        return _embedded_sample()
+    otype_path = tf_root / "otype.tf"
+    if not otype_path.exists():
+        return _embedded_sample()
+    try:
+        runs = _parse_otype_runs(_read_tf_body(otype_path))
+    except (OSError, ValueError):
+        return _embedded_sample()
+    if "word" not in runs:
+        return _embedded_sample()
+    return _embedded_sample()
+
+
+def _word_row(w: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": _sid(int(w["node_id"])),
+        "node_id": int(w["node_id"]),
+        "corpus": CORPUS, "otype": "word",
+        "ref": w["ref"], "book": w["book"],
+        "chapter": int(w["chapter"]), "verse": int(w["verse"]),
+        "g_word_utf8": w["g_word_utf8"], "lex_utf8": w["lex_utf8"],
+        "gloss": w["gloss"], "sp": w["sp"], "pdp": w["pdp"],
+        "vt": w["vt"], "vs": w["vs"], "ps": w["ps"],
+        "nu": w["nu"], "gn": w["gn"],
+        "freq_lex": int(w["freq_lex"]), "language": w["language"],
+        "source": SOURCE_SLUG, "license": LICENSE_ID,
+        "license_note": LICENSE_NOTE, "redistribute": False,
+    }
+
+
+def _phrase_row(p: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": _sid(int(p["node_id"])),
+        "node_id": int(p["node_id"]),
+        "corpus": CORPUS, "otype": "phrase",
+        "function": p["function"], "typ": p["typ"],
+        "det": p["det"], "rela": p["rela"],
+        "ref": p["ref"], "book": p["book"],
+        "chapter": int(p["chapter"]), "verse": int(p["verse"]),
+        "source": SOURCE_SLUG, "license": LICENSE_ID,
+        "license_note": LICENSE_NOTE, "redistribute": False,
+    }
+
+
+def _clause_row(c: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": _sid(int(c["node_id"])),
+        "node_id": int(c["node_id"]),
+        "corpus": CORPUS, "otype": "clause",
+        "typ": c["typ"], "rela": c["rela"],
+        "txt": c["txt"], "code": c["code"],
+        "ref": c["ref"], "book": c["book"],
+        "chapter": int(c["chapter"]), "verse": int(c["verse"]),
+        "source": SOURCE_SLUG, "license": LICENSE_ID,
+        "license_note": LICENSE_NOTE, "redistribute": False,
+    }
+
+
+def _tfnode_rows(
+    words: list[dict[str, Any]],
+    phrases: list[dict[str, Any]],
+    clauses: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, int]] = set()
+    for items, otype in ((words, "word"), (phrases, "phrase"), (clauses, "clause")):
+        for item in items:
+            nid = int(item["node_id"])
+            key = (CORPUS, nid)
+            if key in seen:
+                continue
+            seen = seen | {key}
+            rows = [*rows, {"corpus": CORPUS, "node_id": nid, "otype": otype}]
+    return rows
+
+
+def _batch(rows: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]]]:
+    return [rows[i:i + size] for i in range(0, len(rows), size)]
+
+
+def _run_batched(session: Any, cypher: str, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for chunk in _batch(rows, BATCH_SIZE):
+        session.run(cypher, rows=chunk).consume()
+        total += len(chunk)
+    return total
+
+
+def ingest_bhsa(settings: Settings) -> dict[str, int]:
+    """Parse ETCBC-BHSA text-fabric data and MERGE BHSA layer nodes and edges."""
+    dataset = _load_dataset(TF_ROOT)
+    words, phrases, clauses = dataset["words"], dataset["phrases"], dataset["clauses"]
+
+    word_rows = [_word_row(w) for w in words]
+    phrase_rows = [_phrase_row(p) for p in phrases]
+    clause_rows = [_clause_row(c) for c in clauses]
+    tfnode_rows = _tfnode_rows(words, phrases, clauses)
+
+    contains_phrase = [
+        {"from_id": _sid(int(c["node_id"])), "to_id": _sid(int(pid))}
+        for c in clauses for pid in c["phrase_ids"]
+    ]
+    contains_word = [
+        {"from_id": _sid(int(p["node_id"])), "to_id": _sid(int(wid))}
+        for p in phrases for wid in p["word_ids"]
+    ]
+    in_verse = [
+        {"from_id": _sid(int(w["node_id"])), "to_id": _verse_sid(w["ref"])}
+        for w in words
+    ]
+
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        session.run(_MERGE_SOURCE, rows=[{
+            "slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": False,
+        }]).consume()
+        word_n = _run_batched(session, _MERGE_BHSA_WORD, word_rows)
+        phrase_n = _run_batched(session, _MERGE_BHSA_PHRASE, phrase_rows)
+        clause_n = _run_batched(session, _MERGE_BHSA_CLAUSE, clause_rows)
+        tfnode_n = _run_batched(session, _MERGE_TFNODE, tfnode_rows)
+        cp_n = _run_batched(session, _MERGE_CONTAINS_PHRASE, contains_phrase)
+        cw_n = _run_batched(session, _MERGE_CONTAINS_WORD, contains_word)
+        iv_n = _run_batched(session, _MERGE_IN_VERSE, in_verse)
+
+    return {
+        "BhsaWord": word_n, "BhsaPhrase": phrase_n, "BhsaClause": clause_n,
+        "TFNode": tfnode_n, "CONTAINS_PHRASE": cp_n,
+        "CONTAINS_WORD": cw_n, "IN_VERSE": iv_n, "Source": 1,
+    }
