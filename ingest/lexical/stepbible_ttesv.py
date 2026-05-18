@@ -57,8 +57,16 @@ TaggedToken (Decision 14, Decision 15)
 --------------------------------------
 Stable id format:    'stepbible-ttesv:<osisRef>.w<pos>' where <osisRef> is
                      the canonical OSIS reference (e.g. 'Gen.1.1') and <pos>
-                     is the 1-based English surface word position within the
-                     verse, zero-padded to two digits. Namespacing on the
+                     is the raw upstream position string for the verse's
+                     first tagged surface word, carried verbatim (NOT
+                     int()-coerced then zero-padded). Carrying the raw
+                     string keeps two distinct upstream positions of
+                     different zero-pad width (e.g. '1' vs '01' vs '001')
+                     structurally distinct so the latent pos-collapse
+                     defect (docs/AUDIT_pos_collapse_blast_radius.md,
+                     stepbible_ttesv AT-RISK section) cannot fire even if
+                     the record_unit is ever widened to per-word.
+                     Namespacing on the
                      'stepbible-ttesv:' prefix keeps these identifiers
                      disjoint from the STEPBible-TAHOT and STEPBible-TAGNT
                      TaggedToken identifiers which use 'stepbible-tahot:'
@@ -256,7 +264,9 @@ detects via missing-edge counts against the expected_count baseline.
 
 Stable-id namespace recap
 =========================
-Stable id format (re-stated for clarity): 'stepbible-ttesv:<osisRef>.w<pos>'.
+Stable id format (re-stated for clarity): 'stepbible-ttesv:<osisRef>.w<pos>'
+where <pos> is the raw upstream position string carried verbatim (no
+int()-coerce, no zero-pad collapse).
 This prefix is disjoint from every other TaggedToken-emitting adapter
 ('stepbible-tahot:' for STEPBible-TAHOT, 'stepbible-tagnt:' for
 STEPBible-TAGNT), so the tagged_token_id constraint never rejects a
@@ -406,14 +416,25 @@ def _parse_verse_segment(line: str) -> tuple[str, str, str, list[str]] | None:
     return book, chap, verse, fields[1:]
 
 
-def _first_position(raw_positions: str) -> int | None:
+def _first_position(raw_positions: str) -> str | None:
+    # Return the FIRST position piece verbatim as the upstream string, never
+    # int()-coerced. int("1") == int("01") == int("001") collapses three
+    # distinct upstream zero-pad widths onto one value; carrying the raw
+    # string into the stable id (see _row_for_verse) keeps distinct upstream
+    # positions structurally distinct so the latent pos-collapse defect
+    # (docs/AUDIT_pos_collapse_blast_radius.md, stepbible_ttesv AT-RISK
+    # section) cannot fire even if the record_unit is ever widened to
+    # per-word. The int(p) try/except still gates piece selection so a
+    # non-numeric piece is skipped exactly as before (no parse-semantic
+    # change, no change to which row is projected).
     for p in raw_positions.split("+"):
         if not p:
             continue
         try:
-            return int(p)
+            int(p)
         except ValueError:
             continue
+        return p
     return None
 
 
@@ -426,10 +447,17 @@ def _primary_canonical(strongs_raw: list[str], book: str) -> str:
 
 
 def _row_for_verse(
-    book: str, chap: str, verse: str, pos: int, primary_strong: str
+    book: str, chap: str, verse: str, pos_raw: str, primary_strong: str
 ) -> dict[str, Any]:
     osis_ref = f"{book}.{chap}.{verse}"
-    token_id = f"stepbible-ttesv:{osis_ref}.w{pos:02d}"
+    # The stable id carries the raw upstream position string verbatim
+    # (pos_raw, e.g. "1" / "01" / "001"), NOT int()-coerced then zero-padded.
+    # f"{int(pos_raw):02d}" collapsed "1", "01", "001" all onto "w01"; the
+    # verbatim form keeps them "w1", "w01", "w001" so render("1") !=
+    # render("01") and the pos-collapse is structurally impossible. The
+    # persisted position int property is still derived faithfully from the
+    # same piece so the node payload is unchanged in meaning.
+    token_id = f"stepbible-ttesv:{osis_ref}.w{pos_raw}"
     language = _language_for_book(book) if primary_strong else ""
     return {
         "id": token_id,
@@ -443,7 +471,7 @@ def _row_for_verse(
         "license": LICENSE_ID,
         "redistribute": REDISTRIBUTE,
         "osis_ref": osis_ref,
-        "position": pos,
+        "position": int(pos_raw),
         "language": language,
         "canonical_strong": primary_strong,
     }
@@ -464,7 +492,7 @@ def _parse_all_rows(text: str) -> list[dict[str, Any]]:
         if parsed is None:
             continue
         book, chap, verse, tag_fields = parsed
-        chosen_pos: int | None = None
+        chosen_pos: str | None = None
         chosen_strong = ""
         for tag in tag_fields:
             m = _TAG_RE.match(tag)
