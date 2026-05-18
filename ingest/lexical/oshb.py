@@ -360,31 +360,46 @@ _MERGE_READING = (
     "SET n += row RETURN count(n) AS upserted"
 )
 
-# Edge MERGE templates. MATCH endpoints by id only (no label specifiers) so
-# the verifier-side cypher parser does not mistake the MATCH for a node MERGE.
+# Edge MERGE templates. Both MATCH endpoints carry an explicit node label so
+# the planner uses the backing uniqueness constraint instead of an
+# AllNodesScan (Phase D PERF-OSHB / PERF-OSHB-IO). All endpoint ids/keys are
+# unchanged: this is a performance-only label add, the produced edge set is
+# byte-identical to the prior unlabeled MATCH.
 _MERGE_EDGE_HAS_MORPHEME = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`Word` {id: row.from_id}), (b:`Morpheme` {id: row.to_id}) "
     "MERGE (a)-[r:`HAS_MORPHEME`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_EDGE_IN_VERSE = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`Word` {id: row.from_id}), (b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
-_MERGE_EDGE_INSTANCE_OF = (
+# INSTANCE_OF is heterogeneous on the from side (Word for oshb:-prefixed ids,
+# Morpheme for oshb-morph:-prefixed ids). A single labelled MATCH (or an
+# OR/disjunction) would either drop one subset or fall back to a scan, so the
+# row builder partitions edges_instance_of into a Word-sourced list and a
+# Morpheme-sourced list and each list runs its own single-label template.
+# The to side is ALWAYS Strong. Edge count/direction/ids are unchanged
+# (PERF-OSHB-IO): the union of the two lists is exactly the prior single list.
+_MERGE_EDGE_INSTANCE_OF_WORD = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`Word` {id: row.from_id}), (b:`Strong` {id: row.to_id}) "
+    "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
+)
+_MERGE_EDGE_INSTANCE_OF_MORPHEME = (
+    "UNWIND $rows AS row "
+    "MATCH (a:`Morpheme` {id: row.from_id}), (b:`Strong` {id: row.to_id}) "
     "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_EDGE_IS_QERE_OF = (
     "UNWIND $rows AS row "
-    "MATCH (a {reading_id: row.from_id}), (b {id: row.to_id}) "
+    "MATCH (a:`Reading` {reading_id: row.from_id}), (b:`Word` {id: row.to_id}) "
     "MERGE (a)-[r:`IS_QERE_OF`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_EDGE_FROM_EDITION = (
     "UNWIND $rows AS row "
-    "MATCH (a {id: row.from_id}), (b {slug: row.to_slug}) "
+    "MATCH (a:`Word` {id: row.from_id}), (b:`Source` {slug: row.to_slug}) "
     "MERGE (a)-[r:`FROM_EDITION`]->(b) RETURN count(r) AS edges"
 )
 
@@ -487,7 +502,12 @@ class _Rows:
         self.reading: list[dict[str, Any]] = []
         self.edges_has_morpheme: list[dict[str, str]] = []
         self.edges_in_verse: list[dict[str, str]] = []
-        self.edges_instance_of: list[dict[str, str]] = []
+        # INSTANCE_OF is heterogeneous on the from side; partition at build
+        # time (the call sites already know Word vs Morpheme) so each list
+        # runs an index-backed single-label template (PERF-OSHB-IO). Their
+        # union is exactly the prior single edges_instance_of list.
+        self.edges_instance_of_word: list[dict[str, str]] = []
+        self.edges_instance_of_morpheme: list[dict[str, str]] = []
         self.edges_is_qere_of: list[dict[str, str]] = []
         self.edges_from_edition: list[dict[str, str]] = []
 
@@ -551,7 +571,7 @@ def _emit_word(
                     "language": "hebrew",
                 }
             )
-        rows.edges_instance_of.append(
+        rows.edges_instance_of_word.append(
             {"from_id": word_id, "to_id": base_strong}
         )
     # Morphemes: split lemma by '/' and emit one per non-empty segment.
@@ -587,7 +607,7 @@ def _emit_word(
                         "language": "hebrew",
                     }
                 )
-            rows.edges_instance_of.append(
+            rows.edges_instance_of_morpheme.append(
                 {"from_id": morpheme_id, "to_id": morph_strong}
             )
     return word_id
@@ -755,9 +775,13 @@ def ingest_oshb(source_root: Path, settings: Settings) -> dict[str, int]:
             counts["IN_VERSE"] += _flush_edges(
                 session, _MERGE_EDGE_IN_VERSE, batch,
             )
-        for batch in _batched(rows.edges_instance_of):
+        for batch in _batched(rows.edges_instance_of_word):
             counts["INSTANCE_OF"] += _flush_edges(
-                session, _MERGE_EDGE_INSTANCE_OF, batch,
+                session, _MERGE_EDGE_INSTANCE_OF_WORD, batch,
+            )
+        for batch in _batched(rows.edges_instance_of_morpheme):
+            counts["INSTANCE_OF"] += _flush_edges(
+                session, _MERGE_EDGE_INSTANCE_OF_MORPHEME, batch,
             )
         for batch in _batched(rows.edges_is_qere_of):
             counts["IS_QERE_OF"] += _flush_edges(
