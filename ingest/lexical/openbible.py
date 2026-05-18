@@ -281,3 +281,172 @@ contract layer; the AST gate enforced by the harness is
 `len(body) == 1 and isinstance(body[0], ast.Expr) and
 isinstance(body[0].value, ast.Constant) and isinstance(body[0].value.value, str)`.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "OpenBible-cross-refs"
+LICENSE_ID = "CC-BY"
+EDGE_TYPE = "OPENBIBLE_CROSS_REF"
+CSV_FILENAME = "cross_references.txt"
+TVTMS_PARSED_RELATIVE = Path("stepbible") / "tvtms.parsed.json"
+BATCH_SIZE = 1000
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row "
+    "MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row "
+    "RETURN count(n) AS upserted"
+)
+_MERGE_EDGE = (
+    "UNWIND $rows AS row "
+    "MATCH (a:`Verse` {osisID: row.from_osis}), (b:`Verse` {osisID: row.to_osis}) "
+    "MERGE (a)-[r:`OPENBIBLE_CROSS_REF` "
+    "{from_osis: row.from_osis, to_osis: row.to_osis, source: row.source}]->(b) "
+    "SET r.votes = row.votes "
+    "RETURN count(r) AS edges"
+)
+
+
+def _load_tvtms_rules(data_root_parent: Path) -> dict[str, str]:
+    """Load TVTMS rule set into a KJV-ref to OSIS-ref mapping.
+
+    The parsed artifact at data/private/stepbible/tvtms.parsed.json is a TSV
+    with five tab-separated columns per row:
+        tradition_a, ref_a, tradition_b, ref_b, rule_type
+    The mapping keys on ref_a where tradition_a is the english (KJV) slug.
+    Rows whose tradition_a is not english are skipped because OpenBible
+    ships KJV-numbered references per Decision 5.
+    """
+    rules_path = data_root_parent / TVTMS_PARSED_RELATIVE
+    mapping: dict[str, str] = {}
+    if not rules_path.exists():
+        return mapping
+    with rules_path.open(encoding="utf-8") as fh:
+        for raw in fh:
+            line = raw.rstrip("\r\n")
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split("\t")
+            if len(parts) < 4:
+                continue
+            tradition_a = parts[0].strip().lower()
+            ref_a = parts[1].strip()
+            ref_b = parts[3].strip()
+            if tradition_a != "english":
+                continue
+            if not ref_a or not ref_b:
+                continue
+            if ref_a in mapping:
+                continue
+            mapping[ref_a] = ref_b
+    return mapping
+
+
+def _project_to_osis(kjv_ref: str, rules: dict[str, str]) -> str | None:
+    if not kjv_ref:
+        return None
+    return rules.get(kjv_ref, kjv_ref)
+
+
+def _parse_votes(raw: str) -> int | None:
+    s = raw.strip()
+    if not s:
+        return None
+    try:
+        return int(s)
+    except ValueError:
+        return None
+
+
+def _parse_rows(
+    csv_path: Path, rules: dict[str, str]
+) -> tuple[list[dict[str, Any]], int]:
+    """Parse cross_references.txt and project endpoints through TVTMS.
+
+    Returns (resolved_rows, quarantine_count). A row is quarantined when
+    either endpoint cannot be projected to an OSIS reference or when the
+    votes column does not parse to an integer. Quarantined rows are
+    counted but excluded from resolved_rows per Decision 5.
+    """
+    resolved: list[dict[str, Any]] = []
+    quarantined = 0
+    header_seen = False
+    with csv_path.open(encoding="utf-8") as fh:
+        for raw in fh:
+            line = raw.rstrip("\r\n")
+            if not line:
+                continue
+            if not header_seen:
+                if line.startswith("From Verse"):
+                    header_seen = True
+                    continue
+            parts = line.split("\t")
+            if len(parts) < 3:
+                quarantined += 1
+                continue
+            from_kjv = parts[0].strip()
+            to_kjv = parts[1].strip()
+            votes = _parse_votes(parts[2])
+            from_osis = _project_to_osis(from_kjv, rules)
+            to_osis = _project_to_osis(to_kjv, rules)
+            if not from_osis or not to_osis or votes is None:
+                quarantined += 1
+                continue
+            resolved = [
+                *resolved,
+                {
+                    "from_osis": from_osis,
+                    "to_osis": to_osis,
+                    "votes": votes,
+                    "source": SOURCE_SLUG,
+                },
+            ]
+    return resolved, quarantined
+
+
+def _merge_source(session: Any) -> None:
+    payload = [
+        {
+            "slug": SOURCE_SLUG,
+            "license": LICENSE_ID,
+            "redistribute": True,
+        }
+    ]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_edges(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_EDGE, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_openbible(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse OpenBible cross-refs and MERGE OPENBIBLE_CROSS_REF edges.
+
+    data_root points at data/private/openbible. The TVTMS rule set lives
+    one directory up at data/private/stepbible/tvtms.parsed.json per the
+    Group 2 dispatch contract.
+    """
+    csv_path = data_root / CSV_FILENAME
+    rules = _load_tvtms_rules(data_root.parent)
+    rows, quarantined = _parse_rows(csv_path, rules) if csv_path.exists() else ([], 0)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_edges(session, rows)
+    return {
+        EDGE_TYPE: merged,
+        "Source": 1,
+        "quarantined": quarantined,
+    }
