@@ -397,15 +397,14 @@ def _parse_rows(
             if not from_osis or not to_osis or votes is None:
                 quarantined += 1
                 continue
-            resolved = [
-                *resolved,
+            resolved.append(
                 {
                     "from_osis": from_osis,
                     "to_osis": to_osis,
                     "votes": votes,
                     "source": SOURCE_SLUG,
-                },
-            ]
+                }
+            )
     return resolved, quarantined
 
 
