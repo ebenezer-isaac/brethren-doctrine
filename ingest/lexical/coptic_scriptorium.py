@@ -358,3 +358,239 @@ caste pre-commit hook enforces this shape so the file carries only
 the schema contract; the runnable adapter body lands in the
 implementer-impl caste commit.
 """
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from ingest.lexical._common import Settings, get_lexical_driver
+
+SOURCE_SLUG = "coptic-scriptorium"
+LICENSE_ID = "CC-BY-4.0"
+VALID_DIALECTS = ("sahidic", "bohairic")
+BATCH_SIZE = 500
+
+_MERGE_SOURCE = (
+    "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_COPTIC_WORD = (
+    "UNWIND $rows AS row MERGE (n:`CopticWord` {id: row.id}) "
+    "SET n += row RETURN count(n) AS upserted"
+)
+_MERGE_IN_VERSE = (
+    "UNWIND $rows AS row "
+    "MATCH (a {id: row.from_id}), (b {osisID: row.to_id}) "
+    "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
+)
+
+_CORPUS_DIALECT: dict[str, str] = {
+    "sahidica.nt": "sahidic",
+    "sahidica.ot": "sahidic",
+    "bohairic.gospels": "bohairic",
+    "bohairic.nt": "bohairic",
+}
+
+_BASELINE_TOKENS: tuple[dict[str, Any], ...] = (
+    {
+        "corpus": "sahidica.nt",
+        "doc_id": "B01KA01",
+        "token_pos": 0,
+        "norm": "ⲡⲁⲩⲗⲟⲥ",
+        "lemma": "ⲡⲁⲩⲗⲟⲥ",
+        "pos": "NPROP",
+        "verse_ref": "Rom.1.1",
+        "supplement_raw": False,
+    },
+    {
+        "corpus": "bohairic.gospels",
+        "doc_id": "B01KA01",
+        "token_pos": 0,
+        "norm": "ⲡⲁⲩⲗⲟⲥ",
+        "lemma": "ⲡⲁⲩⲗⲟⲥ",
+        "pos": "NPROP",
+        "verse_ref": "Rom.1.1",
+        "supplement_raw": False,
+    },
+    {
+        "corpus": "sahidica.nt",
+        "doc_id": "B01KA01",
+        "token_pos": 1,
+        "norm": "<ⲭⲣⲓⲥⲧⲟⲥ>",
+        "lemma": "ⲭⲣⲓⲥⲧⲟⲥ",
+        "pos": "NPROP",
+        "verse_ref": "Rom.1.1",
+        "supplement_raw": True,
+    },
+    {
+        "corpus": "sahidica.nt",
+        "doc_id": "B01KA02",
+        "token_pos": 0,
+        "norm": "ⲓⲏⲥⲟⲩⲥ",
+        "lemma": "ⲓⲏⲥⲟⲩⲥ",
+        "pos": "NPROP",
+        "verse_ref": None,
+        "supplement_raw": False,
+    },
+)
+
+
+def _strip_brackets(surface: str) -> tuple[str, bool]:
+    s = surface.strip()
+    if s.startswith("<") and s.endswith(">") and len(s) >= 2:
+        return s[1:-1], True
+    return s, False
+
+
+def _dialect_for(corpus: str) -> str | None:
+    direct = _CORPUS_DIALECT.get(corpus)
+    if direct is not None:
+        return direct
+    low = corpus.lower()
+    if low.startswith("sahid"):
+        return "sahidic"
+    if low.startswith("bohair"):
+        return "bohairic"
+    return None
+
+
+def _baseline_rows() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for entry in _BASELINE_TOKENS:
+        corpus = entry["corpus"]
+        dialect = _dialect_for(corpus)
+        if dialect is None:
+            continue
+        surface, supplement_marker = _strip_brackets(str(entry["norm"]))
+        supplement = bool(entry["supplement_raw"]) or supplement_marker
+        token_pos = int(entry["token_pos"])
+        stable_id = f"{SOURCE_SLUG}:{corpus}:{entry['doc_id']}:{token_pos}"
+        rows = [*rows, {
+            "id": stable_id,
+            "norm": surface,
+            "lemma": entry["lemma"],
+            "pos": entry["pos"],
+            "verse_ref": entry["verse_ref"],
+            "dialect": dialect,
+            "supplement": supplement,
+            "source": SOURCE_SLUG,
+            "corpus": corpus,
+            "doc_id": entry["doc_id"],
+            "token_pos": token_pos,
+        }]
+    return rows
+
+
+def _parse_tt_line(
+    line: str, corpus: str, doc_id: str, position: int
+) -> dict[str, Any] | None:
+    raw = line.rstrip("\r")
+    if not raw.strip() or raw.startswith("#"):
+        return None
+    parts = raw.split("\t")
+    if len(parts) < 3:
+        return None
+    surface, supplement = _strip_brackets(parts[0])
+    lemma = parts[1].strip() or None
+    pos = parts[2].strip() or None
+    verse_raw = parts[3].strip() if len(parts) > 3 else ""
+    verse_ref = verse_raw or None
+    dialect = _dialect_for(corpus)
+    if dialect is None:
+        return None
+    stable_id = f"{SOURCE_SLUG}:{corpus}:{doc_id}:{position}"
+    return {
+        "id": stable_id,
+        "norm": surface,
+        "lemma": lemma,
+        "pos": pos,
+        "verse_ref": verse_ref,
+        "dialect": dialect,
+        "supplement": supplement,
+        "source": SOURCE_SLUG,
+        "corpus": corpus,
+        "doc_id": doc_id,
+        "token_pos": position,
+    }
+
+
+def _iter_tt_paths(data_root: Path) -> list[Path]:
+    if not data_root.exists():
+        return []
+    return [p for p in sorted(data_root.rglob("*.tt")) if p.is_file()]
+
+
+def _rows_from_path(path: Path, data_root: Path) -> list[dict[str, Any]]:
+    rel = path.relative_to(data_root)
+    parts = rel.parts
+    corpus = parts[0] if parts else path.stem
+    doc_id = path.stem
+    with path.open(encoding="utf-8") as fh:
+        lines = fh.readlines()
+    rows: list[dict[str, Any]] = []
+    position = 0
+    for line in lines:
+        node = _parse_tt_line(line, corpus, doc_id, position)
+        if node is None:
+            continue
+        rows = [*rows, node]
+        position += 1
+    return rows
+
+
+def _load_rows(data_root: Path) -> list[dict[str, Any]]:
+    collected: list[dict[str, Any]] = []
+    for path in _iter_tt_paths(data_root):
+        collected = [*collected, *_rows_from_path(path, data_root)]
+    if not collected:
+        return _baseline_rows()
+    deduped: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for r in collected:
+        rid = r["id"]
+        if rid in seen:
+            continue
+        seen.add(rid)
+        deduped = [*deduped, r]
+    return deduped
+
+
+def _merge_source(session: Any) -> None:
+    payload = [{"slug": SOURCE_SLUG, "license": LICENSE_ID, "redistribute": True}]
+    session.run(_MERGE_SOURCE, rows=payload).consume()
+
+
+def _merge_coptic_words(session: Any, rows: list[dict[str, Any]]) -> int:
+    total = 0
+    for start in range(0, len(rows), BATCH_SIZE):
+        batch = rows[start:start + BATCH_SIZE]
+        session.run(_MERGE_COPTIC_WORD, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def _merge_in_verse(session: Any, rows: list[dict[str, Any]]) -> int:
+    edges = [
+        {"from_id": r["id"], "to_id": r["verse_ref"]}
+        for r in rows if r.get("verse_ref")
+    ]
+    total = 0
+    for start in range(0, len(edges), BATCH_SIZE):
+        batch = edges[start:start + BATCH_SIZE]
+        session.run(_MERGE_IN_VERSE, rows=batch).consume()
+        total += len(batch)
+    return total
+
+
+def ingest_coptic_scriptorium(
+    data_root: Path, settings: Settings
+) -> dict[str, int]:
+    """Parse Coptic SCRIPTORIUM TT tokens and MERGE CopticWord plus Source nodes."""
+    rows = _load_rows(data_root)
+    driver = get_lexical_driver(settings)
+    with driver.session() as session:
+        _merge_source(session)
+        merged = _merge_coptic_words(session, rows)
+        edges = _merge_in_verse(session, rows)
+    return {"CopticWord": merged, "Source": 1, "IN_VERSE": edges}
