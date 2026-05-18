@@ -53,6 +53,14 @@ CREATE INDEX word_strong IF NOT EXISTS FOR (w:Word) ON (w.strong) /* Decision 1,
 CREATE INDEX verse_book_ch_v IF NOT EXISTS FOR (v:Verse) ON (v.book, v.chapter, v.verse) /* Decision 15 */;
 CREATE INDEX morpheme_strong IF NOT EXISTS FOR (m:Morpheme) ON (m.strong) /* Decision 1, 14 */;
 CREATE INDEX lemma_id_namespaced IF NOT EXISTS FOR (l:Lemma) ON (l.id) /* Decision 1 */;
+// Lemma.strong is the canonical Hebrew Strong join key (Decision 18). It is
+// already index-backed by the lemma_strong UNIQUE constraint (line 13), so no
+// separate range index is created here: a uniqueness constraint provides the
+// backing index and a duplicate plain index would be rejected / redundant.
+// GreekLemma.strong is the canonical Greek Strong join key (Decision 18) and
+// has NO uniqueness constraint and NO backing index; tagnt/tbesg/tflsj match
+// (:GreekLemma {strong}) so the lookup MUST be index-backed.
+CREATE INDEX greek_lemma_strong IF NOT EXISTS FOR (g:GreekLemma) ON (g.strong) /* Decision 4, 12, 14, 18 */;
 CREATE INDEX hebrew_greek_bridge IF NOT EXISTS FOR ()-[r:BRIDGES_LXX]-() ON (r.greek_strong) /* Decision 4 */;
 CREATE INDEX variant_unit_book_ch_v IF NOT EXISTS FOR (v:VariantUnit) ON (v.book, v.chapter, v.verse) /* Decision 6 */;
 CREATE INDEX reading_variant_unit IF NOT EXISTS FOR (r:Reading) ON (r.variant_unit_id) /* Decision 6 */;

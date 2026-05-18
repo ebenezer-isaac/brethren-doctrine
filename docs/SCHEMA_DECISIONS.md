@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document freezes the node-and-edge schema for the lexical Neo4j store before the Phase B wipe. Each `### Decision` block below names the source(s) it governs, states a binding `#### Rule`, attaches a `#### Cypher acceptance query` that the Phase D triangle-test runner executes, enumerates `#### Edge cases handled`, and lists every persisted property in a `#### Per-field predicate type` table whose predicates resolve via `tools/predicates_by_type.cypher`. Field names are sourced verbatim from `docs/data_inventory_catalog.json` so that every adapter Implementer (Phase C) and Verifier can compile their docstring contract against the same identifiers. The seventeen decisions below cover the nine lexical adapters in the current tree, the three procurement adapters (Peshitta, Vulgate Clementine, Coptic SCRIPTORIUM), the 3 John CBGM ingest, the Theographic projection, the three STEPBible brief lexicons, the constraint policy for Strong, Source and TFNode labels, and the Verse.text canonical-surface policy. Any change to a decision after Phase A.4 requires a commit whose subject line begins with the literal token `[SCHEMA-REVISION]` so that `tools/check_thresholds_immutable.py` does not block the run. The user-locked exclusions (ECM Catholic Letters beyond 3 John, full LXX Rahlfs, Old Latin Vetus Latina) are recorded in `docs/data_inventory_catalog.json` under `explicit_deadends[]` and are not re-litigated here. No decision below references a confessional or denominational source. Citation source slugs used in Pipeline 2 evidence files must remain identical to the list in `docs/phase_prompts/pipeline2_verdict.md`.
+This document freezes the node-and-edge schema for the lexical Neo4j store before the Phase B wipe. Each `### Decision` block below names the source(s) it governs, states a binding `#### Rule`, attaches a `#### Cypher acceptance query` that the Phase D triangle-test runner executes, enumerates `#### Edge cases handled`, and lists every persisted property in a `#### Per-field predicate type` table whose predicates resolve via `tools/predicates_by_type.cypher`. Field names are sourced verbatim from `docs/data_inventory_catalog.json` so that every adapter Implementer (Phase C) and Verifier can compile their docstring contract against the same identifiers. The eighteen decisions below cover the nine lexical adapters in the current tree, the three procurement adapters (Peshitta, Vulgate Clementine, Coptic SCRIPTORIUM), the 3 John CBGM ingest, the Theographic projection, the three STEPBible brief lexicons, the constraint policy for Strong, Source and TFNode labels, the Verse.text canonical-surface policy, and the canonical Strong-key join contract for Lemma and GreekLemma identity (Decision 18). Any change to a decision after Phase A.4 requires a commit whose subject line begins with the literal token `[SCHEMA-REVISION]` so that `tools/check_thresholds_immutable.py` does not block the run. The user-locked exclusions (ECM Catholic Letters beyond 3 John, full LXX Rahlfs, Old Latin Vetus Latina) are recorded in `docs/data_inventory_catalog.json` under `explicit_deadends[]` and are not re-litigated here. No decision below references a confessional or denominational source. Citation source slugs used in Pipeline 2 evidence files must remain identical to the list in `docs/phase_prompts/pipeline2_verdict.md`.
 
 ### Decision 1: OSHB-to-MACULA-Hebrew morpheme alignment
 
@@ -627,3 +627,67 @@ STEPBible-proper-nouns (populated projection):
 | language | string | $pred_string(x) |
 | verse_count | int | $pred_int(x) |
 | first_occurrence | string | $pred_string(x) |
+
+### Decision 18: Canonical Strong join-key contract for Lemma and GreekLemma identity
+
+#### Rule
+
+Strong's number is the single cross-source join key between MACULA-Hebrew, MACULA-Greek, OSHB, ETCBC, and every STEPBible adapter (this is the Decision 14 premise). Phase D join-key audits A and B proved that the Strong VALUE each adapter writes or matches is fragmented across at least four incompatible encodings (zero-padded vs unpadded digits, uppercase vs lowercase sense suffix, namespaced id vs bare token, string vs integer type), so INSTANCE_OF and LEX_FOR edges silently resolve to zero rows even after every endpoint label is added. This decision freezes ONE canonical Strong string per language and binds it as the join key. It does NOT re-litigate Decisions 1, 2, 4, 11, 12, or 14; it extends them by naming the exact byte form their Strong join keys must carry.
+
+Canonical Strong string format, both languages, byte-justified from `ingest/canonical_strongs.py` (the already-committed normaliser, lines 41 to 72): `canonical_strongs(raw, lang)` returns `(<PREFIX><digits.zfill(4)><UPPER suffix or ''>, suffix_or_None)`. The canonical Strong string is `canon[0]`:
+
+- Hebrew: `H` + the Strong number zero-padded to exactly 4 digits + an OPTIONAL single uppercase sense-suffix letter. Examples: `H0430`, `H0001`, `H1254A`, `H7225`. A Strong below 1000 is padded (`H430` is NOT canonical; `H0430` is). A sense suffix is uppercased and kept attached in the string (`H1254a` is NOT canonical; `H1254A` is).
+- Greek: `G` + the Strong number zero-padded to exactly 4 digits + an OPTIONAL single uppercase sense-suffix letter. Examples: `G0040`, `G3056`, `G5547`. `G40` is NOT canonical; `G0040` is. Greek augmented Strongs that carry a letter suffix follow the identical suffix rule as Hebrew.
+- Strong numbers with 5 digits (the maximum the upstream encodings emit) are left at 5 digits by `zfill(4)` (zfill never truncates); the rule is "minimum 4, zero-padded", which is what `digits.zfill(4)` produces.
+- No-Strong / unresolvable token: when `canonical_strongs` raises (empty, malformed, non-Strong), the producing adapter MUST NOT fabricate a Strong. It either skips the Strong attachment (Decision 1 functional-particle rule, Decision 4 null-greekstrong rule) or routes to the adapter's documented sentinel node (e.g. macula_hebrew `GREEK_SENTINEL_ID`). The canonical form is never the empty string.
+
+The single normalization function is `ingest.canonical_strongs.canonical_strongs(raw, lang=...)`; `canon[0]` is the canonical Strong string and `canon[1]` is the separately retained suffix. No adapter may hand-roll a Strong normaliser (the audited defects are exactly the hand-rolled `f"H{int(digits)}{sense}"` / raw-`parts[0]` / `int(strong)` paths). Every adapter that writes or matches a Strong join key MUST route the raw upstream token through this function and use `canon[0]` verbatim as the key value.
+
+Producer binding (the canonical-form authorities):
+
+- `macula_hebrew` writes `Lemma.strong = canon[0]` (canonical string, e.g. `H0430`, `H1254A`) and `Lemma.id = "macula-hebrew-lemma:" + canon[0]`. This is ALREADY what `ingest/lexical/macula_hebrew.py` `_hebrew_lemma_node` emits (`row["_strong"]` = `_canonical(strongnumberx,"hb")[0]`); macula_hebrew is the canonical Hebrew Lemma authority and MUST NOT change. `Lemma.strong` is and remains a STRING.
+- `macula_greek` writes `GreekLemma.strong` as the canonical STRING `canon[0]` (e.g. `G0040`). It currently writes `GreekLemma.strong = int(strong)` (an INTEGER, `ingest/lexical/macula_greek.py` `_row_lemma_payload`); this is the defect. `GreekLemma.strong` MUST become the canonical string and MUST NOT be an int. `GreekLemma.id` namespacing (`<source>:strong-<int:05d>`) is NOT changed by this decision (see id-namespacing clause); only `.strong` is the canonical join key.
+
+Consumer binding (every Strong-keyed joiner MUST match the canonical `.strong`, not a hand-rolled value, not an int):
+
+- `stepbible_tahot` INSTANCE_OF: match `(b:Lemma {strong: canon[0]})` where `canon[0] = canonical_strongs(raw_dStrong,'hb')[0]`. Currently builds `macula-hebrew-lemma:` + `_normalize_strong` = `H430` / `H1254a` (unpadded, lowercase suffix) joined on `Lemma.id`; this resolves zero for every Strong below 1000 and every suffixed Strong. The conformant join is on `Lemma.strong` with the canonical value.
+- `stepbible_tagnt` INSTANCE_OF: match `(b:GreekLemma {strong: canon[0]})` where `canon[0] = canonical_strongs(raw_strong_id,'gk')[0]`. Currently builds bare `G0040`-ish from `_strong_from_grammar` and matches `GreekLemma.id`; macula_greek `GreekLemma.id` is `MACULA-Greek-...:strong-00040`, so it resolves zero. The conformant join is on the canonical `GreekLemma.strong` string.
+- `stepbible_tbesh` LEX_FOR: match `(l:Lemma {strong: canon[0]})` where `canon[0] = canonical_strongs(raw_base_strong,'hb')[0]`, and its self-`MERGE (:Lemma {strong: ...})` MUST use the same canonical value so it converges on the macula_hebrew Lemma rather than minting a divergent `H430` duplicate. Currently uses `_strip_sense_suffix` raw `H430`.
+- `stepbible_tbesg` LEX_FOR: match `(g:GreekLemma {strong: canon[0]})` where `canon[0] = canonical_strongs(raw_base_strong,'gk')[0]`. Currently matches `GreekLemma.id` with raw `G40`; resolves zero.
+- `stepbible_tflsj` LEX_FOR: match `(g:GreekLemma {strong: canon[0]})` where `canon[0] = canonical_strongs(raw_strong,'gk')[0]`. Currently matches `GreekLemma.strong` with raw string `G40` against an int producer value; type and format mismatch. The producer-side int-to-string fix plus the consumer canonical form together make this join resolve; the `greek_lemma_strong` index (Decision 14, lexical.cypher) backs it.
+- `stepbible_ttesv` INSTANCE_OF both branches: the Hebrew branch matches `(:Lemma {id: row.lemma_id})` and the Greek branch `(:GreekLemma {id: row.lemma_id})` where `lemma_id = canonical_strong = canonical_strongs(raw,lang)[0]`. ttesv self-produces its own `Lemma {id: canon[0]}` and `GreekLemma {id: canon[0]}` so each edge is self-consistent and ALREADY canonical-string valued; the only change is the perf-manifest label add. ttesv's separate Lemma/GreekLemma id namespace (bare canonical Strong) is a known multi-population fragmentation tracked as a data-model escalation (E1/E2), out of scope for this join-key contract; ttesv is NOT required to change its key value under Decision 18.
+
+Lemma.id / GreekLemma.id namespacing clause: `Lemma.id` (`macula-hebrew-lemma:<canon0>`) and `GreekLemma.id` (`<source>:strong-<int:05d>`) stay AS-IS. The canonical join key is `.strong` ONLY. Re-keying every cross-source joiner onto the canonical `.strong` string (rather than chasing the producer-specific `.id` namespace) is the minimal faithful fix: it changes no node identity, breaks no `lemma_id` / `greek_lemma_id` uniqueness constraint, and does not force the disjoint ttesv / macula_hebrew-greek-lemma / macula_greek GreekLemma populations to merge (that population-unification question is the separate E1/E2 data-model escalation and is explicitly NOT decided here). The only producer field that changes type is `GreekLemma.strong` (int to canonical string); no `.id` value changes.
+
+#### Cypher acceptance query
+
+```cypher
+MATCH (l:Lemma) WHERE l.strong IS NOT NULL
+WITH count(l) AS lem,
+     sum(CASE WHEN l.strong =~ '^H\\d{4,}[A-Z]?$' THEN 0 ELSE 1 END) AS bad_heb
+MATCH (g:GreekLemma) WHERE g.strong IS NOT NULL
+WITH lem, bad_heb, count(g) AS grk,
+     sum(CASE WHEN toString(g.strong) =~ '^G\\d{4,}[A-Z]?$' THEN 0 ELSE 1 END) AS bad_grk
+RETURN lem, grk, bad_heb, bad_grk, bad_heb = 0 AND bad_grk = 0
+```
+
+The query asserts every populated `Lemma.strong` matches `^H\d{4,}[A-Z]?$` and every populated `GreekLemma.strong` matches `^G\d{4,}[A-Z]?$` (a string, not an int: `toString` over a conformant value is idempotent and the regex would reject the bare integer form `40`). Zero non-conformant on both sides is the gate.
+
+#### Edge cases handled
+
+- A Strong below 1000 (`H7`, `G40`, `H430`) MUST appear as 4-digit zero-padded (`H0007`, `G0040`, `H0430`). The pre-fix tahot/tbesh/tbesg/tflsj bug was emitting the unpadded form; every such row (every Strong below 1000) silently dropped its INSTANCE_OF/LEX_FOR edge. Padding is mandatory and is exactly what `digits.zfill(4)` in `canonical_strongs` produces.
+- A sense-suffixed Strong (`H1254A`, `H8675B`) keeps the suffix in the canonical string, uppercased. The pre-fix tahot bug lowercased it (`H1254a`); the canonical form is uppercase. The base-Strong-only behaviour (Decision 14 `Strong.id` uniqueness, Decision 11 `base_strong` concordance) is unchanged: those decisions strip the suffix into `disambig_suffix`; Decision 18 governs the Lemma/GreekLemma `.strong` join key which retains the suffix per `canon[0]`.
+- `GreekLemma.strong` was an integer (`int(strong)`) at the producer; Cypher never equates integer `40` to string `'G0040'`, so every Greek Strong join silently failed even before the namespace question. The canonical form is unambiguously a STRING; the producer change int-to-string is mandatory and is the only producer-side value change.
+- No-Strong tokens (functional particles with null `strongnumberx`, malformed upstream cells) do not get a fabricated canonical Strong; the producing adapter follows its existing Decision 1 / Decision 4 skip-or-sentinel rule. The canonical form is never `''`.
+- Augmented / extended Strongs (digits beyond 4) are left at their natural width by `zfill(4)` (it pads to a minimum of 4, never truncates), so a 5-digit Strong stays 5 digits with the same `H`/`G` prefix and optional uppercase suffix.
+
+#### Per-field predicate type
+
+Canonical Strong join key (the only fields this decision binds; all other Lemma/GreekLemma fields are governed by Decisions 1, 4, 11, 12, 14 and are unchanged):
+
+| Field | Type | Predicate |
+|---|---|---|
+| Lemma.strong | string | $pred_string(x) |
+| Lemma.id | string | $pred_string(x) |
+| GreekLemma.strong | string | $pred_string(x) |
+| GreekLemma.id | string | $pred_string(x) |
