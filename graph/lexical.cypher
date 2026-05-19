@@ -45,6 +45,17 @@ CREATE CONSTRAINT syriac_word_id IF NOT EXISTS FOR (s:SyriacWord) REQUIRE s.id I
 CREATE CONSTRAINT vulgate_verse_osis IF NOT EXISTS FOR (v:VulgateVerse) REQUIRE v.osis IS UNIQUE /* Decision 8 */;
 CREATE CONSTRAINT coptic_word_id IF NOT EXISTS FOR (c:CopticWord) REQUIRE c.id IS UNIQUE /* Decision 9 */;
 CREATE CONSTRAINT versification_rule_id IF NOT EXISTS FOR (r:VersificationRule) REQUIRE r.id IS UNIQUE /* Decision 5 */;
+// macula_hebrew (ingest/lexical/macula_hebrew.py:467) does
+// `MERGE (n:`MaculaToken` {id: row.id})` for ~475911 tokens, the largest
+// single node population in the lexical store. MaculaToken.id is the
+// documented stable identifier and the MERGE-by-stable-id idempotency
+// contract makes it unique by design (one node per source token id), so a
+// UNIQUE CONSTRAINT is faithful. Without it the planner resolves the MERGE
+// as NodeByLabelScan + Filter (live EXPLAIN proven on the killed pass-1
+// relaunch), making node insertion QUADRATIC and the reseed infeasible.
+// This is the same quadratic class as the earlier edge defect, on the
+// node-MERGE-key surface. Decision 1, 2.
+CREATE CONSTRAINT maculatoken_id IF NOT EXISTS FOR (m:MaculaToken) REQUIRE m.id IS UNIQUE /* Decision 1, 2, node-MERGE constraint coverage */;
 
 CREATE INDEX word_ref IF NOT EXISTS FOR (w:Word) ON (w.ref) /* Decision 1, 2 */;
 CREATE INDEX crossref_from_ref IF NOT EXISTS FOR (c:CrossRef) ON (c.from_ref) /* Decision 5 */;
