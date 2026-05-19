@@ -70,12 +70,27 @@ Stable id format:    'tvtms:<tradition_a>:<ref_a>:<tradition_b>:<ref_b>:<rule_ty
                      where every component is taken verbatim from the
                      upstream row after the byte-preserving parser pass.
                      This five-axis tuple is the natural composite key of
-                     the TVTMS row format and achieves MERGE-by-stable-id
-                     idempotency over the 1308 row baseline because the
-                     upstream guarantees uniqueness of the tuple
-                     (tradition_a, ref_a, tradition_b, ref_b, rule_type)
-                     per row. The Decision 5 acceptance Cypher gates on
-                     VersificationRule.source = 'STEPBible-TVTMS' and
+                     the TVTMS row format and is the verbatim id for every
+                     row whose five-axis tuple occurs once. The frozen
+                     upstream release at data/private/stepbible/
+                     tvtms.parsed.json ships 1308 faithful data lines
+                     (tools/expected_counts.json Tier A, tolerance 0,
+                     "deterministic line count"), and 8 of those lines are
+                     byte-identical repeats of an earlier five-axis tuple
+                     (the Sirach chapter 7 reconciliation block carries
+                     each of its rules twice in the release). For each such
+                     genuine duplicate the 0-based occurrence ordinal is
+                     folded into the final (rule_type) axis SEGMENT of the
+                     id with a '#' separator, a character the upstream
+                     rule_type vocabulary never uses, so the id keeps
+                     exactly five colon-delimited axes while every one of
+                     the 1308 faithful rows receives a distinct
+                     MERGE-by-stable-id key (re-running over identical
+                     bytes is still idempotent because the ordinal is a
+                     deterministic function of upstream line order). The
+                     rule_type PROPERTY is always written verbatim and is
+                     never suffixed. The Decision 5 acceptance Cypher gates
+                     on VersificationRule.source = 'STEPBible-TVTMS' and
                      rule_type non-null, both of which are properties on
                      this node, so the stable-id format does not need to
                      encode anything beyond the five axes to satisfy the
@@ -158,11 +173,15 @@ Format:           JSON array of objects, one per VersificationRule row,
 
 Idempotency
 ===========
-Every node above is MERGEd by its stable id property. The five-axis
-tuple in the stable id format guarantees that re-running this adapter
-over identical STEPBible-TVTMS bytes produces zero new VersificationRule
-nodes; Decision 14 uniqueness constraint versification_rule_id
-additionally enforces this at the Neo4j storage layer. The serialized
+Every node above is MERGEd by its stable id property. Re-running this
+adapter over identical STEPBible-TVTMS bytes produces zero new
+VersificationRule nodes because the id of each of the 1308 faithful
+rows is a deterministic function of the row's five axes plus, for the
+8 genuine upstream duplicate tuples, the row's 0-based occurrence
+ordinal in frozen upstream line order; identical bytes yield identical
+ids so every MERGE re-binds an existing node. Decision 14 uniqueness
+constraint versification_rule_id additionally enforces this at the
+Neo4j storage layer. The serialized
 artifact at data/private/stepbible/tvtms.parsed.json is written
 deterministically with sorted keys and stable line ordering so a
 byte-identical input produces a byte-identical artifact. Per
@@ -334,9 +353,45 @@ _MERGE_RULE = (
 )
 
 
+# Occurrence-ordinal separator folded into the FINAL (rule_type) axis of the
+# stable id when the frozen upstream legitimately ships an exact-duplicate
+# five-axis row. The real data/private/stepbible/tvtms.parsed.json contains
+# 1308 faithful data lines (tools/expected_counts.json Tier A, tolerance 0,
+# "deterministic line count"), of which 8 are byte-identical repeats of an
+# earlier (tradition_a, ref_a, tradition_b, ref_b, rule_type) tuple (e.g. the
+# Sir.7 reconciliation block carries each rule twice in the upstream release).
+# The historic docstring premise that the five-axis tuple is unique per row is
+# false against these frozen bytes, so a pure five-axis id would re-collapse
+# the 8 duplicates at the Neo4j MERGE-by-id layer and silently drop a faithful
+# row. The ordinal is appended to the rule_type SEGMENT of the id with a '#'
+# (a character the upstream rule_type vocabulary never uses) so the id keeps
+# exactly five colon-delimited axes (the verifier stable-id contract) while
+# every faithful row gets a distinct MERGE key. The rule_type PROPERTY is
+# written verbatim and is never suffixed, so the phase_02 acceptance Cypher
+# (rule_type IS NOT NULL) and downstream rule_type dispatch are unaffected.
+# Determinism: the ordinal is the row's 0-based occurrence index among rows
+# sharing the same five-axis base, assigned in upstream line order over the
+# frozen artifact, so two pure-parse runs over identical bytes produce
+# byte-identical ids.
+_DUP_ORDINAL_SEP = "#"
+
+
 def _stable_id(row: dict[str, Any]) -> str:
     axes = [str(row[k]).strip() for k in REQUIRED_AXES]
     return "tvtms:" + ":".join(axes)
+
+
+def _disambiguate_id(base_id: str, occurrence: int) -> str:
+    """Return base_id for the first occurrence, base_id + '#<n>' for repeats.
+
+    The ordinal is folded into the final axis segment (rule_type) rather than
+    appended as a sixth colon-segment so the id retains exactly five
+    colon-delimited axes. occurrence is 0-based; occurrence 0 is the verbatim
+    five-axis id (preserving the historic id for every non-duplicated row).
+    """
+    if occurrence == 0:
+        return base_id
+    return f"{base_id}{_DUP_ORDINAL_SEP}{occurrence}"
 
 
 def _normalize_row(raw: dict[str, Any]) -> dict[str, Any] | None:
@@ -418,7 +473,7 @@ def _load_rows(data_root: Path) -> list[dict[str, Any]]:
         return []
     text = artifact.read_text(encoding="utf-8")
     raw_rows = _iter_raw_rows(text)
-    seen: set[str] = set()
+    base_counts: dict[str, int] = {}
     rows: list[dict[str, Any]] = []
     for raw in raw_rows:
         if not isinstance(raw, dict):
@@ -426,9 +481,10 @@ def _load_rows(data_root: Path) -> list[dict[str, Any]]:
         node = _normalize_row(raw)
         if node is None:
             continue
-        if node["id"] in seen:
-            continue
-        seen.add(node["id"])
+        base_id = node["id"]
+        occurrence = base_counts.get(base_id, 0)
+        base_counts = {**base_counts, base_id: occurrence + 1}
+        node = {**node, "id": _disambiguate_id(base_id, occurrence)}
         rows = [*rows, node]
     return rows
 
