@@ -1,0 +1,226 @@
+{
+  "manifest_version": "1.0",
+  "generated_utc": "2026-05-19T16:11:26Z",
+  "head_sha": "7a22cbb9824242f7d214a92d6db7cc530e689498",
+  "phase": "H",
+  "provenance": "GAP G7 closure. Every expected value below is the faithful phase-recorded or audited ground truth sourced from a named committed artifact or audit report (cited per claim description). No value was queried by the author to set expected; no value was back-fitted to make a check pass. The auditor (tools/verify_manifest.py) independently recomputes every observed value BEFORE this expected side is read, then diffs.",
+  "claims": [
+    {
+      "id": "h2_adapter_pytest",
+      "description": "H2 per-adapter pytest. Adapter coverage + embed-text + Pipeline-2 suites pass with zero failures. Expected exit_code 0 sourced from docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H2 (pytest exit 0; zero failures).",
+      "check_kind": "pytest",
+      "selector": "tests/lexical tests/embeddings tests/pipeline2",
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h3_src_macula_hebrew",
+      "description": "H3 per-source count. MaculaToken count == reconciled tier-A tol-0 expected. Expected 475911 sourced from tools/expected_counts.json sources['MACULA-Hebrew'].expected_count and confirmed live-exact in docs/AUDIT_phase_d4_count_gate_rev2.md Task 2/3 table (delta 0) and docs/AUDIT_phase_d4_edge_correctness_rev2.md (MaculaToken 475911 exact).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:MaculaToken) RETURN count(n) AS n",
+      "expected": 475911,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_oshb_morphology",
+      "description": "H3 per-source count. OSHB-morphology Word count == reconciled tier-A tol-0 expected. Expected 305507 sourced from tools/expected_counts.json sources['OSHB-morphology'].expected_count and confirmed live-exact (delta 0) in docs/AUDIT_phase_d4_count_gate_rev2.md Task 2/3 table.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:Word {source:'OSHB-morphology'}) RETURN count(n) AS n",
+      "expected": 305507,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tahot",
+      "description": "H3 per-source count. STEPBible-TAHOT TaggedToken count == reconciled tier-A tol-0 expected. Expected 283721 sourced from tools/expected_counts.json sources['STEPBible-TAHOT'].expected_count and confirmed live-exact (TaggedToken {source:'STEPBible-TAHOT'} = 283721, UNCHANGED) in docs/AUDIT_phase_d4_count_gate_rev2.md Task 4.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:TaggedToken {source:'STEPBible-TAHOT'}) RETURN count(n) AS n",
+      "expected": 283721,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tagnt",
+      "description": "H3 per-source count. STEPBible-TAGNT TaggedToken count == reconciled tier-A tol-0 expected. Expected 142096 sourced from tools/expected_counts.json sources['STEPBible-TAGNT'].expected_count and confirmed live-exact (TaggedToken {source:'STEPBible-TAGNT'} = 142096, UNCHANGED) in docs/AUDIT_phase_d4_count_gate_rev2.md Task 4.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:TaggedToken {source:'STEPBible-TAGNT'}) RETURN count(n) AS n",
+      "expected": 142096,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tvtms",
+      "description": "H3 per-source count. STEPBible-TVTMS VersificationRule count == reconciled tier-A tol-0 expected. Expected 1308 sourced from tools/expected_counts.json sources['STEPBible-TVTMS'].expected_count and confirmed live-exact (VersificationRule {source:'STEPBible-TVTMS'} = 1308) in docs/AUDIT_phase_d4_count_gate_rev2.md Task 4.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:VersificationRule {source:'STEPBible-TVTMS'}) RETURN count(n) AS n",
+      "expected": 1308,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_openbible_cross_ref",
+      "description": "H3/D.4 edge count. OPENBIBLE_CROSS_REF Verse->Verse tier-A-aligned tol-0 reconciled count. Expected 342128 sourced from tools/expected_counts.json edge_counts['OPENBIBLE_CROSS_REF'] (expected_min == expected_max == 342128) and confirmed live-exact in docs/AUDIT_phase_d4_count_gate_rev2.md (342128) and docs/AUDIT_phase_d4_edge_correctness_rev2.md section 1 (342,128, 0 off-label, 0 NULL Verse.id).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:OPENBIBLE_CROSS_REF]->() RETURN count(r) AS n",
+      "expected": 342128,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_parallel_of",
+      "description": "H3/D.4 edge count. PARALLEL_OF Verse->Verse tier-A-aligned tol-0 reconciled count (reconciled ETCBC-parallels source value). Expected 5882 sourced from tools/expected_counts.json edge_counts['PARALLEL_OF'] (expected_min == expected_max == 5882) and sources['ETCBC-parallels'].expected_count, confirmed live-exact in docs/AUDIT_phase_d4_count_gate_rev2.md and docs/AUDIT_phase_d4_edge_correctness_rev2.md section 1 (5,882, 0 off-label, 0 NULL Verse.id).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:PARALLEL_OF]->() RETURN count(r) AS n",
+      "expected": 5882,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_instance_of_total",
+      "description": "D.4 rev2 completeness. INSTANCE_OF total on the faithful COMPLETE one-pass graph after the run.py DATASETS reorder fix. Expected 2025687 sourced from docs/AUDIT_phase_d4_edge_correctness_rev2.md graph fingerprint (INSTANCE_OF: 2,025,687) and docs/AUDIT_phase_d4_count_gate_rev2.md context (matches the frozen target; 1,918,911 + 106,776). Not a tools/expected_counts.json gate (no INSTANCE_OF key); recorded ground truth is the rev2 audit topology figure.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:INSTANCE_OF]->() RETURN count(r) AS n",
+      "expected": 2025687,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_chunk_count",
+      "description": "H.2/Phase G cultural gate. CulturalChunk count in the air-gapped cultural store. Expected 60040 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (CulturalChunk 60040) and section 4 (CulturalChunk 60040 == HAS_CHUNK 60040).",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:CulturalChunk) RETURN count(n) AS n",
+      "expected": 60040,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_has_chunk",
+      "description": "H.2/Phase G cultural gate. HAS_CHUNK edge count == CulturalChunk (1:1, zero orphan). Expected 60040 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (HAS_CHUNK 60040) and section 4 per-edge gate.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH ()-[r:HAS_CHUNK]->() RETURN count(r) AS n",
+      "expected": 60040,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_work_count",
+      "description": "H.2/Phase G cultural gate. Work node count (one Work per work_id). Expected 390 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (Work 390) and Decision 2 (conformant_works 390).",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Work) RETURN count(n) AS n",
+      "expected": 390,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_doctrine_count",
+      "description": "H.2/Phase G cultural gate. Doctrine node count. Expected 26 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (Doctrine 26) and section 4 (Doctrine 26 / Question 231 / 231 edges exact match).",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Doctrine) RETURN count(n) AS n",
+      "expected": 26,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_question_count",
+      "description": "H.2/Phase G cultural gate. Question node count. Expected 231 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (Question 231) and section 4 per-edge gate.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Question) RETURN count(n) AS n",
+      "expected": 231,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_under_question",
+      "description": "H.2/Phase G cultural gate. UNDER_QUESTION edge count == Question (all 231 reachable). Expected 231 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table (UNDER_QUESTION 231) and section 4 per-edge gate.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH ()-[r:UNDER_QUESTION]->() RETURN count(r) AS n",
+      "expected": 231,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_conciliar_workids",
+      "description": "H.2/Phase G Decision 16 conciliar faithfulness. Distinct conciliar.* work_ids fan-out. Expected 4 sourced from docs/AUDIT_phase_g_cultural_gate.md (rev2) Decision 16 row (creed_works 4, conciliar_works_ok True) and 'Conciliar now fans out to 4 distinct work_ids'.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (w:Work) WHERE w.work_id STARTS WITH 'conciliar.' RETURN count(DISTINCT w.work_id) AS n",
+      "expected": 4,
+      "actual_field": "value"
+    },
+    {
+      "id": "h7_thresholds_immutable",
+      "description": "H7 threshold immutability. tools/check_thresholds_immutable.py exit 0 (expected_counts.json blob SHA == A.4 baseline). Expected exit_code 0 sourced from docs/AUDIT_phase_d4_count_gate_rev2.md Task 1 (OK: target_sha=3a62c1f1f771 baseline_sha=3a62c1f1f771, EXIT_CODE=0; gate PASS).",
+      "check_kind": "script",
+      "argv": ["tools/check_thresholds_immutable.py"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h7_verify_no_deferral",
+      "description": "H7 no-deferral. tools/verify_no_deferral.py over docs/ARCHITECTURE.md + docs/implementation_phases/phase_02_lexical_ingest.md exit 0 (zero forbidden deferral markers). Expected exit_code 0 sourced from docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H7 (both exit 0).",
+      "check_kind": "script",
+      "argv": ["tools/verify_no_deferral.py"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h6_adapter_purity",
+      "description": "H6 adapter-purity AST scan over every ingest/lexical/ adapter (rejects subprocess/socket/httpx/requests/urllib/aiohttp/dynamic import and non-data-private path literals). Expected exit_code 0 (zero impure adapters) sourced from docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H6 (exit 0; zero impure adapters).",
+      "check_kind": "script",
+      "argv": ["tools/check_adapter_purity.py", "--all"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h8_check_caste_full_history",
+      "description": "H8 check_caste over full history since Phase A.1 schema-lock. tools/check_caste.py --range b4d1a1a..HEAD exit 0 (every commit has a Caste: trailer matching its changed-file set). Expected exit_code 0 sourced from docs/implementation_phases/phase_02_lexical_ingest.md acceptance line 399 (check_caste.py --range b4d1a1a..HEAD passes) and docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H8.",
+      "check_kind": "script",
+      "argv": ["tools/check_caste.py", "--range", "b4d1a1adbf7b7844599e95ebaeae54fac46914e3..HEAD"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h5_triangle_snapshot_determinism",
+      "description": "H5 triangle hash recompute. tools/snapshot_counts.py is the byte-deterministic lexical snapshot tool; --self-test asserts two consecutive snapshots over identical inputs produce a byte-identical canonical payload (the idempotency property the live H5 triangle re-runs over the quiescent lexical store). Expected exit_code 0 sourced from the committed snapshot machinery and docs/PHASE_D_DECISIONS_LOG.md D.3 entry (post run.py DATASETS reorder a single fresh pass lands all 106,776 INSTANCE_OF edges and a second pass is a true no-op; triangle GREEN). The auditor independently re-runs the live two-pass overall_hash comparison per spec H5; this claim pins the deterministic-snapshot precondition.",
+      "check_kind": "script",
+      "argv": ["tools/snapshot_counts.py", "--self-test"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h4_vector_quality_gate",
+      "description": "H4 E.2 vector-quality gate. tools/check_vector_quality.py self-test asserts the corrected gate still rejects degenerate constant-direction and near-collinear unit collections while admitting a healthy dispersed unit store. Expected exit_code 0 sourced from docs/AUDIT_phase_e_vector_quality_rev2.md section 2 (Self-test Exit 0) and the GO verdict (distinct-ratio 1.0, cosine_mean 0.505063 <= 0.95, cosine_stdev 0.0822565 >= 1e-4, dim 2048, lex_col 15156 == live distinct embeddable strongs). The auditor independently re-runs the live gate per spec H4.",
+      "check_kind": "script",
+      "argv": ["tools/check_vector_quality.py", "--self-test"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h7_expected_counts_file_sha",
+      "description": "H7 threshold-immutability file lock. sha256 of tools/expected_counts.json equals the A.4 baseline-locked value. Expected sha sourced from tools/expected_counts.baseline (the atomic SHA-256 lock companion) and confirmed in docs/AUDIT_phase_d4_count_gate_rev2.md Task 1 (target_sha == baseline_sha == 3a62c1f1f771). Full sha is the committed tools/expected_counts.baseline content.",
+      "check_kind": "file_sha",
+      "path": "tools/expected_counts.json",
+      "expected": "3a62c1f1f7713936498c89e971a0382094c53876dc97d5ec774f45f654a07712",
+      "actual_field": "sha256"
+    },
+    {
+      "id": "h7_no_deferral_phase02_grep",
+      "description": "H7 no-deferral grep. docs/implementation_phases/phase_02_lexical_ingest.md must contain zero forbidden deferral markers (the verify_no_deferral marker class). must_be_empty: the regex must find zero matches. Expected match_count 0 sourced from tools/verify_no_deferral.py PATTERN and docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H7 (verify_no_deferral exit 0 over this file).",
+      "check_kind": "grep",
+      "path": "docs/implementation_phases/phase_02_lexical_ingest.md",
+      "pattern": "\\b(?:deferred|FIXME|XXX)\\b|defer to|out of scope|(?<!\\w)v1\\.5(?!\\w)",
+      "expected": 0,
+      "actual_field": "match_count"
+    },
+    {
+      "id": "hp2_procurement_no_unapproved_deadend",
+      "description": "H.2 procurement-list completeness. docs/data_inventory_catalog.json must contain zero procurement_required entries flagged \"deadend\": true (all 4 procurement_required entries are deadend=false, compatible_with_project=true, so none is exempt from the passed-adapter rule; no in-scope compatible procurement entry may be silently parked as a deadend). must_be_empty: the deadend-true marker must be absent in the procurement_required-bearing artifact. Expected match_count 0 sourced from docs/data_inventory_catalog.json procurement_required block (4 entries, every one \"deadend\": false) and docs/PHASE_EFH_EXECUTION_SPEC.md Phase H section H.2 rule.",
+      "check_kind": "grep",
+      "path": "docs/data_inventory_catalog.json",
+      "pattern": "\"deadend\"\\s*:\\s*true",
+      "expected": 0,
+      "actual_field": "match_count"
+    }
+  ]
+}

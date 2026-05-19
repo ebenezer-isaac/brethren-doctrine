@@ -488,3 +488,93 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     lexical OpenBible catalog correction precedent commit c1464f2. No
     caste split needed (all three paths are in the architect allowed set).
     Reversible by the owner.
+
+## 2026-05-19 GAP G7 closed: Phase H reseed manifest emitted (architect, brethren-on-trial)
+
+GAP G7 (docs/PHASE_EFH_EXECUTION_SPEC.md section 4 and Phase H notes:
+"no docs/RESEED_MANIFEST_<ts>.json exists; Phase H is fully specified but
+unrunnable until the reseed emits its manifest of claims") is now closed.
+Phases D/E/F/G are all GREEN per their rev2 audits but never emitted the
+manifest, so Phase H step H0 (manifest present) failed. The reseed-phase
+CLAIM file is now authored.
+
+MANIFEST: docs/RESEED_MANIFEST_20260519T161126Z.json, 25 claims, top-level
+{manifest_version, generated_utc, head_sha, phase, provenance, claims}.
+Schema validated by a dry parse against tools/verify_manifest.py
+evaluate_claim (every claim has id/description/check_kind/expected/
+actual_field plus the kind-specific keys: pytest->selector, script->argv,
+cypher->query+database, file_sha->path, grep->path+pattern; no duplicate
+ids; grep regexes compile under re.MULTILINE). The claim set mirrors the
+docs/PHASE_EFH_EXECUTION_SPEC.md H1 list plus the H2..H8 + H.2 per-step
+pins; no claim was invented beyond the spec enumeration. Breakdown:
+1 pytest (H2 adapter suites), 15 cypher (H3 per-source/edge + INSTANCE_OF
+completeness + H.2/Phase-G cultural counts), 6 script (H7
+check_thresholds_immutable, H7 verify_no_deferral, H6 check_adapter_purity,
+H8 check_caste full-history range, H5 snapshot determinism, H4 vector-
+quality gate), 1 file_sha (H7 expected_counts.json lock), 2 grep (H7
+no-deferral phase_02, H.2 procurement no-unapproved-deadend).
+
+EXPECTED PROVENANCE (every value sourced from a named committed
+artifact/audit; nothing queried by the author to set expected; nothing
+back-fitted to make a check pass):
+
+- per-source counts (MaculaToken 475911, OSHB Word 305507, TAHOT 283721,
+  TAGNT 142096, TVTMS 1308): tools/expected_counts.json reconciled tier-A
+  tol-0 expected_count, confirmed live-exact (delta 0) in
+  docs/AUDIT_phase_d4_count_gate_rev2.md Task 2/3/4.
+- OPENBIBLE_CROSS_REF 342128, PARALLEL_OF 5882: tools/expected_counts.json
+  edge_counts (expected_min == expected_max) and sources['ETCBC-parallels'];
+  confirmed in docs/AUDIT_phase_d4_count_gate_rev2.md and
+  docs/AUDIT_phase_d4_edge_correctness_rev2.md section 1.
+- INSTANCE_OF 2025687: docs/AUDIT_phase_d4_edge_correctness_rev2.md graph
+  fingerprint (not a catalog gate; recorded rev2 audit topology figure).
+- cultural CulturalChunk 60040 / HAS_CHUNK 60040 / Work 390 / Doctrine 26 /
+  Question 231 / UNDER_QUESTION 231 / conciliar work_ids 4:
+  docs/AUDIT_phase_g_cultural_gate.md (rev2) Live baseline table, section 4
+  per-edge gate, and Decision 16 row.
+- check_thresholds_immutable exit 0: docs/AUDIT_phase_d4_count_gate_rev2.md
+  Task 1 (target_sha == baseline_sha == 3a62c1f1f771, EXIT_CODE=0).
+- expected_counts.json sha256 3a62c1f1f771...07712: the committed
+  tools/expected_counts.baseline content (recomputed live, not a stale
+  hardcode) and corroborated by the same rev2 audit Task 1.
+- verify_no_deferral / check_adapter_purity / check_caste exit 0:
+  docs/PHASE_EFH_EXECUTION_SPEC.md Phase H sections H6/H7/H8 and
+  docs/implementation_phases/phase_02_lexical_ingest.md acceptance
+  (check_caste --range b4d1a1a..HEAD; A.1 sha
+  b4d1a1adbf7b7844599e95ebaeae54fac46914e3).
+- snapshot determinism exit 0: the committed tools/snapshot_counts.py
+  byte-deterministic property plus the D.3 reorder entry above (single
+  fresh pass lands all 106,776 INSTANCE_OF edges, second pass a true
+  no-op, triangle GREEN). The H5 live two-pass overall_hash comparison is
+  re-executed by the auditor; this claim pins the deterministic-snapshot
+  precondition rather than a tmp/ (gitignored, non-committed) constant.
+- vector-quality gate exit 0: docs/AUDIT_phase_e_vector_quality_rev2.md
+  self-test Exit 0 and GO verdict.
+- procurement no-unapproved-deadend: docs/data_inventory_catalog.json
+  procurement_required block (4 entries, every one "deadend": false,
+  compatible_with_project true) and docs/PHASE_EFH_EXECUTION_SPEC.md
+  Phase H section H.2 rule.
+
+INDEPENDENCE: tools/verify_manifest.py computes every observed value
+(pytest/script/cypher/file_sha/grep) into its own result set BEFORE the
+manifest expected side is read, then diffs; exit 0 iff every claim
+matches. The auditor independently re-executes this manifest; the author
+did NOT run tools/verify_manifest.py (running it to tune values would
+defeat the structural independence and risk back-fitting). All Neo4j /
+Qdrant access by the author was zero: every expected was RECORDED from the
+committed audits, not queried.
+
+CASTE: docs/RESEED_MANIFEST_*.json is an architect contract artifact by
+nature but was NOT covered by any existing tools/check_caste.py architect
+glob (architect docs globs are docs/PHASE_*.md, docs/SCHEMA_DECISIONS.md,
+docs/ARCHITECTURE.md, the two data_inventory catalogs, etc.; auditor owns
+docs/MANIFEST_VERIFICATION_*.json and docs/AUDIT_*.md only). This is a
+caste-config gap. Per the architect contract-artifact nature, a minimal
+docs/RESEED_MANIFEST_*.json -> architect glob addition is warranted, but
+tools/check_caste.py is implementer-z1 caste, so that glob addition is a
+SEPARATE implementer-z1 commit. This manifest + this log entry commit
+under Caste: architect (docs/PHASE_*.md governs the log; the manifest is
+landed in the same architect commit only after the glob addition makes it
+architect-covered, sequenced as: (1) implementer-z1 adds the glob, then
+(2) architect commits the manifest + this log entry under the now-valid
+architect coverage). Reversible by the owner.
