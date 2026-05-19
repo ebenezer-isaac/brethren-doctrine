@@ -1,7 +1,7 @@
 {
   "$schema_version": "1.0",
-  "generated_at": "2026-05-18T20:30:00Z",
-  "commit_baseline": "8ab93bb17929bd803edc0ddda4f4ba67921439e2",
+  "generated_at": "2026-05-19T00:00:00Z",
+  "commit_baseline": "c0b4b59",
   "tier_policy": {
     "A": {
       "tolerance": 0,
@@ -121,21 +121,21 @@
     "STEPBible-TFLSJ": {
       "tier": "A",
       "record_unit": "lemma",
-      "expected_count": 11034,
+      "expected_count": 9488,
       "tolerance": 0,
-      "min": 11034,
-      "max": 11034,
-      "tier_rationale": "STEPBible Tagged LSJ extract ships one row per Greek lemma with LSJ definition. Total is a deterministic line count from the versioned upstream release used at ingest, identical across reruns under tagged builds.",
+      "min": 9488,
+      "max": 9488,
+      "tier_rationale": "The count is the de-duplicated populated LsjEntry emit. The prior 11034 was the naive raw G/H tab-line count; the faithful adapter drops 1370 rows with empty lemma, transliteration, or pos and collapses 176 duplicate lsj_entry_id stable-id collisions, leaving 9488. Same class as the original 7 reconciliations; the adapter is faithful and is NOT changed. See docs/PHASE_D_TIERA_PREVERIFICATION.md.",
       "catalog_source_index": 10
     },
     "STEPBible-morph-codes": {
       "tier": "A",
       "record_unit": "morph_code",
-      "expected_count": 2782,
+      "expected_count": 2675,
       "tolerance": 0,
-      "min": 2782,
-      "max": 2782,
-      "tier_rationale": "STEPBible morphology code dictionary ships one row per code with human-readable expansion. Total is a deterministic line count from the versioned upstream release used at ingest, identical across reruns under tagged builds.",
+      "min": 2675,
+      "max": 2675,
+      "tier_rationale": "The count is the distinct section-parsed MorphCode emit. The prior 2782 was a naive population; the faithful adapter parses 2677 BRIEF and FULL section codes from TEHMC and TEGMC, then collapses 2 duplicate morph_code_unique codes, leaving 2675. Same class as the original 7 reconciliations; the adapter is faithful and is NOT changed. See docs/PHASE_D_TIERA_PREVERIFICATION.md.",
       "catalog_source_index": 11
     },
     "STEPBible-proper-nouns": {
@@ -201,21 +201,21 @@
     "ETCBC-parallels": {
       "tier": "A",
       "record_unit": "parallel_edge",
-      "expected_count": 8246,
+      "expected_count": 5914,
       "tolerance": 0,
-      "min": 8246,
-      "max": 8246,
-      "tier_rationale": "ETCBC parallels module ships one row per pre-derived parallel-passage edge with packed source_node and target_and_value fields. Total is the exact upstream feature count from the versioned text-fabric module at ingest.",
+      "min": 5914,
+      "max": 5914,
+      "tier_rationale": "The count is the faithful single-target PARALLEL_OF edge emit. The prior 8246 was the raw crossref.tf feature-row count; the adapter's binding Decision 3 single-comma split quarantines 2332 multi-target and non-digit-node rows, leaving 5914 single-target edges. Same class as the original 7 reconciliations; the adapter is faithful and is NOT changed. See docs/PHASE_D_TIERA_PREVERIFICATION.md.",
       "catalog_source_index": 18
     },
     "ETCBC-phono": {
       "tier": "A",
       "record_unit": "word",
-      "expected_count": 426590,
+      "expected_count": 420166,
       "tolerance": 0,
-      "min": 426590,
-      "max": 426590,
-      "tier_rationale": "ETCBC phonetic transcription ships one phono value per BHSA word slot in the same text-fabric module. Total equals the BHSA word slot count exactly because the feature is keyed one-to-one with word identifiers.",
+      "min": 420166,
+      "max": 420166,
+      "tier_rationale": "Faithful non-null phono count. Phono is attached at 0.984941 occurrence over the 426590 BHSA word slots; the 6424 null slots are the assimilated-definite-article class (g_word bare maqqef, lex H, sp art) faithfully carrying no phono by upstream design, deterministic and byte-identical over the frozen 2021 text-fabric module. The adapter is faithful per Decision 3 and is NOT changed; this is the Option A re-baseline per docs/PHASE_D_PHONO_EVIDENCE.md.",
       "catalog_source_index": 19
     },
     "open-cbgm-3-john": {
