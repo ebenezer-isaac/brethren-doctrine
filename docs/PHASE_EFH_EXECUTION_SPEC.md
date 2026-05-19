@@ -181,20 +181,28 @@ Sub-gates, all in `tests/embeddings/test_embed_text.py` (already implemented):
 - Auditor-dispatchable: yes once the script exists (read-only Qdrant
   scroll); BLOCKED today on gap G2.
 
-### E5 - Vector-quality gate: norm variance floor (RESEED_PLAN E.2)
+### E5 - Vector-quality gate: direction-dispersion non-degeneracy (RESEED_PLAN E.2)
 
-- Threshold: `stdev([norm(v) for v in sample]) >= 0.001` over a sample of
-  `lex_col` dense vectors (rejects "all vectors approximately the same
-  direction / magnitude").
-- Command: same missing Auditor script as E4 (gap G2); compute L2 norm per
-  sampled vector, take population stdev.
-- Pass/fail: `stdev(norms) >= 0.001`.
+- Threshold (amended 2026-05-19, supersedes the prior norm-variance floor):
+  over a random sample of disjoint pairs of `lex_col` dense vectors,
+  `mean(pairwise_cosine) <= 0.95` AND `pstdev(pairwise_cosine) >= 1e-4`
+  (rejects "all vectors point the same direction"). The prior
+  `stdev([norm(v)]) >= 0.001` floor was incompatible with the unit-
+  normalized voyage-4-large model (every norm approximately 1.0, measured
+  norm stdev approximately 3.97e-08) and is replaced, not deleted; the
+  embeddings were NOT altered. See `docs/AUDIT_phase_e_vector_quality.md`
+  and `docs/PHASE_D_DECISIONS_LOG.md`.
+- Command: `tools/check_vector_quality.py` (gap G2 now closed); it computes
+  both invariants in one read-only scroll and self-tests the rejection
+  property (`--self-test`).
+- Pass/fail: `mean(pairwise_cosine) <= 0.95` AND
+  `pstdev(pairwise_cosine) >= 1e-4`.
 - Dependency: E3 complete.
-- Auditor-dispatchable: yes once the script exists; BLOCKED today on gap G2.
+- Auditor-dispatchable: yes (read-only Qdrant scroll).
 
 Phase E exit: E1 pytest green, E3 `failures == 0` with embedded count equal
 to canonical Lemma count, E4 ratio >= 0.999 with zero divergent-gloss dup
-groups, E5 norm stdev >= 0.001.
+groups, E5 mean pairwise cosine <= 0.95 and pairwise-cosine stdev >= 1e-4.
 
 ---
 
@@ -436,14 +444,17 @@ Auditor does not depend on the manifest authoring them correctly.
 
 - Action: re-assert `lex_col` point count is the canonical Lemma count and
   re-run the E.2 distinct-vector ratio (>= 0.999, divergent-gloss dup groups
-  == 0) and norm stdev (>= 0.001).
+  == 0) and the direction-dispersion non-degeneracy gate
+  (mean pairwise cosine <= 0.95 AND pairwise-cosine stdev >= 1e-4, amended
+  2026-05-19; the prior norm-stdev >= 0.001 floor was incompatible with the
+  unit-normalized voyage-4-large model and is superseded).
 - Command: `python tools/verify_live_stacks.py` covers the `lex_col` point
-  count band only `[1, 25000]`; the E.2 ratio/stdev gates have NO tool
-  (gap G2), same missing Auditor Qdrant-scroll script as Phase E E4/E5.
-- Pass/fail: point count in band AND E.2 ratio/stdev pass (blocked on G2).
+  count band only `[1, 25000]`; the E.2 gates run via
+  `python tools/check_vector_quality.py` (gap G2 closed).
+- Pass/fail: point count in band AND E.2 distinct-ratio + direction-
+  dispersion pass.
 - Dependency: Phase E complete; H1.
-- Auditor-dispatchable: yes once G2 script exists; the point-count half is
-  runnable today.
+- Auditor-dispatchable: yes (read-only Qdrant scroll).
 
 ### H5 - Triangle hash recompute (Phase D.3 per-row presence vector)
 
@@ -538,12 +549,17 @@ These are flagged, not invented around. Each blocks a specific gate.
   one-file edit). Also: `--limit` default 20000 may under-cover canonical
   Lemma count; the orchestrator must set `--limit` >= live Lemma count.
 
-- **G2 (Phase E E4/E5, Phase H H4) - no vector-quality gate tool.** No
-  script computes `count(distinct sha256(vec))/count(*)` or norm stdev over
-  `lex_col`. RESEED_PLAN E.2 requires both (>= 0.999, >= 0.001). An
-  Auditor-caste read-only Qdrant-scroll script must be authored
-  (returns total/distinct/ratio/divergent-gloss-dup-groups and norm stdev).
-  Until then E4, E5, and the E.2 half of H4 are unrunnable.
+- **G2 (Phase E E4/E5, Phase H H4) - CLOSED.** `tools/check_vector_quality.py`
+  is the read-only Qdrant-scroll gate. It computes
+  `count(distinct sha256(vec))/count(*)` with the identical-gloss duplicate
+  exception (>= 0.999) and, as amended 2026-05-19, the direction-dispersion
+  non-degeneracy invariant (mean pairwise cosine <= 0.95 AND pairwise-cosine
+  stdev >= 1e-4) which replaces the prior norm-stdev >= 0.001 floor. That
+  floor was a gate/spec defect: voyage-4-large returns L2-unit-normalized
+  vectors (norm stdev approximately 3.97e-08, COSINE distance), so a norm-
+  variance floor is mathematically unpassable for the faithful embeddings;
+  the embeddings were NOT altered. The script self-tests the rejection
+  property (`--self-test`). E4, E5, and the E.2 half of H4 are runnable.
 
 - **G3 (Phase F F0/F1) - two of three F.1 question ids do not exist
   verbatim.** `doc-canon-closed` exists. `baptism-mode` and

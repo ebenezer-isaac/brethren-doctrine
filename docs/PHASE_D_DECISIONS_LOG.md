@@ -338,3 +338,80 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     two disjoint commits (run.py under Caste: implementer, this log under
     Caste: architect), mirroring the item-10 per-adapter-cherry-pick +
     separate-architect-log precedent.
+
+## 2026-05-19 E.2 norm-variance floor replaced by direction-dispersion (architect, brethren-on-trial)
+
+    DECISION: replaced the RESEED_PLAN E.2 second invariant. The prior
+    invariant was a vector-norm variance floor,
+    stdev([norm(v) for v in sample]) >= 0.001, intended to reject a store
+    where "all vectors point the same direction". It is replaced (NOT
+    merely deleted) by a model-appropriate direction-dispersion non-
+    degeneracy test: over a random sample of disjoint vector pairs,
+    mean(pairwise_cosine) <= 0.95 AND pstdev(pairwise_cosine) >= 1e-4.
+    The distinct-vector-ratio invariant (>= 0.999 with the identical-gloss
+    duplicate exception) is UNCHANGED and continues to pass at 1.0.
+
+    DEFECT (gate/spec, not embedding): the embedding model is
+    voyage-4-large, which returns L2-UNIT-NORMALIZED vectors by
+    construction; the lexical Qdrant collection correctly uses COSINE
+    distance, for which the vector norm is irrelevant by design. Every
+    stored norm is approximately 1.0 with only float32 jitter, so a
+    "norm stdev >= 0.001" test is mathematically impossible to pass for
+    ANY unit-normalized embedding model. It is therefore the wrong
+    degeneracy proxy, the same class of defect as the earlier openbible
+    catalog-arithmetic error: the faithful data is correct, the gate was
+    wrong. embed_lexical.py and embeddings/bootstrap.py perform NO
+    normalization; vectors are stored exactly as Voyage returns them.
+
+    EVIDENCE: docs/AUDIT_phase_e_vector_quality.md (independent read-only
+    auditor) measured vector L2-norm population stdev 3.97479e-08
+    (mean approximately 1.0) and distinct-vector ratio 1.000000 (0
+    penalised duplicates, 0 zero/NaN/Inf vectors) over the live lex_col.
+    An independent re-measure for this decision (read-only scroll,
+    512-point sample) gave norm min 0.99999999, max 1.00000026, mean
+    1.00000013, population stdev 4.108e-08, dim 2048. Direction-
+    dispersion on a 4000-point live sample: mean pairwise cosine
+    0.484880, pairwise-cosine stdev 0.12215 (distinct ratio 1.000000).
+
+    REPLACEMENT INVARIANT + THRESHOLDS + RATIONALE: for a unit-normalized
+    COSINE store, degeneracy is DIRECTION collapse, detected directly via
+    pairwise cosine over disjoint random pairs (fixed seed -> deterministic
+    verdict). Thresholds: mean pairwise cosine <= 0.95 (live approximately
+    0.483; a constant-direction or near-collinear store pins this to
+    approximately 1.0) and population stdev of pairwise cosine >= 1e-4
+    (live approximately 0.125; a collapsed store collapses this to 0.0
+    to approximately 1.8e-11). Both conditions must hold; either failing
+    flags degeneracy. Each threshold sits roughly three orders of
+    magnitude clear of both the healthy value and the degenerate value,
+    so it cannot be tripped by a healthy store nor passed by a collapsed
+    one. VALIDATED that the test still FAILS a genuinely collapsed
+    collection: tools/check_vector_quality.py --self-test now includes a
+    constant-direction case (2000 distinct-magnitude same-direction
+    vectors, each unique gloss so distinct-ratio passes at 1.0; gate
+    correctly rejects, cos_mean 1.0, cos_stdev 0.0) and a near-collinear
+    unit-vector case (fixed direction plus float jitter; gate correctly
+    rejects, cos_mean 1.0, cos_stdev 1.52e-14). Both are precisely the
+    family the deleted norm floor was meant to catch but, for a unit-
+    normalized model, never could. Self-test exits 0; the amended gate
+    run over the faithful live lex_col returns OK.
+
+    EMBEDDINGS NOT ALTERED: no de-normalization, perturbation, or any
+    change to embeddings/embed_lexical.py, embeddings/bootstrap.py, the
+    stored vectors, the collection, expected_counts.json/.baseline,
+    adapters, or the graph. De-normalizing the faithful unit vectors to
+    satisfy the broken test would degrade COSINE retrieval and fabricate
+    a property the model does not produce, the exact fudge brethren-on-
+    trial forbids.
+
+    SCOPE: tools/check_vector_quality.py (the gate, including its module
+    docstring and self-test) is implementer-z1 caste (tools/*.py). The
+    spec/contract edits docs/implementation_phases/RESEED_PLAN.md (E.2
+    text + summary table), docs/PHASE_EFH_EXECUTION_SPEC.md (E5, Phase E
+    exit, H4, gap G2) and this log entry are architect caste
+    (docs/implementation_phases/*.md, docs/PHASE_*.md). check_caste
+    forbids crossing castes in one commit and no single caste's
+    allowed_globs covers both the tools/ script and the docs/, so the fix
+    lands as TWO disjoint caste-correct commits (the gate under
+    Caste: implementer-z1, the spec/decisions docs under Caste: architect),
+    mirroring the immediately-preceding run.py-reorder split and the
+    item-10 separate-architect-log precedent. Reversible by the owner.
