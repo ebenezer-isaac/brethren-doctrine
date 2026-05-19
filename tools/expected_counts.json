@@ -161,11 +161,11 @@
     "OpenBible-cross-refs": {
       "tier": "A",
       "record_unit": "cross_ref",
-      "expected_count": 342130,
+      "expected_count": 342128,
       "tolerance": 0,
-      "min": 342130,
-      "max": 342130,
-      "tier_rationale": "Faithful OPENBIBLE_CROSS_REF edges resolving against the canonical Verse.id set using the contracted TVTMS artifact tvtms.parsed.json @1308 (pinned by this file's STEPBible-TVTMS Tier-A tol-0, data_inventory_catalog.json root_path plus total_records, and the stepbible_tvtms adapter docstring). FIX-OPENBIBLE (Verse.id key plus range-collapse) recovers the faithful 342130; the 2669 residual are genuine KJV-Hebrew versification shifts (Joel, Jonah, Deut class) absent from the contracted TVTMS artifact, tracked as the E1 owner-decision TVTMS-completeness ticket, not a defect in openbible, which faithfully quarantines rather than fabricates. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1.",
+      "min": 342128,
+      "max": 342128,
+      "tier_rationale": "Faithful OPENBIBLE_CROSS_REF edges resolving against the canonical Verse.id set using the contracted TVTMS artifact tvtms.parsed.json @1308 (pinned by this file's STEPBible-TVTMS Tier-A tol-0, data_inventory_catalog.json root_path plus total_records, and the stepbible_tvtms adapter docstring). FIX-OPENBIBLE (Verse.id key plus range-collapse) resolves all 344799 raw rows; the binding idempotent MERGE on {from_osis, to_osis, source} collapses 2 exact-duplicate directed verse-pairs and the 2669 residual are genuine KJV-Hebrew versification shifts (Joel, Jonah, Deut class) absent from the contracted TVTMS artifact, so the faithful landed count is 344799 - 2 - 2669 = 342128. Same idempotent-MERGE-collapse class the catalog applies to ETCBC-parallels (5914 -> 5882); the prior 342130 omitted the 2-pair collapse term. The 2669 residual stay the E1 owner-decision TVTMS-completeness ticket, not a defect in openbible, which faithfully quarantines rather than fabricates. See docs/AUDIT_phase_d4_count_gate.md Task 4 and docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1.",
       "catalog_source_index": 14
     },
     "TSK": {
@@ -275,9 +275,9 @@
     },
     "OPENBIBLE_CROSS_REF": {
       "tier": "B",
-      "expected_min": 342130,
-      "expected_max": 342130,
-      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals the faithful Verse.id-resolved emit after FIX-OPENBIBLE (Verse.id key plus range-collapse). Band re-based tol-0-aligned to the reconciled OpenBible-cross-refs source value 342130 (was [343799, 345799] HELD at the raw-344799 envelope), matching how the prior INTEGRATE-1 [SCHEMA-REVISION] re-based the other edge_counts bands to their reconciled source values. The 2669 residual KJV-Hebrew versification shifts are the E1 owner-decision TVTMS-completeness ticket, not an openbible defect. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1."
+      "expected_min": 342128,
+      "expected_max": 342128,
+      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals the faithful Verse.id-resolved emit after FIX-OPENBIBLE (Verse.id key plus range-collapse). Band re-based tol-0-aligned to the reconciled OpenBible-cross-refs source value 342128 (344799 resolved minus 2 idempotent-MERGE-collapsed exact-duplicate directed verse-pairs minus 2669 KJV-Hebrew versification shifts), kept internally consistent with the source gate exactly as PARALLEL_OF mirrors the reconciled ETCBC-parallels source value. The prior 342130 omitted the 2-pair idempotent-collapse term. The 2669 residual KJV-Hebrew versification shifts are the E1 owner-decision TVTMS-completeness ticket, not an openbible defect. See docs/AUDIT_phase_d4_count_gate.md Task 4 and docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1."
     },
     "VARIANT_UNIT_NODE": {
       "tier": "B",

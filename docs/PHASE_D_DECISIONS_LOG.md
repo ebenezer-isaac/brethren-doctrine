@@ -222,3 +222,45 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     architect Decision (Decision + SdbhDomain label + constraint +
     macula_hebrew emit + verifier + re-ingest); not autonomously
     invented per caste discipline.
+
+## 2026-05-19 OpenBible cross-ref count gate correction (architect, [SCHEMA-REVISION], brethren-on-trial)
+
+    DECISION: corrected the OpenBible-cross-refs catalog figure in
+    tools/expected_counts.json from 342130 to 342128, in both
+    sources["OpenBible-cross-refs"] (expected_count, min, max all tier-A
+    tol-0) and the internally-consistent edge_counts["OPENBIBLE_CROSS_REF"]
+    band (expected_min, expected_max), exactly as PARALLEL_OF mirrors the
+    reconciled ETCBC-parallels source value. Regenerated the baseline
+    lock tools/expected_counts.baseline; check_thresholds_immutable.py
+    passes exit 0 with target_sha == baseline_sha == 3a62c1f1f771.
+
+    ARITHMETIC ROOT CAUSE: the prior 342130 was set at FIX-OPENBIBLE
+    (commit 704523d) as 344799 raw - 2669 unresolved = 342130. That
+    subtraction OMITTED the 2-edge idempotent-MERGE-collapse term. The
+    faithful ingest deterministically lands 344799 - 2 idempotent-collapse
+    - 2669 KJV-Hebrew versification shifts = 342128. The 2 collapsed
+    rows are exact-duplicate directed verse-pairs that the binding
+    idempotent MERGE on {from_osis, to_osis, source} collapses by design;
+    the 2669 are the genuine Joel/Jonah/Deut KJV-Hebrew shift rows the
+    adapter faithfully quarantines (never stubs).
+
+    PRECEDENT: this is the IDENTICAL idempotent-MERGE-collapse class the
+    catalog already applies to the sibling source ETCBC-parallels
+    (5914 -> 5882 via a documented 32-pair collapse) and the Phase D
+    reconciliation set. The catalog applied the collapse term to
+    ETCBC-parallels but omitted it for OpenBible. This is a catalog
+    arithmetic error, not a parse defect.
+
+    BRETHREN-ON-TRIAL: trust the faithful parse, correct the
+    demonstrably-wrong catalog. The openbible adapter is faithful and was
+    NOT changed; weakening its MERGE idempotency to inflate back to 342130
+    would fabricate 2 duplicate edges. NO adapter, run.py, ingest code,
+    or graph data was changed. Only tools/expected_counts.json,
+    tools/expected_counts.baseline, and this log were touched.
+
+    EVIDENCE: independent read-only auditor report
+    docs/AUDIT_phase_d4_count_gate.md (Task 4 openbible section, live
+    graph 342128 confirmed against the frozen lexical Neo4j, read-only
+    adapter parse replay against the consumed tvtms.parsed.json). The E1
+    owner-decision TVTMS-completeness ticket (recovering the ~2669 shift
+    rows toward 344799) is unaffected and remains a separate follow-on.
