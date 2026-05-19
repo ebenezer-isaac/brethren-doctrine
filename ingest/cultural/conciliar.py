@@ -15,7 +15,6 @@ from ingest.cultural._html import wikisource_article_paragraphs
 from ingest.models import CulturalChunk, CulturalChunkSource
 
 SOURCE_SLUG = "conciliar"
-WORK_ID = "conciliar"
 TRADITION: Literal["patristic"] = "patristic"
 LICENSE = "public_domain"
 REDISTRIBUTE = True
@@ -23,13 +22,17 @@ CANONICAL_URL = "https://en.wikisource.org/wiki/Nicene_Creed"
 FALLBACK_URLS: list[str] = []
 EXPECTED = (3, 20)
 
-SOURCES: list[tuple[str, str, str, str, str]] = [
+# Each creed registers a distinct source.work_id (Decision 16) so the four
+# creeds fan out under four Work nodes within the shared patristic tradition.
+# Tuple shape: (key, work_title, url, date_written, anchor, work_id).
+SOURCES: list[tuple[str, str, str, str, str, str]] = [
     (
         "Apostles",
         "Apostles' Creed",
         "https://en.wikisource.org/wiki/Apostles%27_Creed",
         "c. 4th century",
         "Apostles.Creed",
+        "conciliar.apostles",
     ),
     (
         "Nicene",
@@ -37,6 +40,7 @@ SOURCES: list[tuple[str, str, str, str, str]] = [
         "https://en.wikisource.org/wiki/Nicene_Creed",
         "325",
         "Nicaea325.Creed",
+        "conciliar.niceno-constantinopolitan-creed",
     ),
     (
         "Athanasian",
@@ -44,6 +48,7 @@ SOURCES: list[tuple[str, str, str, str, str]] = [
         "https://en.wikisource.org/wiki/Athanasian_Creed",
         "c. 5th-6th century",
         "Athanasian.Creed",
+        "conciliar.athanasian-creed",
     ),
     (
         "Chalcedon",
@@ -51,11 +56,14 @@ SOURCES: list[tuple[str, str, str, str, str]] = [
         "https://en.wikipedia.org/wiki/Chalcedonian_Definition",
         "451",
         "Chalcedon451.Definition",
+        "conciliar.chalcedon-definition",
     ),
 ]
 
 
-def parse(raw: bytes, anchor: str, work_title: str, date_written: str) -> CulturalChunk | None:
+def parse(
+    raw: bytes, anchor: str, work_title: str, date_written: str, work_id: str
+) -> CulturalChunk | None:
     paras = wikisource_article_paragraphs(raw)
     text_parts = [p for p in paras if not p.startswith("# ")]
     body = " ".join(text_parts).strip()
@@ -65,7 +73,7 @@ def parse(raw: bytes, anchor: str, work_title: str, date_written: str) -> Cultur
         chunk_id=f"{SOURCE_SLUG}.{anchor}",
         tradition=TRADITION,
         source=CulturalChunkSource(
-            work_id=WORK_ID,
+            work_id=work_id,
             work_title=work_title,
             author="Ecumenical council / early church",
             date_written=date_written,
@@ -85,12 +93,12 @@ def parse(raw: bytes, anchor: str, work_title: str, date_written: str) -> Cultur
 def scrape() -> list[CulturalChunk]:
     out: list[CulturalChunk] = []
     last_request: dict[str, float] = {}
-    for _key, work_title, url, date_written, anchor in SOURCES:
+    for _key, work_title, url, date_written, anchor, work_id in SOURCES:
         try:
             raw = fetch_with_politeness(url, last_request_by_host=last_request)
         except Exception:
             continue
-        chunk = parse(raw, anchor, work_title, date_written)
+        chunk = parse(raw, anchor, work_title, date_written, work_id)
         if chunk is not None:
             out.append(chunk)
     return out
