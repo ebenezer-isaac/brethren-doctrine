@@ -53,3 +53,34 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
   flag for cultural-side reconciliation in Phase G.
 - lords-supper-real-presence pole binding (item 4) is the one genuine
   owner doctrinal choice; defaulted faithfully, awaiting confirmation.
+
+## Phase D relaunch defect fixes (autonomous, brethren-on-trial)
+
+6. macula_hebrew BRIDGES_LXX (commit 3dc79ee): the relaunch died on a
+   real-Neo4j SemanticError, MERGE of a relationship with a null pattern
+   property greek_strong. The orchestrator hypothesis (drop null rows) was
+   REJECTED by the implementer per Decision 4: a null greekstrong with a
+   populated greek is a meaningful bridge routed to the sentinel
+   GreekLemma macula-hebrew-greek-lemma:unknown and must NOT be dropped.
+   Faithful fix applied: nullable greek_strong/greek_surface moved OUT of
+   the MERGE pattern into a post-MERGE SET, identity stays Hebrew->Greek
+   pair plus source. Zero bridges dropped, count rule unchanged.
+   Reversible.
+
+7. theographic entity_id (commit 5b4e29d): same null-property-in-MERGE
+   class, IDENTITY-bearing per Decision 10 (cannot move to SET). Empirical
+   check of the frozen upstream found ZERO null-id records (all 4849 carry
+   a recXXXX id), so the defect was latent, not triggered on current data.
+   Faithful Decision-10 guard added: a record with no canonical or
+   Decision-10-derivable entity_id is faithfully excluded and surfaced
+   (counted, not silent), never null-MERGEd, never sentinel-collapsed.
+   Zero records excluded on frozen upstream, emitted counts unchanged
+   (4849 entities). Defensive against upstream drift. Reversible.
+
+8. Node-MERGE constraint coverage (commit d41cea0, architect): relaunch
+   attempt 1 was killed for a quadratic NodeByLabelScan on
+   MERGE (n:MaculaToken {id}) because graph/lexical.cypher had no
+   MaculaToken constraint. Exhaustive audit of all 28 node-MERGE
+   signatures found MaculaToken.id the sole gap; maculatoken_id UNIQUE
+   added; EXPLAIN proven NodeByLabelScan -> NodeUniqueIndexSeek at scale.
+   Relaunch attempt 2 then validated index-backed throughput (~5000x).
