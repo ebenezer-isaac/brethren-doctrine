@@ -1,4 +1,4 @@
-# brethren-doctrine
+# christian-doctrine
 
 A manuscript-anchored personal Bible-doctrine engine. It produces a doctrinal verdict from the original-language manuscript tradition alone, then attaches a separate diagnostic overlay showing how each tracked Christian tradition reads the same lexical pattern. The system runs two physically separate, air-gapped data stores: a lexical store (Scripture, lexicon, morphology, syntax, cross-references, apparatus where published) and a cultural store (church teaching: confessions, patristic, magisterial, denominational). An in-house orchestrator dispatches the work and voyage-4-large supplies embeddings at native 2048 dimensions for both stores. Pipeline 2 derives the Scripture-only doctrinal baseline and is air-gapped from the cultural store at the data-model level; the cultural side is a separate diagnostic overlay that records, never adjudicates. It is single-user, personal-use tooling.
 
