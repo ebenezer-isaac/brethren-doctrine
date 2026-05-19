@@ -379,10 +379,23 @@ _MERGE_COPTIC_WORD = (
     "UNWIND $rows AS row MERGE (n:`CopticWord` {id: row.id}) "
     "SET n += row RETURN count(n) AS upserted"
 )
+# VERSE-KEY-AUDIT (docs/PHASE_D_VERSEKEY_AUDIT.md) fix: the universal
+# Verse key is `Verse.id = 'verse:' + osisRef` (constraint-backed
+# verse_id, Decision 15). The producer text-floor adapters key the
+# IN_VERSE Verse endpoint by that id, byte-identical:
+#   - oshb.py:648  `verse_id = f"verse:{osis_ref}"`, IN_VERSE matches
+#     `(b:`Verse` {id: row.to_id})` (oshb.py:375, to_id=verse_id).
+#   - morphgnt.py:394  `"id": f"verse:{osis_ref}"`, IN_VERSE matches
+#     `(b:Verse{id: row.to_id})` (morphgnt.py:265, to_id from :403).
+# Matching on `Verse.osisID` was BROKEN: osisID is NULL on every NT
+# verse and, where present, carries the bare osisRef (no `verse:`
+# prefix) so the join silently produced zero edges. Re-key to the
+# universal `Verse.id` (Option C, Decision-15-sanctioned). The
+# CopticWord from-side endpoint is unchanged.
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
     "MATCH (a:`CopticWord` {id: row.from_id}), "
-    "(b:`Verse` {osisID: row.to_id}) "
+    "(b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
 
@@ -571,9 +584,25 @@ def _merge_coptic_words(session: Any, rows: list[dict[str, Any]]) -> int:
     return total
 
 
+def _verse_id(osis_ref: str) -> str:
+    """Universal Verse key, byte-identical to the producers.
+
+    oshb.py:648 `verse_id = f"verse:{osis_ref}"` and morphgnt.py:394
+    `"id": f"verse:{osis_ref}"` both construct the constraint-backed
+    `Verse.id` (verse_id, graph/lexical.cypher; Decision 15) as the
+    `verse:` prefix joined to the canonical OSIS reference. The
+    `verse_ref` carried on every CopticWord row is the OSIS reference
+    projected through STEPBible-TVTMS (Decision 9), already in the
+    canonical `<OsisBook>.<int chapter>.<int verse>` form the
+    producers emit (e.g. `Rom.1.1`), so the same prefix yields the
+    byte-identical producer key.
+    """
+    return f"verse:{osis_ref}"
+
+
 def _merge_in_verse(session: Any, rows: list[dict[str, Any]]) -> int:
     edges = [
-        {"from_id": r["id"], "to_id": r["verse_ref"]}
+        {"from_id": r["id"], "to_id": _verse_id(r["verse_ref"])}
         for r in rows if r.get("verse_ref")
     ]
     total = 0
