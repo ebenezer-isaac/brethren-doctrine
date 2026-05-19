@@ -1,7 +1,7 @@
 {
   "$schema_version": "1.0",
-  "generated_at": "2026-05-19T00:00:00Z",
-  "commit_baseline": "c0b4b59",
+  "generated_at": "2026-05-19T12:00:00Z",
+  "commit_baseline": "2fb96fe",
   "tier_policy": {
     "A": {
       "tolerance": 0,
@@ -201,11 +201,11 @@
     "ETCBC-parallels": {
       "tier": "A",
       "record_unit": "parallel_edge",
-      "expected_count": 5914,
+      "expected_count": 5882,
       "tolerance": 0,
-      "min": 5914,
-      "max": 5914,
-      "tier_rationale": "The count is the faithful single-target PARALLEL_OF edge emit. The prior 8246 was the raw crossref.tf feature-row count; the adapter's binding Decision 3 single-comma split quarantines 2332 multi-target and non-digit-node rows, leaving 5914 single-target edges. Same class as the original 7 reconciliations; the adapter is faithful and is NOT changed. See docs/PHASE_D_TIERA_PREVERIFICATION.md.",
+      "min": 5882,
+      "max": 5882,
+      "tier_rationale": "The count is the faithful landed Verse-to-Verse PARALLEL_OF edge emit. PARALLEL_OF is Verse-to-Verse: crossref.tf node ids are BHSA verse-otype text-fabric nodes (not BhsaWord word slots), established by FIX-PARALLELS (af75380) which re-keyed the endpoints to the canonical Verse node (verse:<osisRef>, constraint verse_id, Decision 15). The prior 8246 was the raw crossref.tf feature-row count; the binding Decision 3 single-comma split quarantines 2332 multi-target and non-digit-node rows leaving 5914 single-target rows, and the binding (source, target) idempotent MERGE (contract section 6) further collapses 32 exact-duplicate directed verse-pairs, leaving 5882 distinct single-target edges. record_unit stays parallel_edge (endpoint-agnostic). Same idempotent-MERGE-collapse class as the Phase D reconciliation set; the adapter is faithful and is NOT changed (the MERGE idempotency was deliberately not weakened to inflate back to 5914).",
       "catalog_source_index": 18
     },
     "ETCBC-phono": {
@@ -261,74 +261,68 @@
     }
   },
   "edge_counts": {
-    "GLOSSES_GREEK_LEMMA": {
+    "BRIDGES_LXX": {
       "tier": "B",
-      "expected_min": 326475,
-      "expected_max": 382157,
-      "tier_rationale": "Derived from MACULA-Hebrew morphemes whose greek and greekstrong fields are non-empty per Decision 4. Min uses greekstrong occurrence rate, max uses greek occurrence rate. Range covers the fallback path through STEPBible TBESG lemma lookup."
+      "expected_min": 24112,
+      "expected_max": 25096,
+      "tier_rationale": "BRIDGES_LXX is emitted once per distinct (Hebrew Lemma, GreekLemma) pair (deduplicated in macula_hebrew._build via bridge_seen), not per morpheme, per Decision 4. The prior [326475, 382157] band was modeled on a per-morpheme greek/greekstrong occurrence and is stale; band re-based to the faithful distinct-pair emit (live landed 24604) plus or minus two percent. Renamed from GLOSSES_GREEK_LEMMA to the rel-type the committed adapter actually emits. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 3."
     },
-    "HAS_CROSS_REF": {
+    "CROSS_REF": {
       "tier": "B",
       "expected_min": 100001,
       "expected_max": 509456,
-      "tier_rationale": "Derived from TSK xref_string parsing and range expansion per Decision 5. Lower bound is the Decision 5 acceptance gate of one hundred thousand. Upper bound assumes an average of eight refs per parsed entry across sixty-three thousand rows."
+      "tier_rationale": "Derived from TSK xref_string parsing and range expansion per Decision 5. Lower bound is the Decision 5 acceptance gate of one hundred thousand. Upper bound assumes an average of eight refs per parsed entry across sixty-three thousand rows. Renamed from HAS_CROSS_REF to the emitted rel-type; band unchanged (live 374549 in-band)."
     },
     "OPENBIBLE_CROSS_REF": {
       "tier": "B",
       "expected_min": 343799,
       "expected_max": 345799,
-      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals row count since one row produces one edge. Two percent capped at one thousand absolute records covers ingest-time row drops."
+      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals row count since one row produces one edge. Two percent capped at one thousand absolute records covers ingest-time row drops. Band HELD at the raw-344799 envelope pending the E1 tvtms-completeness fix and relaunch-5 re-D.4; not reconciled here."
     },
-    "HAS_VARIANT_UNIT": {
+    "VARIANT_UNIT_NODE": {
       "tier": "B",
       "expected_min": 80,
       "expected_max": 200,
-      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6, scoped to verses one through fifteen. VariantUnit count comes from joined database rows in the local SQLite and TEI XML, varying with collation revisions."
+      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6, scoped to verses one through fifteen. VariantUnit node count comes from joined database rows in the local SQLite and TEI XML, varying with collation revisions. Renamed from HAS_VARIANT_UNIT to a VariantUnit node-count gate (no HAS_VARIANT_UNIT edge is emitted); band unchanged (live 116 in-band)."
     },
-    "HAS_READING": {
+    "ATTESTED_BY": {
       "tier": "B",
       "expected_min": 250,
       "expected_max": 600,
-      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6. Reading count exceeds VariantUnit count because each unit has multiple attested readings across witnesses, including the lacuna sentinel reading per the edge-case rule."
+      "tier_rationale": "Derived from open-cbgm 3 John collation per Decision 6. Reading count exceeds VariantUnit count because each unit has multiple attested readings across witnesses, including the lacuna sentinel reading per the edge-case rule. Renamed from HAS_READING to the emitted Reading-to-VariantUnit rel-type; band unchanged (live 470 in-band)."
     },
-    "HAS_LOUW_NIDA_DOMAIN": {
+    "IN_DOMAIN": {
       "tier": "B",
       "expected_min": 254167,
       "expected_max": 266875,
-      "tier_rationale": "Derived from MACULA-Greek Nestle1904 plus SBLGNT words with non-null ln per Decision 2. Min uses raw occurrence sum across both editions. Max adds five percent for polysemy multi-edges where one Strong carries several Louw-Nida senses.",
+      "tier_rationale": "Derived from MACULA-Greek Nestle1904 plus SBLGNT words with non-null ln per Decision 2. Min uses raw occurrence sum across both editions. Max adds five percent for polysemy multi-edges where one Strong carries several Louw-Nida senses. Renamed from HAS_LOUW_NIDA_DOMAIN to the emitted Word-to-LouwNidaDomain rel-type; band unchanged (live 260839 in-band).",
       "expected_count": null,
       "tolerance_relative": 0.02
     },
-    "HAS_SDBH_DOMAIN": {
+    "BHSA_CLAUSE_NODE": {
       "tier": "B",
-      "expected_min": 244570,
-      "expected_max": 246570,
-      "tier_rationale": "Derived from MACULA-Hebrew morphemes whose sdbh field is non-null at occurrence rate 0.516 per Decision 1 and Decision 2. Range applies tier B tolerance of two percent capped at one thousand absolute records around the central estimate."
+      "expected_min": 86368,
+      "expected_max": 89894,
+      "tier_rationale": "BhsaClause node count per Decision 3; no HAS_CLAUSE edge is emitted (containment is CONTAINS_PHRASE). The prior [71500, 74500] band was a stale clause-otype estimate; band re-based to the faithful clause-otype node count (live BhsaClause 88131) plus or minus two percent. Renamed from HAS_CLAUSE to a BhsaClause node-count gate. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 3."
     },
-    "HAS_CLAUSE": {
-      "tier": "B",
-      "expected_min": 71500,
-      "expected_max": 74500,
-      "tier_rationale": "Derived from ETCBC-BHSA text-fabric clause slots per Decision 3. Count comes from the clause otype feature, a join over the word-to-clause containment edges. Range absorbs minor revision drift between text-fabric module releases."
-    },
-    "HAS_PHRASE": {
+    "CONTAINS_PHRASE": {
       "tier": "B",
       "expected_min": 248000,
       "expected_max": 256000,
-      "tier_rationale": "Derived from ETCBC-BHSA text-fabric phrase slots per Decision 3. Count comes from the phrase otype feature, a join over the clause-to-phrase and phrase-to-word containment edges across the full Hebrew Bible.",
+      "tier_rationale": "Derived from ETCBC-BHSA text-fabric phrase slots per Decision 3. Count comes from the phrase otype feature, a join over the clause-to-phrase and phrase-to-word containment edges across the full Hebrew Bible. Renamed from HAS_PHRASE to the emitted containment rel-type; band unchanged (live 253203 in-band).",
       "expected_count": null
     },
-    "HAS_PARALLEL": {
+    "PARALLEL_OF": {
       "tier": "B",
-      "expected_min": 8082,
-      "expected_max": 8411,
-      "tier_rationale": "Derived from ETCBC-parallels rows per Decision 3, where each row produces one PARALLEL_OF edge after splitting target_and_value into target node and similarity score. Range applies tier B tolerance of two percent around the upstream row count."
+      "expected_min": 5882,
+      "expected_max": 5882,
+      "tier_rationale": "PARALLEL_OF is the faithful Verse-to-Verse landed edge count, equal to the reconciled sources[ETCBC-parallels] 5882 (5914 single-target rows minus 32 idempotent-MERGE-collapsed exact-duplicate directed verse-pairs). The prior [8082, 8411] band still encoded the pre-reconciliation raw 8246 and is stale; band re-based tol-0-aligned to the reconciled tier-A tol-0 source count so the edge gate is internally consistent with the source gate. Renamed from HAS_PARALLEL to the emitted rel-type. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 2 and Finding 3."
     },
-    "IS_PROPER_NOUN": {
+    "NAMED_AT": {
       "tier": "B",
-      "expected_min": 23205,
-      "expected_max": 27546,
-      "tier_rationale": "Derived from STEPBible proper-nouns rows plus Theographic Person and Place projections per Decision 10. Min counts only STEPBible entries, max adds Theographic person and place entity counts that resolve to proper-noun labels."
+      "expected_min": 5350,
+      "expected_max": 5568,
+      "tier_rationale": "NAMED_AT is the faithful ProperNoun-to-Verse resolution edge per Decision 10. The prior [23205, 27546] band re-counted the already-reconciled sources[STEPBible-proper-nouns] rows plus Theographic projections under a different aggregate and is stale; band re-based to the faithful NAMED_AT emit (live landed 5459) plus or minus two percent. Renamed from IS_PROPER_NOUN to the emitted rel-type. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 3."
     }
   }
 }
