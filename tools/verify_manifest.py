@@ -39,6 +39,7 @@ import hashlib
 import json
 import os
 import re
+import shlex
 import subprocess
 import sys
 from dataclasses import asdict, dataclass, field
@@ -66,8 +67,14 @@ def _sha256_path(p: Path) -> str:
 
 
 def run_pytest_claim(selector: str, repo: Path) -> dict[str, Any]:
+    # A selector may name several space-separated test paths. Split it so
+    # each path becomes its own argv token (``pytest -q p1 p2 ...``)
+    # instead of one bogus combined path. shlex.split is robust against
+    # quoted paths and yields a one-element list for a single path, so
+    # single-path selectors behave exactly as before.
+    selector_args = shlex.split(selector)
     proc = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q", selector],
+        [sys.executable, "-m", "pytest", "-q", *selector_args],
         cwd=str(repo), capture_output=True, text=True, timeout=600,
     )
     return {
@@ -272,6 +279,13 @@ def _self_test() -> int:
         td_path = Path(td)
         target = td_path / "fixture.txt"
         target.write_bytes(b"hello world")
+        # Two trivial passing test files under a space-free relative dir so
+        # the multi-path selector exercises the argv-split fix: pytest must
+        # receive each path as its own token and exit 0.
+        (td_path / "test_a.py").write_text(
+            "def test_a():\n    assert True\n", encoding="utf-8")
+        (td_path / "test_b.py").write_text(
+            "def test_b():\n    assert True\n", encoding="utf-8")
         manifest = {
             "phase": "Z.1-self-test",
             "claims": [
@@ -282,6 +296,14 @@ def _self_test() -> int:
                     "path": str(target.relative_to(td_path)),
                     "expected": _sha256_bytes(b"hello world"),
                     "actual_field": "sha256",
+                },
+                {
+                    "id": "multi_path_pytest",
+                    "description": "multi-path pytest selector splits to argv",
+                    "check_kind": "pytest",
+                    "selector": "test_a.py test_b.py",
+                    "expected": 0,
+                    "actual_field": "exit_code",
                 },
             ],
         }
