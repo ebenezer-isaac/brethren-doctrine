@@ -135,6 +135,40 @@ def _anchor_refs(question: dict[str, Any]) -> list[str]:
     return refs
 
 
+# RESEED_PLAN F.1 invariant 4 / Decision 6 / phase_02 variant scope:
+# the only ECM/CBGM apparatus ingested is 3 John, verse range 1.1
+# through 1.15 inclusive. Any anchor verse outside this exact window
+# has no variant apparatus by construction, so the bundle must declare
+# not_in_ecm_scope honestly rather than emit a silently empty
+# variant_units with no signal that the silence is structural.
+_ECM_SCOPE_BOOK = "3John"
+_ECM_SCOPE_CHAPTER = 1
+_ECM_SCOPE_VERSE_LO = 1
+_ECM_SCOPE_VERSE_HI = 15
+
+_ECM_REF_PATTERN = re.compile(r"^3John\.(?P<chapter>\d+)\.(?P<verse>\d+)$")
+
+
+def _in_ecm_scope(osis_refs: list[str]) -> bool:
+    """True iff at least one anchor ref lies in the ingested ECM window.
+
+    Pure: no I/O. The ingested apparatus is exactly
+    3John.1.1 .. 3John.1.15 (Decision 6). A single in-window anchor is
+    enough for the bundle to be "in scope"; only when every anchor is
+    outside the window is the apparatus structurally absent.
+    """
+    for ref in osis_refs:
+        m = _ECM_REF_PATTERN.match(ref)
+        if m is None:
+            continue
+        if int(m.group("chapter")) != _ECM_SCOPE_CHAPTER:
+            continue
+        verse = int(m.group("verse"))
+        if _ECM_SCOPE_VERSE_LO <= verse <= _ECM_SCOPE_VERSE_HI:
+            return True
+    return False
+
+
 def _query_anchor_lemmas(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
     cypher = """
     UNWIND $refs AS ref
@@ -147,7 +181,7 @@ def _query_anchor_lemmas(driver: Driver, refs: list[str]) -> list[dict[str, Any]
            coalesce(l.transliteration, l.lemma) AS transliteration,
            occurrences_in_canon,
            true AS in_anchors
-    ORDER BY local_count DESC, occurrences_in_canon DESC
+    ORDER BY local_count DESC, occurrences_in_canon DESC, elementId(l)
     LIMIT $limit
     """
     with driver.session() as session:
@@ -186,7 +220,7 @@ def _query_cross_refs(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
            cr.to_ref AS to_ref,
            coalesce(cr.source, 'openbible') AS source,
            coalesce(cr.votes, 1) AS votes
-    ORDER BY votes DESC
+    ORDER BY votes DESC, elementId(cr)
     LIMIT $limit
     """
     with driver.session() as session:
@@ -211,6 +245,7 @@ def _query_semantic_neighbors(driver: Driver, anchor_strongs: list[str]) -> list
     OPTIONAL MATCH (anchor)-[:LOUW_NIDA_DOMAIN]->(d:LouwNidaDomain)<-[:LOUW_NIDA_DOMAIN]-(neigh:Lemma)
     WHERE neigh.strong <> anchor.strong
     WITH neigh, d
+    ORDER BY elementId(neigh), elementId(d)
     LIMIT $limit
     RETURN neigh.strong AS strong,
            neigh.lemma AS lemma,
@@ -228,6 +263,7 @@ def _query_variant_units(driver: Driver, refs: list[str]) -> list[dict[str, Any]
     MATCH (v:Verse {osisID: ref})-[:HAS_VARIANT]->(vu:Variant)
     OPTIONAL MATCH (vu)-[:HAS_READING]->(rd:Reading)
     WITH v, vu, collect({witness: rd.witness, text: rd.text}) AS readings
+    ORDER BY elementId(vu)
     RETURN v.osisID AS ref,
            vu.id AS variant_id,
            readings
@@ -247,6 +283,8 @@ def _query_syntactic_context(driver: Driver, refs: list[str]) -> list[dict[str, 
     MATCH (v:Verse {osisID: ref})
     OPTIONAL MATCH (v)-[:HAS_CLAUSE]->(c:Clause)
     OPTIONAL MATCH (c)-[:HAS_PHRASE]->(p:Phrase)
+    WITH v, c, p
+    ORDER BY elementId(v), elementId(c), elementId(p)
     RETURN v.osisID AS ref,
            coalesce(c.text, '') AS clause,
            coalesce(p.text, '') AS phrase,
@@ -279,6 +317,13 @@ def build_lexical_context_bundle(
     finally:
         driver.close()
 
+    # RESEED_PLAN F.1 invariant 4: anchors outside the ingested ECM
+    # window (3John.1.1 .. 3John.1.15, Decision 6) have no variant
+    # apparatus by construction. Declare that structurally rather than
+    # leave an unexplained empty variant_units. Variant population logic
+    # above is unchanged; this only adds the honest scope flag.
+    not_in_ecm_scope = not _in_ecm_scope(osis_refs)
+
     return {
         "question_id": question_id,
         "question_statement": question["statement"],
@@ -296,6 +341,7 @@ def build_lexical_context_bundle(
             "cross_refs": cross_refs,
             "semantic_domain_neighbors": semantic_neighbors,
             "variant_units": variant_units,
+            "not_in_ecm_scope": not_in_ecm_scope,
             "syntactic_context": syntactic_context,
         },
         "schema_version": "3.0",

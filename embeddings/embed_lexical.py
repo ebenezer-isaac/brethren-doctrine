@@ -24,6 +24,12 @@ NS = uuid.UUID("a4f6e6c0-0000-4000-8000-000000000002")
 BATCH = 128
 MIN_INTERVAL_SECONDS = 0.0
 EMBED_TEXT_MAX_LEN = 6000
+# Full Lemma + GreekLemma corpus floor is 22717 (TBESH 11682 + TBESG
+# 11035 distinct Strong-keyed lemmas per tools/expected_counts.json).
+# 50000 covers that floor with ample headroom for MACULA-only and
+# disambiguated-sense lemma ids while keeping the query bounded (O(n)
+# over a single ORDER BY ... LIMIT, no full-graph fan-out).
+DEFAULT_LEMMA_LIMIT = 50000
 
 
 def build_embed_text(row: dict[str, Any]) -> str:
@@ -66,17 +72,56 @@ def build_embed_text(row: dict[str, Any]) -> str:
 
 
 def _iter_lemmas(session: Any, limit: int) -> list[dict[str, Any]]:
+    """Project every Strong-keyed lemma row for the Voyage embed path.
+
+    On the real lexical graph the enrichment fields do NOT live directly
+    on the lemma node. ``transliteration``, ``pos`` and the English
+    ``gloss`` are carried by the connected ``BriefLexEntry`` (STEPBible
+    TBESH/TBESG) reachable via ``LEX_FOR``; the Louw-Nida code is the
+    ``LouwNidaDomain`` reachable through any instance ``Word`` and the
+    MACULA-Greek semantic ``domain`` string is a ``Word`` property. The
+    pre-fix query SELECTed only ``l.transliteration``/``l.gloss`` (which
+    are null on real data) and never projected ``pos``/``domain``/
+    ``louw_nida`` at all, so on production data ``build_embed_text`` fell
+    below the RESEED_PLAN E.1 floor of >= 6 distinct tokens. This query
+    OPTIONAL MATCHes the nodes that actually hold those fields and
+    projects them only when the source populated them (no fabrication;
+    the per-type non-empty predicate is preserved by ``coalesce(..., '')``
+    plus the non-empty guards inside ``build_embed_text``).
+
+    Both ``Lemma`` (Hebrew) and ``GreekLemma`` (Greek) are covered: the
+    pre-fix query matched ``Lemma`` only, silently dropping the entire
+    GreekLemma corpus from the embed collection.
+    """
     rows = list(
         session.run(
             """
-            MATCH (l:Lemma)
-            WHERE l.strong IS NOT NULL
-            RETURN l.strong AS strong, l.lemma AS lemma,
-                   coalesce(l.transliteration, l.lemma) AS transliteration,
-                   coalesce(l.gloss, '') AS gloss,
+            MATCH (l)
+            WHERE (l:Lemma OR l:GreekLemma) AND l.strong IS NOT NULL
+            OPTIONAL MATCH (b:BriefLexEntry)-[:LEX_FOR]->(l)
+            WITH l,
+                 head(collect(b)) AS b
+            OPTIONAL MATCH (l)<-[:INSTANCE_OF]-(dw:Word)
+            WHERE dw.domain IS NOT NULL AND dw.domain <> ''
+            WITH l, b, head(collect(dw.domain)) AS word_domain
+            OPTIONAL MATCH (l)<-[:INSTANCE_OF]-(:Word)-[:IN_DOMAIN]->(d:LouwNidaDomain)
+            WITH l, b, word_domain,
+                 head(collect(
+                   toString(d.domain_code) +
+                   CASE WHEN d.subdomain_code IS NOT NULL
+                        THEN '.' + toString(d.subdomain_code) ELSE '' END
+                 )) AS ln_code
+            RETURN l.strong AS strong,
+                   l.lemma AS lemma,
+                   coalesce(b.transliteration, l.transliteration, l.lemma)
+                     AS transliteration,
+                   coalesce(b.english, b.gloss_line, l.gloss, '') AS gloss,
+                   coalesce(b.pos, l.pos, '') AS pos,
+                   coalesce(word_domain, l.domain, '') AS domain,
+                   coalesce(ln_code, l.louw_nida, '') AS louw_nida,
                    coalesce(l.license, 'public_domain') AS license,
                    coalesce(l.redistribute, true) AS redistribute
-            ORDER BY l.strong
+            ORDER BY l.strong, elementId(l)
             LIMIT $lim
             """,
             lim=limit,
@@ -110,7 +155,17 @@ def _embed_batch(voyage_client: Any, texts: list[str]) -> list[list[float]] | No
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int, default=20000)
+    # Lemma corpus contract (tools/expected_counts.json): STEPBible-TBESH
+    # ships 11682 Strong-keyed Hebrew lemmas and STEPBible-TBESG ships
+    # 11035 Greek lemmas => 22717 distinct Strong-keyed lemmas form the
+    # Lemma + GreekLemma node floor (the MACULA producers MERGE on the
+    # same Strong identities and are deduped by id). The prior default of
+    # 20000 truncated ~2717 lemmas (~12% of the corpus) off the
+    # production embed path. DEFAULT_LEMMA_LIMIT covers the full corpus
+    # with headroom for any MACULA-only / disambiguated-sense lemma ids
+    # beyond the brief-lexicon Strong set; pass --limit explicitly to cap
+    # a partial run.
+    parser.add_argument("--limit", type=int, default=DEFAULT_LEMMA_LIMIT)
     parser.add_argument("--collection", default="lex_col")
     args = parser.parse_args(argv)
 
