@@ -135,7 +135,7 @@ def upsert_chunks(
         works: dict[str, dict[str, Any]] = {}
         chunk_rows: list[dict[str, Any]] = []
         for c in buf:
-            redistribute_ok = check_redistribute(c.license, "bulk")
+            redistribute_ok = check_redistribute(c.license, "bulk")["allowed"]
             text_value = c.text if redistribute_ok else c.text_to_embed
             works[c.source.work_id] = {
                 "work_id": c.source.work_id,
