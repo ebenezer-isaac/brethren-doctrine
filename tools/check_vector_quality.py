@@ -1,15 +1,35 @@
 """Phase E.2 vector-quality gate for the lexical Qdrant collection.
 
 Implements the RESEED_PLAN section E.2 invariants (P-EFH spec gap G2).
-RESEED_PLAN E.2 states verbatim:
+RESEED_PLAN E.2 (as amended 2026-05-19, see PHASE_D_DECISIONS_LOG entry
+"E.2 norm-variance floor replaced by direction-dispersion") states:
 
     count(DISTINCT sha256(vec)) / count(*) >= 0.999  (was 0.99).
     Duplicate vector groups allowed only if all members share gloss
     exactly.
 
-    Vector norm variance floor:
-    stdev([norm(v) for v in sample]) >= 0.001
-    (rejects "all vectors approximately the same direction").
+    Direction-dispersion non-degeneracy: over a random sample of
+    disjoint vector pairs, mean pairwise cosine similarity must be
+    <= 0.95 AND the population stdev of pairwise cosine similarity
+    must be >= 1e-4 (rejects "all vectors point the same direction").
+
+DEFECT HISTORY. The original E.2 second invariant was a vector-norm
+variance floor, ``stdev([norm(v) for v in sample]) >= 0.001``. The
+embedding model is voyage-4-large, which returns L2-UNIT-NORMALIZED
+vectors by construction (every stored norm is approximately 1.0; an
+independent live audit measured norm population stdev approximately
+3.97e-08 over lex_col, mean approximately 1.0, and a fresh 512-point
+re-measure here gave stdev 4.108e-08). The collection correctly uses
+COSINE distance, for which the vector norm is irrelevant by design.
+A "norm stdev >= 0.001" test is therefore mathematically impossible
+to pass for ANY unit-normalized embedding model and was the wrong
+degeneracy proxy. It is replaced (not merely deleted) by a model-
+appropriate direction-dispersion test that genuinely detects "all
+vectors point the same direction" for unit vectors. The embeddings
+were NOT altered (de-normalizing faithful vectors would degrade
+COSINE retrieval); the GATE/SPEC was wrong, like the earlier
+openbible catalog-arithmetic defect. See
+docs/AUDIT_phase_e_vector_quality.md and the dated decisions entry.
 
 This script asserts BOTH invariants against the lexical Qdrant
 collection ``lex_col``. The connection is read from the same source the
@@ -40,15 +60,40 @@ A group whose members all share one gloss contributes zero penalised
 duplicates (the faithful E.2 exception: legitimately identical glosses
 may legitimately collide in vector space).
 
-Norm variance floor
---------------------
-Over a sample of points (all points when the collection is small,
-capped by ``--sample`` otherwise, scanned in scroll order which is
-deterministic per Qdrant segment layout) compute the L2 norm of every
-``dense`` vector and require the population standard deviation to be
-``>= 0.001``. A degenerate store where every vector points the same
-direction (or is the zero vector) collapses this stdev to ~0 and is
-rejected.
+Direction-dispersion non-degeneracy
+-----------------------------------
+voyage-4-large vectors are unit-normalized, so vector MAGNITUDE carries
+no information and a magnitude-variance test is meaningless. Degeneracy
+for a unit-normalized, COSINE-distance store means DIRECTION collapse:
+every vector pointing (nearly) the same way. We detect that directly.
+
+Over the collected sample (all points when small, capped by
+``--sample``), the points are split into disjoint consecutive pairs and
+the cosine similarity of each pair is computed. A genuinely degenerate
+store (constant or near-collinear direction) yields mean pairwise
+cosine approximately 1.0 with pairwise-cosine stdev approximately 0; a
+healthy store yields a mean well below 1.0 with a substantial spread.
+Empirically measured on the live lex_col: mean pairwise cosine
+approximately 0.483, stdev approximately 0.125; on a synthetic
+constant-direction store: mean 1.0, stdev 0.0; on a near-collinear
+store (float jitter only): mean 1.0, stdev approximately 1.8e-11.
+
+Two conditions must BOTH hold to pass (either failing flags
+degeneracy):
+
+* mean pairwise cosine ``<= 0.95``  (live approximately 0.483;
+  degenerate approximately 1.0). Conservative ceiling with a wide
+  margin: even substantially more clustered but still healthy
+  embeddings stay well under 0.95, while collinear collapse pins it
+  to approximately 1.0.
+* population stdev of pairwise cosine ``>= 1e-4``  (live approximately
+  0.125; degenerate 0.0 to approximately 1.8e-11). The floor sits
+  roughly three orders of magnitude above the degenerate value and
+  three orders of magnitude below the healthy value, so it cannot be
+  tripped by a healthy store nor passed by a collapsed one.
+
+Pairing uses a fixed seed so the verdict is deterministic for a given
+scrolled set; the metric is order-insensitive in expectation.
 
 The script is strictly read-only: it issues only ``scroll`` /
 ``count`` against Qdrant and never writes. It exits non-zero with a
@@ -73,6 +118,7 @@ import argparse
 import hashlib
 import math
 import os
+import random
 import struct
 import sys
 from dataclasses import dataclass
@@ -82,7 +128,12 @@ from typing import Any, Iterable, Protocol, runtime_checkable
 COLLECTION_DEFAULT = "lex_col"
 VECTOR_NAME = "dense"
 DISTINCT_RATIO_FLOOR = 0.999
-NORM_STDEV_FLOOR = 0.001
+# Direction-dispersion non-degeneracy thresholds (replace the prior
+# norm-variance floor, invalid for unit-normalized voyage-4-large; see
+# the module docstring and PHASE_D_DECISIONS_LOG 2026-05-19).
+COSINE_MEAN_CEIL = 0.95
+COSINE_STDEV_FLOOR = 1e-4
+PAIR_SEED = 0x1EAF
 SAMPLE_DEFAULT = 20000
 SCROLL_PAGE = 256
 
@@ -101,7 +152,8 @@ class Verdict:
     total: int
     penalised_duplicates: int
     distinct_ratio: float
-    norm_stdev: float
+    cosine_mean: float
+    cosine_stdev: float
     detail: str = ""
 
 
@@ -142,6 +194,48 @@ def population_stdev(values: list[float]) -> float:
     return math.sqrt(var)
 
 
+def pairwise_cosine(a: tuple[float, ...], b: tuple[float, ...]) -> float:
+    """Cosine similarity of two vectors.
+
+    Defensive against a zero (degenerate) vector: a zero vector has no
+    direction, so a pair touching one is treated as maximally collapsed
+    (similarity 1.0) rather than raising. Real voyage-4-large vectors
+    are unit-norm so the denominator is approximately 1.0.
+    """
+    na = l2_norm(a)
+    nb = l2_norm(b)
+    if na == 0.0 or nb == 0.0:
+        return 1.0
+    dot = sum(float(x) * float(y) for x, y in zip(a, b))
+    return dot / (na * nb)
+
+
+def direction_dispersion(
+    vectors: list[tuple[float, ...]], *, seed: int = PAIR_SEED
+) -> tuple[float, float, int]:
+    """Mean and population stdev of cosine over disjoint random pairs.
+
+    Returns ``(mean, stdev, n_pairs)``. Pairing is a deterministic
+    seeded shuffle then consecutive disjoint pairing, so the statistic
+    is reproducible for a given scrolled set. With < 2 vectors no pair
+    exists and a fully-collapsed signal ``(1.0, 0.0, 0)`` is returned so
+    a tiny or empty store cannot silently pass the non-degeneracy gate.
+    """
+    n = len(vectors)
+    if n < 2:
+        return 1.0, 0.0, 0
+    order = list(range(n))
+    random.Random(seed).shuffle(order)
+    sims: list[float] = []
+    for i in range(0, n - 1, 2):
+        sims.append(
+            pairwise_cosine(vectors[order[i]], vectors[order[i + 1]])
+        )
+    mean = sum(sims) / len(sims)
+    var = sum((s - mean) ** 2 for s in sims) / len(sims)
+    return mean, math.sqrt(var), len(sims)
+
+
 # ---------- core invariant evaluation ----------
 
 def evaluate(points: list[_Point]) -> Verdict:
@@ -157,16 +251,15 @@ def evaluate(points: list[_Point]) -> Verdict:
             total=0,
             penalised_duplicates=0,
             distinct_ratio=0.0,
-            norm_stdev=0.0,
+            cosine_mean=1.0,
+            cosine_stdev=0.0,
             detail="collection is empty; E.2 cannot be satisfied",
         )
 
     # Group point indices by vector hash in one pass.
     by_hash: dict[str, list[int]] = {}
-    norms: list[float] = []
     for idx, p in enumerate(points):
         by_hash.setdefault(vector_sha256(p.vector), []).append(idx)
-        norms.append(l2_norm(p.vector))
 
     penalised = 0
     offending_hash: str | None = None
@@ -182,7 +275,9 @@ def evaluate(points: list[_Point]) -> Verdict:
             offending_hash = vhash
 
     distinct_ratio = (total - penalised) / total
-    norm_stdev = population_stdev(norms)
+    cos_mean, cos_stdev, n_pairs = direction_dispersion(
+        [p.vector for p in points]
+    )
 
     problems: list[str] = []
     if distinct_ratio < DISTINCT_RATIO_FLOOR:
@@ -194,19 +289,36 @@ def evaluate(points: list[_Point]) -> Verdict:
             "duplicates are exempt only when every member of the "
             "vector group shares an identical gloss)"
         )
-    if norm_stdev < NORM_STDEV_FLOOR:
+    if n_pairs == 0:
         problems.append(
-            "vector L2-norm stdev "
-            f"{norm_stdev:.6g} < {NORM_STDEV_FLOOR} "
-            "(vectors are near-collinear / degenerate)"
+            "fewer than 2 vectors: direction-dispersion "
+            "non-degeneracy cannot be evaluated"
         )
+    else:
+        if cos_mean > COSINE_MEAN_CEIL:
+            problems.append(
+                "mean pairwise cosine "
+                f"{cos_mean:.6f} > {COSINE_MEAN_CEIL} over {n_pairs} "
+                "pair(s) (vectors point nearly the same direction / "
+                "degenerate; unit-norm collinear collapse pins this to "
+                "approximately 1.0)"
+            )
+        if cos_stdev < COSINE_STDEV_FLOOR:
+            problems.append(
+                "pairwise-cosine stdev "
+                f"{cos_stdev:.6g} < {COSINE_STDEV_FLOOR} over {n_pairs} "
+                "pair(s) (direction spread collapsed; a healthy store "
+                "spreads cosine widely, a collinear store collapses it "
+                "to approximately 0)"
+            )
 
     return Verdict(
         ok=not problems,
         total=total,
         penalised_duplicates=penalised,
         distinct_ratio=distinct_ratio,
-        norm_stdev=norm_stdev,
+        cosine_mean=cos_mean,
+        cosine_stdev=cos_stdev,
         detail="; ".join(problems),
     )
 
@@ -340,18 +452,23 @@ def _mk(vec: list[float], gloss: str) -> _FakeRecord:
     return _FakeRecord({VECTOR_NAME: vec}, {"gloss": gloss})
 
 
+def _unit(seed: int, dim: int = 16) -> list[float]:
+    """A pseudo-random unit-norm vector (mimics voyage-4-large output)."""
+    rng = random.Random(seed)
+    v = [rng.gauss(0.0, 1.0) for _ in range(dim)]
+    n = math.sqrt(sum(x * x for x in v)) or 1.0
+    return [x / n for x in v]
+
+
 def _self_test() -> int:
-    # --- PASS case: all distinct, healthy norm spread ---
-    healthy = [
-        _mk([1.0, 0.0, 0.0], "alpha"),
-        _mk([0.0, 2.0, 0.0], "beta"),
-        _mk([0.0, 0.0, 3.0], "gamma"),
-        _mk([0.5, 0.5, 4.0], "delta"),
-        # A legitimately-collinear-gloss duplicate pair: SAME vector,
-        # SAME gloss -> exempt, must NOT penalise.
-        _mk([7.0, 7.0, 7.0], "twin"),
-        _mk([7.0, 7.0, 7.0], "twin"),
-    ]
+    # --- PASS case: many distinct UNIT vectors with healthy direction
+    # spread (each norm approximately 1.0, mimicking voyage-4-large),
+    # plus an identical-gloss collinear duplicate pair which is exempt
+    # and must NOT penalise. A well-dispersed random unit sample has
+    # mean pairwise cosine near 0 and a wide spread, so it must pass
+    # the direction-dispersion non-degeneracy gate.
+    healthy = [_mk(_unit(i), f"w{i}") for i in range(200)]
+    healthy += [_mk(_unit(9001), "twin"), _mk(_unit(9001), "twin")]
     pts = collect_points(_FakeQdrant(healthy), "lex_col", sample=0)
     v_pass = evaluate(pts)
     if not v_pass.ok:
@@ -386,22 +503,58 @@ def _self_test() -> int:
         )
         return 1
 
-    # --- FAIL case 2: all vectors collinear (norm stdev collapses) ---
-    # 2000 identical-direction vectors, EACH with a unique gloss so the
-    # distinct-ratio invariant passes and ONLY the variance floor fires.
-    collinear = [_mk([1.0, 0.0, 0.0], f"u{i}") for i in range(2000)]
+    # --- FAIL case 2: degenerate constant-direction store. 2000
+    # vectors all pointing the SAME direction but each scaled by a
+    # DISTINCT positive factor, so every sha256 is distinct (distinct-
+    # ratio passes at 1.0) yet every pairwise cosine is exactly 1.0:
+    # mean cosine 1.0 > 0.95 and stdev 0.0 < 1e-4. The direction-
+    # dispersion gate MUST reject this (the genuine collapse signal a
+    # unit-norm-only store would otherwise hide). This is the case the
+    # removed norm-variance floor was meant to catch but, for a unit-
+    # normalized model, never could.
+    collinear = [
+        _mk([float(i + 1), 0.0, 0.0], f"u{i}") for i in range(2000)
+    ]
     v_col = evaluate(collect_points(_FakeQdrant(collinear), "lex_col", sample=0))
     if v_col.ok:
         print(
-            "self-test FAIL: collinear/zero-variance vectors accepted "
-            f"(stdev={v_col.norm_stdev})",
+            "self-test FAIL: constant-direction vectors accepted "
+            f"(cos_mean={v_col.cosine_mean} cos_stdev={v_col.cosine_stdev})",
             file=sys.stderr,
         )
         return 1
-    if "norm stdev" not in v_col.detail:
+    if "cosine" not in v_col.detail:
         print(
             f"self-test FAIL: wrong failure reason for collinear case: "
             f"{v_col.detail}",
+            file=sys.stderr,
+        )
+        return 1
+
+    # --- FAIL case 2b: near-collinear unit vectors (a fixed direction
+    # plus float-scale jitter only). Each is unit-norm and distinct, so
+    # the OLD norm-variance floor would have passed it; the new gate
+    # must still reject because mean cosine stays approximately 1.0 and
+    # the spread collapses below the 1e-4 floor.
+    base = _unit(7, dim=16)
+    near = []
+    for i in range(2000):
+        rng = random.Random(1000 + i)
+        v = [b + rng.uniform(-1e-7, 1e-7) for b in base]
+        n = math.sqrt(sum(x * x for x in v)) or 1.0
+        near.append(_mk([x / n for x in v], f"n{i}"))
+    v_near = evaluate(collect_points(_FakeQdrant(near), "lex_col", sample=0))
+    if v_near.ok:
+        print(
+            "self-test FAIL: near-collinear unit vectors accepted "
+            f"(cos_mean={v_near.cosine_mean} cos_stdev={v_near.cosine_stdev})",
+            file=sys.stderr,
+        )
+        return 1
+    if "cosine" not in v_near.detail:
+        print(
+            "self-test FAIL: wrong failure reason for near-collinear "
+            f"case: {v_near.detail}",
             file=sys.stderr,
         )
         return 1
@@ -413,9 +566,13 @@ def _self_test() -> int:
         return 1
 
     # --- threshold-edge: exactly one penalised dup in 1000 -> ratio
-    # 0.999 which is the inclusive floor and must PASS ---
-    edge = [_mk([float(i), 1.0, 0.0], f"e{i}") for i in range(998)]
-    edge += [_mk([5.0, 5.0, 5.0], "p"), _mk([5.0, 5.0, 5.0], "q")]
+    # 0.999, the inclusive floor, must PASS. The 998 non-dup vectors
+    # are well-dispersed unit vectors so the direction-dispersion gate
+    # is satisfied and ONLY the distinct-ratio edge is exercised. The
+    # final pair shares one vector with DIFFERING gloss ("p" vs "q")
+    # so it is one penalised duplicate (not gloss-exempt).
+    edge = [_mk(_unit(5000 + i), f"e{i}") for i in range(998)]
+    edge += [_mk(_unit(123456), "p"), _mk(_unit(123456), "q")]
     v_edge = evaluate(collect_points(_FakeQdrant(edge), "lex_col", sample=0))
     if not v_edge.ok:
         print(
@@ -427,9 +584,13 @@ def _self_test() -> int:
 
     print(
         "self-test OK "
-        f"(pass ratio={v_pass.distinct_ratio:.6f} stdev={v_pass.norm_stdev:.4g}; "
+        f"(pass ratio={v_pass.distinct_ratio:.6f} "
+        f"cos_mean={v_pass.cosine_mean:.4f} cos_stdev={v_pass.cosine_stdev:.4f}; "
         f"dup-fail ratio={v_dup.distinct_ratio:.6f}; "
-        f"collinear-fail stdev={v_col.norm_stdev:.3g}; "
+        f"constant-dir-fail cos_mean={v_col.cosine_mean:.4f} "
+        f"cos_stdev={v_col.cosine_stdev:.3g}; "
+        f"near-collinear-fail cos_mean={v_near.cosine_mean:.4f} "
+        f"cos_stdev={v_near.cosine_stdev:.3g}; "
         f"edge ratio={v_edge.distinct_ratio:.6f})"
     )
     return 0
@@ -442,8 +603,10 @@ def main(argv: list[str] | None = None) -> int:
         description=(
             "Phase E.2 vector-quality gate for the lexical Qdrant "
             "collection (RESEED_PLAN E.2: distinct-ratio >= 0.999 with "
-            "the identical-gloss duplicate exception, and L2-norm stdev "
-            ">= 0.001). Read-only; non-zero exit on violation."
+            "the identical-gloss duplicate exception, and direction-"
+            "dispersion non-degeneracy: mean pairwise cosine <= 0.95 "
+            "AND pairwise-cosine stdev >= 1e-4). Read-only; non-zero "
+            "exit on violation."
         )
     )
     parser.add_argument(
@@ -453,9 +616,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--sample", type=int, default=SAMPLE_DEFAULT,
         help=(
-            "Max points to scroll for the norm-variance sample; "
-            "<= 0 means scan the whole collection. The distinct-ratio "
-            "is computed over the same scrolled set."
+            "Max points to scroll for the direction-dispersion "
+            "sample; <= 0 means scan the whole collection. The "
+            "distinct-ratio is computed over the same scrolled set."
         ),
     )
     parser.add_argument("--self-test", action="store_true")
@@ -485,8 +648,10 @@ def main(argv: list[str] | None = None) -> int:
             f"OK: {args.collection} n={verdict.total} "
             f"distinct_ratio={verdict.distinct_ratio:.6f} "
             f"(>= {DISTINCT_RATIO_FLOOR}) "
-            f"norm_stdev={verdict.norm_stdev:.6g} "
-            f"(>= {NORM_STDEV_FLOOR})"
+            f"cosine_mean={verdict.cosine_mean:.6f} "
+            f"(<= {COSINE_MEAN_CEIL}) "
+            f"cosine_stdev={verdict.cosine_stdev:.6g} "
+            f"(>= {COSINE_STDEV_FLOOR})"
         )
         return 0
     print(f"FAIL: E.2 violated: {verdict.detail}", file=sys.stderr)
