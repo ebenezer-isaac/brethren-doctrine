@@ -218,6 +218,16 @@ CASTE_RULES: dict[str, CasteRule] = {
             # matched no caste, a governance dead end. Precise literal,
             # not a wildcard, mirroring the tightly enumerated scope.
             ".gitignore",
+            # Python build/packaging manifest. pyproject.toml is the
+            # project's distribution identity and build config, the same
+            # build/config tooling family as .gitignore and the docker
+            # compose configs implementer-z1 already owns. Without this
+            # glob pyproject.toml matched no caste, a governance dead end
+            # (no caste could ever commit the distribution rename or any
+            # build-config change). Added as a precise literal, not a
+            # broad wildcard, mirroring the tightly enumerated scope and
+            # the README.md / .gitignore tightly-scoped-literal precedent.
+            "pyproject.toml",
             "tools/expected_counts.baseline",
         ),
         forbidden_globs=(
