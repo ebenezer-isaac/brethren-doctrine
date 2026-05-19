@@ -264,3 +264,77 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     adapter parse replay against the consumed tvtms.parsed.json). The E1
     owner-decision TVTMS-completeness ticket (recovering the ~2669 shift
     rows toward 344799) is unaffected and remains a separate follow-on.
+
+## 2026-05-19 D.3 INSTANCE_OF non-idempotency: run.py DATASETS reorder (architect, brethren-on-trial)
+
+    DECISION: reordered the ingest/lexical/run.py DATASETS dispatch list so
+    the {strong}-keyed Lemma / GreekLemma endpoint producers run BEFORE the
+    {strong}-keyed TaggedToken consumers. The dispatch order in run.py is a
+    schema/contract artifact (it encodes the Group 1 -> Group 2 -> Group 3
+    dependency contract of docs/implementation_phases/phase_02_lexical_ingest
+    .md and the Dependencies docstring sections of tahot/tagnt/ttesv/tbesh),
+    so the change is recorded here as an architectural ordering decision.
+
+    EXACT REORDER: stepbible_ttesv, stepbible_tbesh, and (defensively)
+    stepbible_tbesg were moved from positions 11, 12, 13 to positions 9, 10,
+    11, immediately after stepbible_morph_codes and immediately BEFORE
+    stepbible_tahot and stepbible_tagnt. New full order:
+    oshb, macula_hebrew, bhsa, etcbc_phono, etcbc_parallels, macula_greek,
+    morphgnt, stepbible_morph_codes, stepbible_ttesv, stepbible_tbesh,
+    stepbible_tbesg, stepbible_tahot, stepbible_tagnt, stepbible_tflsj,
+    stepbible_proper_nouns, stepbible_tvtms, peshitta, coptic_scriptorium,
+    vulgate_clementine, open_cbgm_3_john, openbible, tsk, theographic.
+
+    ROOT CAUSE (D.3): stepbible_tahot.py resolves its INSTANCE_OF endpoint
+    with MATCH (b:Lemma {strong: row.to_id}) and stepbible_tagnt.py with
+    MATCH (b:GreekLemma {strong: row.to_id}). The {strong}-keyed Lemma /
+    GreekLemma floor is only fully minted once stepbible_tbesh (a Lemma
+    {strong} producer) and stepbible_ttesv (a net-new GreekLemma {strong}
+    producer) have run, but in the prior order those producers ran AFTER the
+    consumers. On a single fresh pass tahot/tagnt MATCHed nothing for the
+    affected rows so the MERGE rel was silently skipped; a second pass (no
+    wipe) found the now-existing endpoints and completed them, making the
+    ingest non-idempotent on a single fresh pass and failing the triangle
+    test. FakeDriver did not surface this because it does not model
+    MATCH-finds-nothing-so-MERGE-rel-skipped.
+
+    ARITHMETIC: tagnt -> GreekLemma minted by ttesv = 99,811; tahot ->
+    Lemma{strong} minted by tbesh = 6,965; 99,811 + 6,965 = 106,776. This
+    equals the observed pass1 -> pass2 INSTANCE_OF growth exactly
+    (2,025,687 - 1,918,911 = 106,776). After the reorder a single fresh
+    pass lands all 106,776 edges and a second pass is a true no-op.
+
+    DIAGNOSIS REFERENCE: full read-only diagnosis with live-graph
+    quantification and the containment scan is
+    docs/PHASE_D3_INSTANCEOF_NONIDEMPOTENT.md (recommended fix Option (a),
+    section 9).
+
+    DEPENDENCIES PRESERVED: macula_greek still precedes morphgnt (Decision
+    A2 / ORD-MGNT PARSE_OF osis_wpos join, item 1); the
+    oshb -> macula_hebrew -> bhsa -> etcbc_phono -> etcbc_parallels relative
+    order is unchanged; stepbible_morph_codes still precedes the tagged-token
+    adapters; ttesv still mints its own Lemma/GreekLemma before its own
+    INSTANCE_OF, tbesh still mints its Lemma in the same batch as its
+    LEX_FOR, and tbesg/tflsj still find the macula_greek GreekLemma floor.
+    Every MATCH-endpoint-then-MERGE-rel template in the section-7
+    containment scan still has its endpoint producer running before its
+    consumer.
+
+    BRETHREN-ON-TRIAL: NO adapter Cypher was changed (Decision 18 producer
+    authority forbids the consumer minting endpoint lexeme nodes; the
+    adapter Cypher is correct given a correct dispatch order). No data is
+    fabricated and none is lost: the same source-tagged nodes exist, only
+    WHEN they are minted relative to the consumers changed. The reorder
+    touches only ingest/lexical/run.py (the DATASETS list; no _run_one body,
+    import, adapter, expected_counts, or test changed) and this log. The
+    section-6 non-unique GreekLemma.strong fan-out and the tbesg/tflsj
+    lemma-identity question remain SEPARATE architect items, out of D.3
+    scope, and were NOT folded into this fix.
+
+    CASTE NOTE: the mechanical run.py edit is implementer-caste
+    (ingest/lexical/*.py) and this decisions-log entry is architect-caste
+    (docs/PHASE_*.md). check_caste forbids crossing castes in one commit and
+    no single caste's allowed_globs covers both files, so the fix lands as
+    two disjoint commits (run.py under Caste: implementer, this log under
+    Caste: architect), mirroring the item-10 per-adapter-cherry-pick +
+    separate-architect-log precedent.
