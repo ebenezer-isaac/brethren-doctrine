@@ -265,9 +265,27 @@ _MERGE_IN_VERSE = (
     "MATCH (a:Word{id: row.from_id}), (b:Verse{id: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
+# Phase D T17 / ledger row KEY-MGNT-PARSEOF, resolved via A2 Option A
+# (owner-chosen; docs/PHASE_D_A2_EVIDENCE.md). The previous target match
+# used the TEI-xml-id-shaped key `MACULA-Greek-SBLGNT:<osisRef>.w<NN>`,
+# but macula_greek's contractual Word.id is `<edition>:<MACULA xml:id>`
+# (e.g. `MACULA-Greek-SBLGNT:n43001001001`), which this adapter cannot
+# reconstruct, so the join resolved zero target nodes (A2 evidence
+# section 3). Under Option A the MACULA-Greek adapter now emits a
+# loss-free `osis_wpos` alias byte-identical to the key built here, and
+# this MATCH binds on `(source, osis_wpos)` instead of `(source, id)`.
+# The from-side (this MorphGNT Word) keeps its own id. The match is
+# backed by the `word_osis_wpos` composite index on
+# (Word.source, Word.osis_wpos) the architect adds to
+# graph/lexical.cypher in parallel. Unresolved targets (the 12
+# MACULA-only Pericope Adulterae verses have no MorphGNT source row, so
+# no edge originates; any other shortfall) surface as an edge-count
+# gap, never a mis-link, exactly as the docstring dependency clause
+# requires.
 _MERGE_PARSE_OF = (
     "UNWIND $rows AS row "
-    "MATCH (a:Word{id: row.from_id}), (b:Word{id: row.to_id, source: row.target_source}) "
+    "MATCH (a:Word{id: row.from_id}), "
+    "(b:Word{source: row.target_source, osis_wpos: row.to_wpos}) "
     "MERGE (a)-[r:`PARSE_OF`]->(b) RETURN count(r) AS edges"
 )
 
@@ -386,10 +404,16 @@ def _in_verse_edge_row(word_id: str, osis_ref: str) -> dict[str, Any]:
 
 
 def _parse_of_edge_row(word_id: str, osis_ref: str, position: int) -> dict[str, Any]:
-    target_id = f"{MACULA_GREEK_SLUG}:{osis_ref}.w{position:02d}"
+    # A2 Option A: route the OSIS+position key to macula_greek's loss-free
+    # `osis_wpos` alias instead of the unresolvable TEI-xml-id-shaped id.
+    # `to_wpos` is byte-identical to what macula_greek `_osis_wpos`
+    # produces: `<OsisBook>.<int chapter>.<int verse>.w<NN>` (osis_ref is
+    # already `<book>.<chapter>.<verse>` with integer, non-zero-padded
+    # chapter/verse from `_osis_ref`; position is 2-digit zero-padded).
+    to_wpos = f"{osis_ref}.w{position:02d}"
     return {
         "from_id": word_id,
-        "to_id": target_id,
+        "to_wpos": to_wpos,
         "target_source": MACULA_GREEK_SLUG,
     }
 

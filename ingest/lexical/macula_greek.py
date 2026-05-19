@@ -392,6 +392,116 @@ _EDITION_TO_SOURCE: dict[str, str] = {
     EDITION_SBLGNT: SOURCE_SLUG_SBLGNT,
 }
 
+# Phase D T17 / ledger row KEY-MGNT-PARSEOF, resolved via A2 Option A
+# (owner-chosen; docs/PHASE_D_A2_EVIDENCE.md). The MorphGNT-SBLGNT adapter
+# binds its PARSE_OF edge to the MACULA-Greek-SBLGNT Word it parses. The
+# contractual Word.id is the MACULA TEI xml:id (`<edition>:<xml:id>`,
+# section 3 / 9 of this module's docstring) which MorphGNT can never
+# reconstruct, so the join was zero-resolving (A2 evidence section 3). Per
+# Option A this adapter ADDS a loss-free alias property `osis_wpos` derived
+# from data it already reads (the `ref` column plus the post-`!` in-verse
+# position), rendered byte-identically to the key MorphGNT builds in
+# ingest/lexical/morphgnt.py `_parse_of_edge_row`:
+# `f"{osis_book}.{int(chapter)}.{int(verse)}.w{position:02d}"` e.g.
+# `John.1.1.w01`. Word.id, Word count, and every existing property/edge are
+# byte-unchanged; only this alias is added. MorphGNT then MATCHes
+# `(:Word {source:'MACULA-Greek-SBLGNT', osis_wpos:<key>})`, backed by the
+# `word_osis_wpos` composite index on (Word.source, Word.osis_wpos) the
+# architect adds to graph/lexical.cypher in parallel.
+#
+# `_MACULA_GREEK_BOOK_TO_OSIS` maps every uppercase MACULA-Greek `ref` book
+# token (the USFM/Paratext 3-letter scheme; the same family convention the
+# verified macula_hebrew `_MACULA_BOOK_TO_OSIS` strict bijection uses, and
+# the `JHN -> John` row is byte-confirmed in PHASE_D_A2_EVIDENCE.md
+# section 1) to the exact OSIS abbreviation MorphGNT's `OSIS_BOOKS` tuple
+# carries (Matt..Rev, 01..27). The OSIS values below are the verbatim
+# entries of that tuple, so the alias is byte-identical to the MorphGNT
+# join key by construction, not a guess. macula_greek is self-contained
+# (no cross-adapter import). Greek SBLGNT (NT) only. Fail-closed: if a
+# row's `ref` is empty, structurally unexpected, carries a book token
+# absent from this map, or has no derivable in-verse position, `osis_wpos`
+# is left absent (the row still writes with id and every other property
+# intact) so the PARSE_OF edge simply does not form. A missing alias is a
+# faithful edge-count shortfall, never a mis-link.
+_MACULA_GREEK_BOOK_TO_OSIS: dict[str, str] = {
+    "MAT": "Matt",
+    "MRK": "Mark",
+    "LUK": "Luke",
+    "JHN": "John",
+    "ACT": "Acts",
+    "ROM": "Rom",
+    "1CO": "1Cor",
+    "2CO": "2Cor",
+    "GAL": "Gal",
+    "EPH": "Eph",
+    "PHP": "Phil",
+    "COL": "Col",
+    "1TH": "1Thess",
+    "2TH": "2Thess",
+    "1TI": "1Tim",
+    "2TI": "2Tim",
+    "TIT": "Titus",
+    "PHM": "Phlm",
+    "HEB": "Heb",
+    "JAS": "Jas",
+    "1PE": "1Pet",
+    "2PE": "2Pet",
+    "1JN": "1John",
+    "2JN": "2John",
+    "3JN": "3John",
+    "JUD": "Jude",
+    "REV": "Rev",
+}
+
+
+def _osis_wpos(ref: str | None) -> str | None:
+    """Derive the MorphGNT PARSE_OF join key from a MACULA-Greek `ref`.
+
+    Upstream MACULA-Greek SBLGNT `ref` is the MACULA reference form
+    `BOOK C:V!w` (uppercase USFM book token, ASCII space, `chapter:verse`,
+    `!`, 1-based in-verse word position), e.g. `JHN 1:1!1`. The returned
+    alias is byte-identical to the key MorphGNT builds in
+    ingest/lexical/morphgnt.py `_parse_of_edge_row`:
+    `f"{osis_ref}.w{position:02d}"` where `osis_ref` is
+    `f"{book}.{int(chapter)}.{int(verse)}"` (chapter and verse as decimal
+    integers with NO zero padding, per morphgnt `_osis_ref`) and the
+    position is 2-digit zero-padded (`w01`). The book token is mapped
+    through `_MACULA_GREEK_BOOK_TO_OSIS` to the same OSIS abbreviation
+    MorphGNT's `OSIS_BOOKS` tuple emits.
+
+    Loss-free: every component (book, chapter, verse, position) is taken
+    verbatim from the `ref` string macula_greek already reads; nothing is
+    dropped or invented. Fail-closed: returns None (so the alias is absent
+    and the PARSE_OF edge cannot form) when `ref` is empty, missing the
+    book/`chapter:verse`/`!position` structure, carries a book token absent
+    from the verified map, or carries a non-integer chapter/verse/position.
+    A None here is a faithful edge-count shortfall, never a mis-link.
+    KEY-MGNT-PARSEOF / A2 Option A.
+    """
+    text = _coerce_string(ref) if ref is not None else None
+    if text is None:
+        return None
+    bare, sep, pos_part = text.partition("!")
+    if not sep:
+        return None
+    pos_token = pos_part.strip()
+    if not pos_token.isdigit():
+        return None
+    book_part, book_sep, chap_verse = bare.strip().partition(" ")
+    if not book_sep:
+        return None
+    osis_book = _MACULA_GREEK_BOOK_TO_OSIS.get(book_part)
+    if osis_book is None:
+        return None
+    chapter, colon, verse = chap_verse.strip().partition(":")
+    if not colon:
+        return None
+    chapter = chapter.strip()
+    verse = verse.strip()
+    if not chapter.isdigit() or not verse.isdigit():
+        return None
+    return f"{osis_book}.{int(chapter)}.{int(verse)}.w{int(pos_token):02d}"
+
 _MERGE_SOURCE_CYPHER = (
     "UNWIND $rows AS row "
     "MERGE (n:`Source` {slug: row.slug}) "
@@ -499,10 +609,11 @@ def _ln_tokens(ln_value: str | None) -> list[str]:
 def _row_word_payload(edition: str, fields: dict[str, str]) -> dict[str, Any]:
     xml_id = _coerce_string(fields.get("xml:id", ""))
     source = _EDITION_TO_SOURCE[edition]
+    ref = _coerce_string(fields.get("ref", ""))
     payload: dict[str, Any] = {
         "id": f"{source}:{xml_id}" if xml_id else None,
         "xml_id": xml_id,
-        "ref": _coerce_string(fields.get("ref", "")),
+        "ref": ref,
         "lemma": _coerce_string(fields.get("lemma", "")),
         "normalized": _coerce_string(fields.get("normalized", "")),
         "strong": _coerce_strong(fields.get("strong", "")),
@@ -514,6 +625,16 @@ def _row_word_payload(edition: str, fields: dict[str, str]) -> dict[str, Any]:
         "source": source,
         "edition": edition,
     }
+    # Phase D T17 / KEY-MGNT-PARSEOF, A2 Option A: the MorphGNT-SBLGNT
+    # PARSE_OF edge targets the MACULA-Greek-SBLGNT edition only, so the
+    # loss-free `osis_wpos` join alias is emitted only for SBLGNT rows.
+    # The Nestle1904 edition is byte-untouched (no new property). The
+    # alias is added only when it derives faithfully; a None drops the
+    # key entirely (fail-closed) rather than fabricating a partial value.
+    if edition == EDITION_SBLGNT:
+        osis_wpos = _osis_wpos(ref)
+        if osis_wpos is not None:
+            payload = {**payload, "osis_wpos": osis_wpos}
     return payload
 
 
