@@ -167,6 +167,15 @@ def _parse_cypher_into_driver(
     OPENBIBLE_CROSS_REF must never appear; if it does the forbidden-edge test catches it.
     """
     for label in ("CrossRef",):
+        # Phase D label-add reconciliation: only a node-MERGE statement
+        # ("MERGE (n:") may contribute node records. Post-Phase-D edge-MERGE
+        # Cypher carries endpoint labels in its MATCH clause; without this
+        # guard its edge-batch rows (from_id/to_id, no node identity) would
+        # be recorded as phantom nodes. Real node MERGEs always contain
+        # "MERGE (n:" so genuine node capture is byte-identical; the edge
+        # loop is untouched.
+        if "MERGE (n:" not in cypher:
+            continue
         if f":`{label}`" in cypher or f"(n:{label}" in cypher or f":{label} " in cypher:
             rows_param = params.get("rows") or params.get("records") or []
             if isinstance(rows_param, list):

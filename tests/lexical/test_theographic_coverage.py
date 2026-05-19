@@ -177,6 +177,15 @@ def _parse_cypher_into_driver(
     """
     entity_labels = ("Person", "Place", "Period", "Event", "Group", "Tribe")
     for label in entity_labels:
+        # Phase D label-add reconciliation: only a node-MERGE statement
+        # ("MERGE (n:") may contribute node records. Post-Phase-D edge-MERGE
+        # Cypher carries endpoint labels in its MATCH clause; without this
+        # guard its edge-batch rows (from_id/to_id, no node identity) would
+        # be recorded as phantom nodes. Real node MERGEs always contain
+        # "MERGE (n:" so genuine node capture is byte-identical; the edge
+        # loop is untouched.
+        if "MERGE (n:" not in cypher:
+            continue
         if (
             f":`{label}`" in cypher
             or f"(n:{label}" in cypher
@@ -193,7 +202,15 @@ def _parse_cypher_into_driver(
             else:
                 driver._nodes.append({"label": label})
 
-    if ":Source" in cypher or ":`Source`" in cypher or "(s:Source" in cypher:
+    # Phase D label-add reconciliation: the FROM_EDITION edge MERGE now
+    # carries the Source endpoint label in its MATCH clause
+    # (MATCH (a..),(b:`Source` {slug}) MERGE (a)-[:FROM_EDITION]->(b)).
+    # Without this guard that edge call would phantom-create a Source
+    # node. The real Source MERGE is "MERGE (n:`Source`" so it still
+    # contains "MERGE (n:" and is captured unchanged.
+    if "MERGE (n:" in cypher and (
+        ":Source" in cypher or ":`Source`" in cypher or "(s:Source" in cypher
+    ):
         slug_param = params.get("slug") or SOURCE_SLUG
         driver._nodes.append({"label": "Source", "slug": slug_param})
 
