@@ -17,6 +17,9 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     docs, generalizes the earlier ``docs/PHASE_D_*.md`` wildcard so
     worktree agents that reset to main tip can see the master ledger,
     audits and the Phase F/EFH analysis docs),
+    ``README.md`` (top-level project narrative, same governance
+    family as docs/ARCHITECTURE.md), ``docs/POC_FINDINGS.md`` (stale
+    PoC doc slated for architect deletion in the greenfield set),
     ``graph/lexical.cypher``, ``graph/cultural.cypher``,
     ``tools/expected_counts.json``. On a ``[SCHEMA-REVISION]``-tagged
     commit ONLY, also ``tools/expected_counts.baseline`` (its atomic
@@ -39,7 +42,10 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     Allowed: ``tools/*.py``, ``tools/*.cypher``,
     ``tests/lexical/stubs/*.py``,
     ``embeddings/embed_lexical.py`` for the Phase Z.1 refactor that
-    extracts ``build_embed_text``. Forbidden: ``docs/**``,
+    extracts ``build_embed_text``, ``docker/lexical/docker-compose.yml``,
+    ``docker/cultural/docker-compose.yml``, ``.gitignore`` (repo-root
+    ignore file, same build/config tooling family as tools/ and the
+    compose configs). Forbidden: ``docs/**``,
     ``tools/expected_counts.json``.
 * ``verifier``
     Allowed: ``tests/**/test_*.py``, ``tests/**/conftest.py``,
@@ -136,6 +142,18 @@ CASTE_RULES: dict[str, CasteRule] = {
             # config gap. Scoped to the RESEED_MANIFEST_ prefix, same
             # tightly-enumerated governance precedent as the PHASE_ glob.
             "docs/RESEED_MANIFEST_*.json",
+            # Top-level project narrative and the stale PoC findings doc.
+            # README.md is the project's narrative entry point, the same
+            # architect-owned governance family as docs/ARCHITECTURE.md.
+            # docs/POC_FINDINGS.md is a superseded PoC doc slated for
+            # architect deletion in the greenfield set; without an
+            # architect glob it matched no caste, a governance dead end
+            # (no caste could ever git rm it). Added as precise literals,
+            # not a broad docs/*.md or top-level wildcard, to keep the
+            # architect docs scope tightly enumerated. Follows the
+            # b66831c / 34180a7 tightly scoped governance precedent.
+            "README.md",
+            "docs/POC_FINDINGS.md",
             "graph/lexical.cypher",
             "graph/cultural.cypher",
             "tools/expected_counts.json",
@@ -194,6 +212,12 @@ CASTE_RULES: dict[str, CasteRule] = {
             # wget/curl absent in image) can land on both stacks under
             # the same implementer-z1 governance.
             "docker/cultural/docker-compose.yml",
+            # Repo-root ignore file is build/config tooling, the same
+            # family as the tools/ scripts and docker compose configs
+            # implementer-z1 already owns. Without this glob .gitignore
+            # matched no caste, a governance dead end. Precise literal,
+            # not a wildcard, mirroring the tightly enumerated scope.
+            ".gitignore",
             "tools/expected_counts.baseline",
         ),
         forbidden_globs=(
