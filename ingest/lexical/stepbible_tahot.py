@@ -309,9 +309,62 @@ _MERGE_INSTANCE_OF = (
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
     "MATCH (a:`TaggedToken` {id: row.from_id}), "
-    "(b:`Verse` {osisID: row.to_id}) "
+    "(b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
+
+# TAHOT ref_eng book abbreviation to the canonical OSIS book code the
+# Decision-15 Verse producers emit. The universal Verse key is
+# Verse.id = 'verse:' + osisRef where osisRef carries the OSHB osisID
+# book code (ingest/lexical/oshb.py line 644 reads osisID off the WLC
+# verse element, line 648 writes Verse.id = f"verse:{osisID}"; the NT
+# producer ingest/lexical/morphgnt.py line 394 writes the byte-identical
+# Verse.id = f"verse:{osis_ref}" with no osisID property at all, which is
+# why an osisID-keyed match is NT-fragile and inconsistent with
+# Decision 15 / docs/PHASE_D_VERSEKEY_AUDIT.md). OSHB writes osisID for
+# OT verses too, so the prior osisID key resolved by luck only for the
+# subset of TAHOT books whose abbreviation already equalled the OSIS
+# code; books like Exo/Deu/Sng/Ezk silently dropped their IN_VERSE edge.
+# This fixed 39-entry table is bijective onto the exact 39 OSHB osisID
+# OT book codes (verified against data/private/oshb/wlc and the
+# relaunch-4 graph: all 21178 distinct TAHOT verses resolve to an
+# existing Verse.id, zero misses). It is deterministic and never
+# fabricates a Verse: an unmapped abbreviation yields None and the
+# IN_VERSE edge is faithfully omitted rather than MERGE-creating a stub.
+_TAHOT_OSIS_BOOK = {
+    "Gen": "Gen", "Exo": "Exod", "Lev": "Lev", "Num": "Num",
+    "Deu": "Deut", "Jos": "Josh", "Jdg": "Judg", "Rut": "Ruth",
+    "1Sa": "1Sam", "2Sa": "2Sam", "1Ki": "1Kgs", "2Ki": "2Kgs",
+    "1Ch": "1Chr", "2Ch": "2Chr", "Ezr": "Ezra", "Neh": "Neh",
+    "Est": "Esth", "Job": "Job", "Psa": "Ps", "Pro": "Prov",
+    "Ecc": "Eccl", "Sng": "Song", "Isa": "Isa", "Jer": "Jer",
+    "Lam": "Lam", "Ezk": "Ezek", "Dan": "Dan", "Hos": "Hos",
+    "Jol": "Joel", "Amo": "Amos", "Oba": "Obad", "Jon": "Jonah",
+    "Mic": "Mic", "Nam": "Nah", "Hab": "Hab", "Zep": "Zeph",
+    "Hag": "Hag", "Zec": "Zech", "Mal": "Mal",
+}
+
+
+def _canonical_verse_id(osis: str) -> str | None:
+    """Universal Decision-15 Verse.id for a TAHOT ref, or None.
+
+    osis is the '<TahotBook>.<chapter>.<verse>' head the adapter parses
+    from ref_eng. The TAHOT book abbreviation is mapped through the
+    fixed _TAHOT_OSIS_BOOK table to the canonical OSIS code the
+    Decision-15 producers use, then rendered byte-identically to those
+    producers as 'verse:' + '<OsisBook>.<chapter>.<verse>'
+    (oshb.py:648 / morphgnt.py:394). An absent or unmapped book
+    abbreviation, or a non-three-part ref, returns None so the caller
+    omits the IN_VERSE edge faithfully and never MERGE-creates a Verse
+    stub on the universal key.
+    """
+    parts = osis.split(".")
+    if len(parts) != 3:
+        return None
+    book = _TAHOT_OSIS_BOOK.get(parts[0])
+    if book is None:
+        return None
+    return f"verse:{book}.{parts[1]}.{parts[2]}"
 
 
 def _strip_separators(text: str) -> str:
@@ -426,6 +479,7 @@ def _row_to_token(line: str) -> dict[str, Any] | None:
     return {
         "id": token_id,
         "osis": osis,
+        "verse_id": _canonical_verse_id(osis),
         "strong": strong,
         "properties": {
             "id": token_id,
@@ -482,7 +536,11 @@ def _merge_batch(session: Any, batch: list[dict[str, Any]]) -> None:
         {"from_id": t["id"], "to_id": t["strong"]}
         for t in batch
     ]
-    verse_rows = [{"from_id": t["id"], "to_id": t["osis"]} for t in batch]
+    verse_rows = [
+        {"from_id": t["id"], "to_id": t["verse_id"]}
+        for t in batch
+        if t["verse_id"] is not None
+    ]
     session.run(_MERGE_TOKEN, rows=node_rows).consume()
     session.run(_MERGE_INSTANCE_OF, rows=instance_rows).consume()
     session.run(_MERGE_IN_VERSE, rows=verse_rows).consume()
@@ -501,9 +559,10 @@ def ingest_stepbible_tahot(
             batch = tokens[start:start + BATCH_SIZE]
             _merge_batch(session, batch)
             merged += len(batch)
+    in_verse = sum(1 for t in tokens if t["verse_id"] is not None)
     return {
         "TaggedToken": merged,
         "INSTANCE_OF": merged,
-        "IN_VERSE": merged,
+        "IN_VERSE": in_verse,
         "Source": 1,
     }
