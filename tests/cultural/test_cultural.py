@@ -9,7 +9,11 @@ from typing import Any
 import pytest
 
 from ingest.cultural import autotag, brethren_parsed
-from ingest.cultural._common import POLITENESS_GAP_SECONDS, fetch_with_politeness
+from ingest.cultural._common import (
+    POLITENESS_GAP_SECONDS,
+    fetch_with_politeness,
+    upsert_chunks,
+)
 from ingest.models import CulturalChunk, CulturalChunkSource, DoctrineTag
 
 ADAPTER_NAMES = [
@@ -113,6 +117,123 @@ def _fixture_chunk(idx: int) -> CulturalChunk:
         redistribute=True,
         license_note=None,
     )
+
+
+class _CapturingResult:
+    def __init__(self, rows: list[dict[str, Any]]) -> None:
+        self._rows = rows
+
+    def single(self) -> dict[str, int]:
+        return {"upserted": len(self._rows)}
+
+    def consume(self) -> None:
+        return None
+
+
+class _CapturingSession:
+    def __init__(self, captured: dict[str, list[dict[str, Any]]]) -> None:
+        self._captured = captured
+
+    def __enter__(self) -> _CapturingSession:
+        return self
+
+    def __exit__(self, *exc: object) -> None:
+        return None
+
+    def run(self, cypher: str, **params: Any) -> _CapturingResult:
+        rows = list(params.get("rows", []))
+        if "MERGE (c:CulturalChunk" in cypher:
+            self._captured["chunk_rows"] = rows
+        else:
+            self._captured["work_rows"] = rows
+        return _CapturingResult(rows)
+
+
+class _CapturingDriver:
+    def __init__(self) -> None:
+        self.captured: dict[str, list[dict[str, Any]]] = {}
+
+    def session(self) -> _CapturingSession:
+        return _CapturingSession(self.captured)
+
+
+def _redistribute_false_chunk() -> CulturalChunk:
+    # Copyrighted source: verbatim `text` MUST NOT be persisted; the
+    # redistribute-safe `text_to_embed` surface is distinct and shorter.
+    return CulturalChunk(
+        chunk_id="ag.AG.A01",
+        tradition="pentecostal",
+        source=CulturalChunkSource(
+            work_id="ag-fundamental-truths",
+            work_title="Statement of Fundamental Truths",
+            author=None,
+            date_written="1916",
+            is_confessional_text=True,
+            anchor_id="AG.A1",
+            language="en",
+        ),
+        text="VERBATIM COPYRIGHTED PROSE that may not be redistributed in bulk.",
+        text_to_embed="redistribute-safe paraphrase surface",
+        license="©Assemblies-of-God",
+        redistribute=False,
+        license_note="personal ingest only",
+    )
+
+
+def test_upsert_redistribute_false_persists_embed_surface_not_verbatim_text() -> None:
+    """A redistribute=false (copyrighted) source must persist text == text_to_embed.
+
+    Regression for G-SHARED-1: check_redistribute returns a non-empty dict that
+    is ALWAYS truthy, so the pre-fix guard `if check_redistribute(...)` treated
+    every copyrighted license as redistributable and leaked verbatim `text`.
+    This asserts the persisted CulturalChunk.text equals text_to_embed (guard
+    denies bulk), and FAILS against the truthy-dict bug.
+    """
+    chunk = _redistribute_false_chunk()
+    driver = _CapturingDriver()
+
+    counts = upsert_chunks(driver, [chunk])  # type: ignore[arg-type]
+
+    assert counts["CulturalChunk"] == 1
+    rows = driver.captured["chunk_rows"]
+    assert len(rows) == 1
+    persisted = rows[0]["properties"]
+    # The verbatim copyrighted prose must NOT reach the store.
+    assert persisted["text"] == chunk.text_to_embed
+    assert persisted["text"] != chunk.text
+    assert persisted["text_to_embed"] == chunk.text_to_embed
+    assert persisted["redistribute"] is False
+
+
+def test_upsert_public_domain_persists_verbatim_text() -> None:
+    """A public_domain / redistribute=true source persists verbatim `text`."""
+    chunk = CulturalChunk(
+        chunk_id="wcf.WCF.1.1",
+        tradition="reformed",
+        source=CulturalChunkSource(
+            work_id="wcf",
+            work_title="Westminster Confession of Faith",
+            author=None,
+            date_written="1646",
+            is_confessional_text=True,
+            anchor_id="WCF.1.1",
+            language="en",
+        ),
+        text="Although the light of nature, and the works of creation and providence",
+        text_to_embed="WCF 1.1 embed surface",
+        license="public_domain",
+        redistribute=True,
+        license_note=None,
+    )
+    driver = _CapturingDriver()
+
+    upsert_chunks(driver, [chunk])  # type: ignore[arg-type]
+
+    persisted = driver.captured["chunk_rows"][0]["properties"]
+    assert persisted["text"] == chunk.text
+    assert persisted["text"] != chunk.text_to_embed
+    assert persisted["text_to_embed"] == chunk.text_to_embed
+    assert persisted["redistribute"] is True
 
 
 def test_autotag_batches_130_into_3_groups() -> None:
