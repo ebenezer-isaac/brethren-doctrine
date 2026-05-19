@@ -302,9 +302,24 @@ _MERGE_SOURCE = (
     "SET n += row "
     "RETURN count(n) AS upserted"
 )
+# Endpoint MATCH binds on Verse.id, the universal canonical stable id the
+# Group 1 producers write for EVERY verse: oshb.py and morphgnt.py both set
+# Verse.id = 'verse:<osisRef>' with the OSIS-standard book vocabulary
+# (Gen, Deut, Ps, Song, Matt, Mark, John, Rev, 1Cor, 2Pet) and back it with
+# the verse_id uniqueness constraint (graph/lexical.cypher). Verse.osisID is
+# NOT a sound join key here: the MorphGNT-SBLGNT NT producer leaves osisID
+# NULL on all ~7927 NT verses (it populates `osis`/`id` instead), and a
+# phantom-stub Verse subset carries non-OSIS abbreviations (Psa/Mat/Jhn/1Ch)
+# only on osisID. Matching on osisID therefore silently dropped every
+# NT-endpoint cross-ref and every alternative-abbrev row. The OSIS endpoint
+# pair the docstring fixes as edge identity is preserved verbatim in the
+# MERGE relationship key (from_osis, to_osis, source); only the node lookup
+# property changes, so the produced edge set is the faithful superset, never
+# a fabricated one (a row whose 'verse:'+osis id is absent still does not
+# MATCH and stays quarantined, never stubbed).
 _MERGE_EDGE = (
     "UNWIND $rows AS row "
-    "MATCH (a:`Verse` {osisID: row.from_osis}), (b:`Verse` {osisID: row.to_osis}) "
+    "MATCH (a:`Verse` {id: row.from_id}), (b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:`OPENBIBLE_CROSS_REF` "
     "{from_osis: row.from_osis, to_osis: row.to_osis, source: row.source}]->(b) "
     "SET r.votes = row.votes "
@@ -348,9 +363,26 @@ def _load_tvtms_rules(data_root_parent: Path) -> dict[str, str]:
 
 
 def _project_to_osis(kjv_ref: str, rules: dict[str, str]) -> str | None:
+    """Project one OpenBible verse cell to a canonical OSIS reference.
+
+    OpenBible ships a small fraction of cells as a two-part passage range
+    `Start-End` (e.g. `Ps.89.11-Ps.89.12`). A cross-reference to a passage
+    is anchored at its first verse: Decision 5's edge-count rationale in
+    tools/expected_counts.json states "Edge count equals row count since one
+    row produces one edge", so the range is collapsed to its start verse
+    (one edge per upstream row) rather than expanded. The TSK per-verse
+    range expansion in Decision 5 Edge cases applies to TSK `xref_string`
+    packing, not to OpenBible's discrete From/To columns. The anchor verse
+    is then projected through the TVTMS rule set; refs the rule set cannot
+    resolve fall through to the identity map and are quarantined downstream
+    when no canonical Verse id matches (never fabricated).
+    """
     if not kjv_ref:
         return None
-    return rules.get(kjv_ref, kjv_ref)
+    anchor = kjv_ref.split("-", 1)[0] if "-" in kjv_ref else kjv_ref
+    if not anchor:
+        return None
+    return rules.get(anchor, anchor)
 
 
 def _parse_votes(raw: str) -> int | None:
@@ -399,6 +431,8 @@ def _parse_rows(
                 continue
             resolved.append(
                 {
+                    "from_id": f"verse:{from_osis}",
+                    "to_id": f"verse:{to_osis}",
                     "from_osis": from_osis,
                     "to_osis": to_osis,
                     "votes": votes,
