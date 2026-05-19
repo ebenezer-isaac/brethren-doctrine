@@ -1,0 +1,226 @@
+{
+  "manifest_version": "1.0",
+  "generated_utc": "2026-05-19T19:21:50Z",
+  "head_sha": "d059d2ea20b0ad0a0b96b372177ce4e45127ef01",
+  "phase": "H",
+  "provenance": "Standing trustworthiness claim file. Every expected value is the data contract: per-source and per-edge counts come from tools/expected_counts.json (SHA-locked by tools/expected_counts.baseline) and the two data-inventory catalogs; the INSTANCE_OF completeness figure and the cultural-store counts are the certified live topology of the two air-gapped stores. tools/verify_manifest.py independently recomputes every observed value before this expected side is read, then diffs; exit 0 with every claim matching is the trust proof. Every claim depends only on retained artifacts (the kept core docs, tools/, tools/expected_counts.json, the live stores); no claim references any iteration, audit, or phase document.",
+  "claims": [
+    {
+      "id": "h2_adapter_pytest",
+      "description": "H2 asserts the adapter coverage, embed-text, and Pipeline-2 pytest suites pass with zero failures (exit_code 0).",
+      "check_kind": "pytest",
+      "selector": "tests/lexical tests/embeddings tests/pipeline2",
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h3_src_macula_hebrew",
+      "description": "H3 asserts the live MaculaToken count equals the reconciled tier-A tol-0 figure in tools/expected_counts.json sources['MACULA-Hebrew'].expected_count.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:MaculaToken) RETURN count(n) AS n",
+      "expected": 475911,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_oshb_morphology",
+      "description": "H3 asserts the live OSHB-morphology Word count equals the reconciled tier-A tol-0 figure in tools/expected_counts.json sources['OSHB-morphology'].expected_count (verse-child word slots; nested qere correction elements are Reading nodes, not Word nodes).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:Word {source:'OSHB-morphology'}) RETURN count(n) AS n",
+      "expected": 305507,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tahot",
+      "description": "H3 asserts the live STEPBible-TAHOT TaggedToken count equals the reconciled tier-A tol-0 figure in tools/expected_counts.json sources['STEPBible-TAHOT'].expected_count (de-duplicated populated tagged words; empty-Strong Q/K and id-collision rows are excluded and preserved via the OSHB qere seam).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:TaggedToken {source:'STEPBible-TAHOT'}) RETURN count(n) AS n",
+      "expected": 283721,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tagnt",
+      "description": "H3 asserts the live STEPBible-TAGNT TaggedToken count equals the reconciled tier-A tol-0 figure in tools/expected_counts.json sources['STEPBible-TAGNT'].expected_count (the deterministic distinct tagged-word count over the frozen upstream).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:TaggedToken {source:'STEPBible-TAGNT'}) RETURN count(n) AS n",
+      "expected": 142096,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_src_stepbible_tvtms",
+      "description": "H3 asserts the live STEPBible-TVTMS VersificationRule count equals the tier-A tol-0 figure in tools/expected_counts.json sources['STEPBible-TVTMS'].expected_count (the full contracted tvtms.parsed.json artifact).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH (n:VersificationRule {source:'STEPBible-TVTMS'}) RETURN count(n) AS n",
+      "expected": 1308,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_openbible_cross_ref",
+      "description": "H3 asserts the live OPENBIBLE_CROSS_REF edge count equals the tier-A-aligned tol-0 figure in tools/expected_counts.json edge_counts['OPENBIBLE_CROSS_REF'] (expected_min == expected_max), the faithful Verse.id-keyed landed count given the available TVTMS artifact (raw rows minus the idempotent-MERGE-collapse term minus the genuinely-unresolvable KJV-Hebrew shift rows, which the adapter quarantines and never fabricates).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:OPENBIBLE_CROSS_REF]->() RETURN count(r) AS n",
+      "expected": 342128,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_parallel_of",
+      "description": "H3 asserts the live PARALLEL_OF Verse-to-Verse edge count equals the tier-A-aligned tol-0 figure in tools/expected_counts.json edge_counts['PARALLEL_OF'] and sources['ETCBC-parallels'].expected_count (single-target rows after the Decision 3 split, with exact-duplicate directed pairs collapsed by the binding (source,target) idempotent MERGE).",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:PARALLEL_OF]->() RETURN count(r) AS n",
+      "expected": 5882,
+      "actual_field": "value"
+    },
+    {
+      "id": "h3_edge_instance_of_total",
+      "description": "H3 asserts the live INSTANCE_OF total on the complete single-pass graph. The run.py DATASETS dispatch order (Schema Decisions, single-pass contract) places every {strong}-keyed Lemma/GreekLemma producer before its consumer, so one fresh pass lands every edge and a second pass is a true no-op; this figure is the certified complete topology.",
+      "check_kind": "cypher",
+      "database": "lexical",
+      "query": "MATCH ()-[r:INSTANCE_OF]->() RETURN count(r) AS n",
+      "expected": 2025687,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_chunk_count",
+      "description": "H.2 asserts the live CulturalChunk count in the air-gapped cultural store.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:CulturalChunk) RETURN count(n) AS n",
+      "expected": 60040,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_has_chunk",
+      "description": "H.2 asserts the live HAS_CHUNK edge count equals the CulturalChunk count (1:1, zero orphan), per Cultural Schema Decision 2.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH ()-[r:HAS_CHUNK]->() RETURN count(r) AS n",
+      "expected": 60040,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_work_count",
+      "description": "H.2 asserts the live Work node count (one Work per work_id), per Cultural Schema Decision 2.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Work) RETURN count(n) AS n",
+      "expected": 390,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_doctrine_count",
+      "description": "H.2 asserts the live Doctrine node count seeded by seed_doctrine_question_nodes.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Doctrine) RETURN count(n) AS n",
+      "expected": 26,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_question_count",
+      "description": "H.2 asserts the live Question node count seeded from questions.json.",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (n:Question) RETURN count(n) AS n",
+      "expected": 231,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_under_question",
+      "description": "H.2 asserts the live UNDER_QUESTION edge count equals the Question count (every seeded Question reachable from a Doctrine).",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH ()-[r:UNDER_QUESTION]->() RETURN count(r) AS n",
+      "expected": 231,
+      "actual_field": "value"
+    },
+    {
+      "id": "hp2_cultural_conciliar_workids",
+      "description": "H.2 asserts the conciliar source fans out to exactly four distinct conciliar.* work_ids, per Cultural Schema Decision 16 (each creed is its own Work, never one shared conciliar Work).",
+      "check_kind": "cypher",
+      "database": "cultural",
+      "query": "MATCH (w:Work) WHERE w.work_id STARTS WITH 'conciliar.' RETURN count(DISTINCT w.work_id) AS n",
+      "expected": 4,
+      "actual_field": "value"
+    },
+    {
+      "id": "h7_thresholds_immutable",
+      "description": "H7 asserts tools/check_thresholds_immutable.py exits 0: the tools/expected_counts.json blob SHA equals the locked tools/expected_counts.baseline, or the last change is a [SCHEMA-REVISION] commit moving the baseline in the same commit.",
+      "check_kind": "script",
+      "argv": ["tools/check_thresholds_immutable.py"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h7_verify_no_deferral",
+      "description": "H7 asserts tools/verify_no_deferral.py finds zero deferral markers in the retained core docs docs/ARCHITECTURE.md, docs/SCHEMA_DECISIONS.md, and docs/CULTURAL_SCHEMA_DECISIONS.md (explicit --path so the claim depends only on retained artifacts).",
+      "check_kind": "script",
+      "argv": ["tools/verify_no_deferral.py", "--path", "docs/ARCHITECTURE.md", "docs/SCHEMA_DECISIONS.md", "docs/CULTURAL_SCHEMA_DECISIONS.md"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h6_adapter_purity",
+      "description": "H6 asserts tools/check_adapter_purity.py exits 0 over every ingest/lexical/ adapter (no subprocess, socket, httpx, requests, urllib, aiohttp, dynamic import, or non-data-private path literal).",
+      "check_kind": "script",
+      "argv": ["tools/check_adapter_purity.py", "--all"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h8_check_caste_full_history",
+      "description": "H8 asserts tools/check_caste.py over the full history since the Phase A.1 schema-lock exits 0 (every commit has a Caste: trailer matching its changed-file set).",
+      "check_kind": "script",
+      "argv": ["tools/check_caste.py", "--range", "b4d1a1adbf7b7844599e95ebaeae54fac46914e3..HEAD"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h5_triangle_snapshot_determinism",
+      "description": "H5 asserts tools/snapshot_counts.py --self-test exits 0: two consecutive snapshots over identical inputs produce a byte-identical canonical payload. This is the single-pass determinism precondition the live two-pass overall_hash comparison re-exercises.",
+      "check_kind": "script",
+      "argv": ["tools/snapshot_counts.py", "--self-test"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h4_vector_quality_gate",
+      "description": "H4 asserts tools/check_vector_quality.py --self-test exits 0: the gate still rejects a degenerate constant-direction and near-collinear unit collection while admitting a healthy dispersed unit store (distinct-vector ratio >= 0.999 with the identical-gloss exception, and direction-dispersion non-degeneracy for the unit-normalized voyage-4-large model).",
+      "check_kind": "script",
+      "argv": ["tools/check_vector_quality.py", "--self-test"],
+      "expected": 0,
+      "actual_field": "exit_code"
+    },
+    {
+      "id": "h7_expected_counts_file_sha",
+      "description": "H7 asserts the sha256 of tools/expected_counts.json equals the value locked in its atomic SHA-256 companion tools/expected_counts.baseline.",
+      "check_kind": "file_sha",
+      "path": "tools/expected_counts.json",
+      "expected": "3a62c1f1f7713936498c89e971a0382094c53876dc97d5ec774f45f654a07712",
+      "actual_field": "sha256"
+    },
+    {
+      "id": "h7_no_deferral_architecture_grep",
+      "description": "H7 asserts docs/ARCHITECTURE.md (a retained core doc) contains zero forbidden deferral markers. The pattern is the verify_no_deferral marker class; must_be_empty (zero matches). Re-pointed onto a retained core doc so the claim depends only on retained artifacts; the pattern is unchanged and the bound is not weakened.",
+      "check_kind": "grep",
+      "path": "docs/ARCHITECTURE.md",
+      "pattern": "\\b(?:deferred|FIXME|XXX)\\b|defer to|out of scope|(?<!\\w)v1\\.5(?!\\w)",
+      "expected": 0,
+      "actual_field": "match_count"
+    },
+    {
+      "id": "hp2_procurement_no_unapproved_deadend",
+      "description": "H.2 asserts docs/data_inventory_catalog.json contains zero procurement_required entries flagged \"deadend\": true (every procurement_required entry is deadend=false and compatible_with_project=true, so none is exempt from the passed-adapter rule). must_be_empty (the deadend-true marker is absent).",
+      "check_kind": "grep",
+      "path": "docs/data_inventory_catalog.json",
+      "pattern": "\"deadend\"\\s*:\\s*true",
+      "expected": 0,
+      "actual_field": "match_count"
+    }
+  ]
+}
