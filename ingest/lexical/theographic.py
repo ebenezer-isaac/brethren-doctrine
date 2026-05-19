@@ -84,6 +84,33 @@ upstream type whose slugs collide are an upstream schema violation and
 MUST be rejected at adapter time with a quarantine ledger entry; the
 adapter MUST NOT mint a synthetic suffix to side-step the constraint.
 
+The Decision 10 sanctioned identifier chain for this cached release is
+the upstream `slug` / `personLookup` / `placeLookup` field verbatim,
+with the upstream Airtable record id as the only Decision-10-sanctioned
+fallback (see the Upstream layout note below, sentence two). Decision 10
+sanctions no derivation below the record id: the display_name is a
+free-form colliding label and minting a synthetic suffix is explicitly
+forbidden above. The Decision 10 Cypher acceptance query gates on
+`p.entity_id IS NOT NULL`, so a record whose slug AND lookup AND record
+id are all absent or blank has no canonical identity and no
+Decision-10-derivable stable key. Such a record is not a faithful
+distinct entity (the same faithfulness class as a populated-projection
+row that lacks its required identity field). The adapter MUST NOT MERGE
+it under a null or blank entity_id (the real-Neo4j MERGE pattern rejects
+a null property value with
+Neo.ClientError.Statement.SemanticError) and MUST NOT route several such
+records to a shared sentinel (that would collapse distinct upstream
+entities, violating the no-collapse rule). The adapter therefore
+faithfully excludes any such record from node and edge emission and
+surfaces the exclusion as a deterministic counted stderr line plus an
+`_excluded_no_entity_id` key in the returned counts so the drop is
+visible, never silent. Over the frozen upstream pinned under
+data/private/theographic/json/ this count is zero (every people,
+places, events, and peopleGroups record carries a non-null Airtable
+record id), so emitted node and edge counts are unchanged; the guard is
+a real defect-class fix that makes a null-property MERGE unreachable
+even under upstream schema drift on re-ingest.
+
 Emitted node labels and properties
 ==================================
 The adapter MERGEs six entity labels (Person, Place, Period, Event,
@@ -480,6 +507,7 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -538,6 +566,20 @@ def _records(payload: Any) -> list[dict[str, Any]]:
     if isinstance(payload, list):
         return [r for r in payload if isinstance(r, dict)]
     return []
+
+
+def _has_valid_entity_id(node: dict[str, Any]) -> bool:
+    """Decision 10 canonical-id predicate: entity_id is a non-blank string.
+
+    A node whose entity_id is None, absent, not a string, or blank has no
+    Decision-10-sanctioned canonical identity (slug, lookup, and upstream
+    record id all absent or blank). Returns False so the build path can
+    faithfully exclude it from the MERGE pattern rather than crash the
+    real-Neo4j reseed with a null property value, and rather than collapse
+    distinct id-less records onto a shared sentinel.
+    """
+    value = node.get("entity_id")
+    return isinstance(value, str) and bool(value.strip())
 
 
 def _slug(fields: dict[str, Any], record_id: str, *keys: str) -> str:
@@ -754,6 +796,14 @@ def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
     upstream slug plus MENTIONS edges to Verse nodes and FROM_EDITION edges to
     the Source node. Re-running over identical bytes produces zero new nodes
     or edges.
+
+    The returned dict maps each emitted entity label to its merged-node
+    count plus Source = 1, and carries an `_excluded_no_entity_id` key
+    holding the deterministic count of records faithfully excluded for
+    lacking any Decision-10 canonical entity_id (zero over the frozen
+    upstream; see the Stable identifier policy docstring section). The
+    underscore prefix marks it as an adapter-diagnostic key, not an
+    emitted node label, so count reconcilers ignore it.
     """
     json_dir = data_root / JSON_SUBDIR
     lookup = _verse_lookup(_read_json(json_dir / "verses.json"))
@@ -776,6 +826,35 @@ def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
 
     period_nodes, period_edges = _period_nodes(events, lookup)
     by_label = {**by_label, "Period": period_nodes}
+
+    # Decision 10 faithful exclusion: a record whose slug, lookup, and
+    # upstream record id are all absent or blank has no Decision-10
+    # canonical identity. MERGEing it would either crash the real-Neo4j
+    # reseed with a null property value or, under a shared sentinel,
+    # collapse distinct id-less records. Partition each label's nodes by
+    # the canonical-id predicate (O(n), immutable), keep only the
+    # identity-bearing nodes, and surface the excluded count so the drop
+    # is visible, not silent. Excluded nodes are removed before edge
+    # derivation so no MENTIONS or FROM_EDITION edge dangles to a
+    # non-emitted node. Over the frozen upstream every count is zero.
+    excluded_by_label: dict[str, int] = {}
+    kept_by_label: dict[str, list[dict[str, Any]]] = {}
+    for label, nodes in by_label.items():
+        kept = [n for n in nodes if _has_valid_entity_id(n)]
+        kept_by_label = {**kept_by_label, label: kept}
+        dropped = len(nodes) - len(kept)
+        if dropped:
+            excluded_by_label = {**excluded_by_label, label: dropped}
+            print(
+                f"theographic: excluded {dropped} {label} record(s) with "
+                f"no Decision-10 canonical entity_id "
+                f"(slug, lookup, and upstream record id all absent or "
+                f"blank); not emitted to preserve entity_id IS NOT NULL "
+                f"and the no-collapse rule",
+                file=sys.stderr,
+            )
+    by_label = kept_by_label
+    total_excluded = sum(excluded_by_label.values())
 
     mention_edges: list[dict[str, Any]] = list(period_edges)
     for label in ("Person", "Place", "Event", "Group", "Tribe"):
@@ -801,4 +880,4 @@ def ingest_theographic(data_root: Path, settings: Settings) -> dict[str, int]:
             counts = {**counts, label: _merge_nodes(session, label, rows)}
         _merge_edges(session, _MERGE_MENTIONS_TEMPLATE, mention_edges)
         _merge_edges(session, _MERGE_FROM_EDITION_TEMPLATE, from_edition)
-    return {**counts, "Source": 1}
+    return {**counts, "Source": 1, "_excluded_no_entity_id": total_excluded}
