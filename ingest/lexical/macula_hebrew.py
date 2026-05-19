@@ -475,6 +475,14 @@ _MERGE_GREEK_LEMMA = (
     "UNWIND $rows AS row MERGE (n:`GreekLemma` {id: row.id}) "
     "SET n += row RETURN count(n) AS upserted"
 )
+# BRIDGE-MERGE-NULLPROP audit, HAS_MACULA_ENRICHMENT: the MERGE pattern
+# map carries `osis_ref` and `join_lemma`. Both are the Decision 1 join
+# IDENTITY of the enrichment edge (which OSIS reference and which lemma
+# aligned), not free attributes, so they belong in the MERGE pattern.
+# `_build` appends an enrichment row only inside
+# `if osis is not None and row["lemma"] is not None`, so neither pattern
+# property can be null at runtime: this MERGE can never trigger the
+# null-pattern SemanticError. Verdict: CLEAN, no change.
 _MERGE_ENRICHMENT = (
     "UNWIND $rows AS row "
     "MATCH (w:`Word` {source: 'OSHB-morphology', ref: row.osis_ref}) "
@@ -483,6 +491,9 @@ _MERGE_ENRICHMENT = (
     "{osis_ref: row.osis_ref, join_lemma: row.join_lemma}]->(m) "
     "RETURN count(r) AS upserted"
 )
+# BRIDGE-MERGE-NULLPROP audit, INSTANCE_OF: the MERGE pattern carries no
+# relationship property map at all (the edge is pure type), so there is
+# no pattern property that could be null. Verdict: CLEAN, no change.
 _MERGE_INSTANCE_OF = (
     "UNWIND $rows AS row "
     "MATCH (m:`MaculaToken` {id: row.from_id}) "
@@ -490,14 +501,37 @@ _MERGE_INSTANCE_OF = (
     "MERGE (m)-[r:`INSTANCE_OF`]->(l) "
     "RETURN count(r) AS upserted"
 )
+# BRIDGE-MERGE-NULLPROP (real-Neo4j SemanticError, FakeDriver-blind).
+#
+# Neo4j rejects `MERGE ()-[:T {p: null}]->()` with
+# `Neo.ClientError.Statement.SemanticError: Cannot merge the following
+# relationship because of null property value for 'p'`. The earlier
+# pattern placed `greek_strong` (and `greek_surface`) INSIDE the
+# BRIDGES_LXX MERGE property map; `greek_strong` is null for every
+# bridge whose upstream `greekstrong` cell is absent (Decision 4
+# TBESG-fallback / sentinel rows), so the pass-1 reseed died at the
+# first such batch.
+#
+# Decision 4 makes those rows MEANINGFUL, not droppable: when
+# `greekstrong` is null but `greek` is populated the adapter MUST still
+# emit a BRIDGES_LXX edge against the sentinel GreekLemma and keep the
+# surface token, so the LXX correspondence is not lost. The bridge's
+# IDENTITY is the (Hebrew Lemma)->(GreekLemma) node pair plus `source`
+# (Decision 4 requires MACULA-Hebrew and STEPBible-TAHOT bridges for the
+# same lemma pair to co-exist by distinct `source`, so `source` is an
+# identity property; it is the constant SOURCE_SLUG here and is never
+# null). `greek_surface` and `greek_strong` are nullable edge
+# ATTRIBUTES per the Decision 4 predicate table ($pred_string /
+# $pred_int, both nullable), so they move OUT of the MERGE pattern into
+# a post-MERGE SET: identity in MERGE, attributes in SET. No real edge
+# is dropped; no attribute is lost, only relocated MERGE->SET.
 _MERGE_BRIDGES_LXX = (
     "UNWIND $rows AS row "
     "MATCH (h:`Lemma` {id: row.from_id}) "
     "MATCH (g:`GreekLemma` {id: row.to_id}) "
-    "MERGE (h)-[r:`BRIDGES_LXX` "
-    "{greek_surface: row.greek_surface, "
-    "greek_strong: row.greek_strong, "
-    "source: row.source}]->(g) "
+    "MERGE (h)-[r:`BRIDGES_LXX` {source: row.source}]->(g) "
+    "SET r.greek_surface = row.greek_surface, "
+    "r.greek_strong = row.greek_strong "
     "RETURN count(r) AS upserted"
 )
 
