@@ -50,6 +50,17 @@ CREATE INDEX word_ref IF NOT EXISTS FOR (w:Word) ON (w.ref) /* Decision 1, 2 */;
 CREATE INDEX crossref_from_ref IF NOT EXISTS FOR (c:CrossRef) ON (c.from_ref) /* Decision 5 */;
 CREATE INDEX crossref_to_ref IF NOT EXISTS FOR (c:CrossRef) ON (c.to_ref) /* Decision 5 */;
 CREATE INDEX word_strong IF NOT EXISTS FOR (w:Word) ON (w.strong) /* Decision 1, 14 */;
+// morphgnt PARSE_OF (Option A, defect A-2, docs/PHASE_D_A2_EVIDENCE.md
+// section 4) matches (:Word {source:'MACULA-Greek-SBLGNT', osis_wpos: ...})
+// where macula_greek emits a loss-free osis_wpos alias (e.g.
+// 'John.1.1.w01'). A composite range index on (source, osis_wpos) backs
+// both MATCH keys so the join is index-backed. This is a plain composite
+// index and deliberately NOT a uniqueness constraint: osis_wpos is unique
+// only WITHIN the MACULA-Greek-SBLGNT source, not globally across all
+// Word sources (Nestle1904, MorphGNT, etc. reuse the same osisRef+pos
+// space), so a global REQUIRE ... IS UNIQUE would wrongly reject valid
+// cross-source duplicates. Decision 2, 15.
+CREATE INDEX word_osis_wpos IF NOT EXISTS FOR (w:Word) ON (w.source, w.osis_wpos) /* Decision 2, 15, defect A-2 Option A */;
 CREATE INDEX verse_book_ch_v IF NOT EXISTS FOR (v:Verse) ON (v.book, v.chapter, v.verse) /* Decision 15 */;
 CREATE INDEX morpheme_strong IF NOT EXISTS FOR (m:Morpheme) ON (m.strong) /* Decision 1, 14 */;
 CREATE INDEX lemma_id_namespaced IF NOT EXISTS FOR (l:Lemma) ON (l.id) /* Decision 1 */;
