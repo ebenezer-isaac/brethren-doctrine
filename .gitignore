@@ -54,6 +54,18 @@ agent-logs/
 verify-report.md
 questions-hygiene-report.md
 
+# Trust-report PDFs (regenerated on demand by tools/generate_trust_report.py;
+# the tool is committed, the generated PDFs are not).
+reports/
+
+# Manifest-verification JSON (regenerable output of tools/verify_manifest.py
+# and generate_trust_report.py --verify; the tools are committed, the
+# per-run verification artifacts are not).
+docs/MANIFEST_VERIFICATION_*.json
+
+# Local backup snapshots (regenerable, never source).
+backups/
+
 # Question-reframe backup (pre-apply)
 questions.json.*.bak
 
