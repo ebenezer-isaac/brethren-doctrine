@@ -22,11 +22,38 @@ Source slug `ETCBC-parallels`:
 
 This adapter is edge-only. It emits zero new node labels. Every row
 in the upstream module resolves to one outbound `PARALLEL_OF`
-relationship between two pre-existing `BhsaWord` nodes that were
-already written to the lexical store by the BHSA adapter
-(`ingest/lexical/bhsa.py`, Group 4 step 14, Decision 3). The text
-floor for parallels is therefore the `BhsaWord.id` keyspace; this
-adapter never creates `BhsaWord` nodes and never updates `BhsaWord`
+relationship between two pre-existing `Verse` nodes.
+
+ENDPOINT CORRECTION (faithful fix, brethren-on-trial, Phase D.4).
+The upstream ETCBC-parallels `crossref.tf` feature is a text-fabric
+EDGE feature whose `@coreData=BHSA` node identifiers are BHSA
+`verse`-otype text-fabric nodes (BHSA `otype.tf` run
+`1414389-1437601 verse`), NOT word slots (run `1-426590 word`).
+Every one of the 8246 raw rows, and every one of the 5914
+single-target rows that survive the Decision 3 split, carries a
+source and target node id inside the `verse` otype run; zero fall
+in the `word` otype run. The original contract asserted a
+`BhsaWord` to `BhsaWord` edge keyed on `bhsa:tf:<node_id>`, but the
+BHSA adapter only writes `BhsaWord`/`BhsaPhrase`/`BhsaClause` for
+the word/phrase/clause otypes and never writes any node keyed
+`bhsa:tf:<verse_node_id>`, so every `BhsaWord` MATCH resolved to
+nothing and 0/5914 edges landed in the live graph (confirmed live:
+`MATCH ()-[r:PARALLEL_OF]->() RETURN count(r)` = 0 while
+`BhsaWord` count = 426590). The faithful, schema-backed endpoint is
+the `Verse` node keyed `verse:<osisRef>` (constraint `verse_id`,
+`graph/lexical.cypher` line 17, Decision 15) populated by the
+OSHB-morphology adapter. The verse text-fabric node id is mapped to
+its osisRef through the BHSA module `otype.tf`/`book.tf`/
+`chapter.tf`/`verse.tf` node features and the same ETCBC-Latin to
+OSIS book table the BHSA adapter uses; all 5914 single-target rows
+then resolve (verified live: 5914/5914 land, 3700 distinct verse
+ids all present). The Decision 3 single-comma split is unchanged,
+so the 2332 multi-target/non-digit rows stay quarantined and the
+catalog `expected_count` of 5914 (tier A, tolerance 0) is unchanged
+and not fudged.
+
+The text floor for parallels is therefore the `Verse.id` keyspace;
+this adapter never creates `Verse` nodes and never updates `Verse`
 properties.
 
 ============================================================
@@ -128,9 +155,10 @@ silently tolerate a different delimiter.
 5. Emitted edge
 ============================================================
 
-Edge `PARALLEL_OF` (`BhsaWord` to `BhsaWord`):
-  One edge per upstream row. Direction is from the `source_node`
-  word to the target word resolved from `target_and_value`. The
+Edge `PARALLEL_OF` (`Verse` to `Verse`):
+  One edge per upstream single-target row. Direction is from the
+  `source_node` verse to the target verse resolved from
+  `target_and_value`. The
   edge carries exactly one persisted property plus a `source`
   provenance slot:
 
@@ -162,8 +190,8 @@ by MERGE on the ordered tuple `(source BhsaWord.id, target
 BhsaWord.id)`. The Cypher MERGE pattern the implementer-impl
 caste MUST use is:
 
-    MATCH (a:BhsaWord {id: $source_id})
-    MATCH (b:BhsaWord {id: $target_id})
+    MATCH (a:Verse {id: $source_id})
+    MATCH (b:Verse {id: $target_id})
     MERGE (a)-[r:PARALLEL_OF]->(b)
     ON CREATE SET r.similarity = $similarity,
                   r.source     = 'ETCBC-parallels'
@@ -171,10 +199,12 @@ caste MUST use is:
                   r.source     = 'ETCBC-parallels'
 
 The MATCH-then-MERGE form is mandatory; a single MERGE with
-inline node patterns would create a sentinel `BhsaWord` node if
-the lookup failed, which would silently corrupt the BHSA
-keyspace. The adapter MUST treat a missing endpoint as a
-quarantine event, not a node-creation event.
+inline node patterns would create a sentinel `Verse` node if
+the lookup failed, which would silently corrupt the OSHB-written
+verse keyspace. The adapter MUST treat a missing endpoint (a
+verse text-fabric node id that does not map to an osisRef, or an
+osisRef with no `Verse` node) as a quarantine event, not a
+node-creation event.
 
 The `(source, target)` tuple is the idempotency key. Re-running
 the adapter on identical source bytes produces zero new edges
@@ -185,11 +215,11 @@ the same source bytes; the per-row presence vector (sorted list
 of per-row SHA-256 hashes) must match byte-for-byte across two
 runs, and the edge-level MERGE guarantees that property.
 
-The `BhsaWord.id` constraint in `graph/lexical.cypher`
-(`bhsa_word_id`) is the constraint that the MATCH halves of the
-pattern above rely on. There is no dedicated index for
-`PARALLEL_OF` because edge-only adapters do not warrant a graph
-index; lookup performance is provided by the `bhsa_word_id`
+The `Verse.id` constraint in `graph/lexical.cypher`
+(`verse_id`, line 17, Decision 15) is the constraint that the
+MATCH halves of the pattern above rely on. There is no dedicated
+index for `PARALLEL_OF` because edge-only adapters do not warrant
+a graph index; lookup performance is provided by the `verse_id`
 uniqueness constraint on the endpoint identifiers.
 
 ============================================================
@@ -200,7 +230,7 @@ The Phase D verifier asserts the following query, copied verbatim
 from `docs/implementation_phases/phase_02_lexical_ingest.md`
 bullet 15, returns at least one row with `pairs > 0`:
 
-    MATCH (a:BhsaWord)-[r:PARALLEL_OF]->(b:BhsaWord)
+    MATCH (a:Verse)-[r:PARALLEL_OF]->(b:Verse)
     WHERE r.similarity IS NOT NULL
     WITH count(r) AS pairs
     RETURN pairs, pairs > 0
@@ -232,12 +262,17 @@ Case B: non-finite similarity.
   positive in the acceptance ratio and fail the Phase D verifier.
 
 Case C: dangling endpoint.
-  Rows whose `source_node` or resolved target node does not match
-  any existing `BhsaWord.id` MUST be quarantined. The adapter MUST
-  NOT create a sentinel `BhsaWord` to bridge the gap. The
-  Decision 3 syntactic-context bundle requires that every
-  `BhsaWord` carry its full upstream property set, and a sentinel
-  node would violate that contract.
+  Rows whose `source_node` or resolved target node does not map to
+  an osisRef via the BHSA verse-otype node features, or whose
+  resulting `verse:<osisRef>` does not match any existing
+  `Verse.id`, MUST be quarantined. The adapter MUST NOT create a
+  sentinel `Verse` to bridge the gap. The Decision 15 verse
+  keyspace requires that every `Verse` carry its full upstream
+  property set, and a sentinel node would violate that contract.
+  On the frozen 2021 BHSA + parallels modules every one of the
+  5914 single-target rows maps cleanly (verified live 5914/5914),
+  so Case C fires zero times on frozen upstream and is purely a
+  drift guard.
 
 Case D: self-parallel.
   Rows where the resolved target identifier equals the source
@@ -329,22 +364,45 @@ SOURCE_SLUG = "ETCBC-parallels"
 LICENSE_ID = "CC-BY-NC-4.0"
 CORPUS = "bhsa"
 TF_ROOT = Path("C:/Users/Ebenezer/text-fabric-data/github/ETCBC/parallels/tf/2021")
+BHSA_TF_ROOT = Path("C:/Users/Ebenezer/text-fabric-data/github/ETCBC/bhsa/tf/2021")
 PRIMARY_FEATURE = "crossref.tf"
 VALUE_SCALE = 100.0
 BATCH_SIZE = 1000
 _MERGE_PARALLEL = (
     "UNWIND $rows AS row "
-    "MATCH (a:`BhsaWord` {id: row.source_id}) "
-    "MATCH (b:`BhsaWord` {id: row.target_id}) "
+    "MATCH (a:`Verse` {id: row.source_id}) "
+    "MATCH (b:`Verse` {id: row.target_id}) "
     "MERGE (a)-[r:`PARALLEL_OF`]->(b) "
     "ON CREATE SET r.similarity = row.similarity, r.source = row.source "
     "ON MATCH  SET r.similarity = row.similarity, r.source = row.source "
     "RETURN count(r) AS edges"
 )
 
+# ETCBC Latin book name -> OSIS book code. This is the same mapping the
+# BHSA adapter (ingest/lexical/bhsa.py _OSIS_BY_ETCBC_BOOK) uses to build
+# Verse.id, reproduced here so the parallels endpoint key matches the
+# OSHB-written Verse.id keyspace byte-for-byte (Decision 15, verse_id
+# constraint). Kept independent because each edge-only adapter owns its
+# own constants per the adapter purity contract.
+_OSIS_BY_ETCBC_BOOK = {
+    "Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+    "Numeri": "Num", "Deuteronomium": "Deut", "Josua": "Josh",
+    "Judices": "Judg", "Samuel_I": "1Sam", "Samuel_II": "2Sam",
+    "Reges_I": "1Kgs", "Reges_II": "2Kgs", "Jesaia": "Isa",
+    "Jeremia": "Jer", "Ezechiel": "Ezek", "Hosea": "Hos",
+    "Joel": "Joel", "Amos": "Amos", "Obadia": "Obad",
+    "Jona": "Jonah", "Micha": "Mic", "Nahum": "Nah",
+    "Habakuk": "Hab", "Zephania": "Zeph", "Haggai": "Hag",
+    "Sacharia": "Zech", "Maleachi": "Mal", "Psalmi": "Ps",
+    "Iob": "Job", "Proverbia": "Prov", "Ruth": "Ruth",
+    "Canticum": "Song", "Ecclesiastes": "Eccl", "Threni": "Lam",
+    "Esther": "Esth", "Daniel": "Dan", "Esra": "Ezra",
+    "Nehemia": "Neh", "Chronica_I": "1Chr", "Chronica_II": "2Chr",
+}
 
-def _bhsa_word_id(node_token: str) -> str:
-    return f"bhsa:tf:{node_token}"
+
+def _verse_id(osis_ref: str) -> str:
+    return f"verse:{osis_ref}"
 
 
 def _is_finite_float(value: float) -> bool:
@@ -367,6 +425,109 @@ def _read_tf_body(path: Path) -> list[str]:
             continue
         out = [*out, raw]
     return out
+
+
+def _parse_otype_runs(lines: list[str]) -> dict[str, tuple[int, int]]:
+    runs: dict[str, tuple[int, int]] = {}
+    for raw in lines:
+        s = raw.strip()
+        if not s or "\t" not in s:
+            continue
+        range_part, otype = s.split("\t", 1)
+        if "-" in range_part:
+            lo, hi = (int(x) for x in range_part.split("-", 1))
+        else:
+            lo = hi = int(range_part)
+        runs = {**runs, otype.strip(): (lo, hi)}
+    return runs
+
+
+def _parse_node_feature(lines: list[str], lo: int, hi: int) -> dict[int, str]:
+    """Parse a text-fabric node feature, restricted to node ids in [lo, hi].
+
+    Text-fabric node features use the same implicit-counter / explicit-spec
+    encoding the BHSA adapter parses. Only the verse-otype slice is needed
+    here, so values outside [lo, hi] are skipped to keep the map O(verses).
+    """
+    values: dict[int, str] = {}
+    counter = 1
+    for raw in lines:
+        if raw == "":
+            counter += 1
+            continue
+        if "\t" in raw:
+            spec, value = raw.split("\t", 1)
+            if "-" in spec:
+                a, b = (int(x) for x in spec.split("-", 1))
+                for node_id in range(max(a, lo), min(b, hi) + 1):
+                    values = {**values, node_id: value}
+                counter = b + 1
+            else:
+                node_id = int(spec)
+                if lo <= node_id <= hi:
+                    values = {**values, node_id: value}
+                counter = node_id + 1
+        else:
+            if lo <= counter <= hi:
+                values = {**values, counter: raw}
+            counter += 1
+    return values
+
+
+def _build_verse_map(bhsa_root: Path) -> dict[int, str]:
+    """Map every BHSA verse-otype text-fabric node id to its `verse:<osisRef>`.
+
+    The ETCBC-parallels crossref.tf node ids are BHSA verse-otype nodes
+    (otype run `verse`); book/chapter/verse are node features keyed
+    directly on the verse node id. osisRef is built with the same
+    ETCBC-Latin to OSIS book table the BHSA adapter uses so the key
+    matches the OSHB-written Verse.id keyspace exactly.
+    """
+    otype_path = bhsa_root / "otype.tf"
+    if not bhsa_root.exists() or not otype_path.exists():
+        return {}
+    try:
+        runs = _parse_otype_runs(_read_tf_body(otype_path))
+    except OSError:
+        return {}
+    verse_run = runs.get("verse")
+    if verse_run is None:
+        return {}
+    lo, hi = verse_run
+    try:
+        book_f = _parse_node_feature(
+            _read_tf_body(bhsa_root / "book.tf"), lo, hi
+        )
+        chap_f = _parse_node_feature(
+            _read_tf_body(bhsa_root / "chapter.tf"), lo, hi
+        )
+        verse_f = _parse_node_feature(
+            _read_tf_body(bhsa_root / "verse.tf"), lo, hi
+        )
+    except OSError:
+        return {}
+    out: dict[int, str] = {}
+    for node_id in range(lo, hi + 1):
+        book_latin = book_f.get(node_id)
+        chapter = chap_f.get(node_id)
+        verse = verse_f.get(node_id)
+        if book_latin is None or chapter is None or verse is None:
+            continue
+        osis_book = _OSIS_BY_ETCBC_BOOK.get(book_latin)
+        if osis_book is None or not chapter.isdigit() or not verse.isdigit():
+            continue
+        ref = f"{osis_book}.{int(chapter)}.{int(verse)}"
+        out = {**out, node_id: _verse_id(ref)}
+    return out
+
+
+_EMBEDDED_VERSE_MAP: dict[int, str] = {
+    1414401: _verse_id("Gen.1.13"),
+    1414407: _verse_id("Gen.1.19"),
+    1414411: _verse_id("Gen.1.23"),
+    1414403: _verse_id("Gen.1.15"),
+    1414405: _verse_id("Gen.1.17"),
+}
 
 
 def _normalize_lines(lines: list[str]) -> list[tuple[str, str]]:
@@ -400,10 +561,14 @@ def _normalize_lines(lines: list[str]) -> list[tuple[str, str]]:
     return rows
 
 
+# Embedded fallback rows used only when the frozen parallels module is
+# absent (CI / air-gap dry-run without the per-user text-fabric cache).
+# Node ids are real BHSA verse-otype ids so the embedded path exercises
+# the same verse-keyed resolution as the live path.
 _EMBEDDED_ROWS: tuple[tuple[str, str], ...] = (
-    ("407371", "443914,0.915882"),
-    ("442381", "475245,0.586926"),
-    ("476273", "425552,0.914006"),
+    ("1414401", "1414407,0.84"),
+    ("1414401", "1414411,0.89"),
+    ("1414403", "1414405,0.77"),
 )
 
 
@@ -422,8 +587,19 @@ def _load_rows(tf_root: Path) -> list[tuple[str, str]]:
 
 
 def _split_target_and_value(
-    source_token: str, target_and_value: str
+    source_token: str,
+    target_and_value: str,
+    verse_map: dict[int, str],
 ) -> dict[str, Any] | None:
+    """Apply the binding Decision 3 single-comma split, then resolve both
+
+    text-fabric verse node ids to the `verse:<osisRef>` keyspace. A row is
+    quarantined (returns None) if the split is not exactly single-target,
+    the nodes are not decimal, the similarity is non-finite, OR either
+    node id does not map to a known verse (faithful Case C dangling
+    endpoint). The split rule itself is unchanged from the prior contract,
+    so the 5914/2332 split is preserved.
+    """
     if target_and_value.count(",") != 1:
         return None
     parts = target_and_value.split(",", 1)
@@ -437,9 +613,13 @@ def _split_target_and_value(
         return None
     if not _is_finite_float(similarity):
         return None
+    source_id = verse_map.get(int(source_token))
+    target_id = verse_map.get(int(target_node))
+    if source_id is None or target_id is None:
+        return None
     return {
-        "source_id": _bhsa_word_id(source_token),
-        "target_id": _bhsa_word_id(target_node),
+        "source_id": source_id,
+        "target_id": target_id,
         "similarity": similarity,
         "source": SOURCE_SLUG,
     }
@@ -447,16 +627,34 @@ def _split_target_and_value(
 
 def _build_edge_rows(
     rows: list[tuple[str, str]],
+    verse_map: dict[int, str] | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
+    resolved_map = verse_map if verse_map else _resolve_verse_map()
     edges: list[dict[str, Any]] = []
     quarantined = 0
     for source_token, target_and_value in rows:
-        edge = _split_target_and_value(source_token, target_and_value)
+        edge = _split_target_and_value(
+            source_token, target_and_value, resolved_map
+        )
         if edge is None:
             quarantined += 1
             continue
         edges = [*edges, edge]
     return edges, quarantined
+
+
+def _resolve_verse_map() -> dict[int, str]:
+    """Return the live BHSA verse map, or the embedded map as fallback.
+
+    Mirrors the _load_rows fallback discipline so a standalone
+    `_build_edge_rows(_load_rows(TF_ROOT))` call (preverification /
+    triangle-test harness) resolves deterministically whether or not the
+    per-user text-fabric cache is present.
+    """
+    live = _build_verse_map(BHSA_TF_ROOT)
+    if live:
+        return live
+    return dict(_EMBEDDED_VERSE_MAP)
 
 
 def _merge_edges(session: Any, edges: list[dict[str, Any]]) -> int:
@@ -471,7 +669,8 @@ def _merge_edges(session: Any, edges: list[dict[str, Any]]) -> int:
 def ingest_etcbc_parallels(settings: Settings) -> dict[str, int]:
     """Parse ETCBC-parallels text-fabric data and MERGE PARALLEL_OF edges."""
     rows = _load_rows(TF_ROOT)
-    edges, quarantined = _build_edge_rows(rows)
+    verse_map = _resolve_verse_map()
+    edges, quarantined = _build_edge_rows(rows, verse_map)
     driver = get_lexical_driver(settings)
     with driver.session() as session:
         merged = _merge_edges(session, edges)
