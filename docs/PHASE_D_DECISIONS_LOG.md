@@ -84,3 +84,23 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
    signatures found MaculaToken.id the sole gap; maculatoken_id UNIQUE
    added; EXPLAIN proven NodeByLabelScan -> NodeUniqueIndexSeek at scale.
    Relaunch attempt 2 then validated index-backed throughput (~5000x).
+
+## Phase D relaunch attempt 3 defect fix (autonomous, brethren-on-trial)
+
+9. macula_greek canonical_strongs (commit b270a9c): relaunch attempt 3
+   cleared oshb, macula_hebrew, bhsa, etcbc_phono, etcbc_parallels then
+   died in macula_greek with ValueError unrecognized Strong encoding
+   15374053. Root cause: ingest.canonical_strongs raises (no sentinel)
+   and macula_greek called it uncaught; the value is a compound crasis
+   Strong (1537+4053 digit-stripped), 11 rows total (Nestle1904 6,
+   SBLGNT 5). Decision 18 forbids a hand-rolled compound split and
+   forbids fabricating a Strong. Faithful fix applied: try/except
+   ValueError to None, the GreekLemma and its INSTANCE_OF are skipped
+   for those 11 rows (Word still emitted, raw int Word.strong per
+   Decision 2 untouched, node id unaffected), surfaced via an
+   _unresolved_strong count plus a deterministic stderr line, mirroring
+   the macula_hebrew pattern. Word counts unchanged and exact
+   (Nestle1904 137779, SBLGNT 137741). An audit
+   (docs/PHASE_D_CANONICAL_STRONGS_AUDIT.md) confirmed the other 8
+   canonical_strongs callers were already guarded, so this class is
+   contained. Reversible.
