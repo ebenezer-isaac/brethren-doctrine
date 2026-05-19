@@ -170,18 +170,40 @@ def _in_ecm_scope(osis_refs: list[str]) -> bool:
 
 
 def _query_anchor_lemmas(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
+    # Decision 15: the universal anchor key is Verse.id = 'verse:' + osisRef.
+    # osisID is OT-only (NULL for all NT verses), so keying on it is blind to
+    # the entire New Testament. The lemma-bearing token is the STEPBible
+    # TaggedToken (it carries the canonical Strong for both OT and NT and
+    # INSTANCE_OF lands on Lemma for Hebrew and GreekLemma for Greek; the raw
+    # MorphGNT Word carries no Strong). We aggregate by canonical Strong so a
+    # lemma that exists under several edition-scoped GreekLemma nodes (Nestle,
+    # SBLGNT, ...) yields one row, not duplicates. occurrences_in_canon is the
+    # distinct TaggedToken count for that Strong across the whole canon. The
+    # canon count anchors on the lexeme node keyed by .strong (then walks
+    # INSTANCE_OF back to TaggedToken) so the planner uses a node lookup
+    # instead of a full TaggedToken scan, and it is computed only for the
+    # rows that survive the LIMIT.
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})<-[:IN_VERSE]-(w:Word)-[:INSTANCE_OF]->(l:Lemma)
-    WITH l, count(DISTINCT w) AS local_count
-    OPTIONAL MATCH (:Word)-[:INSTANCE_OF]->(l)
-    WITH l, local_count, count(*) AS occurrences_in_canon
-    RETURN l.strong AS strong,
-           l.lemma AS lemma,
-           coalesce(l.transliteration, l.lemma) AS transliteration,
+    MATCH (v:Verse {id: 'verse:' + ref})<-[:IN_VERSE]-(t:TaggedToken)
+          -[:INSTANCE_OF]->(l)
+    WHERE l.strong IS NOT NULL
+    WITH l.strong AS strong,
+         count(DISTINCT t) AS local_count,
+         head(collect(DISTINCT l.lemma)) AS lemma
+    ORDER BY local_count DESC, strong
+    LIMIT $limit
+    CALL (strong) {
+        MATCH (tc:TaggedToken)-[:INSTANCE_OF]->(lc)
+        WHERE (lc:Lemma OR lc:GreekLemma) AND lc.strong = strong
+        RETURN count(DISTINCT tc) AS occurrences_in_canon
+    }
+    RETURN strong AS strong,
+           lemma AS lemma,
+           coalesce(lemma, strong) AS transliteration,
            occurrences_in_canon,
            true AS in_anchors
-    ORDER BY local_count DESC, occurrences_in_canon DESC, elementId(l)
+    ORDER BY local_count DESC, occurrences_in_canon DESC, strong
     LIMIT $limit
     """
     with driver.session() as session:
@@ -190,19 +212,23 @@ def _query_anchor_lemmas(driver: Driver, refs: list[str]) -> list[dict[str, Any]
 
 
 def _query_anchor_verses(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
+    # Decision 15: resolve by Verse.id (universal), not osisID (OT-only).
+    # Word surface is `surface`/`strong` on the OT OSHB Word and `text` on the
+    # NT MorphGNT Word, so coalesce both. Morpheme carries `text`/`strong`
+    # (no `morph` property in the live schema).
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})
+    MATCH (v:Verse {id: 'verse:' + ref})
     OPTIONAL MATCH (v)<-[:IN_VERSE]-(w:Word)
     OPTIONAL MATCH (w)-[:HAS_MORPHEME]->(m:Morpheme)
-    WITH v, w, collect(DISTINCT {morph: coalesce(m.morph, m.morph_code, ''), lemma: m.lemma}) AS morphology
-    RETURN v.osisID AS ref,
+    WITH v, w, collect(DISTINCT {morph: coalesce(m.text, ''), lemma: m.strong}) AS morphology
+    RETURN v.osis AS ref,
            collect(DISTINCT {
-             surface: w.surface,
+             surface: coalesce(w.surface, w.text, ''),
              strong: w.strong,
              morphology: morphology
            }) AS words,
-           coalesce(v.syntactic_role, '') AS syntactic_role
+           '' AS syntactic_role
     """
     with driver.session() as session:
         result = session.run(cypher, refs=refs)
@@ -213,14 +239,19 @@ def _query_anchor_verses(driver: Driver, refs: list[str]) -> list[dict[str, Any]
 
 
 def _query_cross_refs(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
+    # CrossRef.from_ref is the BCV string (e.g. 'Heb.1.1'), populated for NT
+    # too, so this anchor key was never osisID-broken; the real edge is
+    # (CrossRef)-[:CROSS_REF]->(Verse) (Phase D.4 rev2). Order
+    # deterministically by votes then to_ref so the bundle is stable.
     cypher = """
     UNWIND $refs AS ref
-    MATCH (cr:CrossRef {from_ref: ref})
+    MATCH (cr:CrossRef {from_ref: ref})-[:CROSS_REF]->(:Verse)
+    WITH DISTINCT cr
     RETURN cr.from_ref AS from_ref,
            cr.to_ref AS to_ref,
            coalesce(cr.source, 'openbible') AS source,
            coalesce(cr.votes, 1) AS votes
-    ORDER BY votes DESC, elementId(cr)
+    ORDER BY votes DESC, cr.to_ref, cr.from_ref
     LIMIT $limit
     """
     with driver.session() as session:
@@ -239,18 +270,39 @@ def _query_cross_refs(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
 def _query_semantic_neighbors(driver: Driver, anchor_strongs: list[str]) -> list[dict[str, Any]]:
     if not anchor_strongs:
         return []
+    # Louw-Nida domains attach to MACULA Words via IN_DOMAIN -> LouwNidaDomain
+    # (Phase D.4 rev2); the lexeme join key is GreekLemma.strong. A neighbour
+    # is any other Greek lexeme sharing a Louw-Nida domain code with an anchor
+    # lexeme. The traversal first collapses to the (small) set of anchor
+    # domain codes, then fans out to neighbour lexemes in just those codes, so
+    # the planner never materialises the full Word x Word co-domain product.
+    # It is pinned to one MACULA-Greek edition (SBLGNT) so the same lexeme
+    # under several edition-scoped GreekLemma nodes is not multiplied. Hebrew
+    # anchors have no IN_DOMAIN edge so this returns empty for OT (not a
+    # defect). Deterministic order by domain code then strong.
     cypher = """
     UNWIND $strongs AS s
-    MATCH (anchor:Lemma {strong: s})
-    OPTIONAL MATCH (anchor)-[:LOUW_NIDA_DOMAIN]->(d:LouwNidaDomain)<-[:LOUW_NIDA_DOMAIN]-(neigh:Lemma)
-    WHERE neigh.strong <> anchor.strong
-    WITH neigh, d
-    ORDER BY elementId(neigh), elementId(d)
+    MATCH (w:Word {source: 'MACULA-Greek-SBLGNT'})
+          -[:INSTANCE_OF]->(gl:GreekLemma)
+    WHERE gl.strong = s
+    WITH DISTINCT s, w
+    MATCH (w)-[:IN_DOMAIN]->(d:LouwNidaDomain)
+    WITH collect(DISTINCT d.domain_code) AS codes,
+         collect(DISTINCT s) AS anchors
+    UNWIND codes AS code
+    MATCH (nw:Word {source: 'MACULA-Greek-SBLGNT'})
+          -[:IN_DOMAIN]->(:LouwNidaDomain {domain_code: code})
+    MATCH (nw)-[:INSTANCE_OF]->(nl:GreekLemma)
+    WHERE nl.strong IS NOT NULL AND NOT nl.strong IN anchors
+    WITH DISTINCT nl.strong AS strong,
+                  head(collect(DISTINCT nl.lemma)) AS lemma,
+                  code AS louw_nida
+    ORDER BY louw_nida, strong
     LIMIT $limit
-    RETURN neigh.strong AS strong,
-           neigh.lemma AS lemma,
-           d.code AS louw_nida,
-           coalesce(neigh.sdbh_domain, '') AS sdbh
+    RETURN strong AS strong,
+           lemma AS lemma,
+           louw_nida AS louw_nida,
+           '' AS sdbh
     """
     with driver.session() as session:
         result = session.run(cypher, strongs=anchor_strongs, limit=SEMANTIC_NEIGHBOR_LIMIT)
@@ -258,14 +310,23 @@ def _query_semantic_neighbors(driver: Driver, anchor_strongs: list[str]) -> list
 
 
 def _query_variant_units(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
+    # The apparatus node is VariantUnit keyed by (book, chapter, verse)
+    # components, not a Verse relationship; readings attach via
+    # (Reading)-[:ATTESTED_BY]->(VariantUnit) (Phase D.4 rev2). Decision 6:
+    # only 3 John 1.1..1.15 has apparatus. We split the OSIS BCV ref to key
+    # the unit and order deterministically by variant_unit_id.
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})-[:HAS_VARIANT]->(vu:Variant)
-    OPTIONAL MATCH (vu)-[:HAS_READING]->(rd:Reading)
-    WITH v, vu, collect({witness: rd.witness, text: rd.text}) AS readings
-    ORDER BY elementId(vu)
-    RETURN v.osisID AS ref,
-           vu.id AS variant_id,
+    WITH ref, split(ref, '.') AS p
+    MATCH (vu:VariantUnit {
+        book: p[0], chapter: toInteger(p[1]), verse: toInteger(p[2])
+    })
+    OPTIONAL MATCH (rd:Reading)-[:ATTESTED_BY]->(vu)
+    WITH ref, vu,
+         collect({witness: rd.reading_id, text: rd.text}) AS readings
+    ORDER BY ref, vu.variant_unit_id
+    RETURN ref AS ref,
+           vu.variant_unit_id AS variant_id,
            readings
     LIMIT $limit
     """
@@ -278,17 +339,23 @@ def _query_variant_units(driver: Driver, refs: list[str]) -> list[dict[str, Any]
 
 
 def _query_syntactic_context(driver: Driver, refs: list[str]) -> list[dict[str, Any]]:
+    # ETCBC-BHSA syntax: (BhsaClause)-[:CONTAINS_PHRASE]->(BhsaPhrase)
+    # -[:CONTAINS_WORD]->(BhsaWord)-[:IN_VERSE]->(Verse) (Phase D.4 rev2).
+    # BHSA covers the Hebrew Bible only; Greek NT verses have no BHSA tree, so
+    # the section is structurally empty for NT anchors (not a defect). Order
+    # deterministically by clause then phrase id. Decision 15: key by
+    # Verse.id, not osisID.
     cypher = """
     UNWIND $refs AS ref
-    MATCH (v:Verse {osisID: ref})
-    OPTIONAL MATCH (v)-[:HAS_CLAUSE]->(c:Clause)
-    OPTIONAL MATCH (c)-[:HAS_PHRASE]->(p:Phrase)
+    MATCH (v:Verse {id: 'verse:' + ref})
+    OPTIONAL MATCH (v)<-[:IN_VERSE]-(:BhsaWord)<-[:CONTAINS_WORD]-(p:BhsaPhrase)
+                   <-[:CONTAINS_PHRASE]-(c:BhsaClause)
     WITH v, c, p
-    ORDER BY elementId(v), elementId(c), elementId(p)
-    RETURN v.osisID AS ref,
-           coalesce(c.text, '') AS clause,
-           coalesce(p.text, '') AS phrase,
-           coalesce(p.etcbc_function, '') AS etcbc_function
+    ORDER BY v.osis, c.id, p.id
+    RETURN v.osis AS ref,
+           coalesce(c.txt, '') AS clause,
+           coalesce(p.txt, '') AS phrase,
+           coalesce(p.function, '') AS etcbc_function
     LIMIT $limit
     """
     with driver.session() as session:
