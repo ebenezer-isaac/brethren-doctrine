@@ -1,14 +1,12 @@
 # Architecture
 
-Canonical reference for the brethren-doctrine engine. This document supersedes everything in `docs/archive-2026-05-12/`.
-
-Last revised: 2026-05-12 (post-PoC validation round).
+Canonical reference for the brethren-doctrine engine. This document is the system specification: it describes the engine as it is and why each commitment is made. A new engineer or agent can read this document alone and understand the whole system with zero archaeology.
 
 ## Goal
 
 A manuscript-anchored biblical doctrine engine that produces doctrinal verdicts from the original-language manuscript tradition alone, with cultural and denominational material strictly walled off on the other side of an air-gap. The engine surfaces every meaningful variant in the manuscript record with the scholarly debate around it, so the reader can make informed decisions about contested readings. It is built for one user, personal use, single developer, with the engine code intended for public release on GitHub. Derived corpora are not publicly redistributed because most upstream datasets are CC BY 4.0 with attribution requirements, CC BY-NC for some (ETCBC BHSA, MARBLE / SDBH / Louw-Nida word senses, TTESV), and a few are proprietary in their published apparatus (NA28, BHQ, BDAG, HALOT, DCH, full Gottingen LXX).
 
-The end-user question the engine is built to answer takes a form like: *"Does Brethren teaching on the Lord's Supper match Scripture better than Reformed teaching, and what do the original-language texts say?"* The engine produces a lexical verdict from Scripture alone, then attaches a diagnostic cultural overlay showing how each tracked tradition reads the same lexical pattern.
+The end-user question the engine answers takes a form like: *"Does Brethren teaching on the Lord's Supper match Scripture better than Reformed teaching, and what do the original-language texts say?"* The engine produces a lexical verdict from Scripture alone, then attaches a diagnostic cultural overlay showing how each tracked tradition reads the same lexical pattern.
 
 ## The three pipelines
 
@@ -59,15 +57,15 @@ Pipeline 1 ingests open datasets into two stores. Pipeline 2 runs Opus over the 
 
 The single most important architectural commitment in this project is that the lexical pipeline and the cultural pipeline live in physically separate stores with no possibility of cross-contamination.
 
-**Mechanism.** Two Docker stacks. Lexical stack runs Neo4j 5-community and Qdrant on Docker network `lexical_net`. Cultural stack runs a second Neo4j 5-community and a second Qdrant on Docker network `cultural_net`. Containers on `lexical_net` cannot resolve names on `cultural_net`, and vice versa, because Docker user-defined bridge networks are isolated by default. Pipeline 2 (lexical pre-inference) connects only to the lexical stack. Pipeline 3 (runtime query synthesis) connects to both, but reads them as separate services with separate license stacks, never mixing data into a single fused index.
+**Mechanism.** Two Docker stacks. The lexical stack runs Neo4j 5-community and Qdrant on Docker network `lexical_net`. The cultural stack runs a second Neo4j 5-community and a second Qdrant on Docker network `cultural_net`. Containers on `lexical_net` cannot resolve names on `cultural_net`, and the reverse, because Docker user-defined bridge networks are isolated by default. Pipeline 2 (lexical pre-inference) connects only to the lexical stack. Pipeline 3 (runtime query synthesis) connects to both, but reads them as separate services with separate license stacks, never mixing data into a single fused index.
 
-**Verified by H8 in the PoC round.** Cross-network DNS lookups return `NSS_NOTFOUND`; HTTP fails with network unreachable; positive controls within each network confirm DNS is healthy and the negative results are real isolation.
+The air-gap is verified in both directions: a read of the lexical store finds zero cultural-labelled nodes, and a read of the cultural store finds zero lexical-labelled nodes. Cross-network DNS lookups fail with name resolution errors and cross-network HTTP fails with network-unreachable; positive controls within each network confirm DNS is healthy so the negative cross-network results are real isolation.
 
-**Rationale.** Every prior attempt at biblical RAG that I have seen has lexical and confessional sources retrieved through the same index, ranked by the same scoring function, and synthesized by the same prompt context. That contaminates the verdict. Asking "what does Scripture say about real presence?" returns Trent before BDAG `deipnon`. The lexical pattern is downweighted because there is more confessional material to retrieve.
+**Rationale.** Biblical RAG systems that retrieve lexical and confessional sources through the same index, rank them with the same scoring function, and synthesize them in the same prompt context contaminate the verdict. Asking "what does Scripture say about real presence?" returns Trent before BDAG `deipnon`, because there is more confessional material to retrieve so the lexical pattern is downweighted.
 
-This engine refuses to mix them at the data-model level. Pipeline 2 cannot see confessional sources because they are not in the database it queries. The synthesis layer in Pipeline 3 can attach a cultural overlay only after the lexical verdict is locked.
+This engine refuses to mix them at the data-model level. Pipeline 2 cannot see confessional sources because they are not in the database it queries. The synthesis layer in Pipeline 3 attaches a cultural overlay only after the lexical verdict is locked.
 
-**`internal: true` is not used.** It blocks image pull from the public internet, which would prevent first-time bring-up. The air-gap relies on Docker's default isolation between user-defined bridge networks, which is sufficient for inter-stack isolation.
+**`internal: true` is intentionally not used.** Setting `internal: true` blocks image pull from the public internet, which would prevent first-time bring-up. The air-gap relies on Docker's default isolation between user-defined bridge networks, which is sufficient for inter-stack isolation. This choice is documented in the compose files.
 
 ## Layered architecture
 
@@ -75,18 +73,18 @@ Numbered from manuscript floor to client. Data flows downward in the diagram. Lo
 
 | Layer | Role | Tech / data sources |
 |---|---|---|
-| 0 | Manuscript floor | Hebrew: WLC, OSHB. Greek: SBLGNT, Nestle1904. Versions in scope per `docs/data_inventory_catalog.json` procurement entries: Peshitta (ETCBC, CC-BY-SA-4.0), Vulgate Clementine (public domain), Coptic SCRIPTORIUM (CC-BY-4.0); LXX is resolved via STEPBible LXX columns rather than a standalone Rahlfs ingest. Apparatus: NA28 footnotes via INTF NTVMR transcriptions where published. Excluded from this reseed per inventory `explicit_deadends`: full ECM beyond 3 John, Old Latin Vetus Latina, LXX Rahlfs standalone; DSS is also excluded from this reseed and revisited after the Layer 1 3 John pilot lands. |
+| 0 | Manuscript floor | Hebrew: WLC, OSHB. Greek: SBLGNT, Nestle1904. Versions in scope per `docs/data_inventory_catalog.json` procurement entries: Peshitta (ETCBC, CC-BY-SA-4.0), Vulgate Clementine (public domain), Coptic SCRIPTORIUM (CC-BY-4.0); LXX is resolved via STEPBible LXX columns rather than a standalone Rahlfs ingest. Apparatus: NA28 footnotes via INTF NTVMR transcriptions where published. Excluded per inventory `explicit_deadends`: full ECM beyond 3 John, Old Latin Vetus Latina, LXX Rahlfs standalone, and Dead Sea Scrolls; each exclusion carries its catalog reason and evidence. |
 | 0.5 | Versification mapping | STEPBible TVTMS. Every cross-version operation routes through it. |
-| 1 | Critical text and apparatus | open-cbgm (MIT) over INTF TEI XML where ECM is published. **3 John pilot IS IN SCOPE via local asset at `tmp/poc/cbgm/` (open-cbgm binaries, `3_john.db`, `3_john_collation.xml`).** Catholic Letters beyond 3 John excluded per inventory `explicit_deadends[0]`; revisit once the 3 John pilot establishes the loading and query pattern. |
-| 2 | Unified lexical foundation | MACULA Hebrew + Greek (Clear Bible, CC BY 4.0). Includes WLC + OSHB morphology + Westminster syntax + UBS MARBLE Louw-Nida and SDBH semantic domains + Berean glosses. STEPBible TAHOT / TAGNT / TTESV layered on top. Access via Text-Fabric (MIT) for BHSA, ETCBC peshitta, ETCBC syrnt; via lxml for OSHB; via direct .txt parse for MorphGNT. |
-| 3 | Deterministic analytics | Concordance graph, cross-reference topology (TSK + OpenBible), syntactic structure (ETCBC for Hebrew, MACULA Greek trees), semantic domains (Louw-Nida, SDBH), pericope boundaries (OpenText annotations). Excluded from this reseed: chiasm detection, stylometry, conceptual metaphor mapping, speech-act classification beyond the Speaker-Quotations dataset. |
-| 4 | Lexical verdict engine | Pipeline 2. Opus reads layers 0-3 (no cultural data, ever), produces `evidence/<id>.json` per doctrinal proposition. LLM is constrained to writing structured evidence; a deterministic post-processor computes `lexical_score` from the structured fields. The LLM cannot override the score. |
+| 1 | Critical text and apparatus | open-cbgm (MIT) over INTF TEI XML where ECM is published. The 3 John pilot is in scope via the local asset at `tmp/poc/cbgm/` (open-cbgm binaries, `3_john.db`, `3_john_collation.xml`). Catholic Letters beyond 3 John are excluded per inventory `explicit_deadends[0]`. |
+| 2 | Unified lexical foundation | MACULA Hebrew + Greek (Clear Bible, CC BY 4.0). Includes WLC + OSHB morphology + Westminster syntax + UBS MARBLE Louw-Nida + Berean glosses. STEPBible TAHOT / TAGNT / TTESV layered on top. Access via Text-Fabric (MIT) for BHSA, ETCBC peshitta, ETCBC syrnt; via lxml for OSHB; via direct .txt parse for MorphGNT. The MACULA-Hebrew `sdbh` semantic-domain attribute is present in the upstream but is not ingested in v1 (see Intentional scope boundaries). |
+| 3 | Deterministic analytics | Concordance graph, cross-reference topology (TSK + OpenBible), syntactic structure (ETCBC for Hebrew, MACULA Greek trees), semantic domains (Louw-Nida), pericope boundaries (OpenText annotations). Chiasm detection, stylometry, conceptual metaphor mapping, and speech-act classification beyond the Speaker-Quotations dataset are intentionally not built in v1 (see Intentional scope boundaries). |
+| 4 | Lexical verdict engine | Pipeline 2. Opus reads layers 0-3 (no cultural data, ever), produces `evidence/<id>.json` per doctrinal proposition. The LLM is constrained to writing structured evidence; a deterministic post-processor computes `lexical_score` from the structured fields. The LLM cannot override the score. |
 | 5 | Translation view | STEPBible TTESV plus Clear Bible Alignments. Parallel rendering only. Never feeds Layer 4. |
 | 6 | Cultural sibling corpus | CCEL patristic + Vatican.va magisterial + Book of Concord + Reformed confessions + 39 Articles + UMC + Schleitheim + AG + OCA + Plymouth Brethren archives + conciliar. Air-gapped store. |
-| 6.5 | Light doctrinal tagging | Per-chunk `(tradition, doctrine_coarse, doctrine_fine, stance, confidence, anchor_id)`. No formal ontology. Opus auto-tags at ingest; high-confidence tags ship, low-confidence flagged for review. |
-| 7 | Cultural overlay engine | Pipeline 3 synthesis stage. Reads Layer 4 verdict and Layer 6/6.5 tags. Attaches "how each lineage reads this lexical pattern" as diagnostic information. Never edits the Layer 4 verdict. |
-| 8 | Variant debate surface | Per-verse: every variant in Layer 0, every CBGM-derived reading from Layer 1 where ECM exists, every translation choice from Layer 5, every Layer 4 verdict that is variant-sensitive. The "informed decision" reading surface. **Variant data populated for 3 John in v1 via Layer 1 CBGM ingest; variants for other Catholic Letters books excluded per `explicit_deadends[0]`.** |
-| 9 | MCP server and client | Python MCP SDK (`pip install mcp`). 11 tools (specified in docs/MCP_TOOLS.md). Streamable HTTP transport with progress tokens for the long-running `doctrinal_verdict` tool. Flutter client is excluded from this reseed; v1 ships as MCP-only, queryable from Claude Code or other MCP-native clients. The Flutter surface is tracked outside the reseed scope. |
+| 6.5 | Light doctrinal tagging | Per-chunk `(tradition, doctrine_coarse, doctrine_fine, stance, confidence, anchor_id)`. No formal ontology. Opus auto-tags; high-confidence tags ship, low-confidence flagged for review. |
+| 7 | Cultural overlay engine | Pipeline 3 synthesis stage. Reads the Layer 4 verdict and Layer 6/6.5 tags. Attaches "how each lineage reads this lexical pattern" as diagnostic information. Never edits the Layer 4 verdict. |
+| 8 | Variant debate surface | Per-verse: every variant in Layer 0, every CBGM-derived reading from Layer 1 where ECM exists, every translation choice from Layer 5, every Layer 4 verdict that is variant-sensitive. The "informed decision" reading surface. Variant data is populated for 3 John in v1 via the Layer 1 CBGM ingest; variants for other Catholic Letters books are excluded per `explicit_deadends[0]`. |
+| 9 | MCP server and client | Python MCP SDK (`pip install mcp`). 11 tools (specified in docs/MCP_TOOLS.md). Streamable HTTP transport with progress tokens for the long-running `doctrinal_verdict` tool. The Flutter client surface is intentionally not built in v1; v1 ships as MCP-only, queryable from Claude Code or other MCP-native clients. |
 
 ## Authority hierarchy
 
@@ -109,11 +107,11 @@ When tiers disagree within the lexical pipeline, the engine surfaces the conflic
 For each doctrinal proposition in `questions.json`, the Pipeline 2 orchestrator does the following.
 
 1. Pull the question entry (id, statement, scripture_anchors, confessional_anchors-as-references-only, historical_consensus metadata).
-2. Build a lexical context bundle from the lexical store: anchor lemmas with occurrence counts, anchor verses with surface forms and key terms, cross-references via TSK + OpenBible, semantic-domain neighbors via Louw-Nida and SDBH, syntactic context where ETCBC has it, any variant units where Layer 1 is populated.
-3. Hand the question + context bundle to Opus with the lean prompt (see `docs/EVIDENCE_SCHEMA.md` for the prompt contract). Opus is forbidden from citing confessions, magisterial documents, denominational commentary, or Reformed-aligned commentary sites (carm.org, equip.org, gotquestions.org, monergism.com, ligonier.org, thegospelcoalition.org, brethrenarchive.org). Allowed citations: apparatus, MACULA, STEPBible, ETCBC, BibleHub interlinear, INTF NTVMR.
-4. Opus produces structured JSON conforming to evidence v3.0 schema. Fields cover: verdict (affirms / confidence / variant_robust / pan_canonical / rationale), lexical_evidence (anchor_lemmas, concordance_traversed, scripture with force / supports / genre / figures / macula_anchor, cross_refs_invoked, complicating_texts), variants block, hermeneutics block, stem_audit, lay_summary, citations with license per source, license_audit.
+2. Build a lexical context bundle from the lexical store: anchor lemmas with occurrence counts, anchor verses with surface forms and key terms, cross-references via TSK + OpenBible, semantic-domain neighbors via Louw-Nida, syntactic context where ETCBC has it, any variant units where Layer 1 is populated.
+3. Hand the question plus context bundle to Opus with the lean prompt (see `docs/EVIDENCE_SCHEMA.md` for the prompt contract). Opus is forbidden from citing confessions, magisterial documents, denominational commentary, or Reformed-aligned commentary sites. Allowed citations: apparatus, MACULA, STEPBible, ETCBC, BibleHub interlinear, INTF NTVMR.
+4. Opus produces structured JSON conforming to the evidence v3.0 schema. Fields cover verdict (affirms / confidence / variant_robust / pan_canonical / rationale), lexical_evidence (anchor_lemmas, concordance_traversed, scripture with force / supports / genre / figures / macula_anchor, cross_refs_invoked, complicating_texts), variants block, hermeneutics block, stem_audit, lay_summary, citations with license per source, license_audit.
 5. The deterministic post-processor reads the structured fields and computes `lexical_score` as a weighted aggregate of six factors: pan_canonical (0.25), anchor_lemma breadth (0.20), complicating_resolved rate (0.15), cross_ref density (0.15), variant_robust flag (0.15), concordance_breadth (0.10). Order-invariant by construction. The LLM never writes this number.
-6. The triangle test: re-run on identical inputs must produce identical lexical_score (epsilon-stable to within 0.01). Permuted-order inputs must also produce identical score. Verified in H11.
+6. The triangle test: re-running on identical inputs produces an identical lexical_score (epsilon-stable to within 0.01). Permuted-order inputs also produce an identical score.
 7. Validate against the v3.0 Pydantic schema (`extra="forbid"` at every level). Write to `evidence/<question_id>.json`.
 
 **Verdict authority.** `verdict.affirms` is one of `true`, `false`, `null`, `disputed`. `null` covers "lexical pattern is open" and "insufficient evidence." `disputed` covers "lexical pattern is genuinely contested across the canon," reserved for cases like paedobaptism where the lexical evidence supports multiple defensible readings.
@@ -122,9 +120,9 @@ For each doctrinal proposition in `questions.json`, the Pipeline 2 orchestrator 
 
 ## Pipeline 3 walkthrough
 
-User question arrives at the MCP server. The router classifies intent (scripture / named_figure / comparative / general / doctrinal-verdict). For doctrinal queries:
+A user question arrives at the MCP server. The router classifies intent (scripture / named_figure / comparative / general / doctrinal-verdict). For doctrinal queries:
 
-1. Retrieve relevant `evidence/<id>.json` from the lexical store.
+1. Retrieve the relevant `evidence/<id>.json` from the lexical store.
 2. Retrieve cultural overlay chunks from the cultural store, filtered by the doctrine slugs in the relevant `questions.json` entry.
 3. Pass both to Opus for synthesis with a strict instruction: the lexical evidence is authoritative; the cultural material is diagnostic. The output envelope segregates the two with separate citation blocks. The license stack is attached to the envelope so the calling agent never accidentally bulk-exports NC content.
 
@@ -136,142 +134,172 @@ All agentic work in this architecture is dispatched in-house through a single or
 
 The orchestrator is the only entity that calls the Agent tool. Subagents do not dispatch further subagents (except for read-only Explore agents when warranted). The orchestrator reads `docs/ARCHITECTURE.md` and the phase prompts in `docs/phase_prompts/` on startup, then routes work according to the operational phase.
 
+### Verifier-caste governance
+
+Every commit carries a `Caste: <name>` trailer and the changed file-set is matched against a per-caste allow-list by `tools/check_caste.py`, enforced as a pre-commit hook. Crossing castes within a single commit is rejected. This makes the work auditable: a reader can replay `tools/check_caste.py --range <A.1-sha>..HEAD` and confirm every commit stayed inside its caste. The castes are: `architect` (schema decisions, the two data-inventory catalogs, this document, the phase docs, the reseed manifest, the graph DDL, `tools/expected_counts.json`), `implementer` and its docstring/impl/z1 variants (one source file plus its tooling), `verifier` and `verifier-z1` (tests only), and `auditor` (the manifest-verification output and the audit reports). A `[SCHEMA-REVISION]`-tagged subject is the only mechanism that authorizes the architect caste to move `tools/expected_counts.json` together with its SHA-lock companion `tools/expected_counts.baseline` in one atomic commit; `tools/check_thresholds_immutable.py` enforces that the count contract cannot drift silently outside such a commit.
+
 ### Phase prompts
 
-Each operational phase has an explicit, canonical prompt stored under `docs/phase_prompts/`. The orchestrator loads the relevant prompt verbatim and dispatches a subagent with it. Prompts are self-contained: the subagent does not need to read the conversation history.
+Each operational phase has an explicit, canonical prompt stored under `docs/phase_prompts/`. The orchestrator loads the relevant prompt verbatim and dispatches a subagent with it. Prompts are self-contained: the subagent does not read the conversation history.
 
 | Phase | Prompt file | Dispatched by | Cardinality | Model |
 |---|---|---|---|---|
 | Orchestrator (master) | `docs/phase_prompts/orchestrator.md` | Bootstrapped by user | 1 per session | Opus 4.7 |
-| Lexical ingest | `docs/phase_prompts/pipeline1_lexical_ingest.md` | Orchestrator | 1 per dataset (MACULA-H, MACULA-G, STEPBible, OSHB, MorphGNT, TSK, OpenBible, Theographic, BHSA) | Sonnet 4.6 |
-| Cultural scrape | `docs/phase_prompts/pipeline1_cultural_scrape.md` | Orchestrator | 1 per cultural source (CCEL ANF/NPNF, Vatican.va, Book of Concord, WCF, 1689, Heidelberg, Belgic, Dort, 39 Articles, UMC, Schleitheim, AG, OCA, BrethrenArchive, conciliar) | Sonnet 4.6 |
+| Lexical ingest | `docs/phase_prompts/pipeline1_lexical_ingest.md` | Orchestrator | 1 per dataset | Sonnet 4.6 |
+| Cultural scrape | `docs/phase_prompts/pipeline1_cultural_scrape.md` | Orchestrator | 1 per cultural source | Sonnet 4.6 |
 | Cultural auto-tag | `docs/phase_prompts/cultural_autotag.md` | Orchestrator | 1 per batch of ~50 chunks | Sonnet 4.6 |
 | Pipeline 2 verdict | `docs/phase_prompts/pipeline2_verdict.md` | Orchestrator | 1 per doctrinal proposition (231 total) | Opus 4.7 |
-| Pipeline 3 synthesis | `docs/phase_prompts/pipeline3_synthesis.md` | MCP server (functions as a thin orchestrator delegate) | 1 per user query | Sonnet 4.6 default; Opus 4.7 for `doctrinal_verdict` |
+| Pipeline 3 synthesis | `docs/phase_prompts/pipeline3_synthesis.md` | MCP server (thin orchestrator delegate) | 1 per user query | Sonnet 4.6 default; Opus 4.7 for `doctrinal_verdict` |
 | Validation | `docs/phase_prompts/validation.md` | Orchestrator | 1 per validation run | Sonnet 4.6 |
 
 The orchestrator does not embed prompts in code. It reads the markdown files and passes the content as the subagent prompt parameter. Prompt updates are git operations on these files, not code changes.
 
 ### Dispatch contract
 
-Every subagent receives, at minimum:
-- the verbatim phase prompt
-- a JSON `inputs` block scoped to its phase
-- a target output path under `tmp/<phase>/<task_id>/` for any files it produces
-- explicit `allowed_stores` and `forbidden_stores` lists (e.g. Pipeline 2 verdict has `allowed_stores: ["lexical"]`, `forbidden_stores: ["cultural"]`)
+Every subagent receives, at minimum: the verbatim phase prompt; a JSON `inputs` block scoped to its phase; a target output path under `tmp/<phase>/<task_id>/`; explicit `allowed_stores` and `forbidden_stores` lists (Pipeline 2 verdict has `allowed_stores: ["lexical"]`, `forbidden_stores: ["cultural"]`).
 
-Every subagent returns, at minimum:
-- a structured result JSON conforming to the phase's output schema
-- a `license_audit` block enumerating every source touched
-- a `confidence` self-assessment
+Every subagent returns, at minimum: a structured result JSON conforming to the phase's output schema; a `license_audit` block enumerating every source touched; a `confidence` self-assessment.
 
 The orchestrator aggregates results and writes them to the appropriate store via the Pipeline 1 adapter modules (no subagent writes to Neo4j or Qdrant directly).
 
+## Standing trustworthiness gate
 
+The data in both stores is trustworthy because a single self-contained gate proves it, and the proof is re-runnable by an independent auditor at any time.
+
+The gate is the recorded claim file `docs/RESEED_MANIFEST_<timestamp>.json`. It enumerates every claim that must hold for the build to be trustworthy: per-source node counts and per-edge counts against `tools/expected_counts.json`, the INSTANCE_OF completeness figure, the cultural-store counts, the threshold-immutability file lock, the adapter-purity scan, the caste-history scan, the snapshot-determinism property, the vector-quality property, and the procurement-list completeness rule. `tools/verify_manifest.py` independently recomputes every observed value first (pytest, script, cypher, file_sha, grep) and only then diffs against the manifest's recorded expected side, writing the regenerable output `docs/MANIFEST_VERIFICATION_<timestamp>.json`. Exit 0 with every claim matching is the trust proof. `tools/generate_trust_report.py` renders a layman PDF from the newest manifest plus its newest verification output; it auto-discovers the newest of each and never reads any narrative doc.
+
+The gate is structured as nine ordered steps so each threshold is pinned independently rather than depending on the manifest authoring it correctly:
+
+- **H0** the manifest exists and is valid JSON with a `claims` array.
+- **H1** `tools/verify_manifest.py` re-executes every claim, computing observed values before the expected side is read; exit 0 and byte-for-byte agreement is required.
+- **H2** the adapter, embed-text, and Pipeline-2 pytest suites pass with zero failures.
+- **H3** every in-scope source's node/edge count equals its `tools/expected_counts.json` figure at its tier tolerance (Tier A exact tol 0; Tier B plus or minus 2 percent capped 1000; Tier C plus or minus 5 percent).
+- **H4** the lexical Qdrant point count is in band and the vector-quality property holds: distinct-vector ratio at least 0.999 with the identical-gloss duplicate exception, and direction-dispersion non-degeneracy (mean pairwise cosine at most 0.95 and pairwise-cosine population stdev at least 1e-4). voyage-4-large returns L2-unit-normalized vectors so a vector-norm-variance test is not the degeneracy proxy; direction collapse is detected directly via pairwise cosine over disjoint random pairs with a fixed seed for a deterministic verdict. Each threshold sits roughly three orders of magnitude clear of both the healthy and the degenerate value, and `tools/check_vector_quality.py --self-test` proves the gate still rejects a genuinely collapsed collection.
+- **H5** two consecutive `tools/snapshot_counts.py` runs over identical lexical inputs produce an identical `overall_hash`. The ingest is single-pass deterministic: the `ingest/lexical/run.py` DATASETS dispatch order is a schema contract that places every `{strong}`-keyed Lemma/GreekLemma producer before its consumers, so one fresh pass lands every INSTANCE_OF edge and a second pass is a true no-op.
+- **H6** `tools/check_adapter_purity.py` proves every `ingest/lexical/` adapter is pure (no subprocess, socket, httpx, requests, urllib, aiohttp, dynamic import, or non-`data/private` path literal).
+- **H7** `tools/check_thresholds_immutable.py` exits 0 (the `tools/expected_counts.json` blob SHA equals the locked baseline, or the last change is a `[SCHEMA-REVISION]` commit moving the baseline in the same commit), the file-SHA claim matches the locked value, and `tools/verify_no_deferral.py` finds zero deferral markers in this document and the schema decisions.
+- **H8** `tools/check_caste.py --range <A.1-sha>..HEAD` confirms every commit since the Phase A.1 schema-lock has a `Caste:` trailer matching its changed-file set.
+
+Procurement-list completeness is folded into H1 as a hard claim: every `procurement_required` entry in `docs/data_inventory_catalog.json` that is `compatible_with_project` and not a `deadend` has a passed adapter; a `deadend` is exempt only with `deadend_evidence` plus a committed user approval. The in-scope deadends are full ECM beyond 3 John, Old Latin Vetus Latina, LXX Rahlfs standalone, and DSS; 3 John CBGM is in scope via the local asset.
+
+## Intentional scope boundaries and known limitations
+
+The following are deliberate v1 boundaries. Each states what is not built, why, and the contract that governs adding it. Each is a present-tense scope statement, not a deferral; the build is trustworthy with these boundaries in place.
+
+1. **Cultural ADDRESSES edge and the autotag projection are intentionally not built in v1.** The cultural pipeline scrapes, chunks, and persists `CulturalChunk` + `Work` + `HAS_CHUNK` and seeds `Doctrine` + `Question` + `UNDER_QUESTION`, but the per-chunk `doctrine_tags` to `ADDRESSES` projection is a separate Pipeline-1 tagging phase that v1 does not run. Cultural Schema Decision 4 acceptance is written to tolerate zero `ADDRESSES` edges precisely so a freshly built store still passes the gate. This is a missing phase, not a defective one. The contract that governs adding it: an autotag dispatch wired into `ingest/cultural/run.py` plus a label-scoped projection `MATCH (c:CulturalChunk {chunk_id}),(d:Doctrine {slug}) MERGE (c)-[r:ADDRESSES]->(d) SET r.stance, r.confidence, r.evidence_phrase`, both endpoints constraint-backed, gated behind owner scope sign-off because it is a new phase rather than an adapter change.
+
+2. **The MACULA-Hebrew SDBH semantic-domain overlay is not ingested in v1.** The frozen MACULA-Hebrew upstream carries a populated `sdbh` attribute (roughly 244734 non-null morphemes, occurrence rate about 0.514), but no Schema Decision contracts an SDBH node or edge, no adapter reads the attribute, and `graph/lexical.cypher` provisions no SDBH constraint. Semantic-domain encoding in v1 is Greek Louw-Nida only (Schema Decision 2). The contract that governs adding it: a new architect Decision plus an `SdbhDomain` label and uniqueness constraint in `graph/lexical.cypher`, plus the `macula_hebrew` adapter reading the `<w>` `sdbh` attribute and emitting the domain edge at the proven rate, plus the verifier and a re-ingest.
+
+3. **TVTMS condensed-section completeness is bounded by the upstream artifact contract.** The cross-version mapping consumes `data/private/stepbible/tvtms.parsed.json` (1308 faithful rows). A small set of KJV-Hebrew versification shift rows (Joel 2:28-32 = Joel 3 Hebrew, Jonah 1:17 = Jonah 2:1, Deut 12:32 = Deut 13:1) exist in the frozen raw TVTMS Condensed section but are not in the parsed artifact, so the OpenBible cross-ref count is the faithful-given-available-TVTMS figure (342128) rather than the raw CSV row total. The adapter faithfully quarantines the unresolved rows and never fabricates an inline KJV-to-OSIS map. The contract that governs raising the figure: a producer-plus-consumer change that re-derives `tvtms.parsed.json` from the Condensed section including range-bearing rows and adds per-verse range expansion in the OpenBible and TSK consumers, with the committed-artifact-versus-raw-source contract and the range/Absent/NoVerse/Psalm-Title/multi-ref row-scope semantics ruled by the owner before any remap.
+
+4. **TSK CROSS_REF is keyed on osisID and is correct only because all TSK targets are OT.** The TSK adapter resolves its cross-reference targets through `Verse.osisID`. This is correct for the current corpus because every TSK target verse is in the Old Testament, where `osisID` is populated. The constraint is documented here so a reader does not extend TSK to NT targets without hardening. The contract that governs hardening: re-key the TSK `CROSS_REF` endpoint to the universal `Verse.id` (the same fix already applied to the other cross-version edges, Schema Decision 5/15) before any NT TSK source is added.
+
+5. **`GreekLemma.strong` is non-unique by source design.** Multiple source populations (the disjoint macula_greek, the Hebrew-to-Greek bridge sentinel, and ttesv's own namespace) can carry the same canonical Strong string, so a `.strong` lookup fans out. The fan-out is bounded and accepted: the canonical join contract (Schema Decision 18) keys on the canonical `.strong` string and does not force the disjoint populations to merge, which keeps node identity stable and breaks no uniqueness constraint. Population unification is a separate data-model question that v1 deliberately does not decide.
+
+6. **The lexical adapter write-batch size is conservative by choice.** The adapters write in modest UNWIND batches rather than maximal ones. This trades a slightly longer reseed for predictable Neo4j memory behaviour and clean idempotency, which is the correct default for a single-developer personal engine. Tuning the batch size is a performance change, not a correctness change, and is governed by re-running the H5 snapshot-determinism gate after any change.
+
+7. **Louw-Nida codes are not populated on the `Lemma` node in v1.** The embed-text builder selects `strong, lemma, transliteration, gloss` and the embed text degrades gracefully when `pos`/`domain`/`louw_nida` are absent on a row. Louw-Nida lives on the Greek `Word` to `LouwNidaDomain` `IN_DOMAIN` edge (Schema Decision 2), not as a `Lemma` property. The contract that governs adding it: extend the embed-text query to project `pos`/`domain`/`louw_nida` from the lemma neighborhood, which is an embedding-quality enhancement, not a graph-contract change.
+
+8. **Textless Strong-only lexeme shells are intentionally not embedded.** Lemma rows that carry a Strong key but no gloss/definition text are not sent to the embedder. They remain fully Strong-joinable in the graph; the vector layer is a re-rank stage over text-bearing lexemes, not a completeness mirror of the graph. Embedding empty shells would pollute the distinct-vector ratio without adding retrieval value.
+
+9. **The Augsburg Confession is captured at its currently-available extent.** The Augsburg adapter crawls per-article slug pages; the live count can fall short of the canonical 28-article extent if the upstream crawl is partial. The catalog `live_corpus_bound` is the contract; a partial crawl is treated as a parse fault and quarantined, never widened to mask it. The contract that governs closing the gap: a full live crawl that yields the in-band count, or an architect `[SCHEMA-REVISION]` of the bound if the bound itself is demonstrated wrong.
+
+10. **The F.1 source-completeness invariant set is exercised by separate OT and NT questions rather than one combined question.** Running the five invariants once over an OT-anchored question and once over an NT-anchored question exercises both the Hebrew (BHSA syntax, OSHB word-slot) and Greek (MACULA tree, MorphGNT) paths without a single question that spans both. This is a deliberate test-shape choice; it does not weaken any invariant.
+
+The authoritative count contract for every source and edge lives in `tools/expected_counts.json` (SHA-locked by `tools/expected_counts.baseline`), `docs/data_inventory_catalog.json`, and `docs/cultural_data_inventory_catalog.json`. Those three files are the data contract; this section explains the boundaries around it.
+
+## Stack
 
 - **Python**: 3.12 via uv. The `.venv` at repo root is the canonical venv.
-- **Neo4j**: 5-community (Docker, two instances). Lexical at host port 7475/7688, cultural at 7476/7689 in PoC; production picks final ports.
+- **Neo4j**: 5-community (Docker, two instances). Lexical at host port 7475/7688, cultural at 7476/7689.
 - **Qdrant**: latest (Docker, two instances). Lexical at 7100/7102, cultural at 7101/7103.
-- **Voyage**: `voyage-4-large` at native 2048 dimensions for v1 (multilingual; handles Hebrew, Greek, and English in one embedding space). Pricing: $0.18 / M tokens after 200M free tokens; our v1 ingest is roughly 22M tokens so cost is $0. Locked over voyage-3-large and voyage-multilingual-2 (older Series 2/3) since voyage-4-large is strictly higher quality at identical paid-tier rate limits.
+- **Voyage**: `voyage-4-large` at native 2048 dimensions for v1 (multilingual; Hebrew, Greek, and English in one embedding space). The v1 ingest is roughly 22M tokens, inside the Voyage free allowance, so embedding cost is zero. voyage-4-large is chosen over the older voyage-3-large and voyage-multilingual-2 because it is strictly higher quality at the identical paid-tier rate limits.
 - **Reranker**: BGE-reranker-v2-m3 (Apache-2.0, open weights, multilingual). Loaded locally; no API.
-- **LLM**: Claude Opus 4.7 for Pipeline 2 lexical verdicts (highest reasoning quality). Sonnet 4.6 for cultural-corpus auto-tagging and Pipeline 3 query synthesis (good cost-quality balance). **Haiku is not used.** **All LLM dispatch is via in-house Claude Code subagents under the user's Max plan.** Programmatic Anthropic API access is forbidden in this architecture.
+- **LLM**: Claude Opus 4.7 for Pipeline 2 lexical verdicts (highest reasoning quality). Sonnet 4.6 for cultural-corpus auto-tagging and Pipeline 3 query synthesis. Haiku is not used. All LLM dispatch is via in-house Claude Code subagents under the user's Max plan. Programmatic Anthropic API access is forbidden in this architecture.
 - **MCP**: official Python SDK (`pip install mcp`). FastMCP server pattern. Streamable HTTP transport per the 2025-06-18 spec revision.
 - **Text-Fabric**: 13.x for BHSA / ETCBC peshitta / ETCBC syrnt access.
-- **Anthropic SDK**: **not installed, not used.** No programmatic API path. All agentic work routes through Claude Code subagents.
+- **Anthropic SDK**: not installed, not used. No programmatic API path. All agentic work routes through Claude Code subagents.
 
 ## License posture
 
-Every chunk and node carries an explicit `license` field. Synthesis enforces redistribution rules through the `license_guard.check_redistribute()` function (see `docs/LICENSE_TAGGING.md`).
+Every chunk and node carries an explicit `license` field. Synthesis enforces redistribution rules through the `license_guard.check_redistribute()` function (see `docs/LICENSE_TAGGING.md`). A `redistribute = false` source persists its `text_to_embed` surface in place of the verbatim `text`, in both the Neo4j store and the Qdrant payload, so copyrighted prose is never landed verbatim in either store.
 
 | Tier | Posture | Sources |
 |---|---|---|
 | Permissive open | Allowed in bulk, attribution required | MACULA (Clear Bible CC BY 4.0), STEPBible TAHOT / TAGNT / TVTMS (CC BY 4.0), OSHB (CC BY 4.0), OpenBible (CC BY), public-domain confessions (WCF, 1689 LBC, Heidelberg, Belgic, Dort, 39 Articles, BCP 1662, Schleitheim, UMC Articles, Book of Concord older translations), CCEL ANF / NPNF (PD), conciliar texts via Wikisource (PD), pre-1923 Plymouth Brethren writings (PD) |
 | Open share-alike | Allowed; derivatives must propagate SA | MorphGNT morphology (CC BY-SA 4.0), Theographic Bible Metadata (CC BY-SA 4.0), First1KGreek (CC BY-SA 4.0) |
 | Open non-commercial | Personal use only; bulk export forbidden | ETCBC BHSA (CC BY-NC 4.0), MARBLE / SDBH / Louw-Nida word senses (CC BY-NC), STEPBible TTESV (CC BY-NC 4.0) |
-| EULA-restricted | Snippet quotation OK; bulk forbidden; per-vendor reporting | SBLGNT text (SBLGNT EULA; ≤ 500 verses per year without separate license) |
-| Proprietary / fair-use only | Snippet only, never bulk | Vatican.va content (Libreria Editrice Vaticana copyright; widespread fair-use practice); AG Fundamental Truths; OCA topical articles; modern Book of Concord translations (Tappert / Kolb-Wengert) |
+| EULA-restricted | Snippet quotation OK; bulk forbidden; per-vendor reporting | SBLGNT text (SBLGNT EULA; at most 500 verses per year without a separate license) |
+| Proprietary / fair-use only | Snippet only, never bulk | Vatican.va content (Libreria Editrice Vaticana copyright); AG Fundamental Truths; OCA topical articles; modern Book of Concord translations (Tappert / Kolb-Wengert) |
 
-**v1 posture: 100% open.** No proprietary purchases. No paid lexicons. No paid ECM apparatus. The £200 reference budget goes to print NA28 + UBS6 + ECM Catholic Letters Part 1 for human cross-check, not for ingestion.
+**v1 posture: 100% open.** No proprietary purchases. No paid lexicons. No paid ECM apparatus. The reference budget goes to print NA28 + UBS6 + ECM Catholic Letters Part 1 for human cross-check, not for ingestion.
 
-**Public release of derivatives.** The engine code is intended for GitHub release under MIT or Apache-2.0 (pending decision). Derived corpora are NOT redistributed; the engine works against the user's locally-ingested data. Sample evidence outputs may be published as long as they cite only permissively-licensed source layers (license_audit field `evidence_safe_to_publish` must be `true`).
+**Public release of derivatives.** The engine code is intended for GitHub release under MIT or Apache-2.0. Derived corpora are not redistributed; the engine works against the user's locally-ingested data. Sample evidence outputs may be published only when they cite permissively-licensed source layers (the license_audit field `evidence_safe_to_publish` must be `true`).
 
 ## Hosting model
 
-Hybrid. Biblical data and both stores run locally in Docker. LLM (Opus, Sonnet, Haiku via Max plan) and embedding (Voyage via free tier) calls go to cloud APIs. BGE reranker model runs locally.
+Hybrid. Biblical data and both stores run locally in Docker. LLM (Opus, Sonnet via Max plan) and embedding (Voyage via free tier) calls go to cloud APIs. The BGE reranker runs locally.
 
-**Why hybrid.** Local data means the engine works on a plane for lookups and is independent of upstream service uptime. Cloud LLM means we do not run a model locally (out of personal scope). Voyage free tier means we pay zero for embedding at v1 scale (~22M tokens estimated vs 200M token free allowance).
+**Why hybrid.** Local data means the engine works offline for lookups and is independent of upstream service uptime. Cloud LLM means no model runs locally (outside personal scope). The Voyage free tier means embedding is zero-cost at v1 scale.
 
-**Refresh.** Datasets are pinned at commit SHAs in a `pipeline1/lockfile.json`. Refresh is manual: bump the SHA, re-ingest, re-embed. No automatic git pulls.
+**Refresh.** Datasets are pinned at commit SHAs in `pipeline1/lockfile.json`. Refresh is manual: bump the SHA, re-ingest, re-embed. No automatic git pulls. OpenBible cross-references drift monthly and are pinned to a release date in the lockfile.
 
-## PoC validation summary
+## Database backup and restore
 
-The architecture has been validated by 15 hypotheses across 6 parallel PoC agents on 2026-05-12. Detailed findings live in `docs/POC_FINDINGS.md`. Headline confidence:
+Both Docker stacks are backed up and restorable. The restore procedure, the snapshot layout, and the volume mapping are documented in `backups/RESTORE.md` (this file is local and gitignored; it is the operational runbook for bringing either store back from a snapshot). The standing trustworthiness gate is the post-restore acceptance check: a restored store is trusted only after `tools/verify_manifest.py` exits 0 against it.
 
-- 100% structural: every architectural commitment validates (air-gap, MCP, all 7 lexical ingestion paths, license guard, retrieval pipeline, open-cbgm on 3 John).
-- 90% live: three Opus-driven steps (H10 lean prompt, H11 triangle test, H13 auto-tagging) ran in stub mode because `ANTHROPIC_API_KEY` was not in `.env`. Live wiring is complete; the live validation pass uses Max-plan Claude Code subagents at zero marginal cost.
+## Engineering invariants
 
-## Architecture deltas baked in (from PoC findings)
+These are non-negotiable for implementation.
 
-The following are non-negotiable for implementation:
-
-1. **Canonical Strong's normalization at Pipeline 1 entry.** Five sources, five encodings (MACULA-H zero-pads `0430`, OSHB slash-prefixed `b/7225`, STEPBible curly-brace `{H0430G}`, MACULA-G plain `2316`, TAGNT prefixed `G`). A `canonical_strongs()` utility runs at ingest; cross-validation against all five reps is a unit test.
-2. **Hebrew dual-granularity model.** OSHB collapses prefix + stem (Gen 1:1 = 7 words). MACULA and BHSA split (11 morphemes). Both layers ingested: `(:Word)-[:HAS_MORPHEME]->(:Morpheme)` with bidirectional edges.
-3. **TVTMS is a 3-stage mapping service.** Block-scoped rules, rule types (OneToOne, SubdividedVerse, etc.), tradition columns. Build a `VersificationMapper` service, not a lookup table.
-4. **MACULA Hebrew Hebrew↔Greek cross-reference bridge.** Each `<w>` carries `greek` and `greekstrong` attributes. Ingest as edges between Hebrew Word nodes and Greek Lemma nodes. Free LXX bridge.
-5. **pysblgnt is dead on PyPI.** Direct `.txt` parse of `morphgnt/sblgnt` (space-delimited, 7 columns).
-6. **text-fabric path quirk.** `use()` resolves `~/github/...`, not `~/text-fabric-data/github/...`. Bootstrap script must symlink or pass `locations=`.
-7. **OpenBible "To Verse" ranges explode at ingest.** `Rom.1.19-Rom.1.20` becomes two edges. Range queries handled at retrieval time, not stored as a range property.
-8. **Voyage model: `voyage-4-large` at native 2048 dimensions.** Multilingual (Hebrew + Greek + English in one embedding space). At usage tier 1 (paid card on file) the limits are 3M TPM / 2000 RPM, more than enough for our ~22M token v1 ingest budget.
-9. **TTESV is CC BY-NC**, unlike the rest of STEPBible. Tag explicitly at ingest.
-10. **Sparse-checkout strategy.** MACULA Hebrew full clone is 1.5 GB; Greek is 655 MB. TSV-only sparse checkout drops the total under 500 MB.
-11. **Cultural scrape link-rot mitigation.** Wikisource slug drift (Schleitheim was 404 on PoC run) and TLS-fragile mirrors (justus.anglican.org SSLv3 handshake failure). Catalog records canonical URL plus fallback URLs per source. Re-probe on failure.
-12. **OpenBible cross-references drift monthly.** Pin to a release date in `pipeline1/lockfile.json`.
-13. **Docker air-gap relies on Docker default bridge isolation**, not `internal: true` (which blocks image pull). Document in compose comments.
-14. **Cultural tag count cap.** Pydantic validator rejects more than 5 doctrine_tags per chunk.
-15. **Disk hygiene policy.** PoCs prune downloads at completion. Production CI sparse-checks from the start.
-
-## Phase plan
-
-| Stage | Scope | Target |
-|---|---|---|
-| Stage 0 | Two-Docker stacks up, lexical-store smoke test on MACULA Hebrew Gen 1:1 end-to-end | This week |
-| Stage 1 | Full Pipeline 1 over all 7 lexical sources at pinned SHAs. Pipeline 1 over 7 cultural sources (Schleitheim, Augsburg, Heidelberg, WCF, 1689 LBC, 39 Articles, conciliar canons). MCP server with `lexical_lookup`, `cross_ref`, `versification_resolve` | Within a month |
-| Stage 2 | Cultural corpus completion (CCEL, Vatican.va, remaining traditions). MCP tools `cultural_overlay`, `debate_for_verse`. Pipeline 2 on first 20-50 doctrinal propositions via Max-plan subagents | Within two months |
-| Stage 3 | `doctrinal_verdict` MCP tool with streaming progress. Print reference purchase (NA28 + UBS6 + ECM Catholic Letters Part 1, ~£190-230) | Within three months |
-| Post-reseed | Flutter client surface. Variant data via INTF outreach for full Catholic Letters TEI. DSS / additional manuscript-witness procurement. Deterministic-layer extensions (chiasm, stylometry, conceptual metaphor, speech-act classification). | Beyond reseed scope |
+1. **Canonical Strong's normalization at Pipeline 1 entry.** Five sources use five encodings (MACULA-H zero-pads `0430`, OSHB slash-prefixed `b/7225`, STEPBible curly-brace `{H0430G}`, MACULA-G plain `2316`, TAGNT prefixed `G`). `ingest/canonical_strongs.canonical_strongs()` is the single normaliser; no adapter hand-rolls one. Cross-validation against all five reps is a unit test. The canonical join key is `Lemma.strong` / `GreekLemma.strong` carrying the canonical string (Schema Decision 18).
+2. **Hebrew dual-granularity model.** OSHB collapses prefix plus stem (Gen 1:1 = 7 words). MACULA and BHSA split (11 morphemes). Both layers are ingested: `(:Word)-[:HAS_MORPHEME]->(:Morpheme)` with bidirectional edges.
+3. **TVTMS is a 3-stage mapping service.** Block-scoped rules, rule types (OneToOne, SubdividedVerse), tradition columns. It is a `VersificationMapper` service, not a lookup table.
+4. **MACULA Hebrew Hebrew-to-Greek cross-reference bridge.** Each `<w>` carries `greek` and `greekstrong` attributes, ingested as `BRIDGES_LXX` edges from Hebrew `Lemma` to Greek `GreekLemma` (Schema Decision 4). A null `greekstrong` with a populated `greek` is a meaningful bridge routed to the documented sentinel `GreekLemma`, never dropped; the nullable bridge properties are set after the relationship MERGE so a null pattern property never raises.
+5. **MorphGNT is parsed directly.** `pysblgnt` is dead on PyPI; the SBLGNT is read by direct `.txt` parse (space-delimited, 7 columns).
+6. **Text-Fabric path quirk.** `use()` resolves `~/github/...`, not `~/text-fabric-data/github/...`. The bootstrap symlinks or passes `locations=`.
+7. **OpenBible "To Verse" ranges explode at ingest.** `Rom.1.19-Rom.1.20` becomes two edges. Range queries are handled at retrieval time, not stored as a range property.
+8. **Voyage model is `voyage-4-large` at native 2048 dimensions.** Multilingual. At usage tier 1 the limits (3M TPM / 2000 RPM) exceed the v1 ingest budget.
+9. **TTESV is CC BY-NC**, unlike the rest of STEPBible. It is tagged explicitly at ingest.
+10. **Sparse-checkout strategy.** MACULA Hebrew full clone is 1.5 GB; Greek is 655 MB. TSV-only sparse checkout keeps the total under 500 MB.
+11. **Cultural scrape link-rot mitigation.** Wikisource slug drift and TLS-fragile mirrors are handled by recording a canonical URL plus fallback URLs per source and re-probing on failure. A fallback is never a certificate-verification bypass.
+12. **Universal `Verse.id` is the cross-version join key.** Every verse-resolving edge (`IN_VERSE`, `PARALLEL_OF`, `OPENBIBLE_CROSS_REF`, `MENTIONS`, `NAMED_AT`) keys on the universal `Verse.id`, never on `Verse.osisID` (which is null on NT verses by Schema Decision 15). This is why those edges resolve on both testaments.
+13. **Docker air-gap relies on Docker default bridge isolation**, not `internal: true`. Documented in the compose comments.
+14. **Cultural tag count cap.** A Pydantic validator rejects more than 5 doctrine_tags per chunk.
+15. **Node-MERGE constraint coverage is complete.** Every `MERGE (n:Label {key})` on both stores is backed by a uniqueness constraint so the reseed index-seeks rather than scans (including `MaculaToken.id`). This is verified against both the DDL files and the live stores.
 
 ## Anti-patterns avoided
 
-Documented failure modes from prior biblical RAG attempts that this architecture explicitly resists:
+| Anti-pattern | Mitigation here |
+|---|---|
+| Lexical / confessional contamination | Two-Docker air-gap at the data-model level |
+| LLM-generated verdict | Pipeline 2 score is a deterministic post-processor; the LLM cannot override |
+| Hallucinated cross-references | Citation validator: every LLM citation must verify against TSK / OpenBible / MACULA graph membership |
+| Translation conflation | Authority hierarchy; dynamic translations forbidden as Layer 4 exegetical authority |
+| Strong's-only Greek/Hebrew claims | Disambiguated Strong's mandatory; Louw-Nida semantic context required before any verdict |
+| Confessional eisegesis disguised as exegesis | Confessions on the sibling diagnostic track only; the UI segregates them visually |
+| Apparatus blindness | INTF NTVMR transcriptions ingested where ECM exists; a variant-inspect tool surfaces variants per verse |
+| Versification chaos | STEPBible TVTMS as the canonical versification service; every cross-version operation routes through it |
+| Naive RAG chunking on biblical text | Pericope-aware chunking using OpenText context annotations plus MACULA syntactic trees |
+| Quotation / speaker attribution errors | Clear Bible Speaker-Quotations dataset treated as gold |
+| TR / Byzantine / Majority Text / NA28 conflation | STEPBible TAGNT per-word edition flags respected per chunk |
 
-| Anti-pattern | Where seen | Mitigation here |
-|---|---|---|
-| Lexical / confessional contamination | Magisterium AI by design; Logos AI by integration depth | Two-Docker air-gap at the data-model level |
-| LLM-generated verdict | Most devotional Bible chatbots | Pipeline 2 score is deterministic post-processor; LLM cannot override |
-| Hallucinated cross-references | Documented across consumer Bible LLMs | Citation validator: every LLM citation must verify against TSK / OpenBible / MACULA graph membership |
-| Translation conflation | Naive RAG over English-only translations | Authority hierarchy; dynamic translations forbidden as Layer 4 exegetical authority |
-| Strong's-only Greek/Hebrew claims | Every Strong's-driven concordance app | Disambiguated Strong's mandatory; Louw-Nida and SDBH semantic context required before any verdict |
-| Confessional eisegesis disguised as exegesis | Most denominational study apps | Confessions on sibling diagnostic track only; UI segregates visually |
-| Apparatus blindness | All consumer Bible apps | INTF NTVMR transcriptions ingested where ECM exists; variant_inspect tool surfaces variants per verse |
-| Versification chaos | Many translation apps | STEPBible TVTMS as canonical versification service; every cross-version operation routes through it |
-| Naive RAG chunking on biblical text | Common 2024 demos | Pericope-aware chunking using OpenText.org context annotations + MACULA syntactic trees; not token-window |
-| Quotation / speaker attribution errors | Most apps | Clear Bible Speaker-Quotations dataset treated as gold |
-| Stylometry on English translations | Popular-press articles | Stylometric features (post-reseed addition) operate on lemma sequences from MorphGNT / MACULA |
-| TR / Byzantine / Majority Text / NA28 conflation | Popular Bible apps | STEPBible TAGNT per-word edition flags respected per chunk |
-
-## Repo layout (target)
+## Repo layout
 
 ```
 brethren-doctrine/
 ├── docs/                                Canonical documentation
-│   ├── ARCHITECTURE.md                  (this file)
+│   ├── ARCHITECTURE.md                  (this file: system spec)
+│   ├── SCHEMA_DECISIONS.md              Lexical graph contract
+│   ├── CULTURAL_SCHEMA_DECISIONS.md     Cultural graph contract
+│   ├── CULTURAL_SCHEMA.md               Per-chunk doctrine-tagging schema
+│   ├── EVIDENCE_SCHEMA.md               v3.0 evidence schema + Pipeline 2 prompt contract
 │   ├── INGESTION_PATTERNS.md            Per-dataset ingestion notes
 │   ├── LICENSE_TAGGING.md               License posture + guard contract
 │   ├── MCP_TOOLS.md                     11 MCP tool specifications
-│   ├── EVIDENCE_SCHEMA.md               v3.0 evidence schema + Pipeline 2 prompt contract
-│   ├── CULTURAL_SCHEMA.md               Per-chunk doctrine-tagging schema
-│   ├── POC_FINDINGS.md                  Aggregated PoC findings 2026-05-12
-│   └── archive-2026-05-12/              Pre-greenfield-rewrite docs
+│   ├── data_inventory_catalog.json      Lexical source + count contract
+│   ├── cultural_data_inventory_catalog.json  Cultural source + count contract
+│   └── RESEED_MANIFEST_<ts>.json        Standing trustworthiness claim file
 ├── docker/
 │   ├── lexical/docker-compose.yml       Lexical Neo4j + Qdrant stack
 │   └── cultural/docker-compose.yml      Cultural Neo4j + Qdrant stack
@@ -280,71 +308,35 @@ brethren-doctrine/
 │   └── cultural.cypher                  Cultural Neo4j schema
 ├── ingest/
 │   ├── lexical/                         Pipeline 1 lexical adapters
-│   │   ├── macula_hebrew.py
-│   │   ├── macula_greek.py
-│   │   ├── stepbible.py
-│   │   ├── oshb.py
-│   │   ├── morphgnt.py
-│   │   ├── tsk.py
-│   │   ├── openbible.py
-│   │   ├── theographic.py
-│   │   └── bhsa.py
 │   ├── cultural/                        Pipeline 1 cultural adapters
-│   │   ├── ccel.py
-│   │   ├── vatican.py
-│   │   ├── bookofconcord.py
-│   │   ├── reformed_confessions.py
-│   │   ├── 39_articles.py
-│   │   ├── conciliar.py
-│   │   └── brethren_archive.py
 │   ├── canonical_strongs.py             Strong's normalization utility
-│   ├── versification_mapper.py          TVTMS-driven service
 │   ├── models.py                        Pydantic chunk and node models
 │   └── license_guard.py                 Redistribution enforcement
-├── embeddings/
-│   ├── bootstrap.py                     Creates lex_col + cult_col Qdrant collections
-│   └── embed_and_load.py                Voyage embed + load with --store flag
-├── retrieval/
-│   ├── router.py                        Intent classifier with store routing
-│   ├── hybrid.py                        Dense + BM25 + graph expand
-│   ├── rerank.py                        BGE reranker
-│   └── envelope.py                      Per-store response envelopes
-├── mcp/
-│   ├── server.py                        FastMCP server with 11 tools
-│   ├── tools/                           One file per tool
-│   └── streaming.py                     progressToken handling
-├── pipeline2/
-│   ├── orchestrator.py                  Per-question Opus subagent dispatcher
-│   ├── lean_prompt.md                   Lean prompt template
-│   ├── evidence_schema.py               Pydantic v3.0 model
-│   └── score_calc.py                    Deterministic post-processor
-├── tools/
-│   ├── verify_baseline.py               KPI verifier (rewrite for lean schema)
-│   ├── verify_questions.py              Question hygiene
-│   └── evidence_to_pdf.py               PDF renderer
+├── embeddings/                          Voyage embed + Qdrant bootstrap
+├── retrieval/                           Router, hybrid retrieve, rerank, envelope
+├── mcp/                                 FastMCP server with 11 tools
+├── pipeline2/                           Per-question Opus dispatcher + score_calc
+├── tools/                               Gate + verification tooling
 ├── tests/                               Real test suite
 ├── questions.json                       231-question bank (locked)
-├── evidence/                            Pipeline 2 output (regenerated under v3.0)
+├── evidence/                            Pipeline 2 output (v3.0)
 ├── responses/                           Gitignored per-respondent answers
-├── parsed/                              Brethren Tier 1 corpus (cultural-store input)
-├── source-docs/, converted/             Gitignored raw inputs
-├── README.md, USAGE.md                  User-facing
-├── pyproject.toml, uv.lock              Python project
-└── .env, .env.example                   VOYAGE_API_KEY, ANTHROPIC_API_KEY (when needed), NEO4J_*, QDRANT_URL
+├── parsed/                              Brethren corpus (cultural-store input, gitignored)
+├── backups/                             Local store snapshots + RESTORE.md (gitignored)
+└── pyproject.toml, uv.lock, .env        Python project + secrets
 ```
 
 ## Glossary
 
-- **Air-gap**: physical separation between lexical and cultural data stores. Pipeline 2 cannot reach the cultural store; Pipeline 3 reads both as separate services with separate license stacks.
+- **Air-gap**: physical separation between the lexical and cultural data stores. Pipeline 2 cannot reach the cultural store; Pipeline 3 reads both as separate services with separate license stacks.
 - **Apparatus**: footnotes in a critical edition listing manuscript variants and editorial decisions.
 - **CBGM**: Coherence-Based Genealogical Method. INTF's algorithm for reconstructing manuscript relationships from variant readings.
 - **Cultural overlay**: diagnostic information attached after a lexical verdict is locked. Shows how each tracked tradition reads the same lexical pattern. Never authoritative.
-- **Doctrinal proposition**: a single testable belief statement from `questions.json` (e.g. "Scripture is the sole and final authority for the rule of faith").
-- **ECM**: Editio Critica Maior. INTF's full critical edition of the NT. Published so far: Catholic Letters, Acts, Mark, Revelation. Matthew expected 2026.
-- **Lexical store**: the air-gapped Neo4j + Qdrant pair that holds biblical text, morphology, syntax, cross-references, semantic domains, apparatus (where Layer 1 is populated).
-- **Lexical verdict**: the engine's Layer 4 output for a doctrinal proposition. Derived from Scripture alone. Includes `affirms`, `lexical_score`, `confidence`, citations, hermeneutics, license_audit.
-- **Pipeline 1**: ingestion of open datasets into the two stores.
-- **Pipeline 2**: per-question Opus pre-inference producing `evidence/<id>.json`.
-- **Pipeline 3**: runtime RAG via MCP server.
-- **Triangle test**: re-running Pipeline 2 on identical inputs must produce identical `lexical_score`. Order-permutation of inputs must produce identical score. Verified by H11.
+- **Doctrinal proposition**: a single testable belief statement from `questions.json`.
+- **ECM**: Editio Critica Maior. INTF's full critical edition of the NT.
+- **Lexical store**: the air-gapped Neo4j plus Qdrant pair holding biblical text, morphology, syntax, cross-references, semantic domains, and apparatus where Layer 1 is populated.
+- **Lexical verdict**: the engine's Layer 4 output for a doctrinal proposition. Derived from Scripture alone.
+- **Pipeline 1 / 2 / 3**: ingestion / per-question Opus pre-inference / runtime RAG via MCP.
+- **Triangle test**: re-running a deterministic step on identical inputs produces an identical result; order-permutation of inputs produces an identical result.
 - **TVTMS**: STEPBible's Translators Versification Mapping Specification. Reconciles Hebrew, English, Greek-Brenton, Latin, KJV verse numbering schemes.
+```

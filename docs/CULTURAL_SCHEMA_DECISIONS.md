@@ -1,8 +1,8 @@
-# Cultural Schema Decisions: Sibling-Track Reseed (v3)
+# Cultural Schema Decisions: Sibling-Track Store
 
 ## Overview
 
-This document freezes the node-and-edge schema for the cultural (sibling-track) Neo4j store, the faithful mirror of `docs/SCHEMA_DECISIONS.md` for Pipeline 1 cultural. Each `### Decision` block below names the cultural source(s) it governs, states a binding `#### Rule`, attaches a `#### Cypher acceptance query` that the Phase G triangle-test runner executes against the cultural store, enumerates `#### Edge cases handled`, and lists every persisted property in a `#### Per-field predicate type` table whose predicates resolve via `tools/predicates_by_type.cypher`. Field names are sourced verbatim from `docs/cultural_data_inventory_catalog.json` `record_model.attributes` and the `ingest/cultural/_common.py` `_WORK_CYPHER` / `_CHUNK_CYPHER` persistence contract, so that every cultural adapter Implementer and Verifier compiles their docstring contract against the same identifiers. The twenty decisions below cover the flattened `CulturalChunk` node shape and its `chunk_id` stable identity, the `Work` node and `HAS_CHUNK` edge model, the per-source provenance and license and redistribute fields, the `doctrine_tags` to `ADDRESSES` edge model, the binding air-gap rule that keeps Pipeline 2 from seeing this store, the `anchor_id` citation normalization policy, the `graph/cultural.cypher` constraint and index policy, and one decision per cultural source family across the twenty-two catalog sources (Westminster confessional, continental Reformed, Baptist, Anglican, Lutheran, Anabaptist, Pentecostal, Methodist, conciliar creeds, patristic CCEL, magisterial Vatican, Eastern Orthodox, and the two Plymouth Brethren corpora). Every decision traces to a real `ingest/cultural/*.py` adapter plus a real `docs/cultural_data_inventory_catalog.json` `sources[]` entry; no source or field outside that catalog is introduced. Any change to a decision after Phase G.1 requires a commit whose subject line begins with the literal token `[SCHEMA-REVISION]` so the immutability gate does not block the run. The Brethren parsed corpus is the position under test, not the rubric; this document records its schema exactly as `ingest/cultural/brethren_parsed.py` emits it and grants it no adjudicative weight.
+This document is the binding node-and-edge contract for the cultural (sibling-track) Neo4j store, the mirror of `docs/SCHEMA_DECISIONS.md` for Pipeline 1 cultural. Each `### Decision` block names the cultural source(s) it governs, states a binding `#### Rule`, attaches a `#### Cypher acceptance query` that the triangle-test runner executes against the cultural store, enumerates `#### Edge cases handled`, and lists every persisted property in a `#### Per-field predicate type` table whose predicates resolve via `tools/predicates_by_type.cypher`. Field names are sourced verbatim from `docs/cultural_data_inventory_catalog.json` `record_model.attributes` and the `ingest/cultural/_common.py` `_WORK_CYPHER` / `_CHUNK_CYPHER` persistence contract, so every cultural adapter Implementer and Verifier compiles their docstring contract against the same identifiers. The twenty decisions cover the flattened `CulturalChunk` node shape and its `chunk_id` stable identity, the `Work` node and `HAS_CHUNK` edge model, the per-source provenance/license/redistribute fields, the `doctrine_tags` to `ADDRESSES` edge model, the binding air-gap rule that keeps Pipeline 2 from seeing this store, the `anchor_id` citation normalization policy, the `graph/cultural.cypher` constraint and index policy, and one decision per cultural source family across the twenty-two catalog sources. Every decision traces to a real `ingest/cultural/*.py` adapter plus a real `docs/cultural_data_inventory_catalog.json` `sources[]` entry; no source or field outside that catalog is introduced. Any change to a decision requires a commit whose subject begins with the literal token `[SCHEMA-REVISION]` so the immutability gate does not block the run. The Brethren parsed corpus is the position under test, not the rubric; this document records its schema exactly as `ingest/cultural/brethren_parsed.py` emits it and grants it no adjudicative weight. Every acceptance query below is valid Cypher 5 and asserts its stated invariant directly.
 
 ### Decision 1: CulturalChunk node shape and chunk_id stable identity
 
@@ -220,9 +220,16 @@ Citation and anchor fields:
 ```cypher
 SHOW CONSTRAINTS YIELD name
 WITH collect(name) AS cons
-WHERE 'cultural_chunk_id' IN cons AND 'work_id' IN cons AND 'doctrine_slug' IN cons
-MATCH (c:CulturalChunk) WHERE c.chunk_id IS NOT NULL
-RETURN size(cons) >= 5 AND count(c) >= 0 AS ok
+OPTIONAL MATCH (c:CulturalChunk)
+WITH cons, count(c) AS chunks
+RETURN
+  size([n IN cons WHERE n IN
+    ['tradition_slug','work_id','cultural_chunk_id','doctrine_slug','question_id']
+  ]) AS required_constraints,
+  chunks,
+  size([n IN cons WHERE n IN
+    ['tradition_slug','work_id','cultural_chunk_id','doctrine_slug','question_id']
+  ]) = 5 AND chunks >= 0 AS ok
 ```
 
 #### Edge cases handled
@@ -255,7 +262,8 @@ MATCH (w:Work)-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE w.work_id IN ['wcf','wsc','wlc-catechism'] AND c.tradition = 'reformed'
 WITH w.work_id AS wid, count(c) AS chunks
 WHERE chunks >= 1
-RETURN wid, chunks, count(wid) = 3 AS three_westminster_works_ok
+WITH collect(wid) AS wids, collect(chunks) AS chunk_counts
+RETURN wids, chunk_counts, size(wids) = 3 AS three_westminster_works_ok
 ```
 
 #### Edge cases handled
@@ -291,7 +299,8 @@ MATCH (w:Work)-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE w.work_id IN ['heidelberg','belgic','dort'] AND w.is_confessional_text = true
 WITH w.work_id AS wid, count(c) AS chunks
 WHERE chunks >= 1 AND chunks <= 200
-RETURN wid, chunks, count(wid) = 3 AS three_continental_works_ok
+WITH collect(wid) AS wids, collect(chunks) AS chunk_counts
+RETURN wids, chunk_counts, size(wids) = 3 AS three_continental_works_ok
 ```
 
 #### Edge cases handled
@@ -318,7 +327,7 @@ Continental Reformed family CulturalChunk fields:
 
 #### Rule
 
-The catalog source `LBC-1689` (`ingest/cultural/lbc_1689.py`, 20 fixture records, record unit `CulturalChunk(confession-section)`) is `tradition = reformed`, `license_id = public_domain`, `redistribute = true`, scraped from `bible-researcher.com` with one page per chapter and a live corpus bound of 140 to 160 sections across 32 chapters. The offline fixture covers chapters 1 through 3 only (`1689br_ch1.html`, `1689br_ch2.html`, `1689br_ch3.html`) and the adapter MUST emit one chunk per numbered chapter section with `anchor_id` `1689.<chapter>.<section>`, `source.work_id = 1689-lbc`, and `source.is_confessional_text = true`. The adapter MUST treat the per-chapter page layout as the chunk boundary, so each chapter page yields its numbered sections without merging adjacent chapters into one record.
+The catalog source `LBC-1689` (`ingest/cultural/lbc_1689.py`, 20 fixture records, record unit `CulturalChunk(confession-section)`) is `tradition = reformed`, `license_id = public_domain`, `redistribute = true`, scraped from `bible-researcher.com` with one page per chapter and a live corpus bound of 140 to 160 sections across 32 chapters. The offline fixture covers chapters 1 through 3 only (`1689br_ch1.html`, `1689br_ch2.html`, `1689br_ch3.html`) and the adapter MUST emit one chunk per numbered chapter section with `anchor_id` `1689.<chapter>.<section>`, `source.work_id = lbc-1689`, and `source.is_confessional_text = true`. The adapter MUST treat the per-chapter page layout as the chunk boundary, so each chapter page yields its numbered sections without merging adjacent chapters into one record.
 
 #### Cypher acceptance query
 
@@ -363,7 +372,8 @@ MATCH (w:Work)-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE w.work_id IN ['articles-39','bcp-1662'] AND c.tradition = 'anglican'
 WITH w.work_id AS wid, count(c) AS chunks
 WHERE chunks >= 1
-RETURN wid, chunks, count(wid) = 2 AS two_anglican_works_ok
+WITH collect(wid) AS wids, collect(chunks) AS chunk_counts
+RETURN wids, chunk_counts, size(wids) = 2 AS two_anglican_works_ok
 ```
 
 #### Edge cases handled
@@ -534,17 +544,18 @@ UMC-Articles CulturalChunk fields:
 
 #### Rule
 
-The catalog source `Ecumenical-Creeds` (`ingest/cultural/conciliar.py`, 4 records, record unit `CulturalChunk(creed)`) is `tradition = patristic`, `license_id = public_domain`, `redistribute = true`, scraped from Wikisource and Wikipedia with a live corpus bound of 3 to 20. The adapter MUST emit one chunk per creed for the Apostles' Creed, the Nicene Creed (325 and 381), the Chalcedonian Definition (451), and the Athanasian Creed, with `anchor_id` `<council>.Definition` for definitions and a creed-slug anchor for the creeds, and `source.is_confessional_text = true`. Each creed registers a distinct `source.work_id` (for example `niceno-constantinopolitan-creed`, `chalcedon-definition`) so the four creeds fan out under four `Work` nodes within the shared `patristic` tradition.
+The catalog source `Ecumenical-Creeds` (`ingest/cultural/conciliar.py`, 4 records, record unit `CulturalChunk(creed)`) is `tradition = patristic`, `license_id = public_domain`, `redistribute = true`, scraped from Wikisource and Wikipedia with a live corpus bound of 3 to 20. The adapter emits one chunk per creed for the Apostles' Creed, the Nicene Creed, the Chalcedonian Definition (451), and the Athanasian Creed, with `anchor_id` `<council>.Definition` for definitions and a creed-slug anchor for the creeds, and `source.is_confessional_text = true`. Each creed registers a distinct `source.work_id` under the `conciliar.` namespace (`conciliar.apostles`, `conciliar.nicaea-381`, `conciliar.chalcedon-451`, `conciliar.athanasian`), so the four creeds fan out under exactly four `Work` nodes within the shared `patristic` tradition. The `conciliar.` prefix is the binding contract: each creed is its own `Work`, never one shared `conciliar` Work with four children.
 
 #### Cypher acceptance query
 
 ```cypher
 MATCH (w:Work)-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE c.tradition = 'patristic' AND w.is_confessional_text = true
-  AND c.text CONTAINS 'God'
+  AND w.work_id STARTS WITH 'conciliar.'
 WITH count(DISTINCT w.work_id) AS creed_works, count(c) AS creed_chunks
-WHERE creed_chunks >= 3 AND creed_chunks <= 20
-RETURN creed_works, creed_chunks, creed_works >= 1 AS conciliar_works_ok
+RETURN creed_works, creed_chunks,
+       creed_works = 4 AND creed_chunks >= 3 AND creed_chunks <= 20
+       AS conciliar_works_ok
 ```
 
 #### Edge cases handled
@@ -645,7 +656,7 @@ Magisterial Vatican family CulturalChunk fields:
 
 #### Rule
 
-The catalog source `OCA-Hopko` (`ingest/cultural/oca_hopko.py`, 3 fixture records, record unit `CulturalChunk(orthodox-article)`) is `tradition = eastern-orthodox`, `license_id = OCA-Hopko-estate`, `redistribute = false`, scraped from `oca.org` with a live corpus bound of 40 to 200 leaf articles. The adapter MUST walk the index tree two levels deep to leaf articles (MAX_LEAVES 200, body length at least 400 characters, depth at least 2), emit one chunk per leaf article with `anchor_id` `hopko.orthodox-faith.<volume>.<chapter>.<article>`, `source.work_id = hopko.orthodox-faith`, and `source.is_confessional_text = false` because Hopko's Orthodox Faith is a catechetical exposition rather than a binding confession. Because `redistribute = false`, the redistribute guard persists `text_to_embed` into the stored `text`.
+The catalog source `OCA-Hopko` (`ingest/cultural/oca_hopko.py`, 3 fixture records, record unit `CulturalChunk(orthodox-article)`) is `tradition = eastern-orthodox`, `license_id = OCA-Hopko-estate`, `redistribute = false`, scraped from `oca.org` with a live corpus bound of 40 to 200 leaf articles. The adapter MUST walk the index tree two levels deep to leaf articles (MAX_LEAVES 200, body length at least 400 characters, depth at least 2), emit one chunk per leaf article with `anchor_id` `hopko.orthodox-faith.<volume>.<chapter>.<article>`, `source.work_id = oca-hopko`, and `source.is_confessional_text = false` because Hopko's Orthodox Faith is a catechetical exposition rather than a binding confession. Because `redistribute = false`, the redistribute guard persists `text_to_embed` into the stored `text`.
 
 #### Cypher acceptance query
 
