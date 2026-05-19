@@ -104,3 +104,83 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
    (docs/PHASE_D_CANONICAL_STRONGS_AUDIT.md) confirmed the other 8
    canonical_strongs callers were already guarded, so this class is
    contained. Reversible.
+
+## Phase D.4 verse-key + edge-counts integration (architect, brethren-on-trial)
+
+10. The 9 D.4 / verse-key adapter fixes integrated onto main by
+    cherry-pick, each touching exactly one ingest/lexical adapter,
+    disjoint, no conflicts (origin SHA -> new main SHA):
+    - 2d6fc52 -> 9f008cf stepbible_tvtms.py (emits all 1308 faithful
+      TVTMS rows, was dropping 8; id-disambig)
+    - 704523d -> d5edf37 openbible.py (OPENBIBLE_CROSS_REF resolves all
+      faithful Verse endpoints + two-part range; was 139829/344799)
+    - af75380 -> 281988b etcbc_parallels.py (PARALLEL_OF resolves Verse
+      endpoints, Decision 15; was 0/5914)
+    - ac2c5ff -> 69f8a6b stepbible_tagnt.py (IN_VERSE re-keys to
+      universal Verse.id, was osisID NULL on all NT)
+    - 74b26b0 -> 91d37f2 stepbible_tahot.py (IN_VERSE re-keys to
+      universal Verse.id, Decision 15)
+    - 33c4b58 -> 6436827 theographic.py (MENTIONS re-keys to universal
+      Verse.id, was losing NT mentions)
+    - fa5af7b -> 4e0deef stepbible_proper_nouns.py (NAMED_AT re-keys to
+      universal Verse.id, stops phantom Verse stub creation)
+    - d7d79e2 -> 3c2b179 peshitta.py (IN_VERSE re-keys to universal
+      Verse.id, Decision 15)
+    - 99967a2 -> 2fb96fe coptic_scriptorium.py (IN_VERSE re-keys to
+      universal Verse.id, Decision 15)
+    All faithful, no adapter fudged to a wrong catalog number.
+
+11. ETCBC-parallels [SCHEMA-REVISION] (commit 351d7ee): sources
+    expected_count/min/max 5914 -> 5882, tier A tol 0, record_unit
+    stays parallel_edge. PARALLEL_OF is Verse-to-Verse (crossref.tf
+    node ids are BHSA verse-otype text-fabric nodes, not BhsaWord word
+    slots; FIX-PARALLELS re-keyed endpoints to the canonical Verse
+    node, Decision 15). Faithful single-target edges after the
+    Decision 3 single-comma split (2332 multi-target/non-digit rows
+    quarantined, 5914 single-target) with 32 exact-duplicate directed
+    (source, target) pairs collapsed by the binding idempotent MERGE
+    (contract section 6). Same idempotent-MERGE-collapse class as the
+    Phase D reconciliation set; adapter faithful, NOT changed (the
+    MERGE idempotency was deliberately not weakened to inflate back to
+    5914).
+
+12. edge_counts taxonomy reconciled (commit 351d7ee): every key
+    renamed to the rel-type the committed adapters actually emit and
+    bands re-based to the faithful values per
+    docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 3
+    (HAS_CROSS_REF->CROSS_REF, HAS_LOUW_NIDA_DOMAIN->IN_DOMAIN,
+    HAS_PHRASE->CONTAINS_PHRASE, HAS_VARIANT_UNIT->VARIANT_UNIT_NODE,
+    HAS_READING->ATTESTED_BY, GLOSSES_GREEK_LEMMA->BRIDGES_LXX rebanded
+    to the distinct-pair emit, HAS_CLAUSE->BHSA_CLAUSE_NODE rebanded to
+    the clause-otype node count, IS_PROPER_NOUN->NAMED_AT rebanded to
+    the faithful emit, HAS_PARALLEL->PARALLEL_OF rebanded tol-0-aligned
+    to the reconciled 5882). edge_counts["HAS_SDBH_DOMAIN"] RETIRED
+    entirely: no committed adapter emits any SDBH edge, no Decision
+    contracts it, no schema constraint provisions it; SCHEMA_DECISIONS
+    .md has zero "sdbh" occurrences across all 18 decisions and the
+    catalog backref to Decision 1/2 is unfounded. Under the project
+    authority hierarchy (SCHEMA_DECISIONS = contract, catalog =
+    implementation) an uncontracted catalog edge key is the artifact
+    to retire, not a capability silently dropped (it was never
+    contracted). OWNER-FLAG: the upstream sdbh data genuinely exists
+    (244734 sdbh-non-null morphemes, inside the old band); if an SDBH
+    semantic-domain overlay is wanted in v1 it requires a NEW architect
+    Decision (new node label + constraint + adapter edge emit +
+    verifier + re-ingest). Surfaced for owner, NOT autonomously
+    invented.
+
+13. E1 SURFACED (MUST-ESCALATE, real defect): data/private/stepbible/
+    tvtms.parsed.json is incomplete relative to its own frozen raw
+    upstream Condensed section. The Joel 2:28-32 = Joel 3 Hebrew,
+    Jonah 1:17 = Jonah 2:1, and Deut 12 KJV-Hebrew shift rows exist in
+    the frozen raw TVTMS Condensed section but were dropped by the
+    now-quarantined dead procurement parser when it serialized the
+    artifact. This is a real procurement defect being fixed faithfully
+    in parallel (a producer plus consumer change with per-verse range
+    expansion, not a naive catalog reconcile). Consequently the
+    openbible sources count 344799, the STEPBible-TVTMS sources count
+    1308, and the edge_counts[OPENBIBLE_CROSS_REF] band are HELD (not
+    reconciled in commit 351d7ee) pending the E1 fix and relaunch-5
+    re-D.4 once the true faithful counts are known. Reconciling
+    ETCBC-parallels and the edge_counts taxonomy does not depend on E1
+    and proceeded now.
