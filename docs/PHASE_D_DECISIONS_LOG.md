@@ -184,3 +184,41 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     re-D.4 once the true faithful counts are known. Reconciling
     ETCBC-parallels and the edge_counts taxonomy does not depend on E1
     and proceeded now.
+
+## Phase D.4 reconcile finalization + E1 owner ticket
+
+14. OpenBible-cross-refs reconciled 344799 -> 342130 ([SCHEMA-REVISION],
+    this commit). Faithful given the contracted TVTMS artifact
+    tvtms.parsed.json (pinned at 1308 by expected_counts.json Tier-A,
+    data_inventory_catalog.json, and the adapter docstring). FIX-OPENBIBLE
+    (Verse.id key + range-collapse) recovers 139829 -> 342130; the 2669
+    residual are genuine KJV-Hebrew versification shifts (Joel 2:28-32,
+    Jonah 1:17, Deut 12:32 class) ABSENT from the contracted artifact
+    because the quarantined procurement parser dropped the raw upstream
+    Condensed-section range rows. openbible faithfully quarantines them,
+    never fabricates. STEPBible-TVTMS stays faithful at 1308 (FIX-TVTMS
+    makes the adapter emit the full contracted artifact incl the 8
+    duplicate-disambiguated rows).
+
+    OWNER TICKET E1 (non-blocking, surfaced with byte evidence in
+    docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1 and the E1 STOP
+    report): re-procuring/parsing the COMPLETE real upstream TVTMS
+    Condensed section (recovering ~2669 openbible cross-refs toward
+    344799, and improving peshitta/coptic/tsk versification projection)
+    is an irreducibly multi-file producer+consumer change
+    (stepbible_tvtms.py re-parse + openbible/tsk per-verse range
+    expansion + expected_counts.json + data_inventory_catalog.json +
+    the verifier EXPECTED_RULE_COUNT) requiring two owner rulings:
+    (a) the committed-artifact-vs-raw-source contract, and (b) the
+    range / Absent / NoVerse / Psalm-Title / multi-ref row-scope and
+    per-verse-expansion semantics (the versification backbone - any
+    autonomous guess silently mis-maps cross-version refs). Deferred to
+    owner decision; does NOT block Phase D.4 or the reseed.
+
+    OWNER TICKET E2 (non-blocking): HAS_SDBH_DOMAIN retired from the
+    catalog (uncontracted vs SCHEMA_DECISIONS, which has zero SDBH). The
+    MACULA-Hebrew sdbh data exists (~244734 non-empty, rate 0.514). If
+    an SDBH semantic-domain overlay is wanted in v1 it requires a NEW
+    architect Decision (Decision + SdbhDomain label + constraint +
+    macula_hebrew emit + verifier + re-ingest); not autonomously
+    invented per caste discipline.
