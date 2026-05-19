@@ -13,10 +13,10 @@ Caste table (mirrors RESEED_PLAN section "Verifier-caste architecture"):
     ``docs/CULTURAL_SCHEMA_DECISIONS.md``,
     ``docs/cultural_data_inventory_catalog.json``,
     ``docs/ARCHITECTURE.md``, ``docs/implementation_phases/**``,
-    ``docs/PHASE_D_*.md`` (Phase D governance, ledger and analysis
-    docs, generalizes the single literal
-    ``docs/PHASE_D_CATALOG_RECONCILIATION.md`` so worktree agents that
-    reset to main tip can see the master ledger and audits),
+    ``docs/PHASE_*.md`` (Phase governance, ledger and analysis
+    docs, generalizes the earlier ``docs/PHASE_D_*.md`` wildcard so
+    worktree agents that reset to main tip can see the master ledger,
+    audits and the Phase F/EFH analysis docs),
     ``graph/lexical.cypher``, ``graph/cultural.cypher``,
     ``tools/expected_counts.json``. On a ``[SCHEMA-REVISION]``-tagged
     commit ONLY, also ``tools/expected_counts.baseline`` (its atomic
@@ -113,17 +113,18 @@ CASTE_RULES: dict[str, CasteRule] = {
             "docs/ARCHITECTURE.md",
             "docs/implementation_phases/*.md",
             "docs/phase_prompts/*.md",
-            # Phase D governance, master ledger and analysis docs.
-            # Generalizes the single literal
-            # docs/PHASE_D_CATALOG_RECONCILIATION.md added in 34180a7
-            # (byte-derived evidence backing [SCHEMA-REVISION]s ceb3898,
-            # 01e09c6) to the docs/PHASE_D_*.md family so the untracked
-            # master ledger and audit docs become durable and visible to
-            # worktree agents that reset to main tip. Scoped to the
-            # PHASE_D_ prefix, not a broad docs/*.md wildcard, to keep
-            # the architect docs scope tightly enumerated. Follows the
-            # b66831c / 34180a7 tightly scoped governance precedent.
-            "docs/PHASE_D_*.md",
+            # Phase governance, master ledger and analysis docs.
+            # Generalizes the earlier docs/PHASE_D_*.md wildcard (itself
+            # added in 34180a7 to broaden the single literal
+            # docs/PHASE_D_CATALOG_RECONCILIATION.md; byte-derived
+            # evidence backing [SCHEMA-REVISION]s ceb3898, 01e09c6) to
+            # the docs/PHASE_*.md family so the untracked Phase D ledger
+            # plus the Phase F / EFH analysis docs become durable and
+            # visible to worktree agents that reset to main tip. Scoped
+            # to the PHASE_ prefix, not a broad docs/*.md wildcard, to
+            # keep the architect docs scope tightly enumerated. Follows
+            # the b66831c / 34180a7 tightly scoped governance precedent.
+            "docs/PHASE_*.md",
             "graph/lexical.cypher",
             "graph/cultural.cypher",
             "tools/expected_counts.json",
