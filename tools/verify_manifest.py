@@ -58,6 +58,35 @@ class ClaimResult:
     detail: str = ""
 
 
+# Wall-clock budget for a single ``pytest`` claim subprocess. The Phase H
+# h2_adapter_pytest claim legitimately runs a ~972-item text-fabric adapter
+# coverage suite that takes ~70 minutes wall, so the prior hardcoded 600s
+# killed an honest, passing suite mid-run. This budget comfortably exceeds
+# the real runtime with margin (90 min). It is NOT a sampling/shrinking of
+# the suite; the full selector is still executed unchanged. An env override
+# is allowed for operators who need a longer or shorter ceiling without a
+# code edit; it falls back to the constant on any unset/invalid value.
+PYTEST_CLAIM_TIMEOUT_SECONDS = 5400
+
+
+def _pytest_claim_timeout() -> int:
+    raw = os.environ.get("VERIFY_MANIFEST_PYTEST_TIMEOUT")
+    if raw is None:
+        return PYTEST_CLAIM_TIMEOUT_SECONDS
+    try:
+        val = int(raw)
+    except (TypeError, ValueError):
+        return PYTEST_CLAIM_TIMEOUT_SECONDS
+    return val if val > 0 else PYTEST_CLAIM_TIMEOUT_SECONDS
+
+
+# Non-zero sentinel exit code recorded when a claim subprocess exceeds its
+# wall-clock budget. It is deliberately not a normal pytest/script exit code
+# so it always drives the standard diff path to a claim-level mismatch
+# instead of crashing the whole audit with an uncaught TimeoutExpired.
+CLAIM_TIMEOUT_EXIT_CODE = 124
+
+
 def _sha256_bytes(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
@@ -73,10 +102,26 @@ def run_pytest_claim(selector: str, repo: Path) -> dict[str, Any]:
     # quoted paths and yields a one-element list for a single path, so
     # single-path selectors behave exactly as before.
     selector_args = shlex.split(selector)
-    proc = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q", *selector_args],
-        cwd=str(repo), capture_output=True, text=True, timeout=600,
-    )
+    budget = _pytest_claim_timeout()
+    try:
+        proc = subprocess.run(
+            [sys.executable, "-m", "pytest", "-q", *selector_args],
+            cwd=str(repo), capture_output=True, text=True, timeout=budget,
+        )
+    except subprocess.TimeoutExpired as exc:
+        # An over-budget pytest claim is a CLAIM-LEVEL failure, not an
+        # uncaught exception that aborts the entire audit before the diff
+        # step. Emit the same observed-dict shape (exit_code / stdout_sha256
+        # / stderr_tail) with a non-zero sentinel so evaluate_claim and
+        # audit_manifest route it through the normal mismatch path.
+        partial = exc.stdout or b""
+        if isinstance(partial, str):
+            partial = partial.encode("utf-8")
+        return {
+            "exit_code": CLAIM_TIMEOUT_EXIT_CODE,
+            "stdout_sha256": _sha256_bytes(partial),
+            "stderr_tail": f"pytest claim timed out after {budget}s",
+        }
     return {
         "exit_code": proc.returncode,
         "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8")),
@@ -86,9 +131,23 @@ def run_pytest_claim(selector: str, repo: Path) -> dict[str, Any]:
 
 def run_script_claim(argv: list[str], repo: Path) -> dict[str, Any]:
     cmd = [sys.executable, *argv] if argv and argv[0].endswith(".py") else argv
-    proc = subprocess.run(
-        cmd, cwd=str(repo), capture_output=True, text=True, timeout=900,
-    )
+    try:
+        proc = subprocess.run(
+            cmd, cwd=str(repo), capture_output=True, text=True, timeout=900,
+        )
+    except subprocess.TimeoutExpired as exc:
+        # Same defensive contract as run_pytest_claim: an over-budget script
+        # claim degrades to a claim-level mismatch via the sentinel exit
+        # code rather than crashing the whole audit with an uncaught
+        # TimeoutExpired before the diff step.
+        partial = exc.stdout or b""
+        if isinstance(partial, str):
+            partial = partial.encode("utf-8")
+        return {
+            "exit_code": CLAIM_TIMEOUT_EXIT_CODE,
+            "stdout_sha256": _sha256_bytes(partial),
+            "stderr_tail": "script claim timed out after 900s",
+        }
     return {
         "exit_code": proc.returncode,
         "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8")),
@@ -319,6 +378,68 @@ def _self_test() -> int:
         out2 = audit_manifest(m_path, td_path)
         if out2.all_match:
             print("self-test FAIL: bad expected accepted", file=sys.stderr)
+            return 1
+
+        # An over-budget pytest claim must degrade to a CLAIM-LEVEL
+        # mismatch (sentinel exit code != expected 0) and the audit must
+        # still proceed to diff every claim, never raising an uncaught
+        # subprocess.TimeoutExpired. Force a tiny budget via the env
+        # override against a deliberately slow test.
+        (td_path / "test_slow.py").write_text(
+            "import time\n\n\ndef test_slow():\n    time.sleep(30)\n",
+            encoding="utf-8",
+        )
+        timeout_manifest = {
+            "phase": "Z.1-self-test-timeout",
+            "claims": [
+                {
+                    "id": "fixture_sha",
+                    "description": "fast claim still evaluated alongside",
+                    "check_kind": "file_sha",
+                    "path": str(target.relative_to(td_path)),
+                    "expected": _sha256_bytes(b"hello world"),
+                    "actual_field": "sha256",
+                },
+                {
+                    "id": "slow_pytest",
+                    "description": "over-budget pytest claim -> mismatch",
+                    "check_kind": "pytest",
+                    "selector": "test_slow.py",
+                    "expected": 0,
+                    "actual_field": "exit_code",
+                },
+            ],
+        }
+        m_path.write_text(json.dumps(timeout_manifest), encoding="utf-8")
+        prev = os.environ.get("VERIFY_MANIFEST_PYTEST_TIMEOUT")
+        os.environ["VERIFY_MANIFEST_PYTEST_TIMEOUT"] = "1"
+        try:
+            out3 = audit_manifest(m_path, td_path)
+        except subprocess.TimeoutExpired:
+            print("self-test FAIL: TimeoutExpired escaped to audit",
+                  file=sys.stderr)
+            return 1
+        finally:
+            if prev is None:
+                os.environ.pop("VERIFY_MANIFEST_PYTEST_TIMEOUT", None)
+            else:
+                os.environ["VERIFY_MANIFEST_PYTEST_TIMEOUT"] = prev
+        by_id = {c.id: c for c in out3.claims}
+        if len(out3.claims) != 2 or "slow_pytest" not in by_id:
+            print(f"self-test FAIL: audit did not diff all claims after "
+                  f"timeout: {out3.claims}", file=sys.stderr)
+            return 1
+        if by_id["slow_pytest"].matches:
+            print("self-test FAIL: timed-out claim reported as match",
+                  file=sys.stderr)
+            return 1
+        if by_id["slow_pytest"].observed.get("exit_code") != CLAIM_TIMEOUT_EXIT_CODE:
+            print("self-test FAIL: timed-out claim missing sentinel exit",
+                  file=sys.stderr)
+            return 1
+        if not by_id["fixture_sha"].matches:
+            print("self-test FAIL: fast claim broken by timeout path",
+                  file=sys.stderr)
             return 1
     print("self-test OK")
     return 0
