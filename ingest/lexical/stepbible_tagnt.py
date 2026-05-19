@@ -38,10 +38,19 @@ Strong identifier carried in the dstrongs_grammar column. The edge has
 no properties beyond its rel_type; the join key is the GreekLemma node
 property id, which MACULA-Greek and MorphGNT-SBLGNT register in Group 1.
 
-IN_VERSE: TaggedToken to Verse, keyed by the OSIS reference derived
-from the upstream word_and_type reference column. The edge has no
-properties; the join key is the Verse node property osisID, populated
-by MorphGNT-SBLGNT for NT verses per Decision 15.
+IN_VERSE: TaggedToken to Verse, keyed by the universal Verse node
+property id (Decision 15 Option C), constructed as the literal string
+'verse:' + the canonical OSIS reference derived from the upstream
+word_and_type reference column. The edge has no properties. The join
+key matches the Verse.id the only NT Verse producer (MorphGNT-SBLGNT,
+morphgnt.py:394) and the OT producer (OSHB, oshb.py:648) both write as
+the f-string 'verse:' + osisRef. The earlier osisID join key was a
+systemic defect: MorphGNT-SBLGNT writes no osisID property, so every
+NT Verse.osisID is NULL and the prior join produced zero IN_VERSE
+edges on the live graph. The STEPBible-TAGNT book abbreviation (e.g.
+Mat, Jhn, 1Co) is remapped to the producer-written canonical OSIS book
+(Matt, John, 1Cor: MorphGNT OSIS_BOOKS, morphgnt.py:238-245) so the
+constructed id is byte-identical to the producer-written Verse.id.
 
 Stable id
 =========
@@ -160,7 +169,8 @@ Dependencies
 ============
 Verse nodes (from Group 1 MorphGNT-SBLGNT for NT verses per Decision
 15) MUST exist before this adapter runs so the IN_VERSE join resolves
-on Verse.osisID. GreekLemma nodes (from Group 1 MACULA-Greek-Nestle1904
+on the universal Verse.id ('verse:' + osisRef). GreekLemma nodes (from
+Group 1 MACULA-Greek-Nestle1904
 and MACULA-Greek-SBLGNT per Decision 2) MUST exist before this adapter
 runs so the INSTANCE_OF join resolves on GreekLemma.id. The wipe
 contract in tools/wipe_lexical.py guarantees an empty store at the
@@ -199,7 +209,8 @@ byte-identical set of MERGE writes because every TaggedToken.id is a
 pure function of the upstream osisRef and per-verse position, every
 INSTANCE_OF edge resolves to a GreekLemma keyed on a deterministic
 Strong identifier, and every IN_VERSE edge resolves to a Verse keyed
-on a deterministic osisID. The Phase D triangle test recomputes the
+on the deterministic 'verse:' + canonical-osisRef id. The Phase D
+triangle test recomputes the
 per-row SHA-256 hash twice over identical inputs and asserts the
 sorted hash list matches byte-for-byte across the two runs.
 
@@ -249,12 +260,62 @@ _MERGE_INSTANCE_OF = (
     "(b:`GreekLemma` {strong: row.to_id}) "
     "MERGE (a)-[r:`INSTANCE_OF`]->(b) RETURN count(r) AS edges"
 )
+# Decision 15 Option C re-key. MorphGNT-SBLGNT is the only NT Verse
+# producer (morphgnt.py:392-399, _verse_node_row) and OSHB is the only
+# OT one (oshb.py:648, verse_id), and BOTH construct the Verse endpoint
+# key as the literal f-string `'verse:' + osisRef`. MorphGNT writes NO
+# `osisID` property at all (morphgnt.py:393-398 has no osisID key), so
+# every NT `Verse.osisID` is NULL (7927/7927). Every tagnt verse is NT,
+# so the prior `MATCH (b:Verse {osisID: row.to_id})` bound zero Verse
+# endpoints and landed 0 IN_VERSE edges on the live graph. The faithful
+# repair (Decision 15, the universal constraint-backed `Verse.id` key)
+# targets `Verse.id = 'verse:' + <canonical OSIS ref>`. The canonical
+# ref the producers write uses the SBL/OSIS book IDs in MorphGNT's
+# OSIS_BOOKS tuple (morphgnt.py:238-245); STEPBible-TAGNT carries its
+# own book abbreviations (Mat/Mrk/Luk/Jhn/Act/1Co/...), so the row
+# builder remaps the book token to that canonical set deterministically
+# before joining. NodeUniqueIndexSeek on the constraint-backed verse_id
+# key keeps the join O(n). No Verse stub is created: a row whose
+# remapped id has no existing Verse simply emits no IN_VERSE edge.
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
     "MATCH (a:`TaggedToken` {id: row.from_id}), "
-    "(b:`Verse` {osisID: row.to_id}) "
+    "(b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:`IN_VERSE`]->(b) RETURN count(r) AS edges"
 )
+
+# Canonical NT OSIS book IDs exactly as the Verse producers persist
+# them: MorphGNT-SBLGNT OSIS_BOOKS (ingest/lexical/morphgnt.py:238-245)
+# in upstream MorphGNT book order. STEPBible-TAGNT keys the left of
+# every TAGNT* row's Word & Type column with its own three-letter book
+# abbreviation; the mapping below sends each to the producer-written
+# canonical form so `'verse:' + ref` is byte-identical to the
+# producer-written Verse.id (morphgnt.py:394, oshb.py:648).
+_TAGNT_BOOK_TO_OSIS = {
+    "Mat": "Matt", "Mrk": "Mark", "Luk": "Luke", "Jhn": "John",
+    "Act": "Acts", "Rom": "Rom", "1Co": "1Cor", "2Co": "2Cor",
+    "Gal": "Gal", "Eph": "Eph", "Php": "Phil", "Col": "Col",
+    "1Th": "1Thess", "2Th": "2Thess", "1Ti": "1Tim", "2Ti": "2Tim",
+    "Tit": "Titus", "Phm": "Phlm", "Heb": "Heb", "Jas": "Jas",
+    "1Pe": "1Pet", "2Pe": "2Pet", "1Jn": "1John", "2Jn": "2John",
+    "3Jn": "3John", "Jud": "Jude", "Rev": "Rev",
+}
+
+
+def _verse_id_from_osis_ref(osis_ref: str) -> str | None:
+    """Build the producer-written Verse.id ('verse:' + canonical ref).
+
+    Returns None when the TAGNT book token has no canonical OSIS
+    mapping, so the caller faithfully omits the IN_VERSE edge rather
+    than fabricating a Verse stub or joining on an unresolved key.
+    """
+    if not osis_ref:
+        return None
+    parts = osis_ref.split(".")
+    canonical_book = _TAGNT_BOOK_TO_OSIS.get(parts[0])
+    if canonical_book is None:
+        return None
+    return "verse:" + ".".join([canonical_book, *parts[1:]])
 
 
 def _normalise(value: str) -> str:
@@ -403,8 +464,9 @@ def _merge_instance_edges(session: Any, tokens: list[dict[str, Any]]) -> int:
 
 def _merge_in_verse_edges(session: Any, tokens: list[dict[str, Any]]) -> int:
     edge_rows = [
-        {"from_id": t["id"], "to_id": t["osis_ref"]}
-        for t in tokens if t["osis_ref"]
+        {"from_id": t["id"], "to_id": verse_id}
+        for t in tokens
+        if (verse_id := _verse_id_from_osis_ref(t["osis_ref"])) is not None
     ]
     total = 0
     for start in range(0, len(edge_rows), BATCH_SIZE):
