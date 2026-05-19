@@ -225,9 +225,20 @@ _MERGE_SYRIAC = (
 _MERGE_IN_VERSE = (
     "UNWIND $rows AS row "
     "MATCH (a:`SyriacWord` {id: row.from_id}), "
-    "(b:`Verse` {osisID: row.to_id}) "
+    "(b:`Verse` {id: row.to_id}) "
     "MERGE (a)-[r:IN_VERSE]->(b) RETURN count(r) AS edges"
 )
+# Phase D VERSE-KEY-AUDIT (PHASE_D_JOINKEY_AUDIT_B.md D7,
+# PHASE_D_EDGE_PERF_MANIFEST.md sec 20): the IN_VERSE Verse endpoint was
+# keyed on `Verse.osisID`. Producer Verse nodes are written only by the
+# OSHB adapter (oshb.py:648 `verse_id = f"verse:{osis_ref}"`) and the
+# MorphGNT-SBLGNT adapter (morphgnt.py:394 `"id": f"verse:{osis_ref}"`);
+# the universal, constraint-backed verse key per Decision 15 is
+# `Verse.id = "verse:" + <osisRef>`. MorphGNT (the NT producer the
+# Peshitta joins to) writes NO `osisID` property at all, so the old key
+# matched zero NT verses. Re-keyed to the universal `Verse.id`, with the
+# `to_id` value built byte-identically to the producers below.
+_VERSE_ID_PREFIX = "verse:"
 
 _PLACEHOLDER_ROWS: tuple[dict[str, Any], ...] = (
     {
@@ -374,9 +385,25 @@ def _merge_syriac_words(session: Any, rows: list[dict[str, Any]]) -> int:
     return total
 
 
+def _verse_node_id(verse_ref: str) -> str:
+    """Build the universal Verse.id byte-identical to the OSHB and MorphGNT
+    producers (oshb.py:648, morphgnt.py:394: ``f"verse:{osis_ref}"``).
+
+    ``verse_ref`` is the canonical OSIS reference per Decision 7 (the
+    Syriac verse identifier projected through STEPBible-TVTMS to OSIS);
+    the placeholder slice already carries OSIS-form refs (Matt.6.9,
+    John.1.1, Rom.1.1) so they resolve to the producer Verse.id format.
+    """
+    return f"{_VERSE_ID_PREFIX}{verse_ref}"
+
+
 def _merge_in_verse_edges(session: Any, rows: list[dict[str, Any]]) -> int:
+    # Rows whose verse_ref is unresolvable (empty after the Decision 7
+    # TVTMS projection) are faithfully omitted from IN_VERSE: no edge and
+    # no Verse stub is emitted, because Decision 15 binds Verse creation
+    # to the OSHB and MorphGNT-SBLGNT producers only.
     edge_rows = [
-        {"from_id": row["id"], "to_id": row["verse_ref"]}
+        {"from_id": row["id"], "to_id": _verse_node_id(row["verse_ref"])}
         for row in rows
         if row.get("verse_ref")
     ]
