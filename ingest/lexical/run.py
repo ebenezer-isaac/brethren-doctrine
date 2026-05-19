@@ -2,6 +2,12 @@
 
 Dispatches per-dataset adapters in dependency order. Each adapter is
 idempotent (MERGE-based) so re-runs are safe.
+
+This CLI does NOT perform count verification. The single authoritative
+per-source count gate is ``tools/expected_counts.json`` enforced by the
+Phase D.4 count-gate auditor via the acceptance Cyphers in
+``docs/implementation_phases/phase_02_lexical_ingest.md``. run.py only
+dispatches adapters and prints each adapter's returned JSON counts.
 """
 
 from __future__ import annotations
@@ -10,7 +16,7 @@ import argparse
 import json
 from pathlib import Path
 
-from ingest.lexical._common import Settings, assert_counts_match
+from ingest.lexical._common import Settings
 from ingest.lexical.bhsa import ingest_bhsa
 from ingest.lexical.coptic_scriptorium import ingest_coptic_scriptorium
 from ingest.lexical.etcbc_parallels import ingest_etcbc_parallels
@@ -117,28 +123,6 @@ def _run_one(name: str, settings: Settings) -> dict[str, int]:
     raise ValueError(f"unknown dataset: {name}")
 
 
-EXPECTED_COUNTS: dict[str, dict[str, tuple[int, int]]] = {
-    "macula_hebrew": {"Word": (300000, 320000)},
-    "macula_greek": {"Word": (130000, 145000)},
-    "morphgnt": {"Word": (130000, 145000)},
-    "openbible": {"CrossRef": (600000, 620000)},
-    "tsk": {"CrossRef": (590000, 610000)},
-    "theographic": {"Person": (3000, 3100), "Place": (1200, 1700)},
-}
-
-
-def _verify(name: str, counts: dict[str, int]) -> bool:
-    expected = EXPECTED_COUNTS.get(name)
-    if not expected:
-        return True
-    try:
-        assert_counts_match(counts, expected)
-        return True
-    except AssertionError as e:
-        print(f"VERIFY FAIL [{name}]: {e}")
-        return False
-
-
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", default="all", help="all | comma-separated list")
@@ -213,7 +197,6 @@ def main() -> int:
         counts = _run_one(name, settings)
         all_counts[name] = counts
         print(json.dumps(counts, indent=2))
-        _verify(name, counts)
     return 0
 
 
