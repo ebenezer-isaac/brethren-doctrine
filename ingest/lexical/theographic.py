@@ -304,9 +304,18 @@ MENTIONS (Decision 10)
     src: Person / Place / Period / Event / Group / Tribe
     dst: Verse
     properties:          (none)
-    join key:            entity.verses list element is the dst Verse
-                         osisID. The Verse nodes are emitted by Group 1
-                         (text floor) per the dispatch order in
+    join key:            entity.verses list element (resolved upstream
+                         osisRef) maps to the dst Verse via the
+                         universal constraint-backed key
+                         Verse.id = 'verse:' + osisRef minted
+                         byte-identical by every text-floor producer
+                         (oshb.py line 648, morphgnt.py line 394) per
+                         docs/PHASE_D_VERSEKEY_AUDIT.md and Decision 15.
+                         Verse.osisID is NULL on all NT verses so it is
+                         NOT a usable join key; the prior osisID key
+                         lost every NT mention. The Verse nodes are
+                         emitted by Group 1 (text floor) per the
+                         dispatch order in
                          docs/implementation_phases/phase_02_lexical_ingest.md;
                          this adapter only MERGEs the edge from the
                          entity to the existing Verse, never creating
@@ -334,7 +343,9 @@ Dependency on Group 1
 This adapter depends on the Verse nodes emitted by the text-floor
 group in docs/implementation_phases/phase_02_lexical_ingest.md Group 1
 (OSHB-morphology, MACULA-Greek, MorphGNT-SBLGNT). The MENTIONS edge
-join is keyed by entity.verses element against Verse.osisID; if Group
+join is keyed by 'verse:' + entity.verses osisRef element against the
+universal Verse.id (Decision 15, docs/PHASE_D_VERSEKEY_AUDIT.md), not
+Verse.osisID which is NULL on every NT verse; if Group
 1 has not run, the MENTIONS edges remain unwritten but the entity
 nodes still merge under their entity_id uniqueness constraints. The
 dispatch order in phase_02_lexical_ingest.md places this adapter in
@@ -346,8 +357,9 @@ Idempotency
 ===========
 Every node above is MERGEd by its stable entity_id property (slug from
 the upstream filename) or by Source.slug for the Source node. Every
-edge is MERGEd on the (src.entity_id, dst.osisID, rel_type) tuple for
-MENTIONS, or (src.entity_id, Source.slug, 'FROM_EDITION') for
+edge is MERGEd on the (src.entity_id, dst.id, rel_type) tuple for
+MENTIONS (dst.id = 'verse:' + osisRef, the universal Verse key per
+Decision 15), or (src.entity_id, Source.slug, 'FROM_EDITION') for
 FROM_EDITION. Re-running this adapter over identical Theographic input
 bytes produces zero new nodes and zero new edges. The
 graph/lexical.cypher uniqueness constraints person_id, place_id,
@@ -536,17 +548,39 @@ _MERGE_NODE_TEMPLATE = (
 # fix tags every edge row with its source label at the build site (the
 # builder always knows the entity type) and dispatches one single-label
 # template per label so the planner uses NodeUniqueIndexSeek on the
-# matching *_id constraint. The to-side (Verse.osisID / Source.slug) is
-# already labeled and constraint-backed (verse_osisID / source_slug). The
+# matching *_id constraint. The to-side (Verse.id / Source.slug) is
+# already labeled and constraint-backed (verse_id / source_slug). The
 # six per-label row subsets partition the prior flat row list exactly
 # (every row carried exactly one source label), so the union of the six
 # dispatched MATCHes is the identical edge set: no edge dropped, no edge
 # duplicated, same from_id/to_id/slug/rel_type/direction/count.
 _FROM_LABELS = ("Person", "Place", "Period", "Event", "Group", "Tribe")
+# VERSE-KEY-AUDIT (docs/PHASE_D_VERSEKEY_AUDIT.md, Decision 15): the
+# universal Verse key is the constraint-backed `Verse.id = 'verse:' +
+# osisRef` minted byte-identical by every text-floor producer
+# (ingest/lexical/oshb.py line 648 `verse_id = f"verse:{osis_ref}"`,
+# ingest/lexical/morphgnt.py line 394 `"id": f"verse:{osis_ref}"`).
+# `Verse.osisID` is populated only on OT verses (oshb.py copies the
+# OSHB osisID attribute) and is NULL on all 7927 NT verses (the
+# MorphGNT/MACULA Greek producers never write osisID), so the prior
+# MENTIONS endpoint key `{osisID: row.to_id}` resolved to ZERO for
+# every NT verse and silently lost every NT mention. The to_id this
+# adapter builds is the upstream `fields.osisRef` resolved verbatim by
+# `_resolve_verses` (Theographic ships canonical SBL OSIS, e.g.
+# 'Gen.1.1', 'John.3.16', 'Matt.1.7', '3John.1.1', byte-identical book
+# codes and unpadded chapter/verse to the producers' `osis_ref`), so
+# 'verse:' + row.to_id is the exact producer Verse.id with no
+# book-scheme remapping. The `verse_id` uniqueness constraint
+# (graph/lexical.cypher) backs a NodeUniqueIndexSeek on the Verse
+# endpoint, and an osisRef with no Verse node (Theographic prose can
+# cite a verse outside the text floor) resolves nothing under the
+# inner MATCH so the MERGE never fires: the MENTIONS edge is faithfully
+# omitted with no Verse stub, exactly as the Person projection
+# unresolved-reference rule requires.
 _MERGE_MENTIONS_TEMPLATE = (
     "UNWIND $rows AS row "
     "MATCH (a:`{label}` {{entity_id: row.from_id}}), "
-    "(b:`Verse` {{osisID: row.to_id}}) "
+    "(b:`Verse` {{id: 'verse:' + row.to_id}}) "
     "MERGE (a)-[r:`MENTIONS`]->(b) RETURN count(r) AS edges"
 )
 _MERGE_FROM_EDITION_TEMPLATE = (
