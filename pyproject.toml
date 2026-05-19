@@ -1,5 +1,5 @@
 [project]
-name = "brethren-doctrine"
+name = "christian-doctrine"
 version = "0.1.0"
 description = "Manuscript-anchored biblical doctrine engine"
 readme = "README.md"
