@@ -16,7 +16,7 @@ from typing import Any
 
 from neo4j import GraphDatabase
 from qdrant_client import QdrantClient
-from qdrant_client.models import PointStruct
+from qdrant_client.models import Distance, PointStruct, VectorParams
 
 from embeddings.bootstrap import VOYAGE_MODEL, VOYAGE_OUTPUT_DIMENSION
 
@@ -130,6 +130,37 @@ def _iter_lemmas(session: Any, limit: int) -> list[dict[str, Any]]:
     return [dict(r) for r in rows]
 
 
+def _recreate_collection(qclient: Any, collection: str) -> None:
+    """Drop and recreate exactly ``collection`` before any point is written.
+
+    Deterministic-rebuild rationale: the embed run upserts points keyed by
+    ``uuid5(NS, strong)``. Upsert never deletes. Across the Phase D graph
+    rebuilds the lexical topology changed, so Strong values that existed in
+    a prior topology but not the current one left orphaned vector points
+    behind (the audit found lex_col carrying 2801 stale textless shells
+    absent from the current graph). Recreating the collection here makes
+    the phase deterministic and idempotent: after a run lex_col mirrors
+    EXACTLY the current graph's embeddable Strong set, with zero stale
+    points, so two consecutive full runs on the same frozen graph yield the
+    same point ids and the same points_count. This drop is scoped strictly
+    to the collection named by ``--collection`` (default lex_col); no other
+    collection is read or touched. Vector config is held identical to
+    embeddings.bootstrap (named vector "dense", size VOYAGE_OUTPUT_DIMENSION
+    == 2048, COSINE distance) so retrieval semantics are unchanged.
+    """
+    existing = {c.name for c in qclient.get_collections().collections}
+    if collection in existing:
+        qclient.delete_collection(collection_name=collection)
+    qclient.create_collection(
+        collection_name=collection,
+        vectors_config={
+            "dense": VectorParams(
+                size=VOYAGE_OUTPUT_DIMENSION, distance=Distance.COSINE
+            )
+        },
+    )
+
+
 def _embed_batch(voyage_client: Any, texts: list[str]) -> list[list[float]] | None:
     retries = 0
     while True:
@@ -179,6 +210,12 @@ def main(argv: list[str] | None = None) -> int:
 
     voyage_client = voyageai.Client(api_key=voyage_api_key)  # type: ignore[attr-defined]
     qclient = QdrantClient(url=qdrant_url)
+
+    # Rebuild the target collection BEFORE embedding so the run is
+    # deterministic and idempotent: lex_col ends mirroring exactly the
+    # current graph's embeddable Strong set, eliminating cross-rebuild
+    # stale-point accumulation. Scoped to args.collection only.
+    _recreate_collection(qclient, args.collection)
 
     driver = GraphDatabase.driver(
         os.environ["NEO4J_LEXICAL_URI"],
