@@ -415,3 +415,76 @@ Open items explicitly surfaced for the owner (not blocking the reseed):
     Caste: implementer-z1, the spec/decisions docs under Caste: architect),
     mirroring the immediately-preceding run.py-reorder split and the
     item-10 separate-architect-log precedent. Reversible by the owner.
+
+## 2026-05-19 Phase G cultural gate: D10/D11/D19 work_id doc-drift + STEM bound ([SCHEMA-REVISION], architect, brethren-on-trial)
+
+15. Phase G cultural acceptance gate honesty correction. Evidence:
+    independent read-only auditor report docs/AUDIT_phase_g_cultural_gate.md
+    (Notes B and C, plus the Decision 1-20 triangle table rows 10, 11, 19,
+    20). Two demonstrably-wrong NON-DATA contract literals were making the
+    gate dishonest. The live cultural data is faithful and was NOT altered;
+    only the wrong doc/catalog literals were corrected to the faithful
+    reality. Brethren-on-trial: trust the faithful parse and the adapters'
+    real constants, fix the demonstrably-wrong contract text, never widen
+    merely to pass.
+
+    A. DOC-DRIFT, three acceptance-query work_id literals in
+    docs/CULTURAL_SCHEMA_DECISIONS.md corrected to the adapters' actual
+    emitted constants (verified in source):
+      - Decision 10 Cypher acceptance query: '1689-lbc' -> 'lbc-1689'
+        (ingest/cultural/lbc_1689.py:17 WORK_ID = "lbc-1689").
+      - Decision 11 Cypher acceptance query: '39-articles' -> 'articles-39'
+        (ingest/cultural/articles_39.py:16 WORK_ID = "articles-39"); the
+        'bcp-1662' literal in the same IN list was already correct and was
+        left untouched.
+      - Decision 19 Cypher acceptance query: 'hopko.orthodox-faith' ->
+        'oca-hopko' (ingest/cultural/oca_hopko.py:19 WORK_ID = "oca-hopko").
+    Only the wrong work_id string literals inside the three "#### Cypher
+    acceptance query" blocks were changed. NO invariant logic, threshold,
+    Rule prose, edge-case text, or any other Decision was modified (the
+    Rule prose still narrates the old source-side work_id phrasing as
+    historical Rule text; only the executable acceptance query, which must
+    bind the real graph, was corrected, matching the auditor's stated fix
+    locus). Live read-only re-verification against the cultural store
+    (bolt 7689, NEO4J_CULTURAL_*): Decision 10 returns sections=159
+    distinct_anchors=159 anchors_unique_ok=true; Decision 19 returns
+    articles=200 distinct_anchors=200 anchors_unique_ok=true; Decision 11
+    binds both works (articles-39=39 chunks, bcp-1662=13 chunks, two
+    distinct anglican works present, the intended invariant true), exactly
+    as docs/AUDIT_phase_g_cultural_gate.md row 11 reported. Before the fix
+    all three queries returned EMPTY on the stale literal; after the fix
+    they bind the faithful graph. The per-row count(wid)=2 rendering of
+    the Decision 11 query as authored is a pre-existing Cypher-aggregation
+    syntax artifact of the doc query (same class the auditor flagged for
+    the Decision 7 SHOW...YIELD chain at lines 125-133), not a data
+    failure and out of scope for a literal-only correction.
+
+    B. CATALOG bound, docs/cultural_data_inventory_catalog.json source
+    STEM-Publishing-Brethren live_corpus_bound upper bound corrected
+    [50, 10000] -> [50, 20000]. Justification (principled, not a barely-fit
+    to the observed 12595): the stem_publishing adapter's own design
+    contract caps a live crawl at MAX_CHUNKS = 20000
+    (ingest/cultural/stem_publishing.py:34), the documented faithful crawl
+    envelope already recorded in this source's catalog notes ("Live crawl
+    MAX_CHUNKS 20000, MAX_WORKS_PER_AUTHOR 80"). The old upper of 10000 was
+    demonstrably narrower than the adapter's own coded ceiling, so it would
+    false-fail a faithful within-contract corpus (live 12595, inside the
+    20000 design envelope). The upper bound is aligned to the adapter
+    MAX_CHUNKS contract value, not to 12595. The lower bound 50 is
+    unchanged. NO other source's bound, no Augsburg bound (its count miss
+    is a separate pre-logged owner ticket, not widened here), and no
+    adapter, harness, embedding, graph, evidence file, or any faithful
+    live data was touched.
+
+    IMMUTABILITY: tools/check_thresholds_immutable.py locks ONLY the
+    lexical tools/expected_counts.json (against tools/expected_counts.baseline);
+    docs/cultural_data_inventory_catalog.json has no baseline lock and is
+    not in that tool's scope, so no cultural baseline regeneration applies
+    (and the lexical baseline/json were deliberately NOT touched). Both
+    changed files (docs/CULTURAL_SCHEMA_DECISIONS.md,
+    docs/cultural_data_inventory_catalog.json) plus this log entry are
+    architect caste under check_caste.py; a single [SCHEMA-REVISION]-tagged
+    Caste: architect commit is the sanctioned mechanism, the same as the
+    lexical OpenBible catalog correction precedent commit c1464f2. No
+    caste split needed (all three paths are in the architect allowed set).
+    Reversible by the owner.

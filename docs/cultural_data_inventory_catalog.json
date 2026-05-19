@@ -32295,7 +32295,7 @@
       "total_records": 5,
       "live_corpus_bound": [
         50,
-        10000
+        20000
       ],
       "sampling_stride_proof": {
         "n": 5,

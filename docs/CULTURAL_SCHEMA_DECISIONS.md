@@ -323,7 +323,7 @@ The catalog source `LBC-1689` (`ingest/cultural/lbc_1689.py`, 20 fixture records
 #### Cypher acceptance query
 
 ```cypher
-MATCH (w:Work {work_id: '1689-lbc'})-[:HAS_CHUNK]->(c:CulturalChunk)
+MATCH (w:Work {work_id: 'lbc-1689'})-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE c.tradition = 'reformed' AND c.anchor_id STARTS WITH '1689.'
 WITH count(c) AS sections, count(DISTINCT c.anchor_id) AS distinct_anchors
 WHERE sections >= 1
@@ -360,7 +360,7 @@ The catalog sources `Thirty-Nine-Articles` (`ingest/cultural/articles_39.py`, 39
 
 ```cypher
 MATCH (w:Work)-[:HAS_CHUNK]->(c:CulturalChunk)
-WHERE w.work_id IN ['39-articles','bcp-1662'] AND c.tradition = 'anglican'
+WHERE w.work_id IN ['articles-39','bcp-1662'] AND c.tradition = 'anglican'
 WITH w.work_id AS wid, count(c) AS chunks
 WHERE chunks >= 1
 RETURN wid, chunks, count(wid) = 2 AS two_anglican_works_ok
@@ -650,7 +650,7 @@ The catalog source `OCA-Hopko` (`ingest/cultural/oca_hopko.py`, 3 fixture record
 #### Cypher acceptance query
 
 ```cypher
-MATCH (w:Work {work_id: 'hopko.orthodox-faith'})-[:HAS_CHUNK]->(c:CulturalChunk)
+MATCH (w:Work {work_id: 'oca-hopko'})-[:HAS_CHUNK]->(c:CulturalChunk)
 WHERE c.tradition = 'eastern-orthodox' AND c.redistribute = false
   AND size(c.text) >= 1
 WITH count(c) AS articles, count(DISTINCT c.anchor_id) AS distinct_anchors
