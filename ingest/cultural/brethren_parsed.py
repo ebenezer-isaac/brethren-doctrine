@@ -47,11 +47,20 @@ def _doc_to_chunks(doc: dict[str, object]) -> list[CulturalChunk]:
         text = str(ch.get("content", "")).strip()
         if not text:
             continue
-        chunk_id = str(ch.get("chunk_id") or f"parsed.{doc_slug}.{idx:03d}")
+        # Node identity MUST be deterministic from stable inputs (doc_slug + the
+        # stable enumeration index), NOT from the source-supplied ch.chunk_id.
+        # Trusting the upstream chunk_id risked a global cultural_chunk_id UNIQUE
+        # hard-fail if two docs ever supplied a colliding upstream id, which would
+        # abort the air-gapped Brethren batch and break byte-identical reseed
+        # (Decision 1 stable-identity / re-scrape convergence). The deterministic
+        # `parsed.<doc_slug>.<idx:03d>` scheme is exactly what anchor_id already
+        # uses; the upstream ch.chunk_id is a positional label carrying no
+        # distinction this scheme does not already encode, and nothing downstream
+        # relies on it for identity.
         anchor_id = f"parsed.{doc_slug}.{idx:03d}"
         out.append(
             CulturalChunk(
-                chunk_id=f"brethren-parsed.{chunk_id}",
+                chunk_id=f"brethren-parsed.{anchor_id}",
                 tradition=TRADITION,
                 source=CulturalChunkSource(
                     work_id=work_id,
