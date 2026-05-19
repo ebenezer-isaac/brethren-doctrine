@@ -121,6 +121,24 @@ Label `GreekLemma`:
   tflsj) matches on, and it backs the Decision 4 `BRIDGES_LXX` Strong
   lookup keyed by `greekstrong`.
 
+  Unresolvable Strong (Decision 18 line 642 / line 681, binding): a
+  confirmed slice of the frozen MACULA-Greek upstream carries the
+  `strong` cell as a `+`-joined COMPOUND of component Strongs for Greek
+  crasis / multi-stem word-forms (e.g. `1537+4053` ἐκπερισσῶς,
+  `5228+1537+4053` ὑπερεκπερισσοῦ, `1501+5140` εἰκοσιτρεῖς, `1417+3461`
+  δισμυριάς). `canonical_strongs` RAISES `ValueError` on such a token
+  (no Decision authorises a compound split; Decision 18 line 644 forbids
+  hand-rolling one). Per Decision 18 line 642/681 the adapter MUST NOT
+  fabricate a Strong: it takes the section-4 INSTANCE_OF skip path, so
+  the row emits NO `GreekLemma` node and NO `INSTANCE_OF` edge while the
+  `Word` node still writes with every property (its raw `strong` int per
+  Decision 2 is unaffected). The skip is counted (`_unresolved_strong`
+  in the returned dict) and a deterministic stderr line is emitted; it
+  is never silent and never raises. Because `GreekLemma` MERGEs on `id`
+  (a unique `<source>:strong-<int:05d>` namespace) and `.strong` is a
+  post-MERGE SET attribute, a skipped row creates no node at all, so it
+  cannot collide on `greek_lemma_id` nor introduce a null-in-MERGE.
+
   | Field   | Type   | Predicate       |
   |---------|--------|-----------------|
   | id      | string | $pred_string(x) |
@@ -366,6 +384,7 @@ SHA-256 hashes that must match byte-for-byte across two runs.
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 from typing import Any, Iterator
 
@@ -578,6 +597,51 @@ def _coerce_strong(value: str) -> int | None:
     return int(cleaned)
 
 
+def _canonical_strong_or_none(strong: int) -> str | None:
+    """Return the canonical Greek Strong string, or None when unresolvable.
+
+    Decision 18 (KEY-MG-STRONG) binds `GreekLemma.strong` to the single
+    normaliser `ingest.canonical_strongs.canonical_strongs(raw, lang='gk')`
+    and forbids any hand-rolled Strong normaliser (SCHEMA_DECISIONS.md line
+    644). `canonical_strongs` RAISES `ValueError` (it has no sentinel
+    return) for any token it cannot resolve to a single canonical Strong.
+
+    A confirmed slice of frozen MACULA-Greek upstream carries the
+    `strong` cell as a `+`-joined COMPOUND of the component Strongs for
+    Greek crasis / multi-stem word-forms, e.g. `1537+4053` (ἐκπερισσῶς =
+    ἐκ G1537 + περισσῶς G4053), `5228+1537+4053` (ὑπερεκπερισσοῦ),
+    `1501+5140` (εἰκοσιτρεῖς), `1417+3461` (δισμυριάς). The adapter's
+    `_coerce_strong` digit-strip collapses `1537+4053` to the integer
+    `15374053`, and `canonical_strongs('15374053','gk')` then raises
+    `ValueError: unrecognized Strong's encoding: '15374053'` (8 digits
+    exceeds the `\\d{1,5}` the normaliser accepts). Uncaught, that
+    ValueError propagated through `_flush` / `_process_edition` /
+    `ingest_macula_greek` (no try/except in run.py) and killed the entire
+    pass-1 reseed at adapter #6.
+
+    No Decision (2 or 18) specifies a compound-`+`-split or
+    first-component rule for the Greek `GreekLemma.strong` join key, and
+    Decision 18 line 644 explicitly forbids hand-rolling one. Decision 18
+    line 642 / line 681 is binding: when `canonical_strongs` raises
+    (empty, malformed, non-Strong), the producing adapter MUST NOT
+    fabricate a Strong. It either skips the Strong attachment or routes to
+    a documented sentinel. This adapter's docstring section 4 INSTANCE_OF
+    clause already mandates the SKIP path ("Rows where the row has no
+    resolvable Strong MUST be persisted without the INSTANCE_OF edge
+    rather than fabricating a sentinel lemma"), so this returns None and
+    `_row_lemma_payload` emits no GreekLemma and no INSTANCE_OF for the
+    row; the Word node still writes with every property (including its
+    raw `strong` int per Decision 2, which is unaffected). This mirrors
+    the verified macula_hebrew `_canonical` try/except ValueError -> None
+    pattern (ingest/lexical/macula_hebrew.py). Determinism: pure function
+    of the frozen upstream cell. KEY-MG-STRONG / Decision 18.
+    """
+    try:
+        return canonical_strongs(str(strong), "gk")[0]
+    except ValueError:
+        return None
+
+
 def _split_ln_pair(token: str) -> tuple[int, int] | None:
     """Split a single Louw-Nida code token like '93.169a' into (domain, subdomain).
 
@@ -643,16 +707,28 @@ def _row_lemma_payload(edition: str, word: dict[str, Any]) -> dict[str, Any] | N
     lemma = word.get("lemma")
     if strong is None or lemma is None:
         return None
+    # Decision 18 producer authority (KEY-MG-STRONG): GreekLemma.strong is
+    # the canonical Strong STRING (canon[0], e.g. 'G0040'), never an int.
+    # When canonical_strongs cannot resolve the token (confirmed frozen
+    # upstream: `+`-joined compound Strongs for Greek crasis/multi-stem
+    # word-forms; see _canonical_strong_or_none), Decision 18 line 642/681
+    # FORBIDS fabricating a Strong and this adapter's docstring section 4
+    # mandates the skip path: no GreekLemma node, no INSTANCE_OF edge for
+    # the row. Returning None here (the existing `if lemma is not None`
+    # guard in _process_edition already drives the faithful skip) keeps
+    # the Word node and every property intact and never raises.
+    canonical = _canonical_strong_or_none(strong)
+    if canonical is None:
+        return None
     source = _EDITION_TO_SOURCE[edition]
     lemma_id = f"{source}:strong-{int(strong):05d}"
     return {
         "id": lemma_id,
         "lemma": lemma,
-        # Decision 18 producer authority (KEY-MG-STRONG): GreekLemma.strong is the
-        # canonical Strong STRING (canon[0], e.g. 'G0040'), never an int. Every Greek
-        # consumer (tagnt, tbesg, tflsj) joins on this exact canonical value.
-        # GreekLemma.id namespacing (<source>:strong-<int:05d>) is unchanged.
-        "strong": canonical_strongs(str(strong), "gk")[0],
+        # Every Greek consumer (tagnt, tbesg, tflsj) joins on this exact
+        # canonical value. GreekLemma.id namespacing
+        # (<source>:strong-<int:05d>) is unchanged by Decision 18.
+        "strong": canonical,
         "source": source,
         "edition": edition,
     }
@@ -720,6 +796,13 @@ def _process_edition(
         "INSTANCE_OF": 0,
         "IN_DOMAIN": 0,
         "FROM_EDITION": 0,
+        # Decision 18 line 642/681 skip-path surfacing: a strong-and-lemma
+        # bearing row whose upstream `strong` cell does not resolve to a
+        # single canonical Greek Strong (confirmed frozen upstream:
+        # `+`-joined compound Strongs for crasis/multi-stem forms). The
+        # Word still writes; no GreekLemma / INSTANCE_OF for the row. This
+        # is counted, never silent, never raising, never fabricated.
+        "_unresolved_strong": 0,
     }
     word_batch: list[dict[str, Any]] = []
     lemma_batch: list[dict[str, Any]] = []
@@ -740,6 +823,15 @@ def _process_edition(
             {"from_id": word["id"], "to_slug": source_slug},
         ]
         lemma = _row_lemma_payload(edition, word)
+        if (
+            lemma is None
+            and word.get("strong") is not None
+            and word.get("lemma") is not None
+        ):
+            # Both strong and lemma present, so the only None path is an
+            # unresolvable canonical Strong (Decision 18 line 642/681
+            # faithful skip). Surface it; the Word still persists below.
+            counts["_unresolved_strong"] += 1
         if lemma is not None:
             if lemma["id"] not in lemma_seen:
                 lemma_seen.add(lemma["id"])
@@ -831,6 +923,10 @@ def ingest_macula_greek(
         "INSTANCE_OF": 0,
         "IN_DOMAIN": 0,
         "FROM_EDITION": 0,
+        # Decision 18 line 642/681 faithful skip-path surfacing (see
+        # _canonical_strong_or_none / _process_edition). Counted, not
+        # silent; the reseed never crashes on an unresolvable Strong.
+        "_unresolved_strong": 0,
     }
     lemma_seen: set[str] = set()
     domain_seen: set[int] = set()
@@ -843,6 +939,19 @@ def ingest_macula_greek(
             edition_counts = _process_edition(
                 session, edition, tsv_path, lemma_seen, domain_seen
             )
+            # Deterministic stderr surfacing (one line per edition, only
+            # when the skip path fired) so an unresolvable Strong is never
+            # silent. Decision 18 line 642/681; KEY-MG-STRONG.
+            unresolved = edition_counts.get("_unresolved_strong", 0)
+            if unresolved:
+                print(
+                    f"macula_greek: edition={_EDITION_TO_SOURCE[edition]} "
+                    f"unresolved_strong={unresolved} "
+                    "(compound/non-Strong upstream `strong` cell; "
+                    "GreekLemma+INSTANCE_OF skipped per Decision 18 "
+                    "line 642/681, Word persisted)",
+                    file=sys.stderr,
+                )
             for key, value in edition_counts.items():
                 totals[key] = totals.get(key, 0) + value
     return totals
