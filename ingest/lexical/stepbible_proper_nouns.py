@@ -120,16 +120,27 @@ NAMED_AT (Decision 17, phase_02_lexical_ingest.md Group 3 step 12)
                           so the triangle test surfaces unresolved
                           first_occurrence rows. The ProperNoun node
                           still merges; only the edge is suppressed.
-                          The target Verse is joined by its osisID
-                          (constraint verse_osisID, graph/lexical.cypher
-                          line 18) or by its id property under the
-                          'verse:<osisRef>' stable-id convention emitted
-                          by the OSHB and MorphGNT adapters.
+                          The target Verse is joined solely by its
+                          universal id under the 'verse:<osisRef>'
+                          stable-id convention emitted byte-identically
+                          by the OSHB (oshb.py:648) and MorphGNT
+                          (morphgnt.py:394) adapters (constraint
+                          verse_id, graph/lexical.cypher line 17).
+                          Verse.osisID is NULL on every NT verse
+                          (VERSE-KEY-AUDIT, docs/PHASE_D_VERSEKEY_AUDIT.md),
+                          so the universal id is the only loss-free key.
+                          The TIPNR reference book abbreviation is
+                          mapped deterministically to the canonical OSIS
+                          book code via TIPNR_OSIS_BOOK before the id is
+                          built; a reference whose book is absent from
+                          that map yields no edge and no Verse node. This
+                          adapter MATCHes the Verse, it never MERGEs or
+                          CREATEs one.
 
 Idempotency
 ===========
 Every ProperNoun node is MERGEd by proper_name_entry. Every NAMED_AT
-edge is MERGEd on the (ProperNoun.proper_name_entry, Verse.osisID,
+edge is MERGEd on the (ProperNoun.proper_name_entry, Verse.id,
 'NAMED_AT') tuple. Re-running this adapter over identical upstream TSV
 bytes produces zero new nodes and zero new edges; the Decision 17
 proper_noun_entry uniqueness constraint additionally enforces this at
@@ -265,7 +276,9 @@ docs/SCHEMA_DECISIONS.md Decision 15  Verse.text population policy (Verse target
 docs/implementation_phases/phase_02_lexical_ingest.md Group 3 step 12 (this adapter).
 docs/implementation_phases/phase_02_lexical_ingest.md Group 1 (Verse dependency).
 docs/implementation_phases/RESEED_PLAN.md Phase C.1 (TDD workflow per adapter) and Idempotency section of phase_02.
-graph/lexical.cypher constraint proper_noun_entry (line 41), constraint source_slug (line 35), constraint verse_id (line 17), constraint verse_osisID (line 18).
+graph/lexical.cypher constraint proper_noun_entry (line 41), constraint source_slug (line 35), constraint verse_id (line 17) (universal Verse key, the only NAMED_AT endpoint key per VERSE-KEY-AUDIT / Decision 15).
+docs/PHASE_D_VERSEKEY_AUDIT.md  systemic Verse-key defect (Verse.osisID NULL on all 7927 NT verses; NAMED_AT re-keyed to Verse.id; phantom Verse stub creation removed).
+ingest/lexical/oshb.py:648 and ingest/lexical/morphgnt.py:394  the two Verse.id producers (`verse:` + osisRef) this adapter's NAMED_AT key is byte-identical to.
 tools/expected_counts.json sources."STEPBible-proper-nouns" (tier A, expected_count 23205, record_unit proper_name, tolerance 0).
 tools/predicates_by_type.cypher for $pred_string, $pred_int, $pred_bool semantics.
 """
@@ -326,19 +339,68 @@ DETAIL_SIGNIFICANCES = frozenset({
 DETAIL_MARK = chr(0x2013)  # STEPBible TIPNR per-occurrence detail-row marker
 OSIS_REF_RE = re.compile(r"^[1-4]?[A-Za-z]{2,4}\.\d+\.\d+")
 
+# VERSE-KEY-AUDIT (docs/PHASE_D_VERSEKEY_AUDIT.md) / Decision 15.
+#
+# The universal Verse key is `Verse.id = 'verse:' + osisRef`, byte-identical
+# to the two text-floor producers:
+#   - OT  ingest/lexical/oshb.py:648    `verse_id = f"verse:{osis_ref}"`
+#         where osis_ref is the WLC `osisID` attribute (canonical OSIS book,
+#         non-zero-padded chapter/verse, e.g. `Gen.1.1`).
+#   - NT  ingest/lexical/morphgnt.py:394 `"id": f"verse:{osis_ref}"`
+#         where osis_ref = morphgnt._osis_ref -> `f"{book}.{chapter}.{verse}"`
+#         with book from the 27-entry OSIS_BOOKS tuple and chapter/verse as
+#         non-zero-padded ints. `Verse.osisID` is NULL on all 7927 NT verses,
+#         so keying NAMED_AT on osisID silently loses every NT proper noun.
+#
+# The TIPNR reference column uses STEPBible 3-letter book abbreviations
+# (Exo, Luk, 1Ki, ...), which are NOT the canonical OSIS codes the
+# producers emit. This map is the deterministic, exhaustive bijection
+# from every TIPNR first-token book abbreviation present in the upstream
+# refs column (66 distinct, full Protestant canon) to the canonical OSIS
+# book code (the `_OSIS_ORDER` set the producers and tsk.py share). A
+# TIPNR ref whose chapter/verse digits are already non-zero-padded
+# integers, so `verse:<OSIS>.<chap>.<verse>` is byte-identical to the
+# producer Verse.id. An abbreviation absent from this map yields NO
+# NAMED_AT edge and NO Verse node (faithful drop, never a guessed key).
+TIPNR_OSIS_BOOK = {
+    "Gen": "Gen", "Exo": "Exod", "Lev": "Lev", "Num": "Num",
+    "Deu": "Deut", "Jos": "Josh", "Jdg": "Judg", "Rut": "Ruth",
+    "1Sa": "1Sam", "2Sa": "2Sam", "1Ki": "1Kgs", "2Ki": "2Kgs",
+    "1Ch": "1Chr", "2Ch": "2Chr", "Ezr": "Ezra", "Neh": "Neh",
+    "Est": "Esth", "Job": "Job", "Psa": "Ps", "Pro": "Prov",
+    "Ecc": "Eccl", "Sng": "Song", "Isa": "Isa", "Jer": "Jer",
+    "Lam": "Lam", "Ezk": "Ezek", "Dan": "Dan", "Hos": "Hos",
+    "Jol": "Joel", "Amo": "Amos", "Oba": "Obad", "Jon": "Jonah",
+    "Mic": "Mic", "Nam": "Nah", "Hab": "Hab", "Zep": "Zeph",
+    "Hag": "Hag", "Zec": "Zech", "Mal": "Mal", "Mat": "Matt",
+    "Mrk": "Mark", "Luk": "Luke", "Jhn": "John", "Act": "Acts",
+    "Rom": "Rom", "1Co": "1Cor", "2Co": "2Cor", "Gal": "Gal",
+    "Eph": "Eph", "Php": "Phil", "Col": "Col", "1Th": "1Thess",
+    "2Th": "2Thess", "1Ti": "1Tim", "2Ti": "2Tim", "Tit": "Titus",
+    "Phm": "Phlm", "Heb": "Heb", "Jas": "Jas", "1Pe": "1Pet",
+    "2Pe": "2Pet", "1Jn": "1John", "2Jn": "2John", "3Jn": "3John",
+    "Jud": "Jude", "Rev": "Rev",
+}
+
 # Node-write statements stay backtick-quoted so the verifier's FakeDriver
-# captures the full row payload as nodes of that label. The NAMED_AT
-# edge-write statement labels both WHERE-equality endpoints
-# (p:`ProperNoun`, v:`Verse`) so the Neo4j planner resolves each MATCH
-# through the proper_noun_entry (graph/lexical.cypher line 41) and
-# verse_osisID (line 18) UNIQUE constraints as a NodeUniqueIndexSeek
-# instead of an AllNodesScan + property filter (PERF-PN). The label add
-# changes zero edges/nodes/ids/counts in the populated store; it only
-# changes the query plan. The in-test FakeDriver substring-scans for
-# `:`ProperNoun`` and `:`Verse``, so once labeled it additionally records
-# each NAMED_AT edge-batch row (its {proper_name_entry, osisID} payload)
-# as a phantom ProperNoun and Verse node. That FakeDriver miscount is a
-# test-harness artefact only and never reaches Neo4j.
+# captures the full row payload as nodes of that label. This adapter
+# MERGE-creates exactly two node labels (Source, ProperNoun) and zero
+# Verse nodes: per VERSE-KEY-AUDIT / Decision 15 a proper noun is a
+# lexical fact about an existing text-floor Verse, never a producer of
+# Verse identity. The NAMED_AT edge-write statement therefore MATCHes
+# (never MERGEs) its Verse endpoint by the universal `Verse.id`
+# (constraint verse_id, graph/lexical.cypher line 17) and its ProperNoun
+# endpoint by proper_name_entry (constraint proper_noun_entry, line 41),
+# so the Neo4j planner resolves each MATCH as a NodeUniqueIndexSeek
+# (PERF-PN). When the TIPNR first_occurrence does not resolve to an
+# existing Verse.id, the per-row dict carries no verse_id, the row is
+# faithfully dropped before the edge batch, and NO Verse node and NO
+# NAMED_AT edge is emitted (the ProperNoun node still merges; its
+# identity is the proper_name_entry, unaffected). The in-test FakeDriver
+# substring-scans `MERGE (n:` statements only, so the edge-MATCH Cypher
+# contributes zero phantom nodes; the prior `MERGE (n:`Verse`...)`
+# stub-creator that polluted the Verse set with 1928 non-OSIS phantom
+# nodes is removed entirely.
 _MERGE_SOURCE = (
     "UNWIND $rows AS row MERGE (n:`Source` {slug: row.slug}) "
     "SET n += row RETURN count(n) AS upserted"
@@ -348,14 +410,10 @@ _MERGE_PROPER = (
     "MERGE (n:`ProperNoun` {proper_name_entry: row.proper_name_entry}) "
     "SET n += row RETURN count(n) AS upserted"
 )
-_MERGE_VERSE = (
-    "UNWIND $rows AS row MERGE (n:`Verse` {osisID: row.osisID}) "
-    "RETURN count(n) AS upserted"
-)
 _MERGE_NAMED_AT = (
     "UNWIND $rows AS row "
     "MATCH (p:`ProperNoun`) WHERE p.proper_name_entry = row.proper_name_entry "
-    "MATCH (v:`Verse`) WHERE v.osisID = row.osisID "
+    "MATCH (v:`Verse`) WHERE v.id = row.verse_id "
     "MERGE (p)-[r:`NAMED_AT`]->(v) "
     "RETURN count(r) AS edges"
 )
@@ -464,6 +522,29 @@ def _normalised_osis(ref: str) -> str:
     if match is None:
         return ref
     return match.group(0)
+
+
+def _producer_verse_id(ref: str) -> str | None:
+    """Build the universal `verse:<osisRef>` id for a TIPNR first_occurrence.
+
+    Byte-identical to the text-floor producers (oshb.py:648,
+    morphgnt.py:394): `verse:` + canonical-OSIS book + `.` + the
+    non-zero-padded chapter and verse digits the TIPNR ref already
+    carries. Returns None (faithful drop, never a guessed key) when the
+    ref is malformed or its book abbreviation is not in the canonical
+    TIPNR -> OSIS map, so the caller emits NO NAMED_AT edge and NO Verse
+    node for that proper noun rather than minting a phantom stub.
+    """
+    osis = _normalised_osis(ref)
+    if not OSIS_REF_RE.match(osis):
+        return None
+    parts = osis.split(".")
+    if len(parts) != 3:
+        return None
+    book = TIPNR_OSIS_BOOK.get(parts[0])
+    if book is None:
+        return None
+    return f"verse:{book}.{parts[1]}.{parts[2]}"
 
 
 def _coerce_verse_count(value: Any) -> int | None:
@@ -601,12 +682,15 @@ def _named_at_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         ref = row.get("first_occurrence", "")
         if not ref:
             continue
-        osis = _normalised_osis(ref)
-        if not OSIS_REF_RE.match(osis):
+        verse_id = _producer_verse_id(ref)
+        if verse_id is None:
+            # first_occurrence does not resolve to a canonical Verse.id;
+            # faithfully emit NO edge and NO Verse node (VERSE-KEY-AUDIT
+            # / Decision 15). The ProperNoun node already merged upstream.
             continue
         edges = [*edges, {
             "proper_name_entry": row["proper_name_entry"],
-            "osisID": osis,
+            "verse_id": verse_id,
         }]
     return edges
 
@@ -616,7 +700,6 @@ def _merge_named_at(session: Any, rows: list[dict[str, Any]]) -> int:
     total = 0
     for start in range(0, len(edges), BATCH_SIZE):
         batch = edges[start:start + BATCH_SIZE]
-        session.run(_MERGE_VERSE, rows=batch).consume()
         session.run(_MERGE_NAMED_AT, rows=batch).consume()
         total += len(batch)
     return total
