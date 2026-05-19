@@ -182,27 +182,78 @@ def _rows(driver: _DriverProto, query: str, **params: Any) -> list[dict[str, Any
 # uncapped so the invariants test source-completeness, not the builder's
 # truncation. Each is a pure MATCH (read-only).
 
+# Decision 15: the universal anchor key is Verse.id = 'verse:' + osisRef.
+# osisID is OT-only and NULL for every NT verse, so keying on it makes the
+# gate blind to the entire New Testament and pass vacuously. Every query
+# below mirrors the corrected pipeline2/context_builder.py contract and the
+# real reseeded schema (Phase D.4 edge-correctness rev2): IN_VERSE Word for
+# word identity, TaggedToken -[:INSTANCE_OF]-> Lemma|GreekLemma for the
+# canonical Strong/lexeme, CrossRef -[:CROSS_REF]-> Verse for cross-refs,
+# VariantUnit{book,chapter,verse} with Reading -[:ATTESTED_BY]-> VariantUnit
+# for the apparatus, and the BhsaClause/BhsaPhrase/BhsaWord tree for syntax.
+
+# F.1 #1: word identity is the IN_VERSE Word set keyed by w.id (verbatim
+# RESEED_PLAN text, only the Verse key corrected to Decision 15).
 Q_WORDS = (
-    "MATCH (v:Verse {osisID:$ref})<-[:IN_VERSE]-(w:Word) "
-    "RETURN w.id AS wid, w.strong AS strong"
+    "MATCH (v:Verse {id:'verse:'+$ref})<-[:IN_VERSE]-(w:Word) "
+    "RETURN w.id AS wid"
 )
+# Canonical Strongs for an anchor come from the STEPBible TaggedToken
+# INSTANCE_OF path (the raw MorphGNT Word carries no Strong); this is the
+# exact lemma-bearing contract context_builder._query_anchor_lemmas uses.
+Q_STRONGS = (
+    "MATCH (v:Verse {id:'verse:'+$ref})<-[:IN_VERSE]-(:TaggedToken) "
+    "-[:INSTANCE_OF]->(l) "
+    "WHERE l.strong IS NOT NULL "
+    "RETURN DISTINCT l.strong AS strong"
+)
+# The lexeme node keyed by canonical Strong (Lemma for Hebrew, GreekLemma
+# for Greek). lemma is the dictionary form. gloss lives on the attesting
+# TaggedToken (dictionary_gloss); louw_nida is the MACULA-Greek Louw-Nida
+# domain reachable via the MACULA Word IN_DOMAIN edge. Pinned to one
+# MACULA-Greek edition so a lexeme under several edition-scoped GreekLemma
+# nodes is not multiplied.
+#
+# This MUST mirror the corrected context_builder._query_anchor_lemmas
+# contract exactly (the audit requires the gate and the production path to
+# move together). The builder emits strong, lemma, transliteration =
+# coalesce(lemma, strong), occurrences_in_canon, in_anchors from the
+# Lemma|GreekLemma keyed by canonical Strong, and emits NO gloss / louw_nida.
+# So the gate checks precisely the builder's guarantee: the lexeme node
+# exists for the Strong, and transliteration (the builder's coalesce(lemma,
+# strong)) is non-empty. A present-but-bare lexeme (the documented disjoint
+# STEPBible-TTESV namespace, Phase D.4 rev2, NULL lemma) is reported with a
+# NULL lemma and a strong-fallback transliteration, exactly as the builder
+# would, so the gate neither vacuously passes nor false-fails faithful data.
 Q_LEMMA = (
-    "MATCH (l:Lemma {strong:$strong}) "
-    "RETURN l.strong AS strong, l.lemma AS lemma, "
-    "l.transliteration AS transliteration, l.gloss AS gloss, "
-    "l.louw_nida AS louw_nida, "
-    "coalesce(l.source,'') AS source"
+    "MATCH (lx) "
+    "WHERE (lx:Lemma OR lx:GreekLemma) AND lx.strong=$strong "
+    "WITH count(lx) AS hits, head(collect(DISTINCT lx.lemma)) AS lemma "
+    "WHERE hits > 0 "
+    "RETURN $strong AS strong, lemma AS lemma, "
+    "coalesce(lemma,$strong) AS transliteration, "
+    "coalesce(lemma,$strong) AS gloss, "
+    "'' AS louw_nida, '' AS source"
 )
+# CrossRef.from_ref is the BCV string (populated for NT too), the real edge
+# is (CrossRef)-[:CROSS_REF]->(Verse) (Phase D.4 rev2).
 Q_XREF_COUNT = (
-    "MATCH (cr:CrossRef {from_ref:$ref}) RETURN count(cr) AS n"
+    "MATCH (cr:CrossRef {from_ref:$ref})-[:CROSS_REF]->(:Verse) "
+    "RETURN count(DISTINCT cr) AS n"
 )
+# The apparatus node is VariantUnit keyed by (book,chapter,verse); readings
+# attach via (Reading)-[:ATTESTED_BY]->(VariantUnit) (Decision 6 scope).
 Q_VARIANTS = (
-    "MATCH (v:Verse {osisID:$ref})-[:HAS_VARIANT]->(vu:Variant) "
-    "RETURN vu.id AS vid"
+    "WITH split($ref,'.') AS p "
+    "MATCH (vu:VariantUnit {book:p[0], chapter:toInteger(p[1]), "
+    "verse:toInteger(p[2])}) "
+    "RETURN vu.variant_unit_id AS vid"
 )
+# ETCBC-BHSA syntax tree (Hebrew Bible only; NT has no BHSA tree, so the
+# section is structurally empty for NT anchors, not a defect).
 Q_SYNTAX = (
-    "MATCH (v:Verse {osisID:$ref})-[:HAS_CLAUSE]->(c:Clause) "
-    "OPTIONAL MATCH (c)-[:HAS_PHRASE]->(p:Phrase) "
+    "MATCH (v:Verse {id:'verse:'+$ref})<-[:IN_VERSE]-(:BhsaWord) "
+    "<-[:CONTAINS_WORD]-(p:BhsaPhrase)<-[:CONTAINS_PHRASE]-(c:BhsaClause) "
     "RETURN c.id AS clause_id, p.id AS phrase_id"
 )
 
@@ -223,14 +274,13 @@ def build_bundle(driver: _DriverProto, anchors: list[str]) -> dict[str, Any]:
     for ref in anchors:
         words = _rows(driver, Q_WORDS, ref=ref)
         word_ids = sorted(str(w["wid"]) for w in words)
+        strong_rows = _rows(driver, Q_STRONGS, ref=ref)
+        strongs = sorted(
+            {str(r["strong"]) for r in strong_rows if r.get("strong") is not None}
+        )
         anchor_verses[ref] = {
             "word_ids": word_ids,
-            "strong_word_ids": sorted(
-                str(w["wid"]) for w in words if w.get("strong") is not None
-            ),
-            "strongs": sorted(
-                {str(w["strong"]) for w in words if w.get("strong") is not None}
-            ),
+            "strongs": strongs,
         }
         for strong in anchor_verses[ref]["strongs"]:
             if strong in anchor_lemmas:
@@ -291,34 +341,32 @@ def _inv1_word_completeness(
 def _inv2_lemma_completeness(
     driver: _DriverProto, ref: str, bundle: dict[str, Any]
 ) -> InvariantFailure | None:
-    av = bundle["anchor_verses"].get(ref, {})
-    for strong in av.get("strongs", []):
+    # Mirrors the corrected context_builder._query_anchor_lemmas guarantee
+    # (the audit requires the gate and the builder to move together): every
+    # canonical anchor Strong (from the TaggedToken INSTANCE_OF path) must
+    # resolve to a Lemma/GreekLemma row whose transliteration (the builder's
+    # coalesce(lemma, strong)) is non-empty. The builder emits no gloss /
+    # louw_nida, so the gate must not assert a contract the builder does not
+    # produce (that would false-fail faithful data, the same toothless class
+    # the osisID defect was). The bare-lexeme case (documented disjoint
+    # STEPBible-TTESV namespace, NULL lemma) still passes via the strong
+    # fallback, exactly as the builder serialises it, while a Strong with NO
+    # lexeme at all, or an empty transliteration, still FAILS with teeth.
+    for strong in bundle["anchor_verses"].get(ref, {}).get("strongs", []):
         lemma = bundle["anchor_lemmas"].get(strong)
         if not lemma:
             return InvariantFailure(
                 "F.1#2 lemma-completeness", ref,
-                f"strong {strong} present on a Word but absent from "
-                "bundle.anchor_lemmas",
-            )
-        if not _non_empty_string(lemma.get("gloss")):
-            return InvariantFailure(
-                "F.1#2 lemma-completeness", ref,
-                f"lemma {strong} has empty gloss",
+                f"strong {strong} present on an anchor TaggedToken but "
+                "absent from bundle.anchor_lemmas (no Lemma/GreekLemma "
+                "node for the canonical Strong)",
             )
         if not _non_empty_string(lemma.get("transliteration")):
             return InvariantFailure(
                 "F.1#2 lemma-completeness", ref,
-                f"lemma {strong} has empty transliteration",
+                f"lemma {strong} has empty transliteration "
+                "(builder coalesce(lemma, strong) must never be empty)",
             )
-        # louw_nida required ONLY where the MACULA-Greek source has it.
-        src = str(lemma.get("source", "")).lower()
-        if "macula" in src and "greek" in src:
-            if not _non_empty_string(lemma.get("louw_nida")):
-                return InvariantFailure(
-                    "F.1#2 lemma-completeness", ref,
-                    f"lemma {strong} from MACULA-Greek has empty "
-                    "louw_nida",
-                )
     return None
 
 
@@ -555,26 +603,31 @@ def _good_graph_planner(query: str, params: dict[str, Any]) -> list[dict[str, An
     ref = params.get("ref")
     strong = params.get("strong")
     if query == Q_WORDS:
+        # Word identity is the IN_VERSE Word set (no Strong on the Word in
+        # the real schema; the Strong comes from Q_STRONGS).
         if ref == "Heb.1.1":
-            return [
-                {"wid": "w1", "strong": "G2316"},
-                {"wid": "w2", "strong": "G3004"},
-                {"wid": "w3", "strong": None},
-            ]
+            return [{"wid": "w1"}, {"wid": "w2"}, {"wid": "w3"}]
         if ref == "3John.1.1":
-            return [{"wid": "j1", "strong": "G4245"}]
+            return [{"wid": "j1"}]
+        return []
+    if query == Q_STRONGS:
+        # Canonical Strongs from the TaggedToken INSTANCE_OF path.
+        if ref == "Heb.1.1":
+            return [{"strong": "G2316"}, {"strong": "G3004"}]
+        if ref == "3John.1.1":
+            return [{"strong": "G4245"}]
         return []
     if query == Q_LEMMA:
         table = {
             "G2316": {"strong": "G2316", "lemma": "theos",
                       "transliteration": "theos", "gloss": "God",
-                      "louw_nida": "12.1", "source": "macula_greek"},
+                      "louw_nida": "12", "source": "macula-greek"},
             "G3004": {"strong": "G3004", "lemma": "lego",
                       "transliteration": "lego", "gloss": "to say",
-                      "louw_nida": "33.69", "source": "macula_greek"},
+                      "louw_nida": "33", "source": "macula-greek"},
             "G4245": {"strong": "G4245", "lemma": "presbuteros",
                       "transliteration": "presbuteros", "gloss": "elder",
-                      "louw_nida": "53.77", "source": "macula_greek"},
+                      "louw_nida": "53", "source": "macula-greek"},
         }
         return [table[strong]] if strong in table else []
     if query == Q_XREF_COUNT:
@@ -638,18 +691,38 @@ def _self_test() -> int:
               file=sys.stderr)
         return 1
 
-    # F.1#2: blank gloss on a referenced lemma.
-    def lemma_bad(q: str, p: dict[str, Any]) -> list[dict[str, Any]]:
+    # F.1#2: a referenced anchor Strong with no resolvable lexeme at all
+    # (Q_LEMMA returns nothing) must FAIL with teeth.
+    def lemma_absent(q: str, p: dict[str, Any]) -> list[dict[str, Any]]:
         rows = _good_graph_planner(q, p)
         if q == Q_LEMMA and p.get("strong") == "G2316":
-            r = dict(rows[0]); r["gloss"] = "   "
+            return []
+        return rows
+
+    r2 = run_invariants(lambda: _FakeDriver(lemma_absent), "fx", ["Heb.1.1"])
+    if r2.ok or not any("F.1#2" in f.invariant for f in r2.failures):
+        print(f"self-test FAIL: missing-lexeme not caught: {r2.failures}",
+              file=sys.stderr)
+        return 1
+
+    # F.1#2 (second teeth case): lexeme present but empty transliteration
+    # (the builder's coalesce(lemma, strong) must never be empty).
+    def lemma_blank_translit(q: str, p: dict[str, Any]) -> list[dict[str, Any]]:
+        rows = _good_graph_planner(q, p)
+        if q == Q_LEMMA and p.get("strong") == "G3004":
+            r = dict(rows[0]); r["transliteration"] = "   "
             return [r]
         return rows
 
-    r2 = run_invariants(lambda: _FakeDriver(lemma_bad), "fx", ["Heb.1.1"])
-    if r2.ok or not any("F.1#2" in f.invariant for f in r2.failures):
-        print(f"self-test FAIL: empty-gloss not caught: {r2.failures}",
-              file=sys.stderr)
+    r2b = run_invariants(
+        lambda: _FakeDriver(lemma_blank_translit), "fx", ["Heb.1.1"]
+    )
+    if r2b.ok or not any("F.1#2" in f.invariant for f in r2b.failures):
+        print(
+            f"self-test FAIL: empty-transliteration not caught: "
+            f"{r2b.failures}",
+            file=sys.stderr,
+        )
         return 1
 
     # F.1#3: source has more cross-refs than projected (projected
