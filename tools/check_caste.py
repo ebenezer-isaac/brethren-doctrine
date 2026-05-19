@@ -125,6 +125,17 @@ CASTE_RULES: dict[str, CasteRule] = {
             # keep the architect docs scope tightly enumerated. Follows
             # the b66831c / 34180a7 tightly scoped governance precedent.
             "docs/PHASE_*.md",
+            # Phase H reseed manifest CLAIM file. The reseed phase
+            # (architect/orchestrator per docs/PHASE_EFH_EXECUTION_SPEC.md
+            # gap G7) authors docs/RESEED_MANIFEST_<ts>.json as the
+            # recorded ground-truth contract that the Auditor caste
+            # independently re-executes via tools/verify_manifest.py. It
+            # is an architect contract artifact by nature (the auditor
+            # only ever writes docs/MANIFEST_VERIFICATION_*.json); without
+            # this glob the manifest was covered by no caste, a caste-
+            # config gap. Scoped to the RESEED_MANIFEST_ prefix, same
+            # tightly-enumerated governance precedent as the PHASE_ glob.
+            "docs/RESEED_MANIFEST_*.json",
             "graph/lexical.cypher",
             "graph/cultural.cypher",
             "tools/expected_counts.json",
