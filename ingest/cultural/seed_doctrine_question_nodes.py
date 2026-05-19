@@ -15,10 +15,85 @@ from pathlib import Path
 from ingest.cultural._common import Settings, get_cultural_driver
 from ingest.doctrine_taxonomy import FINE_SLUGS, FINE_TO_COARSE
 
+# Explicit, exhaustive category -> fine-doctrine-slug map.
+#
+# Keyed on the slugified `category` field as it actually occurs across every one
+# of the 231 questions in questions.json (26 distinct categories: 21 whose slug
+# is already an exact FINE_SLUGS member, plus 5 whose slug differs only because
+# the source category drops the connective "and"). The prior heuristic resolved
+# the 5 via a 5-char `[:5]` prefix scan over FINE_SLUGS and fell back to
+# `next(iter(FINE_SLUGS))` on a miss. FINE_SLUGS is a frozenset, whose iteration
+# order is NOT stable across Python processes, so both the prefix scan and the
+# iter() fallback could resolve the SAME category to DIFFERENT slugs between two
+# byte-identical reseeds (e.g. prefix `chris` -> {christology, christian-ethics};
+# `worsh` -> {worship-structure, worship-style}), flipping UNDER_QUESTION edge
+# targets and breaking the Phase-G idempotency triangle, while the silent
+# fallback could mis-attach a future category. This map makes resolution
+# deterministic and explicit; an unmapped category RAISES (never arbitrary
+# attach). Behaviour for the current 231 is byte-identical to what the G-AUDIT-2
+# audit verified, now deterministic and fail-loud.
+_CATEGORY_SLUG_TO_FINE: dict[str, str] = {
+    # 21 categories whose slug is already an exact FINE_SLUGS member.
+    "angelology": "angelology",
+    "anthropology": "anthropology",
+    "bibliology": "bibliology",
+    "christian-ethics": "christian-ethics",
+    "christology": "christology",
+    "church-discipline": "church-discipline",
+    "cult-marker": "cult-marker",
+    "demonology": "demonology",
+    "ecclesiology": "ecclesiology",
+    "engagement-with-world": "engagement-with-world",
+    "eschatology": "eschatology",
+    "hamartiology": "hamartiology",
+    "heterodoxy-marker": "heterodoxy-marker",
+    "inter-church-relations": "inter-church-relations",
+    "pneumatology": "pneumatology",
+    "sacraments": "sacraments",
+    "soteriology": "soteriology",
+    "spiritual-gifts": "spiritual-gifts",
+    "theology-proper": "theology-proper",
+    "worship-structure": "worship-structure",
+    "worship-style": "worship-style",
+    # 5 categories the prior heuristic resolved via the 5-char prefix, now
+    # made explicit (source category omits the connective "and").
+    "calendar-customs": "calendar-and-customs",
+    "family-discipleship": "family-and-discipleship",
+    "leadership-polity": "leadership-and-polity",
+    "marriage-sexuality": "marriage-and-sexuality",
+    "money-stewardship": "money-and-stewardship",
+}
+
+# Every mapped target must be a real fine slug; fail at import time otherwise.
+assert set(_CATEGORY_SLUG_TO_FINE.values()) <= FINE_SLUGS, (
+    "_CATEGORY_SLUG_TO_FINE targets must all be members of FINE_SLUGS"
+)
+
 
 def _slugify(value: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
     return s or "unknown"
+
+
+def _resolve_fine_slug(category: str) -> str:
+    """Resolve a question category to its fine doctrine slug, deterministically.
+
+    Looks the slugified category up in the explicit, exhaustive
+    `_CATEGORY_SLUG_TO_FINE` map. Raises `KeyError` (fail-loud, never an
+    arbitrary attach) when the category is not in the map, so a newly
+    introduced category cannot silently mis-attach an UNDER_QUESTION edge to
+    an order-dependent doctrine.
+    """
+    slug = _slugify(category)
+    try:
+        return _CATEGORY_SLUG_TO_FINE[slug]
+    except KeyError:
+        known = ", ".join(sorted(_CATEGORY_SLUG_TO_FINE))
+        raise KeyError(
+            f"Unmapped question category {category!r} (slugified {slug!r}); "
+            f"add it to _CATEGORY_SLUG_TO_FINE with its correct fine doctrine "
+            f"slug. Known category slugs: {known}"
+        ) from None
 
 
 def _load_questions(questions_path: Path) -> list[dict[str, str]]:
@@ -72,13 +147,7 @@ def seed(questions_path: Path = Path("questions.json")) -> dict[str, int]:
 
             edge_rows = []
             for q in questions:
-                slug = _slugify(q["category"])
-                if slug not in FINE_SLUGS:
-                    fallback = next(
-                        (s for s in FINE_SLUGS if s.startswith(slug[:5])),
-                        next(iter(FINE_SLUGS)),
-                    )
-                    slug = fallback
+                slug = _resolve_fine_slug(q["category"])
                 edge_rows.append({"slug": slug, "qid": q["id"]})
             session.run(
                 "UNWIND $rows AS row "
