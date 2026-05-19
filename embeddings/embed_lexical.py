@@ -186,6 +186,7 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     embedded = 0
+    skipped_no_text = 0
     failures = 0
     with driver.session() as session:
         lemmas = _iter_lemmas(session, args.limit)
@@ -197,14 +198,38 @@ def main(argv: list[str] | None = None) -> int:
             wait = MIN_INTERVAL_SECONDS - (time.monotonic() - last)
             if wait > 0:
                 time.sleep(wait)
-            texts = [build_embed_text(r) for r in batch]
+            # Partition the chunk before any Voyage call. Some Strong-keyed
+            # rows are textless: they are the Decision 11/18 tbesh-minted
+            # Strong-only convergence shells (a Strong has a lexicon or
+            # instance presence but no transliteration, gloss or lemma
+            # text), so build_embed_text returns "" for them. Voyage rejects
+            # any request whose input list contains an empty string and
+            # fails the WHOLE batch, which previously dropped good rows as
+            # collateral. We never fabricate text for these shells and never
+            # send "" to Voyage. Textless shells are intentionally not
+            # embedded: they stay joinable by Strong in Neo4j, and the
+            # Qdrant layer is only a re-rank, so a textless shell has
+            # nothing to re-rank on. This is correct by Decision 11/18, not
+            # a fudge. Row to vector alignment is preserved by zipping
+            # vectors only against embed_rows (the non-empty subset).
+            embed_rows: list[dict[str, Any]] = []
+            texts: list[str] = []
+            for r in batch:
+                t = build_embed_text(r).strip()
+                if t:
+                    embed_rows.append(r)
+                    texts.append(t)
+                else:
+                    skipped_no_text += 1
+            if not texts:
+                continue
             vecs = _embed_batch(voyage_client, texts)
             last = time.monotonic()
             if vecs is None:
-                failures += len(batch)
+                failures += len(embed_rows)
                 continue
             points = []
-            for r, vec in zip(batch, vecs, strict=False):
+            for r, vec in zip(embed_rows, vecs, strict=False):
                 payload = {
                     "strong": r["strong"],
                     "lemma": r["lemma"],
@@ -221,7 +246,10 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  progress: {embedded}/{len(lemmas)} embedded", flush=True)
 
     driver.close()
-    print(f"TOTAL: embedded={embedded} failures={failures}")
+    print(
+        f"TOTAL: embedded={embedded} "
+        f"skipped_no_text={skipped_no_text} failures={failures}"
+    )
     return 0
 
 
