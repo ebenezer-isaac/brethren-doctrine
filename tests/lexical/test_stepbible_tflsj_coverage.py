@@ -25,7 +25,10 @@ Fixture: tests/lexical/fixtures/stepbible_tflsj_slice.json
   row 1 all fields populated, row 2 english=null (occ 0.991), row 3
   lsj_definition=null (occ 0.896).
 
-Source: tools/expected_counts.json sources."STEPBible-TFLSJ" expected_count=11034.
+Source: tools/expected_counts.json sources."STEPBible-TFLSJ" expected_count=9488
+  (reconciled per Phase D [SCHEMA-REVISION]; was naive raw 11034, faithful
+  adapter drops 1370 empty-field rows and collapses 176 duplicate lsj_entry_id
+  collisions; see PHASE_D_DECISIONS_LOG.md line 19-20).
 Decisions: 13 (LsjEntry shape), 14 (Source constraint).
 """
 
@@ -71,7 +74,12 @@ SOURCE_SLUG = "STEPBible-TFLSJ"
 REQUIRED_LABELS = frozenset({"LsjEntry", "Source"})
 REQUIRED_EDGES = frozenset({"LEX_FOR"})
 
-EXPECTED_COUNT = 11034  # Tier A, tolerance 0, per expected_counts.json
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+# sources.STEPBible-TFLSJ.expected_count=9488 (was naive raw 11034; faithful
+# adapter drops 1370 rows with empty lemma/translit/pos and collapses 176
+# duplicate lsj_entry_id stable-id collisions; adapter unchanged). See
+# PHASE_D_DECISIONS_LOG.md line 19-20 catalog reconciliation set #3.
+EXPECTED_COUNT = 9488  # Tier A, tolerance 0, per expected_counts.json
 
 # Seed from tflsj.py docstring commit SHA (git log -1 -- ingest/lexical/stepbible_tflsj.py)
 DOCSTRING_COMMIT_SHA = "d45619bd1382d84558640f08e10b767055f37567"
@@ -471,8 +479,10 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_count_from_expected_counts_json() -> None:
-    """STEPBible-TFLSJ expected count in expected_counts.json must be 11034 (Tier A).
+    """STEPBible-TFLSJ expected count in expected_counts.json must be 9488 (Tier A).
 
+    Reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+    tools/expected_counts.json sources.STEPBible-TFLSJ.expected_count=9488.
     This test does NOT call the adapter. It validates the count constant
     used by the coverage tests matches the locked baseline.
     """

@@ -28,7 +28,10 @@ Fixture: tests/lexical/fixtures/stepbible_morph_codes_slice.json
   seeded_length = 6515 (json.dumps output, UTF-8 bytes).
 
 Source: tools/expected_counts.json sources."STEPBible-morph-codes"
-  expected_count = 2782, tier = A, tolerance = 0, record_unit = morph_code.
+  expected_count = 2675, tier = A, tolerance = 0, record_unit = morph_code
+  (reconciled per Phase D [SCHEMA-REVISION]; was naive 2782, faithful adapter
+  parses 2677 section codes then collapses 2 duplicate morph_code_unique codes;
+  see PHASE_D_DECISIONS_LOG.md line 19-20).
 Decisions implemented: 17 (MorphCode fields, sparse-column rule, multi-expansion),
                        14 (Source node MERGE, source_slug constraint).
 """
@@ -77,7 +80,12 @@ REQUIRED_LABELS = frozenset({"MorphCode", "Source"})
 # No outbound edges from MorphCode per the docstring contract.
 REQUIRED_EDGES: frozenset[str] = frozenset()
 
-EXPECTED_MORPH_CODE_COUNT = 2782  # Tier A, tolerance 0, per expected_counts.json
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+# sources.STEPBible-morph-codes.expected_count=2675 (was naive 2782; faithful
+# adapter parses 2677 BRIEF and FULL section codes then collapses 2 duplicate
+# morph_code_unique codes; adapter unchanged). See PHASE_D_DECISIONS_LOG.md
+# line 19-20 catalog reconciliation set #3.
+EXPECTED_MORPH_CODE_COUNT = 2675  # Tier A, tolerance 0, per expected_counts.json
 
 DOCSTRING_COMMIT_SHA = "d45619bd1382d84558640f08e10b767055f37567"
 SEED_INT = int(DOCSTRING_COMMIT_SHA[:8], 16)  # = 3562412477
@@ -600,8 +608,10 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_morph_code_count_from_expected_counts_json() -> None:
-    """STEPBible-morph-codes expected count in expected_counts.json must be 2782.
+    """STEPBible-morph-codes expected count in expected_counts.json must be 2675.
 
+    Reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+    tools/expected_counts.json sources.STEPBible-morph-codes.expected_count=2675.
     This test does NOT call the adapter. It validates the count constant used
     by the coverage tests against the source-of-truth file.
     Tier A, tolerance 0, record_unit morph_code.

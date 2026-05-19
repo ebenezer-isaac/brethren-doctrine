@@ -28,9 +28,13 @@ Fixture: tests/lexical/fixtures/openbible_slice.json
   length: 10157 (seeded from rng.randint(1024, 16384), seed=224852643)
 
 Source: tools/expected_counts.json sources."OpenBible-cross-refs"
-  expected_count=344799, tier A, tolerance 0.
+  expected_count=342128, tier A, tolerance 0 (reconciled per Phase D
+  [SCHEMA-REVISION]; raw 344799 minus 2 idempotent-MERGE-collapsed
+  exact-duplicate directed verse-pairs minus 2669 KJV-Hebrew versification
+  shifts; see PHASE_D_DECISIONS_LOG.md 2026-05-19 OpenBible correction).
 Edge counts: edge_counts."OPENBIBLE_CROSS_REF"
-  expected_min=343799, expected_max=345799 (tier B).
+  expected_min=342128, expected_max=342128 (tier B, tol-0-aligned to the
+  reconciled source value).
 Decisions: 5 (parallel edge type, votes=0 retained, TVTMS remap, MERGE key).
 """
 
@@ -77,9 +81,17 @@ ENTRY_FUNCTION = "ingest_openbible"
 REQUIRED_EDGE_TYPE = "OPENBIBLE_CROSS_REF"
 FORBIDDEN_EDGE_TYPE = "CROSS_REF"  # TSK type; Decision 5 provenance separation
 
-EXPECTED_CROSS_REF_COUNT = 344799   # Tier A, tolerance 0
-EDGE_COUNT_MIN = 343799              # Tier B band
-EDGE_COUNT_MAX = 345799              # Tier B band
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+# sources.OpenBible-cross-refs.expected_count=342128 (was raw 344799; minus 2
+# idempotent-MERGE-collapsed exact-duplicate directed verse-pairs minus 2669
+# KJV-Hebrew versification shifts). See PHASE_D_DECISIONS_LOG.md 2026-05-19
+# OpenBible cross-ref count gate correction.
+EXPECTED_CROSS_REF_COUNT = 342128   # Tier A, tolerance 0
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+# edge_counts.OPENBIBLE_CROSS_REF.expected_min/expected_max=342128 (tol-0-aligned
+# to the reconciled source value; was stale band 343799/345799).
+EDGE_COUNT_MIN = 342128              # Tier B band, tol-0-aligned to reconciled source
+EDGE_COUNT_MAX = 342128              # Tier B band, tol-0-aligned to reconciled source
 SOURCE_SLUG = "OpenBible-cross-refs"
 
 # Seed from openbible.py docstring commit SHA
@@ -481,8 +493,10 @@ def test_predicates_cypher_has_openbible_acceptance_query() -> None:
 
 
 def test_expected_cross_ref_count_from_expected_counts_json() -> None:
-    """The OpenBible-cross-refs expected count must be 344799 (Tier A).
+    """The OpenBible-cross-refs expected count must be 342128 (Tier A).
 
+    Reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+    tools/expected_counts.json sources.OpenBible-cross-refs.expected_count=342128.
     This test does NOT call the adapter.
     """
     ec_path = REPO / "tools" / "expected_counts.json"
@@ -498,8 +512,11 @@ def test_expected_cross_ref_count_from_expected_counts_json() -> None:
 
 
 def test_edge_count_band_from_expected_counts_json() -> None:
-    """OPENBIBLE_CROSS_REF edge count band must be [343799, 345799] (Tier B).
+    """OPENBIBLE_CROSS_REF edge count band must be [342128, 342128] (Tier B).
 
+    Reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+    tools/expected_counts.json edge_counts.OPENBIBLE_CROSS_REF
+    expected_min=expected_max=342128 (tol-0-aligned to the reconciled source).
     This test does NOT call the adapter.
     """
     ec_path = REPO / "tools" / "expected_counts.json"
