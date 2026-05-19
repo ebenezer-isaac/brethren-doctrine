@@ -1,7 +1,7 @@
 {
   "$schema_version": "1.0",
-  "generated_at": "2026-05-19T12:00:00Z",
-  "commit_baseline": "2fb96fe",
+  "generated_at": "2026-05-19T13:00:00Z",
+  "commit_baseline": "44b89b5",
   "tier_policy": {
     "A": {
       "tolerance": 0,
@@ -161,11 +161,11 @@
     "OpenBible-cross-refs": {
       "tier": "A",
       "record_unit": "cross_ref",
-      "expected_count": 344799,
+      "expected_count": 342130,
       "tolerance": 0,
-      "min": 344799,
-      "max": 344799,
-      "tier_rationale": "OpenBible.info community cross-reference table ships one row per voted From-Verse to-Verse pair. Total is a deterministic line count from the versioned upstream CSV release used at ingest, no derivation involved.",
+      "min": 342130,
+      "max": 342130,
+      "tier_rationale": "Faithful OPENBIBLE_CROSS_REF edges resolving against the canonical Verse.id set using the contracted TVTMS artifact tvtms.parsed.json @1308 (pinned by this file's STEPBible-TVTMS Tier-A tol-0, data_inventory_catalog.json root_path plus total_records, and the stepbible_tvtms adapter docstring). FIX-OPENBIBLE (Verse.id key plus range-collapse) recovers the faithful 342130; the 2669 residual are genuine KJV-Hebrew versification shifts (Joel, Jonah, Deut class) absent from the contracted TVTMS artifact, tracked as the E1 owner-decision TVTMS-completeness ticket, not a defect in openbible, which faithfully quarantines rather than fabricates. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1.",
       "catalog_source_index": 14
     },
     "TSK": {
@@ -275,9 +275,9 @@
     },
     "OPENBIBLE_CROSS_REF": {
       "tier": "B",
-      "expected_min": 343799,
-      "expected_max": 345799,
-      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals row count since one row produces one edge. Two percent capped at one thousand absolute records covers ingest-time row drops. Band HELD at the raw-344799 envelope pending the E1 tvtms-completeness fix and relaunch-5 re-D.4; not reconciled here."
+      "expected_min": 342130,
+      "expected_max": 342130,
+      "tier_rationale": "Derived from OpenBible cross-refs as the parallel edge type per Decision 5. Edge count equals the faithful Verse.id-resolved emit after FIX-OPENBIBLE (Verse.id key plus range-collapse). Band re-based tol-0-aligned to the reconciled OpenBible-cross-refs source value 342130 (was [343799, 345799] HELD at the raw-344799 envelope), matching how the prior INTEGRATE-1 [SCHEMA-REVISION] re-based the other edge_counts bands to their reconciled source values. The 2669 residual KJV-Hebrew versification shifts are the E1 owner-decision TVTMS-completeness ticket, not an openbible defect. See docs/PHASE_D_EDGECOUNTS_RECONCILE.md Finding 1."
     },
     "VARIANT_UNIT_NODE": {
       "tier": "B",
