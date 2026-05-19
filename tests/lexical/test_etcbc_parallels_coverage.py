@@ -25,7 +25,10 @@ Fixture: tests/lexical/fixtures/etcbc_parallels_slice.json
   Length seeded from rng: 14920 (within [1024, 16384]).
   Seed INT derived from first 8 hex chars of the commit SHA above.
 
-Source: tools/expected_counts.json sources."ETCBC-parallels" expected_count=8246.
+Source: tools/expected_counts.json sources."ETCBC-parallels" expected_count=5882
+(reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+ETCBC-parallels=5882. The prior 8246 was the pre-reconciliation raw crossref.tf
+feature-row count, stale per docs/PHASE_D_DECISIONS_LOG.md).
 Decisions: 3 (ETCBC syntax tree shape, parallels edge-case bullet).
 Labels: none (edge-only adapter).
 Edges: PARALLEL_OF (BhsaWord -> BhsaWord) with similarity float property.
@@ -75,7 +78,10 @@ REQUIRED_LABELS: frozenset[str] = frozenset()  # edge-only: no new labels
 REQUIRED_EDGES: frozenset[str] = frozenset({"PARALLEL_OF"})
 EDGE_PROPERTY = "similarity"
 
-EXPECTED_COUNT = 8246  # Tier A, tolerance 0
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+# tools/expected_counts.json ETCBC-parallels=5882. The prior 8246 was the
+# pre-reconciliation raw crossref.tf feature-row count.
+EXPECTED_COUNT = 5882  # Tier A, tolerance 0
 
 # Seed from etcbc_parallels.py commit SHA
 DOCSTRING_COMMIT_SHA = "e4743362c344524d9022c5186aeb30de7d855a10"
@@ -441,7 +447,11 @@ def test_predicates_file_has_required_predicates() -> None:
 
 
 def test_expected_count_from_expected_counts_json() -> None:
-    """The ETCBC-parallels expected count in expected_counts.json must be 8246 (Tier A).
+    """The ETCBC-parallels expected count in expected_counts.json must be 5882 (Tier A).
+
+    Reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+    tools/expected_counts.json ETCBC-parallels=5882. This test still fails if
+    the SHA-locked contract count deviates from the reconciled truth.
 
     This test does NOT call the adapter; it passes even at Wave 2.
     """

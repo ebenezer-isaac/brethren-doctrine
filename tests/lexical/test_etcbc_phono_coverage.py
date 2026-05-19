@@ -29,7 +29,11 @@ Fixture: tests/lexical/fixtures/etcbc_phono_slice.json
   Proverbs 3:5 (6 words). One ketiv-only null (node_id 318402).
   Byte length: 4716 (within 1024-16384 range).
 
-Source: tools/expected_counts.json sources."ETCBC-phono" expected_count=426590.
+Source: tools/expected_counts.json sources."ETCBC-phono" expected_count=420166
+(reconciled per Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+ETCBC-phono=420166. The prior 426590 was the pre-reconciliation total-BhsaWord
+slot figure, not the phono-enriched count, stale per
+docs/PHASE_D_DECISIONS_LOG.md).
 Decisions: 3 (ETCBC syntax tree, phono property, nullable at 0.984),
            14 (Source uniqueness, tfnode_tuple, redistribute=false).
 """
@@ -82,7 +86,10 @@ PHONO_PROPERTY = "phono"
 NODE_LABEL = "BhsaWord"
 STABLE_ID_PREFIX = "bhsa:tf:"
 
-EXPECTED_WORD_COUNT = 426590  # Tier A, tolerance 0, per expected_counts.json
+# reconciled per Phase D [SCHEMA-REVISION]; SHA-locked
+# tools/expected_counts.json ETCBC-phono=420166. The prior 426590 was the
+# pre-reconciliation total-BhsaWord slot figure, not the phono-enriched count.
+EXPECTED_WORD_COUNT = 420166  # Tier A, tolerance 0, per expected_counts.json
 
 # Seed from etcbc_phono.py docstring commit SHA
 DOCSTRING_COMMIT_SHA = "dde769003daf1e20607c6ef19b5baa0eac6a09df"
@@ -530,10 +537,13 @@ def test_predicates_file_defines_string_and_bool() -> None:
 
 
 def test_expected_count_from_expected_counts_json() -> None:
-    """expected_counts.json ETCBC-phono entry must be 426590, Tier A, tolerance 0.
+    """expected_counts.json ETCBC-phono entry must be 420166, Tier A, tolerance 0.
 
     This test does NOT call the adapter. It validates the count constant
-    the coverage tests use is correct per the source file.
+    the coverage tests use is correct per the source file. Reconciled per
+    Phase D [SCHEMA-REVISION]; SHA-locked tools/expected_counts.json
+    ETCBC-phono=420166. Still fails if the SHA-locked contract count deviates
+    from the reconciled truth.
     """
     ec_path = REPO / "tools" / "expected_counts.json"
     with open(ec_path, encoding="utf-8") as fh:
